@@ -23,47 +23,63 @@ using C1.Win.C1FlexGrid;
 
 namespace BKI_QLTTQuocAnh.NghiepVu {
 
+    public enum e_col_Number {
+        TRANG_THAI_YN = 6
+,
+        SO_TIEN = 4
+            ,
+        NGAY_BAT_DAU = 7
+            ,
+        NGAY_KET_THUC = 8
+            ,
+        MO_TA = 3
+            ,
+        HO_TEN = 2
+            ,
+        MA_HOC_SINH = 1
+            , DON_GIA_BUOI_HOC = 5
 
+    }
 
     public class f340_lap_phieu_thu : System.Windows.Forms.Form {
         #region Design_Form
         internal System.Windows.Forms.ImageList ImageList;
         private Panel panel1;
-        private Label m_lbl_header;
+        public Label m_lbl_header;
         internal ImageList imageList1;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal Panel m_pnl_out_place_dm;
         private Panel panel2;
         private Panel panel3;
         internal SIS.Controls.Button.SiSButton m_cmd_chon_hs;
-        private ComboBox m_cbo_nhan_vien_thu;
-        private ComboBox m_cbo_nhan_vien_nhap;
+        public ComboBox m_cbo_nhan_vien_thu;
+        public ComboBox m_cbo_nhan_vien_nhap;
         private Label m_lbl_ngay_thu;
-        private DateTimePicker m_dat_ngay_nhap;
-        private DateTimePicker m_dat_ngay_thu;
-        private TextBox m_txt_noi_dung;
+        public DateTimePicker m_dat_ngay_nhap;
+        public DateTimePicker m_dat_ngay_thu;
+        public TextBox m_txt_noi_dung;
         private Label m_lbl_hoc_sinh;
         private Label m_lbl_den_ngay;
         private Label m_lbl_noi_dung;
-        private TextBox m_txt_ten_nguoi_nop_tien;
+        public TextBox m_txt_ten_nguoi_nop_tien;
         private Label m_lbl_nhan_vien_nhap;
         private TextBox m_txt_ho_ten_hs;
         private Label m_lbl_ten_nguoi_nop_tien;
         private Label m_lbl_nhan_vien_thu;
         private Label m_lbl_so_phieu;
-        private TextBox m_txt_so_phieu;
+        public TextBox m_txt_so_phieu;
         internal SIS.Controls.Button.SiSButton m_cmd_ds_phieu;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private Label m_lbl_so_tien;
-        private TextBox m_txt_so_tien;
+        public TextBox m_txt_so_tien;
         private Label m_lbl_vnd;
-        private C1FlexGrid m_fg;
-        private Label m_lbl_tong_tien;
-        private Label m_lbl_ten_hs;
+        public C1FlexGrid m_fg;
+        public Label m_lbl_tong_tien;
+        public Label m_lbl_ten_hs;
         private System.ComponentModel.IContainer components;
         #endregion
 
-        public f340_lap_phieu_thu() {
+        public f340_lap_phieu_thu(string ip_type) {
             //
             // Required for Windows Form Designer support
             //
@@ -73,6 +89,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             // TODO: Add any constructor code after InitializeComponent call
             //
             format_controls();
+            PhieuFactory v_fac = new PhieuFactory(ip_type, this);
+        }
+
+        public f340_lap_phieu_thu(string ip_type, US_V_GD_PHIEU_THU ip_us_gd_pt) {
+            // TODO: Complete member initialization
+            InitializeComponent();
+            format_controls();
+            PhieuFactory v_fac = new PhieuFactory(ip_type, this, ip_us_gd_pt);
         }
 
         /// <summary>
@@ -554,27 +578,29 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         #endregion
 
         #region Public Interface
-        public void set_phieu_thuc_thu() {
-            this.Text = "F340 - Lập phiếu thực thu lẻ";
-            m_str_loai_form = "THUC_THU";
-            m_lbl_header.Text = "LẬP PHIẾU THỰC THU";
-            m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Nhập số tiền THỰC THU theo từng lớp TẠI ĐÂY";
-            m_cmd_ds_phieu.Text = "Danh sách phiếu thực thu";
-        }
-        public void set_phieu_phai_thu() {
-            this.Text = "F340 - Lập phiếu phải thu lẻ";
-            m_str_loai_form = "PHAI_THU";
-            m_lbl_header.Text = "LẬP PHIẾU PHẢI THU";
-            m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Nhập số tiền PHẢI THU theo từng lớp TẠI ĐÂY";
-            m_cmd_ds_phieu.Text = "Danh sách phiếu phải thu";
-        }
-        public void set_phieu_giam_tru() {
-            this.Text = "F340 - Lập phiếu giảm trừ";
-            m_str_loai_form = "GIAM_TRU";
-            m_lbl_header.Text = "LẬP PHIẾU GIẢM TRỪ";
-            m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Nhập số tiền GIẢM TRỪ theo từng lớp TẠI ĐÂY";
-            m_cmd_ds_phieu.Text = "Danh sách phiếu giảm trừ";
-        }
+        
+        
+        //public void set_phieu_thuc_thu() {
+        //    this.Text = "F340 - Lập phiếu thực thu lẻ";
+        //    m_str_loai_form = "THUC_THU";
+        //    m_lbl_header.Text = "LẬP PHIẾU THỰC THU";
+        //    m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Nhập số tiền THỰC THU theo từng lớp TẠI ĐÂY";
+        //    m_cmd_ds_phieu.Text = "Danh sách phiếu thực thu";
+        //}
+        //public void set_phieu_phai_thu() {
+        //    this.Text = "F340 - Lập phiếu phải thu lẻ";
+        //    m_str_loai_form = "PHAI_THU";
+        //    m_lbl_header.Text = "LẬP PHIẾU PHẢI THU";
+        //    m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Nhập số tiền PHẢI THU theo từng lớp TẠI ĐÂY";
+        //    m_cmd_ds_phieu.Text = "Danh sách phiếu phải thu";
+        //}
+        //public void set_phieu_giam_tru() {
+        //    this.Text = "F340 - Lập phiếu giảm trừ";
+        //    m_str_loai_form = "GIAM_TRU";
+        //    m_lbl_header.Text = "LẬP PHIẾU GIẢM TRỪ";
+        //    m_fg.Cols[(int)e_col_Number.SO_TIEN].Caption = "Nhập số tiền GIẢM TRỪ theo từng lớp TẠI ĐÂY";
+        //    m_cmd_ds_phieu.Text = "Danh sách phiếu giảm trừ";
+        //}
         public void display(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU ip_us, decimal ip_dc_id_loai_phieu_thu, decimal ip_dc_id_nguoi_nhap) {
             US_V_GD_PHIEU_THU v_us_v_pt = new US_V_GD_PHIEU_THU(ip_us.dcID);
 
@@ -620,8 +646,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_cmd_insert.Text = "Lưu sửa phiếu";
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
             m_cmd_chon_hs.Visible = false;
-            m_txt_ho_ten_hs.BackColor = Color.AliceBlue;
-            m_txt_ho_ten_hs.ReadOnly = true;
 
             m_lbl_ten_hs.Text = ip_us.strHO_TEN_HS.Trim();
 
@@ -632,23 +656,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         #endregion
 
         #region Data Structure
-        private enum e_col_Number {
-            TRANG_THAI_YN = 6
-,
-            SO_TIEN = 4
-                ,
-            NGAY_BAT_DAU = 7
-                ,
-            NGAY_KET_THUC = 8
-                ,
-            MO_TA = 3
-                ,
-            HO_TEN = 2
-                ,
-            MA_HOC_SINH = 1
-                , DON_GIA_BUOI_HOC = 5
-
-        }
+        
         #endregion
 
         #region Members
@@ -657,10 +665,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         US_GD_CHI_TIET_PHIEU_THU m_us_gd_ct_phieu_thu = new US_GD_CHI_TIET_PHIEU_THU();
         //US_V_HOC_SINH m_us_v_dm_hoc_sinh = new US_V_HOC_SINH();
         US_V_HOC_SINH m_us_v_hoc_sinh = new US_V_HOC_SINH();
-        DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
+        public DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
         public string m_str_loai_form = "";// = "PHAI_THU" or "THUC_THU"
         string m_str_trang_thai_phieu = "";//CLICK tu f430 thi gan = "F430"
         decimal m_id_gd_phieu_thu = 0;//Dung de lay id_gd_phieu_thu khi click tu 430
+        private string p;
+        private US_V_GD_PHIEU_THU v_us_gd_pt;
         #endregion
 
         #region Private Methods

@@ -214,8 +214,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
-                v_frm.set_phieu_giam_tru();
+                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("GIAM_TRU");
+                //v_frm.Display();
+                //v_frm.SetFactoryPhieu("GIAM_TRU", v_frm, v_frm.m_fg);
                 if (IsExistFormText(v_frm)) return;
 
                 v_frm.MdiParent = this;
@@ -231,8 +232,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
-                v_frm.set_phieu_thuc_thu();
+                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("THUC_THU");
+                //v_frm.Display();
+                //v_frm.SetFactoryPhieu("THUC_THU", v_frm, v_frm.m_fg);
                 if (IsExistFormText(v_frm)) return;
 
                 v_frm.MdiParent = this;
@@ -264,8 +266,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
-                v_frm.set_phieu_phai_thu();
+                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("PHAI_THU");
+                //v_frm.Display();
+                //v_frm.SetFactoryPhieu("PHAI_THU", v_frm, v_frm.m_fg);
                 if (IsExistFormText(v_frm)) return;
 
                 v_frm.MdiParent = this;

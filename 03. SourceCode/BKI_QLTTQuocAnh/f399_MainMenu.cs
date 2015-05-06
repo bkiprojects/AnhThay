@@ -111,25 +111,25 @@ namespace Form_menu
             m_cmd_thuc_thu_theo_nv.Click += m_cmd_thuc_thu_theo_nv_Click;
             m_cmd_bc_chua_nop_tien_lop_mon.Click += m_cmd_bc_chua_nop_tien_lop_mon_Click;
             m_cmd_dm_lop_mon.Click += m_cmd_dm_lop_mon_Click;
-            m_cmd_lap_phai_thu_le.Click += m_cmd_lap_phai_thu_le_Click;
+            //m_cmd_lap_phai_thu_le.Click += m_cmd_lap_phai_thu_le_Click;
             m_cmd_dm_hs.Click += m_cmd_dm_hs_Click;
             m_cmd_cap_nhat_thong_tin_hs.Click += m_cmd_cap_nhat_thong_tin_hs_Click;
-            m_cmd_lap_thuc_thu.Click += m_cmd_lap_thuc_thu_Click;
+            //m_cmd_lap_thuc_thu.Click += m_cmd_lap_thuc_thu_Click;
         }
 
-        void m_cmd_lap_thuc_thu_Click(object sender, EventArgs e) {
-            try {
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
+        //void m_cmd_lap_thuc_thu_Click(object sender, EventArgs e) {
+        //    try {
+        //        f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
                 
 
-                v_frm.Text = "F340 - Lập phiếu thực thu";
-                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl(),false);
-                v_frm.set_phieu_thuc_thu();
-            }
-            catch (Exception v_e) {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        //        v_frm.Text = "F340 - Lập phiếu thực thu";
+        //        m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl(),false);
+        //        v_frm.set_phieu_thuc_thu();
+        //    }
+        //    catch (Exception v_e) {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
         void m_cmd_cap_nhat_thong_tin_hs_Click(object sender, EventArgs e) {
             try {
@@ -151,17 +151,17 @@ namespace Form_menu
             }
         }
 
-        void m_cmd_lap_phai_thu_le_Click(object sender, EventArgs e) {
-            try {
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
-                v_frm.Text = "F340 - Lập phiếu phải thu";
-                m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl(),false);
-                v_frm.set_phieu_phai_thu();
-            }
-            catch (Exception v_e) {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        //void m_cmd_lap_phai_thu_le_Click(object sender, EventArgs e) {
+        //    try {
+        //        f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
+        //        v_frm.Text = "F340 - Lập phiếu phải thu";
+        //        m_tab_add.AddTab(xtraTabControl1, v_frm.Name, v_frm.Text, v_frm, new UserControl(),false);
+        //        v_frm.set_phieu_phai_thu();
+        //    }
+        //    catch (Exception v_e) {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
         void m_cmd_dm_lop_mon_Click(object sender, EventArgs e)
         {

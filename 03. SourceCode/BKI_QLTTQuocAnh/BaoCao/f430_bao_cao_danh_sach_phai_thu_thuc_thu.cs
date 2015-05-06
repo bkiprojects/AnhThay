@@ -738,10 +738,10 @@ namespace BKI_QLTTQuocAnh
                 return;
             }
 
-            US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us.dcID);
+            US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
 
-            f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
-            v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
+            f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("DISPLAY", v_us_gd_pt);
+            //v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
             load_data_2_grid();
         }
 
@@ -841,10 +841,10 @@ namespace BKI_QLTTQuocAnh
                     return;
                 }
 
-                US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us.dcID);
+                US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
 
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
-                v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
+                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("DISPLAY", v_us_gd_pt);
+                //v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
                 load_data_2_grid();
             }
             catch (Exception v_e)

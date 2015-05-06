@@ -200,9 +200,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
                 US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us.dcID);
 
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
-                v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
-                load_data_2_grid();
+                //f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
+                //v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
+                //load_data_2_grid();
             }
             catch (Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
