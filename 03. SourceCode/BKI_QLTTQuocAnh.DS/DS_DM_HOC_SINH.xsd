@@ -2,17 +2,18 @@
 <xs:schema id="DS_DM_HOC_SINH" targetNamespace="http://tempuri.org/DS_DM_HOC_SINH.xsd" xmlns:mstns="http://tempuri.org/DS_DM_HOC_SINH.xsd" xmlns="http://tempuri.org/DS_DM_HOC_SINH.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QuanLyTTQuocAnhConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QuanLyTTQuocAnhConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.QuanLyTTQuocAnhConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AnhThayConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AnhThayConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.AnhThayConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DM_HOC_SINHTableAdapter" GeneratorDataComponentClassName="DM_HOC_SINHTableAdapter" Name="DM_HOC_SINH" UserDataComponentName="DM_HOC_SINHTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QuanLyTTQuocAnhConnectionString (Settings)" DbObjectName="QuanLyTTQuocAnh.dbo.DM_HOC_SINH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="AnhThayConnectionString (Settings)" DbObjectName="AnhThay.dbo.DM_HOC_SINH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[DM_HOC_SINH] WHERE (([ID] = @Original_ID) AND ([MA_DOI_TUONG] = @Original_MA_DOI_TUONG) AND ([ID_LOAI_DOI_TUONG] = @Original_ID_LOAI_DOI_TUONG) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ((@IsNull_TRUONG_DANG_HOC = 1 AND [TRUONG_DANG_HOC] IS NULL) OR ([TRUONG_DANG_HOC] = @Original_TRUONG_DANG_HOC)) AND ((@IsNull_EMAIL_HS = 1 AND [EMAIL_HS] IS NULL) OR ([EMAIL_HS] = @Original_EMAIL_HS)) AND ((@IsNull_EMAIL_PH = 1 AND [EMAIL_PH] IS NULL) OR ([EMAIL_PH] = @Original_EMAIL_PH)) AND ((@IsNull_DIA_CHI = 1 AND [DIA_CHI] IS NULL) OR ([DIA_CHI] = @Original_DIA_CHI)) AND ((@IsNull_SDT_HS = 1 AND [SDT_HS] IS NULL) OR ([SDT_HS] = @Original_SDT_HS)) AND ((@IsNull_SDT_PH = 1 AND [SDT_PH] IS NULL) OR ([SDT_PH] = @Original_SDT_PH)) AND ((@IsNull_HO_TEN_PH = 1 AND [HO_TEN_PH] IS NULL) OR ([HO_TEN_PH] = @Original_HO_TEN_PH)) AND ((@IsNull_SDT_CO_DINH = 1 AND [SDT_CO_DINH] IS NULL) OR ([SDT_CO_DINH] = @Original_SDT_CO_DINH)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[DM_HOC_SINH] WHERE (([ID] = @Original_ID) AND ([MA_DOI_TUONG] = @Original_MA_DOI_TUONG) AND ([ID_LOAI_DOI_TUONG] = @Original_ID_LOAI_DOI_TUONG) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ((@IsNull_TRUONG_DANG_HOC = 1 AND [TRUONG_DANG_HOC] IS NULL) OR ([TRUONG_DANG_HOC] = @Original_TRUONG_DANG_HOC)) AND ((@IsNull_EMAIL_HS = 1 AND [EMAIL_HS] IS NULL) OR ([EMAIL_HS] = @Original_EMAIL_HS)) AND ((@IsNull_EMAIL_PH = 1 AND [EMAIL_PH] IS NULL) OR ([EMAIL_PH] = @Original_EMAIL_PH)) AND ((@IsNull_DIA_CHI = 1 AND [DIA_CHI] IS NULL) OR ([DIA_CHI] = @Original_DIA_CHI)) AND ((@IsNull_SDT_HS = 1 AND [SDT_HS] IS NULL) OR ([SDT_HS] = @Original_SDT_HS)) AND ((@IsNull_SDT_PH = 1 AND [SDT_PH] IS NULL) OR ([SDT_PH] = @Original_SDT_PH)) AND ((@IsNull_HO_TEN_PH = 1 AND [HO_TEN_PH] IS NULL) OR ([HO_TEN_PH] = @Original_HO_TEN_PH)) AND ((@IsNull_SDT_CO_DINH = 1 AND [SDT_CO_DINH] IS NULL) OR ([SDT_CO_DINH] = @Original_SDT_CO_DINH)) AND ((@IsNull_FACEBOOK = 1 AND [FACEBOOK] IS NULL) OR ([FACEBOOK] = @Original_FACEBOOK)) AND ((@IsNull_SKYPE = 1 AND [SKYPE] IS NULL) OR ([SKYPE] = @Original_SKYPE)) AND ((@IsNull_DELETE_YN = 1 AND [DELETE_YN] IS NULL) OR ([DELETE_YN] = @Original_DELETE_YN)) AND ((@IsNull_NGAY_SINH = 1 AND [NGAY_SINH] IS NULL) OR ([NGAY_SINH] = @Original_NGAY_SINH)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ID" Precision="18" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MA_DOI_TUONG" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MA_DOI_TUONG" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -35,13 +36,21 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_HO_TEN_PH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HO_TEN_PH" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SDT_CO_DINH" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SDT_CO_DINH" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SDT_CO_DINH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SDT_CO_DINH" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FACEBOOK" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FACEBOOK" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FACEBOOK" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FACEBOOK" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SKYPE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SKYPE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SKYPE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SKYPE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DELETE_YN" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DELETE_YN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DELETE_YN" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DELETE_YN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NGAY_SINH" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NGAY_SINH" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_NGAY_SINH" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NGAY_SINH" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[DM_HOC_SINH] ([MA_DOI_TUONG], [ID_LOAI_DOI_TUONG], [HO], [TEN], [TRUONG_DANG_HOC], [EMAIL_HS], [EMAIL_PH], [DIA_CHI], [SDT_HS], [SDT_PH], [HO_TEN_PH], [SDT_CO_DINH]) VALUES (@MA_DOI_TUONG, @ID_LOAI_DOI_TUONG, @HO, @TEN, @TRUONG_DANG_HOC, @EMAIL_HS, @EMAIL_PH, @DIA_CHI, @SDT_HS, @SDT_PH, @HO_TEN_PH, @SDT_CO_DINH);
-SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, EMAIL_PH, DIA_CHI, SDT_HS, SDT_PH, HO_TEN_PH, SDT_CO_DINH FROM DM_HOC_SINH WHERE (ID = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[DM_HOC_SINH] ([MA_DOI_TUONG], [ID_LOAI_DOI_TUONG], [HO], [TEN], [TRUONG_DANG_HOC], [EMAIL_HS], [EMAIL_PH], [DIA_CHI], [SDT_HS], [SDT_PH], [HO_TEN_PH], [SDT_CO_DINH], [FACEBOOK], [SKYPE], [DELETE_YN], [NGAY_SINH]) VALUES (@MA_DOI_TUONG, @ID_LOAI_DOI_TUONG, @HO, @TEN, @TRUONG_DANG_HOC, @EMAIL_HS, @EMAIL_PH, @DIA_CHI, @SDT_HS, @SDT_PH, @HO_TEN_PH, @SDT_CO_DINH, @FACEBOOK, @SKYPE, @DELETE_YN, @NGAY_SINH);
+SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, EMAIL_PH, DIA_CHI, SDT_HS, SDT_PH, HO_TEN_PH, SDT_CO_DINH, FACEBOOK, SKYPE, DELETE_YN, NGAY_SINH FROM DM_HOC_SINH WHERE (ID = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MA_DOI_TUONG" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MA_DOI_TUONG" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ID_LOAI_DOI_TUONG" Precision="18" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="ID_LOAI_DOI_TUONG" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -55,19 +64,23 @@ SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, 
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SDT_PH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SDT_PH" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@HO_TEN_PH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HO_TEN_PH" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SDT_CO_DINH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SDT_CO_DINH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FACEBOOK" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FACEBOOK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SKYPE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SKYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DELETE_YN" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DELETE_YN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@NGAY_SINH" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NGAY_SINH" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, EMAIL_PH, DIA_CHI, SDT_HS, SDT_PH, HO_TEN_PH, SDT_CO_DINH FROM dbo.DM_HOC_SINH</CommandText>
+                    <CommandText>SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, EMAIL_PH, DIA_CHI, SDT_HS, SDT_PH, HO_TEN_PH, SDT_CO_DINH, FACEBOOK, SKYPE, DELETE_YN, NGAY_SINH FROM dbo.DM_HOC_SINH</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[DM_HOC_SINH] SET [MA_DOI_TUONG] = @MA_DOI_TUONG, [ID_LOAI_DOI_TUONG] = @ID_LOAI_DOI_TUONG, [HO] = @HO, [TEN] = @TEN, [TRUONG_DANG_HOC] = @TRUONG_DANG_HOC, [EMAIL_HS] = @EMAIL_HS, [EMAIL_PH] = @EMAIL_PH, [DIA_CHI] = @DIA_CHI, [SDT_HS] = @SDT_HS, [SDT_PH] = @SDT_PH, [HO_TEN_PH] = @HO_TEN_PH, [SDT_CO_DINH] = @SDT_CO_DINH WHERE (([ID] = @Original_ID) AND ([MA_DOI_TUONG] = @Original_MA_DOI_TUONG) AND ([ID_LOAI_DOI_TUONG] = @Original_ID_LOAI_DOI_TUONG) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ((@IsNull_TRUONG_DANG_HOC = 1 AND [TRUONG_DANG_HOC] IS NULL) OR ([TRUONG_DANG_HOC] = @Original_TRUONG_DANG_HOC)) AND ((@IsNull_EMAIL_HS = 1 AND [EMAIL_HS] IS NULL) OR ([EMAIL_HS] = @Original_EMAIL_HS)) AND ((@IsNull_EMAIL_PH = 1 AND [EMAIL_PH] IS NULL) OR ([EMAIL_PH] = @Original_EMAIL_PH)) AND ((@IsNull_DIA_CHI = 1 AND [DIA_CHI] IS NULL) OR ([DIA_CHI] = @Original_DIA_CHI)) AND ((@IsNull_SDT_HS = 1 AND [SDT_HS] IS NULL) OR ([SDT_HS] = @Original_SDT_HS)) AND ((@IsNull_SDT_PH = 1 AND [SDT_PH] IS NULL) OR ([SDT_PH] = @Original_SDT_PH)) AND ((@IsNull_HO_TEN_PH = 1 AND [HO_TEN_PH] IS NULL) OR ([HO_TEN_PH] = @Original_HO_TEN_PH)) AND ((@IsNull_SDT_CO_DINH = 1 AND [SDT_CO_DINH] IS NULL) OR ([SDT_CO_DINH] = @Original_SDT_CO_DINH)));
-SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, EMAIL_PH, DIA_CHI, SDT_HS, SDT_PH, HO_TEN_PH, SDT_CO_DINH FROM DM_HOC_SINH WHERE (ID = @ID)</CommandText>
+                    <CommandText>UPDATE [dbo].[DM_HOC_SINH] SET [MA_DOI_TUONG] = @MA_DOI_TUONG, [ID_LOAI_DOI_TUONG] = @ID_LOAI_DOI_TUONG, [HO] = @HO, [TEN] = @TEN, [TRUONG_DANG_HOC] = @TRUONG_DANG_HOC, [EMAIL_HS] = @EMAIL_HS, [EMAIL_PH] = @EMAIL_PH, [DIA_CHI] = @DIA_CHI, [SDT_HS] = @SDT_HS, [SDT_PH] = @SDT_PH, [HO_TEN_PH] = @HO_TEN_PH, [SDT_CO_DINH] = @SDT_CO_DINH, [FACEBOOK] = @FACEBOOK, [SKYPE] = @SKYPE, [DELETE_YN] = @DELETE_YN, [NGAY_SINH] = @NGAY_SINH WHERE (([ID] = @Original_ID) AND ([MA_DOI_TUONG] = @Original_MA_DOI_TUONG) AND ([ID_LOAI_DOI_TUONG] = @Original_ID_LOAI_DOI_TUONG) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ((@IsNull_TRUONG_DANG_HOC = 1 AND [TRUONG_DANG_HOC] IS NULL) OR ([TRUONG_DANG_HOC] = @Original_TRUONG_DANG_HOC)) AND ((@IsNull_EMAIL_HS = 1 AND [EMAIL_HS] IS NULL) OR ([EMAIL_HS] = @Original_EMAIL_HS)) AND ((@IsNull_EMAIL_PH = 1 AND [EMAIL_PH] IS NULL) OR ([EMAIL_PH] = @Original_EMAIL_PH)) AND ((@IsNull_DIA_CHI = 1 AND [DIA_CHI] IS NULL) OR ([DIA_CHI] = @Original_DIA_CHI)) AND ((@IsNull_SDT_HS = 1 AND [SDT_HS] IS NULL) OR ([SDT_HS] = @Original_SDT_HS)) AND ((@IsNull_SDT_PH = 1 AND [SDT_PH] IS NULL) OR ([SDT_PH] = @Original_SDT_PH)) AND ((@IsNull_HO_TEN_PH = 1 AND [HO_TEN_PH] IS NULL) OR ([HO_TEN_PH] = @Original_HO_TEN_PH)) AND ((@IsNull_SDT_CO_DINH = 1 AND [SDT_CO_DINH] IS NULL) OR ([SDT_CO_DINH] = @Original_SDT_CO_DINH)) AND ((@IsNull_FACEBOOK = 1 AND [FACEBOOK] IS NULL) OR ([FACEBOOK] = @Original_FACEBOOK)) AND ((@IsNull_SKYPE = 1 AND [SKYPE] IS NULL) OR ([SKYPE] = @Original_SKYPE)) AND ((@IsNull_DELETE_YN = 1 AND [DELETE_YN] IS NULL) OR ([DELETE_YN] = @Original_DELETE_YN)) AND ((@IsNull_NGAY_SINH = 1 AND [NGAY_SINH] IS NULL) OR ([NGAY_SINH] = @Original_NGAY_SINH)));
+SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, EMAIL_PH, DIA_CHI, SDT_HS, SDT_PH, HO_TEN_PH, SDT_CO_DINH, FACEBOOK, SKYPE, DELETE_YN, NGAY_SINH FROM DM_HOC_SINH WHERE (ID = @ID)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MA_DOI_TUONG" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MA_DOI_TUONG" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@ID_LOAI_DOI_TUONG" Precision="18" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="ID_LOAI_DOI_TUONG" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -81,6 +94,10 @@ SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, 
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SDT_PH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SDT_PH" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@HO_TEN_PH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HO_TEN_PH" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SDT_CO_DINH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SDT_CO_DINH" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FACEBOOK" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FACEBOOK" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SKYPE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SKYPE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DELETE_YN" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DELETE_YN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@NGAY_SINH" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NGAY_SINH" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ID" Precision="18" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MA_DOI_TUONG" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MA_DOI_TUONG" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_ID_LOAI_DOI_TUONG" Precision="18" ProviderType="Decimal" Scale="0" Size="0" SourceColumn="ID_LOAI_DOI_TUONG" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -102,6 +119,14 @@ SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, 
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_HO_TEN_PH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="HO_TEN_PH" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SDT_CO_DINH" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SDT_CO_DINH" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SDT_CO_DINH" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SDT_CO_DINH" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FACEBOOK" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FACEBOOK" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_FACEBOOK" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FACEBOOK" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SKYPE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SKYPE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SKYPE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SKYPE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DELETE_YN" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DELETE_YN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DELETE_YN" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DELETE_YN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NGAY_SINH" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NGAY_SINH" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_NGAY_SINH" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="NGAY_SINH" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="ID" DataSourceName="" DataTypeServer="DT_POID" DbType="Decimal" Direction="Input" ParameterName="@ID" Precision="18" ProviderType="Decimal" Scale="0" Size="9" SourceColumn="ID" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
@@ -122,6 +147,10 @@ SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, 
               <Mapping SourceColumn="SDT_PH" DataSetColumn="SDT_PH" />
               <Mapping SourceColumn="HO_TEN_PH" DataSetColumn="HO_TEN_PH" />
               <Mapping SourceColumn="SDT_CO_DINH" DataSetColumn="SDT_CO_DINH" />
+              <Mapping SourceColumn="FACEBOOK" DataSetColumn="FACEBOOK" />
+              <Mapping SourceColumn="SKYPE" DataSetColumn="SKYPE" />
+              <Mapping SourceColumn="DELETE_YN" DataSetColumn="DELETE_YN" />
+              <Mapping SourceColumn="NGAY_SINH" DataSetColumn="NGAY_SINH" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -190,14 +219,14 @@ SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, 
               <xs:element name="SDT_HS" msprop:Generator_ColumnVarNameInTable="columnSDT_HS" msprop:Generator_ColumnPropNameInRow="SDT_HS" msprop:Generator_ColumnPropNameInTable="SDT_HSColumn" msprop:Generator_UserColumnName="SDT_HS" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="35" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="SDT_PH" msprop:Generator_ColumnVarNameInTable="columnSDT_PH" msprop:Generator_ColumnPropNameInRow="SDT_PH" msprop:Generator_ColumnPropNameInTable="SDT_PHColumn" msprop:Generator_UserColumnName="SDT_PH" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="15" />
+                    <xs:maxLength value="35" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -215,6 +244,28 @@ SELECT ID, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, HO, TEN, TRUONG_DANG_HOC, EMAIL_HS, 
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="FACEBOOK" msprop:Generator_ColumnVarNameInTable="columnFACEBOOK" msprop:Generator_ColumnPropNameInRow="FACEBOOK" msprop:Generator_ColumnPropNameInTable="FACEBOOKColumn" msprop:Generator_UserColumnName="FACEBOOK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SKYPE" msprop:Generator_ColumnVarNameInTable="columnSKYPE" msprop:Generator_ColumnPropNameInRow="SKYPE" msprop:Generator_ColumnPropNameInTable="SKYPEColumn" msprop:Generator_UserColumnName="SKYPE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DELETE_YN" msprop:Generator_ColumnVarNameInTable="columnDELETE_YN" msprop:Generator_ColumnPropNameInRow="DELETE_YN" msprop:Generator_ColumnPropNameInTable="DELETE_YNColumn" msprop:Generator_UserColumnName="DELETE_YN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NGAY_SINH" msprop:Generator_ColumnVarNameInTable="columnNGAY_SINH" msprop:Generator_ColumnPropNameInRow="NGAY_SINH" msprop:Generator_ColumnPropNameInTable="NGAY_SINHColumn" msprop:Generator_UserColumnName="NGAY_SINH" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

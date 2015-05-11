@@ -16,12 +16,14 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
     public class EXCEL_IMPORT_HOC_VIEN {
         public const string STT = "STT";
         public const string MA_HOC_VIEN = "MA_HOC_VIEN";
-        public const string HO_DEM = "HO_DEM";
+        public const string HO = "HO";
         public const string TEN = "TEN";
-        public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
-        public const string EMAIL = "EMAIL";
-        public const string DIA_CHI = "DIA_CHI";
         public const string SĐT = "SĐT";
+        public const string EMAIL = "EMAIL";
+        public const string NGAY_SINH = "NGAY_SINH";
+        public const string QUE_QUAN = "QUE_QUAN";
+        public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
+        public const string FACEBOOK = "FACEBOOK";
     }
 
     public class V_RPT_F460_TINH_HINH_BO_LOP
@@ -397,7 +399,9 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string SDT_PH = "SDT_PH";
         public const string HO_TEN_PH = "HO_TEN_PH";
         public const string SDT_CO_DINH = "SDT_CO_DINH";
+        public const string NGAY_SINH = "NGAY_SINH";
     }
+
 
 
     public class GD_DIEM_DANH {

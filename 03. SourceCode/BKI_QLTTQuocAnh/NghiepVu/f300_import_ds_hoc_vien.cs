@@ -56,6 +56,9 @@ namespace BKI_QLTTQuocAnh {
         private Label label1;
         private Label label6;
         internal SIS.Controls.Button.SiSButton m_cmd_kiem_tra_du_lieu;
+        private Label label8;
+        private Label label2;
+        private ComboBox m_cbo_lop;
         private System.ComponentModel.IContainer components;
 
         public f300_import_ds_hoc_vien() {
@@ -115,6 +118,9 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_ofd_exel_file = new System.Windows.Forms.OpenFileDialog();
             this.m_lbl_loading_mes = new System.Windows.Forms.Label();
+            this.m_cbo_lop = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -158,7 +164,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(859, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1066, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_insert
@@ -170,7 +176,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(503, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(710, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -186,7 +192,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(591, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(798, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -218,7 +224,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(679, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(886, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -234,7 +240,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(767, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(974, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -247,12 +253,15 @@ namespace BKI_QLTTQuocAnh {
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(0, 110);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(859, 263);
+            this.m_fg.Size = new System.Drawing.Size(1066, 263);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.m_cbo_lop);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.m_cmd_kiem_tra_du_lieu);
@@ -270,13 +279,13 @@ namespace BKI_QLTTQuocAnh {
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(859, 110);
+            this.panel1.Size = new System.Drawing.Size(1066, 110);
             this.panel1.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(448, 74);
+            this.label1.Location = new System.Drawing.Point(605, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 13);
             this.label1.TabIndex = 45;
@@ -285,7 +294,7 @@ namespace BKI_QLTTQuocAnh {
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(488, 38);
+            this.label6.Location = new System.Drawing.Point(451, 38);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 44;
@@ -299,7 +308,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_kiem_tra_du_lieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_kiem_tra_du_lieu.ImageIndex = 13;
             this.m_cmd_kiem_tra_du_lieu.ImageList = this.ImageList;
-            this.m_cmd_kiem_tra_du_lieu.Location = new System.Drawing.Point(302, 66);
+            this.m_cmd_kiem_tra_du_lieu.Location = new System.Drawing.Point(454, 66);
             this.m_cmd_kiem_tra_du_lieu.Name = "m_cmd_kiem_tra_du_lieu";
             this.m_cmd_kiem_tra_du_lieu.Size = new System.Drawing.Size(121, 28);
             this.m_cmd_kiem_tra_du_lieu.TabIndex = 43;
@@ -308,7 +317,7 @@ namespace BKI_QLTTQuocAnh {
             // m_llbl_mau_import
             // 
             this.m_llbl_mau_import.AutoSize = true;
-            this.m_llbl_mau_import.Location = new System.Drawing.Point(12, 53);
+            this.m_llbl_mau_import.Location = new System.Drawing.Point(3, 15);
             this.m_llbl_mau_import.Name = "m_llbl_mau_import";
             this.m_llbl_mau_import.Size = new System.Drawing.Size(77, 13);
             this.m_llbl_mau_import.TabIndex = 42;
@@ -318,7 +327,7 @@ namespace BKI_QLTTQuocAnh {
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(746, 81);
+            this.label9.Location = new System.Drawing.Point(928, 81);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 13);
             this.label9.TabIndex = 41;
@@ -327,7 +336,7 @@ namespace BKI_QLTTQuocAnh {
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(746, 53);
+            this.label7.Location = new System.Drawing.Point(928, 53);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 41;
@@ -337,7 +346,7 @@ namespace BKI_QLTTQuocAnh {
             // 
             this.m_lbl_green.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.m_lbl_green.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.m_lbl_green.Location = new System.Drawing.Point(684, 80);
+            this.m_lbl_green.Location = new System.Drawing.Point(866, 80);
             this.m_lbl_green.Name = "m_lbl_green";
             this.m_lbl_green.Size = new System.Drawing.Size(56, 23);
             this.m_lbl_green.TabIndex = 41;
@@ -346,7 +355,7 @@ namespace BKI_QLTTQuocAnh {
             // 
             this.m_lbl_pink.BackColor = System.Drawing.Color.Pink;
             this.m_lbl_pink.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.m_lbl_pink.Location = new System.Drawing.Point(684, 51);
+            this.m_lbl_pink.Location = new System.Drawing.Point(866, 51);
             this.m_lbl_pink.Name = "m_lbl_pink";
             this.m_lbl_pink.Size = new System.Drawing.Size(56, 23);
             this.m_lbl_pink.TabIndex = 41;
@@ -359,7 +368,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_save_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save_data.ImageIndex = 16;
             this.m_cmd_save_data.ImageList = this.ImageList;
-            this.m_cmd_save_data.Location = new System.Drawing.Point(494, 66);
+            this.m_cmd_save_data.Location = new System.Drawing.Point(660, 66);
             this.m_cmd_save_data.Name = "m_cmd_save_data";
             this.m_cmd_save_data.Size = new System.Drawing.Size(153, 28);
             this.m_cmd_save_data.TabIndex = 39;
@@ -373,7 +382,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_chon_file_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_chon_file_excel.ImageIndex = 19;
             this.m_cmd_chon_file_excel.ImageList = this.ImageList;
-            this.m_cmd_chon_file_excel.Location = new System.Drawing.Point(113, 66);
+            this.m_cmd_chon_file_excel.Location = new System.Drawing.Point(228, 66);
             this.m_cmd_chon_file_excel.Name = "m_cmd_chon_file_excel";
             this.m_cmd_chon_file_excel.Size = new System.Drawing.Size(121, 28);
             this.m_cmd_chon_file_excel.TabIndex = 33;
@@ -382,7 +391,7 @@ namespace BKI_QLTTQuocAnh {
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(260, 74);
+            this.label5.Location = new System.Drawing.Point(389, 74);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(19, 13);
             this.label5.TabIndex = 38;
@@ -391,7 +400,7 @@ namespace BKI_QLTTQuocAnh {
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(319, 38);
+            this.label4.Location = new System.Drawing.Point(225, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 37;
@@ -400,7 +409,7 @@ namespace BKI_QLTTQuocAnh {
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(121, 38);
+            this.label3.Location = new System.Drawing.Point(9, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 36;
@@ -413,7 +422,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(859, 37);
+            this.m_lbl_header.Size = new System.Drawing.Size(1066, 37);
             this.m_lbl_header.TabIndex = 25;
             this.m_lbl_header.Text = "NHẬP DANH SÁCH HỌC VIÊN TỪ FILE EXCEL";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -435,10 +444,39 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_loading_mes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.m_lbl_loading_mes.Visible = false;
             // 
+            // m_cbo_lop
+            // 
+            this.m_cbo_lop.FormattingEnabled = true;
+            this.m_cbo_lop.Items.AddRange(new object[] {
+            "Lớp 058",
+            "Lớp 066"});
+            this.m_cbo_lop.Location = new System.Drawing.Point(12, 66);
+            this.m_cbo_lop.Name = "m_cbo_lop";
+            this.m_cbo_lop.Size = new System.Drawing.Size(121, 21);
+            this.m_cbo_lop.TabIndex = 46;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(169, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "-->";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(657, 38);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Bước 4:";
+            // 
             // f300_import_ds_hoc_vien
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(859, 409);
+            this.ClientSize = new System.Drawing.Size(1066, 409);
             this.Controls.Add(this.m_lbl_loading_mes);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
@@ -464,19 +502,20 @@ namespace BKI_QLTTQuocAnh {
         #region Data Structure
         private enum e_col_Number {
             EMAIL = 6
-,
-            SĐT = 8
+            ,SĐT = 5
                 ,
             STT = 1
                 ,
             MA_HOC_VIEN = 2
                 ,
-            HO_DEM = 3
+            HO = 3
                 ,
             TEN = 4
                 ,
-            TRUONG_DANG_HOC = 5
-                , DIA_CHI = 7
+            TRUONG_DANG_HOC = 9
+                , QUE_QUAN = 8
+            ,NGAY_SINH = 7
+            ,FACEBOOK =10
 
         }
         #endregion
@@ -510,6 +549,7 @@ namespace BKI_QLTTQuocAnh {
         private void set_initial_form_load() {
             m_obj_trans = get_trans_object(m_fg);
             load_data_2_grid();
+            load_data_2_cbo_lop();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg) {
             Hashtable v_htb = new Hashtable();
@@ -517,10 +557,12 @@ namespace BKI_QLTTQuocAnh {
             v_htb.Add(EXCEL_IMPORT_HOC_VIEN.SĐT, e_col_Number.SĐT);
             v_htb.Add(EXCEL_IMPORT_HOC_VIEN.STT, e_col_Number.STT);
             v_htb.Add(EXCEL_IMPORT_HOC_VIEN.MA_HOC_VIEN, e_col_Number.MA_HOC_VIEN);
-            v_htb.Add(EXCEL_IMPORT_HOC_VIEN.HO_DEM, e_col_Number.HO_DEM);
+            v_htb.Add(EXCEL_IMPORT_HOC_VIEN.HO, e_col_Number.HO);
             v_htb.Add(EXCEL_IMPORT_HOC_VIEN.TEN, e_col_Number.TEN);
             v_htb.Add(EXCEL_IMPORT_HOC_VIEN.TRUONG_DANG_HOC, e_col_Number.TRUONG_DANG_HOC);
-            v_htb.Add(EXCEL_IMPORT_HOC_VIEN.DIA_CHI, e_col_Number.DIA_CHI);
+            v_htb.Add(EXCEL_IMPORT_HOC_VIEN.QUE_QUAN, e_col_Number.QUE_QUAN);
+            v_htb.Add(EXCEL_IMPORT_HOC_VIEN.NGAY_SINH, e_col_Number.NGAY_SINH);
+            v_htb.Add(EXCEL_IMPORT_HOC_VIEN.FACEBOOK, e_col_Number.FACEBOOK);
 
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.EXCEL_IMPORT_HOC_VIEN.NewRow());
             return v_obj_trans;
@@ -540,6 +582,25 @@ namespace BKI_QLTTQuocAnh {
             i_us.DataRow2Me(v_dr);
         }
 
+        private void load_data_2_cbo_lop()
+        {
+            DS_DM_LOP_MON v_ds_dm_lop_mon = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON();
+            v_us_dm_lop_mon.FillDataset(v_ds_dm_lop_mon, "where TRANG_THAI_LOP_MON = 88");
+
+            //DataRow v_dr = v_ds_dm_lop_mon.DM_LOP_MON.NewRow();
+            //v_dr[DM_LOP_MON.ID] = -1;
+            //v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+            //v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = 0;
+
+            //v_ds_dm_lop_mon.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+
+            m_cbo_lop.DataSource = v_ds_dm_lop_mon.DM_LOP_MON;
+            m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
+            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+
+            //m_cbo_nhap_vao_lop_mon.SelectedIndex = 0;
+        }
 
         private void us_object2grid(US_EXCEL_IMPORT_HOC_VIEN i_us
             , int i_grid_row) {
@@ -597,20 +658,24 @@ namespace BKI_QLTTQuocAnh {
             if(m_ofd_exel_file.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
                 try {
                     // Reset lại ds mới nếu chọn lại file excel khác
-                    m_ds = new DS_EXCEL_IMPORT_HOC_VIEN();
+                    //m_ds.Clear();
+                    //m_ds = new DS_EXCEL_IMPORT_HOC_VIEN();
+                    DS_EXCEL_IMPORT_HOC_VIEN v_ds = new DS_EXCEL_IMPORT_HOC_VIEN();
+                    v_ds.Clear();
+                    v_ds.EnforceConstraints = false;
 
                     m_lbl_loading_mes.Visible = true;
                     CExcelReport v_excel_rpt = new CExcelReport(m_ofd_exel_file.FileName);
 
                     m_ds.EnforceConstraints = false;
-                    v_excel_rpt.Export2DatasetDS_by_DucVT(m_ds, m_ds.EXCEL_IMPORT_HOC_VIEN.TableName, 2);
+                    v_excel_rpt.Export2DatasetDS_by_DucVT(v_ds, v_ds.EXCEL_IMPORT_HOC_VIEN.TableName, 2);
 
                     m_fg.Redraw = false;
 
                     //Gán DataSource
                     //m_fg.DataSource = m_ds.DM_NHAN_SU;
 
-                    CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+                    CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
                     m_fg.Redraw = true;
                     m_lbl_loading_mes.Visible = false;
 
@@ -623,12 +688,15 @@ namespace BKI_QLTTQuocAnh {
         private void excel_2_us_dm_hoc_vien(US_EXCEL_IMPORT_HOC_VIEN ip_us_excel, US_DM_HOC_SINH ip_us_hv) {
             ip_us_hv.dcID_LOAI_DOI_TUONG = CONST_ID_LOAI_DOI_TUONG.ID_HOC_SINH;
             ip_us_hv.strMA_DOI_TUONG = ip_us_excel.strMA_HOC_VIEN;
-            ip_us_hv.strHO = ip_us_excel.strHO_DEM;
+            ip_us_hv.strHO = ip_us_excel.strHO;
             ip_us_hv.strTEN = ip_us_excel.strTEN;
             ip_us_hv.strTRUONG_DANG_HOC = ip_us_excel.strTRUONG_DANG_HOC;
             ip_us_hv.strEMAIL_HS = ip_us_excel.strEMAIL;
-            ip_us_hv.strDIA_CHI = ip_us_excel.strDIA_CHI;
+            ip_us_hv.strDIA_CHI = ip_us_excel.strQUE_QUAN;
             ip_us_hv.strSDT_HS = ip_us_excel.strSĐT;
+            ip_us_hv.datNGAY_SINH = ip_us_excel.datNGAY_SINH;
+            ip_us_hv.strFACEBOOK = ip_us_excel.strFACEBOOK;
+            ip_us_hv.strDELETE_YN = "N";
         }
         private void kiem_tra_du_lieu(DS_EXCEL_IMPORT_HOC_VIEN ip_ds) {
             m_flag_du_lieu_is_ok = true;
@@ -640,7 +708,7 @@ namespace BKI_QLTTQuocAnh {
             v_style_ok.BackColor = Color.White;
             //Buoc 1: Check null
             for(int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++) {
-                for(int j = m_fg.Cols.Fixed; j < m_fg.Cols.Count; j++) {
+                for(int j = m_fg.Cols.Fixed; j < 6; j++) {
                     if(m_fg.Rows[i][j] == null || m_fg.Rows[i][j].ToString() == "") {
                         m_fg.SetCellStyle(i, j, v_style_not_ok);
                         m_flag_du_lieu_is_ok = false;
@@ -668,6 +736,7 @@ namespace BKI_QLTTQuocAnh {
                     m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
                 }
             }
+            BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
         }
         #endregion
 
@@ -703,16 +772,35 @@ namespace BKI_QLTTQuocAnh {
                     BaseMessages.MsgBox_Error("Bạn kiểm tra dữ liệu trước nhé!");
                     return;
                 }
-                m_us.BeginTransaction();
 
                 US_DM_HOC_SINH v_us_hv = new US_DM_HOC_SINH();
-                for(int i_grid_row = 1; i_grid_row < m_fg.Rows.Count; i_grid_row++) {
+                US_GD_HOC v_us_gd_hoc = new US_GD_HOC();
+                //v_us_hv_gd_hoc.UseTransOfUSObject( //use transaction cua thang hoc_sinh
+                v_us_hv.BeginTransaction();
+                for(int i_grid_row = m_fg.Rows.Fixed; i_grid_row < m_fg.Rows.Count; i_grid_row++) {
+                    //1.1 day du lieu vao hv
                     grid2us_object(m_us, i_grid_row);
                     excel_2_us_dm_hoc_vien(m_us, v_us_hv);
+                    //1.2 insert
+                    //Anh phai mo trấnction
+                    
                     v_us_hv.Insert();
+                    //v_us_hv.Insert();
+                    //2.1 su dung transaction cua hv
+                    v_us_gd_hoc.UseTransOfUSObject(v_us_hv);
+                    //2.2 day du lieu vao us_gd_hoc 
+                    v_us_gd_hoc.dcID_HOC_SINH = v_us_hv.dcID;
+                    v_us_gd_hoc.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+                    v_us_gd_hoc.strTRANG_THAI_YN = "Y";
+                    v_us_gd_hoc.datNGAY_BAT_DAU = DateTime.Now.Date;
+                    //2.3 insert
+                    v_us_gd_hoc.Insert();
+                    //3.1 clear du lieu de insert moi
                     v_us_hv.ClearAllFields();
+                    v_us_gd_hoc.ClearAllFields();
+                    
                 }
-                m_us.CommitTransaction();
+                v_us_hv.CommitTransaction();
                 BaseMessages.MsgBox_Infor("Lưu dữ liệu học viên thành công");
             }
             catch(Exception v_e) {
