@@ -270,9 +270,12 @@ namespace BKI_QLTTQuocAnh
                 ////v_frm.Display();
                 ////v_frm.SetFactoryPhieu("PHAI_THU", v_frm, v_frm.m_fg);
                 //if (IsExistFormText(v_frm)) return;
-
-                //v_frm.MdiParent = this;
-                //v_frm.Show();
+                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu();
+                if(IsExistFormText(v_frm)) {
+                    return;
+                }
+                v_frm.MdiParent = this;
+                v_frm.Show();
             }
             catch (Exception v_e)
             {
@@ -300,11 +303,11 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f320_diem_danh v_frm = new f320_diem_danh();
-                if (IsExistFormName(v_frm)) return;
+                //f320_diem_danh v_frm = new f320_diem_danh();
+                //if (IsExistFormName(v_frm)) return;
 
-                v_frm.MdiParent = this;
-                v_frm.Show();
+                //v_frm.MdiParent = this;
+                //v_frm.Show();
             }
             catch (Exception v_e)
             {
@@ -570,12 +573,12 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f316_nghi_hoc v_frm = new f316_nghi_hoc();
+                //f316_nghi_hoc v_frm = new f316_nghi_hoc();
 
-                if (IsExistFormName(v_frm)) return;
+                //if (IsExistFormName(v_frm)) return;
 
-                v_frm.MdiParent = this;
-                v_frm.Show();
+                //v_frm.MdiParent = this;
+                //v_frm.Show();
             }
             catch (Exception v_e)
             {
@@ -587,12 +590,12 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f315_nhap_hoc v_frm = new f315_nhap_hoc();
+                //f315_nhap_hoc v_frm = new f315_nhap_hoc();
 
-                if (IsExistFormName(v_frm)) return;
+                //if (IsExistFormName(v_frm)) return;
 
-                v_frm.MdiParent = this;
-                v_frm.Show();
+                //v_frm.MdiParent = this;
+                //v_frm.Show();
             }
             catch (Exception v_e)
             {

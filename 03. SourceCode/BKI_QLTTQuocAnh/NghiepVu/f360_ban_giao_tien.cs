@@ -167,7 +167,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 grid2us_object(v_us_v_rpt, v_i_cur_row);
 
                 US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us_v_rpt.dcID);
-                v_us_gd_pt.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.DA_BAN_GIAO;
+                v_us_gd_pt.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.BAN_GIAO_THU_QUY;
                 v_us_gd_pt.Update();
             }
             load_data_2_grid();

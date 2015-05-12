@@ -74,14 +74,17 @@
     <Reference Include="DevExpress.ExpressApp.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.ExpressApp.Win.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraNavBar.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
@@ -254,24 +257,6 @@
     <Compile Include="NghiepVu\f300_import_ds_hoc_vien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NghiepVu\f315_nhap_hoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NghiepVu\f315_nhap_hoc.Designer.cs">
-      <DependentUpon>f315_nhap_hoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NghiepVu\f316_nghi_hoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NghiepVu\f316_nghi_hoc.Designer.cs">
-      <DependentUpon>f316_nghi_hoc.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NghiepVu\f320_diem_danh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NghiepVu\f320_diem_danh.Designer.cs">
-      <DependentUpon>f320_diem_danh.cs</DependentUpon>
-    </Compile>
     <Compile Include="NghiepVu\f330_lap_phai_thu_hoc_vien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,15 +368,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f300_import_ds_hoc_vien.resx">
       <DependentUpon>f300_import_ds_hoc_vien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\f315_nhap_hoc.resx">
-      <DependentUpon>f315_nhap_hoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\f316_nghi_hoc.resx">
-      <DependentUpon>f316_nghi_hoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\f320_diem_danh.resx">
-      <DependentUpon>f320_diem_danh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f330_lap_phai_thu_hoc_vien.resx">
       <DependentUpon>f330_lap_phai_thu_hoc_vien.cs</DependentUpon>

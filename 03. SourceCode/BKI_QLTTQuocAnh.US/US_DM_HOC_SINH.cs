@@ -422,5 +422,18 @@ public class US_DM_HOC_SINH : US_Object
 		pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
 	}
 #endregion
-	}
+
+    public bool is_exist_ma_hs(string ip_str_ma_hv, ref string op_ten_hv ) {
+        CStoredProc v_cst = new CStoredProc("Pr_is_ma_hv_in_db");
+        v_cst.addNVarcharInputParam("@ip_str_ma_hv", ip_str_ma_hv);
+        SqlParameter v_spr_ma_hv = v_cst.addNVarcharOutputParam("@op_str_ma_hv","");
+        SqlParameter v_spr_ten_hv = v_cst.addNVarcharOutputParam("@op_str_ten_hv", "");
+        v_cst.ExecuteCommand(this);
+
+        if(v_spr_ma_hv.Value.ToString() == "Y") {
+            return true;
+        }
+        return false;
+    }
+}
 }

@@ -4,6 +4,20 @@ using System.Text;
 
 namespace BKI_QLTTQuocAnh.DS.CDBNames
 {
+    public class DM_SO_PHIEU_THU {
+        public const string ID = "ID";
+        public const string MA_SO_QUYEN = "MA_SO_QUYEN";
+        public const string TEN_SO = "TEN_SO";
+        public const string TU_SO = "TU_SO";
+        public const string DEN_SO = "DEN_SO";
+        public const string THOI_GIAN_BAT_DAU_SU_DUNG = "THOI_GIAN_BAT_DAU_SU_DUNG";
+        public const string THOI_GIAN_KET_THUC_SD = "THOI_GIAN_KET_THUC_SD";
+        public const string IS_DELETED = "IS_DELETED";
+        public const string IS_ACTIVE = "IS_ACTIVE";
+        public const string MO_TA = "MO_TA";
+        public const string GHI_CHU = "GHI_CHU";
+    }
+
     public class MAX_SO_PHIEU_THEO_THANG {
         public const string ID = "ID";
         public const string THANG = "THANG";
@@ -569,12 +583,17 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TRANG_THAI_LOP_MON = "TRANG_THAI_LOP_MON";
     }
 
-    public class V_GD_HOC
-    {
-        public const string STT = "STT";
+    public class V_GD_HOC {
+        public const string ID = "ID";
+        public const string TEN_LOP = "TEN_LOP";
         public const string HO_TEN = "HO_TEN";
+        public const string NGAY_BAT_DAU = "NGAY_BAT_DAU";
+        public const string NGAY_KET_THUC = "NGAY_KET_THUC";
+        public const string TRANG_THAI_HOC = "TRANG_THAI_HOC";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
         public const string MO_TA = "MO_TA";
-        public const string TRANG_THAI = "TRANG_THAI";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string ID_LOP_MON = "ID_LOP_MON";
     }
 
     public class V_F316_DM_HOC_SINH_LOP_MON

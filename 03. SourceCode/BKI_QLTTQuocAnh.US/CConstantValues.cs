@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace BKI_QLTTQuocAnh.US {
+    
     public class CONST_TIEN_TO_SO_PHIEU {
         public const string PHAI_THU = "PT-";
         public const string THUC_THU = "TT-";
@@ -28,9 +29,10 @@ namespace BKI_QLTTQuocAnh.US {
     }
 
     public class CONST_ID_TRANG_THAI_BAN_GIAO {
-
-        public const decimal DA_THU = 81;
-        public const decimal DA_BAN_GIAO = 82;
+        public const decimal BAN_GIAO_TRUONG_PHONG = 91;
+        public const decimal BAN_GIAO_CEO = 92;
+        public const decimal BAN_GIAO_THU_QUY = 93;
+        public const decimal CHUA_BAN_GIAO = 94;
 
     }
     public class CONST_ID_DM_LOAI_CHUNG_TU {
