@@ -184,7 +184,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 
                 //form_2_us_gd_phieu_thu
                 v_us_gd_phieu_thu.strSO_PHIEU = m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_PHIEU].ToString().Trim();
-                v_us_gd_phieu_thu.dcID_HOC_SINH = v_us_rpt.dcID_HOC_SINH;
+                //v_us_gd_phieu_thu.dcID_HOC_SINH = v_us_rpt.dcID_HOC_SINH;
                 v_us_gd_phieu_thu.dcID_NGUOI_THU = CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue);
                 v_us_gd_phieu_thu.dcID_NGUOI_NHAP = CIPConvert.ToDecimal(m_cbo_nhan_vien_nhap.SelectedValue);
                 v_us_gd_phieu_thu.strTEN_NGUOI_NOP_TIEN = m_fg.Rows[v_i_cur_row][(int)e_col_Number.HO_TEN_PH].ToString().Trim();

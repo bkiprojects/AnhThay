@@ -174,9 +174,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         private void insert_v_hoc_sinh()
         {
-            	f221_cap_nhat_thong_tin_hoc_sinh_de v_fDE = new f221_cap_nhat_thong_tin_hoc_sinh_de();								
-            	v_fDE.display_for_insert();
-            load_data_2_grid();
+            	//f221_cap_nhat_thong_tin_hoc_sinh_de v_fDE = new f221_cap_nhat_thong_tin_hoc_sinh_de();								
+            //    v_fDE.display_for_insert();
+            //load_data_2_grid();
         }
 
         private void update_v_hoc_sinh()
@@ -184,9 +184,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             US_V_HOC_SINH v_us_hoc_sinh = new US_V_HOC_SINH();
-            grid2us_object(v_us_hoc_sinh, m_fg.Row);
-            f221_cap_nhat_thong_tin_hoc_sinh_de v_fDE = new f221_cap_nhat_thong_tin_hoc_sinh_de();
-            v_fDE.display_for_update(v_us_hoc_sinh);
+            //grid2us_object(v_us_hoc_sinh, m_fg.Row);
+            //f221_cap_nhat_thong_tin_hoc_sinh_de v_fDE = new f221_cap_nhat_thong_tin_hoc_sinh_de();
+            //v_fDE.display_for_update(v_us_hoc_sinh);
             //	frm_V__HOC_SINH_DE v_fDE = new frm_V__HOC_SINH_DE();
             //	v_fDE.display(m_us);
             load_data_2_grid();

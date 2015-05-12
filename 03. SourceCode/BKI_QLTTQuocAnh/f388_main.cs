@@ -214,13 +214,13 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("GIAM_TRU");
-                //v_frm.Display();
-                //v_frm.SetFactoryPhieu("GIAM_TRU", v_frm, v_frm.m_fg);
-                if (IsExistFormText(v_frm)) return;
+                //f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("GIAM_TRU");
+                ////v_frm.Display();
+                ////v_frm.SetFactoryPhieu("GIAM_TRU", v_frm, v_frm.m_fg);
+                //if (IsExistFormText(v_frm)) return;
 
-                v_frm.MdiParent = this;
-                v_frm.Show();
+                //v_frm.MdiParent = this;
+                //v_frm.Show();
             }
             catch (Exception v_e)
             {
@@ -232,13 +232,13 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("THUC_THU");
-                //v_frm.Display();
-                //v_frm.SetFactoryPhieu("THUC_THU", v_frm, v_frm.m_fg);
-                if (IsExistFormText(v_frm)) return;
+                //f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("THUC_THU");
+                ////v_frm.Display();
+                ////v_frm.SetFactoryPhieu("THUC_THU", v_frm, v_frm.m_fg);
+                //if (IsExistFormText(v_frm)) return;
 
-                v_frm.MdiParent = this;
-                v_frm.Show();
+                //v_frm.MdiParent = this;
+                //v_frm.Show();
             }
             catch (Exception v_e)
             {
@@ -266,13 +266,13 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("PHAI_THU");
-                //v_frm.Display();
-                //v_frm.SetFactoryPhieu("PHAI_THU", v_frm, v_frm.m_fg);
-                if (IsExistFormText(v_frm)) return;
+                //f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("PHAI_THU");
+                ////v_frm.Display();
+                ////v_frm.SetFactoryPhieu("PHAI_THU", v_frm, v_frm.m_fg);
+                //if (IsExistFormText(v_frm)) return;
 
-                v_frm.MdiParent = this;
-                v_frm.Show();
+                //v_frm.MdiParent = this;
+                //v_frm.Show();
             }
             catch (Exception v_e)
             {

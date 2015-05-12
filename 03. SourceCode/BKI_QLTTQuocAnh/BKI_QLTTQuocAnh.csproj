@@ -71,6 +71,8 @@
     </Reference>
     <Reference Include="DevExpress.Data.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Win.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -78,6 +80,8 @@
     <Reference Include="DevExpress.XtraBars.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v13.1, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Microsoft SQL Server\110\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
@@ -195,18 +199,6 @@
     <Compile Include="DanhMuc\f230_danh_muc_hs_theo_lop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="f221_cap_nhat_thong_tin_hoc_sinh_de.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="f221_cap_nhat_thong_tin_hoc_sinh_de.Designer.cs">
-      <DependentUpon>f221_cap_nhat_thong_tin_hoc_sinh_de.cs</DependentUpon>
-    </Compile>
-    <Compile Include="f399_MainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="f399_MainMenu.designer.cs">
-      <DependentUpon>f399_MainMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="HeThong\collection.cs" />
     <Compile Include="HeThong\f306_HT_USER_GROUP.cs">
       <SubType>Form</SubType>
@@ -247,12 +239,6 @@
     <Compile Include="HeThong\f995_ht_phan_quyen_cho_nhom.Designer.cs">
       <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
     </Compile>
-    <Compile Include="f400_Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="f400_Main.Designer.cs">
-      <DependentUpon>f400_Main.cs</DependentUpon>
-    </Compile>
     <Compile Include="HeThong\f998_ht_nguoi_su_dung_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,8 +278,11 @@
     <Compile Include="NghiepVu\f330_lap_phai_thu_hoc_vien.Designer.cs">
       <DependentUpon>f330_lap_phai_thu_hoc_vien.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\f340_lap_phieu_thu.cs">
+    <Compile Include="NghiepVu\F350_lap_phieu_thu.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F350_lap_phieu_thu.Designer.cs">
+      <DependentUpon>F350_lap_phieu_thu.cs</DependentUpon>
     </Compile>
     <Compile Include="NghiepVu\f360_ban_giao_tien.cs">
       <SubType>Form</SubType>
@@ -301,7 +290,6 @@
     <Compile Include="NghiepVu\f360_ban_giao_tien.designer.cs">
       <DependentUpon>f360_ban_giao_tien.cs</DependentUpon>
     </Compile>
-    <Compile Include="NghiepVu\FactoryPhieu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -360,12 +348,6 @@
     <EmbeddedResource Include="DanhMuc\f230_danh_muc_hs_theo_lop.resx">
       <DependentUpon>f230_danh_muc_hs_theo_lop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="f221_cap_nhat_thong_tin_hoc_sinh_de.resx">
-      <DependentUpon>f221_cap_nhat_thong_tin_hoc_sinh_de.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="f399_MainMenu.resx">
-      <DependentUpon>f399_MainMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP.resx">
       <DependentUpon>f306_HT_USER_GROUP.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,10 +371,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f995_ht_phan_quyen_cho_nhom.resx">
       <DependentUpon>f995_ht_phan_quyen_cho_nhom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="f400_Main.resx">
-      <DependentUpon>f400_Main.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f998_ht_nguoi_su_dung_de.resx">
       <DependentUpon>f998_ht_nguoi_su_dung_de.cs</DependentUpon>
@@ -418,8 +396,8 @@
     <EmbeddedResource Include="NghiepVu\f330_lap_phai_thu_hoc_vien.resx">
       <DependentUpon>f330_lap_phai_thu_hoc_vien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NghiepVu\f340_lap_phieu_thu.resx">
-      <DependentUpon>f340_lap_phieu_thu.cs</DependentUpon>
+    <EmbeddedResource Include="NghiepVu\F350_lap_phieu_thu.resx">
+      <DependentUpon>F350_lap_phieu_thu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f360_ban_giao_tien.resx">
       <DependentUpon>f360_ban_giao_tien.cs</DependentUpon>

@@ -426,11 +426,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void m_cmd_hs_moi_Click(object sender, EventArgs e)
         {
-            f221_cap_nhat_thong_tin_hoc_sinh_de v_frm = new f221_cap_nhat_thong_tin_hoc_sinh_de();
-            v_frm.display_for_insert();
-            v_frm.select_hoc_sinh(ref m_us_v_hoc_sinh);
-             m_txt_chon_hs.Text = m_us_v_hoc_sinh.strHO+' '+m_us_v_hoc_sinh.strTEN;
-             m_cbo_nhap_vao_lop_mon.Focus();
+            //f221_cap_nhat_thong_tin_hoc_sinh_de v_frm = new f221_cap_nhat_thong_tin_hoc_sinh_de();
+            //v_frm.display_for_insert();
+            //v_frm.select_hoc_sinh(ref m_us_v_hoc_sinh);
+            // m_txt_chon_hs.Text = m_us_v_hoc_sinh.strHO+' '+m_us_v_hoc_sinh.strTEN;
+            // m_cbo_nhap_vao_lop_mon.Focus();
             
         }
 
