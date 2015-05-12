@@ -163,7 +163,7 @@ namespace BKI_QLTTQuocAnh
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(0, 193);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(842, 265);
+            this.m_fg.Size = new System.Drawing.Size(846, 275);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             // 
@@ -185,14 +185,14 @@ namespace BKI_QLTTQuocAnh
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(842, 193);
+            this.panel2.Size = new System.Drawing.Size(846, 193);
             this.panel2.TabIndex = 0;
             // 
             // m_cbo_loai_phieu
             // 
             this.m_cbo_loai_phieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.m_cbo_loai_phieu.FormattingEnabled = true;
-            this.m_cbo_loai_phieu.Location = new System.Drawing.Point(94, 102);
+            this.m_cbo_loai_phieu.Location = new System.Drawing.Point(425, 75);
             this.m_cbo_loai_phieu.Name = "m_cbo_loai_phieu";
             this.m_cbo_loai_phieu.Size = new System.Drawing.Size(222, 21);
             this.m_cbo_loai_phieu.TabIndex = 8;
@@ -200,7 +200,7 @@ namespace BKI_QLTTQuocAnh
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 104);
+            this.label1.Location = new System.Drawing.Point(345, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 7;
@@ -271,7 +271,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(842, 44);
+            this.m_lbl_header.Size = new System.Drawing.Size(846, 44);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÁO CÁO DANH SÁCH PHIẾU THU";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -374,10 +374,10 @@ namespace BKI_QLTTQuocAnh
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 458);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 468);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(842, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(846, 36);
             this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_delete
@@ -420,7 +420,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(662, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(666, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 3;
@@ -450,7 +450,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(750, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(754, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 4;
@@ -459,7 +459,7 @@ namespace BKI_QLTTQuocAnh
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(842, 494);
+            this.ClientSize = new System.Drawing.Size(846, 504);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.panel2);

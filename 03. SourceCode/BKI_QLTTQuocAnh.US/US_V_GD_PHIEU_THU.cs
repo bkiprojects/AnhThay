@@ -441,6 +441,28 @@ namespace BKI_QLTTQuocAnh.US
             pm_objDR["TEN_TRANG_THAI"] = System.Convert.DBNull;
         }
 
+        public decimal dcLAN_THU
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "LAN_THU", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["LAN_THU"] = value;
+            }
+        }
+
+        public bool IsLAN_THUNull()
+        {
+            return pm_objDR.IsNull("LAN_THU");
+        }
+
+        public void SetLAN_THUNull()
+        {
+            pm_objDR["LAN_THU"] = System.Convert.DBNull;
+        }
+
         #endregion
         #region "Init Functions"
         public US_V_GD_PHIEU_THU()
