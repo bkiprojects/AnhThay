@@ -625,7 +625,7 @@ namespace BKI_QLTTQuocAnh
         {
             DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
             Hashtable v_htb = new Hashtable();
-            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NGUOI_THU, e_col_Number.NGUOI_THU);
+            //v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NGUOI_THU, e_col_Number.NGUOI_THU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_LOAI_PHIEU_THU, e_col_Number.LOAI_PHIEU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.SO_PHIEU, e_col_Number.SO_PHIEU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_PH, e_col_Number.HO_TEN_PH);
@@ -667,8 +667,6 @@ namespace BKI_QLTTQuocAnh
 
             m_fg.Redraw = true;
         }
-
-        
 
         private void load_data_2_grid()
         {
@@ -713,7 +711,7 @@ namespace BKI_QLTTQuocAnh
             {
                 return true;
             }
-            US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(ip_us_rpt.dcID);
+            US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(ip_us_rpt.dcID_PHIEU);
             if (v_us_gd_pt.dcID_TRANG_THAI == CONST_ID_TRANG_THAI_BAN_GIAO.BAN_GIAO_THU_QUY)
             {
                 return false;
@@ -741,7 +739,7 @@ namespace BKI_QLTTQuocAnh
                 return;
             }
 
-            US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
+            US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID_PHIEU);
 
             //f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("DISPLAY", v_us_gd_pt);
             //v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
@@ -765,7 +763,7 @@ namespace BKI_QLTTQuocAnh
             try
             {
                 v_us.BeginTransaction();
-                v_us.DeletePhieuThuVaChiTiet(v_us.dcID);
+                v_us.DeletePhieuThuVaChiTiet(v_us.dcID_PHIEU);
                 v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
                 BaseMessages.MsgBox_Infor("Đã xóa thành công");
@@ -844,7 +842,7 @@ namespace BKI_QLTTQuocAnh
                     return;
                 }
 
-                US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
+                US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID_PHIEU);
 
                 //f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu("DISPLAY", v_us_gd_pt);
                 //v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);

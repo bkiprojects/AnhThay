@@ -450,7 +450,8 @@ namespace BKI_QLTTQuocAnh.US {
             , DateTime ip_dat_den_ngay
             , decimal ip_dc_id_nguoi_thu
             , decimal ip_dc_id_loai_phieu_thu
-            , string ip_str_search) {
+            , string ip_str_search)
+        {
             CStoredProc v_obj_spr = new CStoredProc("f430_bao_cao_danh_sach_phieu_thuc_thu");
             v_obj_spr.addDecimalInputParam("@ip_dc_id_hoc_sinh", ip_dc_id_hoc_sinh);
             v_obj_spr.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
@@ -460,6 +461,27 @@ namespace BKI_QLTTQuocAnh.US {
             v_obj_spr.addDecimalInputParam("@ip_dc_id_loai_phieu_thu", ip_dc_id_loai_phieu_thu);
             v_obj_spr.fillDataSetByCommand(this, op_ds);
         }
+
+        public void FillDataset_by_condition(
+            DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU op_ds
+            //, decimal ip_dc_id_hoc_sinh
+            , decimal ip_dc_id_lop_mon
+            , DateTime ip_dat_tu_ngay
+            , DateTime ip_dat_den_ngay
+            , decimal ip_dc_id_nguoi_thu
+            , decimal ip_dc_id_loai_phieu_thu
+            , string ip_str_search) {
+            CStoredProc v_obj_spr = new CStoredProc("f430_bao_cao_danh_sach_phieu_thuc_thu");
+            //v_obj_spr.addDecimalInputParam("@ip_dc_id_hoc_sinh", ip_dc_id_hoc_sinh);
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+            v_obj_spr.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
+            v_obj_spr.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_nguoi_thu", ip_dc_id_nguoi_thu);
+            v_obj_spr.addNVarcharInputParam("@ip_str_search", ip_str_search);
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_loai_phieu_thu", ip_dc_id_loai_phieu_thu);
+            v_obj_spr.fillDataSetByCommand(this, op_ds);
+        }
+
         public void FillDatasetNguoiThu(
             DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU op_ds
             , DateTime ip_dat_tu_ngay

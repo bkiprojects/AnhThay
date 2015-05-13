@@ -319,7 +319,8 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
+                //f430_bao_cao_danh_sach_phai_thu_thuc_thu v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu();
+                f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay();
                 if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;
