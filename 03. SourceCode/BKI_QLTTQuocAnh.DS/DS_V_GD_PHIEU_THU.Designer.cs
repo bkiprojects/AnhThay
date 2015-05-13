@@ -295,7 +295,7 @@ namespace BKI_QLTTQuocAnh.DS {
             
             private global::System.Data.DataColumn columnTEN_LOP_MON;
             
-            private global::System.Data.DataColumn columnID_PHIEU;
+            private global::System.Data.DataColumn columnID;
             
             private global::System.Data.DataColumn columnSO_PHIEU;
             
@@ -428,9 +428,9 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ID_PHIEUColumn {
+            public global::System.Data.DataColumn IDColumn {
                 get {
-                    return this.columnID_PHIEU;
+                    return this.columnID;
                 }
             }
             
@@ -608,7 +608,7 @@ namespace BKI_QLTTQuocAnh.DS {
                         decimal ID_LOP_MON, 
                         string MA_LOP_MON, 
                         string TEN_LOP_MON, 
-                        decimal ID_PHIEU, 
+                        decimal ID, 
                         string SO_PHIEU, 
                         decimal ID_NGUOI_THU, 
                         string TEN_NGUOI_THU, 
@@ -635,7 +635,7 @@ namespace BKI_QLTTQuocAnh.DS {
                         ID_LOP_MON,
                         MA_LOP_MON,
                         TEN_LOP_MON,
-                        ID_PHIEU,
+                        ID,
                         SO_PHIEU,
                         ID_NGUOI_THU,
                         TEN_NGUOI_THU,
@@ -682,7 +682,7 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID_LOP_MON = base.Columns["ID_LOP_MON"];
                 this.columnMA_LOP_MON = base.Columns["MA_LOP_MON"];
                 this.columnTEN_LOP_MON = base.Columns["TEN_LOP_MON"];
-                this.columnID_PHIEU = base.Columns["ID_PHIEU"];
+                this.columnID = base.Columns["ID"];
                 this.columnSO_PHIEU = base.Columns["SO_PHIEU"];
                 this.columnID_NGUOI_THU = base.Columns["ID_NGUOI_THU"];
                 this.columnTEN_NGUOI_THU = base.Columns["TEN_NGUOI_THU"];
@@ -720,8 +720,8 @@ namespace BKI_QLTTQuocAnh.DS {
                 base.Columns.Add(this.columnMA_LOP_MON);
                 this.columnTEN_LOP_MON = new global::System.Data.DataColumn("TEN_LOP_MON", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTEN_LOP_MON);
-                this.columnID_PHIEU = new global::System.Data.DataColumn("ID_PHIEU", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_PHIEU);
+                this.columnID = new global::System.Data.DataColumn("ID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID);
                 this.columnSO_PHIEU = new global::System.Data.DataColumn("SO_PHIEU", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSO_PHIEU);
                 this.columnID_NGUOI_THU = new global::System.Data.DataColumn("ID_NGUOI_THU", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -760,7 +760,7 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnHO_TEN.MaxLength = 51;
                 this.columnMA_LOP_MON.MaxLength = 15;
                 this.columnTEN_LOP_MON.MaxLength = 250;
-                this.columnID_PHIEU.AllowDBNull = false;
+                this.columnID.AllowDBNull = false;
                 this.columnSO_PHIEU.AllowDBNull = false;
                 this.columnSO_PHIEU.MaxLength = 35;
                 this.columnID_NGUOI_THU.AllowDBNull = false;
@@ -1046,12 +1046,12 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal ID_PHIEU {
+            public decimal ID {
                 get {
-                    return ((decimal)(this[this.tableV_GD_PHIEU_THU.ID_PHIEUColumn]));
+                    return ((decimal)(this[this.tableV_GD_PHIEU_THU.IDColumn]));
                 }
                 set {
-                    this[this.tableV_GD_PHIEU_THU.ID_PHIEUColumn] = value;
+                    this[this.tableV_GD_PHIEU_THU.IDColumn] = value;
                 }
             }
             
@@ -1648,7 +1648,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_GD_PHIEU_THUTableAdapters {
             tableMapping.ColumnMappings.Add("ID_LOP_MON", "ID_LOP_MON");
             tableMapping.ColumnMappings.Add("MA_LOP_MON", "MA_LOP_MON");
             tableMapping.ColumnMappings.Add("TEN_LOP_MON", "TEN_LOP_MON");
-            tableMapping.ColumnMappings.Add("ID_PHIEU", "ID_PHIEU");
+            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("SO_PHIEU", "SO_PHIEU");
             tableMapping.ColumnMappings.Add("ID_NGUOI_THU", "ID_NGUOI_THU");
             tableMapping.ColumnMappings.Add("TEN_NGUOI_THU", "TEN_NGUOI_THU");
@@ -1681,7 +1681,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_GD_PHIEU_THUTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID_HOC_SINH, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, TEN_LOAI_DOI_TUONG, HO_TEN, ID_LOP_MON, MA_LOP_MON, TEN_LOP_MON, ID_PHIEU, SO_PHIEU, ID_NGUOI_THU, TEN_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NHAP, TEN_NGUOI_NOP_TIEN, NOI_DUNG, SO_TIEN, NGAY_THU, NGAY_NHAP, ID_LOAI_PHIEU_THU, MA_LOAI_PHIEU_THU, TEN_LOAI_PHIEU_THU, ID_TRANG_THAI, TEN, LAN_THU FROM dbo.V_GD_PHIEU_THU";
+            this._commandCollection[0].CommandText = @"SELECT ID_HOC_SINH, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, TEN_LOAI_DOI_TUONG, HO_TEN, ID_LOP_MON, MA_LOP_MON, TEN_LOP_MON, ID, SO_PHIEU, ID_NGUOI_THU, TEN_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NHAP, TEN_NGUOI_NOP_TIEN, NOI_DUNG, SO_TIEN, NGAY_THU, NGAY_NHAP, ID_LOAI_PHIEU_THU, MA_LOAI_PHIEU_THU, TEN_LOAI_PHIEU_THU, ID_TRANG_THAI, TEN, LAN_THU FROM dbo.V_GD_PHIEU_THU";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

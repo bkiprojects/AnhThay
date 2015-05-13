@@ -166,7 +166,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us_v_rpt = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
                 grid2us_object(v_us_v_rpt, v_i_cur_row);
 
-                US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us_v_rpt.dcID_PHIEU);
+                US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us_v_rpt.dcID);
                 v_us_gd_pt.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.BAN_GIAO_THU_QUY;
                 v_us_gd_pt.Update();
             }
@@ -198,7 +198,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 //    return;
                 //}
 
-                US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us.dcID_PHIEU);
+                US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us.dcID);
 
                 //f340_lap_phieu_thu v_frm = new f340_lap_phieu_thu();
                 //v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);

@@ -21,26 +21,26 @@ namespace BKI_QLTTQuocAnh.US {
     public class US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU : US_Object {
         private const string c_TableName = "V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU";
         #region "Public Properties"
-        public decimal dcID_PHIEU
+        public decimal dcID
         {
             get
             {
-                return CNull.RowNVLDecimal(pm_objDR, "ID_PHIEU", IPConstants.c_DefaultDecimal);
+                return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
             }
             set
             {
-                pm_objDR["ID_PHIEU"] = value;
+                pm_objDR["ID"] = value;
             }
         }
 
-        public bool IsID_PHIEUNull()
+        public bool IsIDNull()
         {
-            return pm_objDR.IsNull("ID_PHIEU");
+            return pm_objDR.IsNull("ID");
         }
 
-        public void SetID_PHIEUNull()
+        public void SetIDNull()
         {
-            pm_objDR["ID_PHIEU"] = System.Convert.DBNull;
+            pm_objDR["ID"] = System.Convert.DBNull;
         }
 
         public DateTime datNGAY_THU
