@@ -31,10 +31,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         #region Members
         ITransferDataRow m_obj_trans;
-        DataEntryFormMode m_e_form_mode;
+        DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
         DS_DM_HOC_SINH m_ds_hs = new DS_DM_HOC_SINH();
         DS_GD_PHIEU_THU m_ds_phieu_thu = new DS_GD_PHIEU_THU();
         DS_V_GD_HOC m_ds_v_gd_hoc = new DS_V_GD_HOC();
+        
         #endregion
 
         #region Private Methods
@@ -79,6 +80,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             DS_DM_SO_PHIEU_THU v_ds = new DS_DM_SO_PHIEU_THU();
             US_DM_SO_PHIEU_THU v_us = new US_DM_SO_PHIEU_THU();
             v_us.FillDataset(v_ds, "where IS_ACTIVE = 'Y' and IS_DELETED = 'N'");
+
+            DataRow v_dr = v_ds.DM_SO_PHIEU_THU.NewRow();
+            v_dr["TEN_SO"] = "-Chưa chọn sổ-";
+            v_dr["ID"] = -1;
+            v_ds.DM_SO_PHIEU_THU.Rows.InsertAt(v_dr,0);
+
+            m_cbo_so_phieu_thu.DataSource = v_ds.DM_SO_PHIEU_THU;
+            m_cbo_so_phieu_thu.DisplayMember = DM_SO_PHIEU_THU.TEN_SO;
+            m_cbo_so_phieu_thu.ValueMember = DM_SO_PHIEU_THU.ID;
+            
         }
         private void load_data_2_cbo() {
             load_data_2_cbo_lop();
@@ -154,22 +165,27 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
         private bool check_data_so_phieu() {
             m_lbl_check_so_phieu.Visible = true;
-            DataRow[] v_dr = m_ds_phieu_thu.GD_PHIEU_THU.Select("SO_PHIEU = '" + m_txt_so_phieu.Text.Trim() + "'");
+            if(CIPConvert.ToDecimal(m_cbo_so_phieu_thu.SelectedValue) == 0) {
+                m_lbl_check_so_phieu.Text = "Bạn chọn Sổ phiếu thu trước nhé";
+                m_txt_so_phieu.BackColor = Color.Bisque;
+                return false;
+            }
+            DataRow[] v_dr = m_ds_phieu_thu.GD_PHIEU_THU.Select("SO_PHIEU = '" + m_txt_so_phieu.Text.Trim() + "' and id_so_phieu_thu = '" + m_cbo_so_phieu_thu.SelectedValue +"'");
             if(v_dr.Count() != 0) {
                 //XtraMessageBox.Show("Mã học sinh chưa có trong dữ liệu phần mềm. Bạn có muốn nhập mới học sinh này","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
                 m_lbl_check_so_phieu.Visible = true;
                 m_txt_ma_hv.BackColor = Color.Bisque;
                 m_lbl_check_so_phieu.Text = "Đã có số phiếu rồi...";
-                return false;
+                return true;
             }
             else {
                 m_txt_so_phieu.BackColor = Color.White;
                 m_lbl_check_so_phieu.Visible = false;
-                return true;
+                return false;
             }
         }
         private bool check_data_form_db() {
-            if(!check_data_ma_hv() || check_data_ma_hv()) {
+            if(!check_data_ma_hv() || check_data_so_phieu()) {
                 return false;
             }
             return true;
@@ -189,14 +205,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 m_txt_so_tien.BackColor = Color.Bisque;
             }
             else {
-                m_txt_so_phieu.BackColor = Color.White;
+                m_txt_so_tien.BackColor = Color.White;
             }
 
             if(m_txt_noi_dung.Text.CompareTo("") == 0) {
                 m_txt_noi_dung.BackColor = Color.Bisque;
             }
             else {
-                m_txt_so_phieu.BackColor = Color.White;
+                m_txt_noi_dung.BackColor = Color.White;
             }
 
             if(!check_data_form_db()) {
@@ -210,7 +226,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
         private decimal find_id_gd_hoc(decimal ip_dc_id_lop, string ip_str_ma_hv) {
             try {
-                DataRow[] v_dr = m_ds_v_gd_hoc.V_GD_HOC.Select("ma_doi_tuong = '" + ip_str_ma_hv + "and id_lop_mon = '" + ip_dc_id_lop);
+                DataRow[] v_dr = m_ds_v_gd_hoc.V_GD_HOC.Select("ma_doi_tuong = '" + ip_str_ma_hv + "' and id_lop_mon = '" + ip_dc_id_lop+"'");
                 if(v_dr.Count() == 0) {
                     return 0;
                 }
@@ -229,7 +245,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 ip_us.strSO_PHIEU = m_txt_so_phieu.Text.Trim();
                 ip_us.datNGAY_THU = m_dat_ngay_thu.DateTime.Date;
                 ip_us.dcID_GD_HOC = find_id_gd_hoc(CIPConvert.ToDecimal(m_cbo_lop.EditValue), m_txt_ma_hv.Text.Trim());
-                ip_us.dcLAN_THU = CIPConvert.ToDecimal(m_cbo_lan_thu.SelectedValue);
+                ip_us.dcLAN_THU = CIPConvert.ToDecimal(m_txt_lan_thu.Text);
                 ip_us.dcSO_TIEN = CIPConvert.ToDecimal(m_txt_so_tien.Text.Trim());
                 ip_us.strNOI_DUNG = m_txt_noi_dung.Text.Trim();
                 ip_us.dcID_NGUOI_THU = CAppContext_201.getCurrentUserID();
@@ -255,18 +271,27 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             /*Buoc 2:  */
             US_GD_PHIEU_THU v_us_gd_phieu_thu = new US_GD_PHIEU_THU();
             form_to_us_gd_phieu_thu(v_us_gd_phieu_thu);
-            switch(m_e_form_mode) {
-                case DataEntryFormMode.InsertDataState:
-                
-                break;
-                case DataEntryFormMode.SelectDataState:
-                break;
-                case DataEntryFormMode.UpdateDataState:
-                break;
-                case DataEntryFormMode.ViewDataState:
-                break;
-                default:
-                break;
+            try {
+                switch(m_e_form_mode) {
+                    case DataEntryFormMode.InsertDataState:
+                        v_us_gd_phieu_thu.Insert();
+                        break;
+
+                    case DataEntryFormMode.SelectDataState:
+                        break;
+
+                    case DataEntryFormMode.UpdateDataState:
+                        break;
+
+                    case DataEntryFormMode.ViewDataState:
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+            catch(Exception v_e) {
+                throw v_e;
             }
         }
         #endregion
@@ -335,7 +360,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         void m_cmd_search_hv_Click(object sender, EventArgs e) {
             try {
-
+                F310_dm_hv v_frm = new F310_dm_hv(CIPConvert.ToDecimal(m_cbo_lop.EditValue));
+                v_frm.ShowDialog();
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);

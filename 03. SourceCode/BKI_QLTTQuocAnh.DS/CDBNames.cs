@@ -594,7 +594,11 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string MO_TA = "MO_TA";
         public const string ID_HOC_SINH = "ID_HOC_SINH";
         public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string SDT_HS = "SDT_HS";
+        public const string EMAIL_HS = "EMAIL_HS";
+        public const string TRANG_THAI_YN = "TRANG_THAI_YN";
     }
+
 
     public class V_F316_DM_HOC_SINH_LOP_MON
     {

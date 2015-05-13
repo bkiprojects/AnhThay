@@ -23,9 +23,10 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F350_lap_phieu_thu));
-            this.ImageList = new System.Windows.Forms.ImageList();
-            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -48,6 +49,10 @@
             this.m_lbl_search = new System.Windows.Forms.Label();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.m_txt_lan_thu = new DevExpress.XtraEditors.TextEdit();
+            this.m_cbo_so_phieu_thu = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.m_lbl_check_so_phieu = new System.Windows.Forms.Label();
             this.m_txt_so_phieu = new DevExpress.XtraEditors.TextEdit();
             this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
@@ -69,7 +74,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.m_lbl_so_tien = new System.Windows.Forms.Label();
             this.m_lbl_4 = new System.Windows.Forms.Label();
-            this.m_cbo_lan_thu = new System.Windows.Forms.ComboBox();
             this.m_lbl_6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.m_lbl_ma_hoc_sinh = new System.Windows.Forms.Label();
@@ -77,8 +81,6 @@
             this.m_cmd_them_hv = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_search_hv = new DevExpress.XtraEditors.SimpleButton();
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.m_cbo_so_phieu_thu = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -89,6 +91,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_tu_ngay.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_tu_ngay.Properties)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_lan_thu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_phieu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_ma_hv.Properties)).BeginInit();
@@ -384,6 +387,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.m_txt_lan_thu);
             this.panel1.Controls.Add(this.m_cbo_so_phieu_thu);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.m_lbl_check_so_phieu);
@@ -405,7 +410,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.m_lbl_so_tien);
             this.panel1.Controls.Add(this.m_lbl_4);
-            this.panel1.Controls.Add(this.m_cbo_lan_thu);
             this.panel1.Controls.Add(this.m_lbl_6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.m_lbl_ma_hoc_sinh);
@@ -418,6 +422,44 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 488);
             this.panel1.TabIndex = 39;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Maroon;
+            this.label6.Location = new System.Drawing.Point(278, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 17);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "...";
+            // 
+            // m_txt_lan_thu
+            // 
+            this.m_txt_lan_thu.EditValue = "";
+            this.m_txt_lan_thu.Location = new System.Drawing.Point(354, 175);
+            this.m_txt_lan_thu.Name = "m_txt_lan_thu";
+            this.m_txt_lan_thu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_lan_thu.Size = new System.Drawing.Size(31, 20);
+            this.m_txt_lan_thu.TabIndex = 49;
+            // 
+            // m_cbo_so_phieu_thu
+            // 
+            this.m_cbo_so_phieu_thu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_cbo_so_phieu_thu.FormattingEnabled = true;
+            this.m_cbo_so_phieu_thu.Location = new System.Drawing.Point(134, 52);
+            this.m_cbo_so_phieu_thu.Name = "m_cbo_so_phieu_thu";
+            this.m_cbo_so_phieu_thu.Size = new System.Drawing.Size(138, 21);
+            this.m_cbo_so_phieu_thu.TabIndex = 48;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Sổ ";
             // 
             // m_lbl_check_so_phieu
             // 
@@ -644,19 +686,6 @@
             this.m_lbl_4.TabIndex = 2;
             this.m_lbl_4.Text = "Nhân viên thu ";
             // 
-            // m_cbo_lan_thu
-            // 
-            this.m_cbo_lan_thu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_cbo_lan_thu.FormattingEnabled = true;
-            this.m_cbo_lan_thu.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.m_cbo_lan_thu.Location = new System.Drawing.Point(355, 175);
-            this.m_cbo_lan_thu.Name = "m_cbo_lan_thu";
-            this.m_cbo_lan_thu.Size = new System.Drawing.Size(49, 21);
-            this.m_cbo_lan_thu.TabIndex = 28;
-            // 
             // m_lbl_6
             // 
             this.m_lbl_6.AutoSize = true;
@@ -720,28 +749,6 @@
             this.m_lbl_den_ngay.TabIndex = 11;
             this.m_lbl_den_ngay.Text = "Ngày nhập";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Sổ ";
-            // 
-            // m_cbo_so_phieu_thu
-            // 
-            this.m_cbo_so_phieu_thu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_cbo_so_phieu_thu.FormattingEnabled = true;
-            this.m_cbo_so_phieu_thu.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.m_cbo_so_phieu_thu.Location = new System.Drawing.Point(134, 52);
-            this.m_cbo_so_phieu_thu.Name = "m_cbo_so_phieu_thu";
-            this.m_cbo_so_phieu_thu.Size = new System.Drawing.Size(62, 21);
-            this.m_cbo_so_phieu_thu.TabIndex = 48;
-            // 
             // F350_lap_phieu_thu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -762,6 +769,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_tu_ngay.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_lan_thu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_phieu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_ma_hv.Properties)).EndInit();
@@ -802,7 +810,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label m_lbl_so_tien;
         private System.Windows.Forms.Label m_lbl_4;
-        private System.Windows.Forms.ComboBox m_cbo_lan_thu;
         private System.Windows.Forms.Label m_lbl_6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label m_lbl_ma_hoc_sinh;
@@ -833,5 +840,7 @@
         public System.Windows.Forms.Label m_lbl_check_so_phieu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox m_cbo_so_phieu_thu;
+        private DevExpress.XtraEditors.TextEdit m_txt_lan_thu;
+        public System.Windows.Forms.Label label6;
     }
 }

@@ -13,7 +13,7 @@
               <DbSource ConnectionRef="AnhThayConnectionString (Settings)" DbObjectName="AnhThay.dbo.V_GD_HOC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, TEN_LOP, HO_TEN, NGAY_BAT_DAU, NGAY_KET_THUC, TRANG_THAI_HOC, MA_DOI_TUONG, MO_TA, ID_HOC_SINH, ID_LOP_MON FROM dbo.V_GD_HOC</CommandText>
+                    <CommandText>SELECT ID, TEN_LOP, HO_TEN, NGAY_BAT_DAU, NGAY_KET_THUC, TRANG_THAI_HOC, MA_DOI_TUONG, MO_TA, ID_HOC_SINH, ID_LOP_MON, SDT_HS, EMAIL_HS, TRANG_THAI_YN FROM dbo.V_GD_HOC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -30,6 +30,9 @@
               <Mapping SourceColumn="MO_TA" DataSetColumn="MO_TA" />
               <Mapping SourceColumn="ID_HOC_SINH" DataSetColumn="ID_HOC_SINH" />
               <Mapping SourceColumn="ID_LOP_MON" DataSetColumn="ID_LOP_MON" />
+              <Mapping SourceColumn="SDT_HS" DataSetColumn="SDT_HS" />
+              <Mapping SourceColumn="EMAIL_HS" DataSetColumn="EMAIL_HS" />
+              <Mapping SourceColumn="TRANG_THAI_YN" DataSetColumn="TRANG_THAI_YN" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -84,6 +87,27 @@
               </xs:element>
               <xs:element name="ID_HOC_SINH" msprop:Generator_ColumnVarNameInTable="columnID_HOC_SINH" msprop:Generator_ColumnPropNameInRow="ID_HOC_SINH" msprop:Generator_ColumnPropNameInTable="ID_HOC_SINHColumn" msprop:Generator_UserColumnName="ID_HOC_SINH" type="xs:decimal" />
               <xs:element name="ID_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnID_LOP_MON" msprop:Generator_ColumnPropNameInRow="ID_LOP_MON" msprop:Generator_ColumnPropNameInTable="ID_LOP_MONColumn" msprop:Generator_UserColumnName="ID_LOP_MON" type="xs:decimal" />
+              <xs:element name="SDT_HS" msprop:Generator_ColumnVarNameInTable="columnSDT_HS" msprop:Generator_ColumnPropNameInRow="SDT_HS" msprop:Generator_ColumnPropNameInTable="SDT_HSColumn" msprop:Generator_UserColumnName="SDT_HS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EMAIL_HS" msprop:Generator_ColumnVarNameInTable="columnEMAIL_HS" msprop:Generator_ColumnPropNameInRow="EMAIL_HS" msprop:Generator_ColumnPropNameInTable="EMAIL_HSColumn" msprop:Generator_UserColumnName="EMAIL_HS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TRANG_THAI_YN" msprop:Generator_ColumnVarNameInTable="columnTRANG_THAI_YN" msprop:Generator_ColumnPropNameInRow="TRANG_THAI_YN" msprop:Generator_ColumnPropNameInTable="TRANG_THAI_YNColumn" msprop:Generator_UserColumnName="TRANG_THAI_YN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
