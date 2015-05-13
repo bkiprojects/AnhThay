@@ -28,26 +28,6 @@
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NGAY = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SO_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TEN_HV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.LOP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SO_TIEN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.LAN_THU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.m_dat_den_ngay = new DevExpress.XtraEditors.DateEdit();
-            this.m_dat_tu_ngay = new DevExpress.XtraEditors.DateEdit();
-            this.m_txt_tim_kien = new System.Windows.Forms.TextBox();
-            this.m_lbl_header_right = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.m_lbl_search = new System.Windows.Forms.Label();
-            this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_txt_noi_dung = new DevExpress.XtraEditors.MemoEdit();
             this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
@@ -84,14 +64,6 @@
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dat_den_ngay.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dat_den_ngay.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dat_tu_ngay.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dat_tu_ngay.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
@@ -167,228 +139,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1225, 488);
             this.panel2.TabIndex = 25;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.gridControl1);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(497, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(728, 488);
-            this.panel3.TabIndex = 40;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 129);
-            this.gridControl1.MainView = this.gridView;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(728, 359);
-            this.gridControl1.TabIndex = 39;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView});
-            // 
-            // gridView
-            // 
-            this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.STT,
-            this.NGAY,
-            this.NOI_DUNG,
-            this.SO_PHIEU,
-            this.TEN_HV,
-            this.LOP,
-            this.SO_TIEN,
-            this.LAN_THU});
-            this.gridView.GridControl = this.gridControl1;
-            this.gridView.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TONG_TIEN", this.SO_TIEN, "#,##0")});
-            this.gridView.Name = "gridView";
-            this.gridView.OptionsView.ShowGroupPanel = false;
-            // 
-            // STT
-            // 
-            this.STT.Caption = "STT";
-            this.STT.Name = "STT";
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 0;
-            this.STT.Width = 32;
-            // 
-            // NGAY
-            // 
-            this.NGAY.Caption = "NGÀY";
-            this.NGAY.DisplayFormat.FormatString = "dd/MM/yyyy";
-            this.NGAY.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.NGAY.Name = "NGAY";
-            this.NGAY.Visible = true;
-            this.NGAY.VisibleIndex = 1;
-            this.NGAY.Width = 98;
-            // 
-            // NOI_DUNG
-            // 
-            this.NOI_DUNG.Caption = "Nội dung";
-            this.NOI_DUNG.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.NOI_DUNG.Name = "NOI_DUNG";
-            this.NOI_DUNG.Visible = true;
-            this.NOI_DUNG.VisibleIndex = 2;
-            this.NOI_DUNG.Width = 131;
-            // 
-            // SO_PHIEU
-            // 
-            this.SO_PHIEU.Caption = "Số phiếu";
-            this.SO_PHIEU.Name = "SO_PHIEU";
-            this.SO_PHIEU.Visible = true;
-            this.SO_PHIEU.VisibleIndex = 3;
-            this.SO_PHIEU.Width = 87;
-            // 
-            // TEN_HV
-            // 
-            this.TEN_HV.Caption = "Tên HV";
-            this.TEN_HV.Name = "TEN_HV";
-            this.TEN_HV.Visible = true;
-            this.TEN_HV.VisibleIndex = 4;
-            this.TEN_HV.Width = 87;
-            // 
-            // LOP
-            // 
-            this.LOP.Caption = "Lớp";
-            this.LOP.Name = "LOP";
-            this.LOP.Visible = true;
-            this.LOP.VisibleIndex = 5;
-            this.LOP.Width = 87;
-            // 
-            // SO_TIEN
-            // 
-            this.SO_TIEN.Caption = "Số tiền";
-            this.SO_TIEN.DisplayFormat.FormatString = "#,##0";
-            this.SO_TIEN.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.SO_TIEN.Name = "SO_TIEN";
-            this.SO_TIEN.Visible = true;
-            this.SO_TIEN.VisibleIndex = 6;
-            this.SO_TIEN.Width = 87;
-            // 
-            // LAN_THU
-            // 
-            this.LAN_THU.Caption = "Lần thứ";
-            this.LAN_THU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.LAN_THU.Name = "LAN_THU";
-            this.LAN_THU.Visible = true;
-            this.LAN_THU.VisibleIndex = 7;
-            this.LAN_THU.Width = 102;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.m_dat_den_ngay);
-            this.panel4.Controls.Add(this.m_dat_tu_ngay);
-            this.panel4.Controls.Add(this.m_txt_tim_kien);
-            this.panel4.Controls.Add(this.m_lbl_header_right);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.m_cmd_search);
-            this.panel4.Controls.Add(this.m_lbl_search);
-            this.panel4.Controls.Add(this.m_lbl_tu_ngay);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(728, 129);
-            this.panel4.TabIndex = 38;
-            // 
-            // m_dat_den_ngay
-            // 
-            this.m_dat_den_ngay.EditValue = null;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(264, 53);
-            this.m_dat_den_ngay.Name = "m_dat_den_ngay";
-            this.m_dat_den_ngay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_dat_den_ngay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_dat_den_ngay.Properties.CalendarTimeProperties.CloseUpKey = new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F4);
-            this.m_dat_den_ngay.Properties.CalendarTimeProperties.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.Default;
-            this.m_dat_den_ngay.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.m_dat_den_ngay.Size = new System.Drawing.Size(100, 20);
-            this.m_dat_den_ngay.TabIndex = 19;
-            // 
-            // m_dat_tu_ngay
-            // 
-            this.m_dat_tu_ngay.EditValue = null;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(74, 53);
-            this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
-            this.m_dat_tu_ngay.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_dat_tu_ngay.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_dat_tu_ngay.Properties.CalendarTimeProperties.CloseUpKey = new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F4);
-            this.m_dat_tu_ngay.Properties.CalendarTimeProperties.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.Default;
-            this.m_dat_tu_ngay.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.m_dat_tu_ngay.Size = new System.Drawing.Size(100, 20);
-            this.m_dat_tu_ngay.TabIndex = 18;
-            // 
-            // m_txt_tim_kien
-            // 
-            this.m_txt_tim_kien.Location = new System.Drawing.Point(74, 80);
-            this.m_txt_tim_kien.Name = "m_txt_tim_kien";
-            this.m_txt_tim_kien.Size = new System.Drawing.Size(259, 20);
-            this.m_txt_tim_kien.TabIndex = 13;
-            // 
-            // m_lbl_header_right
-            // 
-            this.m_lbl_header_right.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_header_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_header_right.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_header_right.Location = new System.Drawing.Point(0, 0);
-            this.m_lbl_header_right.Name = "m_lbl_header_right";
-            this.m_lbl_header_right.Size = new System.Drawing.Size(728, 46);
-            this.m_lbl_header_right.TabIndex = 17;
-            this.m_lbl_header_right.Text = "DANH SÁCH PHIẾU";
-            this.m_lbl_header_right.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(190, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Đến ngày";
-            // 
-            // m_cmd_search
-            // 
-            this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_search.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_search.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_search.ImageIndex = 5;
-            this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(348, 75);
-            this.m_cmd_search.Name = "m_cmd_search";
-            this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 14;
-            this.m_cmd_search.Text = "Lọc dữ liệu";
-            // 
-            // m_lbl_search
-            // 
-            this.m_lbl_search.AutoSize = true;
-            this.m_lbl_search.Location = new System.Drawing.Point(9, 83);
-            this.m_lbl_search.Name = "m_lbl_search";
-            this.m_lbl_search.Size = new System.Drawing.Size(49, 13);
-            this.m_lbl_search.TabIndex = 12;
-            this.m_lbl_search.Text = "Tìm kiếm";
-            // 
-            // m_lbl_tu_ngay
-            // 
-            this.m_lbl_tu_ngay.AutoSize = true;
-            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(9, 56);
-            this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
-            this.m_lbl_tu_ngay.Size = new System.Drawing.Size(46, 13);
-            this.m_lbl_tu_ngay.TabIndex = 5;
-            this.m_lbl_tu_ngay.Text = "Từ ngày";
             // 
             // panel1
             // 
@@ -422,10 +178,10 @@
             this.panel1.Controls.Add(this.m_lbl_noi_dung);
             this.panel1.Controls.Add(this.m_cmd_them_hv);
             this.panel1.Controls.Add(this.m_lbl_den_ngay);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(497, 488);
+            this.panel1.Size = new System.Drawing.Size(1225, 488);
             this.panel1.TabIndex = 39;
             // 
             // m_txt_noi_dung
@@ -600,7 +356,7 @@
             this.m_lbl_header_left.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header_left.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header_left.Name = "m_lbl_header_left";
-            this.m_lbl_header_left.Size = new System.Drawing.Size(495, 46);
+            this.m_lbl_header_left.Size = new System.Drawing.Size(1223, 46);
             this.m_lbl_header_left.TabIndex = 35;
             this.m_lbl_header_left.Text = "LẬP PHIẾU";
             this.m_lbl_header_left.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -612,7 +368,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl2.Location = new System.Drawing.Point(0, 437);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(495, 49);
+            this.panelControl2.Size = new System.Drawing.Size(1223, 49);
             this.panelControl2.TabIndex = 34;
             // 
             // m_cmd_exit
@@ -785,15 +541,6 @@
             this.Name = "F350_lap_phieu_thu";
             this.Text = "F350 - Lập phiếu";
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dat_den_ngay.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dat_den_ngay.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dat_tu_ngay.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dat_tu_ngay.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).EndInit();
@@ -821,14 +568,6 @@
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox m_txt_tim_kien;
-        public System.Windows.Forms.Label m_lbl_header_right;
-        private System.Windows.Forms.Label label4;
-        internal SIS.Controls.Button.SiSButton m_cmd_search;
-        private System.Windows.Forms.Label m_lbl_search;
-        private System.Windows.Forms.Label m_lbl_tu_ngay;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Label m_lbl_header_left;
         private DevExpress.XtraEditors.PanelControl panelControl2;
@@ -846,19 +585,7 @@
         private System.Windows.Forms.Label m_lbl_noi_dung;
         private DevExpress.XtraEditors.SimpleButton m_cmd_them_hv;
         private System.Windows.Forms.Label m_lbl_den_ngay;
-        private DevExpress.XtraEditors.DateEdit m_dat_den_ngay;
-        private DevExpress.XtraEditors.DateEdit m_dat_tu_ngay;
         private DevExpress.XtraEditors.DateEdit m_dat_ngay_nhap;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private DevExpress.XtraGrid.Columns.GridColumn STT;
-        private DevExpress.XtraGrid.Columns.GridColumn NGAY;
-        private DevExpress.XtraGrid.Columns.GridColumn NOI_DUNG;
-        private DevExpress.XtraGrid.Columns.GridColumn SO_PHIEU;
-        private DevExpress.XtraGrid.Columns.GridColumn TEN_HV;
-        private DevExpress.XtraGrid.Columns.GridColumn LOP;
-        private DevExpress.XtraGrid.Columns.GridColumn SO_TIEN;
-        private DevExpress.XtraGrid.Columns.GridColumn LAN_THU;
         private DevExpress.XtraEditors.LabelControl m_lbl_nv_nhap;
         private DevExpress.XtraEditors.LabelControl m_lbl_nv_thu;
         private DevExpress.XtraEditors.DateEdit m_dat_ngay_thu;

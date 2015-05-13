@@ -44,7 +44,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         #region Private Methods
         private void format_controls() {
             CControlFormat.setFormStyle(this, new CAppContext_201());
-            this.m_lbl_header_right.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_lbl_header_left.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
 
             set_define_events();
@@ -197,8 +196,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_dat_ngay_nhap.EditValue = DateTime.Now.Date;
             m_lbl_nv_nhap.Text = CAppContext_201.getCurrentUser().ToString();
             m_lbl_nv_thu.Text = CAppContext_201.getCurrentUser().ToString();
-            m_dat_tu_ngay.EditValue = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1).Date;
-            m_dat_den_ngay.EditValue = DateTime.Now.Date;
             m_dat_ngay_thu.EditValue = DateTime.Now.Date;
 
             //Set mot so thuoc tinh ban dau

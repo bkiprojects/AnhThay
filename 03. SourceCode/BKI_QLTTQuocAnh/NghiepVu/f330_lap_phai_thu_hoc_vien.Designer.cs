@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f330_lap_phai_thu_hoc_vien));
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList = new System.Windows.Forms.ImageList();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_ds_phieu_phai_thu = new SIS.Controls.Button.SiSButton();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
@@ -481,7 +480,7 @@
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(912, 175);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 1;
+            this.m_fg.TabIndex = 21;
             // 
             // f330_lap_phai_thu_hoc_vien
             // 
@@ -541,9 +540,9 @@
         private System.Windows.Forms.Label m_lbl_noi_dung;
         private System.Windows.Forms.Label m_lbl_nhan_vien_nhap;
         private System.Windows.Forms.Label m_lbl_nhan_vien_thu;
-        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         internal SIS.Controls.Button.SiSButton m_cmd_ds_phieu_phai_thu;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal SIS.Controls.Button.SiSButton m_cmd_xoa_hang;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
     }
 }
