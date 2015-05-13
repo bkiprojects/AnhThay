@@ -218,7 +218,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 v_us_gd_phieu_thu.datNGAY_NHAP = m_dat_ngay_nhap.Value.Date;
                 v_us_gd_phieu_thu.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU;
                 v_us_gd_phieu_thu.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.CHUA_BAN_GIAO;
-                v_us_gd_phieu_thu.dcID_GD_HOC = find_id_gd_hoc(v_us_rpt.dcID_HOC_SINH, v_us_rpt.dcID_LOP_MON, v_ds_v_gd_hoc);
+                v_us_gd_phieu_thu.dcID_GD_HOC = find_id_gd_hoc(v_us_rpt.dcID_HOC_SINH, CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue), v_ds_v_gd_hoc);
                 v_us_gd_phieu_thu.Insert();
             }
             v_us_gd_phieu_thu.CommitTransaction();
