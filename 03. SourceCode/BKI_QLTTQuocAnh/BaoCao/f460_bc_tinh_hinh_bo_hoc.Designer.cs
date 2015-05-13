@@ -42,11 +42,13 @@
             this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.dataGrid_Custom1 = new IP.Core.IPCommon.DataGrid_Custom();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Custom1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -192,6 +194,21 @@
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(894, 36);
             this.m_pnl_out_place_dm.TabIndex = 2;
             // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.imageList1;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xuat_excel.TabIndex = 1;
+            this.m_cmd_xuat_excel.Text = "Xuất Excel";
+            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -219,26 +236,21 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
-            // m_cmd_xuat_excel
+            // dataGrid_Custom1
             // 
-            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xuat_excel.ImageIndex = 19;
-            this.m_cmd_xuat_excel.ImageList = this.imageList1;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 1;
-            this.m_cmd_xuat_excel.Text = "Xuất Excel";
+            this.dataGrid_Custom1.DataMember = "";
+            this.dataGrid_Custom1.HeaderForeColor = System.Drawing.SystemColors.ControlText;
+            this.dataGrid_Custom1.Location = new System.Drawing.Point(752, 133);
+            this.dataGrid_Custom1.Name = "dataGrid_Custom1";
+            this.dataGrid_Custom1.Size = new System.Drawing.Size(130, 80);
+            this.dataGrid_Custom1.TabIndex = 3;
             // 
             // f460_bc_tinh_hinh_bo_hoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 382);
+            this.Controls.Add(this.dataGrid_Custom1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
@@ -248,6 +260,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Custom1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,6 +281,7 @@
         private System.Windows.Forms.TextBox m_txt_sl_dang_hoc;
         internal System.Windows.Forms.ImageList imageList1;
         internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
+        private IP.Core.IPCommon.DataGrid_Custom dataGrid_Custom1;
 
     }
 }

@@ -102,6 +102,9 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.m_cbo_lop = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.m_cmd_kiem_tra_du_lieu = new SIS.Controls.Button.SiSButton();
@@ -118,9 +121,6 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_ofd_exel_file = new System.Windows.Forms.OpenFileDialog();
             this.m_lbl_loading_mes = new System.Windows.Forms.Label();
-            this.m_cbo_lop = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -281,6 +281,37 @@ namespace BKI_QLTTQuocAnh {
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1066, 110);
             this.panel1.TabIndex = 21;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(657, 38);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Bước 4:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(169, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "-->";
+            // 
+            // m_cbo_lop
+            // 
+            this.m_cbo_lop.FormattingEnabled = true;
+            this.m_cbo_lop.Items.AddRange(new object[] {
+            "0581",
+            "0582",
+            "0661",
+            "0662"});
+            this.m_cbo_lop.Location = new System.Drawing.Point(12, 66);
+            this.m_cbo_lop.Name = "m_cbo_lop";
+            this.m_cbo_lop.Size = new System.Drawing.Size(121, 21);
+            this.m_cbo_lop.TabIndex = 46;
             // 
             // label1
             // 
@@ -444,35 +475,6 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_loading_mes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.m_lbl_loading_mes.Visible = false;
             // 
-            // m_cbo_lop
-            // 
-            this.m_cbo_lop.FormattingEnabled = true;
-            this.m_cbo_lop.Items.AddRange(new object[] {
-            "Lớp 058",
-            "Lớp 066"});
-            this.m_cbo_lop.Location = new System.Drawing.Point(12, 66);
-            this.m_cbo_lop.Name = "m_cbo_lop";
-            this.m_cbo_lop.Size = new System.Drawing.Size(121, 21);
-            this.m_cbo_lop.TabIndex = 46;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "-->";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(657, 38);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 13);
-            this.label8.TabIndex = 48;
-            this.label8.Text = "Bước 4:";
-            // 
             // f300_import_ds_hoc_vien
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -525,6 +527,7 @@ namespace BKI_QLTTQuocAnh {
         DS_EXCEL_IMPORT_HOC_VIEN m_ds = new DS_EXCEL_IMPORT_HOC_VIEN();
         US_EXCEL_IMPORT_HOC_VIEN m_us = new US_EXCEL_IMPORT_HOC_VIEN();
         bool m_flag_du_lieu_is_ok = true;
+        DS_V_GD_HOC m_ds_v_gd_hoc = new DS_V_GD_HOC();  
         #endregion
 
         #region Private Methods
@@ -698,6 +701,16 @@ namespace BKI_QLTTQuocAnh {
             ip_us_hv.strFACEBOOK = ip_us_excel.strFACEBOOK;
             ip_us_hv.strDELETE_YN = "N";
         }
+        private bool is_check_exist(Decimal id_lop_hoc,string ma_hoc_sinh, DS_V_GD_HOC ip_ds_v_gd_hoc){
+            string filter = "id_lop_mon = " + id_lop_hoc + " and ma_doi_tuong = '" + ma_hoc_sinh + "'";
+            DataRow[] v_dr = ip_ds_v_gd_hoc.V_GD_HOC.Select(filter);
+
+            if (v_dr.Length == 0)
+            {
+                return false;
+            }
+            return true;
+        }
         private void kiem_tra_du_lieu(DS_EXCEL_IMPORT_HOC_VIEN ip_ds) {
             m_flag_du_lieu_is_ok = true;
             CellStyle v_style_not_ok = m_fg.Styles.Add("LoiDuLieu");
@@ -718,25 +731,78 @@ namespace BKI_QLTTQuocAnh {
                     }
                 }
             }
-            //Buoc 2: Check Ma hoc vien da ton tai chua
-            DS_DM_HOC_SINH v_ds_hs = new DS_DM_HOC_SINH();
-            v_ds_hs.Clear();
-            v_ds_hs.EnforceConstraints = false;
-            US_DM_HOC_SINH v_us_hs = new US_DM_HOC_SINH();
-            v_us_hs.FillDataset(v_ds_hs);
-            DataView v_dv_db = v_ds_hs.DM_HOC_SINH.DefaultView;
-            v_dv_db.Sort = "MA_DOI_TUONG";
-            for(int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++) {
-                int v_row = v_dv_db.Find(m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString());
-                if(v_row > 0) {
-                    m_flag_du_lieu_is_ok = false;
-                    m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
+
+            //Buoc 2
+            DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
+            US_V_GD_HOC v_us = new US_V_GD_HOC();
+            v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
+
+            for (int i_cur_row = m_fg.Rows.Fixed; i_cur_row < m_fg.Rows.Count -1; i_cur_row++)
+            {
+                //Kiem tra neu co trong gd_hoc roi thi to mau xanh, khong thi de nguyen
+                //Cai to mau xanh thi sao?
+                string v_ma_hv = m_fg.Rows[i_cur_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
+                decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+
+                if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
+                {
+                    m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
                 }
-                else {
-                    m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
+                else
+                {
+                    //to mau trang - khi kiem tra lai ma no dung thi phai chuyen mau
+                    m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
                 }
             }
-            BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
+
+            //Buoc 2: Check Ma hoc vien da ton tai chua
+            //DS_DM_HOC_SINH v_ds_hs = new DS_DM_HOC_SINH();
+            //v_ds_hs.Clear();
+            //v_ds_hs.EnforceConstraints = false;
+            //US_DM_HOC_SINH v_us_hs = new US_DM_HOC_SINH();
+            //v_us_hs.FillDataset(v_ds_hs);
+            //DataView v_dv_db = v_ds_hs.DM_HOC_SINH.DefaultView;
+            //v_dv_db.Sort = "MA_DOI_TUONG";
+            //for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
+            //{
+            //    int v_row = v_dv_db.Find(m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString());
+            //    if (v_row > 0)
+            //    {
+            //        m_flag_du_lieu_is_ok = false;
+            //        m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
+            //    }
+            //    else
+            //    {
+            //        m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
+            //    }
+            //}
+            
+            //check_exist();
+            
+            
+                   
+                //int v_row = v_dv_db.Find(m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString());
+                //if (v_row > 0)
+                //{
+                //    m_flag_du_lieu_is_ok = false;
+                //    m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
+                //}
+                //else
+                //{
+                //    m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
+                //}
+
+                //int v_id_hs = v_dv_db.Find(m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString());
+               
+                //if (v_id_hs>0)
+                //{
+                //    m_flag_du_lieu_is_ok = false;
+                    
+                //}
+                
+            //}
+
+            //BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
         }
         #endregion
 
@@ -759,6 +825,8 @@ namespace BKI_QLTTQuocAnh {
 
         void m_cmd_kiem_tra_du_lieu_Click(object sender, EventArgs e) {
             try {
+
+
                 kiem_tra_du_lieu(m_ds);
             }
             catch(Exception v_e) {
