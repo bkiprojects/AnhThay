@@ -58,7 +58,7 @@
             this.m_sle_ma_hv = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.m_txt_lan_thu = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
+            this.m_lbl_so_phieu_thu = new System.Windows.Forms.Label();
             this.m_lbl_check_so_phieu = new System.Windows.Forms.Label();
             this.m_txt_so_phieu = new DevExpress.XtraEditors.TextEdit();
             this.m_dat_ngay_thu = new DevExpress.XtraEditors.DateEdit();
@@ -77,7 +77,7 @@
             this.m_lbl_so_tien = new System.Windows.Forms.Label();
             this.m_lbl_4 = new System.Windows.Forms.Label();
             this.m_lbl_6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.m_lbl_lan_thu = new System.Windows.Forms.Label();
             this.m_lbl_ma_hoc_sinh = new System.Windows.Forms.Label();
             this.m_lbl_noi_dung = new System.Windows.Forms.Label();
             this.m_cmd_them_hv = new DevExpress.XtraEditors.SimpleButton();
@@ -400,7 +400,7 @@
             this.panel1.Controls.Add(this.m_sle_lop);
             this.panel1.Controls.Add(this.m_sle_ma_hv);
             this.panel1.Controls.Add(this.m_txt_lan_thu);
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.m_lbl_so_phieu_thu);
             this.panel1.Controls.Add(this.m_lbl_check_so_phieu);
             this.panel1.Controls.Add(this.m_txt_so_phieu);
             this.panel1.Controls.Add(this.m_dat_ngay_thu);
@@ -417,7 +417,7 @@
             this.panel1.Controls.Add(this.m_lbl_so_tien);
             this.panel1.Controls.Add(this.m_lbl_4);
             this.panel1.Controls.Add(this.m_lbl_6);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.m_lbl_lan_thu);
             this.panel1.Controls.Add(this.m_lbl_ma_hoc_sinh);
             this.panel1.Controls.Add(this.m_lbl_noi_dung);
             this.panel1.Controls.Add(this.m_cmd_them_hv);
@@ -510,20 +510,20 @@
             // m_txt_lan_thu
             // 
             this.m_txt_lan_thu.EditValue = "";
-            this.m_txt_lan_thu.Location = new System.Drawing.Point(403, 172);
+            this.m_txt_lan_thu.Location = new System.Drawing.Point(423, 172);
             this.m_txt_lan_thu.Name = "m_txt_lan_thu";
             this.m_txt_lan_thu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_txt_lan_thu.Size = new System.Drawing.Size(31, 20);
             this.m_txt_lan_thu.TabIndex = 49;
             // 
-            // label5
+            // m_lbl_so_phieu_thu
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
-            this.label5.TabIndex = 47;
-            this.label5.Text = "Sổ ";
+            this.m_lbl_so_phieu_thu.AutoSize = true;
+            this.m_lbl_so_phieu_thu.Location = new System.Drawing.Point(13, 55);
+            this.m_lbl_so_phieu_thu.Name = "m_lbl_so_phieu_thu";
+            this.m_lbl_so_phieu_thu.Size = new System.Drawing.Size(23, 13);
+            this.m_lbl_so_phieu_thu.TabIndex = 47;
+            this.m_lbl_so_phieu_thu.Text = "Sổ ";
             // 
             // m_lbl_check_so_phieu
             // 
@@ -725,14 +725,14 @@
             this.m_lbl_6.TabIndex = 6;
             this.m_lbl_6.Text = "Nhân viên nhập";
             // 
-            // label2
+            // m_lbl_lan_thu
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(345, 175);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Lần thứ(*)";
+            this.m_lbl_lan_thu.AutoSize = true;
+            this.m_lbl_lan_thu.Location = new System.Drawing.Point(365, 175);
+            this.m_lbl_lan_thu.Name = "m_lbl_lan_thu";
+            this.m_lbl_lan_thu.Size = new System.Drawing.Size(53, 13);
+            this.m_lbl_lan_thu.TabIndex = 27;
+            this.m_lbl_lan_thu.Text = "Lần thứ(*)";
             // 
             // m_lbl_ma_hoc_sinh
             // 
@@ -842,7 +842,6 @@
         private System.Windows.Forms.Label m_lbl_so_tien;
         private System.Windows.Forms.Label m_lbl_4;
         private System.Windows.Forms.Label m_lbl_6;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label m_lbl_ma_hoc_sinh;
         private System.Windows.Forms.Label m_lbl_noi_dung;
         private DevExpress.XtraEditors.SimpleButton m_cmd_them_hv;
@@ -865,16 +864,17 @@
         private DevExpress.XtraEditors.DateEdit m_dat_ngay_thu;
         private DevExpress.XtraEditors.TextEdit m_txt_so_phieu;
         public System.Windows.Forms.Label m_lbl_check_so_phieu;
-        private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit m_txt_lan_thu;
         private DevExpress.XtraEditors.SearchLookUpEdit m_sle_ma_hv;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SearchLookUpEdit m_sle_so_phieu_thu;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.TextEdit m_txt_so_tien;
         private DevExpress.XtraEditors.MemoEdit m_txt_noi_dung;
+        public System.Windows.Forms.Label m_lbl_so_phieu_thu;
+        public DevExpress.XtraEditors.SearchLookUpEdit m_sle_so_phieu_thu;
+        public System.Windows.Forms.Label m_lbl_lan_thu;
+        public DevExpress.XtraEditors.TextEdit m_txt_lan_thu;
     }
 }
