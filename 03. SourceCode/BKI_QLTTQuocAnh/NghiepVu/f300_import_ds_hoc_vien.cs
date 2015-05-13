@@ -746,63 +746,17 @@ namespace BKI_QLTTQuocAnh {
 
                 if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
                 {
-                    m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
+                    m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
                 }
                 else
                 {
                     //to mau trang - khi kiem tra lai ma no dung thi phai chuyen mau
-                    m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
-                }
-            }
-
-            //Buoc 2: Check Ma hoc vien da ton tai chua
-            //DS_DM_HOC_SINH v_ds_hs = new DS_DM_HOC_SINH();
-            //v_ds_hs.Clear();
-            //v_ds_hs.EnforceConstraints = false;
-            //US_DM_HOC_SINH v_us_hs = new US_DM_HOC_SINH();
-            //v_us_hs.FillDataset(v_ds_hs);
-            //DataView v_dv_db = v_ds_hs.DM_HOC_SINH.DefaultView;
-            //v_dv_db.Sort = "MA_DOI_TUONG";
-            //for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
-            //{
-            //    int v_row = v_dv_db.Find(m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString());
-            //    if (v_row > 0)
-            //    {
-            //        m_flag_du_lieu_is_ok = false;
-            //        m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
-            //    }
-            //    else
-            //    {
-            //        m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
-            //    }
-            //}
-            
-            //check_exist();
-            
-            
-                   
-                //int v_row = v_dv_db.Find(m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString());
-                //if (v_row > 0)
-                //{
-                //    m_flag_du_lieu_is_ok = false;
-                //    m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
-                //}
-                //else
-                //{
-                //    m_fg.SetCellStyle(i, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
-                //}
-
-                //int v_id_hs = v_dv_db.Find(m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString());
-               
-                //if (v_id_hs>0)
-                //{
-                //    m_flag_du_lieu_is_ok = false;
                     
-                //}
-                
-            //}
+                    m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
+                }
+            }          
 
-            //BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
+            BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
         }
         #endregion
 
