@@ -67,6 +67,72 @@ namespace BKI_QLTTQuocAnh.US
             pm_objDR["ID_HOC_SINH"] = System.Convert.DBNull;
         }
 
+        public decimal dcID_LOP_MON
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_LOP_MON", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_LOP_MON"] = value;
+            }
+        }
+
+        public bool IsID_LOP_MONNull()
+        {
+            return pm_objDR.IsNull("ID_LOP_MON");
+        }
+
+        public void SetID_LOP_MONNull()
+        {
+            pm_objDR["ID_LOP_MON"] = System.Convert.DBNull;
+        }
+
+        public string strMA_LOP_MON
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "MA_LOP_MON", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["MA_LOP_MON"] = value;
+            }
+        }
+
+        public bool IsMA_LOP_MONNull()
+        {
+            return pm_objDR.IsNull("MA_LOP_MON");
+        }
+
+        public void SetMA_LOP_MONNull()
+        {
+            pm_objDR["MA_LOP_MON"] = System.Convert.DBNull;
+        }
+
+        public string strMO_TA
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "MO_TA", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["MO_TA"] = value;
+            }
+        }
+
+        public bool IsMO_TANull()
+        {
+            return pm_objDR.IsNull("MO_TA");
+        }
+
+        public void SetMO_TANull()
+        {
+            pm_objDR["MO_TA"] = System.Convert.DBNull;
+        }
+
         public string strSO_PHIEU
         {
             get

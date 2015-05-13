@@ -181,6 +181,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TONG_CON_NO = "TONG_CON_NO";
     }
 
+
     public class V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH
     {
         public const string ID = "ID";
@@ -191,6 +192,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string SDT_PH = "SDT_PH";
         public const string EMAIL_HS = "EMAIL_HS";
         public const string EMAIL_PH = "EMAIL_PH";
+        public const string ID_LOP_MON = "ID_LOP_MON";
         public const string TONG_PHAI_THU = "TONG_PHAI_THU";
         public const string TONG_GIAM_TRU = "TONG_GIAM_TRU";
         public const string TONG_THUC_THU = "TONG_THUC_THU";
@@ -456,25 +458,30 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
 
     public class V_GD_PHIEU_THU
     {
-        public const string ID = "ID";
         public const string ID_HOC_SINH = "ID_HOC_SINH";
-        public const string SO_PHIEU = "SO_PHIEU";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
+        public const string ID_LOAI_DOI_TUONG = "ID_LOAI_DOI_TUONG";
+        public const string TEN_LOAI_DOI_TUONG = "TEN_LOAI_DOI_TUONG";
         public const string HO_TEN = "HO_TEN";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string TEN_LOP_MON = "TEN_LOP_MON";
+        public const string ID_PHIEU = "ID_PHIEU";
+        public const string SO_PHIEU = "SO_PHIEU";
         public const string ID_NGUOI_THU = "ID_NGUOI_THU";
-        public const string NGUOI_THU = "NGUOI_THU";
+        public const string TEN_NGUOI_THU = "TEN_NGUOI_THU";
         public const string ID_NGUOI_NHAP = "ID_NGUOI_NHAP";
-        public const string NGUOI_NHAP = "NGUOI_NHAP";
+        public const string TEN_NGUOI_NHAP = "TEN_NGUOI_NHAP";
         public const string TEN_NGUOI_NOP_TIEN = "TEN_NGUOI_NOP_TIEN";
         public const string NOI_DUNG = "NOI_DUNG";
         public const string SO_TIEN = "SO_TIEN";
         public const string NGAY_THU = "NGAY_THU";
         public const string NGAY_NHAP = "NGAY_NHAP";
         public const string ID_LOAI_PHIEU_THU = "ID_LOAI_PHIEU_THU";
+        public const string MA_LOAI_PHIEU_THU = "MA_LOAI_PHIEU_THU";
         public const string TEN_LOAI_PHIEU_THU = "TEN_LOAI_PHIEU_THU";
-        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
-        public const string LOAI_DOI_TUONG = "LOAI_DOI_TUONG";
         public const string ID_TRANG_THAI = "ID_TRANG_THAI";
-        public const string TEN_TRANG_THAI = "TEN_TRANG_THAI";
+        public const string TEN = "TEN";
         public const string LAN_THU = "LAN_THU";
     }
 
@@ -487,26 +494,25 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
 
     public class V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU
     {
-        public const string ID = "ID";
+        public const string ID_PHIEU = "ID_PHIEU";
         public const string NGAY_THU = "NGAY_THU";
         public const string ID_LOAI_PHIEU_THU = "ID_LOAI_PHIEU_THU";
         public const string TEN_LOAI_PHIEU_THU = "TEN_LOAI_PHIEU_THU";
         public const string SO_PHIEU = "SO_PHIEU";
         public const string NOI_DUNG = "NOI_DUNG";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string TEN_LOP_MON = "TEN_LOP_MON";
         public const string ID_HOC_SINH = "ID_HOC_SINH";
         public const string MA_HOC_SINH = "MA_HOC_SINH";
         public const string HO_TEN_HS = "HO_TEN_HS";
         public const string HO_TEN_PH = "HO_TEN_PH";
         public const string ID_NGUOI_THU = "ID_NGUOI_THU";
-        public const string NGUOI_THU = "NGUOI_THU";
+        public const string TEN_NGUOI_THU = "TEN_NGUOI_THU";
         public const string TIEN_PHAI_THU = "TIEN_PHAI_THU";
         public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
         public const string TIEN_THUC_THU = "TIEN_THUC_THU";
         public const string TIEN_CON_PHAI_THU = "TIEN_CON_PHAI_THU";
     }
-
-
-
 
 
     public class V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS

@@ -21,26 +21,26 @@ namespace BKI_QLTTQuocAnh.US {
     public class US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU : US_Object {
         private const string c_TableName = "V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU";
         #region "Public Properties"
-        public decimal dcID
+        public decimal dcID_PHIEU
         {
             get
             {
-                return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
+                return CNull.RowNVLDecimal(pm_objDR, "ID_PHIEU", IPConstants.c_DefaultDecimal);
             }
             set
             {
-                pm_objDR["ID"] = value;
+                pm_objDR["ID_PHIEU"] = value;
             }
         }
 
-        public bool IsIDNull()
+        public bool IsID_PHIEUNull()
         {
-            return pm_objDR.IsNull("ID");
+            return pm_objDR.IsNull("ID_PHIEU");
         }
 
-        public void SetIDNull()
+        public void SetID_PHIEUNull()
         {
-            pm_objDR["ID"] = System.Convert.DBNull;
+            pm_objDR["ID_PHIEU"] = System.Convert.DBNull;
         }
 
         public DateTime datNGAY_THU
@@ -153,6 +153,50 @@ namespace BKI_QLTTQuocAnh.US {
             pm_objDR["NOI_DUNG"] = System.Convert.DBNull;
         }
 
+        public decimal dcID_LOP_MON
+        {
+            get
+            {
+                return CNull.RowNVLDecimal(pm_objDR, "ID_LOP_MON", IPConstants.c_DefaultDecimal);
+            }
+            set
+            {
+                pm_objDR["ID_LOP_MON"] = value;
+            }
+        }
+
+        public bool IsID_LOP_MONNull()
+        {
+            return pm_objDR.IsNull("ID_LOP_MON");
+        }
+
+        public void SetID_LOP_MONNull()
+        {
+            pm_objDR["ID_LOP_MON"] = System.Convert.DBNull;
+        }
+
+        public string strTEN_LOP_MON
+        {
+            get
+            {
+                return CNull.RowNVLString(pm_objDR, "TEN_LOP_MON", IPConstants.c_DefaultString);
+            }
+            set
+            {
+                pm_objDR["TEN_LOP_MON"] = value;
+            }
+        }
+
+        public bool IsTEN_LOP_MONNull()
+        {
+            return pm_objDR.IsNull("TEN_LOP_MON");
+        }
+
+        public void SetTEN_LOP_MONNull()
+        {
+            pm_objDR["TEN_LOP_MON"] = System.Convert.DBNull;
+        }
+
         public decimal dcID_HOC_SINH
         {
             get
@@ -263,26 +307,26 @@ namespace BKI_QLTTQuocAnh.US {
             pm_objDR["ID_NGUOI_THU"] = System.Convert.DBNull;
         }
 
-        public string strNGUOI_THU
+        public string strTEN_NGUOI_THU
         {
             get
             {
-                return CNull.RowNVLString(pm_objDR, "NGUOI_THU", IPConstants.c_DefaultString);
+                return CNull.RowNVLString(pm_objDR, "TEN_NGUOI_THU", IPConstants.c_DefaultString);
             }
             set
             {
-                pm_objDR["NGUOI_THU"] = value;
+                pm_objDR["TEN_NGUOI_THU"] = value;
             }
         }
 
-        public bool IsNGUOI_THUNull()
+        public bool IsTEN_NGUOI_THUNull()
         {
-            return pm_objDR.IsNull("NGUOI_THU");
+            return pm_objDR.IsNull("TEN_NGUOI_THU");
         }
 
-        public void SetNGUOI_THUNull()
+        public void SetTEN_NGUOI_THUNull()
         {
-            pm_objDR["NGUOI_THU"] = System.Convert.DBNull;
+            pm_objDR["TEN_NGUOI_THU"] = System.Convert.DBNull;
         }
 
         public decimal dcTIEN_PHAI_THU

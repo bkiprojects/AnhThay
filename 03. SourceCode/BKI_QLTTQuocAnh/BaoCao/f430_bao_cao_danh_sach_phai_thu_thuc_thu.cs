@@ -609,6 +609,7 @@ namespace BKI_QLTTQuocAnh
             set_define_events();
             this.KeyPreview = true;
         }
+
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
@@ -666,6 +667,8 @@ namespace BKI_QLTTQuocAnh
 
             m_fg.Redraw = true;
         }
+
+        
 
         private void load_data_2_grid()
         {
