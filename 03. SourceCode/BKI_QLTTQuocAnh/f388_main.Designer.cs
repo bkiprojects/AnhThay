@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f388_main));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.m_cmd_doi_mat_khau = new DevExpress.XtraBars.BarButtonItem();
@@ -75,7 +76,7 @@
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager();
+            this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
@@ -313,6 +314,7 @@
             this.m_cmd_hs_hien_nay.Name = "m_cmd_hs_hien_nay";
             this.m_cmd_hs_hien_nay.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_hs_hien_nay.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // m_cmd_hs_chua_nop_tien
             // 
@@ -322,6 +324,7 @@
             this.m_cmd_hs_chua_nop_tien.Name = "m_cmd_hs_chua_nop_tien";
             this.m_cmd_hs_chua_nop_tien.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_hs_chua_nop_tien.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // m_cmd_thuc_thu_nv
             // 
@@ -349,6 +352,7 @@
             this.m_cmd_bc_diem_danh.Name = "m_cmd_bc_diem_danh";
             this.m_cmd_bc_diem_danh.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_bc_diem_danh.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // m_cmd_lap_giam_tru
             // 
@@ -458,6 +462,7 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.m_cmd_dm_lop_mon);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Lớp môn";
+            this.ribbonPageGroup5.Visible = false;
             // 
             // ribbonPageGroup6
             // 
@@ -494,6 +499,7 @@
             this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_thuc_thu_nv);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "Báo cáo tổng";
+            this.ribbonPageGroup11.Visible = false;
             // 
             // ribbonPageGroup7
             // 
@@ -502,6 +508,7 @@
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_ds_hs_theo_lm);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Theo học sinh";
+            this.ribbonPageGroup7.Visible = false;
             // 
             // ribbonPageGroup8
             // 
