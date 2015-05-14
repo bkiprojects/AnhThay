@@ -664,4 +664,25 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TEN = "TEN";
     }
 
+    public class V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP
+    {
+        public const string ID = "ID";
+        public const string ID_HOC_SINH = "ID_HOC_SINH";
+        public const string HO = "HO";
+        public const string TEN = "TEN";
+        public const string HO_TEN = "HO_TEN";
+        public const string TIEN_PHAI_THU = "TIEN_PHAI_THU";
+        public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
+        public const string CAN_PHAI_THU = "CAN_PHAI_THU";
+        public const string TIEN_THUC_THU = "TIEN_THUC_THU";
+        public const string CHENH_LECH = "CHENH_LECH";
+        public const string NGAY_THU_L1 = "NGAY_THU_L1";
+        public const string SO_TIEN_L1 = "SO_TIEN_L1";
+        public const string NGAY_THU_L2 = "NGAY_THU_L2";
+        public const string SO_TIEN_L2 = "SO_TIEN_L2";
+        public const string NGAY_THU_L3 = "NGAY_THU_L3";
+        public const string SO_TIEN_L3 = "SO_TIEN_L3";
+    }
+
+
 }

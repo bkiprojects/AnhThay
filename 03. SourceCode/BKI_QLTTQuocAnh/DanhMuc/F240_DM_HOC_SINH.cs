@@ -315,7 +315,26 @@ namespace BKI_QLTTQuocAnh
 
 		#region Data Structure
 		private enum e_col_Number{
-			FACEBOOK = 10,DIA_CHI = 8,MA_DOI_TUONG = 2,NGAY_KET_THUC = 14,NGAY_BAT_DAU = 13,TEN_LOP = 11,MO_TA = 16,EMAIL_HS = 6,TEN = 4,HO_TEN = 12,ID_LOP_MON = 18,TRANG_THAI_HOC = 15,TRUONG_DANG_HOC = 9,TRANG_THAI_YN = 19,ID = 1,HO = 3,SDT_HS = 5,NGAY_SINH = 7,ID_HOC_SINH = 17
+			FACEBOOK = 10
+,DIA_CHI = 8
+,MA_DOI_TUONG = 2
+,NGAY_KET_THUC = 14
+,NGAY_BAT_DAU = 13
+,TEN_LOP = 11
+,MO_TA = 16
+,EMAIL_HS = 6
+,TEN = 4
+,HO_TEN = 12
+,ID_LOP_MON = 18
+,TRANG_THAI_HOC = 15
+,TRUONG_DANG_HOC = 9
+,TRANG_THAI_YN = 19
+,ID = 1
+,HO = 3
+,SDT_HS = 5
+,NGAY_SINH = 7
+,ID_HOC_SINH = 17
+
 		}			
 		#endregion
 
@@ -340,7 +359,26 @@ namespace BKI_QLTTQuocAnh
 		}	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
-			v_htb.Add(V_GD_HOC.FACEBOOK, e_col_Number.FACEBOOK);			v_htb.Add(V_GD_HOC.DIA_CHI, e_col_Number.DIA_CHI);			v_htb.Add(V_GD_HOC.MA_DOI_TUONG, e_col_Number.MA_DOI_TUONG);			v_htb.Add(V_GD_HOC.NGAY_KET_THUC, e_col_Number.NGAY_KET_THUC);			v_htb.Add(V_GD_HOC.NGAY_BAT_DAU, e_col_Number.NGAY_BAT_DAU);			v_htb.Add(V_GD_HOC.TEN_LOP, e_col_Number.TEN_LOP);			v_htb.Add(V_GD_HOC.MO_TA, e_col_Number.MO_TA);			v_htb.Add(V_GD_HOC.EMAIL_HS, e_col_Number.EMAIL_HS);			v_htb.Add(V_GD_HOC.TEN, e_col_Number.TEN);			v_htb.Add(V_GD_HOC.HO_TEN, e_col_Number.HO_TEN);			v_htb.Add(V_GD_HOC.ID_LOP_MON, e_col_Number.ID_LOP_MON);			v_htb.Add(V_GD_HOC.TRANG_THAI_HOC, e_col_Number.TRANG_THAI_HOC);			v_htb.Add(V_GD_HOC.TRUONG_DANG_HOC, e_col_Number.TRUONG_DANG_HOC);			v_htb.Add(V_GD_HOC.TRANG_THAI_YN, e_col_Number.TRANG_THAI_YN);			v_htb.Add(V_GD_HOC.ID, e_col_Number.ID);			v_htb.Add(V_GD_HOC.HO, e_col_Number.HO);			v_htb.Add(V_GD_HOC.SDT_HS, e_col_Number.SDT_HS);			v_htb.Add(V_GD_HOC.NGAY_SINH, e_col_Number.NGAY_SINH);			v_htb.Add(V_GD_HOC.ID_HOC_SINH, e_col_Number.ID_HOC_SINH);									
+			v_htb.Add(V_GD_HOC.FACEBOOK, e_col_Number.FACEBOOK);
+			v_htb.Add(V_GD_HOC.DIA_CHI, e_col_Number.DIA_CHI);
+			v_htb.Add(V_GD_HOC.MA_DOI_TUONG, e_col_Number.MA_DOI_TUONG);
+			v_htb.Add(V_GD_HOC.NGAY_KET_THUC, e_col_Number.NGAY_KET_THUC);
+			v_htb.Add(V_GD_HOC.NGAY_BAT_DAU, e_col_Number.NGAY_BAT_DAU);
+			v_htb.Add(V_GD_HOC.TEN_LOP, e_col_Number.TEN_LOP);
+			v_htb.Add(V_GD_HOC.MO_TA, e_col_Number.MO_TA);
+			v_htb.Add(V_GD_HOC.EMAIL_HS, e_col_Number.EMAIL_HS);
+			v_htb.Add(V_GD_HOC.TEN, e_col_Number.TEN);
+			v_htb.Add(V_GD_HOC.HO_TEN, e_col_Number.HO_TEN);
+			v_htb.Add(V_GD_HOC.ID_LOP_MON, e_col_Number.ID_LOP_MON);
+			v_htb.Add(V_GD_HOC.TRANG_THAI_HOC, e_col_Number.TRANG_THAI_HOC);
+			v_htb.Add(V_GD_HOC.TRUONG_DANG_HOC, e_col_Number.TRUONG_DANG_HOC);
+			v_htb.Add(V_GD_HOC.TRANG_THAI_YN, e_col_Number.TRANG_THAI_YN);
+			v_htb.Add(V_GD_HOC.ID, e_col_Number.ID);
+			v_htb.Add(V_GD_HOC.HO, e_col_Number.HO);
+			v_htb.Add(V_GD_HOC.SDT_HS, e_col_Number.SDT_HS);
+			v_htb.Add(V_GD_HOC.NGAY_SINH, e_col_Number.NGAY_SINH);
+			v_htb.Add(V_GD_HOC.ID_HOC_SINH, e_col_Number.ID_HOC_SINH);
+									
 			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_GD_HOC.NewRow());
 			return v_obj_trans;			
 		}
