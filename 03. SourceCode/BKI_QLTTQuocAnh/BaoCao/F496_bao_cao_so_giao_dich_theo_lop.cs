@@ -229,7 +229,7 @@ namespace BKI_QLTTQuocAnh
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(0, 115);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Rows.Fixed = 2;
+            this.m_fg.Rows.Fixed = 3;
             this.m_fg.Size = new System.Drawing.Size(874, 258);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
@@ -415,45 +415,65 @@ namespace BKI_QLTTQuocAnh
         {
             m_fg.AllowMerging = AllowMergingEnum.FixedOnly;
 
+            m_fg.Cols[0].AllowMerging = true;
+            m_fg[0, 0] = "STT";
+            m_fg[1, 0] = "STT";
+            m_fg[2, 0] = "STT";
+
             m_fg.Cols[(int)e_col_Number.HO_TEN].AllowMerging = true;
             m_fg[0, (int)e_col_Number.HO_TEN] = "Họ tên";
             m_fg[1, (int)e_col_Number.HO_TEN] = "Họ tên";
+            m_fg[2, (int)e_col_Number.HO_TEN] = "Họ tên";
 
             m_fg.Cols[(int)e_col_Number.TIEN_PHAI_THU].AllowMerging = true;
             m_fg[0, (int)e_col_Number.TIEN_PHAI_THU] = "Phải thu";
             m_fg[1, (int)e_col_Number.TIEN_PHAI_THU] = "Phải thu";
+            m_fg[2, (int)e_col_Number.TIEN_PHAI_THU] = "(1)";
 
             m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].AllowMerging = true;
             m_fg[0, (int)e_col_Number.TIEN_GIAM_TRU] = "Giảm trừ";
             m_fg[1, (int)e_col_Number.TIEN_GIAM_TRU] = "Giảm trừ";
+            m_fg[2, (int)e_col_Number.TIEN_GIAM_TRU] = "(2)";
 
             m_fg.Cols[(int)e_col_Number.CAN_PHAI_THU].AllowMerging = true;
             m_fg[0, (int)e_col_Number.CAN_PHAI_THU] = "Cần phải thu";
             m_fg[1, (int)e_col_Number.CAN_PHAI_THU] = "Cần phải thu";
+            m_fg[2, (int)e_col_Number.CAN_PHAI_THU] = "(3)=(1)-(2)";
 
             m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].AllowMerging = true;
             m_fg[0, (int)e_col_Number.TIEN_THUC_THU] = "Thực thu";
             m_fg[1, (int)e_col_Number.TIEN_THUC_THU] = "Thực thu";
+            m_fg[2, (int)e_col_Number.TIEN_THUC_THU] = "(4)=(6)+(7)+(8)";
 
             m_fg.Cols[(int)e_col_Number.CHENH_LECH].AllowMerging = true;
             m_fg[0, (int)e_col_Number.CHENH_LECH] = "Chênh lệch";
             m_fg[1, (int)e_col_Number.CHENH_LECH] = "Chênh lệch";
+            m_fg[2, (int)e_col_Number.CHENH_LECH] = "(5)=(3)-(4)";
 
             m_fg.Rows[0].AllowMerging = true;
             m_fg[0, (int)e_col_Number.NGAY_THU_L1] = "Lần I";
             m_fg[0, (int)e_col_Number.SO_TIEN_L1] = "Lần I";
+            m_fg.Cols[(int)e_col_Number.NGAY_THU_L1].AllowMerging = true;
             m_fg[1, (int)e_col_Number.NGAY_THU_L1] = "Ngày thu (L1)";
+            m_fg[2, (int)e_col_Number.NGAY_THU_L1] = "Ngày thu (L1)";
             m_fg[1, (int)e_col_Number.SO_TIEN_L1] = "Số tiền (L1)";
+            m_fg[2, (int)e_col_Number.SO_TIEN_L1] = "(6)";
 
             m_fg[0, (int)e_col_Number.NGAY_THU_L2] = "Lần II";
             m_fg[0, (int)e_col_Number.SO_TIEN_L2] = "Lần II";
+            m_fg.Cols[(int)e_col_Number.NGAY_THU_L2].AllowMerging = true;
             m_fg[1, (int)e_col_Number.NGAY_THU_L2] = "Ngày thu (L2)";
+            m_fg[2, (int)e_col_Number.NGAY_THU_L2] = "Ngày thu (L2)";
             m_fg[1, (int)e_col_Number.SO_TIEN_L2] = "Số tiền (L2)";
+            m_fg[2, (int)e_col_Number.SO_TIEN_L2] = "(7)";
 
             m_fg[0, (int)e_col_Number.NGAY_THU_L3] = "Lần III";
             m_fg[0, (int)e_col_Number.SO_TIEN_L3] = "Lần III";
+            m_fg.Cols[(int)e_col_Number.NGAY_THU_L3].AllowMerging = true;
             m_fg[1, (int)e_col_Number.NGAY_THU_L3] = "Ngày thu (L3)";
+            m_fg[2, (int)e_col_Number.NGAY_THU_L3] = "Ngày thu (L3)";
             m_fg[1, (int)e_col_Number.SO_TIEN_L3] = "Số tiền (L3)";
+            m_fg[2, (int)e_col_Number.SO_TIEN_L3] = "(8)";
         }
         private void set_initial_form_load()
         {
@@ -513,6 +533,7 @@ namespace BKI_QLTTQuocAnh
             m_sle_lop.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
         }
 
+        
         private void load_data_2_grid()
         {
             if (m_sle_lop.EditValue == null || m_sle_lop.EditValue == "")
@@ -528,6 +549,8 @@ namespace BKI_QLTTQuocAnh
            
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
+            CGridUtils.MakeSoTT(0, m_fg);
+
             m_fg.Redraw = true;
         }
         private void grid2us_object(US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP i_us
