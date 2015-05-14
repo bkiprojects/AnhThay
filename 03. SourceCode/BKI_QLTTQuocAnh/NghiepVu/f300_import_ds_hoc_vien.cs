@@ -806,6 +806,7 @@ namespace BKI_QLTTQuocAnh {
                     string v_ma_hv = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
                     decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
                     if (!is_check_exist(v_id_lop, v_ma_hv, v_ds)) continue;
+                    else if (!BaseMessages.MsgBox_Confirm("Bạn có muốn lưu dữ liệu lại hay không " + i_grid_row)) continue;
                     //1.1 day du lieu vao hv
                     grid2us_object(m_us, i_grid_row);
                     excel_2_us_dm_hoc_vien(m_us, v_us_hv);
