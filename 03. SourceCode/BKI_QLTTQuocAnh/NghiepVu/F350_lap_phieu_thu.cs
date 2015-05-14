@@ -68,8 +68,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
             m_sle_lop.Properties.View.Columns[DM_LOP_MON.MO_TA].Caption = "Chọn tên lớp";
 
-            m_sle_ma_hv.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            m_sle_so_phieu_thu.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
+            m_sle_lop.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            m_sle_lop.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
         }
         private void load_data_to_sle_so_phieu_thu() {
             DS_DM_SO_PHIEU_THU v_ds = new DS_DM_SO_PHIEU_THU();
