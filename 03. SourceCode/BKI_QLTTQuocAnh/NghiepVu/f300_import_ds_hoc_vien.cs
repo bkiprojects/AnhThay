@@ -799,6 +799,13 @@ namespace BKI_QLTTQuocAnh {
                 //v_us_hv_gd_hoc.UseTransOfUSObject( //use transaction cua thang hoc_sinh
                 v_us_hv.BeginTransaction();
                 for(int i_grid_row = m_fg.Rows.Fixed; i_grid_row < m_fg.Rows.Count; i_grid_row++) {
+                    //1.0 du lieu trung thi ko add nua
+                    DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
+                    US_V_GD_HOC v_us = new US_V_GD_HOC();
+                    v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
+                    string v_ma_hv = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
+                    decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+                    if (!is_check_exist(v_id_lop, v_ma_hv, v_ds)) continue;
                     //1.1 day du lieu vao hv
                     grid2us_object(m_us, i_grid_row);
                     excel_2_us_dm_hoc_vien(m_us, v_us_hv);

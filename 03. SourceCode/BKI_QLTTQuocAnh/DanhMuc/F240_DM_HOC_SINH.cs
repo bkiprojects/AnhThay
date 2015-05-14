@@ -40,7 +40,7 @@ namespace BKI_QLTTQuocAnh
 		internal SIS.Controls.Button.SiSButton m_cmd_exit;
 		internal SIS.Controls.Button.SiSButton m_cmd_view;
         private Panel panel1;
-        private Label m_lbl_trang_thai_lop;
+        private Label m_lbl_lop;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private ComboBox m_cbo_trang_thai_hs;
         private Label m_lbl_header;
@@ -92,7 +92,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_lbl_trang_thai_lop = new System.Windows.Forms.Label();
+            this.m_lbl_lop = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_cbo_trang_thai_hs = new System.Windows.Forms.ComboBox();
             this.m_lbl_header = new System.Windows.Forms.Label();
@@ -229,7 +229,7 @@ namespace BKI_QLTTQuocAnh
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_lbl_trang_thai_lop);
+            this.panel1.Controls.Add(this.m_lbl_lop);
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.m_cbo_trang_thai_hs);
             this.panel1.Controls.Add(this.m_lbl_header);
@@ -239,14 +239,15 @@ namespace BKI_QLTTQuocAnh
             this.panel1.Size = new System.Drawing.Size(686, 98);
             this.panel1.TabIndex = 21;
             // 
-            // m_lbl_trang_thai_lop
+            // m_lbl_lop
             // 
-            this.m_lbl_trang_thai_lop.AutoSize = true;
-            this.m_lbl_trang_thai_lop.Location = new System.Drawing.Point(12, 57);
-            this.m_lbl_trang_thai_lop.Name = "m_lbl_trang_thai_lop";
-            this.m_lbl_trang_thai_lop.Size = new System.Drawing.Size(98, 13);
-            this.m_lbl_trang_thai_lop.TabIndex = 1;
-            this.m_lbl_trang_thai_lop.Text = "Trạng thái học sinh";
+            this.m_lbl_lop.AutoSize = true;
+            this.m_lbl_lop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_lop.Location = new System.Drawing.Point(12, 49);
+            this.m_lbl_lop.Name = "m_lbl_lop";
+            this.m_lbl_lop.Size = new System.Drawing.Size(45, 24);
+            this.m_lbl_lop.TabIndex = 1;
+            this.m_lbl_lop.Text = "Lớp";
             // 
             // m_cmd_search
             // 
@@ -256,7 +257,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(255, 49);
+            this.m_cmd_search.Location = new System.Drawing.Point(241, 49);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 3;
@@ -270,7 +271,7 @@ namespace BKI_QLTTQuocAnh
             "0582",
             "0661",
             "0662"});
-            this.m_cbo_trang_thai_hs.Location = new System.Drawing.Point(98, 54);
+            this.m_cbo_trang_thai_hs.Location = new System.Drawing.Point(72, 54);
             this.m_cbo_trang_thai_hs.Name = "m_cbo_trang_thai_hs";
             this.m_cbo_trang_thai_hs.Size = new System.Drawing.Size(151, 21);
             this.m_cbo_trang_thai_hs.TabIndex = 2;
@@ -295,7 +296,7 @@ namespace BKI_QLTTQuocAnh
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "F240_DM_HOC_SINH";
-            this.Text = "F240_DM_HOC_SINH";
+            this.Text = "F240_DANH_MỤC_HỌC_SINH";
             this.Load += new System.EventHandler(this.F240_DM_HOC_SINH_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
