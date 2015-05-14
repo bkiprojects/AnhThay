@@ -13,7 +13,7 @@
               <DbSource ConnectionRef="AnhThayConnectionString (Settings)" DbObjectName="AnhThay.dbo.V_GD_HOC" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, TEN_LOP, HO_TEN, NGAY_BAT_DAU, NGAY_KET_THUC, TRANG_THAI_HOC, MA_DOI_TUONG, MO_TA, ID_HOC_SINH, ID_LOP_MON, SDT_HS, EMAIL_HS, TRANG_THAI_YN FROM dbo.V_GD_HOC</CommandText>
+                    <CommandText>SELECT ID, TEN_LOP, HO, TEN, HO_TEN, NGAY_BAT_DAU, NGAY_KET_THUC, TRANG_THAI_HOC, MA_DOI_TUONG, MO_TA, ID_HOC_SINH, ID_LOP_MON, SDT_HS, EMAIL_HS, TRANG_THAI_YN, FACEBOOK, NGAY_SINH, TRUONG_DANG_HOC, DIA_CHI FROM dbo.V_GD_HOC</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -22,6 +22,8 @@
             <Mappings>
               <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="TEN_LOP" DataSetColumn="TEN_LOP" />
+              <Mapping SourceColumn="HO" DataSetColumn="HO" />
+              <Mapping SourceColumn="TEN" DataSetColumn="TEN" />
               <Mapping SourceColumn="HO_TEN" DataSetColumn="HO_TEN" />
               <Mapping SourceColumn="NGAY_BAT_DAU" DataSetColumn="NGAY_BAT_DAU" />
               <Mapping SourceColumn="NGAY_KET_THUC" DataSetColumn="NGAY_KET_THUC" />
@@ -33,6 +35,10 @@
               <Mapping SourceColumn="SDT_HS" DataSetColumn="SDT_HS" />
               <Mapping SourceColumn="EMAIL_HS" DataSetColumn="EMAIL_HS" />
               <Mapping SourceColumn="TRANG_THAI_YN" DataSetColumn="TRANG_THAI_YN" />
+              <Mapping SourceColumn="FACEBOOK" DataSetColumn="FACEBOOK" />
+              <Mapping SourceColumn="NGAY_SINH" DataSetColumn="NGAY_SINH" />
+              <Mapping SourceColumn="TRUONG_DANG_HOC" DataSetColumn="TRUONG_DANG_HOC" />
+              <Mapping SourceColumn="DIA_CHI" DataSetColumn="DIA_CHI" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -52,6 +58,20 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HO" msprop:Generator_ColumnVarNameInTable="columnHO" msprop:Generator_ColumnPropNameInRow="HO" msprop:Generator_ColumnPropNameInTable="HOColumn" msprop:Generator_UserColumnName="HO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN" msprop:Generator_ColumnVarNameInTable="columnTEN" msprop:Generator_ColumnPropNameInRow="TEN" msprop:Generator_ColumnPropNameInTable="TENColumn" msprop:Generator_UserColumnName="TEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -105,6 +125,28 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FACEBOOK" msprop:Generator_ColumnVarNameInTable="columnFACEBOOK" msprop:Generator_ColumnPropNameInRow="FACEBOOK" msprop:Generator_ColumnPropNameInTable="FACEBOOKColumn" msprop:Generator_UserColumnName="FACEBOOK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NGAY_SINH" msprop:Generator_ColumnVarNameInTable="columnNGAY_SINH" msprop:Generator_ColumnPropNameInRow="NGAY_SINH" msprop:Generator_ColumnPropNameInTable="NGAY_SINHColumn" msprop:Generator_UserColumnName="NGAY_SINH" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TRUONG_DANG_HOC" msprop:Generator_ColumnVarNameInTable="columnTRUONG_DANG_HOC" msprop:Generator_ColumnPropNameInRow="TRUONG_DANG_HOC" msprop:Generator_ColumnPropNameInTable="TRUONG_DANG_HOCColumn" msprop:Generator_UserColumnName="TRUONG_DANG_HOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIA_CHI" msprop:Generator_ColumnVarNameInTable="columnDIA_CHI" msprop:Generator_ColumnPropNameInRow="DIA_CHI" msprop:Generator_ColumnPropNameInTable="DIA_CHIColumn" msprop:Generator_UserColumnName="DIA_CHI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

@@ -221,6 +221,9 @@
     <Compile Include="DanhMuc\f230_danh_muc_hs_theo_lop.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DanhMuc\F240_DM_HOC_SINH.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HeThong\collection.cs" />
     <Compile Include="HeThong\f306_HT_USER_GROUP.cs">
       <SubType>Form</SubType>
@@ -361,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f230_danh_muc_hs_theo_lop.resx">
       <DependentUpon>f230_danh_muc_hs_theo_lop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\F240_DM_HOC_SINH.resx">
+      <DependentUpon>F240_DM_HOC_SINH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP.resx">
       <DependentUpon>f306_HT_USER_GROUP.cs</DependentUpon>

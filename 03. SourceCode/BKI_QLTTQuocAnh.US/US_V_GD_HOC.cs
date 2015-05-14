@@ -21,280 +21,426 @@ namespace BKI_QLTTQuocAnh.US{
 public class US_V_GD_HOC : US_Object
 {
 	private const string c_TableName = "V_GD_HOC";
-#region "Public Properties"
-	public decimal dcID 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID"] = value;
-		}
-	}
+    #region "Public Properties"
+    public decimal dcID
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "ID", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["ID"] = value;
+        }
+    }
 
-	public bool IsIDNull()	{
-		return pm_objDR.IsNull("ID");
-	}
+    public bool IsIDNull()
+    {
+        return pm_objDR.IsNull("ID");
+    }
 
-	public void SetIDNull() {
-		pm_objDR["ID"] = System.Convert.DBNull;
-	}
+    public void SetIDNull()
+    {
+        pm_objDR["ID"] = System.Convert.DBNull;
+    }
 
-	public string strTEN_LOP 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "TEN_LOP", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["TEN_LOP"] = value;
-		}
-	}
+    public string strTEN_LOP
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "TEN_LOP", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["TEN_LOP"] = value;
+        }
+    }
 
-	public bool IsTEN_LOPNull() 
-	{
-		return pm_objDR.IsNull("TEN_LOP");
-	}
+    public bool IsTEN_LOPNull()
+    {
+        return pm_objDR.IsNull("TEN_LOP");
+    }
 
-	public void SetTEN_LOPNull() {
-		pm_objDR["TEN_LOP"] = System.Convert.DBNull;
-	}
+    public void SetTEN_LOPNull()
+    {
+        pm_objDR["TEN_LOP"] = System.Convert.DBNull;
+    }
 
-	public string strHO_TEN 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "HO_TEN", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["HO_TEN"] = value;
-		}
-	}
+    public string strHO
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "HO", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["HO"] = value;
+        }
+    }
 
-	public bool IsHO_TENNull() 
-	{
-		return pm_objDR.IsNull("HO_TEN");
-	}
+    public bool IsHONull()
+    {
+        return pm_objDR.IsNull("HO");
+    }
 
-	public void SetHO_TENNull() {
-		pm_objDR["HO_TEN"] = System.Convert.DBNull;
-	}
+    public void SetHONull()
+    {
+        pm_objDR["HO"] = System.Convert.DBNull;
+    }
 
-	public DateTime datNGAY_BAT_DAU
-	{
-		get   
-		{
-			return CNull.RowNVLDate(pm_objDR, "NGAY_BAT_DAU", IPConstants.c_DefaultDate);
-		}
-		set   
-		{
-			pm_objDR["NGAY_BAT_DAU"] = value;
-		}
-	}
+    public string strTEN
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "TEN", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["TEN"] = value;
+        }
+    }
 
-	public bool IsNGAY_BAT_DAUNull()
-	{
-		return pm_objDR.IsNull("NGAY_BAT_DAU");
-	}
+    public bool IsTENNull()
+    {
+        return pm_objDR.IsNull("TEN");
+    }
 
-	public void SetNGAY_BAT_DAUNull()
-	{
-		pm_objDR["NGAY_BAT_DAU"] = System.Convert.DBNull;
-	}
+    public void SetTENNull()
+    {
+        pm_objDR["TEN"] = System.Convert.DBNull;
+    }
 
-	public DateTime datNGAY_KET_THUC
-	{
-		get   
-		{
-			return CNull.RowNVLDate(pm_objDR, "NGAY_KET_THUC", IPConstants.c_DefaultDate);
-		}
-		set   
-		{
-			pm_objDR["NGAY_KET_THUC"] = value;
-		}
-	}
+    public string strHO_TEN
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "HO_TEN", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["HO_TEN"] = value;
+        }
+    }
 
-	public bool IsNGAY_KET_THUCNull()
-	{
-		return pm_objDR.IsNull("NGAY_KET_THUC");
-	}
+    public bool IsHO_TENNull()
+    {
+        return pm_objDR.IsNull("HO_TEN");
+    }
 
-	public void SetNGAY_KET_THUCNull()
-	{
-		pm_objDR["NGAY_KET_THUC"] = System.Convert.DBNull;
-	}
+    public void SetHO_TENNull()
+    {
+        pm_objDR["HO_TEN"] = System.Convert.DBNull;
+    }
 
-	public string strTRANG_THAI_HOC 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "TRANG_THAI_HOC", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["TRANG_THAI_HOC"] = value;
-		}
-	}
+    public DateTime datNGAY_BAT_DAU
+    {
+        get
+        {
+            return CNull.RowNVLDate(pm_objDR, "NGAY_BAT_DAU", IPConstants.c_DefaultDate);
+        }
+        set
+        {
+            pm_objDR["NGAY_BAT_DAU"] = value;
+        }
+    }
 
-	public bool IsTRANG_THAI_HOCNull() 
-	{
-		return pm_objDR.IsNull("TRANG_THAI_HOC");
-	}
+    public bool IsNGAY_BAT_DAUNull()
+    {
+        return pm_objDR.IsNull("NGAY_BAT_DAU");
+    }
 
-	public void SetTRANG_THAI_HOCNull() {
-		pm_objDR["TRANG_THAI_HOC"] = System.Convert.DBNull;
-	}
+    public void SetNGAY_BAT_DAUNull()
+    {
+        pm_objDR["NGAY_BAT_DAU"] = System.Convert.DBNull;
+    }
 
-	public string strMA_DOI_TUONG 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "MA_DOI_TUONG", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["MA_DOI_TUONG"] = value;
-		}
-	}
+    public DateTime datNGAY_KET_THUC
+    {
+        get
+        {
+            return CNull.RowNVLDate(pm_objDR, "NGAY_KET_THUC", IPConstants.c_DefaultDate);
+        }
+        set
+        {
+            pm_objDR["NGAY_KET_THUC"] = value;
+        }
+    }
 
-	public bool IsMA_DOI_TUONGNull() 
-	{
-		return pm_objDR.IsNull("MA_DOI_TUONG");
-	}
+    public bool IsNGAY_KET_THUCNull()
+    {
+        return pm_objDR.IsNull("NGAY_KET_THUC");
+    }
 
-	public void SetMA_DOI_TUONGNull() {
-		pm_objDR["MA_DOI_TUONG"] = System.Convert.DBNull;
-	}
+    public void SetNGAY_KET_THUCNull()
+    {
+        pm_objDR["NGAY_KET_THUC"] = System.Convert.DBNull;
+    }
 
-	public string strMO_TA 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "MO_TA", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["MO_TA"] = value;
-		}
-	}
+    public string strTRANG_THAI_HOC
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "TRANG_THAI_HOC", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["TRANG_THAI_HOC"] = value;
+        }
+    }
 
-	public bool IsMO_TANull() 
-	{
-		return pm_objDR.IsNull("MO_TA");
-	}
+    public bool IsTRANG_THAI_HOCNull()
+    {
+        return pm_objDR.IsNull("TRANG_THAI_HOC");
+    }
 
-	public void SetMO_TANull() {
-		pm_objDR["MO_TA"] = System.Convert.DBNull;
-	}
+    public void SetTRANG_THAI_HOCNull()
+    {
+        pm_objDR["TRANG_THAI_HOC"] = System.Convert.DBNull;
+    }
 
-	public decimal dcID_HOC_SINH 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_HOC_SINH", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_HOC_SINH"] = value;
-		}
-	}
+    public string strMA_DOI_TUONG
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "MA_DOI_TUONG", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["MA_DOI_TUONG"] = value;
+        }
+    }
 
-	public bool IsID_HOC_SINHNull()	{
-		return pm_objDR.IsNull("ID_HOC_SINH");
-	}
+    public bool IsMA_DOI_TUONGNull()
+    {
+        return pm_objDR.IsNull("MA_DOI_TUONG");
+    }
 
-	public void SetID_HOC_SINHNull() {
-		pm_objDR["ID_HOC_SINH"] = System.Convert.DBNull;
-	}
+    public void SetMA_DOI_TUONGNull()
+    {
+        pm_objDR["MA_DOI_TUONG"] = System.Convert.DBNull;
+    }
 
-	public decimal dcID_LOP_MON 
-	{
-		get
-		{
-			return CNull.RowNVLDecimal(pm_objDR, "ID_LOP_MON", IPConstants.c_DefaultDecimal);
-		}
-		set	
-		{
-			pm_objDR["ID_LOP_MON"] = value;
-		}
-	}
+    public string strMO_TA
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "MO_TA", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["MO_TA"] = value;
+        }
+    }
 
-	public bool IsID_LOP_MONNull()	{
-		return pm_objDR.IsNull("ID_LOP_MON");
-	}
+    public bool IsMO_TANull()
+    {
+        return pm_objDR.IsNull("MO_TA");
+    }
 
-	public void SetID_LOP_MONNull() {
-		pm_objDR["ID_LOP_MON"] = System.Convert.DBNull;
-	}
+    public void SetMO_TANull()
+    {
+        pm_objDR["MO_TA"] = System.Convert.DBNull;
+    }
 
-	public string strSDT_HS 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "SDT_HS", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["SDT_HS"] = value;
-		}
-	}
+    public decimal dcID_HOC_SINH
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "ID_HOC_SINH", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["ID_HOC_SINH"] = value;
+        }
+    }
 
-	public bool IsSDT_HSNull() 
-	{
-		return pm_objDR.IsNull("SDT_HS");
-	}
+    public bool IsID_HOC_SINHNull()
+    {
+        return pm_objDR.IsNull("ID_HOC_SINH");
+    }
 
-	public void SetSDT_HSNull() {
-		pm_objDR["SDT_HS"] = System.Convert.DBNull;
-	}
+    public void SetID_HOC_SINHNull()
+    {
+        pm_objDR["ID_HOC_SINH"] = System.Convert.DBNull;
+    }
 
-	public string strEMAIL_HS 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "EMAIL_HS", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["EMAIL_HS"] = value;
-		}
-	}
+    public decimal dcID_LOP_MON
+    {
+        get
+        {
+            return CNull.RowNVLDecimal(pm_objDR, "ID_LOP_MON", IPConstants.c_DefaultDecimal);
+        }
+        set
+        {
+            pm_objDR["ID_LOP_MON"] = value;
+        }
+    }
 
-	public bool IsEMAIL_HSNull() 
-	{
-		return pm_objDR.IsNull("EMAIL_HS");
-	}
+    public bool IsID_LOP_MONNull()
+    {
+        return pm_objDR.IsNull("ID_LOP_MON");
+    }
 
-	public void SetEMAIL_HSNull() {
-		pm_objDR["EMAIL_HS"] = System.Convert.DBNull;
-	}
+    public void SetID_LOP_MONNull()
+    {
+        pm_objDR["ID_LOP_MON"] = System.Convert.DBNull;
+    }
 
-	public string strTRANG_THAI_YN 
-	{
-		get 
-		{
-			return CNull.RowNVLString(pm_objDR, "TRANG_THAI_YN", IPConstants.c_DefaultString);
-		}
-		set 
-		{
-			pm_objDR["TRANG_THAI_YN"] = value;
-		}
-	}
+    public string strSDT_HS
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "SDT_HS", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["SDT_HS"] = value;
+        }
+    }
 
-	public bool IsTRANG_THAI_YNNull() 
-	{
-		return pm_objDR.IsNull("TRANG_THAI_YN");
-	}
+    public bool IsSDT_HSNull()
+    {
+        return pm_objDR.IsNull("SDT_HS");
+    }
 
-	public void SetTRANG_THAI_YNNull() {
-		pm_objDR["TRANG_THAI_YN"] = System.Convert.DBNull;
-	}
+    public void SetSDT_HSNull()
+    {
+        pm_objDR["SDT_HS"] = System.Convert.DBNull;
+    }
 
-#endregion
+    public string strEMAIL_HS
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "EMAIL_HS", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["EMAIL_HS"] = value;
+        }
+    }
+
+    public bool IsEMAIL_HSNull()
+    {
+        return pm_objDR.IsNull("EMAIL_HS");
+    }
+
+    public void SetEMAIL_HSNull()
+    {
+        pm_objDR["EMAIL_HS"] = System.Convert.DBNull;
+    }
+
+    public string strTRANG_THAI_YN
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "TRANG_THAI_YN", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["TRANG_THAI_YN"] = value;
+        }
+    }
+
+    public bool IsTRANG_THAI_YNNull()
+    {
+        return pm_objDR.IsNull("TRANG_THAI_YN");
+    }
+
+    public void SetTRANG_THAI_YNNull()
+    {
+        pm_objDR["TRANG_THAI_YN"] = System.Convert.DBNull;
+    }
+
+    public string strFACEBOOK
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "FACEBOOK", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["FACEBOOK"] = value;
+        }
+    }
+
+    public bool IsFACEBOOKNull()
+    {
+        return pm_objDR.IsNull("FACEBOOK");
+    }
+
+    public void SetFACEBOOKNull()
+    {
+        pm_objDR["FACEBOOK"] = System.Convert.DBNull;
+    }
+
+    public DateTime datNGAY_SINH
+    {
+        get
+        {
+            return CNull.RowNVLDate(pm_objDR, "NGAY_SINH", IPConstants.c_DefaultDate);
+        }
+        set
+        {
+            pm_objDR["NGAY_SINH"] = value;
+        }
+    }
+
+    public bool IsNGAY_SINHNull()
+    {
+        return pm_objDR.IsNull("NGAY_SINH");
+    }
+
+    public void SetNGAY_SINHNull()
+    {
+        pm_objDR["NGAY_SINH"] = System.Convert.DBNull;
+    }
+
+    public string strTRUONG_DANG_HOC
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "TRUONG_DANG_HOC", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["TRUONG_DANG_HOC"] = value;
+        }
+    }
+
+    public bool IsTRUONG_DANG_HOCNull()
+    {
+        return pm_objDR.IsNull("TRUONG_DANG_HOC");
+    }
+
+    public void SetTRUONG_DANG_HOCNull()
+    {
+        pm_objDR["TRUONG_DANG_HOC"] = System.Convert.DBNull;
+    }
+
+    public string strDIA_CHI
+    {
+        get
+        {
+            return CNull.RowNVLString(pm_objDR, "DIA_CHI", IPConstants.c_DefaultString);
+        }
+        set
+        {
+            pm_objDR["DIA_CHI"] = value;
+        }
+    }
+
+    public bool IsDIA_CHINull()
+    {
+        return pm_objDR.IsNull("DIA_CHI");
+    }
+
+    public void SetDIA_CHINull()
+    {
+        pm_objDR["DIA_CHI"] = System.Convert.DBNull;
+    }
+
+    #endregion
 #region "Init Functions"
 	public US_V_GD_HOC() 
 	{

@@ -750,8 +750,7 @@ namespace BKI_QLTTQuocAnh {
                 }
                 else
                 {
-                    //to mau trang - khi kiem tra lai ma no dung thi phai chuyen mau
-                    
+                    //to mau trang - khi kiem tra lai ma no dung thi phai chuyen mau                  
                     m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
                 }
             }          

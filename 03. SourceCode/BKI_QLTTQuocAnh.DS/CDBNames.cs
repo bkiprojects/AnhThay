@@ -592,6 +592,8 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
     public class V_GD_HOC {
         public const string ID = "ID";
         public const string TEN_LOP = "TEN_LOP";
+        public const string HO = "HO";
+        public const string TEN = "TEN";
         public const string HO_TEN = "HO_TEN";
         public const string NGAY_BAT_DAU = "NGAY_BAT_DAU";
         public const string NGAY_KET_THUC = "NGAY_KET_THUC";
@@ -603,6 +605,10 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string SDT_HS = "SDT_HS";
         public const string EMAIL_HS = "EMAIL_HS";
         public const string TRANG_THAI_YN = "TRANG_THAI_YN";
+        public const string FACEBOOK = "FACEBOOK";
+        public const string NGAY_SINH = "NGAY_SINH";
+        public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
+        public const string DIA_CHI = "DIA_CHI";
     }
 
 
