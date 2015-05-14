@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f211_dm_lop_mon_de));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_txt_don_gia = new System.Windows.Forms.TextBox();
-            this.m_lbl_don_gia = new System.Windows.Forms.Label();
+            this.m_txt_hoc_phi = new System.Windows.Forms.TextBox();
+            this.m_lbl_hoc_phi = new System.Windows.Forms.Label();
             this.m_txt_mo_ta = new System.Windows.Forms.TextBox();
             this.m_txt_ma_lop_mon = new System.Windows.Forms.TextBox();
             this.m_lbl_ma_lop_mon = new System.Windows.Forms.Label();
@@ -47,8 +47,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_txt_don_gia);
-            this.panel1.Controls.Add(this.m_lbl_don_gia);
+            this.panel1.Controls.Add(this.m_txt_hoc_phi);
+            this.panel1.Controls.Add(this.m_lbl_hoc_phi);
             this.panel1.Controls.Add(this.m_txt_mo_ta);
             this.panel1.Controls.Add(this.m_txt_ma_lop_mon);
             this.panel1.Controls.Add(this.m_lbl_ma_lop_mon);
@@ -60,21 +60,21 @@
             this.panel1.Size = new System.Drawing.Size(315, 122);
             this.panel1.TabIndex = 0;
             // 
-            // m_txt_don_gia
+            // m_txt_hoc_phi
             // 
-            this.m_txt_don_gia.Location = new System.Drawing.Point(106, 93);
-            this.m_txt_don_gia.Name = "m_txt_don_gia";
-            this.m_txt_don_gia.Size = new System.Drawing.Size(196, 20);
-            this.m_txt_don_gia.TabIndex = 6;
+            this.m_txt_hoc_phi.Location = new System.Drawing.Point(106, 93);
+            this.m_txt_hoc_phi.Name = "m_txt_hoc_phi";
+            this.m_txt_hoc_phi.Size = new System.Drawing.Size(196, 20);
+            this.m_txt_hoc_phi.TabIndex = 6;
             // 
-            // m_lbl_don_gia
+            // m_lbl_hoc_phi
             // 
-            this.m_lbl_don_gia.AutoSize = true;
-            this.m_lbl_don_gia.Location = new System.Drawing.Point(12, 97);
-            this.m_lbl_don_gia.Name = "m_lbl_don_gia";
-            this.m_lbl_don_gia.Size = new System.Drawing.Size(76, 13);
-            this.m_lbl_don_gia.TabIndex = 5;
-            this.m_lbl_don_gia.Text = "Đơn giá (VNĐ)";
+            this.m_lbl_hoc_phi.AutoSize = true;
+            this.m_lbl_hoc_phi.Location = new System.Drawing.Point(12, 97);
+            this.m_lbl_hoc_phi.Name = "m_lbl_hoc_phi";
+            this.m_lbl_hoc_phi.Size = new System.Drawing.Size(78, 13);
+            this.m_lbl_hoc_phi.TabIndex = 5;
+            this.m_lbl_hoc_phi.Text = "Học phí (VNĐ)";
             // 
             // m_txt_mo_ta
             // 
@@ -197,7 +197,7 @@
         private System.Windows.Forms.TextBox m_txt_ma_lop_mon;
         private System.Windows.Forms.Label m_lbl_ma_lop_mon;
         private System.Windows.Forms.Label m_lbl_mo_ta;
-        private System.Windows.Forms.TextBox m_txt_don_gia;
-        private System.Windows.Forms.Label m_lbl_don_gia;
+        private System.Windows.Forms.TextBox m_txt_hoc_phi;
+        private System.Windows.Forms.Label m_lbl_hoc_phi;
     }
 }

@@ -79,6 +79,22 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 
         private bool check_validate_data_is_OK()
         {
+            if (!CValidateTextBox.IsValid(m_txt_ma_lop_mon, DataType.NumberType, allowNull.NO, false))
+            {
+                MessageBox.Show("Mã lớp môn không được để trống và phải là số");
+                return false;
+            }
+            if (!CValidateTextBox.IsValid(m_txt_mo_ta, DataType.StringType, allowNull.NO, false))
+            {
+                MessageBox.Show("Mô tả không được để trống");
+                return false;
+            }
+            if (!CValidateTextBox.IsValid(m_txt_hoc_phi, DataType.NumberType, allowNull.NO, false))
+            {
+                MessageBox.Show("Học phí không được để trống và phải là số");
+                return false;
+            }
+                
             return true;
         }
 
@@ -86,14 +102,14 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
             m_us_dm_lop_mon.strMA_LOP_MON = m_txt_ma_lop_mon.Text;
             m_us_dm_lop_mon.strMO_TA = m_txt_mo_ta.Text;
-            m_us_dm_lop_mon.dcDON_GIA_BUOI_HOC = CIPConvert.ToDecimal(m_txt_don_gia.Text);
+            m_us_dm_lop_mon.dcDON_GIA_BUOI_HOC = CIPConvert.ToDecimal(m_txt_hoc_phi.Text);
         }
 
         private void us_object_2_form()
         {
             m_txt_ma_lop_mon.Text = m_us_dm_lop_mon.strMA_LOP_MON;
             m_txt_mo_ta.Text = m_us_dm_lop_mon.strMO_TA;
-            m_txt_don_gia.Text = m_us_dm_lop_mon.dcDON_GIA_BUOI_HOC.ToString();
+            m_txt_hoc_phi.Text = m_us_dm_lop_mon.dcDON_GIA_BUOI_HOC.ToString();
         }
 
         private void save_data()

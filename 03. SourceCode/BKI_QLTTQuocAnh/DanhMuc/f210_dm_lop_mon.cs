@@ -162,6 +162,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_xoa_lop_mon.Size = new System.Drawing.Size(117, 44);
             this.m_cmd_xoa_lop_mon.TabIndex = 5;
             this.m_cmd_xoa_lop_mon.Text = "Xóa lớp môn";
+            this.m_cmd_xoa_lop_mon.Visible = false;
             // 
             // m_cmd_cho_lop_mon_hoat_dong
             // 
