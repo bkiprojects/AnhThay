@@ -25,26 +25,28 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         #region Data Structure
         private enum e_col_Number {
-            NGUOI_THU = 7
+            HO_TEN_PH = 7
 ,
-            SO_PHIEU = 2
-                ,
-            HO_TEN_PH = 6
-                ,
-            TIEN_THUC_THU = 10
+            SO_PHIEU = 3
                 ,
             NGAY_THU = 1
                 ,
-            MA_HOC_SINH = 4
+            TEN_LOAI_PHIEU_THU = 2
                 ,
-            NOI_DUNG = 3
+            TIEN_THUC_THU = 11
                 ,
-            TIEN_CON_PHAI_THU = 11
+            TIEN_GIAM_TRU = 10
                 ,
-            TIEN_GIAM_TRU = 9
+            MA_HOC_SINH = 5
                 ,
-            TIEN_PHAI_THU = 8
-                , HO_TEN_HS = 5
+            NOI_DUNG = 4
+                ,
+            TIEN_CON_PHAI_THU = 12
+                ,
+            TEN_NGUOI_THU = 8
+                ,
+            TIEN_PHAI_THU = 9
+                , HO_TEN_HS = 6
 
         }
         #endregion
@@ -96,15 +98,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg) {
             Hashtable v_htb = new Hashtable();
-            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_NGUOI_THU, e_col_Number.NGUOI_THU);
-            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.SO_PHIEU, e_col_Number.SO_PHIEU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_PH, e_col_Number.HO_TEN_PH);
-            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_THUC_THU, e_col_Number.TIEN_THUC_THU);
+            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.SO_PHIEU, e_col_Number.SO_PHIEU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NGAY_THU, e_col_Number.NGAY_THU);
+            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_LOAI_PHIEU_THU, e_col_Number.TEN_LOAI_PHIEU_THU);
+            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_THUC_THU, e_col_Number.TIEN_THUC_THU);
+            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_GIAM_TRU, e_col_Number.TIEN_GIAM_TRU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.MA_HOC_SINH, e_col_Number.MA_HOC_SINH);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NOI_DUNG, e_col_Number.NOI_DUNG);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_CON_PHAI_THU, e_col_Number.TIEN_CON_PHAI_THU);
-            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_GIAM_TRU, e_col_Number.TIEN_GIAM_TRU);
+            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_NGUOI_THU, e_col_Number.TEN_NGUOI_THU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_PHAI_THU, e_col_Number.TIEN_PHAI_THU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_HS, e_col_Number.HO_TEN_HS);
 

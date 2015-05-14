@@ -83,7 +83,6 @@
             // 
             // ribbon
             // 
-            this.ribbon.ApplicationIcon = global::BKI_QLTTQuocAnh.Properties.Resources.Logo_luyen_thi_V4_0;
             this.ribbon.AutoSizeItems = true;
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Font = new System.Drawing.Font("Tahoma", 8.25F);
@@ -545,7 +544,7 @@
             this.Name = "f388_main";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "PHẦN MỀM QUẢN LÝ TÀI CHÍNH TRUNG TÂM QUỐC ANH";
+            this.Text = "PHẦN MỀM QUẢN LÝ TÀI CHÍNH TRUNG TÂM ANH THẦY BETA";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
