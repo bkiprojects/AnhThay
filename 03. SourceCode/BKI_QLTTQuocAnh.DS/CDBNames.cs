@@ -684,5 +684,15 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string SO_TIEN_L3 = "SO_TIEN_L3";
     }
 
+    public class V_RPT_F410_BAO_CAO_TAI_CHINH_THEO_LOP
+    {
+        public const string ID_LOP_MON = "ID";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string TEN_LOP_MON = "TEN_LOP_MON";
+        public const string TIEN_PHAI_THU = "TIEN_PHAI_THU";
+        public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
+        public const string TIEN_THUC_THU = "TIEN_THUC_THU";
+        public const string CON_PHAI_THU = "CON_PHAI_THU";
+    }
 
 }

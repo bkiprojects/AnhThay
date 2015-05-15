@@ -278,6 +278,7 @@
             this.m_cmd_tai_chinh_hs.Name = "m_cmd_tai_chinh_hs";
             this.m_cmd_tai_chinh_hs.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_tai_chinh_hs.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // m_cmd_tai_chinh_hs_lm
             // 
@@ -334,6 +335,7 @@
             this.m_cmd_thuc_thu_nv.Name = "m_cmd_thuc_thu_nv";
             this.m_cmd_thuc_thu_nv.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_thuc_thu_nv.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // m_cmd_ds_phieu
             // 
@@ -499,7 +501,6 @@
             this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_thuc_thu_nv);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "Báo cáo tổng";
-            this.ribbonPageGroup11.Visible = false;
             // 
             // ribbonPageGroup7
             // 

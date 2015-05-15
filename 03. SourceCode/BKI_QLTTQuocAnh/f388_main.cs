@@ -410,7 +410,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f410_bao_cao_tai_chinh_theo_lop_mon v_frm = new f410_bao_cao_tai_chinh_theo_lop_mon();
+                F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay v_frm = new F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay();
                 if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;
