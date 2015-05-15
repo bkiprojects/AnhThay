@@ -227,10 +227,10 @@ namespace BKI_QLTTQuocAnh
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 115);
+            this.m_fg.Location = new System.Drawing.Point(0, 87);
             this.m_fg.Name = "m_fg";
             this.m_fg.Rows.Fixed = 3;
-            this.m_fg.Size = new System.Drawing.Size(874, 258);
+            this.m_fg.Size = new System.Drawing.Size(874, 286);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -243,22 +243,20 @@ namespace BKI_QLTTQuocAnh
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 115);
+            this.panel1.Size = new System.Drawing.Size(874, 87);
             this.panel1.TabIndex = 21;
             // 
             // m_sle_lop
             // 
             this.m_sle_lop.EditValue = "";
-            this.m_sle_lop.Location = new System.Drawing.Point(115, 72);
+            this.m_sle_lop.Location = new System.Drawing.Point(59, 53);
             this.m_sle_lop.Name = "m_sle_lop";
-            this.m_sle_lop.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_sle_lop.Properties.Appearance.Options.UseFont = true;
             this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_sle_lop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_sle_lop.Properties.NullText = "Chọn lớp";
             this.m_sle_lop.Properties.View = this.gridView1;
-            this.m_sle_lop.Size = new System.Drawing.Size(228, 30);
+            this.m_sle_lop.Size = new System.Drawing.Size(228, 20);
             this.m_sle_lop.TabIndex = 55;
             // 
             // gridView1
@@ -271,10 +269,10 @@ namespace BKI_QLTTQuocAnh
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(29, 75);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label1.Location = new System.Drawing.Point(28, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 24);
+            this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 54;
             this.label1.Text = "Lớp";
             // 
@@ -286,7 +284,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(368, 71);
+            this.m_cmd_search.Location = new System.Drawing.Point(309, 48);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 12;
@@ -322,7 +320,7 @@ namespace BKI_QLTTQuocAnh
             // m_lbl_header
             // 
             this.m_lbl_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
@@ -399,8 +397,8 @@ namespace BKI_QLTTQuocAnh
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163))); this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163))); this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163))); this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163))); this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
