@@ -59,7 +59,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
 
 
-    ///Thuc thu
+    ///Giam tru
     public class ISetFormLoadGiamTru : ISetFormLoad {
         public ISetFormLoadGiamTru(F350_lap_phieu_thu ip_f350) {
             set_form_load(ip_f350);
@@ -69,11 +69,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             ip_f350.m_lbl_header_left.Text = ip_f350.Text;
             ip_f350.m_lbl_so_phieu_thu.Visible = false;
             ip_f350.m_sle_so_phieu_thu.Visible = false;
+
+            ip_f350.m_lbl_lan_thu.Visible = false;
+            ip_f350.m_txt_lan_thu.Visible = false;
         }
     }
 
 
-    ///Giam tru
+    ///Thuc thu
     public class ISetFormLoadThucThu : ISetFormLoad {
         public ISetFormLoadThucThu(F350_lap_phieu_thu ip_f350) {
             set_form_load(ip_f350);
@@ -81,6 +84,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         public void set_form_load(F350_lap_phieu_thu ip_f350) {
             ip_f350.Text = "LẬP PHIẾU THỰC THU";
             ip_f350.m_lbl_header_left.Text = ip_f350.Text;
+
+            ip_f350.m_txt_lan_thu.Enabled = false;
         }
     }
 
