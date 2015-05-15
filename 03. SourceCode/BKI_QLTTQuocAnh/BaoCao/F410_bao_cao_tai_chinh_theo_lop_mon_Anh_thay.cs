@@ -589,7 +589,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                DS_V_RPT_F410_BAO_CAO_TAI_CHINH_THEO_LOP v_ds = new DS_V_RPT_F410_BAO_CAO_TAI_CHINH_THEO_LOP();
+                
                 US_V_RPT_F410_BAO_CAO_TAI_CHINH_THEO_LOP v_us = new US_V_RPT_F410_BAO_CAO_TAI_CHINH_THEO_LOP();
 
                 if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;

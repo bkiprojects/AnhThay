@@ -580,7 +580,7 @@ namespace BKI_QLTTQuocAnh
             //m_us.FillDataset(v_ds);
             m_us.FillDataset_by_condition(
                      v_ds
-                //, m_us_bc_tinh_hinh_tc.dcID
+                     , -1
                      , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
                      , m_dat_tu_ngay.Value.Date
                      , m_dat_den_ngay.Value.Date

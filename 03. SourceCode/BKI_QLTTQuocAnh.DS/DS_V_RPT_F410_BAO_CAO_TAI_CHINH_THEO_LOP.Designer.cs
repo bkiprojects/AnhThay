@@ -482,10 +482,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID.Unique = true;
                 this.columnMA_LOP_MON.MaxLength = 15;
                 this.columnTEN_LOP_MON.MaxLength = 250;
-                this.columnTIEN_PHAI_THU.ReadOnly = true;
-                this.columnTIEN_GIAM_TRU.ReadOnly = true;
-                this.columnTIEN_THUC_THU.ReadOnly = true;
-                this.columnCON_PHAI_THU.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
