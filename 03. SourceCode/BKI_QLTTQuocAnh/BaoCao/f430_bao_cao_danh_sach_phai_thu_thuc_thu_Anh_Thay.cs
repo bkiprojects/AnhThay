@@ -638,6 +638,15 @@ namespace BKI_QLTTQuocAnh
             if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
             US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
             grid2us_object(v_us, m_fg.Row);
+
+            if (!check_ban_giao_is_da_thu_or_admin(v_us))
+            {
+                BaseMessages.MsgBox_Infor("Phiếu này đã bàn giao, không được quyền xóa!");
+                return;
+            }
+
+
+
             try
             {
                 v_us.BeginTransaction();
@@ -652,6 +661,20 @@ namespace BKI_QLTTQuocAnh
                     new CDBClientDBExceptionInterpret());
                 v_objErrHandler.showErrorMessage();
             }
+        }
+
+        private bool check_ban_giao_is_da_thu_or_admin(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU ip_us_rpt)
+        {
+            if (US_V_HT_NGUOI_SU_DUNG.isInAdminGroup(CAppContext_201.getCurrentUserID()))
+            {
+                return true;
+            }
+            US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(ip_us_rpt.dcID);
+            if (v_us_gd_pt.dcID_TRANG_THAI == CONST_ID_TRANG_THAI_BAN_GIAO.BAN_GIAO_THU_QUY)
+            {
+                return false;
+            }
+            return true;
         }
 
         private void view_v_rpt_bao_cao_danh_sach_phieu_thu()

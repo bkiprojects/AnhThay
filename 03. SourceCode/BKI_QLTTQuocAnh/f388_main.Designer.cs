@@ -431,7 +431,6 @@
             this.ribbonPageGroup3});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "DANH MỤC";
-            this.ribbonPage2.Visible = false;
             // 
             // ribbonPageGroup3
             // 
@@ -464,7 +463,6 @@
             this.ribbonPageGroup5.ItemLinks.Add(this.m_cmd_dm_lop_mon);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Lớp môn";
-            this.ribbonPageGroup5.Visible = false;
             // 
             // ribbonPageGroup6
             // 
