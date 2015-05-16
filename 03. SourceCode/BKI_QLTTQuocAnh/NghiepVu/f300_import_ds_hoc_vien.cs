@@ -797,16 +797,17 @@ namespace BKI_QLTTQuocAnh {
                 US_DM_HOC_SINH v_us_hv = new US_DM_HOC_SINH();
                 US_GD_HOC v_us_gd_hoc = new US_GD_HOC();
                 //v_us_hv_gd_hoc.UseTransOfUSObject( //use transaction cua thang hoc_sinh
+                DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
+                US_V_GD_HOC v_us = new US_V_GD_HOC();
                 v_us_hv.BeginTransaction();
                 for(int i_grid_row = m_fg.Rows.Fixed; i_grid_row < m_fg.Rows.Count; i_grid_row++) {
                     //1.0 du lieu trung thi ko add nua
-                    DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
-                    US_V_GD_HOC v_us = new US_V_GD_HOC();
-                    v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
-                    string v_ma_hv = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
-                    decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
-                    if (!is_check_exist(v_id_lop, v_ma_hv, v_ds)) continue;
-                    else if (!BaseMessages.MsgBox_Confirm("Bạn có muốn lưu dữ liệu lại hay không " + i_grid_row)) continue;
+                    
+                    //v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
+                    //string v_ma_hv = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
+                    //decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+                    //if (is_check_exist(v_id_lop, v_ma_hv, v_ds)) continue;
+                    
                     //1.1 day du lieu vao hv
                     grid2us_object(m_us, i_grid_row);
                     excel_2_us_dm_hoc_vien(m_us, v_us_hv);
@@ -816,12 +817,12 @@ namespace BKI_QLTTQuocAnh {
                     v_us_hv.Insert();
                     //v_us_hv.Insert();
                     //2.1 su dung transaction cua hv
-                    v_us_gd_hoc.UseTransOfUSObject(v_us_hv);
-                    //2.2 day du lieu vao us_gd_hoc 
                     v_us_gd_hoc.dcID_HOC_SINH = v_us_hv.dcID;
                     v_us_gd_hoc.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
                     v_us_gd_hoc.strTRANG_THAI_YN = "Y";
                     v_us_gd_hoc.datNGAY_BAT_DAU = DateTime.Now.Date;
+                    v_us_gd_hoc.UseTransOfUSObject(v_us_hv);
+                    //2.2 day du lieu vao us_gd_hoc 
                     //2.3 insert
                     v_us_gd_hoc.Insert();
                     //3.1 clear du lieu de insert moi

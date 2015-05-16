@@ -246,6 +246,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
 
         private void load_lan_thu_phieu_thu(decimal ip_dc_id_hoc_sinh, decimal ip_dc_id_lop) {
+            
+            
             decimal v_id_gd_hoc = find_id_gd_hoc(ip_dc_id_lop, ip_dc_id_hoc_sinh);
             string filter = "id_gd_hoc = " + v_id_gd_hoc + " and id_loai_phieu_thu = " + CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU;
 
