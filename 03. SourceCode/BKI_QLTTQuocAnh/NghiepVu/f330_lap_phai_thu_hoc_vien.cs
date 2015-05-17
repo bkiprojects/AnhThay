@@ -148,6 +148,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             //load_data_2_grid();
         }
         private void goi_y_so_tien_textbox() {
+            m_txt_thanh_tien.Clear();
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds, "where trang_thai_lop_mon = " + CONST_TRANG_THAI_LOP_MON.DANG_HOAT_DONG);
+            if(m_cbo_lop_mon.SelectedIndex == 0) {
+                return;
+            }
+            DataRow v_dr = v_ds.DM_LOP_MON.FindByID(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
+            m_txt_thanh_tien.Text = String.Format("{0:#,##0}", v_dr["DON_GIA_BUOI_HOC"]);
 
         }
         private decimal is_null_text_box(TextBox ip_txt) {
@@ -157,7 +166,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             else return CIPConvert.ToDecimal(ip_txt.Text.Trim());
         }
         private void get_thanh_tien() {
-            m_txt_thanh_tien.Text = string.Format("{0:#,##0}", is_null_text_box(m_txt_don_gia) * is_null_text_box(m_txt_so_buoi));
+            m_txt_thanh_tien.Text = string.Format("{0:#,##0}", m_txt_thanh_tien.Text.Trim());
         }
         private bool check_validate_data() {
             if(m_cbo_lop_mon.SelectedIndex == 0) {
@@ -232,8 +241,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_cmd_tu_dong.Click += m_cmd_tu_dong_Click;
             this.Load += f330_lap_phai_thu_hoc_vien_Load;
             m_cmd_ds_phieu_phai_thu.Click += m_cmd_ds_phieu_phai_thu_Click;
-            m_txt_don_gia.TextChanged += m_txt_don_gia_TextChanged;
-            m_txt_so_buoi.TextChanged += m_txt_so_buoi_TextChanged;
             m_cmd_insert.Click += m_cmd_insert_Click;
             m_cmd_xoa_hang.Click += m_cmd_xoa_hang_Click;
             this.KeyDown += f330_lap_phai_thu_hoc_vien_KeyDown;
@@ -281,26 +288,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             }
         }
 
-        void m_txt_so_buoi_TextChanged(object sender, EventArgs e) {
-            try {
-                get_thanh_tien();
 
-            }
-            catch (Exception v_e) {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
-        void m_txt_don_gia_TextChanged(object sender, EventArgs e) {
-            try {
-                //m_txt_don_gia.Text = string.Format("{0:#,##0}", is_null_text_box(m_txt_don_gia));
-                get_thanh_tien();
-
-            }
-            catch (Exception v_e) {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
 
         private void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e) {
             try {

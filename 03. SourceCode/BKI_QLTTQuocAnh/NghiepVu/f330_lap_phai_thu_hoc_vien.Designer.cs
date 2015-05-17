@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f330_lap_phai_thu_hoc_vien));
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.ImageList = new System.Windows.Forms.ImageList();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_ds_phieu_phai_thu = new SIS.Controls.Button.SiSButton();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
@@ -41,10 +42,6 @@
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_txt_don_gia = new System.Windows.Forms.TextBox();
-            this.m_lbl_ma_so_hoc_sinh = new System.Windows.Forms.Label();
-            this.m_txt_so_buoi = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_cmd_xoa_hang = new SIS.Controls.Button.SiSButton();
             this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
@@ -61,7 +58,6 @@
             this.m_lbl_nhan_vien_thu = new System.Windows.Forms.Label();
             this.m_cmd_tu_dong = new SIS.Controls.Button.SiSButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.m_txt_thanh_tien = new System.Windows.Forms.TextBox();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
@@ -231,42 +227,8 @@
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(912, 44);
             this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "LẬP PHẢI THU TỰ ĐỘNG THEO LỚP";
+            this.m_lbl_header.Text = "LẬP HỌC PHÍ TỰ ĐỘNG THEO LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // m_txt_don_gia
-            // 
-            this.m_txt_don_gia.Location = new System.Drawing.Point(118, 112);
-            this.m_txt_don_gia.Name = "m_txt_don_gia";
-            this.m_txt_don_gia.Size = new System.Drawing.Size(153, 20);
-            this.m_txt_don_gia.TabIndex = 13;
-            this.m_txt_don_gia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // m_lbl_ma_so_hoc_sinh
-            // 
-            this.m_lbl_ma_so_hoc_sinh.AutoSize = true;
-            this.m_lbl_ma_so_hoc_sinh.Location = new System.Drawing.Point(9, 115);
-            this.m_lbl_ma_so_hoc_sinh.Name = "m_lbl_ma_so_hoc_sinh";
-            this.m_lbl_ma_so_hoc_sinh.Size = new System.Drawing.Size(69, 13);
-            this.m_lbl_ma_so_hoc_sinh.TabIndex = 12;
-            this.m_lbl_ma_so_hoc_sinh.Text = "Đơn giá/buổi";
-            // 
-            // m_txt_so_buoi
-            // 
-            this.m_txt_so_buoi.Location = new System.Drawing.Point(118, 143);
-            this.m_txt_so_buoi.Name = "m_txt_so_buoi";
-            this.m_txt_so_buoi.Size = new System.Drawing.Size(153, 20);
-            this.m_txt_so_buoi.TabIndex = 16;
-            this.m_txt_so_buoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Số buổi";
             // 
             // panel1
             // 
@@ -285,17 +247,12 @@
             this.panel1.Controls.Add(this.m_lbl_nhan_vien_thu);
             this.panel1.Controls.Add(this.m_cmd_tu_dong);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.m_txt_thanh_tien);
-            this.panel1.Controls.Add(this.m_txt_so_buoi);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.m_txt_don_gia);
-            this.panel1.Controls.Add(this.m_lbl_ma_so_hoc_sinh);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(912, 222);
+            this.panel1.Size = new System.Drawing.Size(912, 191);
             this.panel1.TabIndex = 0;
             // 
             // m_cmd_xoa_hang
@@ -306,7 +263,7 @@
             this.m_cmd_xoa_hang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_xoa_hang.ImageIndex = 4;
             this.m_cmd_xoa_hang.ImageList = this.ImageList;
-            this.m_cmd_xoa_hang.Location = new System.Drawing.Point(4, 190);
+            this.m_cmd_xoa_hang.Location = new System.Drawing.Point(11, 158);
             this.m_cmd_xoa_hang.Name = "m_cmd_xoa_hang";
             this.m_cmd_xoa_hang.Size = new System.Drawing.Size(76, 30);
             this.m_cmd_xoa_hang.TabIndex = 21;
@@ -428,7 +385,7 @@
             this.m_cmd_tu_dong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_tu_dong.ImageIndex = 3;
             this.m_cmd_tu_dong.ImageList = this.ImageList;
-            this.m_cmd_tu_dong.Location = new System.Drawing.Point(331, 164);
+            this.m_cmd_tu_dong.Location = new System.Drawing.Point(331, 121);
             this.m_cmd_tu_dong.Name = "m_cmd_tu_dong";
             this.m_cmd_tu_dong.Size = new System.Drawing.Size(139, 28);
             this.m_cmd_tu_dong.TabIndex = 20;
@@ -437,37 +394,27 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(277, 172);
+            this.label8.Location = new System.Drawing.Point(277, 129);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 13);
             this.label8.TabIndex = 19;
             this.label8.Text = "(VNĐ)";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(280, 115);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "(VNĐ)";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 172);
+            this.label6.Location = new System.Drawing.Point(9, 129);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.Size = new System.Drawing.Size(51, 13);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Thành tiền";
+            this.label6.Text = "HỌC PHÍ";
             // 
             // m_txt_thanh_tien
             // 
             this.m_txt_thanh_tien.BackColor = System.Drawing.SystemColors.Info;
             this.m_txt_thanh_tien.ForeColor = System.Drawing.Color.Maroon;
-            this.m_txt_thanh_tien.Location = new System.Drawing.Point(118, 169);
+            this.m_txt_thanh_tien.Location = new System.Drawing.Point(118, 126);
             this.m_txt_thanh_tien.Name = "m_txt_thanh_tien";
-            this.m_txt_thanh_tien.ReadOnly = true;
             this.m_txt_thanh_tien.Size = new System.Drawing.Size(153, 20);
             this.m_txt_thanh_tien.TabIndex = 18;
             this.m_txt_thanh_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -476,9 +423,9 @@
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 266);
+            this.m_fg.Location = new System.Drawing.Point(0, 235);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(912, 175);
+            this.m_fg.Size = new System.Drawing.Size(912, 206);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 21;
             // 
@@ -496,7 +443,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_lbl_tu_ngay);
             this.Name = "f330_lap_phai_thu_hoc_vien";
-            this.Text = "F330 - Lập phải thu tự động theo lớp";
+            this.Text = "F330 - Lập học phí tự động theo lớp";
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -518,14 +465,9 @@
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.Label m_lbl_header;
-        private System.Windows.Forms.TextBox m_txt_don_gia;
-        private System.Windows.Forms.Label m_lbl_ma_so_hoc_sinh;
-        private System.Windows.Forms.TextBox m_txt_so_buoi;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox m_txt_thanh_tien;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         internal SIS.Controls.Button.SiSButton m_cmd_tu_dong;
         private System.Windows.Forms.ComboBox m_cbo_lop_mon;

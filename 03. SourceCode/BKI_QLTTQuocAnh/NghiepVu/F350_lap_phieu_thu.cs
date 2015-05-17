@@ -369,6 +369,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
         private void form_to_us_gd_phieu_thu(US_GD_PHIEU_THU ip_us) {
             try {
+                 
+                if(m_e_form_mode == DataEntryFormMode.UpdateDataState) {
+                    string filter = "id_lop_mon = " + CIPConvert.ToDecimal(m_sle_lop.EditValue) + " and id_hoc_sinh = " + m_sle_ma_hv.EditValue;
+                    ip_us.dcID = CIPConvert.ToDecimal(m_ds_phieu_thu.GD_PHIEU_THU.Select(filter)[0]["ID"]); 
+                }
+                
                 ip_us.strSO_PHIEU = m_txt_so_phieu.Text.Trim();
                 ip_us.datNGAY_THU = m_dat_ngay_thu.DateTime.Date;
                 ip_us.dcID_GD_HOC = find_id_gd_hoc(CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue));
@@ -420,6 +426,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                     break;
 
                     case DataEntryFormMode.UpdateDataState:
+                    v_us_gd_phieu_thu.Update();
                     break;
 
                     case DataEntryFormMode.ViewDataState:
