@@ -513,6 +513,7 @@ namespace BKI_QLTTQuocAnh
 
             this.ShowDialog();
         }
+
         public void display_ds_phieu_thuc_thu()
         {
             m_trang_thai_hien_thi = 1;
@@ -532,6 +533,7 @@ namespace BKI_QLTTQuocAnh
 
             this.ShowDialog();
         }
+
         public void display_ds_phieu_giam_tru()
         {
             m_trang_thai_hien_thi = 1;

@@ -585,23 +585,23 @@
         private System.Windows.Forms.Label m_lbl_noi_dung;
         private DevExpress.XtraEditors.SimpleButton m_cmd_them_hv;
         private System.Windows.Forms.Label m_lbl_den_ngay;
-        private DevExpress.XtraEditors.DateEdit m_dat_ngay_nhap;
-        private DevExpress.XtraEditors.LabelControl m_lbl_nv_nhap;
-        private DevExpress.XtraEditors.LabelControl m_lbl_nv_thu;
-        private DevExpress.XtraEditors.DateEdit m_dat_ngay_thu;
-        private DevExpress.XtraEditors.TextEdit m_txt_so_phieu;
         public System.Windows.Forms.Label m_lbl_check_so_phieu;
-        private DevExpress.XtraEditors.SearchLookUpEdit m_sle_ma_hv;
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
-        private DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraEditors.TextEdit m_txt_so_tien;
-        private DevExpress.XtraEditors.MemoEdit m_txt_noi_dung;
         public System.Windows.Forms.Label m_lbl_so_phieu_thu;
         public DevExpress.XtraEditors.SearchLookUpEdit m_sle_so_phieu_thu;
         public System.Windows.Forms.Label m_lbl_lan_thu;
         public DevExpress.XtraEditors.TextEdit m_txt_lan_thu;
+        public DevExpress.XtraEditors.LabelControl m_lbl_nv_nhap;
+        public DevExpress.XtraEditors.LabelControl m_lbl_nv_thu;
+        public DevExpress.XtraEditors.DateEdit m_dat_ngay_thu;
+        public DevExpress.XtraEditors.TextEdit m_txt_so_phieu;
+        public DevExpress.XtraEditors.SearchLookUpEdit m_sle_ma_hv;
+        public DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop;
+        public DevExpress.XtraEditors.TextEdit m_txt_so_tien;
+        public DevExpress.XtraEditors.MemoEdit m_txt_noi_dung;
+        public DevExpress.XtraEditors.DateEdit m_dat_ngay_nhap;
     }
 }
