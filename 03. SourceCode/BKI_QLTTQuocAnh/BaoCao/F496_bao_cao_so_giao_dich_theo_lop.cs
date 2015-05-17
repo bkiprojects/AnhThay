@@ -424,28 +424,28 @@ namespace BKI_QLTTQuocAnh
             m_fg[2, (int)e_col_Number.HO_TEN] = "Họ tên";
 
             m_fg.Cols[(int)e_col_Number.TIEN_PHAI_THU].AllowMerging = true;
-            m_fg[0, (int)e_col_Number.TIEN_PHAI_THU] = "Phải thu";
-            m_fg[1, (int)e_col_Number.TIEN_PHAI_THU] = "Phải thu";
+            m_fg[0, (int)e_col_Number.TIEN_PHAI_THU] = "Học phí (VNĐ)";
+            m_fg[1, (int)e_col_Number.TIEN_PHAI_THU] = "Học phí (VNĐ)";
             m_fg[2, (int)e_col_Number.TIEN_PHAI_THU] = "(1)";
 
             m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].AllowMerging = true;
-            m_fg[0, (int)e_col_Number.TIEN_GIAM_TRU] = "Giảm trừ";
-            m_fg[1, (int)e_col_Number.TIEN_GIAM_TRU] = "Giảm trừ";
+            m_fg[0, (int)e_col_Number.TIEN_GIAM_TRU] = "Giảm trừ (VNĐ)";
+            m_fg[1, (int)e_col_Number.TIEN_GIAM_TRU] = "Giảm trừ (VNĐ)";
             m_fg[2, (int)e_col_Number.TIEN_GIAM_TRU] = "(2)";
 
             m_fg.Cols[(int)e_col_Number.CAN_PHAI_THU].AllowMerging = true;
-            m_fg[0, (int)e_col_Number.CAN_PHAI_THU] = "Cần phải thu";
-            m_fg[1, (int)e_col_Number.CAN_PHAI_THU] = "Cần phải thu";
+            m_fg[0, (int)e_col_Number.CAN_PHAI_THU] = "Cần phải thu (VNĐ)";
+            m_fg[1, (int)e_col_Number.CAN_PHAI_THU] = "Cần phải thu (VNĐ)";
             m_fg[2, (int)e_col_Number.CAN_PHAI_THU] = "(3)=(1)-(2)";
 
             m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].AllowMerging = true;
-            m_fg[0, (int)e_col_Number.TIEN_THUC_THU] = "Thực thu";
-            m_fg[1, (int)e_col_Number.TIEN_THUC_THU] = "Thực thu";
+            m_fg[0, (int)e_col_Number.TIEN_THUC_THU] = "Thực thu (VNĐ)";
+            m_fg[1, (int)e_col_Number.TIEN_THUC_THU] = "Thực thu (VNĐ)";
             m_fg[2, (int)e_col_Number.TIEN_THUC_THU] = "(4)=(6)+(7)+(8)";
 
             m_fg.Cols[(int)e_col_Number.CHENH_LECH].AllowMerging = true;
-            m_fg[0, (int)e_col_Number.CHENH_LECH] = "Chênh lệch";
-            m_fg[1, (int)e_col_Number.CHENH_LECH] = "Chênh lệch";
+            m_fg[0, (int)e_col_Number.CHENH_LECH] = "Chênh lệch (VNĐ)";
+            m_fg[1, (int)e_col_Number.CHENH_LECH] = "Chênh lệch (VNĐ)";
             m_fg[2, (int)e_col_Number.CHENH_LECH] = "(5)=(3)-(4)";
 
             m_fg.Rows[0].AllowMerging = true;
@@ -454,7 +454,7 @@ namespace BKI_QLTTQuocAnh
             m_fg.Cols[(int)e_col_Number.NGAY_THU_L1].AllowMerging = true;
             m_fg[1, (int)e_col_Number.NGAY_THU_L1] = "Ngày thu (L1)";
             m_fg[2, (int)e_col_Number.NGAY_THU_L1] = "Ngày thu (L1)";
-            m_fg[1, (int)e_col_Number.SO_TIEN_L1] = "Số tiền (L1)";
+            m_fg[1, (int)e_col_Number.SO_TIEN_L1] = "Số tiền (L1) (VNĐ)";
             m_fg[2, (int)e_col_Number.SO_TIEN_L1] = "(6)";
 
             m_fg[0, (int)e_col_Number.NGAY_THU_L2] = "Lần II";
@@ -462,7 +462,7 @@ namespace BKI_QLTTQuocAnh
             m_fg.Cols[(int)e_col_Number.NGAY_THU_L2].AllowMerging = true;
             m_fg[1, (int)e_col_Number.NGAY_THU_L2] = "Ngày thu (L2)";
             m_fg[2, (int)e_col_Number.NGAY_THU_L2] = "Ngày thu (L2)";
-            m_fg[1, (int)e_col_Number.SO_TIEN_L2] = "Số tiền (L2)";
+            m_fg[1, (int)e_col_Number.SO_TIEN_L2] = "Số tiền (L2) (VNĐ)";
             m_fg[2, (int)e_col_Number.SO_TIEN_L2] = "(7)";
 
             m_fg[0, (int)e_col_Number.NGAY_THU_L3] = "Lần III";
@@ -470,7 +470,7 @@ namespace BKI_QLTTQuocAnh
             m_fg.Cols[(int)e_col_Number.NGAY_THU_L3].AllowMerging = true;
             m_fg[1, (int)e_col_Number.NGAY_THU_L3] = "Ngày thu (L3)";
             m_fg[2, (int)e_col_Number.NGAY_THU_L3] = "Ngày thu (L3)";
-            m_fg[1, (int)e_col_Number.SO_TIEN_L3] = "Số tiền (L3)";
+            m_fg[1, (int)e_col_Number.SO_TIEN_L3] = "Số tiền (L3) (VNĐ)";
             m_fg[2, (int)e_col_Number.SO_TIEN_L3] = "(8)";
         }
         private void set_initial_form_load()
