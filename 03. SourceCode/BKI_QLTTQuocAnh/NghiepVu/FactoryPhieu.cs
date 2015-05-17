@@ -59,7 +59,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             set_form_load(ip_f350);
         }
         public void set_form_load(F350_lap_phieu_thu ip_f350) {
-            ip_f350.Text = "LẬP PHIẾU PHẢI THU";
+            ip_f350.Text = "LẬP HỌC PHÍ HỌC VIÊN";
             ip_f350.m_lbl_header_left.Text = ip_f350.Text;
 
             ip_f350.m_lbl_so_phieu_thu.Visible = false;
@@ -67,6 +67,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
             ip_f350.m_lbl_lan_thu.Visible = false;
             ip_f350.m_txt_lan_thu.Visible = false;
+            ip_f350.Name = "PHIEU_PHAI_THU";
+            ip_f350.m_txt_so_phieu.Visible = false;
+            ip_f350.m_lbl_so_phieu.Visible = false;
+            ip_f350.m_lbl_check_so_phieu.Visible = false;
         }
         public void set_form_load(F350_lap_phieu_thu ip_f350, US_V_GD_PHIEU_THU ip_us_v_pt)
         {
@@ -81,13 +85,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             set_form_load(ip_f350);
         }
         public void set_form_load(F350_lap_phieu_thu ip_f350) {
-            ip_f350.Text = "LẬP PHIẾU GIẢM TRỪ";
+            ip_f350.Text = "LẬP GIẢM TRỪ HỌC VIÊN";
             ip_f350.m_lbl_header_left.Text = ip_f350.Text;
             ip_f350.m_lbl_so_phieu_thu.Visible = false;
             ip_f350.m_sle_so_phieu_thu.Visible = false;
 
             ip_f350.m_lbl_lan_thu.Visible = false;
             ip_f350.m_txt_lan_thu.Visible = false;
+            ip_f350.Name = "PHIEU_GIAM_TRU";
+            ip_f350.m_txt_so_phieu.Visible = false;
+            ip_f350.m_lbl_so_phieu.Visible = false;
+            ip_f350.m_lbl_check_so_phieu.Visible = false;
         }
         public void set_form_load(F350_lap_phieu_thu ip_f350, US_V_GD_PHIEU_THU ip_us_v_pt)
         {
@@ -105,6 +113,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             ip_f350.m_lbl_header_left.Text = ip_f350.Text;
 
             ip_f350.m_txt_lan_thu.Enabled = false;
+            ip_f350.Name = "PHIEU_THUC_THU";
         }
         public void set_form_load(F350_lap_phieu_thu ip_f350, US_V_GD_PHIEU_THU ip_us_v_pt)
         {
@@ -149,6 +158,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             ip_f350.m_lbl_nv_thu.Text = ip_us_v_pt.strTEN_NGUOI_THU;
             ip_f350.m_lbl_nv_nhap.Text = ip_us_v_pt.strTEN_NGUOI_NHAP;
             ip_f350.m_dat_ngay_nhap.EditValue = DateTime.Now.Date;
+            ip_f350.Name = "SUA_PHIEU";
             
         }
         public void set_form_load(F350_lap_phieu_thu ip_f350)

@@ -63,6 +63,8 @@ namespace BKI_QLTTQuocAnh
                 m_cmd_nhom_nguoi_su_dung.Visibility = BarItemVisibility.Never;
                 m_cmd_nguoi_sd.Visibility = BarItemVisibility.Never;
                 ribbonPageGroup2.Visible = false;
+                m_cmd_tai_chinh_lm_hs.Visibility = BarItemVisibility.Always;
+                ribbonPageGroup11.Visible = true;
             }
             set_define_events();
         }
@@ -214,8 +216,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("GIAM_TRU");
-                if(IsExistFormText(v_frm)) {
+                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("PHIEU_GIAM_TRU");
+
+                if(IsExistFormName(v_frm)) {
                     return;
                 }
                 v_frm.MdiParent = this;
@@ -231,8 +234,8 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("THUC_THU");
-                if(IsExistFormText(v_frm)) {
+                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("PHIEU_THUC_THU");
+                if(IsExistFormName(v_frm)) {
                     return;
                 }
                 v_frm.MdiParent = this;
@@ -264,8 +267,8 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("PHAI_THU");
-                if(IsExistFormText(v_frm)) {
+                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("PHIEU_PHAI_THU");
+                if(IsExistFormName(v_frm)) {
                     return;
                 }
                 v_frm.MdiParent = this;

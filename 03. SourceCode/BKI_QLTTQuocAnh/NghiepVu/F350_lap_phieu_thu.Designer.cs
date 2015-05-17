@@ -265,7 +265,7 @@
             // 
             // m_txt_lan_thu
             // 
-            this.m_txt_lan_thu.EditValue = "";
+            this.m_txt_lan_thu.EditValue = "0";
             this.m_txt_lan_thu.Location = new System.Drawing.Point(423, 172);
             this.m_txt_lan_thu.Name = "m_txt_lan_thu";
             this.m_txt_lan_thu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
@@ -576,7 +576,6 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label m_lbl_ten_hs;
         private System.Windows.Forms.Label m_lbl_ngay_thu;
-        private System.Windows.Forms.Label m_lbl_so_phieu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label m_lbl_so_tien;
         private System.Windows.Forms.Label m_lbl_4;
@@ -603,5 +602,6 @@
         public DevExpress.XtraEditors.TextEdit m_txt_so_tien;
         public DevExpress.XtraEditors.MemoEdit m_txt_noi_dung;
         public DevExpress.XtraEditors.DateEdit m_dat_ngay_nhap;
+        public System.Windows.Forms.Label m_lbl_so_phieu;
     }
 }

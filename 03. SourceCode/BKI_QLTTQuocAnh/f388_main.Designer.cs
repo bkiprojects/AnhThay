@@ -236,7 +236,7 @@
             // 
             // m_cmd_lap_phai_thu_le
             // 
-            this.m_cmd_lap_phai_thu_le.Caption = "Lập phải thu lẻ";
+            this.m_cmd_lap_phai_thu_le.Caption = "Lập học phí lẻ";
             this.m_cmd_lap_phai_thu_le.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904625_416404;
             this.m_cmd_lap_phai_thu_le.Id = 12;
             this.m_cmd_lap_phai_thu_le.Name = "m_cmd_lap_phai_thu_le";
@@ -245,7 +245,7 @@
             // 
             // m_cmd_lap_phai_thu_tu_dong
             // 
-            this.m_cmd_lap_phai_thu_tu_dong.Caption = "Lập phải thu tự động";
+            this.m_cmd_lap_phai_thu_tu_dong.Caption = "Lập học phí theo lớp";
             this.m_cmd_lap_phai_thu_tu_dong.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904783_54524;
             this.m_cmd_lap_phai_thu_tu_dong.Id = 13;
             this.m_cmd_lap_phai_thu_tu_dong.Name = "m_cmd_lap_phai_thu_tu_dong";
@@ -254,7 +254,7 @@
             // 
             // m_cmd_lap_thuc_thu
             // 
-            this.m_cmd_lap_thuc_thu.Caption = "Lập thực thu lẻ";
+            this.m_cmd_lap_thuc_thu.Caption = "Lập thực thu";
             this.m_cmd_lap_thuc_thu.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904874_44824;
             this.m_cmd_lap_thuc_thu.Id = 14;
             this.m_cmd_lap_thuc_thu.Name = "m_cmd_lap_thuc_thu";
@@ -394,7 +394,7 @@
             // 
             // m_cmd_import_excel
             // 
-            this.m_cmd_import_excel.Caption = "Nhập Excel học viên";
+            this.m_cmd_import_excel.Caption = "Nhập Excel học viên theo lớp";
             this.m_cmd_import_excel.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources.Benjigarner_Softdimension_Excel;
             this.m_cmd_import_excel.Id = 36;
             this.m_cmd_import_excel.Name = "m_cmd_import_excel";
@@ -470,8 +470,8 @@
             this.ribbonPageGroup6.AllowTextClipping = false;
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_phai_thu_le);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_phai_thu_tu_dong);
-            this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_thuc_thu);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_giam_tru);
+            this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_thuc_thu);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_ban_giao_tien);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_ds_phieu);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
@@ -496,6 +496,7 @@
             // 
             this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_tai_chinh_hs);
             this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_tai_chinh_lm);
+            this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_tai_chinh_lm_hs);
             this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_thuc_thu_nv);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "Báo cáo tổng";
@@ -511,12 +512,12 @@
             // 
             // ribbonPageGroup8
             // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_tai_chinh_lm_hs);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_hien_nay);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_chua_nop_tien);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bc_diem_danh);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Theo lớp môn";
+            this.ribbonPageGroup8.Visible = false;
             // 
             // ribbonStatusBar
             // 
