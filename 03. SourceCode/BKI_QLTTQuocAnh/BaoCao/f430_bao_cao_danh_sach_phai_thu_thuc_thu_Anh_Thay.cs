@@ -175,7 +175,7 @@ namespace BKI_QLTTQuocAnh
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(945, 36);
-            this.m_pnl_out_place_dm.TabIndex = 19;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
             // 
@@ -189,7 +189,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.Location = new System.Drawing.Point(677, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_insert.TabIndex = 12;
+            this.m_cmd_insert.TabIndex = 3;
             this.m_cmd_insert.Text = "&Thêm";
             // 
             // m_cmd_update
@@ -204,7 +204,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_update.TabIndex = 13;
+            this.m_cmd_update.TabIndex = 1;
             this.m_cmd_update.Text = "&Sửa";
             // 
             // m_cmd_view
@@ -219,7 +219,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_view.Location = new System.Drawing.Point(765, 4);
             this.m_cmd_view.Name = "m_cmd_view";
             this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_view.TabIndex = 21;
+            this.m_cmd_view.TabIndex = 4;
             this.m_cmd_view.Text = "Xem";
             // 
             // m_cmd_delete
@@ -233,7 +233,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.Location = new System.Drawing.Point(92, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_delete.TabIndex = 14;
+            this.m_cmd_delete.TabIndex = 2;
             this.m_cmd_delete.Text = "&Xoá";
             // 
             // m_cmd_exit
@@ -248,7 +248,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.Location = new System.Drawing.Point(853, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.TabIndex = 0;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // m_fg
@@ -259,7 +259,7 @@ namespace BKI_QLTTQuocAnh
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(945, 230);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 20;
+            this.m_fg.TabIndex = 1;
             // 
             // panel2
             // 
@@ -282,7 +282,7 @@ namespace BKI_QLTTQuocAnh
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(945, 197);
-            this.panel2.TabIndex = 21;
+            this.panel2.TabIndex = 0;
             // 
             // m_cbo_lop_mon
             // 
@@ -290,7 +290,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cbo_lop_mon.Location = new System.Drawing.Point(93, 136);
             this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(222, 21);
-            this.m_cbo_lop_mon.TabIndex = 14;
+            this.m_cbo_lop_mon.TabIndex = 10;
             // 
             // m_lbl_lop_mon
             // 
@@ -298,7 +298,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_lop_mon.Location = new System.Drawing.Point(36, 139);
             this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
             this.m_lbl_lop_mon.Size = new System.Drawing.Size(48, 13);
-            this.m_lbl_lop_mon.TabIndex = 13;
+            this.m_lbl_lop_mon.TabIndex = 9;
             this.m_lbl_lop_mon.Text = "Lớp môn";
             // 
             // m_cbo_loai_phieu
@@ -325,7 +325,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_goi_y.Location = new System.Drawing.Point(735, 175);
             this.m_lbl_goi_y.Name = "m_lbl_goi_y";
             this.m_lbl_goi_y.Size = new System.Drawing.Size(198, 13);
-            this.m_lbl_goi_y.TabIndex = 12;
+            this.m_lbl_goi_y.TabIndex = 14;
             this.m_lbl_goi_y.Text = "Nhấp đúp chuột vào hàng để sửa phiếu";
             this.m_lbl_goi_y.Visible = false;
             // 
@@ -340,7 +340,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_search.Location = new System.Drawing.Point(326, 160);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 11;
+            this.m_cmd_search.TabIndex = 13;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
             // m_lbl_search
@@ -349,7 +349,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_search.Location = new System.Drawing.Point(17, 168);
             this.m_lbl_search.Name = "m_lbl_search";
             this.m_lbl_search.Size = new System.Drawing.Size(67, 13);
-            this.m_lbl_search.TabIndex = 9;
+            this.m_lbl_search.TabIndex = 11;
             this.m_lbl_search.Text = "Lọc theo HS";
             // 
             // m_txt_tim_kien
@@ -357,7 +357,7 @@ namespace BKI_QLTTQuocAnh
             this.m_txt_tim_kien.Location = new System.Drawing.Point(92, 165);
             this.m_txt_tim_kien.Name = "m_txt_tim_kien";
             this.m_txt_tim_kien.Size = new System.Drawing.Size(222, 20);
-            this.m_txt_tim_kien.TabIndex = 10;
+            this.m_txt_tim_kien.TabIndex = 12;
             // 
             // m_cbo_nhan_vien_thu
             // 
@@ -469,7 +469,7 @@ namespace BKI_QLTTQuocAnh
             //m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
             //m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
             m_cbo_lop_mon.SelectedValue = ip_dc_id_lop;
-            
+
             m_cbo_loai_phieu.SelectedValue = CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU;
             m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
             m_dat_den_ngay.Value = DateTime.Now.Date;
@@ -567,7 +567,7 @@ namespace BKI_QLTTQuocAnh
             this.KeyPreview = true;
         }
         private void set_initial_form_load()
-        {
+        {            
             m_obj_trans = get_trans_object(m_fg);
             load_data_2_grid();
         }
@@ -694,7 +694,7 @@ namespace BKI_QLTTQuocAnh
             US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
             F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("SUA_PHIEU", v_us_gd_pt);
             v_frm.ShowDialog();
-            
+
             //	F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE v_fDE = new F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE();
             //	v_fDE.display(m_us);
             load_data_2_grid();
@@ -792,6 +792,73 @@ namespace BKI_QLTTQuocAnh
             this.KeyDown += f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_KeyDown;
             m_cmd_search.Click += m_cmd_search_Click;
             m_fg.DoubleClick += m_fg_DoubleClick;
+            m_dat_tu_ngay.ValueChanged += m_dat_tu_ngay_ValueChanged;
+            m_dat_den_ngay.ValueChanged += m_dat_den_ngay_ValueChanged;
+            m_cbo_nhan_vien_thu.SelectedIndexChanged += m_cbo_nhan_vien_thu_SelectedIndexChanged;
+            m_cbo_loai_phieu.SelectedIndexChanged += m_cbo_loai_phieu_SelectedIndexChanged;
+            m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
+        }
+
+        
+        void m_dat_tu_ngay_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                m_dat_den_ngay.Focus();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_dat_den_ngay_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                m_cbo_nhan_vien_thu.Focus();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_cbo_nhan_vien_thu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                m_cbo_loai_phieu.Focus();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+
+        void m_cbo_loai_phieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                m_cbo_lop_mon.Focus();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                m_txt_tim_kien.Focus();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_fg_DoubleClick(object sender, EventArgs e)
@@ -799,21 +866,21 @@ namespace BKI_QLTTQuocAnh
             try
             {
                 US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(v_us, m_fg.Row);
+                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                grid2us_object(v_us, m_fg.Row);
 
-            if (!check_ban_giao_is_da_thu_or_admin(v_us))
-            {
-                XtraMessageBox.Show("Phiếu này đã bàn giao, không được quyền sửa!", "Lỗi người dùng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                if (!check_ban_giao_is_da_thu_or_admin(v_us))
+                {
+                    XtraMessageBox.Show("Phiếu này đã bàn giao, không được quyền sửa!", "Lỗi người dùng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
-            F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("SUA_PHIEU", v_us_gd_pt);
-            v_frm.ShowDialog();
-            //.display_for_edit(v_us_gd_pt);
-            load_data_2_grid();
+                US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
+                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("SUA_PHIEU", v_us_gd_pt);
+                v_frm.ShowDialog();
+                //.display_for_edit(v_us_gd_pt);
+                load_data_2_grid();
             }
             catch (Exception v_e)
             {
@@ -915,7 +982,7 @@ namespace BKI_QLTTQuocAnh
         }
 
 
-        
+
     }
 }
 
