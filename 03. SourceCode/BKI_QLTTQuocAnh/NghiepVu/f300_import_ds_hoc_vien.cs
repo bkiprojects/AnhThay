@@ -91,9 +91,8 @@ namespace BKI_QLTTQuocAnh {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f300_import_ds_hoc_vien));
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList = new System.Windows.Forms.ImageList();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -363,6 +362,7 @@ namespace BKI_QLTTQuocAnh {
             this.label9.Size = new System.Drawing.Size(97, 13);
             this.label9.TabIndex = 41;
             this.label9.Text = "Mã học viên đã có";
+            this.label9.Visible = false;
             // 
             // label7
             // 
@@ -381,6 +381,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_green.Name = "m_lbl_green";
             this.m_lbl_green.Size = new System.Drawing.Size(56, 23);
             this.m_lbl_green.TabIndex = 41;
+            this.m_lbl_green.Visible = false;
             // 
             // m_lbl_pink
             // 
@@ -733,27 +734,29 @@ namespace BKI_QLTTQuocAnh {
             }
 
             //Buoc 2
-            DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
-            US_V_GD_HOC v_us = new US_V_GD_HOC();
-            v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
+            //DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
+            //US_V_GD_HOC v_us = new US_V_GD_HOC();
+            //v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
 
-            for (int i_cur_row = m_fg.Rows.Fixed; i_cur_row < m_fg.Rows.Count -1; i_cur_row++)
-            {
-                //Kiem tra neu co trong gd_hoc roi thi to mau xanh, khong thi de nguyen
-                //Cai to mau xanh thi sao?
-                string v_ma_hv = m_fg.Rows[i_cur_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
-                decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+            //for (int i_cur_row = m_fg.Rows.Fixed; i_cur_row < m_fg.Rows.Count -1; i_cur_row++)
+            //{
+            //    //Kiem tra neu co trong gd_hoc roi thi to mau xanh, khong thi de nguyen
+            //    //Cai to mau xanh thi sao?
+            //    string v_ma_hv = m_fg.Rows[i_cur_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
+            //    decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
 
-                if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
-                {
-                    m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
-                }
-                else
-                {
-                    //to mau trang - khi kiem tra lai ma no dung thi phai chuyen mau                  
-                    m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
-                }
-            }          
+            //    if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
+            //    {
+            //        //m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
+            //        m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
+            //    }
+            //    else
+            //    {
+            //        //to mau trang - khi kiem tra lai ma no dung thi phai chuyen mau                  
+            //        //m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
+            //        m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
+            //    }
+            //}          
 
             BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
         }
@@ -778,8 +781,6 @@ namespace BKI_QLTTQuocAnh {
 
         void m_cmd_kiem_tra_du_lieu_Click(object sender, EventArgs e) {
             try {
-
-
                 kiem_tra_du_lieu(m_ds);
             }
             catch(Exception v_e) {
@@ -802,11 +803,11 @@ namespace BKI_QLTTQuocAnh {
                 v_us_hv.BeginTransaction();
                 for(int i_grid_row = m_fg.Rows.Fixed; i_grid_row < m_fg.Rows.Count; i_grid_row++) {
                     //1.0 du lieu trung thi ko add nua
-                    
-                    //v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
-                    //string v_ma_hv = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
-                    //decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
-                    //if (is_check_exist(v_id_lop, v_ma_hv, v_ds)) continue;
+
+                    v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
+                    string v_ma_hv = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
+                    decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+                    if (is_check_exist(v_id_lop, v_ma_hv, v_ds)) continue;
                     
                     //1.1 day du lieu vao hv
                     grid2us_object(m_us, i_grid_row);
