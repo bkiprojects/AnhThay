@@ -843,7 +843,7 @@ namespace BKI_QLTTQuocAnh {
 
         void m_llbl_mau_import_Click(object sender, EventArgs e) {
             try {
-                Process.Start("https://drive.google.com/file/d/0B5VALXmEILhMV0RBem4wSXRrWE0/view?usp=sharing");
+                Process.Start("https://docs.google.com/spreadsheets/d/19Dr46CH-Nvo_HmeKQJU0e5grd6T610tmmwlvggNqKIo/edit?usp=sharing");
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
