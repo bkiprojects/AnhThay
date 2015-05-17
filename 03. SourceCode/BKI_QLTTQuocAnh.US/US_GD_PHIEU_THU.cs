@@ -400,5 +400,12 @@ namespace BKI_QLTTQuocAnh.US
                 return true;
             }
         }
+
+        public void DeleteHocPhiTheoLop(decimal ip_dc_id_lop_mon) {
+            CStoredProc v_csp = new CStoredProc("Pr_delete_hoc_phi_theo_lop");
+            v_csp.addDecimalInputParam("@ip_dc_id_lop", ip_dc_id_lop_mon);
+
+            v_csp.ExecuteCommand(this);
+        }
     }
 }

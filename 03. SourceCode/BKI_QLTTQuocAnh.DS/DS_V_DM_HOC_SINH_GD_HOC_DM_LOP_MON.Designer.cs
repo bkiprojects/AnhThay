@@ -2151,7 +2151,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MONTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.AnhThayConnectionString1;
+            this._connection.ConnectionString = global::BKI_QLTTQuocAnh.DS.Properties.Settings.Default.AnhThayConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

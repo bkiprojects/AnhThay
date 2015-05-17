@@ -117,7 +117,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
                 US_V_HT_NGUOI_SU_DUNG v_us_ht_nsd = new US_V_HT_NGUOI_SU_DUNG(CAppContext_201.getCurrentUserID());
                 m_fg.Rows[v_i_cur_row][(int)e_col_Number.TEN_NGUOI_THU] = v_us_ht_nsd.strTEN;
-                m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_PHIEU] = "PPT" + m_cbo_lop_mon.SelectedValue.ToString() +"_" + m_fg.Rows[v_i_cur_row][(int)e_col_Number.MA_HOC_SINH];
+                //m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_PHIEU] = "PPT" + m_cbo_lop_mon.SelectedValue.ToString() +"_" + m_fg.Rows[v_i_cur_row][(int)e_col_Number.MA_HOC_SINH];
                 m_fg.Rows[v_i_cur_row][(int)e_col_Number.TIEN_PHAI_THU] = m_txt_thanh_tien.Text;
             }
         }
@@ -209,6 +209,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             v_us_v_gd_hoc.FillDataset(v_ds_v_gd_hoc, filter);
 
             v_us_gd_phieu_thu.BeginTransaction();
+            //Delete het phieu phai thu cua lop nay
+            v_us_gd_phieu_thu.DeleteHocPhiTheoLop(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
             for (int v_i_cur_row = m_fg.Rows.Fixed; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++) {
                 US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us_rpt = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
                 if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
@@ -216,7 +218,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 grid2us_object(v_us_rpt, v_i_cur_row);
                 
                 //form_2_us_gd_phieu_thu
-                v_us_gd_phieu_thu.strSO_PHIEU = m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_PHIEU].ToString().Trim();
+                //v_us_gd_phieu_thu.strSO_PHIEU = m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_PHIEU].ToString().Trim();
                 //v_us_gd_phieu_thu.dcID_HOC_SINH = v_us_rpt.dcID_HOC_SINH;
                 v_us_gd_phieu_thu.dcID_NGUOI_THU = CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue);
                 v_us_gd_phieu_thu.dcID_NGUOI_NHAP = CIPConvert.ToDecimal(m_cbo_nhan_vien_nhap.SelectedValue);
@@ -244,7 +246,30 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_cmd_insert.Click += m_cmd_insert_Click;
             m_cmd_xoa_hang.Click += m_cmd_xoa_hang_Click;
             this.KeyDown += f330_lap_phai_thu_hoc_vien_KeyDown;
+            m_txt_thanh_tien.TextChanged += m_txt_thanh_tien_TextChanged;
+            m_cbo_lop_mon.SelectedValueChanged += m_cbo_lop_mon_SelectedValueChanged;
         }
+
+        void m_cbo_lop_mon_SelectedValueChanged(object sender, EventArgs e) {
+            try {
+
+            }
+            catch(Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            } 
+        }
+
+        void m_txt_thanh_tien_TextChanged(object sender, EventArgs e) {
+            try {
+                //m_txt_thanh_tien.Text = string.Format("{0:#,##0}", double.Parse(m_txt_thanh_tien.Text));
+            }
+            catch(Exception v_e) {
+                MessageBox.Show("Bạn nhập sai định dạng số");
+                //CSystemLog_301.ExceptionHandle(v_e);
+            } 
+        }
+
+      
 
         void f330_lap_phai_thu_hoc_vien_KeyDown(object sender, KeyEventArgs e)
         {
