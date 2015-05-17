@@ -475,7 +475,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f230_danh_muc_hs_theo_lop v_frm = new f230_danh_muc_hs_theo_lop();
+                f250_dm_hs_theo_lop v_frm = new f250_dm_hs_theo_lop();
 
                 if (IsExistFormName(v_frm)) return;
 

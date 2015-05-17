@@ -39,6 +39,42 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
         public const string FACEBOOK = "FACEBOOK";
     }
+    public class V_DM_HOC_SINH_GD_HOC_DM_LOP_MON {
+        public const string ID = "ID";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
+        public const string ID_LOAI_DOI_TUONG = "ID_LOAI_DOI_TUONG";
+        public const string TEN_LOAI_DOI_TUONG = "TEN_LOAI_DOI_TUONG";
+        public const string HO = "HO";
+        public const string TEN = "TEN";
+        public const string HO_TEN = "HO_TEN";
+        public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
+        public const string EMAIL_HS = "EMAIL_HS";
+        public const string EMAIL_PH = "EMAIL_PH";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT_HS = "SDT_HS";
+        public const string SDT_PH = "SDT_PH";
+        public const string HO_TEN_PH = "HO_TEN_PH";
+        public const string SDT_CO_DINH = "SDT_CO_DINH";
+        public const string FACEBOOK = "FACEBOOK";
+        public const string SKYPE = "SKYPE";
+        public const string NGAY_SINH = "NGAY_SINH";
+        public const string DELETE_YN = "DELETE_YN";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string TEN_LOP_MON = "TEN_LOP_MON";
+        public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
+        public const string TRANG_THAI_LOP_MON = "TRANG_THAI_LOP_MON";
+        public const string TONG_SO_BUOI_HOC = "TONG_SO_BUOI_HOC";
+        public const string THOI_GIAN_HOC_FROM_DATE = "THOI_GIAN_HOC_FROM_DATE";
+        public const string THOI_GIAN_HOC_TO_DATE = "THOI_GIAN_HOC_TO_DATE";
+        public const string ID_TRO_GIANG = "ID_TRO_GIANG";
+        public const string GHI_CHU = "GHI_CHU";
+        public const string TONG_TIEN_KHOA_HOC = "TONG_TIEN_KHOA_HOC";
+        public const string ID_GD_HOC = "ID_GD_HOC";
+        public const string TRANG_THAI_YN = "TRANG_THAI_YN";
+        public const string NGAY_BAT_DAU = "NGAY_BAT_DAU";
+        public const string NGAY_KET_THUC = "NGAY_KET_THUC";
+    }
 
     public class V_RPT_F460_TINH_HINH_BO_LOP
     {
