@@ -156,16 +156,38 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             CGridUtils.MakeSoTT(0, m_fg);
             wrap_text_cell();
         }
+        private void load_data_2_cbo_nhan_vien() {
+            DS_V_HT_NGUOI_SU_DUNG v_ds = new DS_V_HT_NGUOI_SU_DUNG();
+            US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
+            v_us.FillDataset(v_ds);
+            DataRow v_dr = v_ds.V_HT_NGUOI_SU_DUNG.NewRow();
+            v_dr[V_HT_NGUOI_SU_DUNG.ID] = -1;
+            v_dr[V_HT_NGUOI_SU_DUNG.TEN_TRUY_CAP] = "All";
+            v_dr[V_HT_NGUOI_SU_DUNG.TEN] = "--Tất cả---";
+            v_dr[V_HT_NGUOI_SU_DUNG.MAT_KHAU] = 123;
+            v_dr[V_HT_NGUOI_SU_DUNG.NGAY_TAO] = "2015-01-20";
+            v_dr[V_HT_NGUOI_SU_DUNG.NGUOI_TAO] = "ADMIN";
+            v_dr[V_HT_NGUOI_SU_DUNG.TRANG_THAI] = "0";
+            v_dr[V_HT_NGUOI_SU_DUNG.BUILT_IN_YN] = "Y";
+            v_dr[V_HT_NGUOI_SU_DUNG.ID_USER_GROUP] = 3;
+            v_ds.V_HT_NGUOI_SU_DUNG.Rows.InsertAt(v_dr, 0);
+
+            m_cbo_nhan_vien_thu.DataSource = v_ds.V_HT_NGUOI_SU_DUNG;
+            m_cbo_nhan_vien_thu.DisplayMember = V_HT_NGUOI_SU_DUNG.TEN;
+            m_cbo_nhan_vien_thu.ValueMember = V_HT_NGUOI_SU_DUNG.ID;
+            m_cbo_nhan_vien_thu.SelectedIndex = 0;
+        }
         private void set_initial_form_load() {
             m_obj_trans = get_trans_object(m_fg);
-            CCommon.load_data_2_cbo_nhan_vien(CAppContext_201.getCurrentUserID(),m_cbo_nhan_vien_thu);
+            //CCommon.load_data_2_cbo_nhan_vien(CAppContext_201.getCurrentUserID(),m_cbo_nhan_vien_thu);
+            load_data_2_cbo_nhan_vien();
             load_data_2_grid();
         }
         private void cap_nhat_ban_giao() {
-            if (m_fg.Rows.Count == 1) {
+            if(m_fg.Rows.Count == 1) {
                 return;
             }
-            for (int v_i_cur_row = m_fg.Rows.Fixed+1; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++) {
+            for(int v_i_cur_row = m_fg.Rows.Fixed + 1; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++) {
                 US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us_v_rpt = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
                 grid2us_object(v_us_v_rpt, v_i_cur_row);
 
@@ -192,8 +214,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         void m_fg_DoubleClick(object sender, EventArgs e) {
             try {
                 US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                if(!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                if(!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
                 grid2us_object(v_us, m_fg.Row);
 
                 //if (!check_ban_giao_is_da_thu_or_admin(v_us)) {
@@ -207,19 +229,18 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 //v_frm.display(v_us, v_us_gd_pt.dcID_LOAI_PHIEU_THU, v_us_gd_pt.dcID_NGUOI_NHAP);
                 //load_data_2_grid();
             }
-            catch (Exception v_e) {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void f360_ban_giao_tien_KeyDown(object sender, KeyEventArgs e)
-        {
+        void f360_ban_giao_tien_KeyDown(object sender, KeyEventArgs e) {
             try {
-                if (e.KeyCode == Keys.Enter) {
+                if(e.KeyCode == Keys.Enter) {
                     load_data_2_grid();
                 }
             }
-            catch (Exception v_e) {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
@@ -228,20 +249,20 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             try {
                 cap_nhat_ban_giao();
             }
-            catch (Exception v_e) {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
-        } 
+        }
 
         void m_cmd_search_Click(object sender, EventArgs e) {
             try {
                 load_data_2_grid();
-                if (m_fg.Rows.Count > 1) {
+                if(m_fg.Rows.Count > 1) {
                     m_txt_tong_tien.Text = String.Format("{0:#,###0}", m_fg.Rows[m_fg.Rows.Fixed][(int)e_col_Number.TIEN_THUC_THU]);
                 }
-                
+
             }
-            catch (Exception v_e) {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
@@ -250,11 +271,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             try {
                 set_initial_form_load();
             }
-            catch (Exception v_e) {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        
+
     }
 }

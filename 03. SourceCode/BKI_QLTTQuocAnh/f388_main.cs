@@ -58,7 +58,7 @@ namespace BKI_QLTTQuocAnh
             }
             else
             {
-                m_cmd_ban_giao_tien.Visibility = BarItemVisibility.Never;
+                //m_cmd_ban_giao_tien.Visibility = BarItemVisibility.Never;
                 m_cmd_phan_quyen_nhom.Visibility = BarItemVisibility.Never;
                 m_cmd_nhom_nguoi_su_dung.Visibility = BarItemVisibility.Never;
                 m_cmd_nguoi_sd.Visibility = BarItemVisibility.Never;
