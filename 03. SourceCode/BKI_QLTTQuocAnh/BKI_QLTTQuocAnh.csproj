@@ -166,7 +166,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddTab.cs" />
     <Compile Include="ApplicationControl.cs" />
     <Compile Include="BaoCao\CTienNo2Text.cs" />
     <Compile Include="BaoCao\f410_bao_cao_tai_chinh_theo_lop_mon.cs">
