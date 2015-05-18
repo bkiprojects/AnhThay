@@ -24,14 +24,13 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using DevExpress.XtraGrid;
+using BKI_QLTTQuocAnh.BaoCao;
+namespace BKI_QLTTQuocAnh {
 
-namespace BKI_QLTTQuocAnh
-{
 
 
-
-    public class F496_bao_cao_so_giao_dich_theo_lop : System.Windows.Forms.Form
-    {
+    public class F496_bao_cao_so_giao_dich_theo_lop : System.Windows.Forms.Form {
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
@@ -50,8 +49,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl;
         private System.ComponentModel.IContainer components;
 
-        public F496_bao_cao_so_giao_dich_theo_lop()
-        {
+        public F496_bao_cao_so_giao_dich_theo_lop() {
             //
             // Required for Windows Form Designer support
             //
@@ -66,12 +64,9 @@ namespace BKI_QLTTQuocAnh
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                if (components != null)
-                {
+        protected override void Dispose(bool disposing) {
+            if(disposing) {
+                if(components != null) {
                     components.Dispose();
                 }
             }
@@ -83,11 +78,9 @@ namespace BKI_QLTTQuocAnh
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            this.components = new System.ComponentModel.Container();
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F496_bao_cao_so_giao_dich_theo_lop));
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList = new System.Windows.Forms.ImageList();
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -100,7 +93,7 @@ namespace BKI_QLTTQuocAnh
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label1 = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList();
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.pivotGridControl = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -149,7 +142,7 @@ namespace BKI_QLTTQuocAnh
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 439);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1008, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1362, 36);
             this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
@@ -161,7 +154,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(652, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(1006, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 1;
@@ -176,7 +169,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(740, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(1094, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 2;
@@ -206,7 +199,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(828, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(1182, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 3;
@@ -221,7 +214,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(916, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1270, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 4;
@@ -231,10 +224,10 @@ namespace BKI_QLTTQuocAnh
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 87);
+            this.m_fg.Location = new System.Drawing.Point(0, 0);
             this.m_fg.Name = "m_fg";
             this.m_fg.Rows.Fixed = 3;
-            this.m_fg.Size = new System.Drawing.Size(1008, 352);
+            this.m_fg.Size = new System.Drawing.Size(1362, 475);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             // 
@@ -247,7 +240,7 @@ namespace BKI_QLTTQuocAnh
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 87);
+            this.panel1.Size = new System.Drawing.Size(1362, 87);
             this.panel1.TabIndex = 0;
             // 
             // m_sle_lop
@@ -328,29 +321,32 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(1008, 45);
+            this.m_lbl_header.Size = new System.Drawing.Size(1362, 45);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÁO CÁO SỔ GIAO DỊCH THEO LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pivotGridControl
             // 
+            this.pivotGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControl.Location = new System.Drawing.Point(0, 87);
             this.pivotGridControl.Name = "pivotGridControl";
-            this.pivotGridControl.Size = new System.Drawing.Size(1008, 352);
+            this.pivotGridControl.Size = new System.Drawing.Size(1362, 352);
             this.pivotGridControl.TabIndex = 3;
             this.pivotGridControl.Visible = false;
-            this.pivotGridControl.CustomSummary += new DevExpress.XtraPivotGrid.PivotGridCustomSummaryEventHandler(this.pivotGridControl_CustomSummary);
+            this.pivotGridControl.CustomFieldValueCells += new DevExpress.XtraPivotGrid.PivotCustomFieldValueCellsEventHandler(this.pivotGridControl_CustomFieldValueCells);
             this.pivotGridControl.FieldValueDisplayText += new DevExpress.XtraPivotGrid.PivotFieldDisplayTextEventHandler(this.pivotGridControl_FieldValueDisplayText);
+            this.pivotGridControl.CustomCellDisplayText += new DevExpress.XtraPivotGrid.PivotCellDisplayTextEventHandler(this.pivotGridControl_CustomCellDisplayText);
+            this.pivotGridControl.CellDoubleClick += new DevExpress.XtraPivotGrid.PivotCellEventHandler(this.pivotGridControl_CellDoubleClick);
             // 
             // F496_bao_cao_so_giao_dich_theo_lop
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(1008, 475);
-            this.Controls.Add(this.m_fg);
+            this.ClientSize = new System.Drawing.Size(1362, 475);
             this.Controls.Add(this.pivotGridControl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
+            this.Controls.Add(this.m_fg);
             this.Name = "F496_bao_cao_so_giao_dich_theo_lop";
             this.Text = "F496 - Báo cáo sổ giao dịch theo lớp";
             this.Load += new System.EventHandler(this.F496_bao_cao_so_giao_dich_theo_lop_Load);
@@ -367,15 +363,13 @@ namespace BKI_QLTTQuocAnh
         #endregion
 
         #region Public Interface
-        public void display()
-        {
+        public void display() {
             this.ShowDialog();
         }
         #endregion
 
         #region Data Structure
-        private enum e_col_Number
-        {
+        private enum e_col_Number {
             SO_TIEN_L3 = 12
 ,
             SO_TIEN_L2 = 10
@@ -410,12 +404,11 @@ namespace BKI_QLTTQuocAnh
         #endregion
 
         #region Private Methods
-        private void format_controls()
-        {
+        private void format_controls() {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163))); this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163))); this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
-            
+
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
@@ -425,8 +418,7 @@ namespace BKI_QLTTQuocAnh
             this.KeyPreview = true;
         }
 
-        private void format_fixed_rows_in_grid()
-        {
+        private void format_fixed_rows_in_grid() {
             m_fg.AllowMerging = AllowMergingEnum.FixedOnly;
 
             m_fg.Cols[0].AllowMerging = true;
@@ -496,27 +488,42 @@ namespace BKI_QLTTQuocAnh
             maDoiTuong.Caption = "Mã HV";
             PivotGridField ngayThu = new PivotGridField(V_GD_PHIEU_THU.NGAY_THU, PivotArea.ColumnArea);
             ngayThu.Caption = "Ngày thu";
-            PivotGridField soTien = new PivotGridField(V_GD_PHIEU_THU.SO_TIEN, PivotArea.DataArea);
+            PivotGridField soTien = new PivotGridField("SO_TIEN_AO", PivotArea.DataArea);
             soTien.Caption = "Số tiền";
+            soTien.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            soTien.CellFormat.FormatString = "{0:#,##0}";
+
             PivotGridField loaiPhieu = new PivotGridField(V_GD_PHIEU_THU.TEN_LOAI_PHIEU_THU, PivotArea.ColumnArea);
             loaiPhieu.Caption = "Loại phiếu";
             PivotGridField lanThu = new PivotGridField(V_GD_PHIEU_THU.LAN_THU, PivotArea.ColumnArea);
             lanThu.Caption = "Lần thứ";
-            pivotGridControl.Fields.AddRange(new PivotGridField[] { hoTen, maDoiTuong, loaiPhieu, lanThu, ngayThu, soTien});
+            PivotGridField chenhLech = new PivotGridField(V_GD_PHIEU_THU.TEN_NGUOI_NOP_TIEN, PivotArea.ColumnArea);
+            chenhLech.Caption = "Chênh lệch";
+            chenhLech.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Custom;
+
+            PivotGridFieldBase.DefaultDecimalFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            PivotGridFieldBase.DefaultDecimalFormat.FormatString = "n2";
+            PivotGridFieldBase.DefaultDateFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            PivotGridFieldBase.DefaultDateFormat.FormatString = "dd/MM/yyyy";
+
+            
+
+            pivotGridControl.Fields.AddRange(new PivotGridField[] { hoTen, maDoiTuong, loaiPhieu, lanThu, ngayThu, soTien, chenhLech });
             ngayThu.GroupInterval = PivotGroupInterval.Date;
 
+
+
             //pivotGridControl.OptionsView.ShowColumnGrandTotals = false;
+            pivotGridControl.Visible = true;
             pivotGridControl.OptionsView.ShowFilterHeaders = false;
         }
-        private void set_initial_form_load()
-        {
+        private void set_initial_form_load() {
             m_obj_trans = get_trans_object(m_fg);
             load_data_to_sle_lop();
             init_pivot_table();
             load_data_2_grid();
         }
-        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
-        {
+        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg) {
             Hashtable v_htb = new Hashtable();
             v_htb.Add(V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP.SO_TIEN_L3, e_col_Number.SO_TIEN_L3);
             v_htb.Add(V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP.SO_TIEN_L2, e_col_Number.SO_TIEN_L2);
@@ -535,8 +542,7 @@ namespace BKI_QLTTQuocAnh
             return v_obj_trans;
         }
 
-        private void load_data_2_ds_dm_lop()
-        {
+        private void load_data_2_ds_dm_lop() {
             US_DM_LOP_MON v_us = new US_DM_LOP_MON();
             string v_str_filter = "where TRANG_THAI_LOP_MON = " + CONST_TRANG_THAI_LOP_MON.DANG_HOAT_DONG;
             m_ds_dm_lop_mon.Clear();
@@ -544,8 +550,7 @@ namespace BKI_QLTTQuocAnh
             v_us.FillDataset(m_ds_dm_lop_mon, v_str_filter);
         }
 
-        private void load_data_to_sle_lop()
-        {
+        private void load_data_to_sle_lop() {
             load_data_2_ds_dm_lop();
 
             //Chinh hien thi nguoi dung
@@ -567,18 +572,17 @@ namespace BKI_QLTTQuocAnh
             m_sle_lop.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
         }
 
-        
-        private void load_data_2_grid()
-        {
-            if (m_sle_lop.EditValue == null || m_sle_lop.EditValue == "")
-            {
+
+        private void load_data_2_grid() {
+            if(m_sle_lop.EditValue == null || m_sle_lop.EditValue == "") {
                 return;
             }
-            DS_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP v_ds = new DS_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP();
-            US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP v_us = new US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP();
+            DS_V_GD_PHIEU_THU v_ds = new DS_V_GD_PHIEU_THU();
+            US_V_GD_PHIEU_THU v_us = new US_V_GD_PHIEU_THU();
             v_ds.Clear();
             v_ds.EnforceConstraints = false;
-            v_us.FillDataset_by_id_lop(v_ds, CIPConvert.ToDecimal(m_sle_lop.EditValue));
+            v_us.FillDataset(v_ds, "where id_lop_mon = " + CIPConvert.ToDecimal(m_sle_lop.EditValue));
+            //v_us.FillDataset_by_id_lop(v_ds, CIPConvert.ToDecimal(m_sle_lop.EditValue));
 
             ////DS_V_GD_PHIEU_THU v_ds = new DS_V_GD_PHIEU_THU();
             ////US_V_GD_PHIEU_THU v_us = new US_V_GD_PHIEU_THU();
@@ -587,26 +591,39 @@ namespace BKI_QLTTQuocAnh
             //v_ds.Clear();
             //v_ds.EnforceConstraints = false;
             //v_us.FillDataset(v_ds);
-            
+
             //v_us.FillDataset(v_ds, "where id_loai_phieu_thu = 26");
 
-            m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
-            CGridUtils.MakeSoTT(0, m_fg);
+            //m_fg.Redraw = false;
+            //CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
+            //CGridUtils.MakeSoTT(0, m_fg);
 
-            m_fg.Redraw = true;
+            //m_fg.Redraw = true;
 
-            ////pivotGridControl.DataSource = v_ds.V_GD_PHIEU_THU;
-            //pivotGridControl.DataSource = v_ds.V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP;
-            //pivotGridControl.CollapseAll();
+            //pivotGridControl.DataSource = v_ds.V_GD_PHIEU_THU;
+            v_ds.V_GD_PHIEU_THU.Columns.Add("SO_TIEN_AO", typeof(decimal));
+            for(int i = 1; i < v_ds.V_GD_PHIEU_THU.Rows.Count - 1; i++) {
+                DataRow v_dr = v_ds.V_GD_PHIEU_THU.Rows[i];
+                if(CIPConvert.ToDecimal(v_dr[V_GD_PHIEU_THU.ID_LOAI_PHIEU_THU]) == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU) {
+                    v_ds.V_GD_PHIEU_THU.Rows[i]["SO_TIEN_AO"] = -1 * CIPConvert.ToDecimal(v_ds.V_GD_PHIEU_THU.Rows[i][V_GD_PHIEU_THU.SO_TIEN]);
+                }
+                if(CIPConvert.ToDecimal(v_ds.V_GD_PHIEU_THU.Rows[i][V_GD_PHIEU_THU.ID_LOAI_PHIEU_THU]) == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU) {
+                    v_ds.V_GD_PHIEU_THU.Rows[i]["SO_TIEN_AO"] = -1 * CIPConvert.ToDecimal(v_ds.V_GD_PHIEU_THU.Rows[i][V_GD_PHIEU_THU.SO_TIEN]);
+                }
+                if(CIPConvert.ToDecimal(v_ds.V_GD_PHIEU_THU.Rows[i][V_GD_PHIEU_THU.ID_LOAI_PHIEU_THU]) == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU) {
+                    v_ds.V_GD_PHIEU_THU.Rows[i]["SO_TIEN_AO"] = CIPConvert.ToDecimal(v_ds.V_GD_PHIEU_THU.Rows[i][V_GD_PHIEU_THU.SO_TIEN]);
+                }
+            }
 
-            //pivotGridControl.ExpandAllRows();
-            
+            pivotGridControl.DataSource = v_ds.V_GD_PHIEU_THU;
+            pivotGridControl.CollapseAll();
+
+            pivotGridControl.ExpandAllRows();
+
 
         }
         private void grid2us_object(US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP i_us
-            , int i_grid_row)
-        {
+            , int i_grid_row) {
             DataRow v_dr;
             v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
@@ -615,47 +632,41 @@ namespace BKI_QLTTQuocAnh
 
 
         private void us_object2grid(US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP i_us
-            , int i_grid_row)
-        {
+            , int i_grid_row) {
             DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
 
 
-        private void insert_v_rpt_f496_bao_cao_so_giao_dich_theo_lop()
-        {
+        private void insert_v_rpt_f496_bao_cao_so_giao_dich_theo_lop() {
             //	F496_bao_cao_so_giao_dich_theo_lop_DE v_fDE = new  F496_bao_cao_so_giao_dich_theo_lop_DE();								
             //	v_fDE.display();
             load_data_2_grid();
         }
 
-        private void update_v_rpt_f496_bao_cao_so_giao_dich_theo_lop()
-        {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+        private void update_v_rpt_f496_bao_cao_so_giao_dich_theo_lop() {
+            if(!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if(!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
             //	F496_bao_cao_so_giao_dich_theo_lop_DE v_fDE = new F496_bao_cao_so_giao_dich_theo_lop_DE();
             //	v_fDE.display(m_us);
             load_data_2_grid();
         }
 
-        private void delete_v_rpt_f496_bao_cao_so_giao_dich_theo_lop()
-        {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
+        private void delete_v_rpt_f496_bao_cao_so_giao_dich_theo_lop() {
+            if(!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if(!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            if(BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
             US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP v_us = new US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP();
             grid2us_object(v_us, m_fg.Row);
-            try
-            {
+            try {
                 v_us.BeginTransaction();
                 v_us.Delete();
                 v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 v_us.Rollback();
                 CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
                     new CDBClientDBExceptionInterpret());
@@ -663,10 +674,9 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
-        private void view_v_rpt_f496_bao_cao_so_giao_dich_theo_lop()
-        {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+        private void view_v_rpt_f496_bao_cao_so_giao_dich_theo_lop() {
+            if(!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if(!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
             //	F496_bao_cao_so_giao_dich_theo_lop_DE v_fDE = new F496_bao_cao_so_giao_dich_theo_lop_DE();			
             //	v_fDE.display(m_us);
@@ -680,8 +690,7 @@ namespace BKI_QLTTQuocAnh
         //
         //
 
-        private void set_define_events()
-        {
+        private void set_define_events() {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
@@ -691,102 +700,77 @@ namespace BKI_QLTTQuocAnh
             this.KeyDown += F496_bao_cao_so_giao_dich_theo_lop_KeyDown;
         }
 
-        void F496_bao_cao_so_giao_dich_theo_lop_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
+        void F496_bao_cao_so_giao_dich_theo_lop_KeyDown(object sender, KeyEventArgs e) {
+            try {
+                if(e.KeyCode == Keys.Enter) {
                     load_data_2_grid();
                 }
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             };
         }
 
-        void m_cmd_search_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        void m_cmd_search_Click(object sender, EventArgs e) {
+            try {
                 load_data_2_grid();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void F496_bao_cao_so_giao_dich_theo_lop_Load(object sender, System.EventArgs e)
-        {
-            try
-            {
+        private void F496_bao_cao_so_giao_dich_theo_lop_Load(object sender, System.EventArgs e) {
+            try {
                 set_initial_form_load();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
 
         }
 
-        private void m_cmd_exit_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_exit_Click(object sender, EventArgs e) {
+            try {
                 this.Close();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_insert_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_insert_Click(object sender, EventArgs e) {
+            try {
                 insert_v_rpt_f496_bao_cao_so_giao_dich_theo_lop();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_update_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_update_Click(object sender, EventArgs e) {
+            try {
                 update_v_rpt_f496_bao_cao_so_giao_dich_theo_lop();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_delete_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_delete_Click(object sender, EventArgs e) {
+            try {
                 delete_v_rpt_f496_bao_cao_so_giao_dich_theo_lop();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_view_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_view_Click(object sender, EventArgs e) {
+            try {
                 view_v_rpt_f496_bao_cao_so_giao_dich_theo_lop();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
@@ -796,26 +780,65 @@ namespace BKI_QLTTQuocAnh
                 if(e.ValueType == PivotGridValueType.Total) {
                     e.DisplayText = "Tổng " + e.Value;
                 }
-            }
-            catch(Exception v_e) {
-                
-                throw v_e;
-            }
-        }
-
-        private void pivotGridControl_CustomSummary(object sender, PivotGridCustomSummaryEventArgs e) {
-            try {
-                if(e.DataField == null) {
-
+                if(e.ValueType == PivotGridValueType.GrandTotal && e.IsColumn) {
+                    e.DisplayText = "Tổng chênh lệch";
+                }
+                else if(e.ValueType == PivotGridValueType.GrandTotal && !e.IsColumn) {
+                    e.DisplayText = "Chênh lệch theo HV";
                 }
             }
             catch(Exception v_e) {
-                
+
                 throw v_e;
             }
         }
 
-    
+        private void pivotGridControl_CustomCellDisplayText(object sender, PivotCellDisplayTextEventArgs e) {
+            try {
+                if(e.DataField == pivotGridControl.Fields["SO_TIEN_AO"]) {
+                    if(e.Value == null) {
+                        return;
+                    }
+                    if(CIPConvert.ToDecimal(e.Value) < 0) {
+                        e.DisplayText = string.Format("{0:#,##0}", -1 * CIPConvert.ToDecimal(e.Value));
+                    }
+                    
+                }
+            }
+            catch(Exception v_e) {
+
+                throw v_e;
+            }
+        }
+
+        private void pivotGridControl_CustomFieldValueCells(object sender, PivotCustomFieldValueCellsEventArgs e) {
+            try {
+                e.SetGrandTotalLocation(false, DevExpress.XtraPivotGrid.Data.GrandTotalLocation.Near);
+                e.SetGrandTotalLocation(true, DevExpress.XtraPivotGrid.Data.GrandTotalLocation.Near);
+            }
+            catch(Exception v_e) {
+
+                throw v_e;
+            }
+        }
+
+        private void pivotGridControl_CellDoubleClick(object sender, PivotCellEventArgs e) {
+            try {
+                f496_chi_tiet_phieu_de v_frm = new f496_chi_tiet_phieu_de();
+                v_frm.gridControl1.DataSource = e.CreateDrillDownDataSource();
+                v_frm.ShowDialog();
+                // Display the form.
+                v_frm.Dispose();
+            }
+            catch(Exception v_e) {
+
+                throw v_e;
+            }
+        }
+
+
+
+
 
 
     }

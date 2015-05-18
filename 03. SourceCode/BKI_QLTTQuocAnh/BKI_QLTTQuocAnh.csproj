@@ -100,6 +100,7 @@
     <Reference Include="DevExpress.PivotGrid.v14.1.Core">
       <HintPath>..\DLL\DevExpress.PivotGrid.v14.1.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Printing.v13.1.Core, Version=13.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v14.1.Core">
       <HintPath>..\DLL\DevExpress.Printing.v14.1.Core.dll</HintPath>
     </Reference>
@@ -242,6 +243,12 @@
     </Compile>
     <Compile Include="BaoCao\F496_bao_cao_so_giao_dich_theo_lop.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f496_chi_tiet_phieu_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f496_chi_tiet_phieu_de.Designer.cs">
+      <DependentUpon>f496_chi_tiet_phieu_de.cs</DependentUpon>
     </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f210_dm_lop_mon.cs">
@@ -399,6 +406,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\F496_bao_cao_so_giao_dich_theo_lop.resx">
       <DependentUpon>F496_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f496_chi_tiet_phieu_de.resx">
+      <DependentUpon>f496_chi_tiet_phieu_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f210_dm_lop_mon.resx">
       <DependentUpon>f210_dm_lop_mon.cs</DependentUpon>
