@@ -745,7 +745,7 @@ namespace BKI_QLTTQuocAnh {
             //    string v_ma_hv = m_fg.Rows[i_cur_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
             //    decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
 
-            //    if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
+            //  if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
             //    {
             //        //m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
             //        m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);

@@ -230,16 +230,16 @@ namespace BKI_QLTTQuocAnh
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(565, 10);
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_fg.Location = new System.Drawing.Point(0, 87);
             this.m_fg.Name = "m_fg";
             this.m_fg.Rows.Fixed = 3;
-            this.m_fg.Size = new System.Drawing.Size(191, 63);
+            this.m_fg.Size = new System.Drawing.Size(1008, 352);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_fg);
             this.panel1.Controls.Add(this.m_sle_lop);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.m_cmd_search);
@@ -335,11 +335,11 @@ namespace BKI_QLTTQuocAnh
             // 
             // pivotGridControl
             // 
-            this.pivotGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControl.Location = new System.Drawing.Point(0, 87);
             this.pivotGridControl.Name = "pivotGridControl";
             this.pivotGridControl.Size = new System.Drawing.Size(1008, 352);
             this.pivotGridControl.TabIndex = 3;
+            this.pivotGridControl.Visible = false;
             this.pivotGridControl.CustomSummary += new DevExpress.XtraPivotGrid.PivotGridCustomSummaryEventHandler(this.pivotGridControl_CustomSummary);
             this.pivotGridControl.FieldValueDisplayText += new DevExpress.XtraPivotGrid.PivotFieldDisplayTextEventHandler(this.pivotGridControl_FieldValueDisplayText);
             // 
@@ -347,6 +347,7 @@ namespace BKI_QLTTQuocAnh
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(1008, 475);
+            this.Controls.Add(this.m_fg);
             this.Controls.Add(this.pivotGridControl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
@@ -573,28 +574,33 @@ namespace BKI_QLTTQuocAnh
             {
                 return;
             }
+            DS_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP v_ds = new DS_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP();
+            US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP v_us = new US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP();
+            v_ds.Clear();
+            v_ds.EnforceConstraints = false;
+            v_us.FillDataset_by_id_lop(v_ds, CIPConvert.ToDecimal(m_sle_lop.EditValue));
+
+            ////DS_V_GD_PHIEU_THU v_ds = new DS_V_GD_PHIEU_THU();
+            ////US_V_GD_PHIEU_THU v_us = new US_V_GD_PHIEU_THU();
             //DS_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP v_ds = new DS_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP();
             //US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP v_us = new US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP();
             //v_ds.Clear();
             //v_ds.EnforceConstraints = false;
-            //v_us.FillDataset_by_id_lop(v_ds, CIPConvert.ToDecimal(m_sle_lop.EditValue));
+            //v_us.FillDataset(v_ds);
+            
+            //v_us.FillDataset(v_ds, "where id_loai_phieu_thu = 26");
 
-            DS_V_GD_PHIEU_THU v_ds = new DS_V_GD_PHIEU_THU();
-            US_V_GD_PHIEU_THU v_us = new US_V_GD_PHIEU_THU();
-            v_ds.Clear();
-            v_ds.EnforceConstraints = false;
-            v_us.FillDataset(v_ds, "where id_loai_phieu_thu = 26");
-           
-            //m_fg.Redraw = false;
-            //CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
-            //CGridUtils.MakeSoTT(0, m_fg);
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
+            CGridUtils.MakeSoTT(0, m_fg);
 
-            //m_fg.Redraw = true;
+            m_fg.Redraw = true;
 
-            pivotGridControl.DataSource = v_ds.V_GD_PHIEU_THU;
-            pivotGridControl.CollapseAll();
+            ////pivotGridControl.DataSource = v_ds.V_GD_PHIEU_THU;
+            //pivotGridControl.DataSource = v_ds.V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP;
+            //pivotGridControl.CollapseAll();
 
-            pivotGridControl.ExpandAllRows();
+            //pivotGridControl.ExpandAllRows();
             
 
         }

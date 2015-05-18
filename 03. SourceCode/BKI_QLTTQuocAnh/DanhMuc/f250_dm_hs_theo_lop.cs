@@ -29,16 +29,16 @@ namespace BKI_QLTTQuocAnh
 
 
 
-	public class f250_dm_hs_theo_lop : System.Windows.Forms.Form
-	{
-		internal System.Windows.Forms.ImageList ImageList;
-		internal System.Windows.Forms.Panel m_pnl_out_place_dm;
-		private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
-		internal SIS.Controls.Button.SiSButton m_cmd_delete;
-		internal SIS.Controls.Button.SiSButton m_cmd_update;
-		internal SIS.Controls.Button.SiSButton m_cmd_insert;
-		internal SIS.Controls.Button.SiSButton m_cmd_exit;
-		internal SIS.Controls.Button.SiSButton m_cmd_view;
+    public class f250_dm_hs_theo_lop : System.Windows.Forms.Form
+    {
+        internal System.Windows.Forms.ImageList ImageList;
+        internal System.Windows.Forms.Panel m_pnl_out_place_dm;
+        private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        internal SIS.Controls.Button.SiSButton m_cmd_delete;
+        internal SIS.Controls.Button.SiSButton m_cmd_update;
+        internal SIS.Controls.Button.SiSButton m_cmd_insert;
+        internal SIS.Controls.Button.SiSButton m_cmd_exit;
+        internal SIS.Controls.Button.SiSButton m_cmd_view;
         private Label m_lbl_header;
         private Panel panel1;
         private ComboBox m_cbo_trang_thai_hv;
@@ -48,43 +48,43 @@ namespace BKI_QLTTQuocAnh
         private ComboBox m_cbo_lop_mon;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private Label m_lbl_lop_mon;
-		private System.ComponentModel.IContainer components;
+        private System.ComponentModel.IContainer components;
 
-		public f250_dm_hs_theo_lop()
-		{
-			//
-			// Required for Windows Form Designer support
-			//
-			InitializeComponent();
+        public f250_dm_hs_theo_lop()
+        {
+            //
+            // Required for Windows Form Designer support
+            //
+            InitializeComponent();
 
-			//
-			// TODO: Add any constructor code after InitializeComponent call
-			//
-			format_controls();
-		}
+            //
+            // TODO: Add any constructor code after InitializeComponent call
+            //
+            format_controls();
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		protected override void Dispose( bool disposing )
-		{
-			if( disposing )
-			{
-				if(components != null)
-				{
-					components.Dispose();
-				}
-			}
-			base.Dispose( disposing );
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (components != null)
+                {
+                    components.Dispose();
+                }
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
+        #region Windows Form Designer generated code
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f250_dm_hs_theo_lop));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
@@ -343,37 +343,88 @@ namespace BKI_QLTTQuocAnh
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Public Interface
-		public void display(){			
-			this.ShowDialog();
-		}
-		#endregion
+        #region Public Interface
+        public void display()
+        {
+            this.ShowDialog();
+        }
+        #endregion
 
-		#region Data Structure
-		private enum e_col_Number{
-			DIA_CHI = 9,DON_GIA_BUOI_HOC = 16,MA_DOI_TUONG = 1,TONG_SO_BUOI_HOC = 18,DELETE_YN = 12,EMAIL_HS = 8,TEN_LOP_MON = 15,TEN = 5,TONG_TIEN_KHOA_HOC = 22,MA_LOP_MON = 14,HO_TEN = 6,TRANG_THAI_LOP_MON = 17,TEN_LOAI_DOI_TUONG = 3,THOI_GIAN_HOC_TO_DATE = 20,THOI_GIAN_HOC_FROM_DATE = 19,ID_LOAI_DOI_TUONG = 2,TRANG_THAI_YN = 24,ID_LOP_MON = 13,TRUONG_DANG_HOC = 7,HO = 4,SDT_HS = 10,NGAY_SINH = 11,ID_GD_HOC = 23,GHI_CHU = 21
-		}			
-		#endregion
+        #region Data Structure
+        private enum e_col_Number
+        {
+            DIA_CHI = 9
+,
+            DON_GIA_BUOI_HOC = 16
+                ,
+            MA_DOI_TUONG = 1
+                ,
+            TONG_SO_BUOI_HOC = 18
+                ,
+            DELETE_YN = 12
+                ,
+            EMAIL_HS = 8
+                ,
+            TEN_LOP_MON = 15
+                ,
+            TEN = 5
+                ,
+            TONG_TIEN_KHOA_HOC = 22
+                ,
+            MA_LOP_MON = 14
+                ,
+            HO_TEN = 6
+                ,
+            TRANG_THAI_LOP_MON = 17
+                ,
+            TEN_LOAI_DOI_TUONG = 3
+                ,
+            THOI_GIAN_HOC_TO_DATE = 20
+                ,
+            THOI_GIAN_HOC_FROM_DATE = 19
+                ,
+            ID_LOAI_DOI_TUONG = 2
+                ,
+            TRANG_THAI_YN = 24
+                ,
+            ID_LOP_MON = 13
+                ,
+            TRUONG_DANG_HOC = 7
+                ,
+            HO = 4
+                ,
+            SDT_HS = 10
+                ,
+            NGAY_SINH = 11
+                ,
+            ID_GD_HOC = 23
+                , GHI_CHU = 21
 
-		#region Members
-		ITransferDataRow m_obj_trans;		
-		DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
-		US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
-		#endregion
+        }
+        #endregion
 
-		#region Private Methods
-		private void format_controls(){
-			CControlFormat.setFormStyle(this, new CAppContext_201());
-			CControlFormat.setC1FlexFormat(m_fg);
-			CGridUtils.AddSave_Excel_Handlers(m_fg);
-            			CGridUtils.AddSearch_Handlers(m_fg);
-			set_define_events();
-			this.KeyPreview = true;		
-		}
-		private void set_initial_form_load(){
+        #region Members
+        ITransferDataRow m_obj_trans;
+        DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+        US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+        #endregion
+
+        #region Private Methods
+        private void format_controls()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            CControlFormat.setC1FlexFormat(m_fg);
+            CGridUtils.AddSave_Excel_Handlers(m_fg);
+            CGridUtils.AddSearch_Handlers(m_fg);
+            set_define_events();
+            this.KeyPreview = true;
+        }
+        private void set_initial_form_load()
+        {
             //CCommon.load_data_2_cbo_lop_mon(-1, m_cbo_lop_mon);
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
             US_DM_LOP_MON v_us = new US_DM_LOP_MON();
@@ -381,160 +432,214 @@ namespace BKI_QLTTQuocAnh
 
             m_cbo_lop_mon.DataSource = v_ds.DM_LOP_MON;
             m_cbo_lop_mon.DisplayMember = DM_LOP_MON.MO_TA;
-            m_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;	
+            m_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
 
-			m_obj_trans = get_trans_object(m_fg);
+            m_obj_trans = get_trans_object(m_fg);
             //m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
-			load_data_2_grid();		
-		}	
-		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
-			Hashtable v_htb = new Hashtable();
-			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.DIA_CHI, e_col_Number.DIA_CHI);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.DON_GIA_BUOI_HOC, e_col_Number.DON_GIA_BUOI_HOC);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.MA_DOI_TUONG, e_col_Number.MA_DOI_TUONG);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TONG_SO_BUOI_HOC, e_col_Number.TONG_SO_BUOI_HOC);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.DELETE_YN, e_col_Number.DELETE_YN);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.EMAIL_HS, e_col_Number.EMAIL_HS);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TEN_LOP_MON, e_col_Number.TEN_LOP_MON);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TEN, e_col_Number.TEN);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TONG_TIEN_KHOA_HOC, e_col_Number.TONG_TIEN_KHOA_HOC);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.MA_LOP_MON, e_col_Number.MA_LOP_MON);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.HO_TEN, e_col_Number.HO_TEN);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TRANG_THAI_LOP_MON, e_col_Number.TRANG_THAI_LOP_MON);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TEN_LOAI_DOI_TUONG, e_col_Number.TEN_LOAI_DOI_TUONG);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.THOI_GIAN_HOC_TO_DATE, e_col_Number.THOI_GIAN_HOC_TO_DATE);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.THOI_GIAN_HOC_FROM_DATE, e_col_Number.THOI_GIAN_HOC_FROM_DATE);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.ID_LOAI_DOI_TUONG, e_col_Number.ID_LOAI_DOI_TUONG);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TRANG_THAI_YN, e_col_Number.TRANG_THAI_YN);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.ID_LOP_MON, e_col_Number.ID_LOP_MON);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TRUONG_DANG_HOC, e_col_Number.TRUONG_DANG_HOC);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.HO, e_col_Number.HO);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.SDT_HS, e_col_Number.SDT_HS);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.NGAY_SINH, e_col_Number.NGAY_SINH);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.ID_GD_HOC, e_col_Number.ID_GD_HOC);			v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.GHI_CHU, e_col_Number.GHI_CHU);									
-			ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg,v_htb,m_ds.V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.NewRow());
-			return v_obj_trans;			
-		}
-		private void load_data_2_grid(){
+            load_data_2_grid();
+        }
+        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
+        {
+            Hashtable v_htb = new Hashtable();
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.DIA_CHI, e_col_Number.DIA_CHI);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.DON_GIA_BUOI_HOC, e_col_Number.DON_GIA_BUOI_HOC);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.MA_DOI_TUONG, e_col_Number.MA_DOI_TUONG);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TONG_SO_BUOI_HOC, e_col_Number.TONG_SO_BUOI_HOC);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.DELETE_YN, e_col_Number.DELETE_YN);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.EMAIL_HS, e_col_Number.EMAIL_HS);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TEN_LOP_MON, e_col_Number.TEN_LOP_MON);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TEN, e_col_Number.TEN);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TONG_TIEN_KHOA_HOC, e_col_Number.TONG_TIEN_KHOA_HOC);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.MA_LOP_MON, e_col_Number.MA_LOP_MON);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.HO_TEN, e_col_Number.HO_TEN);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TRANG_THAI_LOP_MON, e_col_Number.TRANG_THAI_LOP_MON);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TEN_LOAI_DOI_TUONG, e_col_Number.TEN_LOAI_DOI_TUONG);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.THOI_GIAN_HOC_TO_DATE, e_col_Number.THOI_GIAN_HOC_TO_DATE);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.THOI_GIAN_HOC_FROM_DATE, e_col_Number.THOI_GIAN_HOC_FROM_DATE);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.ID_LOAI_DOI_TUONG, e_col_Number.ID_LOAI_DOI_TUONG);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TRANG_THAI_YN, e_col_Number.TRANG_THAI_YN);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.ID_LOP_MON, e_col_Number.ID_LOP_MON);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.TRUONG_DANG_HOC, e_col_Number.TRUONG_DANG_HOC);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.HO, e_col_Number.HO);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.SDT_HS, e_col_Number.SDT_HS);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.NGAY_SINH, e_col_Number.NGAY_SINH);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.ID_GD_HOC, e_col_Number.ID_GD_HOC);
+            v_htb.Add(V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.GHI_CHU, e_col_Number.GHI_CHU);
+
+            ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.NewRow());
+            return v_obj_trans;
+        }
+        private void load_data_2_grid()
+        {
             m_ds.Clear();
             m_ds.EnforceConstraints = false;
-			m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();			
-			m_us.FillDataset(m_ds);
-			m_fg.Redraw = false;
-			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
+            m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+            m_us.FillDataset(m_ds);
+            m_fg.Redraw = false;
+            CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
             CGridUtils.MakeSoTT(0, m_fg);
-			m_fg.Redraw = true;
-		}
-		private void grid2us_object(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON i_us
-			, int i_grid_row) {
-			DataRow v_dr;
-			v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
-			m_obj_trans.GridRow2DataRow(i_grid_row,v_dr);
-			i_us.DataRow2Me(v_dr);
-		}
-        private void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e){
+            m_fg.Redraw = true;
+        }
+        private void grid2us_object(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON i_us
+            , int i_grid_row)
+        {
+            DataRow v_dr;
+            v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
+            m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
+            i_us.DataRow2Me(v_dr);
+        }
+        private void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e)
+        {
             load_data_2_grid();
         }
 
-        
-		private void us_object2grid(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON i_us
-			, int i_grid_row) {
-			DataRow v_dr = (DataRow) m_fg.Rows[i_grid_row].UserData;
-			i_us.Me2DataRow(v_dr);
-			m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
-		}
+
+        private void us_object2grid(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON i_us
+            , int i_grid_row)
+        {
+            DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
+            i_us.Me2DataRow(v_dr);
+            m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
+        }
 
 
-		private void insert_v_dm_hoc_sinh_gd_hoc_dm_lop_mon(){			
-		//	f250_dm_hs_theo_lop_DE v_fDE = new  f250_dm_hs_theo_lop_DE();								
-		//	v_fDE.display();
-			load_data_2_grid();
-		}
+        private void insert_v_dm_hoc_sinh_gd_hoc_dm_lop_mon()
+        {
+            //	f250_dm_hs_theo_lop_DE v_fDE = new  f250_dm_hs_theo_lop_DE();								
+            //	v_fDE.display();
+            load_data_2_grid();
+        }
 
-		private void update_v_dm_hoc_sinh_gd_hoc_dm_lop_mon(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
-			grid2us_object(m_us, m_fg.Row);
-		//	f250_dm_hs_theo_lop_DE v_fDE = new f250_dm_hs_theo_lop_DE();
-		//	v_fDE.display(m_us);
-			load_data_2_grid();
-		}
-				
-		private void delete_v_dm_hoc_sinh_gd_hoc_dm_lop_mon(){
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted)  return;
-			US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
-			grid2us_object(v_us, m_fg.Row);
-			try {			
-				v_us.BeginTransaction();    											
-				v_us.Delete();                      								
-				v_us.CommitTransaction();
-				m_fg.Rows.Remove(m_fg.Row);				
-			}
-			catch (Exception v_e) {
-				v_us.Rollback();
-				CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-					new CDBClientDBExceptionInterpret());
-				v_objErrHandler.showErrorMessage();
-			}
-		}
+        private void update_v_dm_hoc_sinh_gd_hoc_dm_lop_mon()
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            //	f250_dm_hs_theo_lop_DE v_fDE = new f250_dm_hs_theo_lop_DE();
+            //	v_fDE.display(m_us);
+            load_data_2_grid();
+        }
 
-		private void view_v_dm_hoc_sinh_gd_hoc_dm_lop_mon(){			
-			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-			grid2us_object(m_us, m_fg.Row);
-		//	f250_dm_hs_theo_lop_DE v_fDE = new f250_dm_hs_theo_lop_DE();			
-		//	v_fDE.display(m_us);
-		}
-		private void set_define_events(){
-			m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-			m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
-			m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
-			m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-			m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
-		}
-		#endregion
+        private void delete_v_dm_hoc_sinh_gd_hoc_dm_lop_mon()
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
+            US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+            grid2us_object(v_us, m_fg.Row);
+            try
+            {
+                v_us.BeginTransaction();
+                v_us.Delete();
+                v_us.CommitTransaction();
+                m_fg.Rows.Remove(m_fg.Row);
+            }
+            catch (Exception v_e)
+            {
+                v_us.Rollback();
+                CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
+                    new CDBClientDBExceptionInterpret());
+                v_objErrHandler.showErrorMessage();
+            }
+        }
 
-//
-		//
-		//		EVENT HANLDERS
-		//
-		//
-		private void f250_dm_hs_theo_lop_Load(object sender, System.EventArgs e) {
-			try{
-				set_initial_form_load();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		
-		}
+        private void view_v_dm_hoc_sinh_gd_hoc_dm_lop_mon()
+        {
+            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            grid2us_object(m_us, m_fg.Row);
+            //	f250_dm_hs_theo_lop_DE v_fDE = new f250_dm_hs_theo_lop_DE();			
+            //	v_fDE.display(m_us);
+        }
+        private void set_define_events()
+        {
+            m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+            m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
+            m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+            m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+        }
+        #endregion
 
-		private void m_cmd_exit_Click(object sender, EventArgs e) {
-			try{
-				this.Close();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        //
+        //
+        //		EVENT HANLDERS
+        //
+        //
+        private void f250_dm_hs_theo_lop_Load(object sender, System.EventArgs e)
+        {
+            try
+            {
+                set_initial_form_load();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
 
-		private void m_cmd_insert_Click(object sender, EventArgs e) {
-			try{
-				insert_v_dm_hoc_sinh_gd_hoc_dm_lop_mon();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        }
 
-		private void m_cmd_update_Click(object sender, EventArgs e) {
-			try{
-				update_v_dm_hoc_sinh_gd_hoc_dm_lop_mon();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-		private void m_cmd_delete_Click(object sender, EventArgs e) {
-			try{
-				delete_v_dm_hoc_sinh_gd_hoc_dm_lop_mon();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_insert_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                insert_v_dm_hoc_sinh_gd_hoc_dm_lop_mon();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-		private void m_cmd_view_Click(object sender, EventArgs e) {
-			try{
-				view_v_dm_hoc_sinh_gd_hoc_dm_lop_mon();
-			}
-			catch (Exception v_e){
-				CSystemLog_301.ExceptionHandle(v_e);
-			}
-		}
+        private void m_cmd_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                update_v_dm_hoc_sinh_gd_hoc_dm_lop_mon();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
-	}
+        private void m_cmd_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                delete_v_dm_hoc_sinh_gd_hoc_dm_lop_mon();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_view_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                view_v_dm_hoc_sinh_gd_hoc_dm_lop_mon();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+    }
 }
 

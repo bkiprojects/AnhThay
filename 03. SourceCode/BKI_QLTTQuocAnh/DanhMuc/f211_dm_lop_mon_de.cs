@@ -15,6 +15,7 @@ using IP.Core.IPSystemAdmin;
 
 using C1.Win.C1FlexGrid;
 using BKI_QLTTQuocAnh.US;
+using BKI_QLTTQuocAnh.DS;
 
 
 namespace BKI_QLTTQuocAnh.DanhMuc
@@ -77,6 +78,56 @@ namespace BKI_QLTTQuocAnh.DanhMuc
         {
         }
 
+        private bool is_check_exist(string ma_lop_mon, DS_DM_LOP_MON ip_ds_dm_lop_mon)
+        {
+            string filter = "MA_LOP_MON = '" + ma_lop_mon + "'";
+            DataRow[] v_dr = ip_ds_dm_lop_mon.DM_LOP_MON.Select(filter);
+
+            if (v_dr.Length == 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private bool is_check_active(string ma_lop_mon, DS_DM_LOP_MON ip_ds_dm_lop_mon)
+        {
+            string filter = "TRANG_THAI_LOP_MON = 89 AND MA_LOP_MON = '" + ma_lop_mon + "'";
+            DataRow[] v_dr = ip_ds_dm_lop_mon.DM_LOP_MON.Select(filter);
+
+            if (v_dr.Length == 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private bool kiem_tra_du_lieu_trung()
+        {
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds);
+
+            string v_ma_lop_mon = m_txt_ma_lop_mon.Text;
+
+            if (is_check_exist(v_ma_lop_mon, v_ds))
+            {
+                if (is_check_active(v_ma_lop_mon, v_ds))
+                {
+                    MessageBox.Show("Lớp môn này đã có và đã cho nghỉ hoạt động. Bạn có thể cho hoạt động lại!");
+                }
+                else
+                {
+                    MessageBox.Show("Lớp môn này đã tồn tại, mời bạn đặt mã lớp khác!");
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private bool check_validate_data_is_OK()
         {
             if (!CValidateTextBox.IsValid(m_txt_ma_lop_mon, DataType.NumberType, allowNull.NO, false))
@@ -84,6 +135,19 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 MessageBox.Show("Mã lớp môn không được để trống và phải là số");
                 return false;
             }
+
+            if (m_e_form_mode == DataEntryFormMode.InsertDataState)
+            {
+                if (kiem_tra_du_lieu_trung())
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            
             if (!CValidateTextBox.IsValid(m_txt_mo_ta, DataType.StringType, allowNull.NO, false))
             {
                 MessageBox.Show("Mô tả không được để trống");
@@ -94,9 +158,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 MessageBox.Show("Học phí không được để trống và phải là số");
                 return false;
             }
-                
+
             return true;
         }
+
+
 
         private void form_2_us_object()
         {
@@ -161,7 +227,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
-            } 
+            }
         }
 
         void m_cmd_luu_Click(object sender, EventArgs e)
