@@ -34,6 +34,7 @@
             this.m_dat_tu_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.label3 = new System.Windows.Forms.Label();
@@ -49,10 +50,25 @@
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
-            this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
+            this.gridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.CHECK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NGAY_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SO_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MA_HOC_SINH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_HOC_VIEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NGUOI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
-            this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            this.m_pnl_out_place_dm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // m_lbl_header
@@ -62,7 +78,7 @@
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(703, 44);
+            this.m_lbl_header.Size = new System.Drawing.Size(1175, 44);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÀN GIAO TIỀN";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -87,6 +103,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_fg);
             this.panel1.Controls.Add(this.m_cmd_search);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.m_txt_tong_tien);
@@ -100,8 +117,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(703, 106);
+            this.panel1.Size = new System.Drawing.Size(1175, 106);
             this.panel1.TabIndex = 1;
+            // 
+            // m_fg
+            // 
+            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
+            this.m_fg.Location = new System.Drawing.Point(664, 5);
+            this.m_fg.Name = "m_fg";
+            this.m_fg.Size = new System.Drawing.Size(481, 89);
+            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
+            this.m_fg.TabIndex = 21;
             // 
             // m_cmd_search
             // 
@@ -225,7 +251,7 @@
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 358);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(703, 79);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1175, 79);
             this.m_pnl_out_place_dm.TabIndex = 3;
             // 
             // m_cmd_exit
@@ -303,22 +329,148 @@
             this.m_cmd_insert.TabIndex = 0;
             this.m_cmd_insert.Text = "&Bàn giao";
             // 
-            // m_fg
+            // gridControl
             // 
-            this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 150);
-            this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(703, 208);
-            this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 21;
+            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.Location = new System.Drawing.Point(0, 150);
+            this.gridControl.MainView = this.gridView;
+            this.gridControl.Name = "gridControl";
+            this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit});
+            this.gridControl.Size = new System.Drawing.Size(1175, 208);
+            this.gridControl.TabIndex = 4;
+            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView});
+            // 
+            // gridView
+            // 
+            this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.CHECK,
+            this.STT,
+            this.NGAY_THU,
+            this.SO_PHIEU,
+            this.NOI_DUNG,
+            this.MA_HOC_SINH,
+            this.TEN_HOC_VIEN,
+            this.NGUOI_THU,
+            this.TEN_LOP_MON,
+            this.TIEN_THUC_THU});
+            this.gridView.GridControl = this.gridControl;
+            this.gridView.Name = "gridView";
+            this.gridView.OptionsSelection.MultiSelect = true;
+            this.gridView.OptionsView.ShowGroupPanel = false;
+            // 
+            // CHECK
+            // 
+            this.CHECK.Caption = "Chọn";
+            this.CHECK.ColumnEdit = this.repositoryItemCheckEdit;
+            this.CHECK.Name = "CHECK";
+            this.CHECK.Visible = true;
+            this.CHECK.VisibleIndex = 0;
+            // 
+            // repositoryItemCheckEdit
+            // 
+            this.repositoryItemCheckEdit.AutoHeight = false;
+            this.repositoryItemCheckEdit.Caption = "Check";
+            this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
+            this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.Name = "STT";
+            this.STT.OptionsColumn.AllowEdit = false;
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 1;
+            this.STT.Width = 40;
+            // 
+            // NGAY_THU
+            // 
+            this.NGAY_THU.Caption = "Ngày thu";
+            this.NGAY_THU.FieldName = "NGAY_THU";
+            this.NGAY_THU.Name = "NGAY_THU";
+            this.NGAY_THU.OptionsColumn.AllowEdit = false;
+            this.NGAY_THU.Visible = true;
+            this.NGAY_THU.VisibleIndex = 2;
+            this.NGAY_THU.Width = 123;
+            // 
+            // SO_PHIEU
+            // 
+            this.SO_PHIEU.Caption = "Số phiếu";
+            this.SO_PHIEU.FieldName = "SO_PHIEU";
+            this.SO_PHIEU.Name = "SO_PHIEU";
+            this.SO_PHIEU.OptionsColumn.AllowEdit = false;
+            this.SO_PHIEU.Visible = true;
+            this.SO_PHIEU.VisibleIndex = 3;
+            this.SO_PHIEU.Width = 76;
+            // 
+            // NOI_DUNG
+            // 
+            this.NOI_DUNG.Caption = "Nội dung";
+            this.NOI_DUNG.FieldName = "NOI_DUNG";
+            this.NOI_DUNG.Name = "NOI_DUNG";
+            this.NOI_DUNG.OptionsColumn.AllowEdit = false;
+            this.NOI_DUNG.Visible = true;
+            this.NOI_DUNG.VisibleIndex = 4;
+            this.NOI_DUNG.Width = 160;
+            // 
+            // MA_HOC_SINH
+            // 
+            this.MA_HOC_SINH.Caption = "Mã HV";
+            this.MA_HOC_SINH.FieldName = "MA_HOC_SINH";
+            this.MA_HOC_SINH.Name = "MA_HOC_SINH";
+            this.MA_HOC_SINH.OptionsColumn.AllowEdit = false;
+            this.MA_HOC_SINH.Visible = true;
+            this.MA_HOC_SINH.VisibleIndex = 5;
+            this.MA_HOC_SINH.Width = 55;
+            // 
+            // TEN_HOC_VIEN
+            // 
+            this.TEN_HOC_VIEN.Caption = "Tên HV";
+            this.TEN_HOC_VIEN.FieldName = "HO_TEN_HS";
+            this.TEN_HOC_VIEN.Name = "TEN_HOC_VIEN";
+            this.TEN_HOC_VIEN.OptionsColumn.AllowEdit = false;
+            this.TEN_HOC_VIEN.Visible = true;
+            this.TEN_HOC_VIEN.VisibleIndex = 6;
+            this.TEN_HOC_VIEN.Width = 132;
+            // 
+            // NGUOI_THU
+            // 
+            this.NGUOI_THU.Caption = "Người thu";
+            this.NGUOI_THU.FieldName = "NGUOI_THU";
+            this.NGUOI_THU.Name = "NGUOI_THU";
+            this.NGUOI_THU.OptionsColumn.AllowEdit = false;
+            this.NGUOI_THU.Visible = true;
+            this.NGUOI_THU.VisibleIndex = 7;
+            this.NGUOI_THU.Width = 178;
+            // 
+            // TEN_LOP_MON
+            // 
+            this.TEN_LOP_MON.Caption = "Lớp";
+            this.TEN_LOP_MON.FieldName = "TEN_LOP_MON";
+            this.TEN_LOP_MON.Name = "TEN_LOP_MON";
+            this.TEN_LOP_MON.OptionsColumn.AllowEdit = false;
+            this.TEN_LOP_MON.Visible = true;
+            this.TEN_LOP_MON.VisibleIndex = 8;
+            this.TEN_LOP_MON.Width = 178;
+            // 
+            // TIEN_THUC_THU
+            // 
+            this.TIEN_THUC_THU.Caption = "Tiền thực thu";
+            this.TIEN_THUC_THU.FieldName = "TIEN_THUC_THU";
+            this.TIEN_THUC_THU.Name = "TIEN_THUC_THU";
+            this.TIEN_THUC_THU.OptionsColumn.AllowEdit = false;
+            this.TIEN_THUC_THU.Visible = true;
+            this.TIEN_THUC_THU.VisibleIndex = 9;
+            this.TIEN_THUC_THU.Width = 215;
             // 
             // f360_ban_giao_tien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 437);
-            this.Controls.Add(this.m_fg);
+            this.ClientSize = new System.Drawing.Size(1175, 437);
+            this.Controls.Add(this.gridControl);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_lbl_header);
@@ -326,8 +478,11 @@
             this.Text = "F360 - Bàn giao tiền";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            this.m_pnl_out_place_dm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -354,5 +509,18 @@
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        private DevExpress.XtraGrid.GridControl gridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraGrid.Columns.GridColumn NGAY_THU;
+        private DevExpress.XtraGrid.Columns.GridColumn SO_PHIEU;
+        private DevExpress.XtraGrid.Columns.GridColumn NOI_DUNG;
+        private DevExpress.XtraGrid.Columns.GridColumn MA_HOC_SINH;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_HOC_VIEN;
+        private DevExpress.XtraGrid.Columns.GridColumn CHECK;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit;
+        private DevExpress.XtraGrid.Columns.GridColumn NGUOI_THU;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_LOP_MON;
+        private DevExpress.XtraGrid.Columns.GridColumn TIEN_THUC_THU;
     }
 }

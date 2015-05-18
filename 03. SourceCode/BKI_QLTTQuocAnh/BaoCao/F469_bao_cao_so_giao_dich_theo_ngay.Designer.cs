@@ -34,22 +34,26 @@
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_dat_tai_ngay = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_tu_ngay = new System.Windows.Forms.Label();
+            this.gridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 108);
+            this.m_fg.Location = new System.Drawing.Point(12, 12);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(787, 340);
+            this.m_fg.Size = new System.Drawing.Size(932, 78);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 3;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_fg);
             this.panel1.Controls.Add(this.m_txt_tong_tien);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.m_lbl_header);
@@ -58,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(787, 108);
+            this.panel1.Size = new System.Drawing.Size(1176, 108);
             this.panel1.TabIndex = 4;
             // 
             // m_txt_tong_tien
@@ -89,7 +93,7 @@
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(787, 45);
+            this.m_lbl_header.Size = new System.Drawing.Size(1176, 45);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÁO CÁO SỔ GIAO DỊCH THEO NGÀY";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,18 +117,36 @@
             this.m_lbl_tu_ngay.TabIndex = 3;
             this.m_lbl_tu_ngay.Text = "Tại ngày";
             // 
+            // gridControl
+            // 
+            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.Location = new System.Drawing.Point(0, 108);
+            this.gridControl.MainView = this.gridView;
+            this.gridControl.Name = "gridControl";
+            this.gridControl.Size = new System.Drawing.Size(1176, 340);
+            this.gridControl.TabIndex = 5;
+            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView});
+            // 
+            // gridView
+            // 
+            this.gridView.GridControl = this.gridControl;
+            this.gridView.Name = "gridView";
+            // 
             // F469_bao_cao_so_giao_dich_theo_ngay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 448);
-            this.Controls.Add(this.m_fg);
+            this.ClientSize = new System.Drawing.Size(1176, 448);
+            this.Controls.Add(this.gridControl);
             this.Controls.Add(this.panel1);
             this.Name = "F469_bao_cao_so_giao_dich_theo_ngay";
             this.Text = "F469_bao_cao_so_giao_dich_theo_ngay";
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,5 +160,7 @@
         private System.Windows.Forms.Label m_lbl_tu_ngay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox m_txt_tong_tien;
+        private DevExpress.XtraGrid.GridControl gridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
     }
 }

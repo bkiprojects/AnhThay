@@ -155,6 +155,30 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             create_tree_2grid();
             CGridUtils.MakeSoTT(0, m_fg);
             wrap_text_cell();
+
+            gridControl.DataSource = m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_PH].Visible = false;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.ID].Visible = false;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.ID_LOAI_PHIEU_THU].Visible = false;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.ID_LOP_MON].Visible = false;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.ID_NGUOI_THU].Visible = false;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_LOAI_PHIEU_THU].Visible = false;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.ID_HOC_SINH].Visible = false;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_GIAM_TRU].Visible = false;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_PHAI_THU].Visible = false;
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_CON_PHAI_THU].Visible = false;
+
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_HS].Caption= "Họ tên HV";
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.MA_HOC_SINH].Caption = "Mã HV";
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NGAY_THU].Caption = "Ngày thu";
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NOI_DUNG].Caption = "Nội dung";
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.SO_PHIEU].Caption = "Số phiếu";
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_LOP_MON].Caption = "Lớp";
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_NGUOI_THU].Caption = "Người thu";
+            //gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_THUC_THU].Caption = "Tiền thực thu";
+
+           // gridView.OptionsBehavior.Editable = false;
+            //gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
         }
         private void load_data_2_cbo_nhan_vien() {
             DS_V_HT_NGUOI_SU_DUNG v_ds = new DS_V_HT_NGUOI_SU_DUNG();
@@ -210,6 +234,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.KeyDown += f360_ban_giao_tien_KeyDown;
             m_fg.DoubleClick += m_fg_DoubleClick;
         }
+
+        
+     
 
         void m_fg_DoubleClick(object sender, EventArgs e) {
             try {
