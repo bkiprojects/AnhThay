@@ -127,6 +127,7 @@
             this.m_fg.Size = new System.Drawing.Size(481, 89);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 21;
+            this.m_fg.Visible = false;
             // 
             // m_cmd_search
             // 
