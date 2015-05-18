@@ -746,7 +746,7 @@ namespace BKI_QLTTQuocAnh
                 return true;
             }
             US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(ip_us_rpt.dcID);
-            if (v_us_gd_pt.dcID_TRANG_THAI == CONST_ID_TRANG_THAI_BAN_GIAO.BAN_GIAO_THU_QUY)
+            if (v_us_gd_pt.dcID_TRANG_THAI == CONST_ID_TRANG_THAI_BAN_GIAO.DA_BAN_GIAO)
             {
                 return false;
             }

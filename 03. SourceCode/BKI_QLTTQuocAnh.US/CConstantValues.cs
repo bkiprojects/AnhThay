@@ -29,9 +29,7 @@ namespace BKI_QLTTQuocAnh.US {
     }
 
     public class CONST_ID_TRANG_THAI_BAN_GIAO {
-        public const decimal BAN_GIAO_TRUONG_PHONG = 91;
-        public const decimal BAN_GIAO_CEO = 92;
-        public const decimal BAN_GIAO_THU_QUY = 93;
+        public const decimal DA_BAN_GIAO = 93;
         public const decimal CHUA_BAN_GIAO = 94;
 
     }

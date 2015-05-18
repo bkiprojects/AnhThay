@@ -52,9 +52,6 @@
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CHECK = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NGAY_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SO_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,6 +60,8 @@
             this.NGUOI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -331,6 +330,7 @@
             // 
             // gridControl
             // 
+            this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl.Location = new System.Drawing.Point(0, 150);
             this.gridControl.MainView = this.gridView;
@@ -346,8 +346,6 @@
             // 
             this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CHECK,
-            this.STT,
             this.NGAY_THU,
             this.SO_PHIEU,
             this.NOI_DUNG,
@@ -355,35 +353,15 @@
             this.TEN_HOC_VIEN,
             this.NGUOI_THU,
             this.TEN_LOP_MON,
-            this.TIEN_THUC_THU});
+            this.TIEN_THUC_THU,
+            this.ID});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsSelection.MultiSelect = true;
+            this.gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridView.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.True;
             this.gridView.OptionsView.ShowGroupPanel = false;
-            // 
-            // CHECK
-            // 
-            this.CHECK.Caption = "Chọn";
-            this.CHECK.ColumnEdit = this.repositoryItemCheckEdit;
-            this.CHECK.Name = "CHECK";
-            this.CHECK.Visible = true;
-            this.CHECK.VisibleIndex = 0;
-            // 
-            // repositoryItemCheckEdit
-            // 
-            this.repositoryItemCheckEdit.AutoHeight = false;
-            this.repositoryItemCheckEdit.Caption = "Check";
-            this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
-            this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            // 
-            // STT
-            // 
-            this.STT.Caption = "STT";
-            this.STT.Name = "STT";
-            this.STT.OptionsColumn.AllowEdit = false;
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 1;
-            this.STT.Width = 40;
             // 
             // NGAY_THU
             // 
@@ -392,7 +370,7 @@
             this.NGAY_THU.Name = "NGAY_THU";
             this.NGAY_THU.OptionsColumn.AllowEdit = false;
             this.NGAY_THU.Visible = true;
-            this.NGAY_THU.VisibleIndex = 2;
+            this.NGAY_THU.VisibleIndex = 1;
             this.NGAY_THU.Width = 123;
             // 
             // SO_PHIEU
@@ -402,7 +380,7 @@
             this.SO_PHIEU.Name = "SO_PHIEU";
             this.SO_PHIEU.OptionsColumn.AllowEdit = false;
             this.SO_PHIEU.Visible = true;
-            this.SO_PHIEU.VisibleIndex = 3;
+            this.SO_PHIEU.VisibleIndex = 2;
             this.SO_PHIEU.Width = 76;
             // 
             // NOI_DUNG
@@ -412,7 +390,7 @@
             this.NOI_DUNG.Name = "NOI_DUNG";
             this.NOI_DUNG.OptionsColumn.AllowEdit = false;
             this.NOI_DUNG.Visible = true;
-            this.NOI_DUNG.VisibleIndex = 4;
+            this.NOI_DUNG.VisibleIndex = 3;
             this.NOI_DUNG.Width = 160;
             // 
             // MA_HOC_SINH
@@ -422,7 +400,7 @@
             this.MA_HOC_SINH.Name = "MA_HOC_SINH";
             this.MA_HOC_SINH.OptionsColumn.AllowEdit = false;
             this.MA_HOC_SINH.Visible = true;
-            this.MA_HOC_SINH.VisibleIndex = 5;
+            this.MA_HOC_SINH.VisibleIndex = 4;
             this.MA_HOC_SINH.Width = 55;
             // 
             // TEN_HOC_VIEN
@@ -432,7 +410,7 @@
             this.TEN_HOC_VIEN.Name = "TEN_HOC_VIEN";
             this.TEN_HOC_VIEN.OptionsColumn.AllowEdit = false;
             this.TEN_HOC_VIEN.Visible = true;
-            this.TEN_HOC_VIEN.VisibleIndex = 6;
+            this.TEN_HOC_VIEN.VisibleIndex = 5;
             this.TEN_HOC_VIEN.Width = 132;
             // 
             // NGUOI_THU
@@ -442,7 +420,7 @@
             this.NGUOI_THU.Name = "NGUOI_THU";
             this.NGUOI_THU.OptionsColumn.AllowEdit = false;
             this.NGUOI_THU.Visible = true;
-            this.NGUOI_THU.VisibleIndex = 7;
+            this.NGUOI_THU.VisibleIndex = 6;
             this.NGUOI_THU.Width = 178;
             // 
             // TEN_LOP_MON
@@ -452,7 +430,7 @@
             this.TEN_LOP_MON.Name = "TEN_LOP_MON";
             this.TEN_LOP_MON.OptionsColumn.AllowEdit = false;
             this.TEN_LOP_MON.Visible = true;
-            this.TEN_LOP_MON.VisibleIndex = 8;
+            this.TEN_LOP_MON.VisibleIndex = 7;
             this.TEN_LOP_MON.Width = 178;
             // 
             // TIEN_THUC_THU
@@ -462,8 +440,21 @@
             this.TIEN_THUC_THU.Name = "TIEN_THUC_THU";
             this.TIEN_THUC_THU.OptionsColumn.AllowEdit = false;
             this.TIEN_THUC_THU.Visible = true;
-            this.TIEN_THUC_THU.VisibleIndex = 9;
+            this.TIEN_THUC_THU.VisibleIndex = 8;
             this.TIEN_THUC_THU.Width = 215;
+            // 
+            // repositoryItemCheckEdit
+            // 
+            this.repositoryItemCheckEdit.AutoHeight = false;
+            this.repositoryItemCheckEdit.Caption = "Check";
+            this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
+            this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
+            // ID
+            // 
+            this.ID.Caption = "ID";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
             // 
             // f360_ban_giao_tien
             // 
@@ -511,16 +502,15 @@
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private DevExpress.XtraGrid.GridControl gridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn NGAY_THU;
         private DevExpress.XtraGrid.Columns.GridColumn SO_PHIEU;
         private DevExpress.XtraGrid.Columns.GridColumn NOI_DUNG;
         private DevExpress.XtraGrid.Columns.GridColumn MA_HOC_SINH;
         private DevExpress.XtraGrid.Columns.GridColumn TEN_HOC_VIEN;
-        private DevExpress.XtraGrid.Columns.GridColumn CHECK;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit;
         private DevExpress.XtraGrid.Columns.GridColumn NGUOI_THU;
         private DevExpress.XtraGrid.Columns.GridColumn TEN_LOP_MON;
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_THUC_THU;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
     }
 }
