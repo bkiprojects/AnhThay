@@ -465,6 +465,20 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             if (DialogResult.Yes == BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắc muốn lớp này hoạt động không?"))
             {
                 US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON(m_op_dc_id_lop_mon);
+                //try
+                //{
+                //    v_us_dm_lop_mon.BeginTransaction();
+                //    v_us_dm_lop_mon.update_by_proc(v_us_dm_lop_mon.strMA_LOP_MON);
+                //    v_us_dm_lop_mon.CommitTransaction();
+                //    //m_fg.Rows.Remove(m_fg.Row);
+                //}
+                //catch (Exception v_e)
+                //{
+                //    v_us_dm_lop_mon.Rollback();
+                //    CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
+                //        new CDBClientDBExceptionInterpret());
+                //    v_objErrHandler.showErrorMessage();
+                //}
                 v_us_dm_lop_mon.dcTRANG_THAI_LOP_MON = 88;
                 v_us_dm_lop_mon.Update();
                 BaseMessages.MsgBox_Infor("Xong!!!");

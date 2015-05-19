@@ -21,6 +21,7 @@ using IP.Core.IPSystemAdmin;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
+using BKI_QLTTQuocAnh.DanhMuc;
 
 using C1.Win.C1FlexGrid;
 
@@ -229,9 +230,9 @@ namespace BKI_QLTTQuocAnh
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 148);
+            this.m_fg.Location = new System.Drawing.Point(0, 169);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 225);
+            this.m_fg.Size = new System.Drawing.Size(686, 204);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -259,7 +260,7 @@ namespace BKI_QLTTQuocAnh
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 103);
+            this.panel1.Size = new System.Drawing.Size(686, 124);
             this.panel1.TabIndex = 22;
             // 
             // m_cbo_trang_thai_hv
@@ -291,9 +292,9 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_search.AutoSize = true;
             this.m_lbl_search.Location = new System.Drawing.Point(7, 62);
             this.m_lbl_search.Name = "m_lbl_search";
-            this.m_lbl_search.Size = new System.Drawing.Size(108, 13);
+            this.m_lbl_search.Size = new System.Drawing.Size(93, 39);
             this.m_lbl_search.TabIndex = 2;
-            this.m_lbl_search.Text = "Tìm kiếm (mã-tên HS)";
+            this.m_lbl_search.Text = "Tìm kiếm theo : \r\nmã, tên HS, email,\r\ntrường đang học";
             // 
             // m_cbo_lop_mon
             // 
@@ -426,6 +427,17 @@ namespace BKI_QLTTQuocAnh
         private void set_initial_form_load()
         {
             //CCommon.load_data_2_cbo_lop_mon(-1, m_cbo_lop_mon);
+            
+
+            add_value_to_cbo_lop(); 
+
+            m_obj_trans = get_trans_object(m_fg);
+            //m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
+            load_data_2_grid();
+        }
+
+        private void add_value_to_cbo_lop()
+        {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
             US_DM_LOP_MON v_us = new US_DM_LOP_MON();
             v_us.FillDataset(v_ds);
@@ -433,10 +445,6 @@ namespace BKI_QLTTQuocAnh
             m_cbo_lop_mon.DataSource = v_ds.DM_LOP_MON;
             m_cbo_lop_mon.DisplayMember = DM_LOP_MON.MO_TA;
             m_cbo_lop_mon.ValueMember = DM_LOP_MON.ID;
-
-            m_obj_trans = get_trans_object(m_fg);
-            //m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
-            load_data_2_grid();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
@@ -473,8 +481,16 @@ namespace BKI_QLTTQuocAnh
         {
             m_ds.Clear();
             m_ds.EnforceConstraints = false;
-            m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
-            m_us.FillDataset(m_ds);
+            string ip_txt_search = m_txt_search.Text;
+            //m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+            m_us.FillDataset(m_ds, "where ID_LOP_MON = " + m_cbo_lop_mon.SelectedValue +
+                            " and (MA_DOI_TUONG like '%" + ip_txt_search +
+                            "%' or HO_TEN like N'%" + ip_txt_search +
+                            "%' or TRUONG_DANG_HOC like N'%" + ip_txt_search +
+                            "%' or EMAIL_HS like N'%" + ip_txt_search + "%')");
+                            //"%' or facebook like n'%" + ip_txt_search + 
+            //m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+            //m_us.FillDataset(m_ds);
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 
@@ -508,17 +524,42 @@ namespace BKI_QLTTQuocAnh
         {
             //	f250_dm_hs_theo_lop_DE v_fDE = new  f250_dm_hs_theo_lop_DE();								
             //	v_fDE.display();
-            load_data_2_grid();
+            //load_data_2_grid();
+            try
+            {
+                F251_dm_hs_theo_lop_de v_fde = new F251_dm_hs_theo_lop_de();
+                v_fde.display();
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                
+                throw v_e;
+            }
+            
+
         }
 
         private void update_v_dm_hoc_sinh_gd_hoc_dm_lop_mon()
         {
+
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
             //	f250_dm_hs_theo_lop_DE v_fDE = new f250_dm_hs_theo_lop_DE();
             //	v_fDE.display(m_us);
-            load_data_2_grid();
+            try
+            {
+                F251_dm_hs_theo_lop_de v_fde = new F251_dm_hs_theo_lop_de();
+                v_fde.display();
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                
+                throw v_e;
+            }
+           
         }
 
         private void delete_v_dm_hoc_sinh_gd_hoc_dm_lop_mon()
@@ -559,6 +600,21 @@ namespace BKI_QLTTQuocAnh
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
+            m_cmd_search.Click += m_cmd_search_Click;
+        }
+
+        void m_cmd_search_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                
+                throw v_e;
+            }
+            
         }
         #endregion
 
