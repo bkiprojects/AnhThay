@@ -38,10 +38,30 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             this.ShowDialog();
         }
 
-        public void display_4_update()
+        public void display_4_update(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
+            m_us = v_us;
+            us_2_form(m_us);
             this.ShowDialog();
+        }
+
+        private void us_2_form(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us)
+        {
+            m_txt_ma_doi_tuong.Text = v_us.strMA_DOI_TUONG;
+            m_txt_ho.Text = v_us.strHO;
+            m_txt_ten.Text = v_us.strTEN;
+            m_dat_ngay_sinh.Value = v_us.datNGAY_SINH;
+            m_txt_email.Text = v_us.strEMAIL_HS;
+            m_txt_sdt.Text = v_us.strSDT_HS;
+            m_txt_dia_chi.Text = v_us.strDIA_CHI;
+            m_txt_facebook.Text = v_us.strFACEBOOK;
+            m_txt_truong_dang_hoc.Text = v_us.strTRUONG_DANG_HOC;
+            m_cbo_lop.SelectedValue = v_us.dcID_LOP_MON;
+            m_txt_hoc_phi.Text = v_us.dcDON_GIA_BUOI_HOC.ToString();
+            m_dat_thoi_gian_start.Value = v_us.datTHOI_GIAN_HOC_FROM_DATE;
+            m_dat_thoi_gian_end.Value = v_us.datTHOI_GIAN_HOC_TO_DATE;
+            m_txt_ghi_chu.Text = v_us.strGHI_CHU;
         }
         #endregion
 
@@ -149,6 +169,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
         private void save_data()
         {
+            
             if (check_validate_data_is_OK() != true)
             {
                 return;
@@ -158,6 +179,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
             switch (m_e_form_mode)
             {
+                
                 case DataEntryFormMode.InsertDataState:
                     //us.insert();
 
@@ -181,8 +203,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                 case DataEntryFormMode.UpdateDataState:
                     //us.UPDATE();
                     //m_us.Update();
-                    US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
-                    v_us.update_by_proc(v_us.dcID
+                    
+                    m_us.update_by_proc(m_us.dcID
                                         , m_txt_ma_doi_tuong.Text
                                         , m_txt_ho.Text
                                         , m_txt_ten.Text
@@ -197,7 +219,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                                         , m_dat_thoi_gian_start.Value
                                         , m_dat_thoi_gian_end.Value
                                         , m_txt_ghi_chu.Text
-                                        , v_us.dcID_GD_HOC);
+                                        , m_us.dcID_GD_HOC);
                     BaseMessages.MsgBox_Infor("Bạn đã sửa thành công!!!");
                     this.Close();
                     break;

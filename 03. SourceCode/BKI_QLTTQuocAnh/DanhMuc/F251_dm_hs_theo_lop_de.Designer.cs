@@ -573,7 +573,7 @@
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(685, 44);
             this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "NHẬP THÔNG TIN HỌC VIÊN VÀ LỚP";
+            this.m_lbl_header.Text = "NHẬP VÀ CHỈNH SỬA THÔNG TIN HỌC VIÊN VÀ LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // F251_dm_hs_theo_lop_de
@@ -586,7 +586,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.m_grb_thong_tin_hv);
             this.Name = "F251_dm_hs_theo_lop_de";
-            this.Text = "F251_dm_hs_theo_lop_de";
+            this.Text = "NHẬP VÀ CHỈNH SỬA THÔNG TIN HỌC VIÊN";
             this.m_grb_thong_tin_hv.ResumeLayout(false);
             this.m_grb_thong_tin_hv.PerformLayout();
             this.groupBox2.ResumeLayout(false);
