@@ -25,7 +25,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             InitializeComponent();
             format_control();
         }
-        
+
         #region Public Interface
         public void display()
         {
@@ -38,7 +38,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             this.ShowDialog();
         }
 
-        public void display_4_update(US.US_DM_LOP_MON ip_us_dm_lop_mon)
+        public void display_4_update()
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
             this.ShowDialog();
@@ -62,7 +62,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
         private void set_initial_form_load()
         {
-            add_value_to_cbo_lop(); 
+            add_value_to_cbo_lop();
         }
 
         private void add_value_to_cbo_lop()
@@ -146,34 +146,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_dat_thoi_gian_end.Value = m_us.datTHOI_GIAN_HOC_TO_DATE;
             m_txt_ghi_chu.Text = m_us.strGHI_CHU;
         }
-        
-        #endregion
-
-        #region Events
-        private void set_define_events()
-        {
-            this.Load += F251_dm_hs_theo_lop_de_Load;
-            this.KeyDown += F251_dm_hs_theo_lop_de_KeyDown;
-            m_cmd_save.Click += m_cmd_insert_Click;
-            m_cmd_delete.Click += m_cmd_delete_Click;
-        }
-
-        void m_cmd_delete_Click(object sender, EventArgs e)
-        {
-            return;   
-        }
-
-        void m_cmd_insert_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                save_data();
-            }
-            catch (Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
 
         private void save_data()
         {
@@ -188,13 +160,44 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             {
                 case DataEntryFormMode.InsertDataState:
                     //us.insert();
-                    m_us.Insert();
+
+                    m_us.insert_by_proc(m_txt_ma_doi_tuong.Text
+                                        , m_txt_ho.Text
+                                        , m_txt_ten.Text
+                                        , m_dat_ngay_sinh.Value
+                                        , m_txt_email.Text
+                                        , m_txt_dia_chi.Text
+                                        , m_txt_sdt.Text
+                                        , m_txt_facebook.Text
+                                        , m_txt_truong_dang_hoc.Text
+                                        , CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                                        , CIPConvert.ToDecimal(m_txt_hoc_phi.Text)
+                                        , m_dat_thoi_gian_start.Value
+                                        , m_dat_thoi_gian_end.Value
+                                        , m_txt_ghi_chu.Text);
                     BaseMessages.MsgBox_Infor("Bạn đã thêm thành công!!!");
                     this.Close();
                     break;
                 case DataEntryFormMode.UpdateDataState:
                     //us.UPDATE();
-                    m_us.Update();
+                    //m_us.Update();
+                    US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+                    v_us.update_by_proc(v_us.dcID
+                                        , m_txt_ma_doi_tuong.Text
+                                        , m_txt_ho.Text
+                                        , m_txt_ten.Text
+                                        , m_dat_ngay_sinh.Value
+                                        , m_txt_email.Text
+                                        , m_txt_sdt.Text
+                                        , m_txt_dia_chi.Text
+                                        , m_txt_facebook.Text
+                                        , m_txt_truong_dang_hoc.Text
+                                        , CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                                        , CIPConvert.ToDecimal(m_txt_hoc_phi.Text)
+                                        , m_dat_thoi_gian_start.Value
+                                        , m_dat_thoi_gian_end.Value
+                                        , m_txt_ghi_chu.Text
+                                        , v_us.dcID_GD_HOC);
                     BaseMessages.MsgBox_Infor("Bạn đã sửa thành công!!!");
                     this.Close();
                     break;
@@ -202,6 +205,62 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                     break;
             }
         }
+
+        private void delete_data()
+        {
+            
+        }
+        #endregion
+
+        #region Events
+        private void set_define_events()
+        {
+            this.Load += F251_dm_hs_theo_lop_de_Load;
+            this.KeyDown += F251_dm_hs_theo_lop_de_KeyDown;
+            m_cmd_save.Click += m_cmd_save_Click;
+            m_cmd_delete.Click += m_cmd_delete_Click;
+            m_cmd_exit.Click += m_cmd_exit_Click;
+        }
+
+        void m_cmd_exit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        void m_cmd_delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                delete_data();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        
+
+        void m_cmd_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                save_data();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+
 
         void F251_dm_hs_theo_lop_de_KeyDown(object sender, KeyEventArgs e)
         {
@@ -227,10 +286,10 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
-            } 
-            
+            }
+
         }
-       
+
         #endregion
     }
 }

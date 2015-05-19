@@ -94,7 +94,7 @@
             this.label2.Location = new System.Drawing.Point(6, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Họ (*)";
             // 
             // label5
@@ -104,7 +104,7 @@
             this.label5.Location = new System.Drawing.Point(5, 234);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 13);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 16;
             this.label5.Text = "Trường đang học";
             // 
             // label6
@@ -114,7 +114,7 @@
             this.label6.Location = new System.Drawing.Point(6, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 5;
+            this.label6.TabIndex = 8;
             this.label6.Text = "Email";
             // 
             // label7
@@ -124,7 +124,7 @@
             this.label7.Location = new System.Drawing.Point(6, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 6;
+            this.label7.TabIndex = 12;
             this.label7.Text = "Địa chỉ";
             // 
             // label11
@@ -134,7 +134,7 @@
             this.label11.Location = new System.Drawing.Point(3, 35);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(66, 13);
-            this.label11.TabIndex = 10;
+            this.label11.TabIndex = 0;
             this.label11.Text = "Tên lớp môn";
             // 
             // label12
@@ -144,7 +144,7 @@
             this.label12.Location = new System.Drawing.Point(336, 35);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 13);
-            this.label12.TabIndex = 11;
+            this.label12.TabIndex = 2;
             this.label12.Text = "Học phí";
             // 
             // label13
@@ -154,7 +154,7 @@
             this.label13.Location = new System.Drawing.Point(2, 72);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(69, 13);
-            this.label13.TabIndex = 12;
+            this.label13.TabIndex = 5;
             this.label13.Text = "Tổng số buổi";
             this.label13.Visible = false;
             // 
@@ -165,7 +165,7 @@
             this.label14.Location = new System.Drawing.Point(3, 110);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(74, 13);
-            this.label14.TabIndex = 13;
+            this.label14.TabIndex = 10;
             this.label14.Text = "Thời gian start";
             // 
             // m_lbl_thoi_gian_end
@@ -175,7 +175,7 @@
             this.m_lbl_thoi_gian_end.Location = new System.Drawing.Point(336, 110);
             this.m_lbl_thoi_gian_end.Name = "m_lbl_thoi_gian_end";
             this.m_lbl_thoi_gian_end.Size = new System.Drawing.Size(72, 13);
-            this.m_lbl_thoi_gian_end.TabIndex = 14;
+            this.m_lbl_thoi_gian_end.TabIndex = 12;
             this.m_lbl_thoi_gian_end.Text = "Thời gian end";
             // 
             // label17
@@ -185,7 +185,7 @@
             this.label17.Location = new System.Drawing.Point(3, 148);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(44, 13);
-            this.label17.TabIndex = 16;
+            this.label17.TabIndex = 14;
             this.label17.Text = "Ghi chú";
             // 
             // label18
@@ -195,7 +195,7 @@
             this.label18.Location = new System.Drawing.Point(334, 72);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(100, 13);
-            this.label18.TabIndex = 17;
+            this.label18.TabIndex = 7;
             this.label18.Text = "Tổng tiền khóa học";
             this.label18.Visible = false;
             // 
@@ -206,7 +206,7 @@
             this.m_txt_ghi_chu.Multiline = true;
             this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
             this.m_txt_ghi_chu.Size = new System.Drawing.Size(563, 107);
-            this.m_txt_ghi_chu.TabIndex = 32;
+            this.m_txt_ghi_chu.TabIndex = 15;
             // 
             // m_txt_tong_tien
             // 
@@ -214,7 +214,7 @@
             this.m_txt_tong_tien.Location = new System.Drawing.Point(462, 68);
             this.m_txt_tong_tien.Name = "m_txt_tong_tien";
             this.m_txt_tong_tien.Size = new System.Drawing.Size(147, 20);
-            this.m_txt_tong_tien.TabIndex = 35;
+            this.m_txt_tong_tien.TabIndex = 8;
             this.m_txt_tong_tien.Visible = false;
             // 
             // m_txt_hoc_phi
@@ -223,7 +223,7 @@
             this.m_txt_hoc_phi.Location = new System.Drawing.Point(462, 31);
             this.m_txt_hoc_phi.Name = "m_txt_hoc_phi";
             this.m_txt_hoc_phi.Size = new System.Drawing.Size(147, 20);
-            this.m_txt_hoc_phi.TabIndex = 36;
+            this.m_txt_hoc_phi.TabIndex = 3;
             // 
             // m_txt_tong_so_buoi
             // 
@@ -231,7 +231,7 @@
             this.m_txt_tong_so_buoi.Location = new System.Drawing.Point(80, 68);
             this.m_txt_tong_so_buoi.Name = "m_txt_tong_so_buoi";
             this.m_txt_tong_so_buoi.Size = new System.Drawing.Size(205, 20);
-            this.m_txt_tong_so_buoi.TabIndex = 37;
+            this.m_txt_tong_so_buoi.TabIndex = 6;
             this.m_txt_tong_so_buoi.Visible = false;
             // 
             // m_cbo_lop
@@ -241,7 +241,7 @@
             this.m_cbo_lop.Location = new System.Drawing.Point(80, 31);
             this.m_cbo_lop.Name = "m_cbo_lop";
             this.m_cbo_lop.Size = new System.Drawing.Size(205, 21);
-            this.m_cbo_lop.TabIndex = 44;
+            this.m_cbo_lop.TabIndex = 1;
             // 
             // label3
             // 
@@ -250,7 +250,7 @@
             this.label3.Location = new System.Drawing.Point(262, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 4;
             this.label3.Text = "Tên (*)";
             // 
             // label8
@@ -260,7 +260,7 @@
             this.label8.Location = new System.Drawing.Point(434, 108);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 13);
-            this.label8.TabIndex = 7;
+            this.label8.TabIndex = 10;
             this.label8.Text = "SĐT (*)";
             // 
             // label9
@@ -270,7 +270,7 @@
             this.label9.Location = new System.Drawing.Point(434, 71);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 13);
-            this.label9.TabIndex = 8;
+            this.label9.TabIndex = 6;
             this.label9.Text = "Ngày sinh";
             // 
             // m_txt_ma_doi_tuong
@@ -279,7 +279,7 @@
             this.m_txt_ma_doi_tuong.Location = new System.Drawing.Point(97, 34);
             this.m_txt_ma_doi_tuong.Name = "m_txt_ma_doi_tuong";
             this.m_txt_ma_doi_tuong.Size = new System.Drawing.Size(100, 20);
-            this.m_txt_ma_doi_tuong.TabIndex = 21;
+            this.m_txt_ma_doi_tuong.TabIndex = 1;
             // 
             // m_txt_ho
             // 
@@ -287,7 +287,7 @@
             this.m_txt_ho.Location = new System.Drawing.Point(60, 67);
             this.m_txt_ho.Name = "m_txt_ho";
             this.m_txt_ho.Size = new System.Drawing.Size(184, 20);
-            this.m_txt_ho.TabIndex = 22;
+            this.m_txt_ho.TabIndex = 3;
             // 
             // m_txt_truong_dang_hoc
             // 
@@ -295,7 +295,7 @@
             this.m_txt_truong_dang_hoc.Location = new System.Drawing.Point(118, 231);
             this.m_txt_truong_dang_hoc.Name = "m_txt_truong_dang_hoc";
             this.m_txt_truong_dang_hoc.Size = new System.Drawing.Size(145, 20);
-            this.m_txt_truong_dang_hoc.TabIndex = 23;
+            this.m_txt_truong_dang_hoc.TabIndex = 17;
             // 
             // m_txt_ten
             // 
@@ -303,7 +303,7 @@
             this.m_txt_ten.Location = new System.Drawing.Point(305, 67);
             this.m_txt_ten.Name = "m_txt_ten";
             this.m_txt_ten.Size = new System.Drawing.Size(100, 20);
-            this.m_txt_ten.TabIndex = 24;
+            this.m_txt_ten.TabIndex = 5;
             // 
             // m_txt_email
             // 
@@ -311,7 +311,7 @@
             this.m_txt_email.Location = new System.Drawing.Point(60, 104);
             this.m_txt_email.Name = "m_txt_email";
             this.m_txt_email.Size = new System.Drawing.Size(345, 20);
-            this.m_txt_email.TabIndex = 25;
+            this.m_txt_email.TabIndex = 9;
             // 
             // m_txt_dia_chi
             // 
@@ -320,7 +320,7 @@
             this.m_txt_dia_chi.Multiline = true;
             this.m_txt_dia_chi.Name = "m_txt_dia_chi";
             this.m_txt_dia_chi.Size = new System.Drawing.Size(345, 70);
-            this.m_txt_dia_chi.TabIndex = 26;
+            this.m_txt_dia_chi.TabIndex = 13;
             // 
             // m_txt_sdt
             // 
@@ -328,7 +328,7 @@
             this.m_txt_sdt.Location = new System.Drawing.Point(494, 104);
             this.m_txt_sdt.Name = "m_txt_sdt";
             this.m_txt_sdt.Size = new System.Drawing.Size(152, 20);
-            this.m_txt_sdt.TabIndex = 27;
+            this.m_txt_sdt.TabIndex = 11;
             // 
             // m_dat_ngay_sinh
             // 
@@ -336,7 +336,7 @@
             this.m_dat_ngay_sinh.Location = new System.Drawing.Point(519, 67);
             this.m_dat_ngay_sinh.Name = "m_dat_ngay_sinh";
             this.m_dat_ngay_sinh.Size = new System.Drawing.Size(127, 20);
-            this.m_dat_ngay_sinh.TabIndex = 43;
+            this.m_dat_ngay_sinh.TabIndex = 7;
             // 
             // label1
             // 
@@ -345,7 +345,7 @@
             this.label1.Location = new System.Drawing.Point(434, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 45;
+            this.label1.TabIndex = 14;
             this.label1.Text = "Facebook";
             // 
             // m_txt_facebook
@@ -355,7 +355,7 @@
             this.m_txt_facebook.Multiline = true;
             this.m_txt_facebook.Name = "m_txt_facebook";
             this.m_txt_facebook.Size = new System.Drawing.Size(127, 70);
-            this.m_txt_facebook.TabIndex = 46;
+            this.m_txt_facebook.TabIndex = 15;
             // 
             // m_grb_thong_tin_hv
             // 
@@ -381,7 +381,7 @@
             this.m_grb_thong_tin_hv.Location = new System.Drawing.Point(9, 51);
             this.m_grb_thong_tin_hv.Name = "m_grb_thong_tin_hv";
             this.m_grb_thong_tin_hv.Size = new System.Drawing.Size(663, 273);
-            this.m_grb_thong_tin_hv.TabIndex = 47;
+            this.m_grb_thong_tin_hv.TabIndex = 1;
             this.m_grb_thong_tin_hv.TabStop = false;
             this.m_grb_thong_tin_hv.Text = "Thông tin học viên";
             // 
@@ -407,7 +407,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 342);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(660, 280);
-            this.groupBox2.TabIndex = 48;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin lớp";
             // 
@@ -417,7 +417,7 @@
             this.m_dat_thoi_gian_end.Location = new System.Drawing.Point(448, 104);
             this.m_dat_thoi_gian_end.Name = "m_dat_thoi_gian_end";
             this.m_dat_thoi_gian_end.Size = new System.Drawing.Size(161, 20);
-            this.m_dat_thoi_gian_end.TabIndex = 51;
+            this.m_dat_thoi_gian_end.TabIndex = 13;
             // 
             // label10
             // 
@@ -426,7 +426,7 @@
             this.label10.Location = new System.Drawing.Point(619, 72);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(30, 13);
-            this.label10.TabIndex = 50;
+            this.label10.TabIndex = 9;
             this.label10.Text = "VNĐ";
             this.label10.Visible = false;
             // 
@@ -437,7 +437,7 @@
             this.label4.Location = new System.Drawing.Point(619, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 49;
+            this.label4.TabIndex = 4;
             this.label4.Text = "VNĐ";
             // 
             // m_dat_thoi_gian_start
@@ -446,7 +446,7 @@
             this.m_dat_thoi_gian_start.Location = new System.Drawing.Point(80, 106);
             this.m_dat_thoi_gian_start.Name = "m_dat_thoi_gian_start";
             this.m_dat_thoi_gian_start.Size = new System.Drawing.Size(161, 20);
-            this.m_dat_thoi_gian_start.TabIndex = 48;
+            this.m_dat_thoi_gian_start.TabIndex = 11;
             // 
             // ImageList
             // 
@@ -487,7 +487,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(685, 36);
-            this.m_pnl_out_place_dm.TabIndex = 49;
+            this.m_pnl_out_place_dm.TabIndex = 3;
             // 
             // m_cmd_delete
             // 
@@ -572,7 +572,7 @@
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(685, 44);
-            this.m_lbl_header.TabIndex = 50;
+            this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "NHẬP THÔNG TIN HỌC VIÊN VÀ LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 

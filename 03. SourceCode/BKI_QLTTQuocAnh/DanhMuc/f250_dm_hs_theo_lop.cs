@@ -25,13 +25,11 @@ using BKI_QLTTQuocAnh.DanhMuc;
 
 using C1.Win.C1FlexGrid;
 
-namespace BKI_QLTTQuocAnh
-{
+namespace BKI_QLTTQuocAnh {
 
 
 
-    public class f250_dm_hs_theo_lop : System.Windows.Forms.Form
-    {
+    public class f250_dm_hs_theo_lop : System.Windows.Forms.Form {
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
@@ -225,6 +223,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
             this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Visible = false;
             // 
             // m_fg
             // 
@@ -270,6 +269,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cbo_trang_thai_hv.Name = "m_cbo_trang_thai_hv";
             this.m_cbo_trang_thai_hv.Size = new System.Drawing.Size(176, 21);
             this.m_cbo_trang_thai_hv.TabIndex = 6;
+            this.m_cbo_trang_thai_hv.Visible = false;
             // 
             // m_lbl_trang_thai_hv
             // 
@@ -279,6 +279,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_trang_thai_hv.Size = new System.Drawing.Size(58, 13);
             this.m_lbl_trang_thai_hv.TabIndex = 5;
             this.m_lbl_trang_thai_hv.Text = "Trạng thái ";
+            this.m_lbl_trang_thai_hv.Visible = false;
             // 
             // m_txt_search
             // 
@@ -355,8 +356,7 @@ namespace BKI_QLTTQuocAnh
         #endregion
 
         #region Data Structure
-        private enum e_col_Number
-        {
+        private enum e_col_Number {
             DIA_CHI = 9
 ,
             DON_GIA_BUOI_HOC = 16
@@ -427,9 +427,9 @@ namespace BKI_QLTTQuocAnh
         private void set_initial_form_load()
         {
             //CCommon.load_data_2_cbo_lop_mon(-1, m_cbo_lop_mon);
-            
 
-            add_value_to_cbo_lop(); 
+
+            add_value_to_cbo_lop();
 
             m_obj_trans = get_trans_object(m_fg);
             //m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
@@ -488,7 +488,7 @@ namespace BKI_QLTTQuocAnh
                             "%' or HO_TEN like N'%" + ip_txt_search +
                             "%' or TRUONG_DANG_HOC like N'%" + ip_txt_search +
                             "%' or EMAIL_HS like N'%" + ip_txt_search + "%')");
-                            //"%' or facebook like n'%" + ip_txt_search + 
+            //"%' or facebook like n'%" + ip_txt_search + 
             //m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
             //m_us.FillDataset(m_ds);
             m_fg.Redraw = false;
@@ -528,15 +528,15 @@ namespace BKI_QLTTQuocAnh
             try
             {
                 F251_dm_hs_theo_lop_de v_fde = new F251_dm_hs_theo_lop_de();
-                v_fde.display();
+                v_fde.display_4_insert();
                 load_data_2_grid();
             }
             catch (Exception v_e)
             {
-                
+
                 throw v_e;
             }
-            
+
 
         }
 
@@ -551,29 +551,33 @@ namespace BKI_QLTTQuocAnh
             try
             {
                 F251_dm_hs_theo_lop_de v_fde = new F251_dm_hs_theo_lop_de();
-                v_fde.display();
+                v_fde.display_4_update();
                 load_data_2_grid();
             }
             catch (Exception v_e)
             {
-                
+
                 throw v_e;
             }
-           
+
         }
 
         private void delete_v_dm_hoc_sinh_gd_hoc_dm_lop_mon()
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
+            //if (BaseMessages.askUser_DataCouldBeDeleted(8) != BaseMessages.IsDataCouldBeDeleted.CouldBeDeleted) return;
             US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
             grid2us_object(v_us, m_fg.Row);
             try
             {
-                v_us.BeginTransaction();
-                v_us.Delete();
-                v_us.CommitTransaction();
+
+                if (BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắn muốn xóa học sinh này không?") == DialogResult.Yes)
+                {
+                    v_us.Delete_by_Proc(v_us.dcID, v_us.dcID_GD_HOC);
+                }
+                else
+                    return;
                 m_fg.Rows.Remove(m_fg.Row);
             }
             catch (Exception v_e)
@@ -611,10 +615,10 @@ namespace BKI_QLTTQuocAnh
             }
             catch (Exception v_e)
             {
-                
+
                 throw v_e;
             }
-            
+
         }
         #endregion
 
