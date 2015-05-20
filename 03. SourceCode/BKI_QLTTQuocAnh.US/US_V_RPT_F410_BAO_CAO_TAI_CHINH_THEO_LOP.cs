@@ -206,14 +206,14 @@ namespace BKI_QLTTQuocAnh.US
         #endregion
 
         public void FillDataset_by_lop_mon(DS_V_RPT_F410_BAO_CAO_TAI_CHINH_THEO_LOP op_ip_ds
-            , decimal ip_dc_id_lop_mon
-            , DateTime ip_dat_tu_ngay
-            , DateTime ip_dat_den_ngay)
+            , decimal ip_dc_id_lop_mon)
+            //, DateTime ip_dat_tu_ngay
+            //, DateTime ip_dat_den_ngay)
         {
             CStoredProc v_obj_spr = new CStoredProc("Pr_f410_bao_cao_tai_chinh_theo_lop");
             v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
-            v_obj_spr.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
-            v_obj_spr.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
+            //v_obj_spr.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
+            //v_obj_spr.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
             v_obj_spr.fillDataSetByCommand(this, op_ip_ds);
         }
     }

@@ -366,6 +366,13 @@ namespace BKI_QLTTQuocAnh {
         public void display() {
             this.ShowDialog();
         }
+
+        public void display_from_f410(decimal ip_id_lop_mon)
+        {
+            m_trang_thai_form = 1;
+            m_sle_lop.EditValue = ip_id_lop_mon;
+            this.ShowDialog();
+        }
         #endregion
 
         #region Data Structure
@@ -401,6 +408,7 @@ namespace BKI_QLTTQuocAnh {
         DS_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP m_ds = new DS_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP();
         US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP m_us = new US_V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP();
         DS_DM_LOP_MON m_ds_dm_lop_mon = new DS_DM_LOP_MON();
+        decimal m_trang_thai_form = 0; //m_trang_thai_form = 1 thi f496 la form detail
         #endregion
 
         #region Private Methods
@@ -497,9 +505,9 @@ namespace BKI_QLTTQuocAnh {
             loaiPhieu.Caption = "Loại phiếu";
             PivotGridField lanThu = new PivotGridField(V_GD_PHIEU_THU.LAN_THU, PivotArea.ColumnArea);
             lanThu.Caption = "Lần thứ";
-            PivotGridField chenhLech = new PivotGridField(V_GD_PHIEU_THU.TEN_NGUOI_NOP_TIEN, PivotArea.ColumnArea);
-            chenhLech.Caption = "Chênh lệch";
-            chenhLech.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Custom;
+            //PivotGridField chenhLech = new PivotGridField(V_GD_PHIEU_THU.TEN_NGUOI_NOP_TIEN, PivotArea.ColumnArea);
+            //chenhLech.Caption = "Chênh lệch";
+            //chenhLech.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Custom;
 
             PivotGridFieldBase.DefaultDecimalFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             PivotGridFieldBase.DefaultDecimalFormat.FormatString = "n2";
@@ -508,7 +516,8 @@ namespace BKI_QLTTQuocAnh {
 
             
 
-            pivotGridControl.Fields.AddRange(new PivotGridField[] { hoTen, maDoiTuong, loaiPhieu, lanThu, ngayThu, soTien, chenhLech });
+            //pivotGridControl.Fields.AddRange(new PivotGridField[] { hoTen, maDoiTuong, loaiPhieu, lanThu, ngayThu, soTien, chenhLech });
+            pivotGridControl.Fields.AddRange(new PivotGridField[] { hoTen, maDoiTuong, loaiPhieu, lanThu, ngayThu, soTien });
             ngayThu.GroupInterval = PivotGroupInterval.Date;
 
 
@@ -705,6 +714,10 @@ namespace BKI_QLTTQuocAnh {
                 if(e.KeyCode == Keys.Enter) {
                     load_data_2_grid();
                 }
+                else if (e.KeyCode == Keys.Escape)
+                {
+                    this.Close();
+                }
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -824,8 +837,14 @@ namespace BKI_QLTTQuocAnh {
 
         private void pivotGridControl_CellDoubleClick(object sender, PivotCellEventArgs e) {
             try {
-                f496_chi_tiet_phieu_de v_frm = new f496_chi_tiet_phieu_de();
-                v_frm.gridControl1.DataSource = e.CreateDrillDownDataSource();
+                //f496_chi_tiet_phieu_de v_frm = new f496_chi_tiet_phieu_de();
+                //v_frm.gridControl1.DataSource = e.CreateDrillDownDataSource();
+                //v_frm.ShowDialog();
+                Form v_frm = new Form();
+
+                GridControl v_grv = new GridControl();
+                v_grv.Parent = v_frm;
+                v_grv.DataSource = e.CreateDrillDownDataSource();
                 v_frm.ShowDialog();
                 // Display the form.
                 v_frm.Dispose();

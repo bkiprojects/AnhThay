@@ -450,10 +450,10 @@ namespace BKI_QLTTQuocAnh
             this.ShowDialog();
         }
 
-        public void display_from_f410(decimal ip_dc_id_lop, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay)
+        public void display_from_f410(decimal ip_dc_id_lop)
         {
-            m_dat_tu_ngay.Value = ip_dat_tu_ngay.Date;
-            m_dat_den_ngay.Value = ip_dat_den_ngay.Date;
+            //m_dat_tu_ngay.Value = ip_dat_tu_ngay.Date;
+            //m_dat_den_ngay.Value = ip_dat_den_ngay.Date;
             m_cbo_lop_mon.SelectedValue = ip_dc_id_lop;
             m_trang_thai_hien_thi = 1;
             this.ShowDialog();
