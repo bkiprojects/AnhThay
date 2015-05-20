@@ -91,8 +91,9 @@ namespace BKI_QLTTQuocAnh {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f300_import_ds_hoc_vien));
-            this.ImageList = new System.Windows.Forms.ImageList();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -367,7 +368,7 @@ namespace BKI_QLTTQuocAnh {
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(928, 53);
+            this.label7.Location = new System.Drawing.Point(928, 75);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 41;
@@ -387,9 +388,9 @@ namespace BKI_QLTTQuocAnh {
             // 
             this.m_lbl_pink.BackColor = System.Drawing.Color.Pink;
             this.m_lbl_pink.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.m_lbl_pink.Location = new System.Drawing.Point(866, 51);
+            this.m_lbl_pink.Location = new System.Drawing.Point(866, 74);
             this.m_lbl_pink.Name = "m_lbl_pink";
-            this.m_lbl_pink.Size = new System.Drawing.Size(56, 23);
+            this.m_lbl_pink.Size = new System.Drawing.Size(56, 15);
             this.m_lbl_pink.TabIndex = 41;
             // 
             // m_cmd_save_data

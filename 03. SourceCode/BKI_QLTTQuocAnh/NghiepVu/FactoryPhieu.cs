@@ -59,8 +59,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             set_form_load(ip_f350);
         }
         public void set_form_load(F350_lap_phieu_thu ip_f350) {
-            ip_f350.Text = "LẬP HỌC PHÍ HỌC VIÊN";
-            ip_f350.m_lbl_header_left.Text = ip_f350.Text;
+            ip_f350.Text = "F350 - LẬP HỌC PHÍ HỌC VIÊN";
+            ip_f350.m_lbl_header_left.Text = "LẬP HỌC PHÍ HỌC VIÊN";
 
             ip_f350.m_lbl_so_phieu_thu.Visible = false;
             ip_f350.m_sle_so_phieu_thu.Visible = false;
@@ -85,8 +85,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             set_form_load(ip_f350);
         }
         public void set_form_load(F350_lap_phieu_thu ip_f350) {
-            ip_f350.Text = "LẬP GIẢM TRỪ HỌC VIÊN";
-            ip_f350.m_lbl_header_left.Text = ip_f350.Text;
+            ip_f350.Text = "F350 - LẬP GIẢM TRỪ HỌC VIÊN";
+            ip_f350.m_lbl_header_left.Text = "LẬP GIẢM TRỪ HỌC VIÊN";
             ip_f350.m_lbl_so_phieu_thu.Visible = false;
             ip_f350.m_sle_so_phieu_thu.Visible = false;
 
@@ -109,8 +109,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             set_form_load(ip_f350);
         }
         public void set_form_load(F350_lap_phieu_thu ip_f350) {
-            ip_f350.Text = "LẬP PHIẾU THỰC THU";
-            ip_f350.m_lbl_header_left.Text = ip_f350.Text;
+            ip_f350.Text = "F350 - LẬP PHIẾU THỰC THU";
+            ip_f350.m_lbl_header_left.Text = "LẬP PHIẾU THỰC THU";
 
             ip_f350.m_txt_lan_thu.Enabled = false;
             ip_f350.Name = "PHIEU_THUC_THU";
