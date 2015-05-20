@@ -28,7 +28,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
         #region Public Interface
         public void display()
-        {
+        {   
             this.ShowDialog();
         }
 
@@ -44,6 +44,50 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_us = v_us;
             us_2_form(m_us);
             this.ShowDialog();
+        }
+
+        
+        #endregion
+
+        #region Members
+        DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
+        DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+        US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+        #endregion
+
+        #region Private Method
+        private void format_control()
+        {
+            CControlFormat.setFormStyle(this, new CAppContext_201());
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            set_define_events();
+            this.KeyPreview = true;
+        }
+
+        private void set_initial_form_load()
+        {
+            add_value_to_cbo_lop();
+            load_data_2_ds_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+        }
+
+                private void add_value_to_cbo_lop()
+        {
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds);
+
+            m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
+            m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
+            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+        }
+
+        private void load_data_2_ds_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON()
+        {
+            //Đẩy dữ liệu vào DS_GD_PHIEU_THU
+            US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
+            v_us.FillDataset(m_ds);
         }
 
         private void us_2_form(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us)
@@ -62,38 +106,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_dat_thoi_gian_start.Value = v_us.datTHOI_GIAN_HOC_FROM_DATE;
             m_dat_thoi_gian_end.Value = v_us.datTHOI_GIAN_HOC_TO_DATE;
             m_txt_ghi_chu.Text = v_us.strGHI_CHU;
-        }
-        #endregion
-
-        #region Members
-        DataEntryFormMode m_e_form_mode;
-        DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
-        US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
-        #endregion
-
-        #region Private Method
-        private void format_control()
-        {
-            CControlFormat.setFormStyle(this, new CAppContext_201());
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            set_define_events();
-            this.KeyPreview = true;
-        }
-
-        private void set_initial_form_load()
-        {
-            add_value_to_cbo_lop();
-        }
-
-        private void add_value_to_cbo_lop()
-        {
-            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
-            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-            v_us.FillDataset(v_ds);
-
-            m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
-            m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
-            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
         }
 
         private bool check_validate_data_is_OK()
@@ -123,7 +135,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                 MessageBox.Show("Học phí không được để trống và phải là số");
                 return false;
             }
-
+            if (check_data_ma_doi_tuong())
+            {
+                MessageBox.Show("Không được nhập trùng mã đối tượng");
+                return false;
+            }
             return true;
         }
 
@@ -179,7 +195,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
             switch (m_e_form_mode)
             {
-                
+
                 case DataEntryFormMode.InsertDataState:
                     //us.insert();
 
@@ -203,7 +219,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                 case DataEntryFormMode.UpdateDataState:
                     //us.UPDATE();
                     //m_us.Update();
-                    
+
                     m_us.update_by_proc(m_us.dcID
                                         , m_txt_ma_doi_tuong.Text
                                         , m_txt_ho.Text
@@ -230,7 +246,46 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
         private void delete_data()
         {
-            
+
+        }
+
+        private bool check_data_ma_doi_tuong()
+        {
+
+
+            //if((m_sle_so_phieu_thu.EditValue == "" || m_sle_so_phieu_thu.EditValue == null) && m_str_frm_type=="PHIEU_THUC_THU") {
+            //    m_lbl_check_so_phieu.Text = "Bạn chọn Sổ phiếu thu trước nhé";
+            //    m_txt_so_phieu.BackColor = Color.Bisque;
+            //    m_sle_so_phieu_thu.BackColor = Color.Bisque;
+            //    return false;
+            //}
+            //m_ds.Clear();
+            //m_ds.EnforceConstraints();
+            string v_str_filter = "";
+            v_str_filter = "MA_DOI_TUONG = '" + m_txt_ma_doi_tuong.Text.Trim() + "'";
+
+            DataRow[] v_dr = m_ds.V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.Select(v_str_filter);
+            if (v_dr.Length != 0)
+            {
+                //XtraMessageBox.Show("Mã học sinh chưa có trong dữ liệu phần mềm. Bạn có muốn nhập mới học sinh này","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                //m_lbl_check_so_phieu.Visible = true;
+
+                m_txt_ma_doi_tuong.BackColor = Color.Bisque;
+                m_lbl_check_ma_doi_tuong.Visible = true;
+                m_lbl_check_ma_doi_tuong.Text = "Đã có mã đối tượng rồi...";
+                return true;
+            }
+            else
+            {
+                m_txt_ma_doi_tuong.BackColor = Color.White;
+                //m_sle_so_phieu_thu.BackColor = Color.White;
+                m_lbl_check_ma_doi_tuong.Visible = false;
+                return false;
+            }
+            //else {
+            //    return false;
+            //}
+
         }
         #endregion
 
@@ -242,6 +297,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_cmd_save.Click += m_cmd_save_Click;
             m_cmd_delete.Click += m_cmd_delete_Click;
             m_cmd_exit.Click += m_cmd_exit_Click;
+            m_txt_ma_doi_tuong.TextChanged += m_txt_ma_doi_tuong_TextChanged;
         }
 
         void m_cmd_exit_Click(object sender, EventArgs e)
@@ -268,7 +324,21 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             }
         }
 
-        
+        void m_txt_ma_doi_tuong_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (m_e_form_mode == DataEntryFormMode.UpdateDataState)
+                {
+                    return;
+                }
+                check_data_ma_doi_tuong();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
 
         void m_cmd_save_Click(object sender, EventArgs e)
         {

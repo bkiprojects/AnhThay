@@ -72,6 +72,7 @@
             this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
+            this.m_lbl_check_ma_doi_tuong = new System.Windows.Forms.Label();
             this.m_grb_thong_tin_hv.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -359,6 +360,7 @@
             // 
             // m_grb_thong_tin_hv
             // 
+            this.m_grb_thong_tin_hv.Controls.Add(this.m_lbl_check_ma_doi_tuong);
             this.m_grb_thong_tin_hv.Controls.Add(this.m_txt_email);
             this.m_grb_thong_tin_hv.Controls.Add(this.m_txt_facebook);
             this.m_grb_thong_tin_hv.Controls.Add(this.m_lbl_ma_doi_tuong);
@@ -576,6 +578,18 @@
             this.m_lbl_header.Text = "NHẬP VÀ CHỈNH SỬA THÔNG TIN HỌC VIÊN VÀ LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // m_lbl_check_ma_doi_tuong
+            // 
+            this.m_lbl_check_ma_doi_tuong.AutoSize = true;
+            this.m_lbl_check_ma_doi_tuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_check_ma_doi_tuong.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_check_ma_doi_tuong.Location = new System.Drawing.Point(215, 37);
+            this.m_lbl_check_ma_doi_tuong.Name = "m_lbl_check_ma_doi_tuong";
+            this.m_lbl_check_ma_doi_tuong.Size = new System.Drawing.Size(101, 13);
+            this.m_lbl_check_ma_doi_tuong.TabIndex = 18;
+            this.m_lbl_check_ma_doi_tuong.Text = "check ma doi tuong";
+            this.m_lbl_check_ma_doi_tuong.Visible = false;
+            // 
             // F251_dm_hs_theo_lop_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,5 +656,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.Label m_lbl_header;
         private System.Windows.Forms.DateTimePicker m_dat_thoi_gian_end;
+        private System.Windows.Forms.Label m_lbl_check_ma_doi_tuong;
     }
 }
