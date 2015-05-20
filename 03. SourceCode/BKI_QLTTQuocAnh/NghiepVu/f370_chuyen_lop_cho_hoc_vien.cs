@@ -368,36 +368,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             US_GD_HOC v_us_gd_hoc = new US_GD_HOC();
 
             v_us_gd_hoc.Update_gd_hoc_by_Proc(CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue), CIPConvert.ToDecimal(m_sle_lop_2.EditValue));
-           
-            //US_GD_PHIEU_THU v_us_trans = new US_GD_PHIEU_THU();
-            //try
-            //{
 
-            //    v_us_trans.BeginTransaction();
-
-            //    foreach (var rowHandle in gridView.GetSelectedRows())
-            //    {
-            //        DataRow v_dr = gridView.GetDataRow(rowHandle);
-            //        decimal v_id_pt = CIPConvert.ToDecimal(v_dr["ID"].ToString());
-
-            //        US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_id_pt);
-            //        v_us_gd_pt.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.DA_BAN_GIAO;
-            //        v_us_gd_pt.UseTransOfUSObject(v_us_trans);
-            //        v_us_gd_pt.Update();
-
-            //        v_us_gd_pt.ClearAllFields();
-            //    }
-            //    v_us_trans.CommitTransaction();
-            //    MessageBox.Show("Đã nhận bàn giao các phiếu đã chọn!");
-            //}
-            //catch (Exception v_e)
-            //{
-            //    if (v_us_trans.is_having_transaction())
-            //    {
-            //        v_us_trans.Rollback();
-            //    }
-            //    throw v_e;
-            //}
+            MessageBox.Show("Bạn đã cho học viên chuyển lớp thành công!");
         }
 
 
