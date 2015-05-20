@@ -508,5 +508,15 @@ namespace BKI_QLTTQuocAnh.US {
             v_csp.addDecimalInputParam("@ip_dc_id_phieu_thu", ip_dc_id_phieu_thu);
             v_csp.ExecuteCommand(this);
         }
+
+        public void FillDataset_by_hs_lm(DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU op_ds, decimal ip_dc_id_lop_mon, decimal ip_dc_id_hs)
+        {
+
+            CStoredProc v_csp = new CStoredProc("f370_danh_sach_phieu_theo_lop_mon_hs");
+            v_csp.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+            v_csp.addDecimalInputParam("@ip_dc_id_hs", ip_dc_id_hs);
+
+            v_csp.fillDataSetByCommand(this, op_ds);
+        }
     }
 }

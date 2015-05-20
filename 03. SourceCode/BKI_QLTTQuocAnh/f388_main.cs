@@ -600,5 +600,14 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            f370_chuyen_lop_cho_hoc_vien v_frm = new f370_chuyen_lop_cho_hoc_vien();
+            if (IsExistFormName(v_frm)) return;
+
+            v_frm.MdiParent = this;
+            v_frm.Show();
+        }
     }
 }

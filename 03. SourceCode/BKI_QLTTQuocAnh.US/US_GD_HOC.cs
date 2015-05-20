@@ -203,5 +203,19 @@ namespace BKI_QLTTQuocAnh.US
             v_obj_spr.ExecuteCommand(this);
             op_ket_qua_yn = v_op_ket_qua_yn.Value.ToString();
         }
+
+        public void Update_gd_hoc_by_Proc(decimal ip_dc_id_lop_mon, decimal ip_dc_id_hs, decimal ip_dc_id_lop_mon_moi)
+        {
+            BeginTransaction();
+            decimal op_dc_id_gd_hoc = 0;
+            CStoredProc v_obj_spr = new CStoredProc("f370_update_gd_hoc");
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_hs", ip_dc_id_hs);
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon_moi", ip_dc_id_lop_mon_moi);
+            SqlParameter v_op_dc_id_gd_hoc = v_obj_spr.addDecimalOutputParam("@op_dc_id_gd_hoc", op_dc_id_gd_hoc);
+            v_obj_spr.ExecuteCommand(this);
+            op_dc_id_gd_hoc = CIPConvert.ToDecimal(v_op_dc_id_gd_hoc.Value);
+            CommitTransaction();
+        }
     }
 }

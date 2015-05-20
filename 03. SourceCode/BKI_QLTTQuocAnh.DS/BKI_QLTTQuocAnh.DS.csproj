@@ -88,6 +88,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_GD_HOC.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_GD_PHIEU_THU.cs">
+      <DependentUpon>DS_GD_PHIEU_THU.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DS_GD_PHIEU_THU.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
