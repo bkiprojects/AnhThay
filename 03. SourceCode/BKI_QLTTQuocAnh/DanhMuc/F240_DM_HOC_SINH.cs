@@ -42,7 +42,7 @@ namespace BKI_QLTTQuocAnh
         private Panel panel1;
         private Label m_lbl_lop;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
-        private ComboBox m_cbo_trang_thai_hs;
+        private ComboBox m_cbo_lop;
         private Label m_lbl_header;
 		private System.ComponentModel.IContainer components;
 
@@ -94,7 +94,7 @@ namespace BKI_QLTTQuocAnh
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_lbl_lop = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.m_cbo_trang_thai_hs = new System.Windows.Forms.ComboBox();
+            this.m_cbo_lop = new System.Windows.Forms.ComboBox();
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -231,7 +231,7 @@ namespace BKI_QLTTQuocAnh
             // 
             this.panel1.Controls.Add(this.m_lbl_lop);
             this.panel1.Controls.Add(this.m_cmd_search);
-            this.panel1.Controls.Add(this.m_cbo_trang_thai_hs);
+            this.panel1.Controls.Add(this.m_cbo_lop);
             this.panel1.Controls.Add(this.m_lbl_header);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -263,18 +263,13 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_search.TabIndex = 3;
             this.m_cmd_search.Text = "Lọc dữ liệu";
             // 
-            // m_cbo_trang_thai_hs
+            // m_cbo_lop
             // 
-            this.m_cbo_trang_thai_hs.FormattingEnabled = true;
-            this.m_cbo_trang_thai_hs.Items.AddRange(new object[] {
-            "0581",
-            "0582",
-            "0661",
-            "0662"});
-            this.m_cbo_trang_thai_hs.Location = new System.Drawing.Point(72, 54);
-            this.m_cbo_trang_thai_hs.Name = "m_cbo_trang_thai_hs";
-            this.m_cbo_trang_thai_hs.Size = new System.Drawing.Size(151, 21);
-            this.m_cbo_trang_thai_hs.TabIndex = 2;
+            this.m_cbo_lop.FormattingEnabled = true;
+            this.m_cbo_lop.Location = new System.Drawing.Point(72, 54);
+            this.m_cbo_lop.Name = "m_cbo_lop";
+            this.m_cbo_lop.Size = new System.Drawing.Size(151, 21);
+            this.m_cbo_lop.TabIndex = 2;
             // 
             // m_lbl_header
             // 
@@ -296,7 +291,7 @@ namespace BKI_QLTTQuocAnh
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "F240_DM_HOC_SINH";
-            this.Text = "F240_DANH_MỤC_HỌC_SINH";
+            this.Text = "F240 - DANH MỤC HỌC SINH";
             this.Load += new System.EventHandler(this.F240_DM_HOC_SINH_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
@@ -353,10 +348,22 @@ namespace BKI_QLTTQuocAnh
 			set_define_events();
 			this.KeyPreview = true;		
 		}
-		private void set_initial_form_load(){						
+		private void set_initial_form_load(){
+            add_value_to_cbo_lop();		
 			m_obj_trans = get_trans_object(m_fg);
 			load_data_2_grid();		
-		}	
+		}
+
+        private void add_value_to_cbo_lop()
+        {
+            DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
+            v_us.FillDataset(v_ds, "where TRANG_THAI_LOP_MON = 88");
+
+            m_cbo_lop.DataSource = v_ds;
+            m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
+            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+        }	
 		private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg){
 			Hashtable v_htb = new Hashtable();
 			v_htb.Add(V_GD_HOC.FACEBOOK, e_col_Number.FACEBOOK);
