@@ -337,7 +337,7 @@ namespace BKI_QLTTQuocAnh {
             this.Controls.Add(this.m_lbl_header);
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f250_dm_hs_theo_lop";
-            this.Text = "DANH SÁCH HỌC VIÊN THEO LỚP MÔN";
+            this.Text = "F250 - DANH SÁCH HỌC VIÊN THEO LỚP MÔN";
             this.Load += new System.EventHandler(this.f250_dm_hs_theo_lop_Load);
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();

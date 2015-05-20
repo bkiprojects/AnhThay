@@ -586,7 +586,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.m_grb_thong_tin_hv);
             this.Name = "F251_dm_hs_theo_lop_de";
-            this.Text = "NHẬP VÀ CHỈNH SỬA THÔNG TIN HỌC VIÊN";
+            this.Text = "F251 - NHẬP VÀ CHỈNH SỬA THÔNG TIN HỌC VIÊN";
             this.m_grb_thong_tin_hv.ResumeLayout(false);
             this.m_grb_thong_tin_hv.PerformLayout();
             this.groupBox2.ResumeLayout(false);
