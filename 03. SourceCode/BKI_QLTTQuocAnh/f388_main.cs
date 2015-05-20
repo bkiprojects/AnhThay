@@ -609,5 +609,14 @@ namespace BKI_QLTTQuocAnh
             v_frm.MdiParent = this;
             v_frm.Show();
         }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            F251_dm_hs_theo_lop_de v_frm = new F251_dm_hs_theo_lop_de();
+            if (IsExistFormName(v_frm)) return;
+
+            v_frm.MdiParent = this;
+            v_frm.Show();
+        }
     }
 }
