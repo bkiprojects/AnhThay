@@ -505,8 +505,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 }
                 else
                 {
-                    chuyen_lop_cho_hoc_vien();
+                    chuyen_lop_cho_hoc_vien();             
                 }
+                m_lbl_ten_hs.Visible = false;
                 load_data_to_sle_lop();
                 load_data_to_sle_ma_hv();
                 load_data_2_grid();

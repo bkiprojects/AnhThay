@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f370_chuyen_lop_cho_hoc_vien));
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_lbl_buoc_1 = new System.Windows.Forms.Label();
             this.m_lbl_ten_hs = new System.Windows.Forms.Label();
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -66,7 +67,6 @@
             this.m_sle_lop_2 = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.m_lbl_buoc_1 = new System.Windows.Forms.Label();
             this.m_lbl_buoc_2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
@@ -112,6 +112,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1175, 108);
             this.panel1.TabIndex = 0;
+            // 
+            // m_lbl_buoc_1
+            // 
+            this.m_lbl_buoc_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_buoc_1.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_buoc_1.Location = new System.Drawing.Point(3, 1);
+            this.m_lbl_buoc_1.Name = "m_lbl_buoc_1";
+            this.m_lbl_buoc_1.Size = new System.Drawing.Size(86, 30);
+            this.m_lbl_buoc_1.TabIndex = 5;
+            this.m_lbl_buoc_1.Text = "Bước 1";
+            this.m_lbl_buoc_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // m_lbl_ten_hs
             // 
@@ -200,7 +211,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(470, 67);
+            this.m_cmd_search.Location = new System.Drawing.Point(523, 67);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 5;
@@ -511,17 +522,6 @@
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Chuyển sang lớp";
-            // 
-            // m_lbl_buoc_1
-            // 
-            this.m_lbl_buoc_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_buoc_1.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_buoc_1.Location = new System.Drawing.Point(3, 1);
-            this.m_lbl_buoc_1.Name = "m_lbl_buoc_1";
-            this.m_lbl_buoc_1.Size = new System.Drawing.Size(86, 30);
-            this.m_lbl_buoc_1.TabIndex = 5;
-            this.m_lbl_buoc_1.Text = "Bước 1";
-            this.m_lbl_buoc_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // m_lbl_buoc_2
             // 
