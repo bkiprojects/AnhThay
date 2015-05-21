@@ -46,7 +46,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(859, 300);
+            this.gridControl1.Size = new System.Drawing.Size(1073, 513);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -71,7 +71,6 @@
             this.gridView1.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.gridView1.OptionsView.RowAutoHeight = true;
             this.gridView1.OptionsView.ShowFooter = true;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // TEN_LOAI_PHIEU_THU
             // 
@@ -167,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 300);
+            this.ClientSize = new System.Drawing.Size(1073, 513);
             this.Controls.Add(this.gridControl1);
             this.Name = "f496_chi_tiet_phieu_de";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
