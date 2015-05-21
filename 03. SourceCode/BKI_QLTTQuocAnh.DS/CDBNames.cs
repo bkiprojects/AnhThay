@@ -614,8 +614,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TIEN_CON_PHAI_THU = "TIEN_CON_PHAI_THU";
     }
 
-    public class DM_LOP_MON
-    {
+    public class DM_LOP_MON {
         public const string ID = "ID";
         public const string MA_LOP_MON = "MA_LOP_MON";
         public const string MO_TA = "MO_TA";
@@ -623,6 +622,12 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string ID_LOP = "ID_LOP";
         public const string ID_MON = "ID_MON";
         public const string TRANG_THAI_LOP_MON = "TRANG_THAI_LOP_MON";
+        public const string TONG_SO_BUOI_HOC = "TONG_SO_BUOI_HOC";
+        public const string THOI_GIAN_HOC_FROM_DATE = "THOI_GIAN_HOC_FROM_DATE";
+        public const string THOI_GIAN_HOC_TO_DATE = "THOI_GIAN_HOC_TO_DATE";
+        public const string ID_TRO_GIANG = "ID_TRO_GIANG";
+        public const string GHI_CHU = "GHI_CHU";
+        public const string TONG_TIEN_KHOA_HOC = "TONG_TIEN_KHOA_HOC";
     }
 
     public class V_GD_HOC {

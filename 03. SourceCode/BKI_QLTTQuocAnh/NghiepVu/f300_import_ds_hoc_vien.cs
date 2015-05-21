@@ -663,6 +663,7 @@ namespace BKI_QLTTQuocAnh {
             if(m_ofd_exel_file.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
                 try {
                     // Reset lại ds mới nếu chọn lại file excel khác
+
                     //m_ds.Clear();
                     //m_ds = new DS_EXCEL_IMPORT_HOC_VIEN();
                     DS_EXCEL_IMPORT_HOC_VIEN v_ds = new DS_EXCEL_IMPORT_HOC_VIEN();

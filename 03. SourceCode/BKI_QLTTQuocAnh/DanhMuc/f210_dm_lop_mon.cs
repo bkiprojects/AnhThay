@@ -145,7 +145,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 357);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1070, 52);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(768, 52);
             this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_xoa_lop_mon
@@ -249,7 +249,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(978, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(676, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 44);
             this.m_cmd_exit.TabIndex = 6;
@@ -261,7 +261,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(0, 98);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1070, 259);
+            this.m_fg.Size = new System.Drawing.Size(768, 259);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             // 
@@ -274,7 +274,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1070, 98);
+            this.panel1.Size = new System.Drawing.Size(768, 98);
             this.panel1.TabIndex = 0;
             // 
             // m_lbl_trang_thai_lop
@@ -315,7 +315,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(1070, 39);
+            this.m_lbl_header.Size = new System.Drawing.Size(768, 39);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "DANH MỤC LỚP MÔN";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -323,7 +323,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             // f210_dm_lop_mon
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(1070, 409);
+            this.ClientSize = new System.Drawing.Size(768, 409);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
@@ -353,6 +353,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc
 ,
             MO_TA = 2
                 , DON_GIA_BUOI_HOC = 3
+            ,THOI_GIAN_HOC_FROM_DATE = 4
+            , THOI_GIAN_HOC_TO_DATE = 5
 
         }
         #endregion
@@ -389,6 +391,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             v_htb.Add(DM_LOP_MON.MA_LOP_MON, e_col_Number.MA_LOP_MON);
             v_htb.Add(DM_LOP_MON.MO_TA, e_col_Number.MO_TA);
             v_htb.Add(DM_LOP_MON.DON_GIA_BUOI_HOC, e_col_Number.DON_GIA_BUOI_HOC);
+            //v_htb.Add(DM_LOP_MON.THOI_GIAN_HOC_FROM_DATE, e_col_Number.THOI_GIAN_HOC_FROM_DATE);
+            //v_htb.Add(DM_LOP_MON.THOI_GIAN_HOC_TO_DATE, e_col_Number.THOI_GIAN_HOC_TO_DATE);
 
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.DM_LOP_MON.NewRow());
             return v_obj_trans;

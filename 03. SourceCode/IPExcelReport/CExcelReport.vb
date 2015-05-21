@@ -314,6 +314,8 @@ Public Class CExcelReport
     Public Sub Export2DatasetDS_by_DucVT(ByVal i_DataSet As System.Data.DataSet _
                               , ByVal i_TableName As String _
                              , ByVal i_iSheetStartRow As Integer)
+        Dim i_iExcelRow As Integer = 0
+        Dim i_iExcelCol As Integer = 0
         Try
             'Initialize
             System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("en-US")
@@ -327,13 +329,13 @@ Public Class CExcelReport
             m_objExcelWorksheet = CType(m_objExcelApp.Workbooks(1).Worksheets(1), Excel.Worksheet)
 
             'Init
-            Dim i_iExcelRow As Integer = 0 'index excel row
+            'Dim i_iExcelRow As Integer = 0 'index excel row
             Dim v_bol_stop As Boolean = False 'điều kiện dừng vòng lặp
 
 
             While Not v_bol_stop
                 'Init
-                Dim i_iExcelCol As Integer = 0 'index excel col
+                i_iExcelCol = 0 'index excel col
                 Dim v_iDataRow As System.Data.DataRow 'DataRow
 
                 'Tạo DataRow mới từ DataTable trong DS truyền vào
@@ -365,11 +367,12 @@ Public Class CExcelReport
             End While
             m_objExcelApp.DisplayAlerts = False
             m_objExcelApp.Workbooks.Close()
-            m_objExcelApp.DisplayAlerts = True
+            'm_objExcelApp.DisplayAlerts = True
             m_objExcelApp.Quit()
             Unmount()
         Catch v_e As Exception
             m_objExcelApp.DisplayAlerts = False
+            MessageBox.Show("Dữ liệu nhập sai ở hàng " & i_iExcelRow + 2 & ", cột " & i_iExcelCol & "")
             m_objExcelApp.Workbooks.Close()
             m_objExcelApp.DisplayAlerts = True
             m_objExcelApp.Quit()

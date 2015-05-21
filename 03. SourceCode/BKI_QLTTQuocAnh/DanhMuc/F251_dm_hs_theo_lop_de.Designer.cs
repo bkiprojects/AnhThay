@@ -56,9 +56,10 @@
             this.m_txt_dia_chi = new System.Windows.Forms.TextBox();
             this.m_txt_sdt = new System.Windows.Forms.TextBox();
             this.m_dat_ngay_sinh = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.m_lbl_ten_lop = new System.Windows.Forms.Label();
             this.m_txt_facebook = new System.Windows.Forms.TextBox();
             this.m_grb_thong_tin_hv = new System.Windows.Forms.GroupBox();
+            this.m_lbl_check_ma_doi_tuong = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.m_dat_thoi_gian_end = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@
             this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_lbl_check_ma_doi_tuong = new System.Windows.Forms.Label();
             this.m_grb_thong_tin_hv.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -147,6 +147,7 @@
             this.label12.Size = new System.Drawing.Size(46, 13);
             this.label12.TabIndex = 2;
             this.label12.Text = "Học phí";
+            this.label12.Visible = false;
             // 
             // label13
             // 
@@ -168,6 +169,7 @@
             this.label14.Size = new System.Drawing.Size(74, 13);
             this.label14.TabIndex = 10;
             this.label14.Text = "Thời gian start";
+            this.label14.Visible = false;
             // 
             // m_lbl_thoi_gian_end
             // 
@@ -178,6 +180,7 @@
             this.m_lbl_thoi_gian_end.Size = new System.Drawing.Size(72, 13);
             this.m_lbl_thoi_gian_end.TabIndex = 12;
             this.m_lbl_thoi_gian_end.Text = "Thời gian end";
+            this.m_lbl_thoi_gian_end.Visible = false;
             // 
             // label17
             // 
@@ -188,6 +191,7 @@
             this.label17.Size = new System.Drawing.Size(44, 13);
             this.label17.TabIndex = 14;
             this.label17.Text = "Ghi chú";
+            this.label17.Visible = false;
             // 
             // label18
             // 
@@ -208,6 +212,7 @@
             this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
             this.m_txt_ghi_chu.Size = new System.Drawing.Size(563, 107);
             this.m_txt_ghi_chu.TabIndex = 15;
+            this.m_txt_ghi_chu.Visible = false;
             // 
             // m_txt_tong_tien
             // 
@@ -225,6 +230,7 @@
             this.m_txt_hoc_phi.Name = "m_txt_hoc_phi";
             this.m_txt_hoc_phi.Size = new System.Drawing.Size(147, 20);
             this.m_txt_hoc_phi.TabIndex = 3;
+            this.m_txt_hoc_phi.Visible = false;
             // 
             // m_txt_tong_so_buoi
             // 
@@ -339,15 +345,16 @@
             this.m_dat_ngay_sinh.Size = new System.Drawing.Size(127, 20);
             this.m_dat_ngay_sinh.TabIndex = 7;
             // 
-            // label1
+            // m_lbl_ten_lop
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(434, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Facebook";
+            this.m_lbl_ten_lop.AutoSize = true;
+            this.m_lbl_ten_lop.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_ten_lop.Location = new System.Drawing.Point(84, 34);
+            this.m_lbl_ten_lop.Name = "m_lbl_ten_lop";
+            this.m_lbl_ten_lop.Size = new System.Drawing.Size(16, 13);
+            this.m_lbl_ten_lop.TabIndex = 14;
+            this.m_lbl_ten_lop.Text = "...";
+            this.m_lbl_ten_lop.Visible = false;
             // 
             // m_txt_facebook
             // 
@@ -364,7 +371,6 @@
             this.m_grb_thong_tin_hv.Controls.Add(this.m_txt_email);
             this.m_grb_thong_tin_hv.Controls.Add(this.m_txt_facebook);
             this.m_grb_thong_tin_hv.Controls.Add(this.m_lbl_ma_doi_tuong);
-            this.m_grb_thong_tin_hv.Controls.Add(this.label1);
             this.m_grb_thong_tin_hv.Controls.Add(this.label2);
             this.m_grb_thong_tin_hv.Controls.Add(this.label3);
             this.m_grb_thong_tin_hv.Controls.Add(this.m_dat_ngay_sinh);
@@ -387,12 +393,25 @@
             this.m_grb_thong_tin_hv.TabStop = false;
             this.m_grb_thong_tin_hv.Text = "Thông tin học viên";
             // 
+            // m_lbl_check_ma_doi_tuong
+            // 
+            this.m_lbl_check_ma_doi_tuong.AutoSize = true;
+            this.m_lbl_check_ma_doi_tuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_check_ma_doi_tuong.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_check_ma_doi_tuong.Location = new System.Drawing.Point(215, 37);
+            this.m_lbl_check_ma_doi_tuong.Name = "m_lbl_check_ma_doi_tuong";
+            this.m_lbl_check_ma_doi_tuong.Size = new System.Drawing.Size(101, 13);
+            this.m_lbl_check_ma_doi_tuong.TabIndex = 18;
+            this.m_lbl_check_ma_doi_tuong.Text = "check ma doi tuong";
+            this.m_lbl_check_ma_doi_tuong.Visible = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.m_dat_thoi_gian_end);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.m_dat_thoi_gian_start);
+            this.groupBox2.Controls.Add(this.m_lbl_ten_lop);
             this.groupBox2.Controls.Add(this.m_cbo_lop);
             this.groupBox2.Controls.Add(this.m_txt_ghi_chu);
             this.groupBox2.Controls.Add(this.label17);
@@ -420,6 +439,7 @@
             this.m_dat_thoi_gian_end.Name = "m_dat_thoi_gian_end";
             this.m_dat_thoi_gian_end.Size = new System.Drawing.Size(161, 20);
             this.m_dat_thoi_gian_end.TabIndex = 13;
+            this.m_dat_thoi_gian_end.Visible = false;
             // 
             // label10
             // 
@@ -441,6 +461,7 @@
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "VNĐ";
+            this.label4.Visible = false;
             // 
             // m_dat_thoi_gian_start
             // 
@@ -449,6 +470,7 @@
             this.m_dat_thoi_gian_start.Name = "m_dat_thoi_gian_start";
             this.m_dat_thoi_gian_start.Size = new System.Drawing.Size(161, 20);
             this.m_dat_thoi_gian_start.TabIndex = 11;
+            this.m_dat_thoi_gian_start.Visible = false;
             // 
             // ImageList
             // 
@@ -578,18 +600,6 @@
             this.m_lbl_header.Text = "NHẬP VÀ CHỈNH SỬA THÔNG TIN HỌC VIÊN VÀ LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // m_lbl_check_ma_doi_tuong
-            // 
-            this.m_lbl_check_ma_doi_tuong.AutoSize = true;
-            this.m_lbl_check_ma_doi_tuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_check_ma_doi_tuong.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_check_ma_doi_tuong.Location = new System.Drawing.Point(215, 37);
-            this.m_lbl_check_ma_doi_tuong.Name = "m_lbl_check_ma_doi_tuong";
-            this.m_lbl_check_ma_doi_tuong.Size = new System.Drawing.Size(101, 13);
-            this.m_lbl_check_ma_doi_tuong.TabIndex = 18;
-            this.m_lbl_check_ma_doi_tuong.Text = "check ma doi tuong";
-            this.m_lbl_check_ma_doi_tuong.Visible = false;
-            // 
             // F251_dm_hs_theo_lop_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -640,7 +650,7 @@
         private System.Windows.Forms.TextBox m_txt_dia_chi;
         private System.Windows.Forms.TextBox m_txt_sdt;
         private System.Windows.Forms.DateTimePicker m_dat_ngay_sinh;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label m_lbl_ten_lop;
         private System.Windows.Forms.TextBox m_txt_facebook;
         private System.Windows.Forms.GroupBox m_grb_thong_tin_hv;
         private System.Windows.Forms.GroupBox groupBox2;

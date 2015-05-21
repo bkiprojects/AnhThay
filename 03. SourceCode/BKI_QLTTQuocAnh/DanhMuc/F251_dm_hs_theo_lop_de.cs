@@ -28,7 +28,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
         #region Public Interface
         public void display()
-        {   
+        {
             this.ShowDialog();
         }
 
@@ -43,10 +43,15 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
             m_us = v_us;
             us_2_form(m_us);
+            this.m_txt_ma_doi_tuong.ReadOnly = true;
+            //m_lbl_ten_lop.Visible = true;
+            //m_lbl_ten_lop.Text = m_us.strTEN_LOP_MON;
+            m_cbo_lop.Enabled = false;
+            //this.m_cbo_lop.Visible = false;
             this.ShowDialog();
         }
 
-        
+
         #endregion
 
         #region Members
@@ -60,6 +65,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+
             set_define_events();
             this.KeyPreview = true;
         }
@@ -67,10 +73,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
         private void set_initial_form_load()
         {
             add_value_to_cbo_lop();
+            //m_lbl_ten_lop.Text = CIPConvert.ToStr(m_cbo_lop.DisplayMember);
             load_data_2_ds_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
         }
 
-                private void add_value_to_cbo_lop()
+        private void add_value_to_cbo_lop()
         {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
             US_DM_LOP_MON v_us = new US_DM_LOP_MON();
@@ -135,11 +142,16 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                 MessageBox.Show("Học phí không được để trống và phải là số");
                 return false;
             }
-            if (check_data_ma_doi_tuong())
+
+            if (m_e_form_mode == DataEntryFormMode.InsertDataState)
             {
-                MessageBox.Show("Không được nhập trùng mã đối tượng");
-                return false;
+                if (check_data_ma_doi_tuong())
+                {
+                    MessageBox.Show("Không được nhập trùng mã đối tượng");
+                    return false;
+                }
             }
+
             return true;
         }
 
@@ -185,7 +197,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
         private void save_data()
         {
-            
+
             if (check_validate_data_is_OK() != true)
             {
                 return;

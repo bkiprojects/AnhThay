@@ -41,12 +41,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_luu = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.m_lbl_thoi_gian_start = new System.Windows.Forms.Label();
+            this.m_lbl_thoi_gian_end = new System.Windows.Forms.Label();
+            this.m_dat_thoi_gian_start = new System.Windows.Forms.DateTimePicker();
+            this.m_dat_thoi_gian_end = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_dat_thoi_gian_end);
+            this.panel1.Controls.Add(this.m_dat_thoi_gian_start);
+            this.panel1.Controls.Add(this.m_lbl_thoi_gian_end);
+            this.panel1.Controls.Add(this.m_lbl_thoi_gian_start);
             this.panel1.Controls.Add(this.m_txt_hoc_phi);
             this.panel1.Controls.Add(this.m_lbl_hoc_phi);
             this.panel1.Controls.Add(this.m_txt_mo_ta);
@@ -54,10 +62,10 @@
             this.panel1.Controls.Add(this.m_lbl_ma_lop_mon);
             this.panel1.Controls.Add(this.m_lbl_mo_ta);
             this.panel1.Controls.Add(this.m_lbl_header);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 122);
+            this.panel1.Size = new System.Drawing.Size(315, 224);
             this.panel1.TabIndex = 0;
             // 
             // m_txt_hoc_phi
@@ -123,10 +131,10 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.m_cmd_luu);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 122);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 182);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 41);
+            this.panel2.Size = new System.Drawing.Size(315, 42);
             this.panel2.TabIndex = 1;
             // 
             // m_cmd_luu
@@ -170,11 +178,43 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
+            // m_lbl_thoi_gian_start
+            // 
+            this.m_lbl_thoi_gian_start.AutoSize = true;
+            this.m_lbl_thoi_gian_start.Location = new System.Drawing.Point(12, 126);
+            this.m_lbl_thoi_gian_start.Name = "m_lbl_thoi_gian_start";
+            this.m_lbl_thoi_gian_start.Size = new System.Drawing.Size(74, 13);
+            this.m_lbl_thoi_gian_start.TabIndex = 7;
+            this.m_lbl_thoi_gian_start.Text = "Thời gian start";
+            // 
+            // m_lbl_thoi_gian_end
+            // 
+            this.m_lbl_thoi_gian_end.AutoSize = true;
+            this.m_lbl_thoi_gian_end.Location = new System.Drawing.Point(12, 157);
+            this.m_lbl_thoi_gian_end.Name = "m_lbl_thoi_gian_end";
+            this.m_lbl_thoi_gian_end.Size = new System.Drawing.Size(72, 13);
+            this.m_lbl_thoi_gian_end.TabIndex = 8;
+            this.m_lbl_thoi_gian_end.Text = "Thời gian end";
+            // 
+            // m_dat_thoi_gian_start
+            // 
+            this.m_dat_thoi_gian_start.Location = new System.Drawing.Point(106, 120);
+            this.m_dat_thoi_gian_start.Name = "m_dat_thoi_gian_start";
+            this.m_dat_thoi_gian_start.Size = new System.Drawing.Size(196, 20);
+            this.m_dat_thoi_gian_start.TabIndex = 9;
+            // 
+            // m_dat_thoi_gian_end
+            // 
+            this.m_dat_thoi_gian_end.Location = new System.Drawing.Point(106, 151);
+            this.m_dat_thoi_gian_end.Name = "m_dat_thoi_gian_end";
+            this.m_dat_thoi_gian_end.Size = new System.Drawing.Size(196, 20);
+            this.m_dat_thoi_gian_end.TabIndex = 10;
+            // 
             // f211_dm_lop_mon_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 165);
+            this.ClientSize = new System.Drawing.Size(315, 224);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "f211_dm_lop_mon_de";
@@ -199,5 +239,9 @@
         private System.Windows.Forms.Label m_lbl_mo_ta;
         private System.Windows.Forms.TextBox m_txt_hoc_phi;
         private System.Windows.Forms.Label m_lbl_hoc_phi;
+        private System.Windows.Forms.DateTimePicker m_dat_thoi_gian_end;
+        private System.Windows.Forms.DateTimePicker m_dat_thoi_gian_start;
+        private System.Windows.Forms.Label m_lbl_thoi_gian_end;
+        private System.Windows.Forms.Label m_lbl_thoi_gian_start;
     }
 }

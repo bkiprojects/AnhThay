@@ -176,6 +176,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             m_txt_ma_lop_mon.Text = m_us_dm_lop_mon.strMA_LOP_MON;
             m_txt_mo_ta.Text = m_us_dm_lop_mon.strMO_TA;
             m_txt_hoc_phi.Text = m_us_dm_lop_mon.dcDON_GIA_BUOI_HOC.ToString();
+            m_dat_thoi_gian_start.Value = m_us_dm_lop_mon.datTHOI_GIAN_HOC_FROM_DATE;
+            m_dat_thoi_gian_end.Value = m_us_dm_lop_mon.datTHOI_GIAN_HOC_TO_DATE;
         }
 
         private void save_data()
