@@ -164,7 +164,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1066, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1303, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
             // 
             // m_cmd_insert
@@ -176,7 +176,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(710, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(947, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 12;
@@ -192,7 +192,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(798, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(1035, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 13;
@@ -224,7 +224,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(886, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(1123, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 14;
@@ -240,7 +240,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(974, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(1211, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 11;
@@ -253,7 +253,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_fg.Location = new System.Drawing.Point(0, 110);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1066, 263);
+            this.m_fg.Size = new System.Drawing.Size(1303, 263);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -279,7 +279,7 @@ namespace BKI_QLTTQuocAnh {
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1066, 110);
+            this.panel1.Size = new System.Drawing.Size(1303, 110);
             this.panel1.TabIndex = 21;
             // 
             // label8
@@ -358,7 +358,7 @@ namespace BKI_QLTTQuocAnh {
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(928, 81);
+            this.label9.Location = new System.Drawing.Point(928, 90);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 13);
             this.label9.TabIndex = 41;
@@ -368,7 +368,7 @@ namespace BKI_QLTTQuocAnh {
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(928, 75);
+            this.label7.Location = new System.Drawing.Point(1214, 76);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 41;
@@ -388,7 +388,7 @@ namespace BKI_QLTTQuocAnh {
             // 
             this.m_lbl_pink.BackColor = System.Drawing.Color.Pink;
             this.m_lbl_pink.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.m_lbl_pink.Location = new System.Drawing.Point(866, 74);
+            this.m_lbl_pink.Location = new System.Drawing.Point(1152, 75);
             this.m_lbl_pink.Name = "m_lbl_pink";
             this.m_lbl_pink.Size = new System.Drawing.Size(56, 15);
             this.m_lbl_pink.TabIndex = 41;
@@ -455,7 +455,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(1066, 37);
+            this.m_lbl_header.Size = new System.Drawing.Size(1303, 37);
             this.m_lbl_header.TabIndex = 25;
             this.m_lbl_header.Text = "NHẬP DANH SÁCH HỌC VIÊN TỪ FILE EXCEL";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -480,7 +480,7 @@ namespace BKI_QLTTQuocAnh {
             // f300_import_ds_hoc_vien
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(1066, 409);
+            this.ClientSize = new System.Drawing.Size(1303, 409);
             this.Controls.Add(this.m_lbl_loading_mes);
             this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
@@ -734,7 +734,14 @@ namespace BKI_QLTTQuocAnh {
                     }
                 }
             }
-
+            if (m_flag_du_lieu_is_ok == true)
+            {
+                BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
+            }
+            else
+            {
+                BaseMessages.MsgBox_Infor("Dữ liệu bị lỗi");
+            }
             //Buoc 2
             //DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
             //US_V_GD_HOC v_us = new US_V_GD_HOC();
@@ -760,7 +767,7 @@ namespace BKI_QLTTQuocAnh {
             //    }
             //}          
 
-            BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
+            
         }
         #endregion
 
@@ -792,7 +799,8 @@ namespace BKI_QLTTQuocAnh {
 
         void m_cmd_save_data_Click(object sender, EventArgs e) {
             try {
-                if(m_flag_du_lieu_is_ok == false) {
+                if (m_flag_du_lieu_is_ok == false)
+                {
                     BaseMessages.MsgBox_Error("Bạn kiểm tra dữ liệu trước nhé!");
                     return;
                 }
