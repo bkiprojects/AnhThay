@@ -529,7 +529,7 @@ namespace BKI_QLTTQuocAnh {
         DS_EXCEL_IMPORT_HOC_VIEN m_ds = new DS_EXCEL_IMPORT_HOC_VIEN();
         US_EXCEL_IMPORT_HOC_VIEN m_us = new US_EXCEL_IMPORT_HOC_VIEN();
         bool m_flag_du_lieu_is_ok = true;
-        DS_V_GD_HOC m_ds_v_gd_hoc = new DS_V_GD_HOC();  
+        DS_V_GD_HOC m_ds_v_gd_hoc = new DS_V_GD_HOC();
         #endregion
 
         #region Private Methods
@@ -710,9 +710,9 @@ namespace BKI_QLTTQuocAnh {
 
             if (v_dr.Length == 0)
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
         private void kiem_tra_du_lieu(DS_EXCEL_IMPORT_HOC_VIEN ip_ds) {
             m_flag_du_lieu_is_ok = true;
@@ -734,14 +734,27 @@ namespace BKI_QLTTQuocAnh {
                     }
                 }
             }
-            if (m_flag_du_lieu_is_ok == true)
+            //check trung ma doi tuong
+            DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
+            US_V_GD_HOC v_us = new US_V_GD_HOC();
+            decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+            for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
             {
-                BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
+                string v_ma_hv = m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString();
+                if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
+                {
+                    BaseMessages.MsgBox_Error("Mã học viên ở dòng " + i + " đã tồn tại, hãy kiểm tra lại");
+                    return;
+                }
             }
-            else
-            {
-                BaseMessages.MsgBox_Infor("Dữ liệu bị lỗi");
-            }
+                if (m_flag_du_lieu_is_ok == true)
+                {
+                    BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
+                }
+                else
+                {
+                    BaseMessages.MsgBox_Infor("Dữ liệu bị lỗi");
+                }
             //Buoc 2
             //DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
             //US_V_GD_HOC v_us = new US_V_GD_HOC();
@@ -814,11 +827,11 @@ namespace BKI_QLTTQuocAnh {
                 v_us_hv.BeginTransaction();
                 for(int i_grid_row = m_fg.Rows.Fixed; i_grid_row < m_fg.Rows.Count; i_grid_row++) {
                     //1.0 du lieu trung thi ko add nua
-
+                    
                     
                     string v_ma_hv = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
                     decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
-                    if (is_check_exist(v_id_lop, v_ma_hv, v_ds)) continue;
+                    
                     
                     //1.1 day du lieu vao hv
                     grid2us_object(m_us, i_grid_row);
