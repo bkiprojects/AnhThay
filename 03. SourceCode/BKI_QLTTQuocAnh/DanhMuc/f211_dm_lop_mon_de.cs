@@ -16,6 +16,7 @@ using IP.Core.IPSystemAdmin;
 using C1.Win.C1FlexGrid;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.DS;
+using DevExpress.XtraEditors;
 
 
 namespace BKI_QLTTQuocAnh.DanhMuc
@@ -114,7 +115,18 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             {
                 if (is_check_active(v_ma_lop_mon, v_ds))
                 {
-                    MessageBox.Show("Lớp môn này đã có và đã cho nghỉ hoạt động. Bạn có thể cho hoạt động lại!");
+                    if (XtraMessageBox.Show("Lớp môn này đã có và đã cho nghỉ hoạt động. Bạn có muốn cho hoạt động lại không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        decimal op_dc_id_lop = 0;
+                        v_us.Find_id_lop_mon_by_ma_lop_mon(v_ma_lop_mon, ref op_dc_id_lop);
+
+                        US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON(op_dc_id_lop);
+                        
+                        v_us_dm_lop_mon.dcTRANG_THAI_LOP_MON = 88;
+                        v_us_dm_lop_mon.Update();
+                        this.Close();
+                    }
+                    //MessageBox.Show("Lớp môn này đã có và đã cho nghỉ hoạt động. Bạn có thể cho hoạt động lại!");
                 }
                 else
                 {

@@ -337,6 +337,16 @@ public class US_DM_LOP_MON : US_Object
     }
     #endregion
 
-   
+
+
+    public void Find_id_lop_mon_by_ma_lop_mon(string v_ma_lop_mon, ref decimal op_dc_id_lop)
+    {
+        CStoredProc v_obj = new CStoredProc("Pr_find_id_lop_mon_by_ma_lop_mon");
+
+        v_obj.addNVarcharInputParam("@ip_str_ma_lop", v_ma_lop_mon);
+        SqlParameter v_id_gd_lop_mon = v_obj.addDecimalOutputParam("@op_dc_id_lop", 0);
+        v_obj.ExecuteCommand(this);
+        op_dc_id_lop = CIPConvert.ToDecimal(v_id_gd_lop_mon.Value);
+    }
 }
 }
