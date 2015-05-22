@@ -109,10 +109,10 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_txt_facebook.Text = v_us.strFACEBOOK;
             m_txt_truong_dang_hoc.Text = v_us.strTRUONG_DANG_HOC;
             m_cbo_lop.SelectedValue = v_us.dcID_LOP_MON;
-            m_txt_hoc_phi.Text = v_us.dcDON_GIA_BUOI_HOC.ToString();
-            m_dat_thoi_gian_start.Value = v_us.datTHOI_GIAN_HOC_FROM_DATE;
-            m_dat_thoi_gian_end.Value = v_us.datTHOI_GIAN_HOC_TO_DATE;
-            m_txt_ghi_chu.Text = v_us.strGHI_CHU;
+            //m_txt_hoc_phi.Text = v_us.dcDON_GIA_BUOI_HOC.ToString();
+            //m_dat_thoi_gian_start.Value = v_us.datTHOI_GIAN_HOC_FROM_DATE;
+            //m_dat_thoi_gian_end.Value = v_us.datTHOI_GIAN_HOC_TO_DATE;
+            //m_txt_ghi_chu.Text = v_us.strGHI_CHU;
         }
 
         private bool check_validate_data_is_OK()
@@ -137,11 +137,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                 MessageBox.Show("SĐT không được để trống");
                 return false;
             }
-            if (!CValidateTextBox.IsValid(m_txt_hoc_phi, DataType.NumberType, allowNull.NO, false))
-            {
-                MessageBox.Show("Học phí không được để trống và phải là số");
-                return false;
-            }
+            //if (!CValidateTextBox.IsValid(m_txt_hoc_phi, DataType.NumberType, allowNull.NO, false))
+            //{
+            //    MessageBox.Show("Học phí không được để trống và phải là số");
+            //    return false;
+            //}
 
             if (m_e_form_mode == DataEntryFormMode.InsertDataState)
             {
@@ -167,12 +167,12 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_us.strFACEBOOK = m_txt_facebook.Text;
             m_us.strTRUONG_DANG_HOC = m_txt_truong_dang_hoc.Text;
             m_us.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
-            m_us.dcDON_GIA_BUOI_HOC = CIPConvert.ToDecimal(m_txt_hoc_phi.Text);
+            //m_us.dcDON_GIA_BUOI_HOC = CIPConvert.ToDecimal(m_txt_hoc_phi.Text);
             //m_us.dcTONG_SO_BUOI_HOC = CIPConvert.ToDecimal(m_txt_tong_so_buoi.Text);
             //m_us.dcTONG_TIEN_KHOA_HOC = CIPConvert.ToDecimal(m_txt_tong_tien.Text);
-            m_us.datTHOI_GIAN_HOC_FROM_DATE = m_dat_thoi_gian_start.Value;
-            m_us.datTHOI_GIAN_HOC_TO_DATE = m_dat_thoi_gian_end.Value;
-            m_us.strGHI_CHU = m_txt_ghi_chu.Text;
+            //m_us.datTHOI_GIAN_HOC_FROM_DATE = m_dat_thoi_gian_start.Value;
+            //m_us.datTHOI_GIAN_HOC_TO_DATE = m_dat_thoi_gian_end.Value;
+            //m_us.strGHI_CHU = m_txt_ghi_chu.Text;
         }
 
         private void us_object_2_form()
@@ -187,12 +187,12 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_txt_facebook.Text = m_us.strFACEBOOK;
             m_txt_truong_dang_hoc.Text = m_us.strTRUONG_DANG_HOC;
             m_cbo_lop.SelectedValue = m_us.dcID_LOP_MON.ToString();
-            m_txt_hoc_phi.Text = m_us.dcDON_GIA_BUOI_HOC.ToString();
+            //m_txt_hoc_phi.Text = m_us.dcDON_GIA_BUOI_HOC.ToString();
             //m_us.dcTONG_SO_BUOI_HOC = CIPConvert.ToDecimal(m_txt_tong_so_buoi.Text);
             //m_us.dcTONG_TIEN_KHOA_HOC = CIPConvert.ToDecimal(m_txt_tong_tien.Text);
-            m_dat_thoi_gian_start.Value = m_us.datTHOI_GIAN_HOC_FROM_DATE;
-            m_dat_thoi_gian_end.Value = m_us.datTHOI_GIAN_HOC_TO_DATE;
-            m_txt_ghi_chu.Text = m_us.strGHI_CHU;
+            //m_dat_thoi_gian_start.Value = m_us.datTHOI_GIAN_HOC_FROM_DATE;
+            //m_dat_thoi_gian_end.Value = m_us.datTHOI_GIAN_HOC_TO_DATE;
+            //m_txt_ghi_chu.Text = m_us.strGHI_CHU;
         }
 
         private void save_data()
