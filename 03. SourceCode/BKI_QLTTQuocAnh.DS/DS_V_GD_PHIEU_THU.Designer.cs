@@ -756,12 +756,10 @@ namespace BKI_QLTTQuocAnh.DS {
                 base.Columns.Add(this.columnLAN_THU);
                 this.columnMA_DOI_TUONG.MaxLength = 35;
                 this.columnTEN_LOAI_DOI_TUONG.MaxLength = 50;
-                this.columnHO_TEN.ReadOnly = true;
                 this.columnHO_TEN.MaxLength = 51;
                 this.columnMA_LOP_MON.MaxLength = 15;
                 this.columnTEN_LOP_MON.MaxLength = 250;
                 this.columnID.AllowDBNull = false;
-                this.columnSO_PHIEU.AllowDBNull = false;
                 this.columnSO_PHIEU.MaxLength = 35;
                 this.columnID_NGUOI_THU.AllowDBNull = false;
                 this.columnTEN_NGUOI_THU.MaxLength = 250;
@@ -1059,7 +1057,12 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string SO_PHIEU {
                 get {
-                    return ((string)(this[this.tableV_GD_PHIEU_THU.SO_PHIEUColumn]));
+                    try {
+                        return ((string)(this[this.tableV_GD_PHIEU_THU.SO_PHIEUColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SO_PHIEU\' in table \'V_GD_PHIEU_THU\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableV_GD_PHIEU_THU.SO_PHIEUColumn] = value;
@@ -1370,6 +1373,18 @@ namespace BKI_QLTTQuocAnh.DS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTEN_LOP_MONNull() {
                 this[this.tableV_GD_PHIEU_THU.TEN_LOP_MONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSO_PHIEUNull() {
+                return this.IsNull(this.tableV_GD_PHIEU_THU.SO_PHIEUColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSO_PHIEUNull() {
+                this[this.tableV_GD_PHIEU_THU.SO_PHIEUColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

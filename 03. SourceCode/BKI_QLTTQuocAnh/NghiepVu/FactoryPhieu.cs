@@ -144,6 +144,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         public void set_form_load(F350_lap_phieu_thu ip_f350, US_V_GD_PHIEU_THU ip_us_v_pt)
         {
             ip_f350.m_e_form_mode = IP.Core.IPCommon.DataEntryFormMode.UpdateDataState;
+            ip_f350.m_txt_so_phieu.Visible = false;
+            ip_f350.m_lbl_so_phieu.Visible = false;
+            ip_f350.m_lbl_check_so_phieu.Visible = false;
             ip_f350.Text = "SỬA PHIẾU THU";
             ip_f350.m_lbl_header_left.Text = ip_f350.Text;
             ip_f350.m_sle_so_phieu_thu.EditValue = 1; //sua sau neu nhieu hon mot so

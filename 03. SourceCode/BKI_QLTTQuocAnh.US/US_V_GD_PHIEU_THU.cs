@@ -591,6 +591,8 @@ namespace BKI_QLTTQuocAnh.US
         public US_V_GD_PHIEU_THU(decimal i_dbID)
         {
             pm_objDS = new DS_V_GD_PHIEU_THU();
+            pm_objDS.Clear();
+            pm_objDS.EnforceConstraints = false;
             pm_strTableName = c_TableName;
             IMakeSelectCmd v_objMkCmd = new CMakeAndSelectCmd(pm_objDS, c_TableName);
             v_objMkCmd.AddCondition("ID", i_dbID, eKieuDuLieu.KieuNumber, eKieuSoSanh.Bang);
