@@ -154,10 +154,10 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 {
                     return false;
                 }
-                else
-                {
-                    return true;
-                }
+                //else
+                //{
+                //    return true;
+                //}
             }
             
             if (!CValidateTextBox.IsValid(m_txt_mo_ta, DataType.StringType, allowNull.NO, false))
@@ -257,6 +257,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             }
             catch (Exception v_e)
             {
+                
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
