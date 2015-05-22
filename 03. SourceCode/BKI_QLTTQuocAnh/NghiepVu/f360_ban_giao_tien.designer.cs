@@ -60,8 +60,8 @@
             this.NGUOI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -417,7 +417,7 @@
             // NGUOI_THU
             // 
             this.NGUOI_THU.Caption = "Người thu";
-            this.NGUOI_THU.FieldName = "NGUOI_THU";
+            this.NGUOI_THU.FieldName = "TEN_NGUOI_THU";
             this.NGUOI_THU.Name = "NGUOI_THU";
             this.NGUOI_THU.OptionsColumn.AllowEdit = false;
             this.NGUOI_THU.Visible = true;
@@ -437,6 +437,8 @@
             // TIEN_THUC_THU
             // 
             this.TIEN_THUC_THU.Caption = "Tiền thực thu";
+            this.TIEN_THUC_THU.DisplayFormat.FormatString = "\"{0:#,##0}\"";
+            this.TIEN_THUC_THU.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TIEN_THUC_THU.FieldName = "TIEN_THUC_THU";
             this.TIEN_THUC_THU.Name = "TIEN_THUC_THU";
             this.TIEN_THUC_THU.OptionsColumn.AllowEdit = false;
@@ -444,18 +446,18 @@
             this.TIEN_THUC_THU.VisibleIndex = 8;
             this.TIEN_THUC_THU.Width = 215;
             // 
+            // ID
+            // 
+            this.ID.Caption = "ID";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
+            // 
             // repositoryItemCheckEdit
             // 
             this.repositoryItemCheckEdit.AutoHeight = false;
             this.repositoryItemCheckEdit.Caption = "Check";
             this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
             this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            // 
-            // ID
-            // 
-            this.ID.Caption = "ID";
-            this.ID.FieldName = "ID";
-            this.ID.Name = "ID";
             // 
             // f360_ban_giao_tien
             // 

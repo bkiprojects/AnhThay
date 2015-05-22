@@ -8,8 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace BKI_QLTTQuocAnh.BaoCao {
-    public partial class f496_chi_tiet_phieu_de : Form {
-        public f496_chi_tiet_phieu_de() {
+    public partial class F496_DE : Form {
+        public F496_DE() {
             InitializeComponent();
         }
     }

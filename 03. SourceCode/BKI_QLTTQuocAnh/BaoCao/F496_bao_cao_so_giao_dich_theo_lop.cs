@@ -840,14 +840,18 @@ namespace BKI_QLTTQuocAnh {
                 //f496_chi_tiet_phieu_de v_frm = new f496_chi_tiet_phieu_de();
                 //v_frm.gridControl1.DataSource = e.CreateDrillDownDataSource();
                 //v_frm.ShowDialog();
-                Form v_frm = new Form();
+                //Form v_frm = new Form();
 
-                GridControl v_grv = new GridControl();
-                v_grv.Parent = v_frm;
-                v_grv.DataSource = e.CreateDrillDownDataSource();
-                v_frm.ShowDialog();
-                // Display the form.
-                v_frm.Dispose();
+                //GridControl v_grv = new GridControl();
+                //v_grv.Parent = v_frm;
+                //v_grv.DataSource = e.CreateDrillDownDataSource();
+                //v_frm.ShowDialog();
+                //// Display the form.
+                //v_frm.Dispose();
+                F496_DE v_fr = new F496_DE();
+                v_fr.gridControl1.DataSource = e.CreateDrillDownDataSource();
+                v_fr.ShowDialog();
+                v_fr.Dispose();
             }
             catch(Exception v_e) {
 

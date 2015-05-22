@@ -31,7 +31,7 @@
     <SuiteName>Dummy</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationRevision>18</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -247,11 +247,11 @@
     <Compile Include="BaoCao\F496_bao_cao_so_giao_dich_theo_lop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao\f496_chi_tiet_phieu_de.cs">
+    <Compile Include="BaoCao\F496_DE.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao\f496_chi_tiet_phieu_de.Designer.cs">
-      <DependentUpon>f496_chi_tiet_phieu_de.cs</DependentUpon>
+    <Compile Include="BaoCao\F496_DE.Designer.cs">
+      <DependentUpon>F496_DE.cs</DependentUpon>
     </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f210_dm_lop_mon.cs">
@@ -422,8 +422,8 @@
     <EmbeddedResource Include="BaoCao\F496_bao_cao_so_giao_dich_theo_lop.resx">
       <DependentUpon>F496_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\f496_chi_tiet_phieu_de.resx">
-      <DependentUpon>f496_chi_tiet_phieu_de.cs</DependentUpon>
+    <EmbeddedResource Include="BaoCao\F496_DE.resx">
+      <DependentUpon>F496_DE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f210_dm_lop_mon.resx">
       <DependentUpon>f210_dm_lop_mon.cs</DependentUpon>
