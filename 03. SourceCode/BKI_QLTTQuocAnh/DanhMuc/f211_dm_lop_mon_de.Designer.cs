@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f211_dm_lop_mon_de));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_dat_thoi_gian_end = new System.Windows.Forms.DateTimePicker();
+            this.m_dat_thoi_gian_start = new System.Windows.Forms.DateTimePicker();
+            this.m_lbl_thoi_gian_end = new System.Windows.Forms.Label();
+            this.m_lbl_thoi_gian_start = new System.Windows.Forms.Label();
             this.m_txt_hoc_phi = new System.Windows.Forms.TextBox();
             this.m_lbl_hoc_phi = new System.Windows.Forms.Label();
             this.m_txt_mo_ta = new System.Windows.Forms.TextBox();
@@ -41,10 +45,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_luu = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_lbl_thoi_gian_start = new System.Windows.Forms.Label();
-            this.m_lbl_thoi_gian_end = new System.Windows.Forms.Label();
-            this.m_dat_thoi_gian_start = new System.Windows.Forms.DateTimePicker();
-            this.m_dat_thoi_gian_end = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,42 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 224);
             this.panel1.TabIndex = 0;
+            // 
+            // m_dat_thoi_gian_end
+            // 
+            this.m_dat_thoi_gian_end.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_thoi_gian_end.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_thoi_gian_end.Location = new System.Drawing.Point(106, 151);
+            this.m_dat_thoi_gian_end.Name = "m_dat_thoi_gian_end";
+            this.m_dat_thoi_gian_end.Size = new System.Drawing.Size(196, 20);
+            this.m_dat_thoi_gian_end.TabIndex = 10;
+            // 
+            // m_dat_thoi_gian_start
+            // 
+            this.m_dat_thoi_gian_start.CustomFormat = "dd/MM/yyyy";
+            this.m_dat_thoi_gian_start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.m_dat_thoi_gian_start.Location = new System.Drawing.Point(106, 120);
+            this.m_dat_thoi_gian_start.Name = "m_dat_thoi_gian_start";
+            this.m_dat_thoi_gian_start.Size = new System.Drawing.Size(196, 20);
+            this.m_dat_thoi_gian_start.TabIndex = 9;
+            // 
+            // m_lbl_thoi_gian_end
+            // 
+            this.m_lbl_thoi_gian_end.AutoSize = true;
+            this.m_lbl_thoi_gian_end.Location = new System.Drawing.Point(12, 157);
+            this.m_lbl_thoi_gian_end.Name = "m_lbl_thoi_gian_end";
+            this.m_lbl_thoi_gian_end.Size = new System.Drawing.Size(72, 13);
+            this.m_lbl_thoi_gian_end.TabIndex = 8;
+            this.m_lbl_thoi_gian_end.Text = "Thời gian end";
+            // 
+            // m_lbl_thoi_gian_start
+            // 
+            this.m_lbl_thoi_gian_start.AutoSize = true;
+            this.m_lbl_thoi_gian_start.Location = new System.Drawing.Point(12, 126);
+            this.m_lbl_thoi_gian_start.Name = "m_lbl_thoi_gian_start";
+            this.m_lbl_thoi_gian_start.Size = new System.Drawing.Size(74, 13);
+            this.m_lbl_thoi_gian_start.TabIndex = 7;
+            this.m_lbl_thoi_gian_start.Text = "Thời gian start";
             // 
             // m_txt_hoc_phi
             // 
@@ -177,38 +213,6 @@
             this.imageList1.Images.SetKeyName(19, "");
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
-            // 
-            // m_lbl_thoi_gian_start
-            // 
-            this.m_lbl_thoi_gian_start.AutoSize = true;
-            this.m_lbl_thoi_gian_start.Location = new System.Drawing.Point(12, 126);
-            this.m_lbl_thoi_gian_start.Name = "m_lbl_thoi_gian_start";
-            this.m_lbl_thoi_gian_start.Size = new System.Drawing.Size(74, 13);
-            this.m_lbl_thoi_gian_start.TabIndex = 7;
-            this.m_lbl_thoi_gian_start.Text = "Thời gian start";
-            // 
-            // m_lbl_thoi_gian_end
-            // 
-            this.m_lbl_thoi_gian_end.AutoSize = true;
-            this.m_lbl_thoi_gian_end.Location = new System.Drawing.Point(12, 157);
-            this.m_lbl_thoi_gian_end.Name = "m_lbl_thoi_gian_end";
-            this.m_lbl_thoi_gian_end.Size = new System.Drawing.Size(72, 13);
-            this.m_lbl_thoi_gian_end.TabIndex = 8;
-            this.m_lbl_thoi_gian_end.Text = "Thời gian end";
-            // 
-            // m_dat_thoi_gian_start
-            // 
-            this.m_dat_thoi_gian_start.Location = new System.Drawing.Point(106, 120);
-            this.m_dat_thoi_gian_start.Name = "m_dat_thoi_gian_start";
-            this.m_dat_thoi_gian_start.Size = new System.Drawing.Size(196, 20);
-            this.m_dat_thoi_gian_start.TabIndex = 9;
-            // 
-            // m_dat_thoi_gian_end
-            // 
-            this.m_dat_thoi_gian_end.Location = new System.Drawing.Point(106, 151);
-            this.m_dat_thoi_gian_end.Name = "m_dat_thoi_gian_end";
-            this.m_dat_thoi_gian_end.Size = new System.Drawing.Size(196, 20);
-            this.m_dat_thoi_gian_end.TabIndex = 10;
             // 
             // f211_dm_lop_mon_de
             // 
