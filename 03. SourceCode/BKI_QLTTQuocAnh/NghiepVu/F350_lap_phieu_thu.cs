@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace BKI_QLTTQuocAnh.NghiepVu {
     public partial class F350_lap_phieu_thu : Form {
-        
+
 
         #region Public Methods
         public F350_lap_phieu_thu(string ip_str_type_frm) {
@@ -25,8 +25,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_str_frm_type = ip_str_type_frm;
             this.Name = ip_str_type_frm;
         }
-        public F350_lap_phieu_thu(string ip_str_type_frm, US_V_GD_PHIEU_THU ip_us_pt)
-        {
+        public F350_lap_phieu_thu(string ip_str_type_frm, US_V_GD_PHIEU_THU ip_us_pt) {
             InitializeComponent();
             format_controls();
             m_str_frm_type = ip_str_type_frm;
@@ -139,7 +138,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_sle_ma_hv.Properties.View.Columns[V_GD_HOC.TRUONG_DANG_HOC].Visible = false;
             m_sle_ma_hv.Properties.View.Columns[V_GD_HOC.FACEBOOK].Visible = false;
             m_sle_ma_hv.Properties.View.Columns[V_GD_HOC.DIA_CHI].Visible = false;
-            
+
 
             m_sle_ma_hv.Properties.View.Columns[V_GD_HOC.MA_DOI_TUONG].Caption = "Mã HV";
             m_sle_ma_hv.Properties.View.Columns[V_GD_HOC.MA_DOI_TUONG].Width = 200;
@@ -223,21 +222,19 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
             //
             //m_sle_lop.Properties.EditValueChanged += Properties_EditValueChanged;
-            if (m_str_frm_type == "SUA_PHIEU")
-            {
+            if(m_str_frm_type == "SUA_PHIEU") {
                 FactoryPhieu v_fac = new FactoryPhieu(this, m_str_frm_type, m_us_v_pt);
             }
-            else
-            {
+            else {
                 FactoryPhieu v_fac = new FactoryPhieu(this, m_str_frm_type);
             }
-            
+
         }
 
 
         private bool check_data_so_phieu() {
-            
-            if((m_sle_so_phieu_thu.EditValue == "" || m_sle_so_phieu_thu.EditValue == null) && m_str_frm_type=="PHIEU_THUC_THU") {
+
+            if((m_sle_so_phieu_thu.EditValue == "" || m_sle_so_phieu_thu.EditValue == null) && m_str_frm_type == "PHIEU_THUC_THU") {
                 m_lbl_check_so_phieu.Text = "Bạn chọn Sổ phiếu thu trước nhé";
                 m_txt_so_phieu.BackColor = Color.Bisque;
                 m_sle_so_phieu_thu.BackColor = Color.Bisque;
@@ -274,7 +271,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 m_txt_lan_thu.Text = "0";
                 return;
             }
-            
+
             decimal v_id_gd_hoc = find_id_gd_hoc(ip_dc_id_lop, ip_dc_id_hoc_sinh);
             string filter = "id_gd_hoc = " + v_id_gd_hoc + " and id_loai_phieu_thu = " + CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU;
 
@@ -286,10 +283,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 else if(v_dr.Length == 1) {
                     m_txt_lan_thu.Text = "2";
                 }
-                else if ((v_dr.Length == 2))
-	            {
-		            m_txt_lan_thu.Text = "3";
-	            }
+                else if((v_dr.Length == 2)) {
+                    m_txt_lan_thu.Text = "3";
+                }
             }
             else {
                 MessageBox.Show("Số lần thu vượt quá 3 lần! Xem lại nhé");
@@ -299,7 +295,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         private bool is_check_validate_ok() {
 
-            if(m_txt_so_phieu.Text.CompareTo("") == 0 && m_str_frm_type =="PHIEU_THUC_THU") {
+            if(m_txt_so_phieu.Text.CompareTo("") == 0 && m_str_frm_type == "PHIEU_THUC_THU") {
                 m_txt_so_phieu.BackColor = Color.Bisque;
             }
             else {
@@ -327,8 +323,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 m_sle_ma_hv.BackColor = Color.White;
             }
 
-            if ((m_sle_so_phieu_thu.EditValue == "" || m_sle_so_phieu_thu.EditValue == null) && m_str_frm_type == "PHIEU_THUC_THU")
-            {
+            if((m_sle_so_phieu_thu.EditValue == "" || m_sle_so_phieu_thu.EditValue == null) && m_str_frm_type == "PHIEU_THUC_THU") {
                 m_sle_so_phieu_thu.BackColor = Color.Bisque;
             }
             else {
@@ -342,25 +337,24 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 m_sle_lop.BackColor = Color.White;
             }
 
-            if (m_txt_lan_thu.Text == "" && m_str_frm_type != "PHIEU_PHAI_THU")
-            {
+            if(m_txt_lan_thu.Text == "" && m_str_frm_type != "PHIEU_PHAI_THU") {
                 m_txt_lan_thu.BackColor = Color.Bisque;
             }
             else {
                 m_txt_lan_thu.BackColor = Color.White;
             }
 
-            
+
             if(check_data_so_phieu()) {
                 return false;
             }
 
-            if((m_txt_so_phieu.Text.CompareTo("") == 0 && m_str_frm_type=="PHIEU_THUC_THU") || m_txt_so_tien.Text.CompareTo("") == 0 || m_txt_noi_dung.Text.CompareTo("") == 0) {
+            if((m_txt_so_phieu.Text.CompareTo("") == 0 && m_str_frm_type == "PHIEU_THUC_THU") || m_txt_so_tien.Text.CompareTo("") == 0 || m_txt_noi_dung.Text.CompareTo("") == 0) {
                 return false;
             }
-            string filter = "id_gd_hoc = " + find_id_gd_hoc(CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue)) + " and lan_thu = '" + m_txt_lan_thu.Text+"'";
+            string filter = "id_gd_hoc = " + find_id_gd_hoc(CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue)) + " and lan_thu = '" + m_txt_lan_thu.Text + "'";
             DataRow[] v_dr = m_ds_phieu_thu.GD_PHIEU_THU.Select(filter);
-            if(v_dr.Length > 0) {
+            if(v_dr.Length > 0 && m_str_frm_type != "SUA_PHIEU") {
                 MessageBox.Show("Bạn đã nhập phiếu này rồi");
                 return false;
             }
@@ -386,41 +380,57 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
         private void form_to_us_gd_phieu_thu(US_GD_PHIEU_THU ip_us) {
             try {
-                 
+                decimal v_id_gd_hoc = find_id_gd_hoc(CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue));
+
                 if(m_e_form_mode == DataEntryFormMode.UpdateDataState) {
-                    string filter = "id_lop_mon = " + CIPConvert.ToDecimal(m_sle_lop.EditValue) + " and id_hoc_sinh = " + m_sle_ma_hv.EditValue;
-                    ip_us.dcID = CIPConvert.ToDecimal(m_ds_phieu_thu.GD_PHIEU_THU.Select(filter)[0]["ID"]); 
+                    ip_us.dcID = m_us_v_pt.dcID;
                 }
-                
+
                 ip_us.strSO_PHIEU = m_txt_so_phieu.Text.Trim();
                 ip_us.datNGAY_THU = m_dat_ngay_thu.DateTime.Date;
-                ip_us.dcID_GD_HOC = find_id_gd_hoc(CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue));
-                
+                ip_us.dcID_GD_HOC = v_id_gd_hoc;
+
                 ip_us.dcSO_TIEN = CIPConvert.ToDecimal(m_txt_so_tien.Text.Trim());
                 ip_us.strNOI_DUNG = m_txt_noi_dung.Text.Trim();
                 ip_us.dcID_NGUOI_THU = CAppContext_201.getCurrentUserID();
                 ip_us.dcID_NGUOI_NHAP = CAppContext_201.getCurrentUserID();
                 ip_us.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.CHUA_BAN_GIAO;
                 ip_us.datNGAY_NHAP = m_dat_ngay_nhap.DateTime.Date;
-                
+
                 //Loai phieu thu tam thoi
-                if (m_str_frm_type == "PHIEU_PHAI_THU")
-                {
-                    ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU;
-                    ip_us.dcLAN_THU = 0;
+                if(m_us_v_pt == null) {
+                    if(m_str_frm_type == "PHIEU_PHAI_THU") {
+                        ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU;
+                        ip_us.dcLAN_THU = 0;
+                    }
+                    else if(m_str_frm_type == "PHIEU_THUC_THU") {
+                        ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU;
+                        ip_us.dcID_SO_PHIEU_THU = CIPConvert.ToDecimal(m_sle_so_phieu_thu.EditValue);
+                        ip_us.dcLAN_THU = CIPConvert.ToDecimal(m_txt_lan_thu.Text);
+
+                    }
+                    else if(m_str_frm_type == "PHIEU_GIAM_TRU") {
+                        ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU;
+                        ip_us.dcLAN_THU = 0;
+                    }
                 }
-                else if (m_str_frm_type == "PHIEU_THUC_THU")
-                {
-                    ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU;
-                    ip_us.dcID_SO_PHIEU_THU = CIPConvert.ToDecimal(m_sle_so_phieu_thu.EditValue);
-                    ip_us.dcLAN_THU = CIPConvert.ToDecimal(m_txt_lan_thu.Text);
-                    
+                else {
+                    if(m_str_frm_type == "PHIEU_PHAI_THU" || m_us_v_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU) {
+                        ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU;
+                        ip_us.dcLAN_THU = 0;
+                    }
+                    else if(m_str_frm_type == "PHIEU_THUC_THU" || m_us_v_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU) {
+                        ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU;
+                        ip_us.dcID_SO_PHIEU_THU = CIPConvert.ToDecimal(m_sle_so_phieu_thu.EditValue);
+                        ip_us.dcLAN_THU = CIPConvert.ToDecimal(m_txt_lan_thu.Text);
+
+                    }
+                    else if(m_str_frm_type == "PHIEU_GIAM_TRU" || m_us_v_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU) {
+                        ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU;
+                        ip_us.dcLAN_THU = 0;
+                    }
                 }
-                else if (m_str_frm_type == "PHIEU_GIAM_TRU")
-                {
-                    ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU;
-                    ip_us.dcLAN_THU = 0;
-                }
+               
             }
             catch(Exception v_e) {
                 throw v_e;
@@ -456,6 +466,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 }
                 load_data_to_ds_obj();
                 MessageBox.Show("Đã lưu phiếu thành công");
+                this.Close();
             }
             catch(Exception v_e) {
                 throw v_e;
@@ -500,7 +511,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         void m_sle_ma_hv_EditValueChanged(object sender, EventArgs e) {
             try {
                 m_sle_ma_hv.BackColor = Color.White;
-                if(m_sle_ma_hv.EditValue =="" || m_sle_ma_hv.EditValue == null || m_sle_lop.EditValue == null || m_sle_lop.EditValue == "") {
+                if(m_sle_ma_hv.EditValue == "" || m_sle_ma_hv.EditValue == null || m_sle_lop.EditValue == null || m_sle_lop.EditValue == "") {
                     m_lbl_ten_hs.Visible = false;
                     return;
                 }
@@ -536,8 +547,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         void m_txt_so_phieu_EditValueChanged(object sender, EventArgs e) {
             try {
-                if (m_e_form_mode == DataEntryFormMode.UpdateDataState)
-                {
+                if(m_e_form_mode == DataEntryFormMode.UpdateDataState) {
                     return;
                 }
                 check_data_so_phieu();
@@ -593,6 +603,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
 
 
-        
+
     }
 }

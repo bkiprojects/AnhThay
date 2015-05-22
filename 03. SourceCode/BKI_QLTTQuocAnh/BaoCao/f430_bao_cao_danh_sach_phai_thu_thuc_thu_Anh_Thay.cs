@@ -694,7 +694,7 @@ namespace BKI_QLTTQuocAnh
             US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
             F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("SUA_PHIEU", v_us_gd_pt);
             v_frm.ShowDialog();
-
+            v_frm.Dispose();
             //	F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE v_fDE = new F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE();
             //	v_fDE.display(m_us);
             load_data_2_grid();
@@ -727,7 +727,7 @@ namespace BKI_QLTTQuocAnh
                     v_us.CommitTransaction();
                     m_fg.Rows.Remove(m_fg.Row);
                     XtraMessageBox.Show("Đã xóa thành công");
-
+                    load_data_2_grid();
                 }
                 catch (Exception v_e)
                 {
