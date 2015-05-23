@@ -11,6 +11,7 @@ namespace BKI_QLTTQuocAnh.BaoCao {
     public partial class F496_DE : Form {
         public F496_DE() {
             InitializeComponent();
+            gridView1.ExpandAllGroups();
         }
     }
 }

@@ -79,8 +79,9 @@ namespace BKI_QLTTQuocAnh {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F496_bao_cao_so_giao_dich_theo_lop));
-            this.ImageList = new System.Windows.Forms.ImageList();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
@@ -93,7 +94,7 @@ namespace BKI_QLTTQuocAnh {
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label1 = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.pivotGridControl = new DevExpress.XtraPivotGrid.PivotGridControl();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -142,7 +143,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 439);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1362, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(731, 36);
             this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
@@ -154,7 +155,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 2;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(1006, 4);
+            this.m_cmd_insert.Location = new System.Drawing.Point(375, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_insert.TabIndex = 1;
@@ -169,7 +170,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_update.ImageIndex = 3;
             this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(1094, 4);
+            this.m_cmd_update.Location = new System.Drawing.Point(463, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_update.TabIndex = 2;
@@ -199,7 +200,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_delete.ImageIndex = 4;
             this.m_cmd_delete.ImageList = this.ImageList;
-            this.m_cmd_delete.Location = new System.Drawing.Point(1182, 4);
+            this.m_cmd_delete.Location = new System.Drawing.Point(551, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_delete.TabIndex = 3;
@@ -214,7 +215,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(1270, 4);
+            this.m_cmd_exit.Location = new System.Drawing.Point(639, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_exit.TabIndex = 4;
@@ -227,7 +228,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_fg.Location = new System.Drawing.Point(0, 0);
             this.m_fg.Name = "m_fg";
             this.m_fg.Rows.Fixed = 3;
-            this.m_fg.Size = new System.Drawing.Size(1362, 475);
+            this.m_fg.Size = new System.Drawing.Size(731, 475);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             // 
@@ -240,7 +241,7 @@ namespace BKI_QLTTQuocAnh {
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1362, 87);
+            this.panel1.Size = new System.Drawing.Size(731, 87);
             this.panel1.TabIndex = 0;
             // 
             // m_sle_lop
@@ -321,7 +322,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(1362, 45);
+            this.m_lbl_header.Size = new System.Drawing.Size(731, 45);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÁO CÁO SỔ GIAO DỊCH THEO LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -331,7 +332,7 @@ namespace BKI_QLTTQuocAnh {
             this.pivotGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pivotGridControl.Location = new System.Drawing.Point(0, 87);
             this.pivotGridControl.Name = "pivotGridControl";
-            this.pivotGridControl.Size = new System.Drawing.Size(1362, 352);
+            this.pivotGridControl.Size = new System.Drawing.Size(731, 352);
             this.pivotGridControl.TabIndex = 3;
             this.pivotGridControl.Visible = false;
             this.pivotGridControl.CustomFieldValueCells += new DevExpress.XtraPivotGrid.PivotCustomFieldValueCellsEventHandler(this.pivotGridControl_CustomFieldValueCells);
@@ -342,7 +343,7 @@ namespace BKI_QLTTQuocAnh {
             // F496_bao_cao_so_giao_dich_theo_lop
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(1362, 475);
+            this.ClientSize = new System.Drawing.Size(731, 475);
             this.Controls.Add(this.pivotGridControl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.m_pnl_out_place_dm);
