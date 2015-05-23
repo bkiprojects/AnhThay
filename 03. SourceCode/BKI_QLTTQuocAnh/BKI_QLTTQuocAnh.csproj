@@ -351,6 +351,24 @@
     <Compile Include="NghiepVu\F350_lap_phieu_thu.Designer.cs">
       <DependentUpon>F350_lap_phieu_thu.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\F352_LAP_HOC_PHI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F352_LAP_HOC_PHI.Designer.cs">
+      <DependentUpon>F352_LAP_HOC_PHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F354_LAP_GIAM_TRU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F354_LAP_GIAM_TRU.Designer.cs">
+      <DependentUpon>F354_LAP_GIAM_TRU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\F354_LAP_THUC_THU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\F354_LAP_THUC_THU.Designer.cs">
+      <DependentUpon>F354_LAP_THUC_THU.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\f360_ban_giao_tien.cs">
       <SubType>Form</SubType>
     </Compile>
