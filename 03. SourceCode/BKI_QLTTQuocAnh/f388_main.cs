@@ -216,8 +216,14 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("PHIEU_GIAM_TRU");
+                //F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("PHIEU_GIAM_TRU");
 
+                //if(IsExistFormName(v_frm)) {
+                //    return;
+                //}
+                //v_frm.MdiParent = this;
+                //v_frm.Show();
+                F354_LAP_GIAM_TRU v_frm = new F354_LAP_GIAM_TRU();
                 if(IsExistFormName(v_frm)) {
                     return;
                 }

@@ -105,7 +105,7 @@
             // 
             // m_txt_noi_dung
             // 
-            this.m_txt_noi_dung.Location = new System.Drawing.Point(135, 229);
+            this.m_txt_noi_dung.Location = new System.Drawing.Point(135, 187);
             this.m_txt_noi_dung.Name = "m_txt_noi_dung";
             this.m_txt_noi_dung.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_txt_noi_dung.Size = new System.Drawing.Size(232, 55);
@@ -114,7 +114,7 @@
             // m_txt_so_tien
             // 
             this.m_txt_so_tien.EditValue = "";
-            this.m_txt_so_tien.Location = new System.Drawing.Point(135, 191);
+            this.m_txt_so_tien.Location = new System.Drawing.Point(135, 149);
             this.m_txt_so_tien.Name = "m_txt_so_tien";
             this.m_txt_so_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.m_txt_so_tien.Properties.Appearance.Options.UseFont = true;
@@ -125,7 +125,7 @@
             // m_sle_lop
             // 
             this.m_sle_lop.EditValue = "";
-            this.m_sle_lop.Location = new System.Drawing.Point(134, 99);
+            this.m_sle_lop.Location = new System.Drawing.Point(134, 57);
             this.m_sle_lop.Name = "m_sle_lop";
             this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_sle_lop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -145,7 +145,7 @@
             // m_sle_ma_hv
             // 
             this.m_sle_ma_hv.EditValue = "";
-            this.m_sle_ma_hv.Location = new System.Drawing.Point(134, 129);
+            this.m_sle_ma_hv.Location = new System.Drawing.Point(134, 87);
             this.m_sle_ma_hv.Name = "m_sle_ma_hv";
             this.m_sle_ma_hv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_sle_ma_hv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -165,7 +165,7 @@
             // m_dat_ngay_thu
             // 
             this.m_dat_ngay_thu.EditValue = null;
-            this.m_dat_ngay_thu.Location = new System.Drawing.Point(134, 69);
+            this.m_dat_ngay_thu.Location = new System.Drawing.Point(135, 332);
             this.m_dat_ngay_thu.Name = "m_dat_ngay_thu";
             this.m_dat_ngay_thu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_dat_ngay_thu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -178,7 +178,7 @@
             // 
             // m_lbl_nv_nhap
             // 
-            this.m_lbl_nv_nhap.Location = new System.Drawing.Point(134, 319);
+            this.m_lbl_nv_nhap.Location = new System.Drawing.Point(134, 277);
             this.m_lbl_nv_nhap.Name = "m_lbl_nv_nhap";
             this.m_lbl_nv_nhap.Size = new System.Drawing.Size(12, 13);
             this.m_lbl_nv_nhap.TabIndex = 23;
@@ -186,7 +186,7 @@
             // 
             // m_lbl_nv_thu
             // 
-            this.m_lbl_nv_thu.Location = new System.Drawing.Point(135, 290);
+            this.m_lbl_nv_thu.Location = new System.Drawing.Point(135, 248);
             this.m_lbl_nv_thu.Name = "m_lbl_nv_thu";
             this.m_lbl_nv_thu.Size = new System.Drawing.Size(12, 13);
             this.m_lbl_nv_thu.TabIndex = 21;
@@ -225,7 +225,7 @@
             // m_dat_ngay_nhap
             // 
             this.m_dat_ngay_nhap.EditValue = null;
-            this.m_dat_ngay_nhap.Location = new System.Drawing.Point(135, 346);
+            this.m_dat_ngay_nhap.Location = new System.Drawing.Point(135, 304);
             this.m_dat_ngay_nhap.Name = "m_dat_ngay_nhap";
             this.m_dat_ngay_nhap.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_dat_ngay_nhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -262,7 +262,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(324, 194);
+            this.label3.Location = new System.Drawing.Point(324, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 20);
             this.label3.TabIndex = 17;
@@ -273,7 +273,7 @@
             this.m_lbl_ten_hs.AutoSize = true;
             this.m_lbl_ten_hs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_lbl_ten_hs.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_ten_hs.Location = new System.Drawing.Point(131, 159);
+            this.m_lbl_ten_hs.Location = new System.Drawing.Point(131, 117);
             this.m_lbl_ten_hs.Name = "m_lbl_ten_hs";
             this.m_lbl_ten_hs.Size = new System.Drawing.Size(23, 17);
             this.m_lbl_ten_hs.TabIndex = 14;
@@ -282,16 +282,16 @@
             // m_lbl_ngay_thu
             // 
             this.m_lbl_ngay_thu.AutoSize = true;
-            this.m_lbl_ngay_thu.Location = new System.Drawing.Point(13, 72);
+            this.m_lbl_ngay_thu.Location = new System.Drawing.Point(14, 335);
             this.m_lbl_ngay_thu.Name = "m_lbl_ngay_thu";
-            this.m_lbl_ngay_thu.Size = new System.Drawing.Size(50, 13);
+            this.m_lbl_ngay_thu.Size = new System.Drawing.Size(49, 13);
             this.m_lbl_ngay_thu.TabIndex = 5;
-            this.m_lbl_ngay_thu.Text = "Ngày thu";
+            this.m_lbl_ngay_thu.Text = "Ngày lập";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 102);
+            this.label1.Location = new System.Drawing.Point(13, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 7;
@@ -300,7 +300,7 @@
             // m_lbl_so_tien
             // 
             this.m_lbl_so_tien.AutoSize = true;
-            this.m_lbl_so_tien.Location = new System.Drawing.Point(13, 199);
+            this.m_lbl_so_tien.Location = new System.Drawing.Point(13, 157);
             this.m_lbl_so_tien.Name = "m_lbl_so_tien";
             this.m_lbl_so_tien.Size = new System.Drawing.Size(64, 13);
             this.m_lbl_so_tien.TabIndex = 15;
@@ -309,7 +309,7 @@
             // m_lbl_4
             // 
             this.m_lbl_4.AutoSize = true;
-            this.m_lbl_4.Location = new System.Drawing.Point(13, 290);
+            this.m_lbl_4.Location = new System.Drawing.Point(13, 248);
             this.m_lbl_4.Name = "m_lbl_4";
             this.m_lbl_4.Size = new System.Drawing.Size(77, 13);
             this.m_lbl_4.TabIndex = 20;
@@ -318,7 +318,7 @@
             // m_lbl_6
             // 
             this.m_lbl_6.AutoSize = true;
-            this.m_lbl_6.Location = new System.Drawing.Point(13, 319);
+            this.m_lbl_6.Location = new System.Drawing.Point(13, 277);
             this.m_lbl_6.Name = "m_lbl_6";
             this.m_lbl_6.Size = new System.Drawing.Size(83, 13);
             this.m_lbl_6.TabIndex = 22;
@@ -327,7 +327,7 @@
             // m_lbl_ma_hoc_sinh
             // 
             this.m_lbl_ma_hoc_sinh.AutoSize = true;
-            this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(13, 132);
+            this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(13, 90);
             this.m_lbl_ma_hoc_sinh.Name = "m_lbl_ma_hoc_sinh";
             this.m_lbl_ma_hoc_sinh.Size = new System.Drawing.Size(50, 13);
             this.m_lbl_ma_hoc_sinh.TabIndex = 9;
@@ -336,7 +336,7 @@
             // m_lbl_noi_dung
             // 
             this.m_lbl_noi_dung.AutoSize = true;
-            this.m_lbl_noi_dung.Location = new System.Drawing.Point(13, 232);
+            this.m_lbl_noi_dung.Location = new System.Drawing.Point(13, 190);
             this.m_lbl_noi_dung.Name = "m_lbl_noi_dung";
             this.m_lbl_noi_dung.Size = new System.Drawing.Size(63, 13);
             this.m_lbl_noi_dung.TabIndex = 18;
@@ -345,7 +345,7 @@
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(13, 349);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(13, 307);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(59, 13);
             this.m_lbl_den_ngay.TabIndex = 24;

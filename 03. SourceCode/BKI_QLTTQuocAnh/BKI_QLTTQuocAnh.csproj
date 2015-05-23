@@ -509,6 +509,9 @@
     <EmbeddedResource Include="NghiepVu\F352_LAP_HOC_PHI.resx">
       <DependentUpon>F352_LAP_HOC_PHI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\F354_LAP_GIAM_TRU.resx">
+      <DependentUpon>F354_LAP_GIAM_TRU.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f360_ban_giao_tien.resx">
       <DependentUpon>f360_ban_giao_tien.cs</DependentUpon>
     </EmbeddedResource>
