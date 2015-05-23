@@ -503,9 +503,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                     MessageBox.Show("Bạn phải chọn lớp mới cho học viên!");
                     return;
                 }
+                if (m_sle_lop.SelectedText == m_sle_lop_2.SelectedText)
+                    MessageBox.Show("Lớp để chuyển đến được giống lớp chuyển đi");
                 else
                 {
-                    chuyen_lop_cho_hoc_vien();             
+                    chuyen_lop_cho_hoc_vien();
                 }
                 m_lbl_ten_hs.Visible = false;
                 load_data_to_sle_lop();

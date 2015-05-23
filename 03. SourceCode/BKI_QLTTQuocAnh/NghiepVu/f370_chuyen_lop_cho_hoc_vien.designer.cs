@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f370_chuyen_lop_cho_hoc_vien));
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,7 +41,7 @@
             this.m_lbl_ma_hoc_sinh = new System.Windows.Forms.Label();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList = new System.Windows.Forms.ImageList();
             this.label3 = new System.Windows.Forms.Label();
             this.m_txt_tong_tien = new System.Windows.Forms.TextBox();
             this.m_lbl_tong_tien = new System.Windows.Forms.Label();
@@ -120,7 +119,7 @@
             this.m_lbl_buoc_1.Location = new System.Drawing.Point(3, 1);
             this.m_lbl_buoc_1.Name = "m_lbl_buoc_1";
             this.m_lbl_buoc_1.Size = new System.Drawing.Size(86, 30);
-            this.m_lbl_buoc_1.TabIndex = 5;
+            this.m_lbl_buoc_1.TabIndex = 0;
             this.m_lbl_buoc_1.Text = "Bước 1";
             this.m_lbl_buoc_1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -132,7 +131,7 @@
             this.m_lbl_ten_hs.Location = new System.Drawing.Point(312, 71);
             this.m_lbl_ten_hs.Name = "m_lbl_ten_hs";
             this.m_lbl_ten_hs.Size = new System.Drawing.Size(28, 24);
-            this.m_lbl_ten_hs.TabIndex = 4;
+            this.m_lbl_ten_hs.TabIndex = 6;
             this.m_lbl_ten_hs.Text = "...";
             // 
             // m_sle_lop
@@ -146,7 +145,7 @@
             this.m_sle_lop.Properties.NullText = "Chọn lớp";
             this.m_sle_lop.Properties.View = this.gridView1;
             this.m_sle_lop.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_lop.TabIndex = 1;
+            this.m_sle_lop.TabIndex = 3;
             // 
             // gridView1
             // 
@@ -166,7 +165,7 @@
             this.m_sle_ma_hv.Properties.NullText = "Chọn HV";
             this.m_sle_ma_hv.Properties.View = this.searchLookUpEdit1View;
             this.m_sle_ma_hv.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_ma_hv.TabIndex = 3;
+            this.m_sle_ma_hv.TabIndex = 5;
             // 
             // searchLookUpEdit1View
             // 
@@ -181,7 +180,7 @@
             this.label1.Location = new System.Drawing.Point(15, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Lớp đang học";
             // 
             // m_lbl_ma_hoc_sinh
@@ -190,7 +189,7 @@
             this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(15, 74);
             this.m_lbl_ma_hoc_sinh.Name = "m_lbl_ma_hoc_sinh";
             this.m_lbl_ma_hoc_sinh.Size = new System.Drawing.Size(50, 13);
-            this.m_lbl_ma_hoc_sinh.TabIndex = 2;
+            this.m_lbl_ma_hoc_sinh.TabIndex = 4;
             this.m_lbl_ma_hoc_sinh.Text = "Mã HV(*)";
             // 
             // m_fg
@@ -200,7 +199,7 @@
             this.m_fg.Name = "m_fg";
             this.m_fg.Size = new System.Drawing.Size(481, 89);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
-            this.m_fg.TabIndex = 21;
+            this.m_fg.TabIndex = 1;
             this.m_fg.Visible = false;
             // 
             // m_cmd_search
@@ -214,7 +213,7 @@
             this.m_cmd_search.Location = new System.Drawing.Point(523, 67);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 5;
+            this.m_cmd_search.TabIndex = 7;
             this.m_cmd_search.Text = "&Lọc phiếu";
             // 
             // ImageList
@@ -252,7 +251,7 @@
             this.label3.Location = new System.Drawing.Point(450, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 24);
-            this.label3.TabIndex = 8;
+            this.label3.TabIndex = 10;
             this.label3.Text = "(VNĐ)";
             this.label3.Visible = false;
             // 
@@ -265,7 +264,7 @@
             this.m_txt_tong_tien.Name = "m_txt_tong_tien";
             this.m_txt_tong_tien.ReadOnly = true;
             this.m_txt_tong_tien.Size = new System.Drawing.Size(215, 29);
-            this.m_txt_tong_tien.TabIndex = 7;
+            this.m_txt_tong_tien.TabIndex = 9;
             this.m_txt_tong_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.m_txt_tong_tien.Visible = false;
             // 
@@ -277,7 +276,7 @@
             this.m_lbl_tong_tien.Location = new System.Drawing.Point(8, 107);
             this.m_lbl_tong_tien.Name = "m_lbl_tong_tien";
             this.m_lbl_tong_tien.Size = new System.Drawing.Size(188, 24);
-            this.m_lbl_tong_tien.TabIndex = 6;
+            this.m_lbl_tong_tien.TabIndex = 8;
             this.m_lbl_tong_tien.Text = "TỔNG TIỀN ĐÃ THU";
             this.m_lbl_tong_tien.Visible = false;
             // 
@@ -293,7 +292,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1175, 45);
-            this.m_pnl_out_place_dm.TabIndex = 4;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_exit
             // 
@@ -380,7 +379,7 @@
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit});
             this.gridControl.Size = new System.Drawing.Size(1175, 208);
-            this.gridControl.TabIndex = 1;
+            this.gridControl.TabIndex = 5;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
             // 
@@ -505,7 +504,7 @@
             this.m_sle_lop_2.Properties.NullText = "Chọn lớp";
             this.m_sle_lop_2.Properties.View = this.gridView2;
             this.m_sle_lop_2.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_lop_2.TabIndex = 3;
+            this.m_sle_lop_2.TabIndex = 2;
             // 
             // gridView2
             // 
@@ -520,7 +519,7 @@
             this.label2.Location = new System.Drawing.Point(15, 415);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Chuyển sang lớp";
             // 
             // m_lbl_buoc_2

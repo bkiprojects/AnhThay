@@ -224,7 +224,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             //BaseMessages.MsgBox_Infor("Đã bàn giao tiền!");
             US_GD_PHIEU_THU v_us_trans = new US_GD_PHIEU_THU();
             try {
-                
+                //if()
                 v_us_trans.BeginTransaction();
                 
                 foreach(var rowHandle in gridView.GetSelectedRows()) {
