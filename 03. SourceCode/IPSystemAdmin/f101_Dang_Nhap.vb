@@ -266,14 +266,14 @@ Public Class f101_Dang_Nhap
     End Sub
     Private Function ValidLogonData() As Boolean
         If Not CValidateTextBox.IsValid(Me.m_txtTenTruyNhap, DataType.StringType, allowNull.NO, False) Then
-            BaseMessages.MsgBox_Error("Tài khoản chưa chính xác")
+            BaseMessages.MsgBox_Error("Tài khoản không được để trống")
             'BaseMessages.MsgBox_Warning(19)
             Return False
         End If
 
         If Not CValidateTextBox.IsValid(Me.m_txtMatKhau, DataType.StringType, allowNull.NO, False) Then
-            BaseMessages.MsgBox_Error("Mật khẩu chưa chính xác")
-            BaseMessages.MsgBox_Warning(20)
+            BaseMessages.MsgBox_Error("Mật khẩu không được để trống")
+            'BaseMessages.MsgBox_Warning(20)
             Return False
         End If
 
@@ -301,7 +301,8 @@ Public Class f101_Dang_Nhap
 
         Select Case v_logonResult
             Case US_HT_NGUOI_SU_DUNG.LogonResult.WrongPassword_OR_Name
-                BaseMessages.MsgBox_Warning(18)
+                BaseMessages.MsgBox_Error("Tài khoản hoặc mật khẩu chưa chính xác")
+                'BaseMessages.MsgBox_Warning(18)
             Case US_HT_NGUOI_SU_DUNG.LogonResult.User_Is_Locked
                 BaseMessages.MsgBox_Warning(21)
             Case US_HT_NGUOI_SU_DUNG.LogonResult.OK_Login_Succeeded
