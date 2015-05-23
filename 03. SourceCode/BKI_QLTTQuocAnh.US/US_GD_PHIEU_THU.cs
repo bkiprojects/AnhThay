@@ -334,5 +334,11 @@ namespace BKI_QLTTQuocAnh.US
 
             v_csp.ExecuteCommand(this);
         }
+
+        public void DeleteHocPhiHocVienLop(decimal ip_dc_id_gd_hoc) {
+            CStoredProc v_csp = new CStoredProc("Pr_delete_phieu_hoc_vien_theo_lop");
+            v_csp.addDecimalInputParam("@ip_dc_id_gd_hoc", ip_dc_id_gd_hoc);
+            v_csp.addDecimalInputParam("@ip_dc_id_loai_phieu", CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU);
+        }
     }
 }

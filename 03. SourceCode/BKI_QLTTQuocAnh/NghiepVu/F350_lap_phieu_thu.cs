@@ -616,9 +616,5 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             }
         }
 
-
-
-
-
     }
 }
