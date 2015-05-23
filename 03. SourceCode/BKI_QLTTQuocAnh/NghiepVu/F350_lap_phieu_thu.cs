@@ -13,6 +13,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BKI_QLTTQuocAnh.DanhMuc;
 
 namespace BKI_QLTTQuocAnh.NghiepVu {
     public partial class F350_lap_phieu_thu : Form {
@@ -584,7 +585,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         void m_cmd_them_hv_Click(object sender, EventArgs e) {
             try {
+                DialogResult v_dlg = new System.Windows.Forms.DialogResult();
 
+                F251_dm_hs_theo_lop_de v_frm = new F251_dm_hs_theo_lop_de();
+                v_dlg = v_frm.ShowDialog();
+
+                if(v_dlg == System.Windows.Forms.DialogResult.OK) {
+                    
+                }
+                else {
+                    return;
+                }
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);

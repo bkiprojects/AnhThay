@@ -266,7 +266,7 @@
             // m_txt_lan_thu
             // 
             this.m_txt_lan_thu.EditValue = "0";
-            this.m_txt_lan_thu.Location = new System.Drawing.Point(423, 172);
+            this.m_txt_lan_thu.Location = new System.Drawing.Point(389, 172);
             this.m_txt_lan_thu.Name = "m_txt_lan_thu";
             this.m_txt_lan_thu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_txt_lan_thu.Size = new System.Drawing.Size(31, 20);
@@ -311,8 +311,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_dat_ngay_thu.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_dat_ngay_thu.Properties.CalendarTimeProperties.CloseUpKey = new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F4);
-            this.m_dat_ngay_thu.Properties.CalendarTimeProperties.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.Default;
             this.m_dat_ngay_thu.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.m_dat_ngay_thu.Size = new System.Drawing.Size(138, 20);
             this.m_dat_ngay_thu.TabIndex = 42;
@@ -343,8 +341,6 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_dat_ngay_nhap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_dat_ngay_nhap.Properties.CalendarTimeProperties.CloseUpKey = new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.F4);
-            this.m_dat_ngay_nhap.Properties.CalendarTimeProperties.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.Default;
             this.m_dat_ngay_nhap.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.m_dat_ngay_nhap.Size = new System.Drawing.Size(137, 20);
             this.m_dat_ngay_nhap.TabIndex = 20;
@@ -484,7 +480,7 @@
             // m_lbl_lan_thu
             // 
             this.m_lbl_lan_thu.AutoSize = true;
-            this.m_lbl_lan_thu.Location = new System.Drawing.Point(365, 175);
+            this.m_lbl_lan_thu.Location = new System.Drawing.Point(331, 175);
             this.m_lbl_lan_thu.Name = "m_lbl_lan_thu";
             this.m_lbl_lan_thu.Size = new System.Drawing.Size(53, 13);
             this.m_lbl_lan_thu.TabIndex = 27;
@@ -516,6 +512,7 @@
             this.m_cmd_them_hv.Name = "m_cmd_them_hv";
             this.m_cmd_them_hv.Size = new System.Drawing.Size(33, 20);
             this.m_cmd_them_hv.TabIndex = 25;
+            this.m_cmd_them_hv.Visible = false;
             // 
             // m_lbl_den_ngay
             // 
