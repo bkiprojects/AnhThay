@@ -393,9 +393,9 @@
             this.m_lbl_so_tien.AutoSize = true;
             this.m_lbl_so_tien.Location = new System.Drawing.Point(12, 158);
             this.m_lbl_so_tien.Name = "m_lbl_so_tien";
-            this.m_lbl_so_tien.Size = new System.Drawing.Size(64, 13);
+            this.m_lbl_so_tien.Size = new System.Drawing.Size(101, 13);
             this.m_lbl_so_tien.TabIndex = 15;
-            this.m_lbl_so_tien.Text = "HỌC PHÍ (*)";
+            this.m_lbl_so_tien.Text = "TIỀN GIẢM TRỪ (*)";
             // 
             // m_lbl_4
             // 

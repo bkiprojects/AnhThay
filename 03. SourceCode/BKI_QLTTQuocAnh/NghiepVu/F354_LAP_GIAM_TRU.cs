@@ -18,10 +18,25 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         public F354_LAP_GIAM_TRU() {
             InitializeComponent();
             format_controls();
+            load_default_data_form();
         }
 
         public void display_for_update(US_V_GD_PHIEU_THU ip_us_v_gd_phieu_thu) {
+            load_data_2_ds_obj();
+            m_e_form_mode = DataEntryFormMode.UpdateDataState;
             m_us_gd_phieu_thu.dcID = ip_us_v_gd_phieu_thu.dcID;
+            m_us_gd_phieu_thu.dcID = ip_us_v_gd_phieu_thu.dcID;
+            m_sle_lop.EditValue = ip_us_v_gd_phieu_thu.dcID_LOP_MON;
+            m_sle_ma_hv.EditValue = ip_us_v_gd_phieu_thu.dcID_HOC_SINH;
+            m_txt_so_tien.Text = ip_us_v_gd_phieu_thu.dcSO_TIEN.ToString();
+            m_txt_noi_dung.Text = ip_us_v_gd_phieu_thu.strNOI_DUNG;
+            m_dat_ngay_nhap.EditValue = ip_us_v_gd_phieu_thu.datNGAY_NHAP;
+            m_dat_ngay_thu.EditValue = ip_us_v_gd_phieu_thu.datNGAY_THU;
+            m_txt_lan_thu.Text = ip_us_v_gd_phieu_thu.dcLAN_THU.ToString();
+            m_lbl_header_left.Text = "CẬP NHẬT GIẢM TRỪ";
+            this.Text = "F354 - Cập nhật giảm trừ";
+            m_cmd_insert.Text = "Cập nhật";
+            this.ShowDialog();
         }
         ///Members
         ///
@@ -33,8 +48,18 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         DS_GD_PHIEU_THU m_ds_gd_phieu_thu = new DS_GD_PHIEU_THU();
 
         US_GD_PHIEU_THU m_us_gd_phieu_thu = new US_GD_PHIEU_THU();
+
+
+
         ///Private Methods
         ///
+        private void load_default_data_form() {
+            m_dat_ngay_nhap.EditValue = DateTime.Now.Date;
+            m_dat_ngay_thu.EditValue = DateTime.Now.Date;
+            m_lbl_ten_hs.Text = "";
+            m_lbl_nv_nhap.Text = CAppContext_201.getCurrentUser();
+            m_lbl_nv_thu.Text = CAppContext_201.getCurrentUser();
+        }
         private void format_controls() {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             this.m_lbl_header_left.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -44,14 +69,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
 
         private void set_init_form_load() {
-            m_lbl_ten_hs.Text = "";
-            m_lbl_nv_nhap.Text = CAppContext_201.getCurrentUser();
-            m_lbl_nv_thu.Text = CAppContext_201.getCurrentUser();
-            m_dat_ngay_nhap.EditValue = DateTime.Now.Date;
-            m_dat_ngay_thu.EditValue = DateTime.Now.Date;
-
+            m_sle_ma_hv.EditValueChanged += m_sle_ma_hv_EditValueChanged;
             load_data_2_ds_obj();
             load_data_to_sle_lop();
+            
         }
 
         private void load_lan_thu_phieu_thu(decimal ip_dc_id_hoc_sinh, decimal ip_dc_id_lop) {
@@ -174,6 +195,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_sle_ma_hv.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
         }
 
+        private void clear_data_phieu() {
+            m_sle_lop.EditValue = null;
+            m_sle_ma_hv.EditValue = null;
+            m_txt_noi_dung.Text = "";
+            m_txt_so_tien.Text = "";
+            m_txt_lan_thu.Text = "";
+        }
+
         private decimal find_id_gd_hoc(decimal ip_dc_id_lop, decimal ip_dc_id_hv) {
             try {
                 string v_str_filter = "id_hoc_sinh = '" + ip_dc_id_hv + "' and id_lop_mon = '" + ip_dc_id_lop + "'";
@@ -225,11 +254,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
         private void form_2_us_gd_phieu_thu(US_GD_PHIEU_THU ip_us) {
             try {
-                m_us_gd_phieu_thu.ClearAllFields();
+                //m_us_gd_phieu_thu.ClearAllFields();
 
                 decimal v_id_gd_hoc = find_id_gd_hoc(CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue));
 
-                ip_us.dcLAN_THU = 0;
+                ip_us.dcLAN_THU = CIPConvert.ToDecimal(m_txt_lan_thu.Text);
                 ip_us.dcID_LOAI_PHIEU_THU = CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU;
                 ip_us.dcID_GD_HOC = v_id_gd_hoc;
                 ip_us.dcSO_TIEN = CIPConvert.ToDecimal(m_txt_so_tien.Text.Trim());
@@ -258,9 +287,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 switch(m_e_form_mode) {
                     case DataEntryFormMode.InsertDataState:
                     m_us_gd_phieu_thu.BeginTransaction();
-                    m_us_gd_phieu_thu.DeleteHocPhiHocVienLop(m_us_gd_phieu_thu.dcID_GD_HOC);
                     m_us_gd_phieu_thu.Insert();
                     m_us_gd_phieu_thu.CommitTransaction();
+                    DialogResult v_dlg = XtraMessageBox.Show("Bạn có muốn lập giảm trừ mới?", "THÀNH CÔNG", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+                    if(v_dlg == System.Windows.Forms.DialogResult.Yes) {
+                        clear_data_phieu();
+                    }
+                    else if(v_dlg == System.Windows.Forms.DialogResult.No) {
+                        this.Close();
+                    }
                     break;
 
                     case DataEntryFormMode.SelectDataState:
@@ -269,6 +304,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
                     case DataEntryFormMode.UpdateDataState:
                     m_us_gd_phieu_thu.Update();
+                    XtraMessageBox.Show("Cập nhật thành công!", "THÀNH CÔNG", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    this.Close();
                     break;
 
                     case DataEntryFormMode.ViewDataState:
@@ -277,7 +314,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                     default:
                     break;
                 }
-                XtraMessageBox.Show("Đã cập nhật thành công học phí cho học sinh!", "THÀNH CÔNG", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             catch(Exception v_e) {
                 if(m_us_gd_phieu_thu.is_having_transaction()) {
@@ -293,7 +329,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             this.Load += F352_LAP_GIAM_TRU_Load;
             m_sle_lop.EditValueChanged += m_sle_lop_EditValueChanged;
             m_txt_so_tien.EditValueChanged += m_txt_so_tien_EditValueChanged;
-            m_sle_ma_hv.EditValueChanged += m_sle_ma_hv_EditValueChanged;
+            
             m_cmd_insert.Click += m_cmd_insert_Click;
         }
 

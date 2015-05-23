@@ -210,23 +210,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             load_data_2_grid();
         }
         private void cap_nhat_ban_giao() {
-            //if(m_fg.Rows.Count == 1) {
-            //    return;
-            //}
-            //for(int v_i_cur_row = m_fg.Rows.Fixed + 1; v_i_cur_row < m_fg.Rows.Count; v_i_cur_row++) {
-            //    US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us_v_rpt = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-            //    grid2us_object(v_us_v_rpt, v_i_cur_row);
-
-            //    US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_us_v_rpt.dcID);
-            //    v_us_gd_pt.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.BAN_GIAO_THU_QUY;
-            //    v_us_gd_pt.Update();
-            //}
-            //load_data_2_grid();
-            //m_txt_tong_tien.Clear();
-            //BaseMessages.MsgBox_Infor("Đã bàn giao tiền!");
             US_GD_PHIEU_THU v_us_trans = new US_GD_PHIEU_THU();
             try {
-                //if()
+                if(gridView.GetSelectedRows().Length == 0) {
+                    MessageBox.Show("Bạn cần chọn phiếu trước!");
+                    return;
+                }
                 v_us_trans.BeginTransaction();
                 
                 foreach(var rowHandle in gridView.GetSelectedRows()) {
@@ -240,6 +229,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                     v_us_gd_pt.ClearAllFields();
                 }
                 v_us_trans.CommitTransaction();
+                load_data_2_grid();
                 MessageBox.Show("Đã nhận bàn giao các phiếu đã chọn!");
             }
             catch(Exception v_e) {

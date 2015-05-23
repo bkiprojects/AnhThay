@@ -492,8 +492,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string LAN_THU = "LAN_THU";
     }
 
-    public class V_GD_PHIEU_THU
-    {
+    public class V_GD_PHIEU_THU {
         public const string ID_HOC_SINH = "ID_HOC_SINH";
         public const string MA_DOI_TUONG = "MA_DOI_TUONG";
         public const string ID_LOAI_DOI_TUONG = "ID_LOAI_DOI_TUONG";
@@ -519,7 +518,9 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string ID_TRANG_THAI = "ID_TRANG_THAI";
         public const string TEN = "TEN";
         public const string LAN_THU = "LAN_THU";
+        public const string ID_SO_PHIEU_THU = "ID_SO_PHIEU_THU";
     }
+
 
     public class V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON
     {

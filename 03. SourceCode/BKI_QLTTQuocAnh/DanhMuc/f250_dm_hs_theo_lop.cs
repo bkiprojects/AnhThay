@@ -229,9 +229,9 @@ namespace BKI_QLTTQuocAnh {
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 169);
+            this.m_fg.Location = new System.Drawing.Point(0, 146);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(686, 204);
+            this.m_fg.Size = new System.Drawing.Size(686, 227);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
@@ -244,7 +244,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(686, 45);
             this.m_lbl_header.TabIndex = 21;
-            this.m_lbl_header.Text = "DANH SÁCH HỌC SINH THEO LỚP MÔN";
+            this.m_lbl_header.Text = "DANH SÁCH HỌC SINH THEO LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
@@ -259,13 +259,13 @@ namespace BKI_QLTTQuocAnh {
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 124);
+            this.panel1.Size = new System.Drawing.Size(686, 101);
             this.panel1.TabIndex = 0;
             // 
             // m_cbo_trang_thai_hv
             // 
             this.m_cbo_trang_thai_hv.FormattingEnabled = true;
-            this.m_cbo_trang_thai_hv.Location = new System.Drawing.Point(129, 34);
+            this.m_cbo_trang_thai_hv.Location = new System.Drawing.Point(444, 12);
             this.m_cbo_trang_thai_hv.Name = "m_cbo_trang_thai_hv";
             this.m_cbo_trang_thai_hv.Size = new System.Drawing.Size(176, 21);
             this.m_cbo_trang_thai_hv.TabIndex = 3;
@@ -274,7 +274,7 @@ namespace BKI_QLTTQuocAnh {
             // m_lbl_trang_thai_hv
             // 
             this.m_lbl_trang_thai_hv.AutoSize = true;
-            this.m_lbl_trang_thai_hv.Location = new System.Drawing.Point(7, 37);
+            this.m_lbl_trang_thai_hv.Location = new System.Drawing.Point(322, 15);
             this.m_lbl_trang_thai_hv.Name = "m_lbl_trang_thai_hv";
             this.m_lbl_trang_thai_hv.Size = new System.Drawing.Size(58, 13);
             this.m_lbl_trang_thai_hv.TabIndex = 2;
@@ -283,7 +283,7 @@ namespace BKI_QLTTQuocAnh {
             // 
             // m_txt_search
             // 
-            this.m_txt_search.Location = new System.Drawing.Point(129, 59);
+            this.m_txt_search.Location = new System.Drawing.Point(75, 48);
             this.m_txt_search.Name = "m_txt_search";
             this.m_txt_search.Size = new System.Drawing.Size(260, 20);
             this.m_txt_search.TabIndex = 5;
@@ -291,7 +291,7 @@ namespace BKI_QLTTQuocAnh {
             // m_lbl_search
             // 
             this.m_lbl_search.AutoSize = true;
-            this.m_lbl_search.Location = new System.Drawing.Point(7, 62);
+            this.m_lbl_search.Location = new System.Drawing.Point(7, 51);
             this.m_lbl_search.Name = "m_lbl_search";
             this.m_lbl_search.Size = new System.Drawing.Size(49, 13);
             this.m_lbl_search.TabIndex = 4;
@@ -300,7 +300,7 @@ namespace BKI_QLTTQuocAnh {
             // m_cbo_lop_mon
             // 
             this.m_cbo_lop_mon.FormattingEnabled = true;
-            this.m_cbo_lop_mon.Location = new System.Drawing.Point(129, 9);
+            this.m_cbo_lop_mon.Location = new System.Drawing.Point(75, 9);
             this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(121, 21);
             this.m_cbo_lop_mon.TabIndex = 1;
@@ -313,7 +313,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(414, 54);
+            this.m_cmd_search.Location = new System.Drawing.Point(356, 43);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 6;
@@ -440,7 +440,7 @@ namespace BKI_QLTTQuocAnh {
         {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
             US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-            v_us.FillDataset(v_ds,"where TRANG_THAI_LOP_MON = 88");
+            v_us.FillDataset(v_ds,"where TRANG_THAI_LOP_MON = "+CONST_TRANG_THAI_LOP_MON.DANG_HOAT_DONG);
 
             m_cbo_lop_mon.DataSource = v_ds.DM_LOP_MON;
             m_cbo_lop_mon.DisplayMember = DM_LOP_MON.MO_TA;

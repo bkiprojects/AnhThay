@@ -590,6 +590,7 @@ namespace BKI_QLTTQuocAnh {
             US_V_GD_PHIEU_THU v_us = new US_V_GD_PHIEU_THU();
             v_ds.Clear();
             v_ds.EnforceConstraints = false;
+            //Cho fill nay can them dieu kien la hoc vien do con ho
             v_us.FillDataset(v_ds, "where id_lop_mon = " + CIPConvert.ToDecimal(m_sle_lop.EditValue));
             //v_us.FillDataset_by_id_lop(v_ds, CIPConvert.ToDecimal(m_sle_lop.EditValue));
 

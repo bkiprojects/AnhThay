@@ -329,6 +329,8 @@ namespace BKI_QLTTQuocAnh.DS {
             
             private global::System.Data.DataColumn columnLAN_THU;
             
+            private global::System.Data.DataColumn columnID_SO_PHIEU_THU;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public V_GD_PHIEU_THUDataTable() {
@@ -564,6 +566,14 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ID_SO_PHIEU_THUColumn {
+                get {
+                    return this.columnID_SO_PHIEU_THU;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -624,7 +634,8 @@ namespace BKI_QLTTQuocAnh.DS {
                         string TEN_LOAI_PHIEU_THU, 
                         decimal ID_TRANG_THAI, 
                         string TEN, 
-                        int LAN_THU) {
+                        int LAN_THU, 
+                        decimal ID_SO_PHIEU_THU) {
                 V_GD_PHIEU_THURow rowV_GD_PHIEU_THURow = ((V_GD_PHIEU_THURow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_HOC_SINH,
@@ -651,7 +662,8 @@ namespace BKI_QLTTQuocAnh.DS {
                         TEN_LOAI_PHIEU_THU,
                         ID_TRANG_THAI,
                         TEN,
-                        LAN_THU};
+                        LAN_THU,
+                        ID_SO_PHIEU_THU};
                 rowV_GD_PHIEU_THURow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowV_GD_PHIEU_THURow);
                 return rowV_GD_PHIEU_THURow;
@@ -699,6 +711,7 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID_TRANG_THAI = base.Columns["ID_TRANG_THAI"];
                 this.columnTEN = base.Columns["TEN"];
                 this.columnLAN_THU = base.Columns["LAN_THU"];
+                this.columnID_SO_PHIEU_THU = base.Columns["ID_SO_PHIEU_THU"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -754,8 +767,11 @@ namespace BKI_QLTTQuocAnh.DS {
                 base.Columns.Add(this.columnTEN);
                 this.columnLAN_THU = new global::System.Data.DataColumn("LAN_THU", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLAN_THU);
+                this.columnID_SO_PHIEU_THU = new global::System.Data.DataColumn("ID_SO_PHIEU_THU", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_SO_PHIEU_THU);
                 this.columnMA_DOI_TUONG.MaxLength = 35;
                 this.columnTEN_LOAI_DOI_TUONG.MaxLength = 50;
+                this.columnHO_TEN.ReadOnly = true;
                 this.columnHO_TEN.MaxLength = 51;
                 this.columnMA_LOP_MON.MaxLength = 15;
                 this.columnTEN_LOP_MON.MaxLength = 250;
@@ -1281,6 +1297,22 @@ namespace BKI_QLTTQuocAnh.DS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ID_SO_PHIEU_THU {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableV_GD_PHIEU_THU.ID_SO_PHIEU_THUColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ID_SO_PHIEU_THU\' in table \'V_GD_PHIEU_THU\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_GD_PHIEU_THU.ID_SO_PHIEU_THUColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsID_HOC_SINHNull() {
                 return this.IsNull(this.tableV_GD_PHIEU_THU.ID_HOC_SINHColumn);
             }
@@ -1494,6 +1526,18 @@ namespace BKI_QLTTQuocAnh.DS {
             public void SetLAN_THUNull() {
                 this[this.tableV_GD_PHIEU_THU.LAN_THUColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsID_SO_PHIEU_THUNull() {
+                return this.IsNull(this.tableV_GD_PHIEU_THU.ID_SO_PHIEU_THUColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetID_SO_PHIEU_THUNull() {
+                this[this.tableV_GD_PHIEU_THU.ID_SO_PHIEU_THUColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1680,6 +1724,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_GD_PHIEU_THUTableAdapters {
             tableMapping.ColumnMappings.Add("ID_TRANG_THAI", "ID_TRANG_THAI");
             tableMapping.ColumnMappings.Add("TEN", "TEN");
             tableMapping.ColumnMappings.Add("LAN_THU", "LAN_THU");
+            tableMapping.ColumnMappings.Add("ID_SO_PHIEU_THU", "ID_SO_PHIEU_THU");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1696,7 +1741,7 @@ namespace BKI_QLTTQuocAnh.DS.DS_V_GD_PHIEU_THUTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT ID_HOC_SINH, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, TEN_LOAI_DOI_TUONG, HO_TEN, ID_LOP_MON, MA_LOP_MON, TEN_LOP_MON, ID, SO_PHIEU, ID_NGUOI_THU, TEN_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NHAP, TEN_NGUOI_NOP_TIEN, NOI_DUNG, SO_TIEN, NGAY_THU, NGAY_NHAP, ID_LOAI_PHIEU_THU, MA_LOAI_PHIEU_THU, TEN_LOAI_PHIEU_THU, ID_TRANG_THAI, TEN, LAN_THU FROM dbo.V_GD_PHIEU_THU";
+            this._commandCollection[0].CommandText = @"SELECT ID_HOC_SINH, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, TEN_LOAI_DOI_TUONG, HO_TEN, ID_LOP_MON, MA_LOP_MON, TEN_LOP_MON, ID, SO_PHIEU, ID_NGUOI_THU, TEN_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NHAP, TEN_NGUOI_NOP_TIEN, NOI_DUNG, SO_TIEN, NGAY_THU, NGAY_NHAP, ID_LOAI_PHIEU_THU, MA_LOAI_PHIEU_THU, TEN_LOAI_PHIEU_THU, ID_TRANG_THAI, TEN, LAN_THU, ID_SO_PHIEU_THU FROM dbo.V_GD_PHIEU_THU";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

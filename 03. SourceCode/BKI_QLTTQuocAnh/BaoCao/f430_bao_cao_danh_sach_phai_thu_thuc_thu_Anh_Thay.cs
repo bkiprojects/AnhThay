@@ -692,11 +692,18 @@ namespace BKI_QLTTQuocAnh
             }
 
             US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID); //BaseMessages.MsgBox_Error("Mật khẩu hoặc tài khoản chưa chính xác");
-            F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("SUA_PHIEU", v_us_gd_pt);
-            v_frm.ShowDialog();
-            v_frm.Dispose();
-            //	F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE v_fDE = new F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE();
-            //	v_fDE.display(m_us);
+            if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU) {
+                F352_LAP_HOC_PHI v_frm = new F352_LAP_HOC_PHI();
+                v_frm.display_for_update(v_us_gd_pt);
+            }
+            else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU) {
+                F354_LAP_GIAM_TRU v_frm = new F354_LAP_GIAM_TRU();
+                v_frm.display_for_update(v_us_gd_pt);
+            }
+            else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU) {
+                F356_LAP_THUC_THU v_frm = new F356_LAP_THUC_THU();
+                v_frm.display_for_update(v_us_gd_pt);
+            }
             load_data_2_grid();
         }
 
@@ -877,9 +884,18 @@ namespace BKI_QLTTQuocAnh
                 }
 
                 US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
-                F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("SUA_PHIEU", v_us_gd_pt);
-                v_frm.ShowDialog();
-                //.display_for_edit(v_us_gd_pt);
+                if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU) {
+                    F352_LAP_HOC_PHI v_frm = new F352_LAP_HOC_PHI();
+                    v_frm.display_for_update(v_us_gd_pt);
+                }
+                else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU) {
+                    F354_LAP_GIAM_TRU v_frm = new F354_LAP_GIAM_TRU();
+                    v_frm.display_for_update(v_us_gd_pt);
+                }
+                else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU) {
+                    F356_LAP_THUC_THU v_frm = new F356_LAP_THUC_THU();
+                    v_frm.display_for_update(v_us_gd_pt);
+                }
                 load_data_2_grid();
             }
             catch (Exception v_e)

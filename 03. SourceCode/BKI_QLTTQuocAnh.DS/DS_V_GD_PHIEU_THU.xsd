@@ -15,7 +15,7 @@
               <DbSource ConnectionRef="AnhThayConnectionString (Settings)" DbObjectName="AnhThay.dbo.V_GD_PHIEU_THU" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID_HOC_SINH, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, TEN_LOAI_DOI_TUONG, HO_TEN, ID_LOP_MON, MA_LOP_MON, TEN_LOP_MON, ID, SO_PHIEU, ID_NGUOI_THU, TEN_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NHAP, TEN_NGUOI_NOP_TIEN, NOI_DUNG, SO_TIEN, NGAY_THU, NGAY_NHAP, ID_LOAI_PHIEU_THU, MA_LOAI_PHIEU_THU, TEN_LOAI_PHIEU_THU, ID_TRANG_THAI, TEN, LAN_THU FROM dbo.V_GD_PHIEU_THU</CommandText>
+                    <CommandText>SELECT ID_HOC_SINH, MA_DOI_TUONG, ID_LOAI_DOI_TUONG, TEN_LOAI_DOI_TUONG, HO_TEN, ID_LOP_MON, MA_LOP_MON, TEN_LOP_MON, ID, SO_PHIEU, ID_NGUOI_THU, TEN_NGUOI_THU, ID_NGUOI_NHAP, TEN_NGUOI_NHAP, TEN_NGUOI_NOP_TIEN, NOI_DUNG, SO_TIEN, NGAY_THU, NGAY_NHAP, ID_LOAI_PHIEU_THU, MA_LOAI_PHIEU_THU, TEN_LOAI_PHIEU_THU, ID_TRANG_THAI, TEN, LAN_THU, ID_SO_PHIEU_THU FROM dbo.V_GD_PHIEU_THU</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -47,6 +47,7 @@
               <Mapping SourceColumn="ID_TRANG_THAI" DataSetColumn="ID_TRANG_THAI" />
               <Mapping SourceColumn="TEN" DataSetColumn="TEN" />
               <Mapping SourceColumn="LAN_THU" DataSetColumn="LAN_THU" />
+              <Mapping SourceColumn="ID_SO_PHIEU_THU" DataSetColumn="ID_SO_PHIEU_THU" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -77,7 +78,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HO_TEN" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN" minOccurs="0">
+              <xs:element name="HO_TEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="51" />
@@ -164,6 +165,7 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="LAN_THU" msprop:Generator_ColumnVarNameInTable="columnLAN_THU" msprop:Generator_ColumnPropNameInRow="LAN_THU" msprop:Generator_ColumnPropNameInTable="LAN_THUColumn" msprop:Generator_UserColumnName="LAN_THU" type="xs:int" minOccurs="0" />
+              <xs:element name="ID_SO_PHIEU_THU" msprop:Generator_ColumnVarNameInTable="columnID_SO_PHIEU_THU" msprop:Generator_ColumnPropNameInRow="ID_SO_PHIEU_THU" msprop:Generator_ColumnPropNameInTable="ID_SO_PHIEU_THUColumn" msprop:Generator_UserColumnName="ID_SO_PHIEU_THU" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
