@@ -31,6 +31,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             format_controls();
             m_str_frm_type = ip_str_type_frm;
             m_us_v_pt = ip_us_pt;
+            m_is_from_f430 = true;
         }
         #endregion
 
@@ -48,6 +49,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         US_GD_PHIEU_THU m_us_gd_phieu_thu = new US_GD_PHIEU_THU();
         string m_str_frm_type;
         US_V_GD_PHIEU_THU m_us_v_pt;
+        bool m_is_from_f430;
         #endregion
 
         #region Private Methods
@@ -79,6 +81,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
             m_sle_lop.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             m_sle_lop.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
+            if (m_is_from_f430) m_sle_lop.Enabled = false;
         }
         private void load_data_to_sle_so_phieu_thu() {
             DS_DM_SO_PHIEU_THU v_ds = new DS_DM_SO_PHIEU_THU();
@@ -152,6 +155,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
             m_sle_ma_hv.Properties.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.Default;
             m_sle_ma_hv.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
+            if (m_is_from_f430) m_sle_ma_hv.Enabled = false;
         }
 
         private void load_data_2_ds_gd_phieu_thu() {
@@ -467,7 +471,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 }
                 load_data_to_ds_obj();
                 MessageBox.Show("Đã lưu phiếu thành công");
-                //this.Close();
+                if(m_is_from_f430)
+                this.Close();
             }
             catch(Exception v_e) {
                 throw v_e;

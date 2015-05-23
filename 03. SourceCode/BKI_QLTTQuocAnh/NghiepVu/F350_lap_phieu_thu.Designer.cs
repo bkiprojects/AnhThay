@@ -23,10 +23,9 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F350_lap_phieu_thu));
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList = new System.Windows.Forms.ImageList();
+            this.imageList1 = new System.Windows.Forms.ImageList();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_txt_noi_dung = new DevExpress.XtraEditors.MemoEdit();
@@ -143,7 +142,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1225, 488);
+            this.panel2.Size = new System.Drawing.Size(478, 488);
             this.panel2.TabIndex = 25;
             // 
             // panel1
@@ -181,7 +180,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1225, 488);
+            this.panel1.Size = new System.Drawing.Size(478, 488);
             this.panel1.TabIndex = 0;
             // 
             // m_txt_noi_dung
@@ -352,7 +351,7 @@
             this.m_lbl_header_left.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header_left.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header_left.Name = "m_lbl_header_left";
-            this.m_lbl_header_left.Size = new System.Drawing.Size(1223, 46);
+            this.m_lbl_header_left.Size = new System.Drawing.Size(476, 46);
             this.m_lbl_header_left.TabIndex = 35;
             this.m_lbl_header_left.Text = "LẬP PHIẾU";
             this.m_lbl_header_left.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -364,7 +363,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl2.Location = new System.Drawing.Point(0, 437);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1223, 49);
+            this.panelControl2.Size = new System.Drawing.Size(476, 49);
             this.panelControl2.TabIndex = 26;
             // 
             // m_cmd_exit
@@ -533,7 +532,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1225, 488);
+            this.ClientSize = new System.Drawing.Size(478, 488);
             this.Controls.Add(this.panel2);
             this.Name = "F350_lap_phieu_thu";
             this.Text = "F350 - Lập phiếu";

@@ -691,7 +691,7 @@ namespace BKI_QLTTQuocAnh
                 return;
             }
 
-            US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
+            US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID); //BaseMessages.MsgBox_Error("Mật khẩu hoặc tài khoản chưa chính xác");
             F350_lap_phieu_thu v_frm = new F350_lap_phieu_thu("SUA_PHIEU", v_us_gd_pt);
             v_frm.ShowDialog();
             v_frm.Dispose();
