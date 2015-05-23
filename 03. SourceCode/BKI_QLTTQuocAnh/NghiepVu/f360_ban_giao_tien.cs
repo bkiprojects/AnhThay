@@ -47,6 +47,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 ,
             TIEN_PHAI_THU = 9
                 , HO_TEN_HS = 6
+            //,TEN_LOP_MON =13
 
         }
         #endregion
@@ -110,6 +111,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_NGUOI_THU, e_col_Number.TEN_NGUOI_THU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_PHAI_THU, e_col_Number.TIEN_PHAI_THU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_HS, e_col_Number.HO_TEN_HS);
+            //v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_LOP_MON, e_col_Number.TEN_LOP_MON);
 
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NewRow());
             return v_obj_trans;

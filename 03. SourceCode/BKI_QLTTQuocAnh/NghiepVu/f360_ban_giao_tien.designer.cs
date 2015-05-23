@@ -430,6 +430,8 @@
             this.TEN_LOP_MON.FieldName = "TEN_LOP_MON";
             this.TEN_LOP_MON.Name = "TEN_LOP_MON";
             this.TEN_LOP_MON.OptionsColumn.AllowEdit = false;
+            this.TEN_LOP_MON.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.True;
+            this.TEN_LOP_MON.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.TEN_LOP_MON.Visible = true;
             this.TEN_LOP_MON.VisibleIndex = 7;
             this.TEN_LOP_MON.Width = 178;
