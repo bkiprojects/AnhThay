@@ -710,9 +710,9 @@ namespace BKI_QLTTQuocAnh {
 
             if (v_dr.Length == 0)
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
         private void kiem_tra_du_lieu(DS_EXCEL_IMPORT_HOC_VIEN ip_ds) {
             m_flag_du_lieu_is_ok = true;
@@ -737,6 +737,8 @@ namespace BKI_QLTTQuocAnh {
             //check trung ma doi tuong
             DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
             US_V_GD_HOC v_us = new US_V_GD_HOC();
+
+            v_us.FillDataset(v_ds);
             decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
             for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
             {
@@ -744,9 +746,11 @@ namespace BKI_QLTTQuocAnh {
                 if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
                 {
                     BaseMessages.MsgBox_Error("Mã học viên ở dòng " + i + " đã tồn tại, hãy kiểm tra lại");
+                    m_flag_du_lieu_is_ok = false;
                     return;
                 }
             }
+            //Dua ra m_flag
                 if (m_flag_du_lieu_is_ok == true)
                 {
                     BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
