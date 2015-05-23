@@ -467,7 +467,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 }
                 load_data_to_ds_obj();
                 MessageBox.Show("Đã lưu phiếu thành công");
-                this.Close();
+                //this.Close();
             }
             catch(Exception v_e) {
                 throw v_e;
