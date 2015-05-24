@@ -326,7 +326,7 @@
             this.m_lbl_header_left.Name = "m_lbl_header_left";
             this.m_lbl_header_left.Size = new System.Drawing.Size(604, 46);
             this.m_lbl_header_left.TabIndex = 35;
-            this.m_lbl_header_left.Text = "LẬP PHIẾU";
+            this.m_lbl_header_left.Text = "LẬP PHIẾU THỰC THU";
             this.m_lbl_header_left.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelControl2

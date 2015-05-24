@@ -504,7 +504,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                     return;
                 }
                 if (m_sle_lop.SelectedText == m_sle_lop_2.SelectedText)
-                    MessageBox.Show("Lớp để chuyển đến được giống lớp chuyển đi");
+                    MessageBox.Show("Lớp để chuyển đến không được giống lớp chuyển đi");
                 else
                 {
                     chuyen_lop_cho_hoc_vien();

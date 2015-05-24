@@ -79,6 +79,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
@@ -121,9 +122,10 @@
             this.m_cmd_ds_hs_theo_lm,
             this.m_cmd_import_excel,
             this.barButtonItem1,
-            this.barButtonItem2});
+            this.barButtonItem2,
+            this.barButtonItem3});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 39;
+            this.ribbon.MaxItemId = 40;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -185,7 +187,7 @@
             // 
             // m_cmd_dm_lop_mon
             // 
-            this.m_cmd_dm_lop_mon.Caption = "Cập nhật lớp môn";
+            this.m_cmd_dm_lop_mon.Caption = "Danh sách lớp môn";
             this.m_cmd_dm_lop_mon.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources.Icons8_Ios7_Household_Room;
             this.m_cmd_dm_lop_mon.Id = 6;
             this.m_cmd_dm_lop_mon.Name = "m_cmd_dm_lop_mon";
@@ -194,7 +196,7 @@
             // 
             // m_cmd_dm_hs
             // 
-            this.m_cmd_dm_hs.Caption = "Học sinh";
+            this.m_cmd_dm_hs.Caption = "Danh sách học sinh";
             this.m_cmd_dm_hs.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources.Designbolts_Monsters_University_Monsters_Character_Young_Mikes;
             this.m_cmd_dm_hs.Id = 7;
             this.m_cmd_dm_hs.Name = "m_cmd_dm_hs";
@@ -459,10 +461,10 @@
             this.ribbonPageGroup3});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "DANH MỤC";
+            this.ribbonPage2.Visible = false;
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.m_cmd_dm_hs);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
@@ -490,8 +492,9 @@
             this.ribbonPageGroup5.AllowTextClipping = false;
             this.ribbonPageGroup5.ItemLinks.Add(this.m_cmd_diem_danh);
             this.ribbonPageGroup5.ItemLinks.Add(this.m_cmd_dm_lop_mon);
+            this.ribbonPageGroup5.ItemLinks.Add(this.m_cmd_dm_hs);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Lớp môn";
+            this.ribbonPageGroup5.Text = "Cập nhật";
             // 
             // ribbonPageGroup6
             // 
@@ -567,6 +570,12 @@
             // 
             this.MdiManager.MdiParent = this;
             // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 39;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
             // f388_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -641,5 +650,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }

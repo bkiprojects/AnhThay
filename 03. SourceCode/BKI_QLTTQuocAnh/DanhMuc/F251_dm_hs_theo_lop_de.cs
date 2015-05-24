@@ -210,7 +210,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
                 case DataEntryFormMode.InsertDataState:
                     //us.insert();
-
+                    //form_2_us
+                    //m_us.Insert()
                     m_us.insert_by_proc(m_txt_ma_doi_tuong.Text
                                         , m_txt_ho.Text
                                         , m_txt_ten.Text
