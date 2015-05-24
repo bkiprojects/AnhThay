@@ -503,8 +503,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                     MessageBox.Show("Bạn phải chọn lớp mới cho học viên!");
                     return;
                 }
-                if (m_sle_lop.SelectedText == m_sle_lop_2.SelectedText)
+                if (CIPConvert.ToDecimal(m_sle_lop_2.EditValue) == CIPConvert.ToDecimal(m_sle_lop.EditValue))
+                {
                     MessageBox.Show("Lớp để chuyển đến không được giống lớp chuyển đi");
+                }
                 else
                 {
                     chuyen_lop_cho_hoc_vien();
