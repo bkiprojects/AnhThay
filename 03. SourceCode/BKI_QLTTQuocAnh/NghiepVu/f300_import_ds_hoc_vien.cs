@@ -59,6 +59,7 @@ namespace BKI_QLTTQuocAnh {
         private Label label8;
         private Label label2;
         private ComboBox m_cbo_lop;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.ComponentModel.IContainer components;
 
         public f300_import_ds_hoc_vien() {
@@ -121,6 +122,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.m_ofd_exel_file = new System.Windows.Forms.OpenFileDialog();
             this.m_lbl_loading_mes = new System.Windows.Forms.Label();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -251,14 +253,15 @@ namespace BKI_QLTTQuocAnh {
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 110);
+            this.m_fg.Location = new System.Drawing.Point(0, 121);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1303, 263);
+            this.m_fg.Size = new System.Drawing.Size(1303, 252);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.m_cbo_lop);
@@ -279,7 +282,7 @@ namespace BKI_QLTTQuocAnh {
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1303, 110);
+            this.panel1.Size = new System.Drawing.Size(1303, 121);
             this.panel1.TabIndex = 21;
             // 
             // label8
@@ -476,6 +479,16 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_loading_mes.Text = "Vui lòng đợi trong giây lát ...";
             this.m_lbl_loading_mes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.m_lbl_loading_mes.Visible = false;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(5, 95);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 49;
+            this.simpleButton1.Text = "Xóa hàng";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // f300_import_ds_hoc_vien
             // 
@@ -704,9 +717,9 @@ namespace BKI_QLTTQuocAnh {
             ip_us_hv.strFACEBOOK = ip_us_excel.strFACEBOOK;
             ip_us_hv.strDELETE_YN = "N";
         }
-        private bool is_check_exist(Decimal id_lop_hoc,string ma_hoc_sinh, DS_V_GD_HOC ip_ds_v_gd_hoc){
-            string filter = "id_lop_mon = " + id_lop_hoc + " and ma_doi_tuong = '" + ma_hoc_sinh + "'";
-            DataRow[] v_dr = ip_ds_v_gd_hoc.V_GD_HOC.Select(filter);
+        private bool is_check_exist(string ma_hoc_sinh, DS_DM_HOC_SINH ip_ds_dm_hs){
+            string filter = "ma_doi_tuong = '"+ ma_hoc_sinh+"'";
+            DataRow[] v_dr = ip_ds_dm_hs.DM_HOC_SINH.Select(filter);
 
             if (v_dr.Length == 0)
             {
@@ -735,15 +748,17 @@ namespace BKI_QLTTQuocAnh {
                 }
             }
             //check trung ma doi tuong
-            DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
-            US_V_GD_HOC v_us = new US_V_GD_HOC();
+            //DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
+            //US_V_GD_HOC v_us = new US_V_GD_HOC();
+            DS_DM_HOC_SINH v_ds_hs = new DS_DM_HOC_SINH();
+            US_DM_HOC_SINH v_us_hs = new US_DM_HOC_SINH();
 
-            v_us.FillDataset(v_ds);
+            v_us_hs.FillDataset(v_ds_hs);
             decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
             for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
             {
                 string v_ma_hv = m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString();
-                if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
+                if(is_check_exist(v_ma_hv, v_ds_hs))
                 {
                     BaseMessages.MsgBox_Error("Mã học viên ở dòng " + i + " đã tồn tại, hãy kiểm tra lại");
                     m_flag_du_lieu_is_ok = false;
@@ -936,6 +951,15 @@ namespace BKI_QLTTQuocAnh {
         private void m_cmd_view_Click(object sender, EventArgs e) {
             try {
                 view_excel_import_hoc_vien();
+            }
+            catch(Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e) {
+            try {
+                m_fg.Rows.Remove(m_fg.Row);
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
