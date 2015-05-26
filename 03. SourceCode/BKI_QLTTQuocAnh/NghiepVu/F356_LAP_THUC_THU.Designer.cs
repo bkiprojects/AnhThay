@@ -132,6 +132,9 @@
             this.m_txt_so_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.m_txt_so_tien.Properties.Appearance.Options.UseFont = true;
             this.m_txt_so_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_so_tien.Properties.Mask.EditMask = "n0";
+            this.m_txt_so_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.m_txt_so_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.m_txt_so_tien.Size = new System.Drawing.Size(183, 26);
             this.m_txt_so_tien.TabIndex = 16;
             // 

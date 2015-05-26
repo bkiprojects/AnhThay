@@ -28,7 +28,6 @@
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_txt_noi_dung = new DevExpress.XtraEditors.MemoEdit();
-            this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.m_sle_ma_hv = new DevExpress.XtraEditors.SearchLookUpEdit();
@@ -40,6 +39,8 @@
             this.m_dat_ngay_nhap = new DevExpress.XtraEditors.DateEdit();
             this.m_lbl_header_left = new System.Windows.Forms.Label();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.label3 = new System.Windows.Forms.Label();
             this.m_lbl_ten_hs = new System.Windows.Forms.Label();
             this.m_lbl_ngay_thu = new System.Windows.Forms.Label();
@@ -52,10 +53,8 @@
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
+            this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).BeginInit();
@@ -68,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // directorySearcher1
@@ -110,17 +110,6 @@
             this.m_txt_noi_dung.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_txt_noi_dung.Size = new System.Drawing.Size(232, 55);
             this.m_txt_noi_dung.TabIndex = 19;
-            // 
-            // m_txt_so_tien
-            // 
-            this.m_txt_so_tien.EditValue = "";
-            this.m_txt_so_tien.Location = new System.Drawing.Point(135, 149);
-            this.m_txt_so_tien.Name = "m_txt_so_tien";
-            this.m_txt_so_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.m_txt_so_tien.Properties.Appearance.Options.UseFont = true;
-            this.m_txt_so_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_txt_so_tien.Size = new System.Drawing.Size(183, 26);
-            this.m_txt_so_tien.TabIndex = 16;
             // 
             // m_sle_lop
             // 
@@ -258,6 +247,41 @@
             this.panelControl2.Size = new System.Drawing.Size(495, 49);
             this.panelControl2.TabIndex = 26;
             // 
+            // m_cmd_exit
+            // 
+            this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_exit.ImageIndex = 12;
+            this.m_cmd_exit.ImageList = this.ImageList;
+            this.m_cmd_exit.Location = new System.Drawing.Point(117, 2);
+            this.m_cmd_exit.Name = "m_cmd_exit";
+            this.m_cmd_exit.Size = new System.Drawing.Size(117, 45);
+            this.m_cmd_exit.TabIndex = 1;
+            this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Visible = false;
+            // 
+            // m_cmd_insert
+            // 
+            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_insert.BackColor = System.Drawing.Color.White;
+            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_cmd_insert.ForeColor = System.Drawing.Color.Maroon;
+            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_insert.ImageIndex = 13;
+            this.m_cmd_insert.ImageList = this.ImageList;
+            this.m_cmd_insert.Location = new System.Drawing.Point(2, 2);
+            this.m_cmd_insert.Name = "m_cmd_insert";
+            this.m_cmd_insert.Size = new System.Drawing.Size(115, 45);
+            this.m_cmd_insert.TabIndex = 0;
+            this.m_cmd_insert.Text = "&Lập học phí";
+            this.m_cmd_insert.UseVisualStyleBackColor = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -387,40 +411,19 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
-            // m_cmd_exit
+            // m_txt_so_tien
             // 
-            this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_exit.ImageIndex = 12;
-            this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(117, 2);
-            this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(117, 45);
-            this.m_cmd_exit.TabIndex = 1;
-            this.m_cmd_exit.Text = "Thoát (Esc)";
-            this.m_cmd_exit.Visible = false;
-            // 
-            // m_cmd_insert
-            // 
-            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_insert.BackColor = System.Drawing.Color.White;
-            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_cmd_insert.ForeColor = System.Drawing.Color.Maroon;
-            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_insert.ImageIndex = 13;
-            this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(2, 2);
-            this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(115, 45);
-            this.m_cmd_insert.TabIndex = 0;
-            this.m_cmd_insert.Text = "&Lập học phí";
-            this.m_cmd_insert.UseVisualStyleBackColor = false;
+            this.m_txt_so_tien.EditValue = "";
+            this.m_txt_so_tien.Location = new System.Drawing.Point(135, 149);
+            this.m_txt_so_tien.Name = "m_txt_so_tien";
+            this.m_txt_so_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.m_txt_so_tien.Properties.Appearance.Options.UseFont = true;
+            this.m_txt_so_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_so_tien.Properties.Mask.EditMask = "n0";
+            this.m_txt_so_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.m_txt_so_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.m_txt_so_tien.Size = new System.Drawing.Size(183, 26);
+            this.m_txt_so_tien.TabIndex = 16;
             // 
             // F352_LAP_HOC_PHI
             // 
@@ -431,7 +434,6 @@
             this.Name = "F352_LAP_HOC_PHI";
             this.Text = "F352 - Lập học phí";
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).EndInit();
@@ -445,6 +447,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -456,7 +459,6 @@
         internal System.Windows.Forms.ImageList ImageList;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         public DevExpress.XtraEditors.MemoEdit m_txt_noi_dung;
-        public DevExpress.XtraEditors.TextEdit m_txt_so_tien;
         public DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         public DevExpress.XtraEditors.SearchLookUpEdit m_sle_ma_hv;
@@ -480,5 +482,6 @@
         private System.Windows.Forms.Label m_lbl_den_ngay;
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.ImageList imageList1;
+        public DevExpress.XtraEditors.TextEdit m_txt_so_tien;
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 using DevExpress.XtraEditors;
+using System.Globalization;
 
 namespace BKI_QLTTQuocAnh.NghiepVu {
     public partial class F352_LAP_HOC_PHI : Form {
@@ -353,7 +354,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         void m_txt_so_tien_EditValueChanged(object sender, EventArgs e) {
             try {
                 //m_txt_so_tien.Text = String.Format("{0:#,##0}", double.Parse(m_txt_so_tien.Text));
-                m_txt_so_tien.BackColor = Color.White;
+                //CultureInfo ci = new CultureInfo(1066);
+                //m_txt_so_tien.Text = Decimal.Parse(m_txt_so_tien.Text).ToString("N2", ci);
+                //m_txt_so_tien.BackColor = Color.White;
             }
             catch(Exception v_e) {
                 if(m_txt_so_tien.Text.CompareTo("") != 0) {
@@ -367,7 +370,9 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 load_data_to_sle_hv();
                 if(m_sle_lop.EditValue != null || m_sle_lop.Text != "") {
                     string filter = "id = " + m_sle_lop.EditValue;
-                    m_txt_so_tien.Text = m_ds_dm_lop_mon.DM_LOP_MON.Select(filter)[0][DM_LOP_MON.DON_GIA_BUOI_HOC].ToString();
+                    m_txt_so_tien.EditValue = CIPConvert.ToDecimal(m_ds_dm_lop_mon.DM_LOP_MON.Select(filter)[0][DM_LOP_MON.DON_GIA_BUOI_HOC].ToString());
+                    //CultureInfo ci = new CultureInfo(1066);
+                    //m_txt_so_tien.Text = Decimal.Parse(m_txt_so_tien.Text).ToString("N2", ci);
                 }
             }
             catch(Exception v_e) {

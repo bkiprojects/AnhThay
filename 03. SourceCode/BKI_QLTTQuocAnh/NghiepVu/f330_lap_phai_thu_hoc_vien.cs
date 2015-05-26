@@ -16,6 +16,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 using BKI_QLTTQuocAnh.NghiepVu;
 using C1.Win.C1FlexGrid;
+using System.Globalization;
 
 
 namespace BKI_QLTTQuocAnh.NghiepVu {
@@ -118,7 +119,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 US_V_HT_NGUOI_SU_DUNG v_us_ht_nsd = new US_V_HT_NGUOI_SU_DUNG(CAppContext_201.getCurrentUserID());
                 m_fg.Rows[v_i_cur_row][(int)e_col_Number.TEN_NGUOI_THU] = v_us_ht_nsd.strTEN;
                 //m_fg.Rows[v_i_cur_row][(int)e_col_Number.SO_PHIEU] = "PPT" + m_cbo_lop_mon.SelectedValue.ToString() +"_" + m_fg.Rows[v_i_cur_row][(int)e_col_Number.MA_HOC_SINH];
-                m_fg.Rows[v_i_cur_row][(int)e_col_Number.TIEN_PHAI_THU] = m_txt_thanh_tien.Text;
+                m_fg.Rows[v_i_cur_row][(int)e_col_Number.TIEN_PHAI_THU] = CIPConvert.ToDecimal(m_txt_thanh_tien.Text);
             }
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg) {
@@ -156,7 +157,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 return;
             }
             DataRow v_dr = v_ds.DM_LOP_MON.FindByID(CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue));
-            m_txt_thanh_tien.Text = String.Format("{0:#,##0}", v_dr["DON_GIA_BUOI_HOC"]);
+            m_txt_thanh_tien.Text = v_dr["DON_GIA_BUOI_HOC"].ToString();
+            //m_txt_thanh_tien.Visible = false;
+            //m_txt_thanh_tien_format.Visible = true;
+            //m_txt_thanh_tien_format.Text = String.Format("{0:#,##0}", v_dr["DON_GIA_BUOI_HOC"]);
+            CultureInfo ci = new CultureInfo(1066);
+            m_txt_thanh_tien.Text = Decimal.Parse(m_txt_thanh_tien.Text).ToString("N2", ci);
+            //vietnameTotal.ToString("c",ci));
+            //decimal v_txt_so_tien;
+            //v_txt_so_tien = CIPConvert.ToDecimal(m_txt_thanh_tien.Text);
+            
 
         }
         private decimal is_null_text_box(TextBox ip_txt) {
@@ -166,7 +176,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             else return CIPConvert.ToDecimal(ip_txt.Text.Trim());
         }
         private void get_thanh_tien() {
-            //m_txt_thanh_tien.Text = string.Format("{0:#,##0}", m_txt_thanh_tien.Text.Trim());
+            m_txt_thanh_tien_format.Text = string.Format("{0:#,##0}", m_txt_thanh_tien.Text.Trim());
         }
         private bool check_validate_data() {
             if(m_cbo_lop_mon.SelectedIndex == 0) {
@@ -252,7 +262,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         void m_cbo_lop_mon_SelectedValueChanged(object sender, EventArgs e) {
             try {
-
+                
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
@@ -262,6 +272,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         void m_txt_thanh_tien_TextChanged(object sender, EventArgs e) {
             try {
                 //m_txt_thanh_tien.Text = string.Format("{0:#,##0}", double.Parse(m_txt_thanh_tien.Text));
+                CultureInfo ci = new CultureInfo(1066);
+                m_txt_thanh_tien.Text = Decimal.Parse(m_txt_thanh_tien.Text).ToString("N2", ci);
             }
             catch(Exception v_e) {
                 MessageBox.Show("Bạn nhập sai định dạng số");

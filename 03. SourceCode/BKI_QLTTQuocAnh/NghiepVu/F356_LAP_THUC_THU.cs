@@ -475,6 +475,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             try {
                 m_sle_lop.BackColor = Color.White;
                 load_data_to_sle_hv();
+                
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);

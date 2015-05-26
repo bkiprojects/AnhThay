@@ -378,6 +378,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         void m_sle_lop_EditValueChanged(object sender, EventArgs e) {
             try {
                 load_data_to_sle_hv();
+                
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);

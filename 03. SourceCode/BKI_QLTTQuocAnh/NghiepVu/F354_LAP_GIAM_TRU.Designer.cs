@@ -32,7 +32,6 @@
             this.m_txt_lan_thu = new DevExpress.XtraEditors.TextEdit();
             this.m_lbl_lan_thu = new System.Windows.Forms.Label();
             this.m_txt_noi_dung = new DevExpress.XtraEditors.MemoEdit();
-            this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.m_sle_ma_hv = new DevExpress.XtraEditors.SearchLookUpEdit();
@@ -56,11 +55,11 @@
             this.m_lbl_noi_dung = new System.Windows.Forms.Label();
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_lan_thu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).BeginInit();
@@ -71,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -140,10 +140,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.m_txt_so_tien);
             this.panel1.Controls.Add(this.m_txt_lan_thu);
             this.panel1.Controls.Add(this.m_lbl_lan_thu);
             this.panel1.Controls.Add(this.m_txt_noi_dung);
-            this.panel1.Controls.Add(this.m_txt_so_tien);
             this.panel1.Controls.Add(this.m_sle_lop);
             this.panel1.Controls.Add(this.m_sle_ma_hv);
             this.panel1.Controls.Add(this.m_dat_ngay_thu);
@@ -196,17 +196,6 @@
             this.m_txt_noi_dung.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_txt_noi_dung.Size = new System.Drawing.Size(232, 55);
             this.m_txt_noi_dung.TabIndex = 19;
-            // 
-            // m_txt_so_tien
-            // 
-            this.m_txt_so_tien.EditValue = "";
-            this.m_txt_so_tien.Location = new System.Drawing.Point(134, 150);
-            this.m_txt_so_tien.Name = "m_txt_so_tien";
-            this.m_txt_so_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.m_txt_so_tien.Properties.Appearance.Options.UseFont = true;
-            this.m_txt_so_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_txt_so_tien.Size = new System.Drawing.Size(183, 26);
-            this.m_txt_so_tien.TabIndex = 16;
             // 
             // m_sle_lop
             // 
@@ -448,6 +437,20 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
+            // m_txt_so_tien
+            // 
+            this.m_txt_so_tien.EditValue = "";
+            this.m_txt_so_tien.Location = new System.Drawing.Point(133, 150);
+            this.m_txt_so_tien.Name = "m_txt_so_tien";
+            this.m_txt_so_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.m_txt_so_tien.Properties.Appearance.Options.UseFont = true;
+            this.m_txt_so_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_so_tien.Properties.Mask.EditMask = "n0";
+            this.m_txt_so_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.m_txt_so_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.m_txt_so_tien.Size = new System.Drawing.Size(183, 26);
+            this.m_txt_so_tien.TabIndex = 38;
+            // 
             // F354_LAP_GIAM_TRU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,7 +464,6 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_lan_thu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).EndInit();
@@ -472,6 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -484,7 +487,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         public DevExpress.XtraEditors.MemoEdit m_txt_noi_dung;
-        public DevExpress.XtraEditors.TextEdit m_txt_so_tien;
         public DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         public DevExpress.XtraEditors.SearchLookUpEdit m_sle_ma_hv;
@@ -509,5 +511,6 @@
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         public DevExpress.XtraEditors.TextEdit m_txt_lan_thu;
         public System.Windows.Forms.Label m_lbl_lan_thu;
+        public DevExpress.XtraEditors.TextEdit m_txt_so_tien;
     }
 }

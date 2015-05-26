@@ -43,6 +43,7 @@
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_lbl_goi_y = new System.Windows.Forms.Label();
             this.m_cmd_xoa_hang = new SIS.Controls.Button.SiSButton();
             this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,7 +62,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.m_txt_thanh_tien = new System.Windows.Forms.TextBox();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_lbl_goi_y = new System.Windows.Forms.Label();
+            this.m_txt_thanh_tien_format = new System.Windows.Forms.TextBox();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -233,6 +234,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_txt_thanh_tien_format);
             this.panel1.Controls.Add(this.m_lbl_goi_y);
             this.panel1.Controls.Add(this.m_cmd_xoa_hang);
             this.panel1.Controls.Add(this.m_cbo_lop_mon);
@@ -256,6 +258,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(912, 191);
             this.panel1.TabIndex = 1;
+            // 
+            // m_lbl_goi_y
+            // 
+            this.m_lbl_goi_y.AutoSize = true;
+            this.m_lbl_goi_y.Location = new System.Drawing.Point(710, 167);
+            this.m_lbl_goi_y.Name = "m_lbl_goi_y";
+            this.m_lbl_goi_y.Size = new System.Drawing.Size(198, 13);
+            this.m_lbl_goi_y.TabIndex = 17;
+            this.m_lbl_goi_y.Text = "Nhấp đúp chuột vào hàng để sửa phiếu";
+            this.m_lbl_goi_y.Visible = false;
             // 
             // m_cmd_xoa_hang
             // 
@@ -431,15 +443,16 @@
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 2;
             // 
-            // m_lbl_goi_y
+            // m_txt_thanh_tien_format
             // 
-            this.m_lbl_goi_y.AutoSize = true;
-            this.m_lbl_goi_y.Location = new System.Drawing.Point(710, 167);
-            this.m_lbl_goi_y.Name = "m_lbl_goi_y";
-            this.m_lbl_goi_y.Size = new System.Drawing.Size(198, 13);
-            this.m_lbl_goi_y.TabIndex = 17;
-            this.m_lbl_goi_y.Text = "Nhấp đúp chuột vào hàng để sửa phiếu";
-            this.m_lbl_goi_y.Visible = false;
+            this.m_txt_thanh_tien_format.BackColor = System.Drawing.SystemColors.Info;
+            this.m_txt_thanh_tien_format.ForeColor = System.Drawing.Color.Maroon;
+            this.m_txt_thanh_tien_format.Location = new System.Drawing.Point(118, 126);
+            this.m_txt_thanh_tien_format.Name = "m_txt_thanh_tien_format";
+            this.m_txt_thanh_tien_format.Size = new System.Drawing.Size(135, 20);
+            this.m_txt_thanh_tien_format.TabIndex = 18;
+            this.m_txt_thanh_tien_format.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.m_txt_thanh_tien_format.Visible = false;
             // 
             // f330_lap_phai_thu_hoc_vien
             // 
@@ -499,5 +512,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_xoa_hang;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.Label m_lbl_goi_y;
+        private System.Windows.Forms.TextBox m_txt_thanh_tien_format;
     }
 }

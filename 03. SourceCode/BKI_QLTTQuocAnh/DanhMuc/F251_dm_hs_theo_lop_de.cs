@@ -25,7 +25,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             InitializeComponent();
 
             format_control();
-            add_value_to_cbo_lop();
+            load_data_to_cbo_lop();
         }
 
         #region Public Interface
@@ -80,11 +80,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             load_data_2_ds_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
         }
 
-        private void add_value_to_cbo_lop()
+        private void load_data_to_cbo_lop()
         {
             DS_DM_LOP_MON v_ds = new DS_DM_LOP_MON();
             US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-            v_us.FillDataset(v_ds);
+            v_us.FillDataset(v_ds,"where TRANG_THAI_LOP_MON = 88");
 
             m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
             m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
