@@ -352,7 +352,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         void m_txt_so_tien_EditValueChanged(object sender, EventArgs e) {
             try {
-                m_txt_so_tien.Text = String.Format("{0:#,##0}", double.Parse(m_txt_so_tien.Text));
+                //m_txt_so_tien.Text = String.Format("{0:#,##0}", double.Parse(m_txt_so_tien.Text));
                 m_txt_so_tien.BackColor = Color.White;
             }
             catch(Exception v_e) {

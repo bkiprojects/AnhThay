@@ -166,7 +166,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             else return CIPConvert.ToDecimal(ip_txt.Text.Trim());
         }
         private void get_thanh_tien() {
-            m_txt_thanh_tien.Text = string.Format("{0:#,##0}", m_txt_thanh_tien.Text.Trim());
+            //m_txt_thanh_tien.Text = string.Format("{0:#,##0}", m_txt_thanh_tien.Text.Trim());
         }
         private bool check_validate_data() {
             if(m_cbo_lop_mon.SelectedIndex == 0) {
