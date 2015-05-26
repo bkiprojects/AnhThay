@@ -23,7 +23,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
         public F251_dm_hs_theo_lop_de()
         {
             InitializeComponent();
+
             format_control();
+            add_value_to_cbo_lop();
         }
 
         #region Public Interface
@@ -46,7 +48,9 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             this.m_txt_ma_doi_tuong.ReadOnly = true;
             //m_lbl_ten_lop.Visible = true;
             //m_lbl_ten_lop.Text = m_us.strTEN_LOP_MON;
-            m_cbo_lop.Enabled = false;
+            this.m_cbo_lop.Enabled = false;
+            //m_cbo_lop.SelectedValue = m_us.dcID_LOP_MON;
+
             //this.m_cbo_lop.Visible = false;
             this.ShowDialog();
         }
@@ -72,8 +76,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
         private void set_initial_form_load()
         {
-            add_value_to_cbo_lop();
-            //m_lbl_ten_lop.Text = CIPConvert.ToStr(m_cbo_lop.DisplayMember);
+            
             load_data_2_ds_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
         }
 
@@ -86,6 +89,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_cbo_lop.DataSource = v_ds.DM_LOP_MON;
             m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
             m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+            m_cbo_lop.SelectedIndex = 0;
         }
 
         private void load_data_2_ds_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON()
@@ -305,7 +309,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
         #region Events
         private void set_define_events()
         {
-            this.Load += F251_dm_hs_theo_lop_de_Load;
+            //this.Load += F251_dm_hs_theo_lop_de_Load;
             this.KeyDown += F251_dm_hs_theo_lop_de_KeyDown;
             m_cmd_save.Click += m_cmd_save_Click;
             m_cmd_delete.Click += m_cmd_delete_Click;

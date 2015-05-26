@@ -481,6 +481,7 @@
             this.Controls.Add(this.m_grb_thong_tin_hv);
             this.Name = "F251_dm_hs_theo_lop_de";
             this.Text = "F251 - CẬP NHẬT THÔNG TIN HỌC VIÊN";
+            this.Load += new System.EventHandler(this.F251_dm_hs_theo_lop_de_Load);
             this.m_grb_thong_tin_hv.ResumeLayout(false);
             this.m_grb_thong_tin_hv.PerformLayout();
             this.m_pnl_out_place_dm.ResumeLayout(false);
