@@ -44,17 +44,17 @@ namespace BKI_QLTTQuocAnh
             US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
             if (US_V_HT_NGUOI_SU_DUNG.isInAdminGroup(CAppContext_201.getCurrentUserID()))
             {
-                ribbonPageGroup4.Visible = false;
-                ribbonPageGroup5.Visible = false;
-                m_cmd_lap_phai_thu_le.Visibility = BarItemVisibility.Never;
-                m_cmd_lap_phai_thu_tu_dong.Visibility = BarItemVisibility.Never;
-                m_cmd_lap_thuc_thu.Visibility = BarItemVisibility.Never;
-                m_cmd_lap_giam_tru.Visibility = BarItemVisibility.Never;
+                //ribbonPageGroup4.Visible = false;
+                //ribbonPageGroup5.Visible = false;
+                //m_cmd_lap_phai_thu_le.Visibility = BarItemVisibility.Never;
+                //m_cmd_lap_phai_thu_tu_dong.Visibility = BarItemVisibility.Never;
+                //m_cmd_lap_thuc_thu.Visibility = BarItemVisibility.Never;
+                //m_cmd_lap_giam_tru.Visibility = BarItemVisibility.Never;
                 //m_cmd_phan_quyen_nhom.Visibility = BarItemVisibility.Never;
                 //m_cmd_nhom_nguoi_su_dung.Visibility = BarItemVisibility.Never;
                 //m_cmd_nguoi_sd.Visibility = BarItemVisibility.Never;
-                ribbonPage2.Visible = false;
-                m_cmd_ds_phieu.Visibility = BarItemVisibility.Always ;
+                //ribbonPage2.Visible = false;
+                //m_cmd_ds_phieu.Visibility = BarItemVisibility.Always ;
             }
             else
             {
@@ -62,9 +62,9 @@ namespace BKI_QLTTQuocAnh
                 m_cmd_phan_quyen_nhom.Visibility = BarItemVisibility.Never;
                 m_cmd_nhom_nguoi_su_dung.Visibility = BarItemVisibility.Never;
                 m_cmd_nguoi_sd.Visibility = BarItemVisibility.Never;
-                ribbonPageGroup2.Visible = false;
+                //ribbonPageGroup2.Visible = false;
                 m_cmd_tai_chinh_lm_hs.Visibility = BarItemVisibility.Always;
-                ribbonPageGroup11.Visible = true;
+                //ribbonPageGroup11.Visible = true;
             }
             set_define_events();
         }
