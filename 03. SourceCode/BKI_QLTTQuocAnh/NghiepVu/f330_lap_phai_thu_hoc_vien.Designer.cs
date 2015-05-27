@@ -60,12 +60,12 @@
             this.m_cmd_tu_dong = new SIS.Controls.Button.SiSButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.m_txt_thanh_tien = new System.Windows.Forms.TextBox();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_txt_thanh_tien_format = new System.Windows.Forms.TextBox();
+            this.m_txt_thanh_tien = new DevExpress.XtraEditors.TextEdit();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_thanh_tien.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // m_dat_tu_ngay
@@ -234,7 +234,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_txt_thanh_tien_format);
+            this.panel1.Controls.Add(this.m_txt_thanh_tien);
             this.panel1.Controls.Add(this.m_lbl_goi_y);
             this.panel1.Controls.Add(this.m_cmd_xoa_hang);
             this.panel1.Controls.Add(this.m_cbo_lop_mon);
@@ -252,7 +252,6 @@
             this.panel1.Controls.Add(this.m_cmd_tu_dong);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.m_txt_thanh_tien);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 44);
             this.panel1.Name = "panel1";
@@ -423,16 +422,6 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "HỌC PHÍ";
             // 
-            // m_txt_thanh_tien
-            // 
-            this.m_txt_thanh_tien.BackColor = System.Drawing.SystemColors.Info;
-            this.m_txt_thanh_tien.ForeColor = System.Drawing.Color.Maroon;
-            this.m_txt_thanh_tien.Location = new System.Drawing.Point(118, 126);
-            this.m_txt_thanh_tien.Name = "m_txt_thanh_tien";
-            this.m_txt_thanh_tien.Size = new System.Drawing.Size(153, 20);
-            this.m_txt_thanh_tien.TabIndex = 13;
-            this.m_txt_thanh_tien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
@@ -443,16 +432,19 @@
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 2;
             // 
-            // m_txt_thanh_tien_format
+            // m_txt_thanh_tien
             // 
-            this.m_txt_thanh_tien_format.BackColor = System.Drawing.SystemColors.Info;
-            this.m_txt_thanh_tien_format.ForeColor = System.Drawing.Color.Maroon;
-            this.m_txt_thanh_tien_format.Location = new System.Drawing.Point(118, 126);
-            this.m_txt_thanh_tien_format.Name = "m_txt_thanh_tien_format";
-            this.m_txt_thanh_tien_format.Size = new System.Drawing.Size(135, 20);
-            this.m_txt_thanh_tien_format.TabIndex = 18;
-            this.m_txt_thanh_tien_format.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.m_txt_thanh_tien_format.Visible = false;
+            this.m_txt_thanh_tien.EditValue = "";
+            this.m_txt_thanh_tien.Location = new System.Drawing.Point(118, 121);
+            this.m_txt_thanh_tien.Name = "m_txt_thanh_tien";
+            this.m_txt_thanh_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.m_txt_thanh_tien.Properties.Appearance.Options.UseFont = true;
+            this.m_txt_thanh_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_thanh_tien.Properties.Mask.EditMask = "n0";
+            this.m_txt_thanh_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.m_txt_thanh_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.m_txt_thanh_tien.Size = new System.Drawing.Size(153, 26);
+            this.m_txt_thanh_tien.TabIndex = 39;
             // 
             // f330_lap_phai_thu_hoc_vien
             // 
@@ -473,6 +465,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_thanh_tien.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -491,7 +484,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         private System.Windows.Forms.Label m_lbl_header;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox m_txt_thanh_tien;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         internal SIS.Controls.Button.SiSButton m_cmd_tu_dong;
@@ -512,6 +504,6 @@
         internal SIS.Controls.Button.SiSButton m_cmd_xoa_hang;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         private System.Windows.Forms.Label m_lbl_goi_y;
-        private System.Windows.Forms.TextBox m_txt_thanh_tien_format;
+        public DevExpress.XtraEditors.TextEdit m_txt_thanh_tien;
     }
 }

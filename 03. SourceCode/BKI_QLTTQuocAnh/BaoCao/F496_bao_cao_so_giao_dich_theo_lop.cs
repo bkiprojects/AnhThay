@@ -493,17 +493,20 @@ namespace BKI_QLTTQuocAnh {
         private void init_pivot_table() {
             PivotGridField hoTen = new PivotGridField(V_GD_PHIEU_THU.HO_TEN, PivotArea.RowArea);
             hoTen.Caption = "Họ tên";
+            hoTen.Width = 300;
             PivotGridField maDoiTuong = new PivotGridField(V_GD_PHIEU_THU.MA_DOI_TUONG, PivotArea.RowArea);
             maDoiTuong.Caption = "Mã HV";
             PivotGridField ngayThu = new PivotGridField(V_GD_PHIEU_THU.NGAY_THU, PivotArea.ColumnArea);
             ngayThu.Caption = "Ngày thu";
             PivotGridField soTien = new PivotGridField("SO_TIEN_AO", PivotArea.DataArea);
             soTien.Caption = "Số tiền";
-            soTien.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            soTien.CellFormat.FormatString = "{0:#,##0}";
+            
+            //soTien.CellFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            //soTien.CellFormat.FormatString = "{0:#,##0}";
 
             PivotGridField loaiPhieu = new PivotGridField(V_GD_PHIEU_THU.TEN_LOAI_PHIEU_THU, PivotArea.ColumnArea);
             loaiPhieu.Caption = "Loại phiếu";
+            loaiPhieu.Width = 200;
             PivotGridField lanThu = new PivotGridField(V_GD_PHIEU_THU.LAN_THU, PivotArea.ColumnArea);
             lanThu.Caption = "Lần thứ";
             //PivotGridField chenhLech = new PivotGridField(V_GD_PHIEU_THU.TEN_NGUOI_NOP_TIEN, PivotArea.ColumnArea);
@@ -511,7 +514,7 @@ namespace BKI_QLTTQuocAnh {
             //chenhLech.SummaryType = DevExpress.Data.PivotGrid.PivotSummaryType.Custom;
 
             PivotGridFieldBase.DefaultDecimalFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            PivotGridFieldBase.DefaultDecimalFormat.FormatString = "n2";
+            PivotGridFieldBase.DefaultDecimalFormat.FormatString = "n0";
             PivotGridFieldBase.DefaultDateFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             PivotGridFieldBase.DefaultDateFormat.FormatString = "dd/MM/yyyy";
 
@@ -573,9 +576,18 @@ namespace BKI_QLTTQuocAnh {
             m_sle_lop.Properties.View.Columns[DM_LOP_MON.ID_LOP].Visible = false;
             m_sle_lop.Properties.View.Columns[DM_LOP_MON.ID_MON].Visible = false;
             m_sle_lop.Properties.View.Columns[DM_LOP_MON.TRANG_THAI_LOP_MON].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.MA_LOP_MON].Visible = false;
             m_sle_lop.Properties.View.Columns[DM_LOP_MON.DON_GIA_BUOI_HOC].Visible = false;
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.TONG_TIEN_KHOA_HOC].Visible = false;
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.TONG_SO_BUOI_HOC].Visible = false;
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.THOI_GIAN_HOC_TO_DATE].Visible = false;
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.THOI_GIAN_HOC_FROM_DATE].Visible = false;
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.GHI_CHU].Visible = false;
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.ID_TRO_GIANG].Visible = false;
 
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.MO_TA].Width = 300;
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.MA_LOP_MON].Width = 150;
+
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.MA_LOP_MON].Caption = "Mã lớp";
             m_sle_lop.Properties.View.Columns[DM_LOP_MON.MO_TA].Caption = "Chọn tên lớp";
 
             m_sle_lop.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
@@ -584,7 +596,7 @@ namespace BKI_QLTTQuocAnh {
 
 
         private void load_data_2_grid() {
-            if(m_sle_lop.EditValue == null || m_sle_lop.EditValue == "") {
+            if(m_sle_lop.EditValue == null || m_sle_lop.Text == "") {
                 return;
             }
             DS_V_GD_PHIEU_THU v_ds = new DS_V_GD_PHIEU_THU();
