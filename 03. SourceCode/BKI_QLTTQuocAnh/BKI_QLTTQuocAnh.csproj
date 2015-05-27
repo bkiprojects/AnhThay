@@ -284,6 +284,15 @@
     <Compile Include="DanhMuc\F251_dm_hs_theo_lop_de.Designer.cs">
       <DependentUpon>F251_dm_hs_theo_lop_de.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\frm_dm_so_phieu_thu_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frm_dm_so_phieu_thu_de.Designer.cs">
+      <DependentUpon>frm_dm_so_phieu_thu_de.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frm_so_phieu_thu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HeThong\collection.cs" />
     <Compile Include="HeThong\f306_HT_USER_GROUP.cs">
       <SubType>Form</SubType>
@@ -382,6 +391,12 @@
       <DependentUpon>f370_chuyen_lop_cho_hoc_vien.cs</DependentUpon>
     </Compile>
     <Compile Include="NghiepVu\FactoryPhieu.cs" />
+    <Compile Include="NghiepVu\frm_clone_lop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\frm_clone_lop.Designer.cs">
+      <DependentUpon>frm_clone_lop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -464,6 +479,12 @@
     <EmbeddedResource Include="DanhMuc\F251_dm_hs_theo_lop_de.resx">
       <DependentUpon>F251_dm_hs_theo_lop_de.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frm_dm_so_phieu_thu_de.resx">
+      <DependentUpon>frm_dm_so_phieu_thu_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frm_so_phieu_thu.resx">
+      <DependentUpon>frm_so_phieu_thu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP.resx">
       <DependentUpon>f306_HT_USER_GROUP.cs</DependentUpon>
     </EmbeddedResource>
@@ -520,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f370_chuyen_lop_cho_hoc_vien.resx">
       <DependentUpon>f370_chuyen_lop_cho_hoc_vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\frm_clone_lop.resx">
+      <DependentUpon>frm_clone_lop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

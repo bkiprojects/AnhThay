@@ -101,7 +101,7 @@ namespace BKI_QLTTQuocAnh
         private void set_define_events()
         {
             //Nghiệp vụ
-            m_cmd_nhap_hoc.ItemClick += m_cmd_nhap_hoc_ItemClick;
+            m_cmd_clone_lop.ItemClick += m_cmd_nhap_hoc_ItemClick;
             m_cmd_nghi_hoc.ItemClick += m_cmd_nghi_hoc_ItemClick;
             m_cmd_diem_danh.ItemClick += m_cmd_diem_danh_ItemClick;
             m_cmd_cap_nhat_hs.ItemClick += m_cmd_cap_nhat_hs_ItemClick;
@@ -604,14 +604,13 @@ namespace BKI_QLTTQuocAnh
 
         void m_cmd_nhap_hoc_ItemClick(object sender, ItemClickEventArgs e)
         {
-            try
-            {
-                //f315_nhap_hoc v_frm = new f315_nhap_hoc();
+            try {
+                frm_clone_lop v_frm = new frm_clone_lop();
 
-                //if (IsExistFormName(v_frm)) return;
+                if(IsExistFormName(v_frm)) return;
 
-                //v_frm.MdiParent = this;
-                //v_frm.Show();
+                v_frm.MdiParent = this;
+                v_frm.Show();
             }
             catch (Exception v_e)
             {
