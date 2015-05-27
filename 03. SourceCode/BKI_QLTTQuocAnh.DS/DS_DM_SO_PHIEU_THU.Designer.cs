@@ -546,7 +546,6 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnID.AutoIncrementSeed = -1;
                 this.columnID.AutoIncrementStep = -1;
                 this.columnID.AllowDBNull = false;
-                this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnTEN_SO.MaxLength = 200;
                 this.columnIS_DELETED.MaxLength = 1;

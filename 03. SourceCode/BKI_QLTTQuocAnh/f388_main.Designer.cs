@@ -446,6 +446,7 @@
             this.m_cmd_so_phieu_thu.Name = "m_cmd_so_phieu_thu";
             this.m_cmd_so_phieu_thu.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_so_phieu_thu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_so_phieu_thu_ItemClick);
             // 
             // ribbonPage1
             // 

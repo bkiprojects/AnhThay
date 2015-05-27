@@ -635,5 +635,19 @@ namespace BKI_QLTTQuocAnh
             v_frm.MdiParent = this;
             v_frm.Show();
         }
+
+        private void m_cmd_so_phieu_thu_ItemClick(object sender, ItemClickEventArgs e) {
+            try {
+                frm_so_phieu_thu v_frm = new frm_so_phieu_thu();
+
+                if(IsExistFormName(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch(Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }

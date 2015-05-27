@@ -23,6 +23,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using BKI_QLTTQuocAnh.DanhMuc;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -300,6 +301,8 @@ namespace BKI_QLTTQuocAnh
 			m_fg.Redraw = false;
 			CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
 			m_fg.Redraw = true;
+
+            CGridUtils.MakeSoTT(0, m_fg);
 		}
 		private void grid2us_object(US_DM_SO_PHIEU_THU i_us
 			, int i_grid_row) {
@@ -318,9 +321,9 @@ namespace BKI_QLTTQuocAnh
 		}
 
 
-		private void insert_dm_so_phieu_thu(){			
-		//	frm_so_phieu_thu_DE v_fDE = new  frm_so_phieu_thu_DE();								
-		//	v_fDE.display();
+		private void insert_dm_so_phieu_thu(){
+            frm_dm_so_phieu_thu_de v_fDE = new frm_dm_so_phieu_thu_de();
+            v_fDE.display_for_insert();
 			load_data_2_grid();
 		}
 
@@ -328,8 +331,8 @@ namespace BKI_QLTTQuocAnh
 			if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
 			if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;			
 			grid2us_object(m_us, m_fg.Row);
-		//	frm_so_phieu_thu_DE v_fDE = new frm_so_phieu_thu_DE();
-		//	v_fDE.display(m_us);
+            frm_dm_so_phieu_thu_de v_fDE = new frm_dm_so_phieu_thu_de();
+		v_fDE.display_for_update(m_us);
 			load_data_2_grid();
 		}
 				
