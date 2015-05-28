@@ -62,6 +62,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
         DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
         DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
         US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+        DS_DM_HOC_SINH m_ds_dm_hs = new DS_DM_HOC_SINH();
         #endregion
 
         #region Private Method
@@ -73,11 +74,17 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             set_define_events();
             this.KeyPreview = true;
         }
-
+        private void load_data_2_ds_hs() {
+            US_DM_HOC_SINH v_us = new US_DM_HOC_SINH();
+            m_ds_dm_hs.Clear();
+            m_ds_dm_hs.EnforceConstraints = false;
+            v_us.FillDataset(m_ds_dm_hs);
+        }
         private void set_initial_form_load()
         {
             
             load_data_2_ds_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+            load_data_2_ds_hs();
         }
 
         private void load_data_to_cbo_lop()
@@ -231,6 +238,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                                         , m_dat_thoi_gian_end.Value
                                         , m_txt_ghi_chu.Text);
                     BaseMessages.MsgBox_Infor("Bạn đã thêm thành công!!!");
+                    load_data_2_ds_hs();
                     this.Close();
                     break;
                 case DataEntryFormMode.UpdateDataState:
@@ -281,7 +289,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             string v_str_filter = "";
             v_str_filter = "MA_DOI_TUONG = '" + m_txt_ma_doi_tuong.Text.Trim() + "'";
 
-            DataRow[] v_dr = m_ds.V_DM_HOC_SINH_GD_HOC_DM_LOP_MON.Select(v_str_filter);
+            DataRow[] v_dr = m_ds_dm_hs.DM_HOC_SINH.Select(v_str_filter);
             if (v_dr.Length != 0)
             {
                 //XtraMessageBox.Show("Mã học sinh chưa có trong dữ liệu phần mềm. Bạn có muốn nhập mới học sinh này","Thông báo",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
@@ -289,7 +297,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
 
                 m_txt_ma_doi_tuong.BackColor = Color.Bisque;
                 m_lbl_check_ma_doi_tuong.Visible = true;
-                m_lbl_check_ma_doi_tuong.Text = "Đã có mã đối tượng rồi...";
+                m_lbl_check_ma_doi_tuong.Text = "Đã có mã học viên rồi...";
                 return true;
             }
             else
