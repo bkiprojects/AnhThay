@@ -60,12 +60,12 @@
             // 
             this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 94);
+            this.gridControl.Location = new System.Drawing.Point(0, 134);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit});
-            this.gridControl.Size = new System.Drawing.Size(931, 305);
+            this.gridControl.Size = new System.Drawing.Size(931, 265);
             this.gridControl.TabIndex = 5;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -81,6 +81,9 @@
             this.EMAIL});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
+            this.gridView.OptionsFind.AlwaysVisible = true;
+            this.gridView.OptionsFind.FindDelay = 100;
+            this.gridView.OptionsFind.FindNullPrompt = "Điền thông tin tìm kiếm tại đây...";
             this.gridView.OptionsSelection.MultiSelect = true;
             this.gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             this.gridView.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
@@ -242,7 +245,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 94);
+            this.panel1.Size = new System.Drawing.Size(931, 134);
             this.panel1.TabIndex = 11;
             // 
             // panelControl2
