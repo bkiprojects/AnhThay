@@ -435,5 +435,13 @@ public class US_DM_HOC_SINH : US_Object
         }
         return false;
     }
+
+    public string get_ma_hs_moi_nhat() {
+        CStoredProc v_sp = new CStoredProc("Pr_get_ma_hs_them_moi");
+        SqlParameter v_para = v_sp.addNVarcharOutputParam("@op_str_ma_hv", "");
+
+        v_sp.ExecuteCommand(this);
+        return v_para.Value.ToString();
+    }
 }
 }

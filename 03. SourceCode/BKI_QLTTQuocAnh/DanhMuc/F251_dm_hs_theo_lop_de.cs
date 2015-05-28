@@ -80,11 +80,16 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_ds_dm_hs.EnforceConstraints = false;
             v_us.FillDataset(m_ds_dm_hs);
         }
+        private void goi_y_ma_hv() {
+            US_DM_HOC_SINH v_us = new US_DM_HOC_SINH();
+            m_txt_ma_doi_tuong.Text = v_us.get_ma_hs_moi_nhat();
+        }
         private void set_initial_form_load()
         {
             
             load_data_2_ds_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
             load_data_2_ds_hs();
+            goi_y_ma_hv();
         }
 
         private void load_data_to_cbo_lop()

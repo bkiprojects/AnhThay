@@ -14,6 +14,7 @@ using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.HeThong;
 using BKI_QLTTQuocAnh.NghiepVu;
 using IP.Core.IPSystemAdmin;
+using DevExpress.XtraEditors;
 namespace BKI_QLTTQuocAnh
 {
     public partial class f388_main : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -644,6 +645,16 @@ namespace BKI_QLTTQuocAnh
 
                 v_frm.MdiParent = this;
                 v_frm.Show();
+            }
+            catch(Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_tim_ma_lon_nhat_ItemClick(object sender, ItemClickEventArgs e) {
+            try {
+                US_DM_HOC_SINH v_us = new US_DM_HOC_SINH();
+                XtraMessageBox.Show("Mã học viên tiếp theo cần nhập là:  " + v_us.get_ma_hs_moi_nhat(), "THÔNG BÁO",MessageBoxButtons.OK) ;
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
