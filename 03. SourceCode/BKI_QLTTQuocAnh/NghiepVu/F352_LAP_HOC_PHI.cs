@@ -392,12 +392,13 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         private void m_cmd_them_hv_moi_Click(object sender, EventArgs e) {
             try {
                 F251_dm_hs_theo_lop_de v_frm = new F251_dm_hs_theo_lop_de();
-                DialogResult v_dlt = v_frm.display_4_insert();
+                decimal v_dc_id_hv_moi = 0;
+                DialogResult v_dlt = v_frm.display_4_insert(ref v_dc_id_hv_moi);
 
                 if(v_dlt == System.Windows.Forms.DialogResult.Cancel) {
-                    return;
+                    //return;
                 }
-                m_sle_ma_hv.EditValue = v_frm.m_us.dcID;
+                m_sle_ma_hv.EditValue = v_dc_id_hv_moi;
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);

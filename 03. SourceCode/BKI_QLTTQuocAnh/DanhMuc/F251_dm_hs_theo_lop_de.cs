@@ -39,7 +39,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             return this.ShowDialog();
         }
-
+        public DialogResult display_4_insert(ref decimal op_dc_id_hoc_vien) {
+            m_e_form_mode = DataEntryFormMode.InsertDataState;
+            op_dc_id_hoc_vien = m_us.dcID;
+            return this.ShowDialog();
+        }
         public void display_4_update(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
@@ -228,20 +232,21 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                     //us.insert();
                     //form_2_us
                     //m_us.Insert()
-                    m_us.insert_by_proc(m_txt_ma_doi_tuong.Text
-                                        , m_txt_ho.Text
-                                        , m_txt_ten.Text
-                                        , m_dat_ngay_sinh.Value
-                                        , m_txt_email.Text
-                                        , m_txt_dia_chi.Text
-                                        , m_txt_sdt.Text
-                                        , m_txt_facebook.Text
-                                        , m_txt_truong_dang_hoc.Text
-                                        , CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
-                                        , CIPConvert.ToDecimal(m_txt_hoc_phi.Text)
-                                        , m_dat_thoi_gian_start.Value
-                                        , m_dat_thoi_gian_end.Value
-                                        , m_txt_ghi_chu.Text);
+                m_us.insert_by_proc(m_txt_ma_doi_tuong.Text
+                                    , m_txt_ho.Text
+                                    , m_txt_ten.Text
+                                    , m_dat_ngay_sinh.Value
+                                    , m_txt_email.Text
+                                    , m_txt_dia_chi.Text
+                                    , m_txt_sdt.Text
+                                    , m_txt_facebook.Text
+                                    , m_txt_truong_dang_hoc.Text
+                                    , CIPConvert.ToDecimal(m_cbo_lop.SelectedValue)
+                                    , CIPConvert.ToDecimal(m_txt_hoc_phi.Text)
+                                    , m_dat_thoi_gian_start.Value
+                                    , m_dat_thoi_gian_end.Value
+                                    , m_txt_ghi_chu.Text);
+               // m_us.Insert();
                     BaseMessages.MsgBox_Infor("Bạn đã thêm thành công!!!");
                     load_data_2_ds_hs();
                     this.Close();
