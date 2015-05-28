@@ -36,6 +36,7 @@
             this.m_lbl_nv_nhap = new DevExpress.XtraEditors.LabelControl();
             this.m_lbl_nv_thu = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
             this.m_dat_ngay_nhap = new DevExpress.XtraEditors.DateEdit();
             this.m_lbl_header_left = new System.Windows.Forms.Label();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -53,7 +54,7 @@
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
+            this.m_cmd_them_hv_moi = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -62,12 +63,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_thu.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_thu.Properties)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // directorySearcher1
@@ -185,6 +186,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.m_cmd_them_hv_moi);
             this.panel1.Controls.Add(this.m_txt_noi_dung);
             this.panel1.Controls.Add(this.m_txt_so_tien);
             this.panel1.Controls.Add(this.m_sle_lop);
@@ -210,6 +212,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(497, 504);
             this.panel1.TabIndex = 0;
+            // 
+            // m_txt_so_tien
+            // 
+            this.m_txt_so_tien.EditValue = "";
+            this.m_txt_so_tien.Location = new System.Drawing.Point(135, 149);
+            this.m_txt_so_tien.Name = "m_txt_so_tien";
+            this.m_txt_so_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.m_txt_so_tien.Properties.Appearance.Options.UseFont = true;
+            this.m_txt_so_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_so_tien.Properties.Mask.EditMask = "n0";
+            this.m_txt_so_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.m_txt_so_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.m_txt_so_tien.Size = new System.Drawing.Size(183, 26);
+            this.m_txt_so_tien.TabIndex = 16;
             // 
             // m_dat_ngay_nhap
             // 
@@ -411,19 +427,15 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
-            // m_txt_so_tien
+            // m_cmd_them_hv_moi
             // 
-            this.m_txt_so_tien.EditValue = "";
-            this.m_txt_so_tien.Location = new System.Drawing.Point(135, 149);
-            this.m_txt_so_tien.Name = "m_txt_so_tien";
-            this.m_txt_so_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.m_txt_so_tien.Properties.Appearance.Options.UseFont = true;
-            this.m_txt_so_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_txt_so_tien.Properties.Mask.EditMask = "n0";
-            this.m_txt_so_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.m_txt_so_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.m_txt_so_tien.Size = new System.Drawing.Size(183, 26);
-            this.m_txt_so_tien.TabIndex = 16;
+            this.m_cmd_them_hv_moi.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_them_hv_moi.Image")));
+            this.m_cmd_them_hv_moi.Location = new System.Drawing.Point(292, 85);
+            this.m_cmd_them_hv_moi.Name = "m_cmd_them_hv_moi";
+            this.m_cmd_them_hv_moi.Size = new System.Drawing.Size(100, 23);
+            this.m_cmd_them_hv_moi.TabIndex = 36;
+            this.m_cmd_them_hv_moi.Text = "Thêm HV mới";
+            this.m_cmd_them_hv_moi.Click += new System.EventHandler(this.m_cmd_them_hv_moi_Click);
             // 
             // F352_LAP_HOC_PHI
             // 
@@ -442,12 +454,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_thu.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,5 +495,6 @@
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.ImageList imageList1;
         public DevExpress.XtraEditors.TextEdit m_txt_so_tien;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_them_hv_moi;
     }
 }

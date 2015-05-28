@@ -13,7 +13,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 using DevExpress.XtraEditors;
 using System.Globalization;
-
+using BKI_QLTTQuocAnh.DanhMuc;
 namespace BKI_QLTTQuocAnh.NghiepVu {
     public partial class F352_LAP_HOC_PHI : Form {
         public F352_LAP_HOC_PHI() {
@@ -383,6 +383,21 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         void F352_LAP_HOC_PHI_Load(object sender, EventArgs e) {
             try {
                 set_init_form_load();
+            }
+            catch(Exception v_e) {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_them_hv_moi_Click(object sender, EventArgs e) {
+            try {
+                F251_dm_hs_theo_lop_de v_frm = new F251_dm_hs_theo_lop_de();
+                DialogResult v_dlt = v_frm.display_4_insert();
+
+                if(v_dlt == System.Windows.Forms.DialogResult.Cancel) {
+                    return;
+                }
+                m_sle_ma_hv.EditValue = v_frm.m_us.dcID;
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);

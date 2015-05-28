@@ -34,10 +34,10 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             this.ShowDialog();
         }
 
-        public void display_4_insert()
+        public DialogResult display_4_insert()
         {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
-            this.ShowDialog();
+            return this.ShowDialog();
         }
 
         public void display_4_update(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us)
@@ -61,7 +61,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
         #region Members
         DataEntryFormMode m_e_form_mode = DataEntryFormMode.InsertDataState;
         DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_ds = new DS_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
-        US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
+        public US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON m_us = new US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON();
         DS_DM_HOC_SINH m_ds_dm_hs = new DS_DM_HOC_SINH();
         #endregion
 

@@ -244,7 +244,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
         private void check_so_phieu() {
             string v_str_filter;
-            v_str_filter = "SO_PHIEU = '" + m_txt_so_phieu.Text.Trim() + "'";
+            v_str_filter = "SO_PHIEU = '" + m_txt_so_phieu.Text.Trim() + "' and ID_SO_PHIEU_THU = " + m_sle_so_phieu_thu.EditValue.ToString();
             DataRow[] v_dr = m_ds_gd_phieu_thu.GD_PHIEU_THU.Select(v_str_filter);
 
             if(v_dr.Count() != 0) {
@@ -353,6 +353,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
                 ip_us.strNOI_DUNG = m_txt_noi_dung.Text.Trim();
                 ip_us.strSO_PHIEU = m_txt_so_phieu.Text.Trim();
+                ip_us.dcID_SO_PHIEU_THU = CIPConvert.ToDecimal(m_sle_so_phieu_thu.EditValue);
             }
             catch(Exception v_e) {
                 throw v_e;
