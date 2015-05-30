@@ -4,6 +4,7 @@
 /// Goal: Create Form for V_RPT_F496_BAO_CAO_SO_GIAO_DICH_THEO_LOP
 ///************************************************
 
+using DevExpress.XtraPrinting;
 using DevExpress.LookAndFeel;
 using DevExpress.XtraPivotGrid;
 using System;
@@ -18,7 +19,7 @@ using IP.Core.IPException;
 using IP.Core.IPData;
 using IP.Core.IPUserService;
 using IP.Core.IPSystemAdmin;
-
+using System.IO;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
@@ -47,6 +48,8 @@ namespace BKI_QLTTQuocAnh {
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private Label label1;
         private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_excel;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_pdf;
         private System.ComponentModel.IContainer components;
 
         public F496_bao_cao_so_giao_dich_theo_lop() {
@@ -97,6 +100,8 @@ namespace BKI_QLTTQuocAnh {
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.pivotGridControl = new DevExpress.XtraPivotGrid.PivotGridControl();
+            this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_xuat_pdf = new DevExpress.XtraEditors.SimpleButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -134,6 +139,8 @@ namespace BKI_QLTTQuocAnh {
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_pdf);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_xuat_excel);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
@@ -339,6 +346,26 @@ namespace BKI_QLTTQuocAnh {
             this.pivotGridControl.FieldValueDisplayText += new DevExpress.XtraPivotGrid.PivotFieldDisplayTextEventHandler(this.pivotGridControl_FieldValueDisplayText);
             this.pivotGridControl.CustomCellDisplayText += new DevExpress.XtraPivotGrid.PivotCellDisplayTextEventHandler(this.pivotGridControl_CustomCellDisplayText);
             this.pivotGridControl.CellDoubleClick += new DevExpress.XtraPivotGrid.PivotCellEventHandler(this.pivotGridControl_CellDoubleClick);
+            // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(92, 4);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(75, 28);
+            this.m_cmd_xuat_excel.TabIndex = 5;
+            this.m_cmd_xuat_excel.Text = "Xuất Excel";
+            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
+            // 
+            // m_cmd_xuat_pdf
+            // 
+            this.m_cmd_xuat_pdf.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_pdf.Location = new System.Drawing.Point(167, 4);
+            this.m_cmd_xuat_pdf.Name = "m_cmd_xuat_pdf";
+            this.m_cmd_xuat_pdf.Size = new System.Drawing.Size(75, 28);
+            this.m_cmd_xuat_pdf.TabIndex = 6;
+            this.m_cmd_xuat_pdf.Text = "Xuất PDF";
+            this.m_cmd_xuat_pdf.Click += new System.EventHandler(this.m_cmd_xuat_pdf_Click);
             // 
             // F496_bao_cao_so_giao_dich_theo_lop
             // 
@@ -870,6 +897,46 @@ namespace BKI_QLTTQuocAnh {
             catch(Exception v_e) {
 
                 throw v_e;
+            }
+        }
+
+        private void m_cmd_xuat_excel_Click(object sender, EventArgs e) {
+            try {
+                string path;
+                FolderBrowserDialog dlg = new FolderBrowserDialog();
+                if(dlg.ShowDialog() == DialogResult.OK) {
+                    path = dlg.SelectedPath + "\\SoGiaoDich" + DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString() ;
+                    if(File.Exists(path + ".xlsx")) {
+                        path = path + "+";
+                    }
+                    pivotGridControl.ExportToXlsx(path + ".xlsx");
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Đã xuất định dạng thành công!", "THÔNG BÁO",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                
+            }
+            catch(Exception v_e) {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void m_cmd_xuat_pdf_Click(object sender, EventArgs e) {
+            try {
+                string path;
+                FolderBrowserDialog dlg = new FolderBrowserDialog();
+                if(dlg.ShowDialog() == DialogResult.OK) {
+                    path = dlg.SelectedPath + "\\SoGiaoDich" + DateTime.Now.Day.ToString() + "-" + DateTime.Now.Month.ToString();
+                    if(File.Exists(path + ".pdf")) {
+                        path = path + "+";
+                    }
+                    pivotGridControl.ExportToPdf(path + ".pdf");
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Đã xuất định dạng thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+
+            }
+            catch(Exception v_e) {
+
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 

@@ -28,6 +28,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_txt_ten_so.Text = ip_us.strTEN_SO;
             m_txt_mo_ta.Text = ip_us.strMO_TA;
             m_txt_ghi_chu.Text = ip_us.strGHI_CHU;
+            
             if(ip_us.dcTU_SO == 0) {
                 m_txt_tu_so.Text = "";
             }
@@ -94,7 +95,8 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             
             m_us.strMO_TA = m_txt_mo_ta.Text;
             m_us.strGHI_CHU = m_txt_ghi_chu.Text;
-
+            m_us.strIS_DELETED = "N";
+            m_us.strIS_ACTIVE = "Y";
             switch(m_e_form_mode) {
                 case DataEntryFormMode.InsertDataState:
                 m_us.Insert();
