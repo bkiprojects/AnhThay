@@ -16,7 +16,7 @@
               <DbSource ConnectionRef="AnhThayConnectionString (Settings)" DbObjectName="AnhThay.dbo.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, NGAY_THU, ID_LOAI_PHIEU_THU, TEN_LOAI_PHIEU_THU, SO_PHIEU, NOI_DUNG, ID_LOP_MON, TEN_LOP_MON, ID_HOC_SINH, MA_HOC_SINH, HO_TEN_HS, HO_TEN_PH, ID_NGUOI_THU, TEN_NGUOI_THU, TIEN_PHAI_THU, TIEN_GIAM_TRU, TIEN_THUC_THU, TIEN_CON_PHAI_THU FROM dbo.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU</CommandText>
+                    <CommandText>SELECT ID, NGAY_THU, ID_LOAI_PHIEU_THU, TEN_LOAI_PHIEU_THU, SO_PHIEU, NOI_DUNG, ID_LOP_MON, TEN_LOP_MON, ID_HOC_SINH, MA_HOC_SINH, HO_TEN_HS, HO_TEN_PH, ID_NGUOI_THU, TEN_NGUOI_THU, TIEN_PHAI_THU, TIEN_GIAM_TRU, TIEN_THUC_THU, TIEN_CON_PHAI_THU, MA_SO_QUYEN FROM dbo.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -41,6 +41,7 @@
               <Mapping SourceColumn="TIEN_GIAM_TRU" DataSetColumn="TIEN_GIAM_TRU" />
               <Mapping SourceColumn="TIEN_THUC_THU" DataSetColumn="TIEN_THUC_THU" />
               <Mapping SourceColumn="TIEN_CON_PHAI_THU" DataSetColumn="TIEN_CON_PHAI_THU" />
+              <Mapping SourceColumn="MA_SO_QUYEN" DataSetColumn="MA_SO_QUYEN" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -52,7 +53,7 @@
   <xs:element name="DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msprop:Generator_UserDSName="DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msprop:Generator_TableClassName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THUDataTable" msprop:Generator_TableVarName="tableV_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msprop:Generator_RowChangedName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowChanged" msprop:Generator_TablePropName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msprop:Generator_RowDeletingName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowDeleting" msprop:Generator_RowChangingName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowChanging" msprop:Generator_RowEvHandlerName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowChangeEventHandler" msprop:Generator_RowDeletedName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowDeleted" msprop:Generator_RowClassName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURow" msprop:Generator_UserTableName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msprop:Generator_RowEvArgName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowChangeEvent">
+        <xs:element name="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msprop:Generator_TableClassName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THUDataTable" msprop:Generator_TableVarName="tableV_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msprop:Generator_TablePropName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msprop:Generator_RowDeletingName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowDeleting" msprop:Generator_RowChangingName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowChanging" msprop:Generator_RowEvHandlerName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowChangeEventHandler" msprop:Generator_RowDeletedName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowDeleted" msprop:Generator_UserTableName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU" msprop:Generator_RowChangedName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowChanged" msprop:Generator_RowEvArgName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURowChangeEvent" msprop:Generator_RowClassName="V_RPT_BAO_CAO_DANH_SACH_PHIEU_THURow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
@@ -65,7 +66,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SO_PHIEU" msprop:Generator_ColumnVarNameInTable="columnSO_PHIEU" msprop:Generator_ColumnPropNameInRow="SO_PHIEU" msprop:Generator_ColumnPropNameInTable="SO_PHIEUColumn" msprop:Generator_UserColumnName="SO_PHIEU">
+              <xs:element name="SO_PHIEU" msprop:Generator_ColumnVarNameInTable="columnSO_PHIEU" msprop:Generator_ColumnPropNameInRow="SO_PHIEU" msprop:Generator_ColumnPropNameInTable="SO_PHIEUColumn" msprop:Generator_UserColumnName="SO_PHIEU" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="35" />
@@ -121,6 +122,7 @@
               <xs:element name="TIEN_GIAM_TRU" msprop:Generator_ColumnVarNameInTable="columnTIEN_GIAM_TRU" msprop:Generator_ColumnPropNameInRow="TIEN_GIAM_TRU" msprop:Generator_ColumnPropNameInTable="TIEN_GIAM_TRUColumn" msprop:Generator_UserColumnName="TIEN_GIAM_TRU" type="xs:decimal" minOccurs="0" />
               <xs:element name="TIEN_THUC_THU" msprop:Generator_ColumnVarNameInTable="columnTIEN_THUC_THU" msprop:Generator_ColumnPropNameInRow="TIEN_THUC_THU" msprop:Generator_ColumnPropNameInTable="TIEN_THUC_THUColumn" msprop:Generator_UserColumnName="TIEN_THUC_THU" type="xs:decimal" minOccurs="0" />
               <xs:element name="TIEN_CON_PHAI_THU" msprop:Generator_ColumnVarNameInTable="columnTIEN_CON_PHAI_THU" msprop:Generator_ColumnPropNameInRow="TIEN_CON_PHAI_THU" msprop:Generator_ColumnPropNameInTable="TIEN_CON_PHAI_THUColumn" msprop:Generator_UserColumnName="TIEN_CON_PHAI_THU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MA_SO_QUYEN" msprop:Generator_ColumnVarNameInTable="columnMA_SO_QUYEN" msprop:Generator_ColumnPropNameInRow="MA_SO_QUYEN" msprop:Generator_ColumnPropNameInTable="MA_SO_QUYENColumn" msprop:Generator_UserColumnName="MA_SO_QUYEN" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

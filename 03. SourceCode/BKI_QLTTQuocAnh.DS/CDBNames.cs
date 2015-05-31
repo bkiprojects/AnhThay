@@ -529,8 +529,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TONG_TIEN_PHAI_THU = "TONG_TIEN_PHAI_THU";
     }
 
-    public class V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU
-    {
+    public class V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU {
         public const string ID = "ID";
         public const string NGAY_THU = "NGAY_THU";
         public const string ID_LOAI_PHIEU_THU = "ID_LOAI_PHIEU_THU";
@@ -549,7 +548,9 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
         public const string TIEN_THUC_THU = "TIEN_THUC_THU";
         public const string TIEN_CON_PHAI_THU = "TIEN_CON_PHAI_THU";
+        public const string MA_SO_QUYEN = "MA_SO_QUYEN";
     }
+
 
 
     public class V_RPT_BAO_CAO_TIEN_PHAI_THU_THEO_LOP_MON_HS

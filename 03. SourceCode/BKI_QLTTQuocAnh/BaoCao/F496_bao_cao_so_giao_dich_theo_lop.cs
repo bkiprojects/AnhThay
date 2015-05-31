@@ -652,7 +652,7 @@ namespace BKI_QLTTQuocAnh {
 
             //pivotGridControl.DataSource = v_ds.V_GD_PHIEU_THU;
             v_ds.V_GD_PHIEU_THU.Columns.Add("SO_TIEN_AO", typeof(decimal));
-            for(int i = 1; i < v_ds.V_GD_PHIEU_THU.Rows.Count - 1; i++) {
+            for(int i = 1; i < v_ds.V_GD_PHIEU_THU.Rows.Count; i++) {
                 DataRow v_dr = v_ds.V_GD_PHIEU_THU.Rows[i];
                 if(CIPConvert.ToDecimal(v_dr[V_GD_PHIEU_THU.ID_LOAI_PHIEU_THU]) == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU) {
                     v_ds.V_GD_PHIEU_THU.Rows[i]["SO_TIEN_AO"] = -1 * CIPConvert.ToDecimal(v_ds.V_GD_PHIEU_THU.Rows[i][V_GD_PHIEU_THU.SO_TIEN]);

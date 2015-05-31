@@ -517,30 +517,30 @@ namespace BKI_QLTTQuocAnh
         #endregion
 
         #region Data Structure
-        private enum e_col_Number
-        {
-            HO_TEN_PH = 7
+        private enum e_col_Number {
+            HO_TEN_PH = 8
 ,
-            SO_PHIEU = 3
+            SO_PHIEU = 4
                 ,
-            NGAY_THU = 1
+            NGAY_THU = 2
                 ,
-            TEN_LOAI_PHIEU_THU = 2
+            TEN_LOAI_PHIEU_THU = 3
                 ,
-            TIEN_THUC_THU = 11
+            TIEN_THUC_THU = 12
                 ,
-            TIEN_GIAM_TRU = 10
+            TIEN_GIAM_TRU = 11
                 ,
-            MA_HOC_SINH = 5
+            MA_HOC_SINH = 6
                 ,
-            NOI_DUNG = 4
+            NOI_DUNG = 5
                 ,
-            TIEN_CON_PHAI_THU = 12
+            TIEN_CON_PHAI_THU = 13
                 ,
-            TEN_NGUOI_THU = 8
+            TEN_NGUOI_THU = 9
                 ,
-            TIEN_PHAI_THU = 9
-                , HO_TEN_HS = 6
+            TIEN_PHAI_THU = 10
+                , HO_TEN_HS = 7,
+            MA_SO_QUYEN = 1
 
         }
         #endregion
@@ -586,7 +586,7 @@ namespace BKI_QLTTQuocAnh
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TEN_NGUOI_THU, e_col_Number.TEN_NGUOI_THU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_PHAI_THU, e_col_Number.TIEN_PHAI_THU);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_HS, e_col_Number.HO_TEN_HS);
-
+            v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.MA_SO_QUYEN, e_col_Number.MA_SO_QUYEN);
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NewRow());
             return v_obj_trans;
         }
