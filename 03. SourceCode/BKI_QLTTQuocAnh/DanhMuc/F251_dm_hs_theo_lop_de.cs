@@ -85,8 +85,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             v_us.FillDataset(m_ds_dm_hs);
         }
         private void goi_y_ma_hv() {
-            US_DM_HOC_SINH v_us = new US_DM_HOC_SINH();
-            m_txt_ma_doi_tuong.Text = v_us.get_ma_hs_moi_nhat();
+            if(m_e_form_mode == DataEntryFormMode.InsertDataState) {
+                US_DM_HOC_SINH v_us = new US_DM_HOC_SINH();
+                m_txt_ma_doi_tuong.Text = v_us.get_ma_hs_moi_nhat();
+            }
+            
         }
         private void set_initial_form_load()
         {
