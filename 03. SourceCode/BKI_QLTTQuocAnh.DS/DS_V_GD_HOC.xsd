@@ -50,7 +50,7 @@
   <xs:element name="DS_V_GD_HOC" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_GD_HOC" msprop:Generator_UserDSName="DS_V_GD_HOC">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="V_GD_HOC" msprop:Generator_TableClassName="V_GD_HOCDataTable" msprop:Generator_TableVarName="tableV_GD_HOC" msprop:Generator_TablePropName="V_GD_HOC" msprop:Generator_RowDeletingName="V_GD_HOCRowDeleting" msprop:Generator_RowChangingName="V_GD_HOCRowChanging" msprop:Generator_RowEvHandlerName="V_GD_HOCRowChangeEventHandler" msprop:Generator_RowDeletedName="V_GD_HOCRowDeleted" msprop:Generator_UserTableName="V_GD_HOC" msprop:Generator_RowChangedName="V_GD_HOCRowChanged" msprop:Generator_RowEvArgName="V_GD_HOCRowChangeEvent" msprop:Generator_RowClassName="V_GD_HOCRow">
+        <xs:element name="V_GD_HOC" msprop:Generator_TableClassName="V_GD_HOCDataTable" msprop:Generator_TableVarName="tableV_GD_HOC" msprop:Generator_RowChangedName="V_GD_HOCRowChanged" msprop:Generator_TablePropName="V_GD_HOC" msprop:Generator_RowDeletingName="V_GD_HOCRowDeleting" msprop:Generator_RowChangingName="V_GD_HOCRowChanging" msprop:Generator_RowEvHandlerName="V_GD_HOCRowChangeEventHandler" msprop:Generator_RowDeletedName="V_GD_HOCRowDeleted" msprop:Generator_RowClassName="V_GD_HOCRow" msprop:Generator_UserTableName="V_GD_HOC" msprop:Generator_RowEvArgName="V_GD_HOCRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
@@ -75,7 +75,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HO_TEN" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN" minOccurs="0">
+              <xs:element name="HO_TEN" msprop:Generator_ColumnVarNameInTable="columnHO_TEN" msprop:Generator_ColumnPropNameInRow="HO_TEN" msprop:Generator_ColumnPropNameInTable="HO_TENColumn" msprop:Generator_UserColumnName="HO_TEN" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="51" />
@@ -84,7 +84,7 @@
               </xs:element>
               <xs:element name="NGAY_BAT_DAU" msprop:Generator_ColumnVarNameInTable="columnNGAY_BAT_DAU" msprop:Generator_ColumnPropNameInRow="NGAY_BAT_DAU" msprop:Generator_ColumnPropNameInTable="NGAY_BAT_DAUColumn" msprop:Generator_UserColumnName="NGAY_BAT_DAU" type="xs:dateTime" minOccurs="0" />
               <xs:element name="NGAY_KET_THUC" msprop:Generator_ColumnVarNameInTable="columnNGAY_KET_THUC" msprop:Generator_ColumnPropNameInRow="NGAY_KET_THUC" msprop:Generator_ColumnPropNameInTable="NGAY_KET_THUCColumn" msprop:Generator_UserColumnName="NGAY_KET_THUC" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="TRANG_THAI_HOC" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTRANG_THAI_HOC" msprop:Generator_ColumnPropNameInRow="TRANG_THAI_HOC" msprop:Generator_ColumnPropNameInTable="TRANG_THAI_HOCColumn" msprop:Generator_UserColumnName="TRANG_THAI_HOC" minOccurs="0">
+              <xs:element name="TRANG_THAI_HOC" msprop:Generator_ColumnVarNameInTable="columnTRANG_THAI_HOC" msprop:Generator_ColumnPropNameInRow="TRANG_THAI_HOC" msprop:Generator_ColumnPropNameInTable="TRANG_THAI_HOCColumn" msprop:Generator_UserColumnName="TRANG_THAI_HOC" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="8" />

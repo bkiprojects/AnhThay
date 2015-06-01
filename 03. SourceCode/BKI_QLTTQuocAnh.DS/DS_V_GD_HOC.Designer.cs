@@ -680,9 +680,7 @@ namespace BKI_QLTTQuocAnh.DS {
                 this.columnHO.MaxLength = 35;
                 this.columnTEN.AllowDBNull = false;
                 this.columnTEN.MaxLength = 15;
-                this.columnHO_TEN.ReadOnly = true;
                 this.columnHO_TEN.MaxLength = 51;
-                this.columnTRANG_THAI_HOC.ReadOnly = true;
                 this.columnTRANG_THAI_HOC.MaxLength = 8;
                 this.columnMA_DOI_TUONG.AllowDBNull = false;
                 this.columnMA_DOI_TUONG.MaxLength = 35;

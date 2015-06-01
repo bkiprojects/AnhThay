@@ -519,8 +519,9 @@ namespace BKI_QLTTQuocAnh {
         #region Data Structure
         private enum e_col_Number {
             EMAIL = 6
-            ,SĐT = 5
-                ,
+            ,
+            SĐT = 5
+               ,
             STT = 1
                 ,
             MA_HOC_VIEN = 2
@@ -530,9 +531,11 @@ namespace BKI_QLTTQuocAnh {
             TEN = 4
                 ,
             TRUONG_DANG_HOC = 9
-                , QUE_QUAN = 8
-            ,NGAY_SINH = 7
-            ,FACEBOOK =10
+                ,
+            QUE_QUAN = 8
+                ,
+            NGAY_SINH = 7
+                , FACEBOOK = 10
 
         }
         #endregion
@@ -600,8 +603,7 @@ namespace BKI_QLTTQuocAnh {
             i_us.DataRow2Me(v_dr);
         }
 
-        private void load_data_2_cbo_lop()
-        {
+        private void load_data_2_cbo_lop() {
             DS_DM_LOP_MON v_ds_dm_lop_mon = new DS_DM_LOP_MON();
             US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON();
             v_us_dm_lop_mon.FillDataset(v_ds_dm_lop_mon, "where TRANG_THAI_LOP_MON = 88");
@@ -717,12 +719,11 @@ namespace BKI_QLTTQuocAnh {
             ip_us_hv.strFACEBOOK = ip_us_excel.strFACEBOOK;
             ip_us_hv.strDELETE_YN = "N";
         }
-        private bool is_check_exist(string ma_hoc_sinh, DS_DM_HOC_SINH ip_ds_dm_hs){
-            string filter = "ma_doi_tuong = '"+ ma_hoc_sinh+"'";
+        private bool is_check_exist(string ma_hoc_sinh, DS_DM_HOC_SINH ip_ds_dm_hs) {
+            string filter = "ma_doi_tuong = '" + ma_hoc_sinh + "'";
             DataRow[] v_dr = ip_ds_dm_hs.DM_HOC_SINH.Select(filter);
 
-            if (v_dr.Length == 0)
-            {
+            if(v_dr.Length == 0) {
                 return false;
             }
             return true;
@@ -750,30 +751,28 @@ namespace BKI_QLTTQuocAnh {
             //check trung ma doi tuong
             //DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
             //US_V_GD_HOC v_us = new US_V_GD_HOC();
-            DS_DM_HOC_SINH v_ds_hs = new DS_DM_HOC_SINH();
-            US_DM_HOC_SINH v_us_hs = new US_DM_HOC_SINH();
+            //DS_DM_HOC_SINH v_ds_hs = new DS_DM_HOC_SINH();
+            //US_DM_HOC_SINH v_us_hs = new US_DM_HOC_SINH();
 
-            v_us_hs.FillDataset(v_ds_hs);
-            decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
-            for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
-            {
-                string v_ma_hv = m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString();
-                if(is_check_exist(v_ma_hv, v_ds_hs))
-                {
-                    BaseMessages.MsgBox_Error("Mã học viên ở dòng " + i + " đã tồn tại, hãy kiểm tra lại");
-                    m_flag_du_lieu_is_ok = false;
-                    return;
-                }
-            }
+            //v_us_hs.FillDataset(v_ds_hs);
+            //decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+            //for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
+            //{
+            //    string v_ma_hv = m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString();
+            //    if(is_check_exist(v_ma_hv, v_ds_hs))
+            //    {
+            //        BaseMessages.MsgBox_Error("Mã học viên ở dòng " + i + " đã tồn tại, hãy kiểm tra lại");
+            //        m_flag_du_lieu_is_ok = false;
+            //        return;
+            //    }
+            //}
             //Dua ra m_flag
-                if (m_flag_du_lieu_is_ok == true)
-                {
-                    BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
-                }
-                else
-                {
-                    BaseMessages.MsgBox_Infor("Dữ liệu bị lỗi");
-                }
+            if(m_flag_du_lieu_is_ok == true) {
+                BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
+            }
+            else {
+                BaseMessages.MsgBox_Infor("Dữ liệu bị lỗi");
+            }
             //Buoc 2
             //DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
             //US_V_GD_HOC v_us = new US_V_GD_HOC();
@@ -799,7 +798,7 @@ namespace BKI_QLTTQuocAnh {
             //    }
             //}          
 
-            
+
         }
         #endregion
 
@@ -831,13 +830,14 @@ namespace BKI_QLTTQuocAnh {
 
         void m_cmd_save_data_Click(object sender, EventArgs e) {
             try {
-                if (m_flag_du_lieu_is_ok == false)
-                {
+                if(m_flag_du_lieu_is_ok == false) {
                     BaseMessages.MsgBox_Error("Bạn kiểm tra dữ liệu trước nhé!");
                     return;
                 }
 
                 US_DM_HOC_SINH v_us_hv = new US_DM_HOC_SINH();
+                DS_DM_HOC_SINH v_ds_hv = new DS_DM_HOC_SINH();
+                v_us_hv.FillDataset(v_ds_hv);
                 US_GD_HOC v_us_gd_hoc = new US_GD_HOC();
                 //v_us_hv_gd_hoc.UseTransOfUSObject( //use transaction cua thang hoc_sinh
                 DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
@@ -846,19 +846,22 @@ namespace BKI_QLTTQuocAnh {
                 v_us_hv.BeginTransaction();
                 for(int i_grid_row = m_fg.Rows.Fixed; i_grid_row < m_fg.Rows.Count; i_grid_row++) {
                     //1.0 du lieu trung thi ko add nua
-                    
-                    
+
+
                     string v_ma_hv = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
                     decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
-                    
-                    
+                    if(!is_check_exist(v_ma_hv, v_ds_hv)) {
+                        grid2us_object(m_us, i_grid_row);
+                        excel_2_us_dm_hoc_vien(m_us, v_us_hv);
+
+                        //1.2 insert
+                        //Anh phai mo trấnction
+
+                        v_us_hv.Insert();
+                    }
+
                     //1.1 day du lieu vao hv
-                    grid2us_object(m_us, i_grid_row);
-                    excel_2_us_dm_hoc_vien(m_us, v_us_hv);
-                    //1.2 insert
-                    //Anh phai mo trấnction
-                    
-                    v_us_hv.Insert();
+
                     //v_us_hv.Insert();
                     //2.1 su dung transaction cua hv
                     v_us_gd_hoc.dcID_HOC_SINH = v_us_hv.dcID;
@@ -872,7 +875,7 @@ namespace BKI_QLTTQuocAnh {
                     //3.1 clear du lieu de insert moi
                     v_us_hv.ClearAllFields();
                     v_us_gd_hoc.ClearAllFields();
-                    
+
                 }
                 v_us_hv.CommitTransaction();
                 BaseMessages.MsgBox_Infor("Lưu dữ liệu học viên thành công");
