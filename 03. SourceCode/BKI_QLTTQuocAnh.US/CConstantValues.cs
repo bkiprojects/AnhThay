@@ -77,6 +77,31 @@ namespace BKI_QLTTQuocAnh.US {
         public const decimal DANG_HOAT_DONG = 88;
         public const decimal KHONG_HOAT_DONG = 89;
     }
+
+    public static class CONST_NOI_DUNG_THONG_BAO
+    {
+        //Them
+      
+        //Sua
+        public const string CANH_BAO_TRUOC_KHI_SUA = "Bạn có chắc chắn muốn sửa nội dung này?";
+        public const string THONG_BAO_XOA_THANH_CONG = "Đã sửa thành công!";
+        //Xoa
+        public const string CANH_BAO_TRUOC_KHI_XOA = "Bạn có chắc chắn muốn xóa thông tin này?";
+        public const string THONG_BAO_XOA_THANH_CONG = "Đã xóa thành công!";
+        //excel
+        public const string XUAT_EXCEL_THANH_CONG = "Đã xuất định dạng excel thành công!";
+        //pdf
+        public const string XUAT_PDF_THANH_CONG = "Đã xuất định dạng pdf thành công!";
+    }
+
+    public static class CONST_LOAI_THONG_BAO
+    {
+        public const string CANH_BAO = "CẢNH BÁO";
+        public const string LOI_NGUOI_DUNG = "LỖI NGƯỜI DÙNG";
+        public const string THONG_BAO = "THÔNG BÁO";
+       
+
+    }
     //public class TU_DIEN {
     //    public const string Q1 = "1";
     //    public const string Q2 = "2";

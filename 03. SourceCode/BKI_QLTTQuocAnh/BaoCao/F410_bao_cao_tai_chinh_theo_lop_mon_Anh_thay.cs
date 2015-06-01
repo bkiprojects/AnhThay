@@ -26,9 +26,6 @@ using C1.Win.C1FlexGrid;
 
 namespace BKI_QLTTQuocAnh
 {
-
-
-
     public class F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay : System.Windows.Forms.Form
     {
         internal System.Windows.Forms.ImageList ImageList;
@@ -328,9 +325,7 @@ namespace BKI_QLTTQuocAnh
         {
             this.ShowDialog();
         }
-
-
-        #endregion
+       #endregion
 
         #region Data Structure
         private enum e_col_Number
@@ -360,20 +355,26 @@ namespace BKI_QLTTQuocAnh
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163))); this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
-
+            design_form();
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
             set_define_events();
             this.KeyPreview = true;
         }
+
+        private void design_form()
+        {
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163))); this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
+        }
+
         private void set_initial_form_load()
         {
             m_obj_trans = get_trans_object(m_fg);
             load_data_to_sle_lop();
             load_data_2_grid();
         }
+
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
@@ -415,6 +416,7 @@ namespace BKI_QLTTQuocAnh
             m_sle_lop.Properties.View.Columns[DM_LOP_MON.DON_GIA_BUOI_HOC].Visible = false;
 
             m_sle_lop.Properties.View.Columns[DM_LOP_MON.MO_TA].Caption = "Chọn tên lớp";
+            m_sle_lop.Properties.View.Columns[DM_LOP_MON.MO_TA].Width = 300;
 
             m_sle_lop.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
             m_sle_lop.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
@@ -443,15 +445,16 @@ namespace BKI_QLTTQuocAnh
                     //, m_dat_tu_ngay.Value.Date
                     //, m_dat_den_ngay.Value.Date);
             }
-            m_fg.Redraw = false;
-            CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
-            m_fg.Redraw = true;
+            //m_fg.Redraw = false;
+            //CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
+            //m_fg.Redraw = true;
 
             m_fg.Redraw = false;
             CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
             CGridUtils.MakeSoTT(0, m_fg);
             m_fg.Redraw = true;
         }
+
         private void grid2us_object(US_V_RPT_F410_BAO_CAO_TAI_CHINH_THEO_LOP i_us
             , int i_grid_row)
         {
@@ -461,7 +464,6 @@ namespace BKI_QLTTQuocAnh
             i_us.DataRow2Me(v_dr);
         }
 
-
         private void us_object2grid(US_V_RPT_F410_BAO_CAO_TAI_CHINH_THEO_LOP i_us
             , int i_grid_row)
         {
@@ -469,7 +471,6 @@ namespace BKI_QLTTQuocAnh
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
-
 
         private void insert_v_rpt_f410_bao_cao_tai_chinh_theo_lop()
         {

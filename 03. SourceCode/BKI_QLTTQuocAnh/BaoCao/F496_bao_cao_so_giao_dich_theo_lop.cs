@@ -910,7 +910,7 @@ namespace BKI_QLTTQuocAnh {
                         path = path + "+";
                     }
                     pivotGridControl.ExportToXlsx(path + ".xlsx");
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Đã xuất định dạng thành công!", "THÔNG BÁO",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    DevExpress.XtraEditors.XtraMessageBox.Show(CONST_NOI_DUNG_THONG_BAO.XUAT_EXCEL_THANH_CONG, CONST_LOAI_THONG_BAO.THONG_BAO, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 
             }
@@ -930,7 +930,7 @@ namespace BKI_QLTTQuocAnh {
                         path = path + "+";
                     }
                     pivotGridControl.ExportToPdf(path + ".pdf");
-                    DevExpress.XtraEditors.XtraMessageBox.Show("Đã xuất định dạng thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    DevExpress.XtraEditors.XtraMessageBox.Show(CONST_NOI_DUNG_THONG_BAO.XUAT_PDF_THANH_CONG, CONST_LOAI_THONG_BAO.THONG_BAO, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
 
             }

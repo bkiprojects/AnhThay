@@ -28,12 +28,9 @@ using BKI_QLTTQuocAnh.NghiepVu;
 
 namespace BKI_QLTTQuocAnh
 {
-
-
-
     public class f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay : System.Windows.Forms.Form
     {
-        #region Temp
+        #region Winform auto
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
@@ -479,6 +476,7 @@ namespace BKI_QLTTQuocAnh
 
             this.ShowDialog();
         }
+
         public void display_ds_phieu_thuc_thu()
         {
             m_trang_thai_hien_thi = 1;
@@ -498,6 +496,7 @@ namespace BKI_QLTTQuocAnh
 
             this.ShowDialog();
         }
+        
         public void display_ds_phieu_giam_tru()
         {
             m_trang_thai_hien_thi = 1;
@@ -557,20 +556,26 @@ namespace BKI_QLTTQuocAnh
         private void format_controls()
         {
             CControlFormat.setFormStyle(this, new CAppContext_201());
+            design_form();
             CControlFormat.setC1FlexFormat(m_fg);
             CGridUtils.AddSave_Excel_Handlers(m_fg);
             CGridUtils.AddSearch_Handlers(m_fg);
-            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             m_fg.AllowResizing = AllowResizingEnum.Both;
-
             set_define_events();
             this.KeyPreview = true;
         }
+
+        private void design_form()
+        {
+            this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+        }
+
         private void set_initial_form_load()
         {            
             m_obj_trans = get_trans_object(m_fg);
             load_data_2_grid();
         }
+
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
         {
             Hashtable v_htb = new Hashtable();
@@ -652,6 +657,7 @@ namespace BKI_QLTTQuocAnh
 
             CGridUtils.MakeSoTT(0, m_fg);
         }
+
         private void grid2us_object(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
             , int i_grid_row)
         {
@@ -660,8 +666,7 @@ namespace BKI_QLTTQuocAnh
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
             i_us.DataRow2Me(v_dr);
         }
-
-
+        
         private void us_object2grid(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
             , int i_grid_row)
         {
@@ -669,8 +674,7 @@ namespace BKI_QLTTQuocAnh
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
-
-
+        
         private void insert_v_rpt_bao_cao_danh_sach_phieu_thu()
         {
             //	F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE v_fDE = new  F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE();								
@@ -687,62 +691,75 @@ namespace BKI_QLTTQuocAnh
 
             if (!check_ban_giao_is_da_thu_or_admin(v_us))
             {
-                XtraMessageBox.Show("Phiếu này đã bàn giao, không được quyền sửa!", "Lỗi người dùng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Phiếu này đã bàn giao, không được quyền sửa!", CONST_LOAI_THONG_BAO.LOI_NGUOI_DUNG, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            update_phieu();
+            load_data_2_grid();
+        }
 
+        private void update_phieu()
+        {
             US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID); //BaseMessages.MsgBox_Error("Mật khẩu hoặc tài khoản chưa chính xác");
-            if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU) {
+            if (v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU)
+            {
                 F352_LAP_HOC_PHI v_frm = new F352_LAP_HOC_PHI();
                 v_frm.display_for_update(v_us_gd_pt);
             }
-            else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU) {
+            else if (v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU)
+            {
                 F354_LAP_GIAM_TRU v_frm = new F354_LAP_GIAM_TRU();
                 v_frm.display_for_update(v_us_gd_pt);
             }
-            else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU) {
+            else if (v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU)
+            {
                 F356_LAP_THUC_THU v_frm = new F356_LAP_THUC_THU();
                 v_frm.display_for_update(v_us_gd_pt);
             }
-            load_data_2_grid();
         }
 
         private void delete_v_rpt_bao_cao_danh_sach_phieu_thu()
         {
             if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
             if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            DialogResult v_dlgr = XtraMessageBox.Show("Bạn có chắc chắn muốn xóa phiếu thu này", "Cảnh báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            DialogResult v_dlgr = XtraMessageBox.Show("Bạn có chắc chắn muốn xóa phiếu thu này", CONST_LOAI_THONG_BAO.CANH_BAO, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
             if (v_dlgr == DialogResult.No || v_dlgr == DialogResult.Cancel)
             {
                 return;
             }
             else
             {
-                US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-                grid2us_object(v_us, m_fg.Row);
+                delete_phieu();
+                
+            }
+        }
 
-                if (!check_ban_giao_is_da_thu_or_admin(v_us))
-                {
-                    XtraMessageBox.Show("Phiếu này đã bàn giao, không được quyền xóa!", "Lỗi người dùng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+        private void delete_phieu()
+        {
+            US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+            grid2us_object(v_us, m_fg.Row);
 
-                try
-                {
-                    v_us.BeginTransaction();
-                    v_us.DeletePhieuThuVaChiTiet(v_us.dcID);
-                    v_us.CommitTransaction();
-                    m_fg.Rows.Remove(m_fg.Row);
-                    XtraMessageBox.Show("Đã xóa thành công");
-                    load_data_2_grid();
-                }
-                catch (Exception v_e)
-                {
-                    v_us.Rollback();
-                    CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
-                        new CDBClientDBExceptionInterpret());
-                    v_objErrHandler.showErrorMessage();
-                }
+            if (!check_ban_giao_is_da_thu_or_admin(v_us))
+            {
+                XtraMessageBox.Show("Phiếu này đã bàn giao, không được quyền xóa!", CONST_LOAI_THONG_BAO.LOI_NGUOI_DUNG, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                v_us.BeginTransaction();
+                v_us.DeletePhieuThuVaChiTiet(v_us.dcID);
+                v_us.CommitTransaction();
+                m_fg.Rows.Remove(m_fg.Row);
+                XtraMessageBox.Show(CONST_NOI_DUNG_THONG_BAO.THONG_BAO_XOA_THANH_CONG);
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                v_us.Rollback();
+                CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
+                    new CDBClientDBExceptionInterpret());
+                v_objErrHandler.showErrorMessage();
             }
         }
 
@@ -805,8 +822,7 @@ namespace BKI_QLTTQuocAnh
             m_cbo_loai_phieu.SelectedIndexChanged += m_cbo_loai_phieu_SelectedIndexChanged;
             m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
         }
-
-        
+       
         void m_dat_tu_ngay_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -842,7 +858,6 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
 
         void m_cbo_loai_phieu_SelectedIndexChanged(object sender, EventArgs e)
         {
