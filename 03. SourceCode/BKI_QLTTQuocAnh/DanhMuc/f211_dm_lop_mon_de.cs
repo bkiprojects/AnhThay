@@ -165,11 +165,11 @@ namespace BKI_QLTTQuocAnh.DanhMuc
                 MessageBox.Show("Mô tả không được để trống");
                 return false;
             }
-            if (!CValidateTextBox.IsValid(m_txt_hoc_phi, DataType.NumberType, allowNull.NO, false))
-            {
-                MessageBox.Show("Học phí không được để trống và phải là số");
-                return false;
-            }
+            //if (!CValidateTextBox.IsValid(m_txt_hoc_phi, DataType.NumberType, allowNull.NO, false))
+            //{
+            //    MessageBox.Show("Học phí không được để trống và phải là số");
+            //    return false;
+            //}
 
             return true;
         }

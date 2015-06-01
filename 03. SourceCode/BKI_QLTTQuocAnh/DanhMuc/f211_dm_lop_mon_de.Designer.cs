@@ -35,7 +35,6 @@
             this.m_dat_thoi_gian_start = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_thoi_gian_end = new System.Windows.Forms.Label();
             this.m_lbl_thoi_gian_start = new System.Windows.Forms.Label();
-            this.m_txt_hoc_phi = new System.Windows.Forms.TextBox();
             this.m_lbl_hoc_phi = new System.Windows.Forms.Label();
             this.m_txt_mo_ta = new System.Windows.Forms.TextBox();
             this.m_txt_ma_lop_mon = new System.Windows.Forms.TextBox();
@@ -45,17 +44,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_luu = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.m_txt_hoc_phi = new DevExpress.XtraEditors.TextEdit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_hoc_phi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_txt_hoc_phi);
             this.panel1.Controls.Add(this.m_dat_thoi_gian_end);
             this.panel1.Controls.Add(this.m_dat_thoi_gian_start);
             this.panel1.Controls.Add(this.m_lbl_thoi_gian_end);
             this.panel1.Controls.Add(this.m_lbl_thoi_gian_start);
-            this.panel1.Controls.Add(this.m_txt_hoc_phi);
             this.panel1.Controls.Add(this.m_lbl_hoc_phi);
             this.panel1.Controls.Add(this.m_txt_mo_ta);
             this.panel1.Controls.Add(this.m_txt_ma_lop_mon);
@@ -65,14 +66,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 224);
+            this.panel1.Size = new System.Drawing.Size(343, 250);
             this.panel1.TabIndex = 0;
             // 
             // m_dat_thoi_gian_end
             // 
             this.m_dat_thoi_gian_end.CustomFormat = "dd/MM/yyyy";
             this.m_dat_thoi_gian_end.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_thoi_gian_end.Location = new System.Drawing.Point(106, 151);
+            this.m_dat_thoi_gian_end.Location = new System.Drawing.Point(107, 165);
             this.m_dat_thoi_gian_end.Name = "m_dat_thoi_gian_end";
             this.m_dat_thoi_gian_end.Size = new System.Drawing.Size(196, 20);
             this.m_dat_thoi_gian_end.TabIndex = 10;
@@ -81,7 +82,7 @@
             // 
             this.m_dat_thoi_gian_start.CustomFormat = "dd/MM/yyyy";
             this.m_dat_thoi_gian_start.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_thoi_gian_start.Location = new System.Drawing.Point(106, 120);
+            this.m_dat_thoi_gian_start.Location = new System.Drawing.Point(106, 129);
             this.m_dat_thoi_gian_start.Name = "m_dat_thoi_gian_start";
             this.m_dat_thoi_gian_start.Size = new System.Drawing.Size(196, 20);
             this.m_dat_thoi_gian_start.TabIndex = 9;
@@ -89,7 +90,7 @@
             // m_lbl_thoi_gian_end
             // 
             this.m_lbl_thoi_gian_end.AutoSize = true;
-            this.m_lbl_thoi_gian_end.Location = new System.Drawing.Point(12, 157);
+            this.m_lbl_thoi_gian_end.Location = new System.Drawing.Point(12, 168);
             this.m_lbl_thoi_gian_end.Name = "m_lbl_thoi_gian_end";
             this.m_lbl_thoi_gian_end.Size = new System.Drawing.Size(72, 13);
             this.m_lbl_thoi_gian_end.TabIndex = 8;
@@ -98,23 +99,16 @@
             // m_lbl_thoi_gian_start
             // 
             this.m_lbl_thoi_gian_start.AutoSize = true;
-            this.m_lbl_thoi_gian_start.Location = new System.Drawing.Point(12, 126);
+            this.m_lbl_thoi_gian_start.Location = new System.Drawing.Point(12, 131);
             this.m_lbl_thoi_gian_start.Name = "m_lbl_thoi_gian_start";
             this.m_lbl_thoi_gian_start.Size = new System.Drawing.Size(74, 13);
             this.m_lbl_thoi_gian_start.TabIndex = 7;
             this.m_lbl_thoi_gian_start.Text = "Thời gian start";
             // 
-            // m_txt_hoc_phi
-            // 
-            this.m_txt_hoc_phi.Location = new System.Drawing.Point(106, 93);
-            this.m_txt_hoc_phi.Name = "m_txt_hoc_phi";
-            this.m_txt_hoc_phi.Size = new System.Drawing.Size(196, 20);
-            this.m_txt_hoc_phi.TabIndex = 6;
-            // 
             // m_lbl_hoc_phi
             // 
             this.m_lbl_hoc_phi.AutoSize = true;
-            this.m_lbl_hoc_phi.Location = new System.Drawing.Point(12, 97);
+            this.m_lbl_hoc_phi.Location = new System.Drawing.Point(12, 102);
             this.m_lbl_hoc_phi.Name = "m_lbl_hoc_phi";
             this.m_lbl_hoc_phi.Size = new System.Drawing.Size(78, 13);
             this.m_lbl_hoc_phi.TabIndex = 5;
@@ -159,7 +153,7 @@
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(315, 45);
+            this.m_lbl_header.Size = new System.Drawing.Size(343, 45);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "LỚP MÔN";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,9 +162,9 @@
             // 
             this.panel2.Controls.Add(this.m_cmd_luu);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 182);
+            this.panel2.Location = new System.Drawing.Point(0, 208);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 42);
+            this.panel2.Size = new System.Drawing.Size(343, 42);
             this.panel2.TabIndex = 1;
             // 
             // m_cmd_luu
@@ -181,7 +175,7 @@
             this.m_cmd_luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_luu.ImageIndex = 13;
             this.m_cmd_luu.ImageList = this.imageList1;
-            this.m_cmd_luu.Location = new System.Drawing.Point(106, 6);
+            this.m_cmd_luu.Location = new System.Drawing.Point(4, 7);
             this.m_cmd_luu.Name = "m_cmd_luu";
             this.m_cmd_luu.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_luu.TabIndex = 0;
@@ -214,11 +208,24 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
+            // m_txt_hoc_phi
+            // 
+            this.m_txt_hoc_phi.EditValue = "";
+            this.m_txt_hoc_phi.Location = new System.Drawing.Point(106, 94);
+            this.m_txt_hoc_phi.Name = "m_txt_hoc_phi";
+            this.m_txt_hoc_phi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.m_txt_hoc_phi.Properties.Appearance.Options.UseFont = true;
+            this.m_txt_hoc_phi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_hoc_phi.Properties.Mask.EditMask = "n0";
+            this.m_txt_hoc_phi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.m_txt_hoc_phi.Size = new System.Drawing.Size(197, 26);
+            this.m_txt_hoc_phi.TabIndex = 17;
+            // 
             // f211_dm_lop_mon_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 224);
+            this.ClientSize = new System.Drawing.Size(343, 250);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "f211_dm_lop_mon_de";
@@ -226,6 +233,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_hoc_phi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,11 +249,11 @@
         private System.Windows.Forms.TextBox m_txt_ma_lop_mon;
         private System.Windows.Forms.Label m_lbl_ma_lop_mon;
         private System.Windows.Forms.Label m_lbl_mo_ta;
-        private System.Windows.Forms.TextBox m_txt_hoc_phi;
         private System.Windows.Forms.Label m_lbl_hoc_phi;
         private System.Windows.Forms.DateTimePicker m_dat_thoi_gian_end;
         private System.Windows.Forms.DateTimePicker m_dat_thoi_gian_start;
         private System.Windows.Forms.Label m_lbl_thoi_gian_end;
         private System.Windows.Forms.Label m_lbl_thoi_gian_start;
+        public DevExpress.XtraEditors.TextEdit m_txt_hoc_phi;
     }
 }
