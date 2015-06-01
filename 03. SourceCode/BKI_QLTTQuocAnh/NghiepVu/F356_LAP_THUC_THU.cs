@@ -243,19 +243,26 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         }
 
         private void check_so_phieu() {
-            string v_str_filter;
-            v_str_filter = "SO_PHIEU = '" + m_txt_so_phieu.Text.Trim() + "' and ID_SO_PHIEU_THU = " + m_sle_so_phieu_thu.EditValue.ToString();
-            DataRow[] v_dr = m_ds_gd_phieu_thu.GD_PHIEU_THU.Select(v_str_filter);
+            string v_str_filter = "";
+            if(m_sle_so_phieu_thu.EditValue != null) {
+                v_str_filter = "SO_PHIEU = '" + m_txt_so_phieu.Text + "' and ID_SO_PHIEU_THU = " + m_sle_so_phieu_thu.EditValue.ToString();
+                DataRow[] v_dr = m_ds_gd_phieu_thu.GD_PHIEU_THU.Select(v_str_filter);
 
-            if(v_dr.Count() != 0) {
-                m_txt_so_phieu.BackColor = Color.Bisque;
-                m_lbl_check_so_phieu.Visible = true;
-                m_lbl_check_so_phieu.Text = "Đã có số phiếu rồi...";
+                if(v_dr.Count() != 0) {
+                    m_txt_so_phieu.BackColor = Color.Bisque;
+                    m_lbl_check_so_phieu.Visible = true;
+                    m_lbl_check_so_phieu.Text = "Đã có số phiếu rồi...";
+                }
+                else {
+                    m_txt_so_phieu.BackColor = Color.White;
+                    m_lbl_check_so_phieu.Visible = false;
+                }
             }
             else {
                 m_txt_so_phieu.BackColor = Color.White;
                 m_lbl_check_so_phieu.Visible = false;
             }
+           
         }
 
         private void clear_data_phieu() {
@@ -416,7 +423,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_txt_so_tien.EditValueChanged += m_txt_so_tien_EditValueChanged;
             
             m_cmd_insert.Click += m_cmd_insert_Click;
-            
+            m_sle_so_phieu_thu.EditValueChanged += m_sle_so_phieu_thu_EditValueChanged;
+        }
+
+        void m_sle_so_phieu_thu_EditValueChanged(object sender, EventArgs e) {
+            try {
+                check_so_phieu();
+            }
+            catch(Exception v_e) {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_txt_so_phieu_EditValueChanged(object sender, EventArgs e) {
