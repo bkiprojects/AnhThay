@@ -13,5 +13,9 @@ namespace BKI_QLTTQuocAnh.BaoCao {
             InitializeComponent();
             gridView1.ExpandAllGroups();
         }
+
+        private void gridControl1_Click(object sender, EventArgs e) {
+
+        }
     }
 }

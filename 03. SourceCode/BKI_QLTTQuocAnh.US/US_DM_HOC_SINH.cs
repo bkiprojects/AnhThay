@@ -443,5 +443,11 @@ public class US_DM_HOC_SINH : US_Object
         v_sp.ExecuteCommand(this);
         return v_para.Value.ToString();
     }
+
+    public void FillDuLieuBaoCao(decimal ip_dc_id_lop_mon, DataSet ip_ds) {
+        CStoredProc v_cst = new CStoredProc("Pr_frm_bao_cao_so_giao_dich_theo_ngay");
+        v_cst.addDecimalInputParam("@ip_dc_id_lop", ip_dc_id_lop_mon);
+        v_cst.fillDataSetByCommand(this, ip_ds);
+    }
 }
 }

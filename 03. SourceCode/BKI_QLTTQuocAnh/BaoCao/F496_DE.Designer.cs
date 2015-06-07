@@ -32,6 +32,8 @@
             this.HO_TEN_HS = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_NGUOI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SO_TIEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MA_SO_QUYEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LAN_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -43,28 +45,32 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(838, 486);
+            this.gridControl1.Size = new System.Drawing.Size(1103, 486);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.LOAI_PHIEU,
+            this.MA_SO_QUYEN,
             this.SO_PHIEU,
             this.NGAY_THU,
             this.MA_HOC_SINH,
             this.HO_TEN_HS,
             this.TEN_NGUOI_THU,
-            this.SO_TIEN});
+            this.SO_TIEN,
+            this.LAN_THU});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.GroupCount = 1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AutoExpandAllGroups = true;
             this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsView.ShowFooter = true;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.SO_TIEN, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.LOAI_PHIEU, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // LOAI_PHIEU
             // 
@@ -96,7 +102,7 @@
             this.MA_HOC_SINH.FieldName = "MA_DOI_TUONG";
             this.MA_HOC_SINH.Name = "MA_HOC_SINH";
             this.MA_HOC_SINH.Visible = true;
-            this.MA_HOC_SINH.VisibleIndex = 3;
+            this.MA_HOC_SINH.VisibleIndex = 7;
             // 
             // HO_TEN_HS
             // 
@@ -104,7 +110,7 @@
             this.HO_TEN_HS.FieldName = "HO_TEN";
             this.HO_TEN_HS.Name = "HO_TEN_HS";
             this.HO_TEN_HS.Visible = true;
-            this.HO_TEN_HS.VisibleIndex = 4;
+            this.HO_TEN_HS.VisibleIndex = 3;
             // 
             // TEN_NGUOI_THU
             // 
@@ -119,14 +125,32 @@
             this.SO_TIEN.Caption = "Số tiền";
             this.SO_TIEN.FieldName = "SO_TIEN";
             this.SO_TIEN.Name = "SO_TIEN";
+            this.SO_TIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", "{0:n0}")});
             this.SO_TIEN.Visible = true;
-            this.SO_TIEN.VisibleIndex = 6;
+            this.SO_TIEN.VisibleIndex = 4;
+            // 
+            // MA_SO_QUYEN
+            // 
+            this.MA_SO_QUYEN.Caption = "Quyển số";
+            this.MA_SO_QUYEN.FieldName = "MA_SO_QUYEN";
+            this.MA_SO_QUYEN.Name = "MA_SO_QUYEN";
+            this.MA_SO_QUYEN.Visible = true;
+            this.MA_SO_QUYEN.VisibleIndex = 0;
+            // 
+            // LAN_THU
+            // 
+            this.LAN_THU.Caption = "Lần thứ";
+            this.LAN_THU.FieldName = "LAN_THU";
+            this.LAN_THU.Name = "LAN_THU";
+            this.LAN_THU.Visible = true;
+            this.LAN_THU.VisibleIndex = 6;
             // 
             // F496_DE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 486);
+            this.ClientSize = new System.Drawing.Size(1103, 486);
             this.Controls.Add(this.gridControl1);
             this.Name = "F496_DE";
             this.Text = "Danh sách phiếu";
@@ -147,5 +171,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn TEN_NGUOI_THU;
         private DevExpress.XtraGrid.Columns.GridColumn SO_TIEN;
         public DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Columns.GridColumn MA_SO_QUYEN;
+        private DevExpress.XtraGrid.Columns.GridColumn LAN_THU;
     }
 }

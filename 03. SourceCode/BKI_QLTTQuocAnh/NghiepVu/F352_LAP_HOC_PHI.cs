@@ -35,6 +35,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_lbl_header_left.Text = "CẬP NHẬT HỌC PHÍ";
             this.Text = "F352 - Cập nhật học phí";
             m_us_gd_phieu_thu.dcID = ip_us_v_gd_phieu_thu.dcID;
+            m_us_gd_phieu_thu.dcID_NGUOI_NHAP = ip_us_v_gd_phieu_thu.dcID_NGUOI_NHAP;
+            m_us_gd_phieu_thu.dcID_NGUOI_THU = ip_us_v_gd_phieu_thu.dcID_NGUOI_THU;
+            m_lbl_nv_thu.Text = ip_us_v_gd_phieu_thu.strTEN_NGUOI_THU;
+            m_lbl_nv_nhap.Text = ip_us_v_gd_phieu_thu.strTEN_NGUOI_THU;
+            load_ten_hs();
             this.ShowDialog();
         }
         ///Members
@@ -49,6 +54,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
         US_GD_PHIEU_THU m_us_gd_phieu_thu = new US_GD_PHIEU_THU();
         ///Private Methods
         ///
+        private void load_ten_hs() {
+            string filter = "id = " + m_sle_ma_hv.EditValue;
+            DataRow[] v_dr = m_ds_dm_hs.DM_HOC_SINH.Select(filter);
+            m_lbl_ten_hs.Text = v_dr[0]["HO"].ToString() + " " + v_dr[0]["TEN"].ToString();
+        }
         private void load_default_data_form() {
             m_dat_ngay_nhap.EditValue = DateTime.Now.Date;
             m_dat_ngay_thu.EditValue = DateTime.Now.Date;
@@ -251,8 +261,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 ip_us.dcID_GD_HOC = v_id_gd_hoc;
                 ip_us.dcSO_TIEN = CIPConvert.ToDecimal(m_txt_so_tien.Text.Trim());
 
-                ip_us.dcID_NGUOI_THU = CAppContext_201.getCurrentUserID();
-                ip_us.dcID_NGUOI_NHAP = CAppContext_201.getCurrentUserID();
+                ip_us.dcID_NGUOI_THU = m_us_gd_phieu_thu.dcID_NGUOI_NHAP;
+                ip_us.dcID_NGUOI_NHAP = m_us_gd_phieu_thu.dcID_NGUOI_THU;
                 ip_us.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.CHUA_BAN_GIAO;
 
                 ip_us.datNGAY_NHAP = m_dat_ngay_nhap.DateTime.Date;

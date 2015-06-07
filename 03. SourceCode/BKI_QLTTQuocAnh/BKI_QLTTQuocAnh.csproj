@@ -258,6 +258,12 @@
     <Compile Include="BaoCao\F496_DE.Designer.cs">
       <DependentUpon>F496_DE.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\frm_bao_cao_so_giao_dich_theo_lop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frm_bao_cao_so_giao_dich_theo_lop.Designer.cs">
+      <DependentUpon>frm_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
+    </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f210_dm_lop_mon.cs">
       <SubType>Form</SubType>
@@ -462,6 +468,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\F496_DE.resx">
       <DependentUpon>F496_DE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\frm_bao_cao_so_giao_dich_theo_lop.resx">
+      <DependentUpon>frm_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f210_dm_lop_mon.resx">
       <DependentUpon>f210_dm_lop_mon.cs</DependentUpon>

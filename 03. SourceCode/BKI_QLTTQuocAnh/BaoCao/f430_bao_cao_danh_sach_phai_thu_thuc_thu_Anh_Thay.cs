@@ -26,10 +26,8 @@ using C1.Win.C1FlexGrid;
 using DevExpress.XtraEditors;
 using BKI_QLTTQuocAnh.NghiepVu;
 
-namespace BKI_QLTTQuocAnh
-{
-    public class f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay : System.Windows.Forms.Form
-    {
+namespace BKI_QLTTQuocAnh {
+    public class f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay : System.Windows.Forms.Form {
         #region Winform auto
         internal System.Windows.Forms.ImageList ImageList;
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
@@ -65,14 +63,18 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn SO_PHIEU;
         private DevExpress.XtraGrid.Columns.GridColumn NOI_DUNG;
         private DevExpress.XtraGrid.Columns.GridColumn MA_HOC_SINH;
-        private DevExpress.XtraGrid.Columns.GridColumn HO_TEN_HS;
-        private DevExpress.XtraGrid.Columns.GridColumn TEN_NGUOI_THU;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_NSD;
         private DevExpress.XtraGrid.Columns.GridColumn SO_TIEN;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
+        private DevExpress.XtraGrid.Columns.GridColumn HO_TEN;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_LOP;
+        private DevExpress.XtraGrid.Columns.GridColumn LAN_THU;
+        private DevExpress.XtraGrid.Columns.GridColumn TRANG_THAI_PHIEU;
         private System.ComponentModel.IContainer components;
         #endregion
 
-        public f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay()
-        {
+        public f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay() {
             //
             // Required for Windows Form Designer support
             //
@@ -96,12 +98,9 @@ namespace BKI_QLTTQuocAnh
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                if (components != null)
-                {
+        protected override void Dispose(bool disposing) {
+            if(disposing) {
+                if(components != null) {
                     components.Dispose();
                 }
             }
@@ -113,8 +112,7 @@ namespace BKI_QLTTQuocAnh
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
@@ -151,9 +149,14 @@ namespace BKI_QLTTQuocAnh
             this.SO_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MA_HOC_SINH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HO_TEN_HS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TEN_NGUOI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_NSD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SO_TIEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_LOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LAN_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TRANG_THAI_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HO_TEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -161,6 +164,7 @@ namespace BKI_QLTTQuocAnh
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -325,6 +329,7 @@ namespace BKI_QLTTQuocAnh
             this.m_sle_lop.Properties.View = this.gridView1;
             this.m_sle_lop.Size = new System.Drawing.Size(247, 20);
             this.m_sle_lop.TabIndex = 15;
+            this.m_sle_lop.Visible = false;
             // 
             // gridView1
             // 
@@ -350,6 +355,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_lop_mon.Size = new System.Drawing.Size(48, 13);
             this.m_lbl_lop_mon.TabIndex = 9;
             this.m_lbl_lop_mon.Text = "Lớp môn";
+            this.m_lbl_lop_mon.Visible = false;
             // 
             // m_cbo_loai_phieu
             // 
@@ -389,7 +395,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(339, 67);
+            this.m_cmd_search.Location = new System.Drawing.Point(340, 44);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 13;
@@ -488,6 +494,8 @@ namespace BKI_QLTTQuocAnh
             this.gridControl.Location = new System.Drawing.Point(0, 104);
             this.gridControl.MainView = this.gridView2;
             this.gridControl.Name = "gridControl";
+            this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
             this.gridControl.Size = new System.Drawing.Size(1257, 382);
             this.gridControl.TabIndex = 16;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -496,23 +504,29 @@ namespace BKI_QLTTQuocAnh
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.MA_SO_QUYEN,
-            this.NGAY_THU,
+            this.ID,
             this.TEN_LOAI_PHIEU_THU,
+            this.MA_SO_QUYEN,
             this.SO_PHIEU,
+            this.NGAY_THU,
+            this.HO_TEN,
+            this.SO_TIEN,
             this.NOI_DUNG,
             this.MA_HOC_SINH,
-            this.HO_TEN_HS,
-            this.TEN_NGUOI_THU,
-            this.SO_TIEN});
+            this.TEN_NSD,
+            this.TEN_LOP,
+            this.LAN_THU,
+            this.TRANG_THAI_PHIEU});
             this.gridView2.GridControl = this.gridControl;
             this.gridView2.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", this.SO_TIEN, "")});
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
             this.gridView2.OptionsFind.AlwaysVisible = true;
             this.gridView2.OptionsFind.FindDelay = 100;
             this.gridView2.OptionsFind.FindNullPrompt = "Điền dữ liệu để tìm kiếm theo ...";
             this.gridView2.OptionsView.ShowFooter = true;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // MA_SO_QUYEN
             // 
@@ -521,8 +535,8 @@ namespace BKI_QLTTQuocAnh
             this.MA_SO_QUYEN.Name = "MA_SO_QUYEN";
             this.MA_SO_QUYEN.OptionsColumn.AllowEdit = false;
             this.MA_SO_QUYEN.Visible = true;
-            this.MA_SO_QUYEN.VisibleIndex = 0;
-            this.MA_SO_QUYEN.Width = 94;
+            this.MA_SO_QUYEN.VisibleIndex = 1;
+            this.MA_SO_QUYEN.Width = 57;
             // 
             // NGAY_THU
             // 
@@ -531,8 +545,8 @@ namespace BKI_QLTTQuocAnh
             this.NGAY_THU.Name = "NGAY_THU";
             this.NGAY_THU.OptionsColumn.AllowEdit = false;
             this.NGAY_THU.Visible = true;
-            this.NGAY_THU.VisibleIndex = 1;
-            this.NGAY_THU.Width = 161;
+            this.NGAY_THU.VisibleIndex = 3;
+            this.NGAY_THU.Width = 107;
             // 
             // TEN_LOAI_PHIEU_THU
             // 
@@ -541,8 +555,8 @@ namespace BKI_QLTTQuocAnh
             this.TEN_LOAI_PHIEU_THU.Name = "TEN_LOAI_PHIEU_THU";
             this.TEN_LOAI_PHIEU_THU.OptionsColumn.AllowEdit = false;
             this.TEN_LOAI_PHIEU_THU.Visible = true;
-            this.TEN_LOAI_PHIEU_THU.VisibleIndex = 2;
-            this.TEN_LOAI_PHIEU_THU.Width = 121;
+            this.TEN_LOAI_PHIEU_THU.VisibleIndex = 0;
+            this.TEN_LOAI_PHIEU_THU.Width = 122;
             // 
             // SO_PHIEU
             // 
@@ -551,8 +565,8 @@ namespace BKI_QLTTQuocAnh
             this.SO_PHIEU.Name = "SO_PHIEU";
             this.SO_PHIEU.OptionsColumn.AllowEdit = false;
             this.SO_PHIEU.Visible = true;
-            this.SO_PHIEU.VisibleIndex = 3;
-            this.SO_PHIEU.Width = 94;
+            this.SO_PHIEU.VisibleIndex = 2;
+            this.SO_PHIEU.Width = 74;
             // 
             // NOI_DUNG
             // 
@@ -561,8 +575,8 @@ namespace BKI_QLTTQuocAnh
             this.NOI_DUNG.Name = "NOI_DUNG";
             this.NOI_DUNG.OptionsColumn.AllowEdit = false;
             this.NOI_DUNG.Visible = true;
-            this.NOI_DUNG.VisibleIndex = 4;
-            this.NOI_DUNG.Width = 200;
+            this.NOI_DUNG.VisibleIndex = 6;
+            this.NOI_DUNG.Width = 204;
             // 
             // MA_HOC_SINH
             // 
@@ -571,38 +585,81 @@ namespace BKI_QLTTQuocAnh
             this.MA_HOC_SINH.Name = "MA_HOC_SINH";
             this.MA_HOC_SINH.OptionsColumn.AllowEdit = false;
             this.MA_HOC_SINH.Visible = true;
-            this.MA_HOC_SINH.VisibleIndex = 5;
-            this.MA_HOC_SINH.Width = 91;
+            this.MA_HOC_SINH.VisibleIndex = 7;
+            this.MA_HOC_SINH.Width = 78;
             // 
-            // HO_TEN_HS
+            // TEN_NSD
             // 
-            this.HO_TEN_HS.Caption = "Họ tên học viên";
-            this.HO_TEN_HS.FieldName = "HO_TEN_HS";
-            this.HO_TEN_HS.Name = "HO_TEN_HS";
-            this.HO_TEN_HS.OptionsColumn.AllowEdit = false;
-            this.HO_TEN_HS.Visible = true;
-            this.HO_TEN_HS.VisibleIndex = 6;
-            this.HO_TEN_HS.Width = 180;
-            // 
-            // TEN_NGUOI_THU
-            // 
-            this.TEN_NGUOI_THU.Caption = "Người thu";
-            this.TEN_NGUOI_THU.FieldName = "TEN_NGUOI_THU";
-            this.TEN_NGUOI_THU.Name = "TEN_NGUOI_THU";
-            this.TEN_NGUOI_THU.OptionsColumn.AllowEdit = false;
-            this.TEN_NGUOI_THU.Visible = true;
-            this.TEN_NGUOI_THU.VisibleIndex = 7;
-            this.TEN_NGUOI_THU.Width = 187;
+            this.TEN_NSD.Caption = "Người tạo phiếu";
+            this.TEN_NSD.FieldName = "TEN_NSD";
+            this.TEN_NSD.Name = "TEN_NSD";
+            this.TEN_NSD.OptionsColumn.AllowEdit = false;
+            this.TEN_NSD.Visible = true;
+            this.TEN_NSD.VisibleIndex = 8;
+            this.TEN_NSD.Width = 122;
             // 
             // SO_TIEN
             // 
             this.SO_TIEN.Caption = "Số tiền";
+            this.SO_TIEN.ColumnEdit = this.repositoryItemTextEdit1;
             this.SO_TIEN.FieldName = "SO_TIEN";
             this.SO_TIEN.Name = "SO_TIEN";
             this.SO_TIEN.OptionsColumn.AllowEdit = false;
+            this.SO_TIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", "{0:n0}")});
             this.SO_TIEN.Visible = true;
-            this.SO_TIEN.VisibleIndex = 8;
-            this.SO_TIEN.Width = 111;
+            this.SO_TIEN.VisibleIndex = 5;
+            this.SO_TIEN.Width = 109;
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Mask.EditMask = "n0";
+            this.repositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat = true;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // ID
+            // 
+            this.ID.Caption = "gridColumn1";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
+            // 
+            // TEN_LOP
+            // 
+            this.TEN_LOP.Caption = "Thuộc lớp";
+            this.TEN_LOP.FieldName = "TEN_LOP";
+            this.TEN_LOP.Name = "TEN_LOP";
+            this.TEN_LOP.Visible = true;
+            this.TEN_LOP.VisibleIndex = 9;
+            this.TEN_LOP.Width = 64;
+            // 
+            // LAN_THU
+            // 
+            this.LAN_THU.Caption = "Lần thứ";
+            this.LAN_THU.FieldName = "LAN_THU";
+            this.LAN_THU.Name = "LAN_THU";
+            this.LAN_THU.Visible = true;
+            this.LAN_THU.VisibleIndex = 10;
+            this.LAN_THU.Width = 55;
+            // 
+            // TRANG_THAI_PHIEU
+            // 
+            this.TRANG_THAI_PHIEU.Caption = "Trạng thái";
+            this.TRANG_THAI_PHIEU.FieldName = "TRANG_THAI_PHIEU";
+            this.TRANG_THAI_PHIEU.Name = "TRANG_THAI_PHIEU";
+            this.TRANG_THAI_PHIEU.Visible = true;
+            this.TRANG_THAI_PHIEU.VisibleIndex = 11;
+            this.TRANG_THAI_PHIEU.Width = 68;
+            // 
+            // HO_TEN
+            // 
+            this.HO_TEN.Caption = "Họ tên";
+            this.HO_TEN.FieldName = "HO_TEN";
+            this.HO_TEN.Name = "HO_TEN";
+            this.HO_TEN.Visible = true;
+            this.HO_TEN.VisibleIndex = 4;
+            this.HO_TEN.Width = 179;
             // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay
             // 
@@ -623,19 +680,18 @@ namespace BKI_QLTTQuocAnh
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             this.ResumeLayout(false);
 
         }
         #endregion
 
         #region Public Interface
-        public void display()
-        {
+        public void display() {
             this.ShowDialog();
         }
 
-        public void display_from_f410(decimal ip_dc_id_lop)
-        {
+        public void display_from_f410(decimal ip_dc_id_lop) {
             //m_dat_tu_ngay.Value = ip_dat_tu_ngay.Date;
             //m_dat_den_ngay.Value = ip_dat_den_ngay.Date;
             m_cbo_lop_mon.SelectedValue = ip_dc_id_lop;
@@ -643,8 +699,7 @@ namespace BKI_QLTTQuocAnh
             this.ShowDialog();
         }
 
-        public void display_ds_phieu_phai_thu(decimal ip_dc_id_lop)
-        {
+        public void display_ds_phieu_phai_thu(decimal ip_dc_id_lop) {
             m_trang_thai_hien_thi = 1;
             m_lbl_header.Text = "DANH SÁCH PHIẾU PHẢI THU THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu phải thu theo nhân viên";
@@ -664,8 +719,7 @@ namespace BKI_QLTTQuocAnh
             this.ShowDialog();
         }
 
-        public void display_ds_phieu_thuc_thu()
-        {
+        public void display_ds_phieu_thuc_thu() {
             m_trang_thai_hien_thi = 1;
             m_lbl_header.Text = "DANH SÁCH PHIẾU THỰC THU THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu thực thu theo nhân viên";
@@ -684,8 +738,7 @@ namespace BKI_QLTTQuocAnh
             this.ShowDialog();
         }
 
-        public void display_ds_phieu_giam_tru()
-        {
+        public void display_ds_phieu_giam_tru() {
             m_trang_thai_hien_thi = 1;
             m_lbl_header.Text = "DANH SÁCH PHIẾU GIẢM TRỪ THEO NHÂN VIÊN";
             this.Text = "F430 - Danh sách phiếu giảm trừ theo nhân viên";
@@ -703,8 +756,7 @@ namespace BKI_QLTTQuocAnh
         #endregion
 
         #region Data Structure
-        private enum e_col_Number
-        {
+        private enum e_col_Number {
             HO_TEN_PH = 8
 ,
             SO_PHIEU = 4
@@ -742,8 +794,7 @@ namespace BKI_QLTTQuocAnh
         #endregion
 
         #region Private Methods
-        private void format_controls()
-        {
+        private void format_controls() {
             CControlFormat.setFormStyle(this, new CAppContext_201());
             design_form();
             CControlFormat.setC1FlexFormat(m_fg);
@@ -754,20 +805,17 @@ namespace BKI_QLTTQuocAnh
             this.KeyPreview = true;
         }
 
-        private void design_form()
-        {
+        private void design_form() {
             this.m_lbl_header.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
         }
 
-        private void set_initial_form_load()
-        {
+        private void set_initial_form_load() {
             m_obj_trans = get_trans_object(m_fg);
             load_data_to_sle_lop();
             load_data_2_grid();
         }
 
-        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg)
-        {
+        private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg) {
             Hashtable v_htb = new Hashtable();
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.HO_TEN_PH, e_col_Number.HO_TEN_PH);
             v_htb.Add(V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.SO_PHIEU, e_col_Number.SO_PHIEU);
@@ -786,15 +834,13 @@ namespace BKI_QLTTQuocAnh
             return v_obj_trans;
         }
 
-        private void wrap_text_cell()
-        {
+        private void wrap_text_cell() {
             m_fg.Styles[CellStyleEnum.Normal].WordWrap = true;
             m_fg.AllowResizing = AllowResizingEnum.Rows;
             m_fg.AutoSizeRows();
         }
 
-        private void create_tree_2grid()
-        {
+        private void create_tree_2grid() {
             m_fg.Subtotal(AggregateEnum.Sum
                 , 0
                 , -1
@@ -819,8 +865,7 @@ namespace BKI_QLTTQuocAnh
             m_fg.Redraw = true;
         }
 
-        private void load_data_2_ds_dm_lop()
-        {
+        private void load_data_2_ds_dm_lop() {
             US_DM_LOP_MON v_us = new US_DM_LOP_MON();
             string v_str_filter = "where TRANG_THAI_LOP_MON = " + CONST_TRANG_THAI_LOP_MON.DANG_HOAT_DONG;
             m_ds_dm_lop_mon.Clear();
@@ -828,8 +873,7 @@ namespace BKI_QLTTQuocAnh
             v_us.FillDataset(m_ds_dm_lop_mon, v_str_filter);
         }
 
-        private void load_data_to_sle_lop()
-        {
+        private void load_data_to_sle_lop() {
             load_data_2_ds_dm_lop();
 
             //Chinh hien thi nguoi dung
@@ -860,52 +904,20 @@ namespace BKI_QLTTQuocAnh
             m_sle_lop.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
         }
 
-        private void load_data_2_grid()
-        {
-            DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2 v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2();
-            US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2 v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2();
-            //DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-            //US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-            v_ds.Clear();
-            v_ds.EnforceConstraints = false;
+        private void load_data_2_grid() {
+            //DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2 v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2();
+            //US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2 v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2();
+            DataSet v_ds = new DataSet();
+            v_ds.Tables.Add();
+            US_GD_PHIEU_THU v_us = new US_GD_PHIEU_THU();
 
-            //m_us.FillDataset_by_condition(
-            //         v_ds
-            //         , -1
-            //         , CIPConvert.ToDecimal(m_cbo_lop_mon.SelectedValue)
-            //         , m_dat_tu_ngay.Value.Date
-            //         , m_dat_den_ngay.Value.Date
-            //         , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
-            //         , CIPConvert.ToDecimal(m_cbo_loai_phieu.SelectedValue)
-            //         , m_txt_tim_kien.Text.Trim());
-            //CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
-            //m_fg.Redraw = true;
-            //create_tree_2grid();
-            //wrap_text_cell();
+            v_us.FillPhieuTheoThoiGian(v_ds, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
+            gridControl.DataSource = gridControl.DataSource = v_ds.Tables[0];
 
-            //CGridUtils.MakeSoTT(0, m_fg);
-            if (m_sle_lop.EditValue == null || m_sle_lop.Text == "")
-            {
-                string filter = "Where ngay_thu >= '"
-                   + m_dat_tu_ngay.Value.Year + "-" + m_dat_tu_ngay.Value.Month + "-" + m_dat_tu_ngay.Value.Day +
-                   "' and ngay_thu <= '" + m_dat_den_ngay.Value.Year + "-" + m_dat_den_ngay.Value.Month + "-" + m_dat_den_ngay.Value.Day + "'";
-                v_us.FillDataset(v_ds, filter);
-                gridControl.DataSource = v_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2;
-            }
-            else
-            {
-                string filter = "Where id_lop_mon = " + CIPConvert.ToDecimal(m_sle_lop.EditValue) + " and ngay_thu >= '" 
-                    + m_dat_tu_ngay.Value.Year + "-" + m_dat_tu_ngay.Value.Month+"-"+m_dat_tu_ngay.Value.Day+
-                    "' and ngay_thu <= '" + m_dat_den_ngay.Value.Year + "-" + m_dat_den_ngay.Value.Month + "-" + m_dat_den_ngay.Value.Day + "'";
-                v_us.FillDataset(v_ds, filter);
-                gridControl.DataSource = v_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2;
-            }
-            
         }
 
         private void grid2us_object(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
-            , int i_grid_row)
-        {
+            , int i_grid_row) {
             DataRow v_dr;
             v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             m_obj_trans.GridRow2DataRow(i_grid_row, v_dr);
@@ -913,95 +925,80 @@ namespace BKI_QLTTQuocAnh
         }
 
         private void us_object2grid(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
-            , int i_grid_row)
-        {
+            , int i_grid_row) {
             DataRow v_dr = (DataRow)m_fg.Rows[i_grid_row].UserData;
             i_us.Me2DataRow(v_dr);
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
 
-        private void insert_v_rpt_bao_cao_danh_sach_phieu_thu()
-        {
+        private void insert_v_rpt_bao_cao_danh_sach_phieu_thu() {
             //	F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE v_fDE = new  F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE();								
             //	v_fDE.display();
             load_data_2_grid();
         }
 
-        private void update_v_rpt_bao_cao_danh_sach_phieu_thu()
-        {
-            US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-            grid2us_object(v_us, m_fg.Row);
-
-            if (!check_ban_giao_is_da_thu_or_admin(v_us))
-            {
+        private void update_v_rpt_bao_cao_danh_sach_phieu_thu() {
+            //US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+            //if(!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            //if(!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+            //grid2us_object(v_us, m_fg.Row);
+            decimal v_id_gd_phieu_thu = CIPConvert.ToDecimal(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "ID"));
+            if(!check_ban_giao_is_da_thu_or_admin(v_id_gd_phieu_thu)) {
                 XtraMessageBox.Show("Phiếu này đã bàn giao, không được quyền sửa!", CONST_LOAI_THONG_BAO.LOI_NGUOI_DUNG, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            update_phieu();
+            update_phieu(v_id_gd_phieu_thu);
             load_data_2_grid();
         }
 
-        private void update_phieu()
-        {
-            US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-            US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID); //BaseMessages.MsgBox_Error("Mật khẩu hoặc tài khoản chưa chính xác");
-            if (v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU)
-            {
+        private void update_phieu(decimal v_id_gd_phieu_thu) {
+            //US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+            US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_id_gd_phieu_thu); //BaseMessages.MsgBox_Error("Mật khẩu hoặc tài khoản chưa chính xác");
+            if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU) {
                 F352_LAP_HOC_PHI v_frm = new F352_LAP_HOC_PHI();
                 v_frm.display_for_update(v_us_gd_pt);
             }
-            else if (v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU)
-            {
+            else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU) {
                 F354_LAP_GIAM_TRU v_frm = new F354_LAP_GIAM_TRU();
                 v_frm.display_for_update(v_us_gd_pt);
             }
-            else if (v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU)
-            {
+            else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU) {
                 F356_LAP_THUC_THU v_frm = new F356_LAP_THUC_THU();
                 v_frm.display_for_update(v_us_gd_pt);
             }
         }
 
-        private void delete_v_rpt_bao_cao_danh_sach_phieu_thu()
-        {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+        private void delete_v_rpt_bao_cao_danh_sach_phieu_thu() {
+            if(!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if(!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             DialogResult v_dlgr = XtraMessageBox.Show("Bạn có chắc chắn muốn xóa phiếu thu này", CONST_LOAI_THONG_BAO.CANH_BAO, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-            if (v_dlgr == DialogResult.No || v_dlgr == DialogResult.Cancel)
-            {
+            if(v_dlgr == DialogResult.No || v_dlgr == DialogResult.Cancel) {
                 return;
             }
-            else
-            {
+            else {
                 delete_phieu();
 
             }
         }
 
-        private void delete_phieu()
-        {
+        private void delete_phieu() {
             US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-            grid2us_object(v_us, m_fg.Row);
 
-            if (!check_ban_giao_is_da_thu_or_admin(v_us))
-            {
+            decimal v_id_gd_phieu_thu = CIPConvert.ToDecimal(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "ID"));
+            if(!check_ban_giao_is_da_thu_or_admin(v_id_gd_phieu_thu)) {
                 XtraMessageBox.Show("Phiếu này đã bàn giao, không được quyền xóa!", CONST_LOAI_THONG_BAO.LOI_NGUOI_DUNG, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            try
-            {
+            try {
                 v_us.BeginTransaction();
-                v_us.DeletePhieuThuVaChiTiet(v_us.dcID);
+                v_us.DeletePhieuThuVaChiTiet(v_id_gd_phieu_thu);
                 v_us.CommitTransaction();
                 m_fg.Rows.Remove(m_fg.Row);
                 XtraMessageBox.Show(CONST_NOI_DUNG_THONG_BAO.THONG_BAO_XOA_THANH_CONG);
                 load_data_2_grid();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 v_us.Rollback();
                 CDBExceptionHandler v_objErrHandler = new CDBExceptionHandler(v_e,
                     new CDBClientDBExceptionInterpret());
@@ -1009,24 +1006,20 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
-        private bool check_ban_giao_is_da_thu_or_admin(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU ip_us_rpt)
-        {
-            if (US_V_HT_NGUOI_SU_DUNG.isInAdminGroup(CAppContext_201.getCurrentUserID()))
-            {
+        private bool check_ban_giao_is_da_thu_or_admin(decimal v_id_phieu_thu) {
+            if(US_V_HT_NGUOI_SU_DUNG.isInAdminGroup(CAppContext_201.getCurrentUserID())) {
                 return true;
             }
-            US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(ip_us_rpt.dcID);
-            if (v_us_gd_pt.dcID_TRANG_THAI == CONST_ID_TRANG_THAI_BAN_GIAO.DA_BAN_GIAO)
-            {
+            US_GD_PHIEU_THU v_us_gd_pt = new US_GD_PHIEU_THU(v_id_phieu_thu);
+            if(v_us_gd_pt.dcID_TRANG_THAI == CONST_ID_TRANG_THAI_BAN_GIAO.DA_BAN_GIAO) {
                 return false;
             }
             return true;
         }
 
-        private void view_v_rpt_bao_cao_danh_sach_phieu_thu()
-        {
-            if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-            if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+        private void view_v_rpt_bao_cao_danh_sach_phieu_thu() {
+            if(!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+            if(!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
             grid2us_object(m_us, m_fg.Row);
             //	F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE v_fDE = new F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_DE();			
             //	v_fDE.display(m_us);
@@ -1035,8 +1028,7 @@ namespace BKI_QLTTQuocAnh
         #endregion
 
         #region Event Hanlder
-        private void set_define_events()
-        {
+        private void set_define_events() {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
@@ -1052,207 +1044,161 @@ namespace BKI_QLTTQuocAnh
             m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
         }
 
-        private void F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_Load(object sender, System.EventArgs e)
-        {
-            try
-            {
+        private void F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_Load(object sender, System.EventArgs e) {
+            try {
                 set_initial_form_load();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
 
         }
 
-        void m_dat_tu_ngay_ValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        void m_dat_tu_ngay_ValueChanged(object sender, EventArgs e) {
+            try {
                 m_dat_den_ngay.Focus();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void m_dat_den_ngay_ValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        void m_dat_den_ngay_ValueChanged(object sender, EventArgs e) {
+            try {
                 m_cbo_nhan_vien_thu.Focus();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void m_cbo_nhan_vien_thu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        void m_cbo_nhan_vien_thu_SelectedIndexChanged(object sender, EventArgs e) {
+            try {
                 m_cbo_loai_phieu.Focus();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void m_cbo_loai_phieu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        void m_cbo_loai_phieu_SelectedIndexChanged(object sender, EventArgs e) {
+            try {
                 m_cbo_lop_mon.Focus();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
+        void m_cbo_lop_mon_SelectedIndexChanged(object sender, EventArgs e) {
+            try {
                 m_txt_tim_kien.Focus();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void m_fg_DoubleClick(object sender, EventArgs e)
-        {
-            try
-            {
-                US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-                if (!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
-                if (!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
-                grid2us_object(v_us, m_fg.Row);
+        void m_fg_DoubleClick(object sender, EventArgs e) {
+            try {
+                //US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+                //if(!CGridUtils.IsThere_Any_NonFixed_Row(m_fg)) return;
+                //if(!CGridUtils.isValid_NonFixed_RowIndex(m_fg, m_fg.Row)) return;
+                //grid2us_object(v_us, m_fg.Row);
+                decimal v_id_phieu_thu = CIPConvert.ToDecimal(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "ID"));
+                US_GD_PHIEU_THU v_us_gd_phieu_thu = new US_GD_PHIEU_THU(v_id_phieu_thu);
 
-                if (!check_ban_giao_is_da_thu_or_admin(v_us))
-                {
+                if(!check_ban_giao_is_da_thu_or_admin(v_id_phieu_thu)) {
                     XtraMessageBox.Show("Phiếu này đã bàn giao, không được quyền sửa!", "Lỗi người dùng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_us.dcID);
-                if (v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU)
-                {
+                US_V_GD_PHIEU_THU v_us_gd_pt = new US_V_GD_PHIEU_THU(v_id_phieu_thu);
+                if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU) {
                     F352_LAP_HOC_PHI v_frm = new F352_LAP_HOC_PHI();
                     v_frm.display_for_update(v_us_gd_pt);
                 }
-                else if (v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU)
-                {
+                else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU) {
                     F354_LAP_GIAM_TRU v_frm = new F354_LAP_GIAM_TRU();
                     v_frm.display_for_update(v_us_gd_pt);
                 }
-                else if (v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU)
-                {
+                else if(v_us_gd_pt.dcID_LOAI_PHIEU_THU == CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU) {
                     F356_LAP_THUC_THU v_frm = new F356_LAP_THUC_THU();
                     v_frm.display_for_update(v_us_gd_pt);
                 }
                 load_data_2_grid();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void m_cmd_search_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        void m_cmd_search_Click(object sender, EventArgs e) {
+            try {
                 load_data_2_grid();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        void f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                if ((e.KeyCode == Keys.Escape) && (m_trang_thai_hien_thi == 1))
-                {
+        void f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_KeyDown(object sender, KeyEventArgs e) {
+            try {
+                if((e.KeyCode == Keys.Escape) && (m_trang_thai_hien_thi == 1)) {
                     this.Close();
                 }
                 else
-                    if (e.KeyCode == Keys.Enter)
-                    {
+                    if(e.KeyCode == Keys.Enter) {
                         load_data_2_grid();
                     }
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
 
         }
 
-        private void m_cmd_exit_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_exit_Click(object sender, EventArgs e) {
+            try {
                 this.Close();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_insert_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_insert_Click(object sender, EventArgs e) {
+            try {
                 insert_v_rpt_bao_cao_danh_sach_phieu_thu();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_update_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_update_Click(object sender, EventArgs e) {
+            try {
                 update_v_rpt_bao_cao_danh_sach_phieu_thu();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_delete_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_delete_Click(object sender, EventArgs e) {
+            try {
                 delete_v_rpt_bao_cao_danh_sach_phieu_thu();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_view_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void m_cmd_view_Click(object sender, EventArgs e) {
+            try {
                 view_v_rpt_bao_cao_danh_sach_phieu_thu();
             }
-            catch (Exception v_e)
-            {
+            catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }

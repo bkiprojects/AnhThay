@@ -341,5 +341,19 @@ namespace BKI_QLTTQuocAnh.US
             v_csp.addDecimalInputParam("@ip_dc_id_loai_phieu", CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU);
             v_csp.ExecuteCommand(this);
         }
+
+        public void FillDanhSachPhieu(DataSet v_ds, decimal ip_dc_id_lop_mon, decimal ip_dc_id_hoc_sinh) {
+            CStoredProc v_csp = new CStoredProc("Pr_hien_thi_danh_sach_phieu");
+            v_csp.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+            v_csp.addDecimalInputParam("@ip_dc_id_hoc_sinh", ip_dc_id_hoc_sinh);
+            v_csp.fillDataSetByCommand(this, v_ds);
+        }
+
+        public void FillPhieuTheoThoiGian(DataSet v_ds, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay) {
+            CStoredProc v_csp = new CStoredProc("Pr_danh_sach_phieu");
+            v_csp.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
+            v_csp.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
+            v_csp.fillDataSetByCommand(this, v_ds);
+        }
     }
 }
