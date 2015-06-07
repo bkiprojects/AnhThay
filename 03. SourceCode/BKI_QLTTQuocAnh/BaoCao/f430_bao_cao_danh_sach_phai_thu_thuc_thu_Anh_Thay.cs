@@ -71,6 +71,8 @@ namespace BKI_QLTTQuocAnh {
         private DevExpress.XtraGrid.Columns.GridColumn TEN_LOP;
         private DevExpress.XtraGrid.Columns.GridColumn LAN_THU;
         private DevExpress.XtraGrid.Columns.GridColumn TRANG_THAI_PHIEU;
+        internal ImageList imageList1;
+        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         private System.ComponentModel.IContainer components;
         #endregion
 
@@ -157,6 +159,8 @@ namespace BKI_QLTTQuocAnh {
             this.TEN_LOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LAN_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TRANG_THAI_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -286,15 +290,16 @@ namespace BKI_QLTTQuocAnh {
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 104);
+            this.m_fg.Location = new System.Drawing.Point(0, 131);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1257, 382);
+            this.m_fg.Size = new System.Drawing.Size(1257, 355);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             this.m_fg.Visible = false;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_cmd_xuat_excel);
             this.panel2.Controls.Add(this.m_sle_lop);
             this.panel2.Controls.Add(this.m_cbo_lop_mon);
             this.panel2.Controls.Add(this.m_lbl_lop_mon);
@@ -314,7 +319,7 @@ namespace BKI_QLTTQuocAnh {
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1257, 104);
+            this.panel2.Size = new System.Drawing.Size(1257, 131);
             this.panel2.TabIndex = 0;
             // 
             // m_sle_lop
@@ -491,12 +496,12 @@ namespace BKI_QLTTQuocAnh {
             // 
             this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 104);
+            this.gridControl.Location = new System.Drawing.Point(0, 131);
             this.gridControl.MainView = this.gridView2;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl.Size = new System.Drawing.Size(1257, 382);
+            this.gridControl.Size = new System.Drawing.Size(1257, 355);
             this.gridControl.TabIndex = 16;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -659,6 +664,48 @@ namespace BKI_QLTTQuocAnh {
             this.TRANG_THAI_PHIEU.Visible = true;
             this.TRANG_THAI_PHIEU.VisibleIndex = 11;
             this.TRANG_THAI_PHIEU.Width = 68;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "");
+            this.imageList1.Images.SetKeyName(1, "");
+            this.imageList1.Images.SetKeyName(2, "");
+            this.imageList1.Images.SetKeyName(3, "");
+            this.imageList1.Images.SetKeyName(4, "");
+            this.imageList1.Images.SetKeyName(5, "");
+            this.imageList1.Images.SetKeyName(6, "");
+            this.imageList1.Images.SetKeyName(7, "");
+            this.imageList1.Images.SetKeyName(8, "");
+            this.imageList1.Images.SetKeyName(9, "");
+            this.imageList1.Images.SetKeyName(10, "");
+            this.imageList1.Images.SetKeyName(11, "");
+            this.imageList1.Images.SetKeyName(12, "");
+            this.imageList1.Images.SetKeyName(13, "");
+            this.imageList1.Images.SetKeyName(14, "");
+            this.imageList1.Images.SetKeyName(15, "");
+            this.imageList1.Images.SetKeyName(16, "");
+            this.imageList1.Images.SetKeyName(17, "");
+            this.imageList1.Images.SetKeyName(18, "");
+            this.imageList1.Images.SetKeyName(19, "");
+            this.imageList1.Images.SetKeyName(20, "");
+            this.imageList1.Images.SetKeyName(21, "");
+            // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.imageList1;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(7, 99);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xuat_excel.TabIndex = 17;
+            this.m_cmd_xuat_excel.Text = "Xuất Excel";
+            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
             // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay
             // 
@@ -1202,6 +1249,16 @@ namespace BKI_QLTTQuocAnh {
             }
         }
         #endregion
+
+        private void m_cmd_xuat_excel_Click(object sender, EventArgs e) {
+            try {
+
+            }
+            catch(Exception v_e) {
+                
+                throw v_e;
+            }
+        }
     }
 }
 
