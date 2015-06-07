@@ -356,8 +356,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 ip_us.dcID_GD_HOC = v_id_gd_hoc;
                 ip_us.dcSO_TIEN = CIPConvert.ToDecimal(m_txt_so_tien.Text.Trim());
 
-                ip_us.dcID_NGUOI_THU = m_us_gd_phieu_thu.dcID_NGUOI_NHAP;
-                ip_us.dcID_NGUOI_NHAP = m_us_gd_phieu_thu.dcID_NGUOI_THU;
+                if(m_e_form_mode == DataEntryFormMode.UpdateDataState) {
+                    ip_us.dcID_NGUOI_THU = m_us_gd_phieu_thu.dcID_NGUOI_NHAP;
+                    ip_us.dcID_NGUOI_NHAP = m_us_gd_phieu_thu.dcID_NGUOI_THU;
+                }
+                else if(m_e_form_mode == DataEntryFormMode.InsertDataState) {
+                    ip_us.dcID_NGUOI_THU = CAppContext_201.getCurrentUserID();
+                    ip_us.dcID_NGUOI_NHAP = CAppContext_201.getCurrentUserID();
+                }
                 ip_us.dcID_TRANG_THAI = CONST_ID_TRANG_THAI_BAN_GIAO.CHUA_BAN_GIAO;
 
                 ip_us.datNGAY_NHAP = m_dat_ngay_nhap.DateTime.Date;

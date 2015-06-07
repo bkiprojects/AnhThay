@@ -62,7 +62,7 @@ namespace BKI_QLTTQuocAnh {
         private DevExpress.XtraGrid.Columns.GridColumn TEN_LOAI_PHIEU_THU;
         private DevExpress.XtraGrid.Columns.GridColumn SO_PHIEU;
         private DevExpress.XtraGrid.Columns.GridColumn NOI_DUNG;
-        private DevExpress.XtraGrid.Columns.GridColumn MA_HOC_SINH;
+        private DevExpress.XtraGrid.Columns.GridColumn MA_DOI_TUONG;
         private DevExpress.XtraGrid.Columns.GridColumn TEN_NSD;
         private DevExpress.XtraGrid.Columns.GridColumn SO_TIEN;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
@@ -143,20 +143,20 @@ namespace BKI_QLTTQuocAnh {
             this.m_dat_den_ngay = new System.Windows.Forms.DateTimePicker();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MA_SO_QUYEN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NGAY_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_LOAI_PHIEU_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MA_SO_QUYEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SO_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MA_HOC_SINH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TEN_NSD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NGAY_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HO_TEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SO_TIEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MA_DOI_TUONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_NSD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_LOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LAN_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TRANG_THAI_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HO_TEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -512,7 +512,7 @@ namespace BKI_QLTTQuocAnh {
             this.HO_TEN,
             this.SO_TIEN,
             this.NOI_DUNG,
-            this.MA_HOC_SINH,
+            this.MA_DOI_TUONG,
             this.TEN_NSD,
             this.TEN_LOP,
             this.LAN_THU,
@@ -526,27 +526,12 @@ namespace BKI_QLTTQuocAnh {
             this.gridView2.OptionsFind.FindDelay = 100;
             this.gridView2.OptionsFind.FindNullPrompt = "Điền dữ liệu để tìm kiếm theo ...";
             this.gridView2.OptionsView.ShowFooter = true;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
-            // MA_SO_QUYEN
+            // ID
             // 
-            this.MA_SO_QUYEN.Caption = "Quyển số";
-            this.MA_SO_QUYEN.FieldName = "MA_SO_QUYEN";
-            this.MA_SO_QUYEN.Name = "MA_SO_QUYEN";
-            this.MA_SO_QUYEN.OptionsColumn.AllowEdit = false;
-            this.MA_SO_QUYEN.Visible = true;
-            this.MA_SO_QUYEN.VisibleIndex = 1;
-            this.MA_SO_QUYEN.Width = 57;
-            // 
-            // NGAY_THU
-            // 
-            this.NGAY_THU.Caption = "Ngày thu";
-            this.NGAY_THU.FieldName = "NGAY_THU";
-            this.NGAY_THU.Name = "NGAY_THU";
-            this.NGAY_THU.OptionsColumn.AllowEdit = false;
-            this.NGAY_THU.Visible = true;
-            this.NGAY_THU.VisibleIndex = 3;
-            this.NGAY_THU.Width = 107;
+            this.ID.Caption = "gridColumn1";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
             // 
             // TEN_LOAI_PHIEU_THU
             // 
@@ -558,6 +543,16 @@ namespace BKI_QLTTQuocAnh {
             this.TEN_LOAI_PHIEU_THU.VisibleIndex = 0;
             this.TEN_LOAI_PHIEU_THU.Width = 122;
             // 
+            // MA_SO_QUYEN
+            // 
+            this.MA_SO_QUYEN.Caption = "Quyển số";
+            this.MA_SO_QUYEN.FieldName = "MA_SO_QUYEN";
+            this.MA_SO_QUYEN.Name = "MA_SO_QUYEN";
+            this.MA_SO_QUYEN.OptionsColumn.AllowEdit = false;
+            this.MA_SO_QUYEN.Visible = true;
+            this.MA_SO_QUYEN.VisibleIndex = 1;
+            this.MA_SO_QUYEN.Width = 62;
+            // 
             // SO_PHIEU
             // 
             this.SO_PHIEU.Caption = "Số phiếu";
@@ -568,35 +563,24 @@ namespace BKI_QLTTQuocAnh {
             this.SO_PHIEU.VisibleIndex = 2;
             this.SO_PHIEU.Width = 74;
             // 
-            // NOI_DUNG
+            // NGAY_THU
             // 
-            this.NOI_DUNG.Caption = "Nội dung";
-            this.NOI_DUNG.FieldName = "NOI_DUNG";
-            this.NOI_DUNG.Name = "NOI_DUNG";
-            this.NOI_DUNG.OptionsColumn.AllowEdit = false;
-            this.NOI_DUNG.Visible = true;
-            this.NOI_DUNG.VisibleIndex = 6;
-            this.NOI_DUNG.Width = 204;
+            this.NGAY_THU.Caption = "Ngày thu";
+            this.NGAY_THU.FieldName = "NGAY_THU";
+            this.NGAY_THU.Name = "NGAY_THU";
+            this.NGAY_THU.OptionsColumn.AllowEdit = false;
+            this.NGAY_THU.Visible = true;
+            this.NGAY_THU.VisibleIndex = 3;
+            this.NGAY_THU.Width = 107;
             // 
-            // MA_HOC_SINH
+            // HO_TEN
             // 
-            this.MA_HOC_SINH.Caption = "Mã học viên";
-            this.MA_HOC_SINH.FieldName = "MA_HOC_SINH";
-            this.MA_HOC_SINH.Name = "MA_HOC_SINH";
-            this.MA_HOC_SINH.OptionsColumn.AllowEdit = false;
-            this.MA_HOC_SINH.Visible = true;
-            this.MA_HOC_SINH.VisibleIndex = 7;
-            this.MA_HOC_SINH.Width = 78;
-            // 
-            // TEN_NSD
-            // 
-            this.TEN_NSD.Caption = "Người tạo phiếu";
-            this.TEN_NSD.FieldName = "TEN_NSD";
-            this.TEN_NSD.Name = "TEN_NSD";
-            this.TEN_NSD.OptionsColumn.AllowEdit = false;
-            this.TEN_NSD.Visible = true;
-            this.TEN_NSD.VisibleIndex = 8;
-            this.TEN_NSD.Width = 122;
+            this.HO_TEN.Caption = "Họ tên";
+            this.HO_TEN.FieldName = "HO_TEN";
+            this.HO_TEN.Name = "HO_TEN";
+            this.HO_TEN.Visible = true;
+            this.HO_TEN.VisibleIndex = 4;
+            this.HO_TEN.Width = 179;
             // 
             // SO_TIEN
             // 
@@ -619,11 +603,35 @@ namespace BKI_QLTTQuocAnh {
             this.repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat = true;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
-            // ID
+            // NOI_DUNG
             // 
-            this.ID.Caption = "gridColumn1";
-            this.ID.FieldName = "ID";
-            this.ID.Name = "ID";
+            this.NOI_DUNG.Caption = "Nội dung";
+            this.NOI_DUNG.FieldName = "NOI_DUNG";
+            this.NOI_DUNG.Name = "NOI_DUNG";
+            this.NOI_DUNG.OptionsColumn.AllowEdit = false;
+            this.NOI_DUNG.Visible = true;
+            this.NOI_DUNG.VisibleIndex = 6;
+            this.NOI_DUNG.Width = 204;
+            // 
+            // MA_DOI_TUONG
+            // 
+            this.MA_DOI_TUONG.Caption = "Mã HV";
+            this.MA_DOI_TUONG.FieldName = "MA_DOI_TUONG";
+            this.MA_DOI_TUONG.Name = "MA_DOI_TUONG";
+            this.MA_DOI_TUONG.OptionsColumn.AllowEdit = false;
+            this.MA_DOI_TUONG.Visible = true;
+            this.MA_DOI_TUONG.VisibleIndex = 7;
+            this.MA_DOI_TUONG.Width = 78;
+            // 
+            // TEN_NSD
+            // 
+            this.TEN_NSD.Caption = "Người tạo phiếu";
+            this.TEN_NSD.FieldName = "TEN_NSD";
+            this.TEN_NSD.Name = "TEN_NSD";
+            this.TEN_NSD.OptionsColumn.AllowEdit = false;
+            this.TEN_NSD.Visible = true;
+            this.TEN_NSD.VisibleIndex = 8;
+            this.TEN_NSD.Width = 122;
             // 
             // TEN_LOP
             // 
@@ -651,15 +659,6 @@ namespace BKI_QLTTQuocAnh {
             this.TRANG_THAI_PHIEU.Visible = true;
             this.TRANG_THAI_PHIEU.VisibleIndex = 11;
             this.TRANG_THAI_PHIEU.Width = 68;
-            // 
-            // HO_TEN
-            // 
-            this.HO_TEN.Caption = "Họ tên";
-            this.HO_TEN.FieldName = "HO_TEN";
-            this.HO_TEN.Name = "HO_TEN";
-            this.HO_TEN.Visible = true;
-            this.HO_TEN.VisibleIndex = 4;
-            this.HO_TEN.Width = 179;
             // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay
             // 

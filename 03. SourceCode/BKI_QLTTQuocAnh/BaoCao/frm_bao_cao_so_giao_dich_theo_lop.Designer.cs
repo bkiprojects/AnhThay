@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
+            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -85,12 +86,12 @@
             // 
             this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 87);
+            this.gridControl1.Location = new System.Drawing.Point(0, 117);
             this.gridControl1.MainView = this.gridView2;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(953, 365);
+            this.gridControl1.Size = new System.Drawing.Size(953, 335);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -189,7 +190,7 @@
             // 
             // CON_PHAI_THU
             // 
-            this.CON_PHAI_THU.Caption = "Còn phải thu";
+            this.CON_PHAI_THU.Caption = "Phải thu";
             this.CON_PHAI_THU.ColumnEdit = this.repositoryItemTextEdit1;
             this.CON_PHAI_THU.FieldName = "CON_PHAI_THU";
             this.CON_PHAI_THU.Name = "CON_PHAI_THU";
@@ -213,7 +214,7 @@
             // 
             // CHENH_LECH
             // 
-            this.CHENH_LECH.Caption = "Chênh lệch";
+            this.CHENH_LECH.Caption = "Còn phải thu";
             this.CHENH_LECH.ColumnEdit = this.repositoryItemTextEdit1;
             this.CHENH_LECH.FieldName = "CHENH_LECH";
             this.CHENH_LECH.Name = "CHENH_LECH";
@@ -252,6 +253,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.m_cmd_xuat_excel);
             this.panel1.Controls.Add(this.m_sle_lop);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.m_cmd_search);
@@ -259,7 +261,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(953, 87);
+            this.panel1.Size = new System.Drawing.Size(953, 117);
             this.panel1.TabIndex = 3;
             // 
             // m_sle_lop
@@ -318,6 +320,21 @@
             this.m_lbl_header.Text = "BÁO CÁO SỔ GIAO DỊCH THEO LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_xuat_excel.ImageIndex = 19;
+            this.m_cmd_xuat_excel.ImageList = this.imageList1;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(3, 87);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_xuat_excel.TabIndex = 4;
+            this.m_cmd_xuat_excel.Text = "Xuất Excel";
+            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
+            // 
             // frm_bao_cao_so_giao_dich_theo_lop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +378,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn CON_PHAI_THU;
         private DevExpress.XtraGrid.Columns.GridColumn THUC_THU;
         private DevExpress.XtraGrid.Columns.GridColumn CHENH_LECH;
+        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
 
     }
 }

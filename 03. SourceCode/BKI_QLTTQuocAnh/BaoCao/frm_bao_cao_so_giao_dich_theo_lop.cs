@@ -149,6 +149,23 @@ namespace BKI_QLTTQuocAnh.BaoCao {
             }
         }
 
+        private void m_cmd_xuat_excel_Click(object sender, EventArgs e) {
+            try {
+                FolderBrowserDialog dlg = new FolderBrowserDialog();
+                string path = "";
+                if(dlg.ShowDialog() == DialogResult.OK) {
+                    path = dlg.SelectedPath;
+                }
+                path = path + "giaodichtheolop"+DateTime.Now.Hour+DateTime.Now.Minute+".xlsx";
+
+                gridView2.ExportToXlsx(path);
+            }
+            catch(Exception v_e) {
+
+                throw v_e;
+            }
+        }
+
         
         
     }
