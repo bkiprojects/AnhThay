@@ -46,13 +46,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -86,12 +88,12 @@
             // 
             this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 117);
+            this.gridControl1.Location = new System.Drawing.Point(0, 85);
             this.gridControl1.MainView = this.gridView2;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(953, 335);
+            this.gridControl1.Size = new System.Drawing.Size(953, 329);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -253,7 +255,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_cmd_xuat_excel);
             this.panel1.Controls.Add(this.m_sle_lop);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.m_cmd_search);
@@ -261,7 +262,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(953, 117);
+            this.panel1.Size = new System.Drawing.Size(953, 85);
             this.panel1.TabIndex = 3;
             // 
             // m_sle_lop
@@ -320,20 +321,24 @@
             this.m_lbl_header.Text = "BÁO CÁO SỔ GIAO DỊCH THEO LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // m_cmd_xuat_excel
+            // simpleButton2
             // 
-            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xuat_excel.ImageIndex = 19;
-            this.m_cmd_xuat_excel.ImageList = this.imageList1;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(3, 87);
-            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 4;
-            this.m_cmd_xuat_excel.Text = "Xuất Excel";
-            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
+            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(0, 0);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 38);
+            this.simpleButton2.TabIndex = 5;
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.simpleButton2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 414);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(953, 38);
+            this.panel2.TabIndex = 6;
             // 
             // frm_bao_cao_so_giao_dich_theo_lop
             // 
@@ -341,6 +346,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 452);
             this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frm_bao_cao_so_giao_dich_theo_lop";
             this.Text = "F444 - Báo cáo sổ giao dịch theo lớp";
@@ -351,6 +357,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -378,7 +385,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn CON_PHAI_THU;
         private DevExpress.XtraGrid.Columns.GridColumn THUC_THU;
         private DevExpress.XtraGrid.Columns.GridColumn CHENH_LECH;
-        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.Panel panel2;
 
     }
 }

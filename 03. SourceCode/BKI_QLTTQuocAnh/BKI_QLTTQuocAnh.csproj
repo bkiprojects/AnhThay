@@ -115,6 +115,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\DLL\DevExpress.XtraBars.v14.1.dll</HintPath>
@@ -448,6 +449,24 @@
     <Compile Include="f388_main.Designer.cs">
       <DependentUpon>f388_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPT\dsphieu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\dsphieu.Designer.cs">
+      <DependentUpon>dsphieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\rpt_cac_lop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_cac_lop.Designer.cs">
+      <DependentUpon>rpt_cac_lop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\rpt_lop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_lop.Designer.cs">
+      <DependentUpon>rpt_lop.cs</DependentUpon>
+    </Compile>
     <Compile Include="WinFormControls.cs" />
     <EmbeddedResource Include="BaoCao\f410_bao_cao_tai_chinh_theo_lop_mon.resx">
       <DependentUpon>f410_bao_cao_tai_chinh_theo_lop_mon.cs</DependentUpon>
@@ -599,6 +618,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="f388_main.resx">
       <DependentUpon>f388_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\dsphieu.resx">
+      <DependentUpon>dsphieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_cac_lop.resx">
+      <DependentUpon>rpt_cac_lop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_lop.resx">
+      <DependentUpon>rpt_lop.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>

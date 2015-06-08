@@ -4,7 +4,7 @@
 /// Goal: Create Form for V_RPT_F410_BAO_CAO_TAI_CHINH_THEO_LOP
 ///************************************************
 
-
+using DevExpress.XtraReports.UI;
 using System;
 using System.Data;
 using System.Drawing;
@@ -24,6 +24,9 @@ using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
 using BKI_QLTTQuocAnh.BaoCao;
+using BKI_QLTTQuocAnh.RPT;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -36,7 +39,6 @@ namespace BKI_QLTTQuocAnh
         internal SIS.Controls.Button.SiSButton m_cmd_update;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
-        internal SIS.Controls.Button.SiSButton m_cmd_view;
         private Label m_lbl_lop_mon;
         private Label m_lbl_header;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
@@ -54,13 +56,15 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_THUC_THU;
         private DevExpress.XtraGrid.Columns.GridColumn CON_PHAI_THU;
         internal ImageList imageList1;
-        internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         private DevExpress.XtraReports.UserDesigner.XRDesignMdiController reportDesigner1;
         private DevExpress.XtraReports.UserDesigner.XRDesignBarManager xrDesignBarManager1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
+        private DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox recentlyUsedItemsComboBox1;
+        private DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox designRepositoryItemComboBox1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.ComponentModel.IContainer components;
 
         public F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay()
@@ -104,13 +108,17 @@ namespace BKI_QLTTQuocAnh
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay));
             DevExpress.XtraReports.UserDesigner.XRDesignPanelListener xrDesignPanelListener1 = new DevExpress.XtraReports.UserDesigner.XRDesignPanelListener();
-            DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox recentlyUsedItemsComboBox1 = new DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox();
-            DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox designRepositoryItemComboBox1 = new DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox();
+            this.xrDesignBarManager1 = new DevExpress.XtraReports.UserDesigner.XRDesignBarManager(this.components);
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.recentlyUsedItemsComboBox1 = new DevExpress.XtraReports.UserDesigner.RecentlyUsedItemsComboBox();
+            this.designRepositoryItemComboBox1 = new DevExpress.XtraReports.UserDesigner.DesignRepositoryItemComboBox();
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
@@ -120,7 +128,7 @@ namespace BKI_QLTTQuocAnh
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_cmd_xuat_excel = new SIS.Controls.Button.SiSButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -133,11 +141,9 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CON_PHAI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.reportDesigner1 = new DevExpress.XtraReports.UserDesigner.XRDesignMdiController(this.components);
-            this.xrDesignBarManager1 = new DevExpress.XtraReports.UserDesigner.XRDesignBarManager(this.components);
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            ((System.ComponentModel.ISupportInitialize)(this.xrDesignBarManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
@@ -146,10 +152,74 @@ namespace BKI_QLTTQuocAnh
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrDesignBarManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(recentlyUsedItemsComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(designRepositoryItemComboBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // xrDesignBarManager1
+            // 
+            this.xrDesignBarManager1.DockControls.Add(this.barDockControlTop);
+            this.xrDesignBarManager1.DockControls.Add(this.barDockControlBottom);
+            this.xrDesignBarManager1.DockControls.Add(this.barDockControlLeft);
+            this.xrDesignBarManager1.DockControls.Add(this.barDockControlRight);
+            this.xrDesignBarManager1.FontNameBox = this.recentlyUsedItemsComboBox1;
+            this.xrDesignBarManager1.FontNameEdit = null;
+            this.xrDesignBarManager1.FontSizeBox = this.designRepositoryItemComboBox1;
+            this.xrDesignBarManager1.FontSizeEdit = null;
+            this.xrDesignBarManager1.Form = this;
+            this.xrDesignBarManager1.FormattingToolbar = null;
+            this.xrDesignBarManager1.HintStaticItem = null;
+            this.xrDesignBarManager1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("xrDesignBarManager1.ImageStream")));
+            this.xrDesignBarManager1.LayoutToolbar = null;
+            this.xrDesignBarManager1.MaxItemId = 76;
+            this.xrDesignBarManager1.Toolbar = null;
+            this.xrDesignBarManager1.TransparentEditors = true;
+            this.xrDesignBarManager1.Updates.AddRange(new string[] {
+            "Toolbox"});
+            this.xrDesignBarManager1.ZoomItem = null;
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(1195, 0);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 409);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1195, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 409);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(1195, 0);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 409);
+            // 
+            // recentlyUsedItemsComboBox1
+            // 
+            this.recentlyUsedItemsComboBox1.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.recentlyUsedItemsComboBox1.AppearanceDropDown.Options.UseFont = true;
+            this.recentlyUsedItemsComboBox1.AutoHeight = false;
+            this.recentlyUsedItemsComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.recentlyUsedItemsComboBox1.DropDownRows = 12;
+            this.recentlyUsedItemsComboBox1.Name = "recentlyUsedItemsComboBox1";
+            // 
+            // designRepositoryItemComboBox1
+            // 
+            this.designRepositoryItemComboBox1.AutoHeight = false;
+            this.designRepositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.designRepositoryItemComboBox1.Name = "designRepositoryItemComboBox1";
             // 
             // ImageList
             // 
@@ -180,16 +250,16 @@ namespace BKI_QLTTQuocAnh
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.simpleButton1);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 368);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1195, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1195, 41);
             this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
@@ -203,7 +273,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.ImageList = this.ImageList;
             this.m_cmd_insert.Location = new System.Drawing.Point(839, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_insert.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Thêm";
             // 
@@ -218,24 +288,9 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.ImageList = this.ImageList;
             this.m_cmd_update.Location = new System.Drawing.Point(927, 4);
             this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_update.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "&Sửa";
-            // 
-            // m_cmd_view
-            // 
-            this.m_cmd_view.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_view.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_view.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_view.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_view.ImageIndex = 18;
-            this.m_cmd_view.ImageList = this.ImageList;
-            this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
-            this.m_cmd_view.Name = "m_cmd_view";
-            this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_view.TabIndex = 0;
-            this.m_cmd_view.Text = "Xem";
             // 
             // m_cmd_delete
             // 
@@ -248,7 +303,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.ImageList = this.ImageList;
             this.m_cmd_delete.Location = new System.Drawing.Point(1015, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_delete.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_delete.TabIndex = 3;
             this.m_cmd_delete.Text = "&Xoá";
             // 
@@ -263,7 +318,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.ImageList = this.ImageList;
             this.m_cmd_exit.Location = new System.Drawing.Point(1103, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 33);
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
@@ -336,7 +391,6 @@ namespace BKI_QLTTQuocAnh
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_cmd_xuat_excel);
             this.panel1.Controls.Add(this.m_fg);
             this.panel1.Controls.Add(this.m_sle_lop);
             this.panel1.Controls.Add(this.m_cmd_search);
@@ -345,23 +399,20 @@ namespace BKI_QLTTQuocAnh
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1195, 126);
+            this.panel1.Size = new System.Drawing.Size(1195, 120);
             this.panel1.TabIndex = 0;
             // 
-            // m_cmd_xuat_excel
+            // simpleButton1
             // 
-            this.m_cmd_xuat_excel.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_xuat_excel.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_xuat_excel.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_xuat_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_xuat_excel.ImageIndex = 19;
-            this.m_cmd_xuat_excel.ImageList = this.imageList1;
-            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(4, 92);
-            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
-            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_xuat_excel.TabIndex = 6;
-            this.m_cmd_xuat_excel.Text = "Xuất Excel";
-            this.m_cmd_xuat_excel.Click += new System.EventHandler(this.m_cmd_xuat_excel_Click);
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(4, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(66, 33);
+            this.simpleButton1.TabIndex = 9;
+            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // imageList1
             // 
@@ -394,12 +445,12 @@ namespace BKI_QLTTQuocAnh
             // 
             this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 126);
+            this.gridControl1.Location = new System.Drawing.Point(0, 120);
             this.gridControl1.MainView = this.gridView2;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1195, 247);
+            this.gridControl1.Size = new System.Drawing.Size(1195, 248);
             this.gridControl1.TabIndex = 3;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -512,58 +563,6 @@ namespace BKI_QLTTQuocAnh
             xrDesignPanelListener1});
             this.reportDesigner1.Form = this;
             // 
-            // xrDesignBarManager1
-            // 
-            this.xrDesignBarManager1.DockControls.Add(this.barDockControlTop);
-            this.xrDesignBarManager1.DockControls.Add(this.barDockControlBottom);
-            this.xrDesignBarManager1.DockControls.Add(this.barDockControlLeft);
-            this.xrDesignBarManager1.DockControls.Add(this.barDockControlRight);
-            recentlyUsedItemsComboBox1.AppearanceDropDown.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            recentlyUsedItemsComboBox1.AppearanceDropDown.Options.UseFont = true;
-            recentlyUsedItemsComboBox1.AutoHeight = false;
-            recentlyUsedItemsComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            recentlyUsedItemsComboBox1.DropDownRows = 12;
-            this.xrDesignBarManager1.FontNameBox = recentlyUsedItemsComboBox1;
-            designRepositoryItemComboBox1.AutoHeight = false;
-            designRepositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.xrDesignBarManager1.FontSizeBox = designRepositoryItemComboBox1;
-            this.xrDesignBarManager1.Form = this;
-            this.xrDesignBarManager1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("xrDesignBarManager1.ImageStream")));
-            this.xrDesignBarManager1.MaxItemId = 76;
-            this.xrDesignBarManager1.TransparentEditors = true;
-            this.xrDesignBarManager1.Updates.AddRange(new string[] {
-            "Toolbox"});
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Size = new System.Drawing.Size(1195, 0);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 409);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1195, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 409);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1195, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 409);
-            // 
             // F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
@@ -578,6 +577,9 @@ namespace BKI_QLTTQuocAnh
             this.Name = "F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay";
             this.Text = "F410 - Báo cáo tài chính theo lớp";
             this.Load += new System.EventHandler(this.F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.xrDesignBarManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.designRepositoryItemComboBox1)).EndInit();
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
@@ -587,9 +589,6 @@ namespace BKI_QLTTQuocAnh
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(recentlyUsedItemsComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(designRepositoryItemComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrDesignBarManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -819,7 +818,6 @@ namespace BKI_QLTTQuocAnh
             m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
             m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
-            m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
             m_cmd_search.Click += m_cmd_search_Click;
             this.KeyDown += F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay_KeyDown;
             m_fg.DoubleClick += m_fg_DoubleClick;
@@ -974,6 +972,46 @@ namespace BKI_QLTTQuocAnh
                 path = path + "baocaotheolop"+DateTime.Now.Hour+DateTime.Now.Minute+".xlsx";
 
                 gridView2.ExportToXlsx(path);
+            }
+            catch(Exception v_e) {
+
+                throw v_e;
+            }
+        }
+
+        private void m_cmd_in_Click(object sender, EventArgs e) {
+            try {
+              
+            }
+            catch(Exception v_e) {
+                
+                throw v_e;
+            }
+        }
+
+
+
+
+
+
+
+
+        public WinControlContainer CopyGridControl(GridControl grid) {
+            WinControlContainer winContainer = new WinControlContainer();
+
+            winContainer.Location = new Point(0, 0);
+            winContainer.Size = new Size(200, 100);
+
+            winContainer.WinControl = grid;
+            return winContainer;
+        }
+        private void simpleButton1_Click(object sender, EventArgs e) {
+            try {
+                var r = new rpt_cac_lop();
+                
+                r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
+                
+                r.ShowPreview();
             }
             catch(Exception v_e) {
 

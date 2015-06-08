@@ -1,6 +1,9 @@
 ﻿using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
+using BKI_QLTTQuocAnh.RPT;
 using BKI_QLTTQuocAnh.US;
+using DevExpress.XtraGrid;
+using DevExpress.XtraReports.UI;
 using IP.Core.IPCommon;
 using IP.Core.IPSystemAdmin;
 using System;
@@ -162,6 +165,29 @@ namespace BKI_QLTTQuocAnh.BaoCao {
             }
             catch(Exception v_e) {
 
+                throw v_e;
+            }
+        }
+
+        public WinControlContainer CopyGridControl(GridControl grid) {
+            WinControlContainer winContainer = new WinControlContainer();
+
+            winContainer.Location = new Point(0, 0);
+            winContainer.Size = new Size(200, 100);
+
+            winContainer.WinControl = grid;
+            return winContainer;
+        }
+        private void simpleButton2_Click(object sender, EventArgs e) {
+            try {
+                var r = new rpt_lop();
+
+                r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
+                r.xrLabel2.Text = m_sle_lop.Text;
+                r.ShowPreview();
+            }
+            catch(Exception v_e) {
+                
                 throw v_e;
             }
         }

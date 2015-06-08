@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BKI_QLTTQuocAnh.RPT;
+using DevExpress.XtraGrid;
+using DevExpress.XtraReports.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +34,29 @@ namespace BKI_QLTTQuocAnh.BaoCao {
             }
             catch(Exception v_e) {
 
+                throw v_e;
+            }
+        }
+
+
+        public WinControlContainer CopyGridControl(GridControl grid) {
+            WinControlContainer winContainer = new WinControlContainer();
+
+            winContainer.Location = new Point(0, 0);
+            winContainer.Size = new Size(200, 100);
+
+            winContainer.WinControl = grid;
+            return winContainer;
+        }
+        private void simpleButton2_Click(object sender, EventArgs e) {
+            try {
+                var r = new dsphieu();
+
+                r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
+                r.ShowPreview();
+            }
+            catch(Exception v_e) {
+                
                 throw v_e;
             }
         }
