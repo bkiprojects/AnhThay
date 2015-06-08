@@ -1010,7 +1010,9 @@ namespace BKI_QLTTQuocAnh
                 var r = new rpt_cac_lop();
                 
                 r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
-                
+                gridView2.BestFitColumns();
+                r.PaperKind = System.Drawing.Printing.PaperKind.A4;
+                r.Landscape = true;
                 r.ShowPreview();
             }
             catch(Exception v_e) {

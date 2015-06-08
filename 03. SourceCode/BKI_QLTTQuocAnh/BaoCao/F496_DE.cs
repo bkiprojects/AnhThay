@@ -53,6 +53,9 @@ namespace BKI_QLTTQuocAnh.BaoCao {
                 var r = new dsphieu();
 
                 r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
+                gridView1.BestFitColumns();
+                r.PaperKind = System.Drawing.Printing.PaperKind.A4;
+                r.Landscape = true;
                 r.ShowPreview();
             }
             catch(Exception v_e) {
