@@ -37,11 +37,11 @@
             this.SO_TIEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.LAN_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NGAY_NHAP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
-            this.NGAY_NHAP = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -78,10 +78,13 @@
             this.NGAY_NHAP});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.GroupCount = 1;
+            this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", this.SO_TIEN, "{0:n0}")});
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AutoExpandAllGroups = true;
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsView.ShowFooter = true;
+            this.gridView1.OptionsView.ShowGroupedColumns = true;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.LOAI_PHIEU, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
@@ -99,7 +102,7 @@
             this.MA_SO_QUYEN.FieldName = "MA_SO_QUYEN";
             this.MA_SO_QUYEN.Name = "MA_SO_QUYEN";
             this.MA_SO_QUYEN.Visible = true;
-            this.MA_SO_QUYEN.VisibleIndex = 0;
+            this.MA_SO_QUYEN.VisibleIndex = 1;
             // 
             // SO_PHIEU
             // 
@@ -107,7 +110,7 @@
             this.SO_PHIEU.FieldName = "SO_PHIEU";
             this.SO_PHIEU.Name = "SO_PHIEU";
             this.SO_PHIEU.Visible = true;
-            this.SO_PHIEU.VisibleIndex = 1;
+            this.SO_PHIEU.VisibleIndex = 2;
             // 
             // NGAY_THU
             // 
@@ -115,7 +118,7 @@
             this.NGAY_THU.FieldName = "NGAY_THU";
             this.NGAY_THU.Name = "NGAY_THU";
             this.NGAY_THU.Visible = true;
-            this.NGAY_THU.VisibleIndex = 2;
+            this.NGAY_THU.VisibleIndex = 3;
             // 
             // MA_HOC_SINH
             // 
@@ -123,7 +126,7 @@
             this.MA_HOC_SINH.FieldName = "MA_DOI_TUONG";
             this.MA_HOC_SINH.Name = "MA_HOC_SINH";
             this.MA_HOC_SINH.Visible = true;
-            this.MA_HOC_SINH.VisibleIndex = 7;
+            this.MA_HOC_SINH.VisibleIndex = 8;
             // 
             // HO_TEN_HS
             // 
@@ -131,7 +134,7 @@
             this.HO_TEN_HS.FieldName = "HO_TEN";
             this.HO_TEN_HS.Name = "HO_TEN_HS";
             this.HO_TEN_HS.Visible = true;
-            this.HO_TEN_HS.VisibleIndex = 3;
+            this.HO_TEN_HS.VisibleIndex = 4;
             // 
             // TEN_NGUOI_THU
             // 
@@ -139,7 +142,7 @@
             this.TEN_NGUOI_THU.FieldName = "TEN_NGUOI_THU";
             this.TEN_NGUOI_THU.Name = "TEN_NGUOI_THU";
             this.TEN_NGUOI_THU.Visible = true;
-            this.TEN_NGUOI_THU.VisibleIndex = 5;
+            this.TEN_NGUOI_THU.VisibleIndex = 6;
             // 
             // SO_TIEN
             // 
@@ -147,10 +150,8 @@
             this.SO_TIEN.ColumnEdit = this.repositoryItemTextEdit1;
             this.SO_TIEN.FieldName = "SO_TIEN";
             this.SO_TIEN.Name = "SO_TIEN";
-            this.SO_TIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", "{0:n0}")});
             this.SO_TIEN.Visible = true;
-            this.SO_TIEN.VisibleIndex = 4;
+            this.SO_TIEN.VisibleIndex = 5;
             // 
             // repositoryItemTextEdit1
             // 
@@ -166,7 +167,15 @@
             this.LAN_THU.FieldName = "LAN_THU";
             this.LAN_THU.Name = "LAN_THU";
             this.LAN_THU.Visible = true;
-            this.LAN_THU.VisibleIndex = 6;
+            this.LAN_THU.VisibleIndex = 7;
+            // 
+            // NGAY_NHAP
+            // 
+            this.NGAY_NHAP.Caption = "Ngày lập";
+            this.NGAY_NHAP.FieldName = "NGAY_NHAP";
+            this.NGAY_NHAP.Name = "NGAY_NHAP";
+            this.NGAY_NHAP.Visible = true;
+            this.NGAY_NHAP.VisibleIndex = 9;
             // 
             // panel1
             // 
@@ -241,14 +250,6 @@
             this.ImageList.Images.SetKeyName(19, "");
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
-            // 
-            // NGAY_NHAP
-            // 
-            this.NGAY_NHAP.Caption = "Ngày lập";
-            this.NGAY_NHAP.FieldName = "NGAY_NHAP";
-            this.NGAY_NHAP.Name = "NGAY_NHAP";
-            this.NGAY_NHAP.Visible = true;
-            this.NGAY_NHAP.VisibleIndex = 8;
             // 
             // F496_DE
             // 
