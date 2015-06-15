@@ -574,8 +574,8 @@ namespace BKI_QLTTQuocAnh {
             {
 
                 if (BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắn muốn xóa học sinh này không?") == DialogResult.Yes)
-                {
-                    v_us.Delete_by_Proc(v_us.dcID, v_us.dcID_GD_HOC);
+                {                    v_us.Delete_by_Proc(v_us.dcID, v_us.dcID_GD_HOC);
+
                 }
                 else
                     return;

@@ -25,8 +25,6 @@ using BKI_QLTTQuocAnh.DS.CDBNames;
 using C1.Win.C1FlexGrid;
 using IP.Core.IPExcelReport;
 using System.Diagnostics;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraEditors.Repository;
 
 namespace BKI_QLTTQuocAnh {
 
@@ -34,7 +32,13 @@ namespace BKI_QLTTQuocAnh {
 
     public class f300_import_ds_hoc_vien : System.Windows.Forms.Form {
         internal System.Windows.Forms.ImageList ImageList;
+        internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
+        internal SIS.Controls.Button.SiSButton m_cmd_delete;
+        internal SIS.Controls.Button.SiSButton m_cmd_update;
+        internal SIS.Controls.Button.SiSButton m_cmd_insert;
+        internal SIS.Controls.Button.SiSButton m_cmd_exit;
+        internal SIS.Controls.Button.SiSButton m_cmd_view;
         private Panel panel1;
         private LinkLabel m_llbl_mau_import;
         private Label label9;
@@ -45,22 +49,17 @@ namespace BKI_QLTTQuocAnh {
         internal SIS.Controls.Button.SiSButton m_cmd_chon_file_excel;
         private Label label5;
         private Label label4;
+        private Label label3;
+        private Label m_lbl_header;
         private OpenFileDialog m_ofd_exel_file;
         private Label m_lbl_loading_mes;
         private Label label1;
         private Label label6;
         internal SIS.Controls.Button.SiSButton m_cmd_kiem_tra_du_lieu;
         private Label label8;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton m_cmd_insert_row;
-        private DevExpress.XtraEditors.SimpleButton m_cmd_delete_row;
-        public DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private Label label2;
-        private Label label3;
-        private Label m_lbl_header;
+        private ComboBox m_cbo_lop;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.ComponentModel.IContainer components;
 
         public f300_import_ds_hoc_vien() {
@@ -96,13 +95,17 @@ namespace BKI_QLTTQuocAnh {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f300_import_ds_hoc_vien));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_update = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_view = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.m_cbo_lop = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.m_cmd_kiem_tra_du_lieu = new SIS.Controls.Button.SiSButton();
@@ -115,22 +118,14 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_chon_file_excel = new SIS.Controls.Button.SiSButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_lbl_loading_mes = new System.Windows.Forms.Label();
             this.m_ofd_exel_file = new System.Windows.Forms.OpenFileDialog();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.m_cmd_delete_row = new DevExpress.XtraEditors.SimpleButton();
-            this.m_cmd_insert_row = new DevExpress.XtraEditors.SimpleButton();
+            this.m_lbl_loading_mes = new System.Windows.Forms.Label();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ImageList
@@ -160,23 +155,116 @@ namespace BKI_QLTTQuocAnh {
             this.ImageList.Images.SetKeyName(20, "");
             this.ImageList.Images.SetKeyName(21, "");
             // 
+            // m_pnl_out_place_dm
+            // 
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
+            this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
+            this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
+            this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1303, 36);
+            this.m_pnl_out_place_dm.TabIndex = 19;
+            // 
+            // m_cmd_insert
+            // 
+            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_insert.ImageIndex = 2;
+            this.m_cmd_insert.ImageList = this.ImageList;
+            this.m_cmd_insert.Location = new System.Drawing.Point(947, 4);
+            this.m_cmd_insert.Name = "m_cmd_insert";
+            this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_insert.TabIndex = 12;
+            this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_insert.Visible = false;
+            // 
+            // m_cmd_update
+            // 
+            this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_update.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_update.ImageIndex = 3;
+            this.m_cmd_update.ImageList = this.ImageList;
+            this.m_cmd_update.Location = new System.Drawing.Point(1035, 4);
+            this.m_cmd_update.Name = "m_cmd_update";
+            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_update.TabIndex = 13;
+            this.m_cmd_update.Text = "&Sửa";
+            this.m_cmd_update.Visible = false;
+            // 
+            // m_cmd_view
+            // 
+            this.m_cmd_view.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_view.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_view.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_view.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_view.ImageIndex = 18;
+            this.m_cmd_view.ImageList = this.ImageList;
+            this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
+            this.m_cmd_view.Name = "m_cmd_view";
+            this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_view.TabIndex = 21;
+            this.m_cmd_view.Text = "Xem";
+            this.m_cmd_view.Visible = false;
+            // 
+            // m_cmd_delete
+            // 
+            this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_delete.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_delete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_delete.ImageIndex = 4;
+            this.m_cmd_delete.ImageList = this.ImageList;
+            this.m_cmd_delete.Location = new System.Drawing.Point(1123, 4);
+            this.m_cmd_delete.Name = "m_cmd_delete";
+            this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_delete.TabIndex = 14;
+            this.m_cmd_delete.Text = "&Xoá";
+            this.m_cmd_delete.Visible = false;
+            // 
+            // m_cmd_exit
+            // 
+            this.m_cmd_exit.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_exit.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_exit.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_exit.ImageIndex = 12;
+            this.m_cmd_exit.ImageList = this.ImageList;
+            this.m_cmd_exit.Location = new System.Drawing.Point(1211, 4);
+            this.m_cmd_exit.Name = "m_cmd_exit";
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.Text = "Thoát (Esc)";
+            this.m_cmd_exit.Visible = false;
+            // 
             // m_fg
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
-            this.m_fg.Location = new System.Drawing.Point(983, 12);
+            this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.m_fg.Location = new System.Drawing.Point(0, 121);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(92, 34);
+            this.m_fg.Size = new System.Drawing.Size(1303, 252);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 20;
-            this.m_fg.Visible = false;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.m_sle_lop);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.m_fg);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.m_cbo_lop);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.m_cmd_kiem_tra_du_lieu);
@@ -189,64 +277,49 @@ namespace BKI_QLTTQuocAnh {
             this.panel1.Controls.Add(this.m_cmd_chon_file_excel);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.m_lbl_header);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1030, 113);
+            this.panel1.Size = new System.Drawing.Size(1303, 121);
             this.panel1.TabIndex = 21;
-            // 
-            // m_sle_lop
-            // 
-            this.m_sle_lop.EditValue = "";
-            this.m_sle_lop.Location = new System.Drawing.Point(12, 77);
-            this.m_sle_lop.Name = "m_sle_lop";
-            this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_sle_lop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_sle_lop.Properties.NullText = "";
-            this.m_sle_lop.Properties.View = this.gridView2;
-            this.m_sle_lop.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_lop.TabIndex = 52;
-            // 
-            // gridView2
-            // 
-            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "-->";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 50;
-            this.label3.Text = "Bước 1:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(683, 45);
+            this.label8.Location = new System.Drawing.Point(657, 38);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 48;
             this.label8.Text = "Bước 4:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(169, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 13);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "-->";
+            // 
+            // m_cbo_lop
+            // 
+            this.m_cbo_lop.FormattingEnabled = true;
+            this.m_cbo_lop.Items.AddRange(new object[] {
+            "0581",
+            "0582",
+            "0661",
+            "0662"});
+            this.m_cbo_lop.Location = new System.Drawing.Point(12, 66);
+            this.m_cbo_lop.Name = "m_cbo_lop";
+            this.m_cbo_lop.Size = new System.Drawing.Size(121, 21);
+            this.m_cbo_lop.TabIndex = 46;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(631, 81);
+            this.label1.Location = new System.Drawing.Point(605, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 13);
             this.label1.TabIndex = 45;
@@ -255,7 +328,7 @@ namespace BKI_QLTTQuocAnh {
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(477, 45);
+            this.label6.Location = new System.Drawing.Point(451, 38);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 44;
@@ -269,7 +342,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_kiem_tra_du_lieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_kiem_tra_du_lieu.ImageIndex = 13;
             this.m_cmd_kiem_tra_du_lieu.ImageList = this.ImageList;
-            this.m_cmd_kiem_tra_du_lieu.Location = new System.Drawing.Point(480, 73);
+            this.m_cmd_kiem_tra_du_lieu.Location = new System.Drawing.Point(454, 66);
             this.m_cmd_kiem_tra_du_lieu.Name = "m_cmd_kiem_tra_du_lieu";
             this.m_cmd_kiem_tra_du_lieu.Size = new System.Drawing.Size(121, 28);
             this.m_cmd_kiem_tra_du_lieu.TabIndex = 43;
@@ -298,7 +371,7 @@ namespace BKI_QLTTQuocAnh {
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(928, 52);
+            this.label7.Location = new System.Drawing.Point(1214, 76);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 13);
             this.label7.TabIndex = 41;
@@ -318,7 +391,7 @@ namespace BKI_QLTTQuocAnh {
             // 
             this.m_lbl_pink.BackColor = System.Drawing.Color.Pink;
             this.m_lbl_pink.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.m_lbl_pink.Location = new System.Drawing.Point(866, 51);
+            this.m_lbl_pink.Location = new System.Drawing.Point(1152, 75);
             this.m_lbl_pink.Name = "m_lbl_pink";
             this.m_lbl_pink.Size = new System.Drawing.Size(56, 15);
             this.m_lbl_pink.TabIndex = 41;
@@ -331,7 +404,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_save_data.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_save_data.ImageIndex = 16;
             this.m_cmd_save_data.ImageList = this.ImageList;
-            this.m_cmd_save_data.Location = new System.Drawing.Point(686, 73);
+            this.m_cmd_save_data.Location = new System.Drawing.Point(660, 66);
             this.m_cmd_save_data.Name = "m_cmd_save_data";
             this.m_cmd_save_data.Size = new System.Drawing.Size(153, 28);
             this.m_cmd_save_data.TabIndex = 39;
@@ -345,7 +418,7 @@ namespace BKI_QLTTQuocAnh {
             this.m_cmd_chon_file_excel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_chon_file_excel.ImageIndex = 19;
             this.m_cmd_chon_file_excel.ImageList = this.ImageList;
-            this.m_cmd_chon_file_excel.Location = new System.Drawing.Point(254, 73);
+            this.m_cmd_chon_file_excel.Location = new System.Drawing.Point(228, 66);
             this.m_cmd_chon_file_excel.Name = "m_cmd_chon_file_excel";
             this.m_cmd_chon_file_excel.Size = new System.Drawing.Size(121, 28);
             this.m_cmd_chon_file_excel.TabIndex = 33;
@@ -354,7 +427,7 @@ namespace BKI_QLTTQuocAnh {
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(415, 81);
+            this.label5.Location = new System.Drawing.Point(389, 74);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(19, 13);
             this.label5.TabIndex = 38;
@@ -363,11 +436,20 @@ namespace BKI_QLTTQuocAnh {
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(251, 45);
+            this.label4.Location = new System.Drawing.Point(225, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 37;
             this.label4.Text = "Bước 2:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Bước 1:";
             // 
             // m_lbl_header
             // 
@@ -376,17 +458,21 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(1030, 37);
+            this.m_lbl_header.Size = new System.Drawing.Size(1303, 37);
             this.m_lbl_header.TabIndex = 25;
             this.m_lbl_header.Text = "NHẬP DANH SÁCH HỌC VIÊN TỪ FILE EXCEL";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_ofd_exel_file
+            // 
+            this.m_ofd_exel_file.FileName = "openFileDialog1";
             // 
             // m_lbl_loading_mes
             // 
             this.m_lbl_loading_mes.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.m_lbl_loading_mes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.m_lbl_loading_mes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_loading_mes.Location = new System.Drawing.Point(426, 165);
+            this.m_lbl_loading_mes.Location = new System.Drawing.Point(263, 170);
             this.m_lbl_loading_mes.Name = "m_lbl_loading_mes";
             this.m_lbl_loading_mes.Size = new System.Drawing.Size(301, 68);
             this.m_lbl_loading_mes.TabIndex = 26;
@@ -394,87 +480,31 @@ namespace BKI_QLTTQuocAnh {
             this.m_lbl_loading_mes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.m_lbl_loading_mes.Visible = false;
             // 
-            // m_ofd_exel_file
+            // simpleButton1
             // 
-            this.m_ofd_exel_file.FileName = "openFileDialog1";
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 145);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1030, 264);
-            this.gridControl1.TabIndex = 27;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView1.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView1.OptionsSelection.InvertSelection = true;
-            this.gridView1.OptionsSelection.MultiSelect = true;
-            this.gridView1.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Appearance.BackColor = System.Drawing.Color.White;
-            this.panelControl1.Appearance.Options.UseBackColor = true;
-            this.panelControl1.Controls.Add(this.m_cmd_delete_row);
-            this.panelControl1.Controls.Add(this.m_cmd_insert_row);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 113);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1030, 32);
-            this.panelControl1.TabIndex = 28;
-            // 
-            // m_cmd_delete_row
-            // 
-            this.m_cmd_delete_row.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_delete_row.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_delete_row.Image")));
-            this.m_cmd_delete_row.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.m_cmd_delete_row.Location = new System.Drawing.Point(53, 2);
-            this.m_cmd_delete_row.Name = "m_cmd_delete_row";
-            this.m_cmd_delete_row.Size = new System.Drawing.Size(51, 28);
-            this.m_cmd_delete_row.TabIndex = 1;
-            this.m_cmd_delete_row.Click += new System.EventHandler(this.m_cmd_delete_row_Click);
-            // 
-            // m_cmd_insert_row
-            // 
-            this.m_cmd_insert_row.Dock = System.Windows.Forms.DockStyle.Left;
-            this.m_cmd_insert_row.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_insert_row.Image")));
-            this.m_cmd_insert_row.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.m_cmd_insert_row.Location = new System.Drawing.Point(2, 2);
-            this.m_cmd_insert_row.Name = "m_cmd_insert_row";
-            this.m_cmd_insert_row.Size = new System.Drawing.Size(51, 28);
-            this.m_cmd_insert_row.TabIndex = 0;
-            this.m_cmd_insert_row.Click += new System.EventHandler(this.m_cmd_insert_row_Click);
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(5, 95);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 49;
+            this.simpleButton1.Text = "Xóa hàng";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // f300_import_ds_hoc_vien
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-            this.ClientSize = new System.Drawing.Size(1030, 409);
+            this.ClientSize = new System.Drawing.Size(1303, 409);
             this.Controls.Add(this.m_lbl_loading_mes);
-            this.Controls.Add(this.gridControl1);
-            this.Controls.Add(this.panelControl1);
+            this.Controls.Add(this.m_fg);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.m_pnl_out_place_dm);
             this.Name = "f300_import_ds_hoc_vien";
             this.Text = "F300 - Nhập DS Học viên từ Excel";
             this.Load += new System.EventHandler(this.f300_import_ds_hoc_vien_Load);
+            this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -489,9 +519,8 @@ namespace BKI_QLTTQuocAnh {
         #region Data Structure
         private enum e_col_Number {
             EMAIL = 6
-            ,
-            SĐT = 5
-               ,
+            ,SĐT = 5
+                ,
             STT = 1
                 ,
             MA_HOC_VIEN = 2
@@ -501,11 +530,9 @@ namespace BKI_QLTTQuocAnh {
             TEN = 4
                 ,
             TRUONG_DANG_HOC = 9
-                ,
-            QUE_QUAN = 8
-                ,
-            NGAY_SINH = 7
-                , FACEBOOK = 10
+                , QUE_QUAN = 8
+            ,NGAY_SINH = 7
+            ,FACEBOOK =10
 
         }
         #endregion
@@ -516,8 +543,6 @@ namespace BKI_QLTTQuocAnh {
         US_EXCEL_IMPORT_HOC_VIEN m_us = new US_EXCEL_IMPORT_HOC_VIEN();
         bool m_flag_du_lieu_is_ok = true;
         DS_V_GD_HOC m_ds_v_gd_hoc = new DS_V_GD_HOC();
-
-        DS_DM_LOP_MON m_ds_dm_lop_mon = new DS_DM_LOP_MON();
         #endregion
 
         #region Private Methods
@@ -542,7 +567,7 @@ namespace BKI_QLTTQuocAnh {
         private void set_initial_form_load() {
             m_obj_trans = get_trans_object(m_fg);
             load_data_2_grid();
-            load_data_to_sle_lop();
+            load_data_2_cbo_lop();
         }
         private ITransferDataRow get_trans_object(C1.Win.C1FlexGrid.C1FlexGrid i_fg) {
             Hashtable v_htb = new Hashtable();
@@ -575,7 +600,25 @@ namespace BKI_QLTTQuocAnh {
             i_us.DataRow2Me(v_dr);
         }
 
+        private void load_data_2_cbo_lop()
+        {
+            DS_DM_LOP_MON v_ds_dm_lop_mon = new DS_DM_LOP_MON();
+            US_DM_LOP_MON v_us_dm_lop_mon = new US_DM_LOP_MON();
+            v_us_dm_lop_mon.FillDataset(v_ds_dm_lop_mon, "where TRANG_THAI_LOP_MON = 88");
 
+            //DataRow v_dr = v_ds_dm_lop_mon.DM_LOP_MON.NewRow();
+            //v_dr[DM_LOP_MON.ID] = -1;
+            //v_dr[DM_LOP_MON.MA_LOP_MON] = "--Tất cả--";
+            //v_dr[DM_LOP_MON.DON_GIA_BUOI_HOC] = 0;
+
+            //v_ds_dm_lop_mon.DM_LOP_MON.Rows.InsertAt(v_dr, 0);
+
+            m_cbo_lop.DataSource = v_ds_dm_lop_mon.DM_LOP_MON;
+            m_cbo_lop.DisplayMember = DM_LOP_MON.MO_TA;
+            m_cbo_lop.ValueMember = DM_LOP_MON.ID;
+
+            //m_cbo_nhap_vao_lop_mon.SelectedIndex = 0;
+        }
 
         private void us_object2grid(US_EXCEL_IMPORT_HOC_VIEN i_us
             , int i_grid_row) {
@@ -584,43 +627,6 @@ namespace BKI_QLTTQuocAnh {
             m_obj_trans.DataRow2GridRow(v_dr, i_grid_row);
         }
 
-        private void load_data_2_ds_dm_lop() {
-            US_DM_LOP_MON v_us = new US_DM_LOP_MON();
-            string v_str_filter = "where TRANG_THAI_LOP_MON = " + CONST_TRANG_THAI_LOP_MON.DANG_HOAT_DONG;
-            m_ds_dm_lop_mon.Clear();
-            m_ds_dm_lop_mon.EnforceConstraints = false;
-            v_us.FillDataset(m_ds_dm_lop_mon, v_str_filter);
-        }
-        private void load_data_to_sle_lop() {
-            load_data_2_ds_dm_lop();
-
-            //Chinh hien thi nguoi dung
-            m_sle_lop.Properties.DataSource = m_ds_dm_lop_mon.DM_LOP_MON;
-            m_sle_lop.Properties.DisplayMember = DM_LOP_MON.MO_TA;
-            m_sle_lop.Properties.ValueMember = DM_LOP_MON.ID;
-
-            m_sle_lop.Properties.PopulateViewColumns();
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.ID].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.ID_LOP].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.ID_MON].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.TRANG_THAI_LOP_MON].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.DON_GIA_BUOI_HOC].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.TONG_TIEN_KHOA_HOC].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.TONG_SO_BUOI_HOC].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.THOI_GIAN_HOC_TO_DATE].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.THOI_GIAN_HOC_FROM_DATE].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.GHI_CHU].Visible = false;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.ID_TRO_GIANG].Visible = false;
-
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.MO_TA].Width = 300;
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.MA_LOP_MON].Width = 150;
-
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.MA_LOP_MON].Caption = "Mã lớp";
-            m_sle_lop.Properties.View.Columns[DM_LOP_MON.MO_TA].Caption = "Chọn tên lớp";
-
-            m_sle_lop.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            m_sle_lop.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
-        }
 
         private void insert_excel_import_hoc_vien() {
             //	f300_import_ds_hoc_vien_DE v_fDE = new  f300_import_ds_hoc_vien_DE();								
@@ -680,14 +686,15 @@ namespace BKI_QLTTQuocAnh {
                     m_lbl_loading_mes.Visible = true;
                     CExcelReport v_excel_rpt = new CExcelReport(m_ofd_exel_file.FileName);
 
-                    //m_ds.EnforceConstraints = false;
+                    m_ds.EnforceConstraints = false;
                     v_excel_rpt.Export2DatasetDS_by_DucVT(v_ds, v_ds.EXCEL_IMPORT_HOC_VIEN.TableName, 2);
 
                     m_fg.Redraw = false;
+
                     //Gán DataSource
                     //m_fg.DataSource = m_ds.DM_NHAN_SU;
-                    gridControl1.DataSource = v_ds.EXCEL_IMPORT_HOC_VIEN;
 
+                    CGridUtils.Dataset2C1Grid(v_ds, m_fg, m_obj_trans);
                     m_fg.Redraw = true;
                     m_lbl_loading_mes.Visible = false;
 
@@ -697,8 +704,29 @@ namespace BKI_QLTTQuocAnh {
                 }
             }
         }
-       
+        private void excel_2_us_dm_hoc_vien(US_EXCEL_IMPORT_HOC_VIEN ip_us_excel, US_DM_HOC_SINH ip_us_hv) {
+            ip_us_hv.dcID_LOAI_DOI_TUONG = CONST_ID_LOAI_DOI_TUONG.ID_HOC_SINH;
+            ip_us_hv.strMA_DOI_TUONG = ip_us_excel.strMA_HOC_VIEN;
+            ip_us_hv.strHO = ip_us_excel.strHO;
+            ip_us_hv.strTEN = ip_us_excel.strTEN;
+            ip_us_hv.strTRUONG_DANG_HOC = ip_us_excel.strTRUONG_DANG_HOC;
+            ip_us_hv.strEMAIL_HS = ip_us_excel.strEMAIL;
+            ip_us_hv.strDIA_CHI = ip_us_excel.strQUE_QUAN;
+            ip_us_hv.strSDT_HS = ip_us_excel.strSĐT;
+            ip_us_hv.datNGAY_SINH = ip_us_excel.datNGAY_SINH;
+            ip_us_hv.strFACEBOOK = ip_us_excel.strFACEBOOK;
+            ip_us_hv.strDELETE_YN = "N";
+        }
+        private bool is_check_exist(string ma_hoc_sinh, DS_DM_HOC_SINH ip_ds_dm_hs){
+            string filter = "ma_doi_tuong = '"+ ma_hoc_sinh+"'";
+            DataRow[] v_dr = ip_ds_dm_hs.DM_HOC_SINH.Select(filter);
 
+            if (v_dr.Length == 0)
+            {
+                return false;
+            }
+            return true;
+        }
         private void kiem_tra_du_lieu(DS_EXCEL_IMPORT_HOC_VIEN ip_ds) {
             m_flag_du_lieu_is_ok = true;
             CellStyle v_style_not_ok = m_fg.Styles.Add("LoiDuLieu");
@@ -707,10 +735,9 @@ namespace BKI_QLTTQuocAnh {
             v_style_ok_ma_hv.BackColor = Color.DeepSkyBlue;
             CellStyle v_style_ok = m_fg.Styles.Add("OK");
             v_style_ok.BackColor = Color.White;
-
-            //CHECK NULL
+            //Buoc 1: Check null
             for(int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++) {
-                for(int j = m_fg.Cols.Fixed; j < 5; j++) {
+                for(int j = m_fg.Cols.Fixed; j < 6; j++) {
                     if(m_fg.Rows[i][j] == null || m_fg.Rows[i][j].ToString() == "") {
                         m_fg.SetCellStyle(i, j, v_style_not_ok);
                         m_flag_du_lieu_is_ok = false;
@@ -720,12 +747,59 @@ namespace BKI_QLTTQuocAnh {
                     }
                 }
             }
-            if(m_flag_du_lieu_is_ok == true) {
-                BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
+            //check trung ma doi tuong
+            //DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
+            //US_V_GD_HOC v_us = new US_V_GD_HOC();
+            DS_DM_HOC_SINH v_ds_hs = new DS_DM_HOC_SINH();
+            US_DM_HOC_SINH v_us_hs = new US_DM_HOC_SINH();
+
+            v_us_hs.FillDataset(v_ds_hs);
+            decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+            for (int i = m_fg.Rows.Fixed; i < m_fg.Rows.Count; i++)
+            {
+                string v_ma_hv = m_fg.Rows[i][(int)e_col_Number.MA_HOC_VIEN].ToString();
+                if(is_check_exist(v_ma_hv, v_ds_hs))
+                {
+                    BaseMessages.MsgBox_Error("Mã học viên ở dòng " + i + " đã tồn tại, hãy kiểm tra lại");
+                    m_flag_du_lieu_is_ok = false;
+                    return;
+                }
             }
-            else {
-                BaseMessages.MsgBox_Infor("Dữ liệu bị lỗi");
-            }
+            //Dua ra m_flag
+                if (m_flag_du_lieu_is_ok == true)
+                {
+                    BaseMessages.MsgBox_Infor("Đã kiểm tra xong");
+                }
+                else
+                {
+                    BaseMessages.MsgBox_Infor("Dữ liệu bị lỗi");
+                }
+            //Buoc 2
+            //DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
+            //US_V_GD_HOC v_us = new US_V_GD_HOC();
+            //v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
+
+            //for (int i_cur_row = m_fg.Rows.Fixed; i_cur_row < m_fg.Rows.Count -1; i_cur_row++)
+            //{
+            //    //Kiem tra neu co trong gd_hoc roi thi to mau xanh, khong thi de nguyen
+            //    //Cai to mau xanh thi sao?
+            //    string v_ma_hv = m_fg.Rows[i_cur_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
+            //    decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+
+            //  if (is_check_exist(v_id_lop, v_ma_hv, v_ds))
+            //    {
+            //        //m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
+            //        m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
+            //    }
+            //    else
+            //    {
+            //        //to mau trang - khi kiem tra lai ma no dung thi phai chuyen mau                  
+            //        //m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok_ma_hv);
+            //        m_fg.SetCellStyle(i_cur_row, (int)e_col_Number.MA_HOC_VIEN, v_style_ok);
+            //    }
+            //}          
+
+            
         }
         #endregion
 
@@ -735,7 +809,11 @@ namespace BKI_QLTTQuocAnh {
         //
         //
         private void set_define_events() {
-
+            m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
+            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
+            m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
+            m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
+            m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
             m_cmd_chon_file_excel.Click += m_cmd_chon_file_excel_Click;
             m_llbl_mau_import.Click += m_llbl_mau_import_Click;
             m_cmd_save_data.Click += m_cmd_save_data_Click;
@@ -753,46 +831,50 @@ namespace BKI_QLTTQuocAnh {
 
         void m_cmd_save_data_Click(object sender, EventArgs e) {
             try {
-                if(m_flag_du_lieu_is_ok == false) {
+                if (m_flag_du_lieu_is_ok == false)
+                {
                     BaseMessages.MsgBox_Error("Bạn kiểm tra dữ liệu trước nhé!");
                     return;
                 }
 
                 US_DM_HOC_SINH v_us_hv = new US_DM_HOC_SINH();
                 US_GD_HOC v_us_gd_hoc = new US_GD_HOC();
-
-                v_us_gd_hoc.BeginTransaction();
-                for(int i_grid_row = 0; i_grid_row < gridView1.DataRowCount - 1; i_grid_row++) {
-                    //1. Insert vao DM_HOC_SINH
+                //v_us_hv_gd_hoc.UseTransOfUSObject( //use transaction cua thang hoc_sinh
+                DS_V_GD_HOC v_ds = new DS_V_GD_HOC();
+                US_V_GD_HOC v_us = new US_V_GD_HOC();
+                v_us.FillDataset(v_ds, "where trang_thai_yn = 'Y'");
+                v_us_hv.BeginTransaction();
+                for(int i_grid_row = m_fg.Rows.Fixed; i_grid_row < m_fg.Rows.Count; i_grid_row++) {
+                    //1.0 du lieu trung thi ko add nua
                     
-                    v_us_hv.dcID_LOAI_DOI_TUONG = CONST_ID_LOAI_DOI_TUONG.ID_HOC_SINH;
-                    v_us_hv.strMA_DOI_TUONG = gridView1.GetDataRow(i_grid_row)[EXCEL_IMPORT_HOC_VIEN.MA_HOC_VIEN].ToString();
-                    v_us_hv.strHO = gridView1.GetDataRow(i_grid_row)[EXCEL_IMPORT_HOC_VIEN.HO].ToString();
-                    v_us_hv.strTEN = gridView1.GetDataRow(i_grid_row)[EXCEL_IMPORT_HOC_VIEN.TEN].ToString();
-                    v_us_hv.strTRUONG_DANG_HOC = gridView1.GetDataRow(i_grid_row)[EXCEL_IMPORT_HOC_VIEN.TRUONG_DANG_HOC].ToString();
-                    v_us_hv.strEMAIL_HS = gridView1.GetDataRow(i_grid_row)[EXCEL_IMPORT_HOC_VIEN.EMAIL].ToString();
-                    v_us_hv.strDIA_CHI = gridView1.GetDataRow(i_grid_row)[EXCEL_IMPORT_HOC_VIEN.QUE_QUAN].ToString();
-                    v_us_hv.strSDT_HS = gridView1.GetDataRow(i_grid_row)[EXCEL_IMPORT_HOC_VIEN.SĐT].ToString();
-                    v_us_hv.datNGAY_SINH = DateTime.Parse(gridView1.GetDataRow(i_grid_row)[EXCEL_IMPORT_HOC_VIEN.NGAY_SINH].ToString());
-                    v_us_hv.strFACEBOOK = gridView1.GetDataRow(i_grid_row)[EXCEL_IMPORT_HOC_VIEN.FACEBOOK].ToString();
-                    v_us_hv.strDELETE_YN = "N";
-                    v_us_hv.UseTransOfUSObject(v_us_gd_hoc);
+                    
+                    string v_ma_hv = m_fg.Rows[i_grid_row][(int)e_col_Number.MA_HOC_VIEN].ToString();
+                    decimal v_id_lop = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
+                    
+                    
+                    //1.1 day du lieu vao hv
+                    grid2us_object(m_us, i_grid_row);
+                    excel_2_us_dm_hoc_vien(m_us, v_us_hv);
+                    //1.2 insert
+                    //Anh phai mo trấnction
+                    
                     v_us_hv.Insert();
-                    //2. Insert GD_HOC
+                    //v_us_hv.Insert();
+                    //2.1 su dung transaction cua hv
                     v_us_gd_hoc.dcID_HOC_SINH = v_us_hv.dcID;
-                    v_us_gd_hoc.dcID_LOP_MON = CIPConvert.ToDecimal(m_sle_lop.EditValue);
+                    v_us_gd_hoc.dcID_LOP_MON = CIPConvert.ToDecimal(m_cbo_lop.SelectedValue);
                     v_us_gd_hoc.strTRANG_THAI_YN = "Y";
                     v_us_gd_hoc.datNGAY_BAT_DAU = DateTime.Now.Date;
                     v_us_gd_hoc.UseTransOfUSObject(v_us_hv);
-
+                    //2.2 day du lieu vao us_gd_hoc 
+                    //2.3 insert
                     v_us_gd_hoc.Insert();
-                    //3. clear du lieu de insert moi
-
+                    //3.1 clear du lieu de insert moi
                     v_us_hv.ClearAllFields();
                     v_us_gd_hoc.ClearAllFields();
-
+                    
                 }
-                v_us_gd_hoc.CommitTransaction();
+                v_us_hv.CommitTransaction();
                 BaseMessages.MsgBox_Infor("Lưu dữ liệu học viên thành công");
             }
             catch(Exception v_e) {
@@ -875,24 +957,14 @@ namespace BKI_QLTTQuocAnh {
             }
         }
 
-        private void m_cmd_insert_row_Click(object sender, EventArgs e) {
+        private void simpleButton1_Click(object sender, EventArgs e) {
             try {
-                gridView1.AddNewRow();
+                m_fg.Rows.Remove(m_fg.Row);
             }
             catch(Exception v_e) {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
-        private void m_cmd_delete_row_Click(object sender, EventArgs e) {
-            try {
-                gridView1.DeleteRow(gridView1.FocusedRowHandle);
-            }
-            catch(Exception v_e) {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
-
 
     }
 }
