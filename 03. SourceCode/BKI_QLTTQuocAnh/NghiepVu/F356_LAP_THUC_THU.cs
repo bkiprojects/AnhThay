@@ -388,7 +388,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 switch(m_e_form_mode) {
                     case DataEntryFormMode.InsertDataState:
                     m_us_gd_phieu_thu.BeginTransaction();
-                    m_us_gd_phieu_thu.DeleteHocPhiHocVienLop(m_us_gd_phieu_thu.dcID_GD_HOC);
+                    //m_us_gd_phieu_thu.DeleteHocPhiHocVienLop(m_us_gd_phieu_thu.dcID_GD_HOC);
                     m_us_gd_phieu_thu.Insert();
                     m_us_gd_phieu_thu.CommitTransaction();
                     DialogResult v_dlg = XtraMessageBox.Show("Bạn có muốn nhập phiếu thực thu mới?", "THÀNH CÔNG", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
