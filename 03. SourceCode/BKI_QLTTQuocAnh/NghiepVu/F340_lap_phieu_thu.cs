@@ -817,7 +817,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_us_gd_phieu_thu.datNGAY_THU = m_dat_ngay_thu.Value.Date;
             m_us_gd_phieu_thu.datNGAY_NHAP = m_dat_ngay_nhap.Value.Date;
             m_us_gd_phieu_thu.strTEN_NGUOI_NOP_TIEN = m_txt_ten_nguoi_nop_tien.Text.Trim();
-            m_us_gd_phieu_thu.dcID_HOC_SINH = m_us_v_hoc_sinh.dcID;
+            //m_us_gd_phieu_thu.dcID_HOC_SINH = m_us_v_hoc_sinh.dcID;
             m_us_gd_phieu_thu.dcID_NGUOI_THU = CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue);
             m_us_gd_phieu_thu.dcID_NGUOI_NHAP = CIPConvert.ToDecimal(m_cbo_nhan_vien_nhap.SelectedValue);
             m_us_gd_phieu_thu.strNOI_DUNG = m_txt_noi_dung.Text.Trim();
