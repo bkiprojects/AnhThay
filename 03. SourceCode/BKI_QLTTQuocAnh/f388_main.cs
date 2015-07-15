@@ -660,5 +660,22 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void m_cmd_ban_giao_hp_gt_theo_lop_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f361_ban_giao_hoc_phi_giam_tru_theo_lop v_frm = new f361_ban_giao_hoc_phi_giam_tru_theo_lop();
+
+                if (IsExistFormName(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }

@@ -64,6 +64,7 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_so_phieu_thu = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_tim_ma_lon_nhat = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -78,12 +79,12 @@
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.m_cmd_tim_ma_lon_nhat = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_ban_giao_hp_gt_theo_lop = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
@@ -129,9 +130,10 @@
             this.barButtonItem2,
             this.barButtonItem3,
             this.m_cmd_so_phieu_thu,
-            this.m_cmd_tim_ma_lon_nhat});
+            this.m_cmd_tim_ma_lon_nhat,
+            this.m_cmd_ban_giao_hp_gt_theo_lop});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 42;
+            this.ribbon.MaxItemId = 43;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -453,6 +455,16 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.m_cmd_so_phieu_thu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_so_phieu_thu_ItemClick);
             // 
+            // m_cmd_tim_ma_lon_nhat
+            // 
+            this.m_cmd_tim_ma_lon_nhat.Caption = "Mã học viên tiếp theo";
+            this.m_cmd_tim_ma_lon_nhat.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_tim_ma_lon_nhat.Glyph")));
+            this.m_cmd_tim_ma_lon_nhat.Id = 41;
+            this.m_cmd_tim_ma_lon_nhat.Name = "m_cmd_tim_ma_lon_nhat";
+            this.m_cmd_tim_ma_lon_nhat.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_tim_ma_lon_nhat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_tim_ma_lon_nhat_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -526,6 +538,7 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_phai_thu_tu_dong);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_giam_tru);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_lap_thuc_thu);
+            this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_ban_giao_hp_gt_theo_lop);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_ban_giao_tien);
             this.ribbonPageGroup6.ItemLinks.Add(this.m_cmd_ds_phieu);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
@@ -573,6 +586,18 @@
             this.ribbonPageGroup8.Text = "Theo lớp môn";
             this.ribbonPageGroup8.Visible = false;
             // 
+            // ribbonPage5
+            // 
+            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup10});
+            this.ribbonPage5.Name = "ribbonPage5";
+            this.ribbonPage5.Text = "TRA CỨU";
+            // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.m_cmd_tim_ma_lon_nhat);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
@@ -592,27 +617,15 @@
             // 
             this.MdiManager.MdiParent = this;
             // 
-            // ribbonPage5
+            // m_cmd_ban_giao_hp_gt_theo_lop
             // 
-            this.ribbonPage5.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup10});
-            this.ribbonPage5.Name = "ribbonPage5";
-            this.ribbonPage5.Text = "TRA CỨU";
-            // 
-            // ribbonPageGroup10
-            // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.m_cmd_tim_ma_lon_nhat);
-            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
-            // 
-            // m_cmd_tim_ma_lon_nhat
-            // 
-            this.m_cmd_tim_ma_lon_nhat.Caption = "Mã học viên tiếp theo";
-            this.m_cmd_tim_ma_lon_nhat.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_tim_ma_lon_nhat.Glyph")));
-            this.m_cmd_tim_ma_lon_nhat.Id = 41;
-            this.m_cmd_tim_ma_lon_nhat.Name = "m_cmd_tim_ma_lon_nhat";
-            this.m_cmd_tim_ma_lon_nhat.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.m_cmd_ban_giao_hp_gt_theo_lop.Caption = "Bàn giao học phí, giảm trừ theo lớp";
+            this.m_cmd_ban_giao_hp_gt_theo_lop.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_ban_giao_hp_gt_theo_lop.Glyph")));
+            this.m_cmd_ban_giao_hp_gt_theo_lop.Id = 42;
+            this.m_cmd_ban_giao_hp_gt_theo_lop.Name = "m_cmd_ban_giao_hp_gt_theo_lop";
+            this.m_cmd_ban_giao_hp_gt_theo_lop.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.m_cmd_tim_ma_lon_nhat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_tim_ma_lon_nhat_ItemClick);
+            this.m_cmd_ban_giao_hp_gt_theo_lop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_ban_giao_hp_gt_theo_lop_ItemClick);
             // 
             // f388_main
             // 
@@ -693,5 +706,6 @@
         private DevExpress.XtraBars.BarButtonItem m_cmd_tim_ma_lon_nhat;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_ban_giao_hp_gt_theo_lop;
     }
 }

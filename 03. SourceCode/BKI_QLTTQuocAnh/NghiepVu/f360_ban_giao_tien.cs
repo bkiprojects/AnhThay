@@ -251,9 +251,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_fg.DoubleClick += m_fg_DoubleClick;
         }
 
-        
-     
-
         void m_fg_DoubleClick(object sender, EventArgs e) {
             try {
                 US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
