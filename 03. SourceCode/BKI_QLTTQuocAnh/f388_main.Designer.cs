@@ -65,6 +65,7 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_so_phieu_thu = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_tim_ma_lon_nhat = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_ban_giao_hp_gt_theo_lop = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -84,7 +85,7 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.m_cmd_ban_giao_hp_gt_theo_lop = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
@@ -131,9 +132,10 @@
             this.barButtonItem3,
             this.m_cmd_so_phieu_thu,
             this.m_cmd_tim_ma_lon_nhat,
-            this.m_cmd_ban_giao_hp_gt_theo_lop});
+            this.m_cmd_ban_giao_hp_gt_theo_lop,
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 43;
+            this.ribbon.MaxItemId = 44;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -465,6 +467,16 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.m_cmd_tim_ma_lon_nhat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_tim_ma_lon_nhat_ItemClick);
             // 
+            // m_cmd_ban_giao_hp_gt_theo_lop
+            // 
+            this.m_cmd_ban_giao_hp_gt_theo_lop.Caption = "Bàn giao học phí, giảm trừ theo lớp";
+            this.m_cmd_ban_giao_hp_gt_theo_lop.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_ban_giao_hp_gt_theo_lop.Glyph")));
+            this.m_cmd_ban_giao_hp_gt_theo_lop.Id = 42;
+            this.m_cmd_ban_giao_hp_gt_theo_lop.Name = "m_cmd_ban_giao_hp_gt_theo_lop";
+            this.m_cmd_ban_giao_hp_gt_theo_lop.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_ban_giao_hp_gt_theo_lop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_ban_giao_hp_gt_theo_lop_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -565,6 +577,7 @@
             this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_tai_chinh_lm);
             this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_tai_chinh_lm_hs);
             this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_thuc_thu_nv);
+            this.ribbonPageGroup11.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "Báo cáo tổng";
             // 
@@ -617,15 +630,15 @@
             // 
             this.MdiManager.MdiParent = this;
             // 
-            // m_cmd_ban_giao_hp_gt_theo_lop
+            // m_cmd_bao_cao_luy_ke_theo_thang_theo_lop
             // 
-            this.m_cmd_ban_giao_hp_gt_theo_lop.Caption = "Bàn giao học phí, giảm trừ theo lớp";
-            this.m_cmd_ban_giao_hp_gt_theo_lop.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_ban_giao_hp_gt_theo_lop.Glyph")));
-            this.m_cmd_ban_giao_hp_gt_theo_lop.Id = 42;
-            this.m_cmd_ban_giao_hp_gt_theo_lop.Name = "m_cmd_ban_giao_hp_gt_theo_lop";
-            this.m_cmd_ban_giao_hp_gt_theo_lop.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Caption = "Tình hình đóng tiền theo lớp, theo tháng";
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Glyph")));
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Id = 43;
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Name = "m_cmd_bao_cao_luy_ke_theo_thang_theo_lop";
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.m_cmd_ban_giao_hp_gt_theo_lop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_ban_giao_hp_gt_theo_lop_ItemClick);
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop_ItemClick);
             // 
             // f388_main
             // 
@@ -707,5 +720,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.BarButtonItem m_cmd_ban_giao_hp_gt_theo_lop;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_bao_cao_luy_ke_theo_thang_theo_lop;
     }
 }

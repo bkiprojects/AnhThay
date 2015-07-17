@@ -207,5 +207,16 @@ namespace BKI_QLTTQuocAnh.DS.Properties {
                 return ((string)(this["AnhThayConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=HAIHD\\SQLEXPRESS2;Initial Catalog=AnhThay;Persist Security Info=True;" +
+            "User ID=sa;Password=sa")]
+        public string AnhThayConnectionString1 {
+            get {
+                return ((string)(this["AnhThayConnectionString1"]));
+            }
+        }
     }
 }

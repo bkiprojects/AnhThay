@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" targetNamespace="http://tempuri.org/DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.xsd" xmlns:mstns="http://tempuri.org/DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.xsd" xmlns="http://tempuri.org/DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AnhThayConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AnhThayConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.AnhThayConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGTableAdapter" GeneratorDataComponentClassName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGTableAdapter" Name="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" UserDataComponentName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AnhThayConnectionString1 (Settings)" DbObjectName="AnhThay.dbo.V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_LOP_MON, MA_LOP_MON, TEN_LOP_MON, TIEN_PHAI_THU, TIEN_GIAM_TRU, CAN_PHAI_THU, TIEN_THUC_THU, CON_PHAI_THU, PHAN_TRAM_HOAN_THANH, THOI_GIAN_HOC_FROM_DATE, NGAY_KET_THUC_THANG_1, TIEN_THUC_THU_LUY_KE_THANG_1, NGAY_KET_THUC_THANG_2, TIEN_THUC_THU_LUY_KE_THANG_2, NGAY_KET_THUC_THANG_3, TIEN_THUC_THU_LUY_KE_THANG_3, NGAY_KET_THUC_THANG_4, TIEN_THUC_THU_LUY_KE_THANG_4, NGAY_KET_THUC_THANG_5, TIEN_THUC_THU_LUY_KE_THANG_5 FROM dbo.V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_LOP_MON" DataSetColumn="ID_LOP_MON" />
+              <Mapping SourceColumn="MA_LOP_MON" DataSetColumn="MA_LOP_MON" />
+              <Mapping SourceColumn="TEN_LOP_MON" DataSetColumn="TEN_LOP_MON" />
+              <Mapping SourceColumn="TIEN_PHAI_THU" DataSetColumn="TIEN_PHAI_THU" />
+              <Mapping SourceColumn="TIEN_GIAM_TRU" DataSetColumn="TIEN_GIAM_TRU" />
+              <Mapping SourceColumn="CAN_PHAI_THU" DataSetColumn="CAN_PHAI_THU" />
+              <Mapping SourceColumn="TIEN_THUC_THU" DataSetColumn="TIEN_THUC_THU" />
+              <Mapping SourceColumn="CON_PHAI_THU" DataSetColumn="CON_PHAI_THU" />
+              <Mapping SourceColumn="PHAN_TRAM_HOAN_THANH" DataSetColumn="PHAN_TRAM_HOAN_THANH" />
+              <Mapping SourceColumn="THOI_GIAN_HOC_FROM_DATE" DataSetColumn="THOI_GIAN_HOC_FROM_DATE" />
+              <Mapping SourceColumn="NGAY_KET_THUC_THANG_1" DataSetColumn="NGAY_KET_THUC_THANG_1" />
+              <Mapping SourceColumn="TIEN_THUC_THU_LUY_KE_THANG_1" DataSetColumn="TIEN_THUC_THU_LUY_KE_THANG_1" />
+              <Mapping SourceColumn="NGAY_KET_THUC_THANG_2" DataSetColumn="NGAY_KET_THUC_THANG_2" />
+              <Mapping SourceColumn="TIEN_THUC_THU_LUY_KE_THANG_2" DataSetColumn="TIEN_THUC_THU_LUY_KE_THANG_2" />
+              <Mapping SourceColumn="NGAY_KET_THUC_THANG_3" DataSetColumn="NGAY_KET_THUC_THANG_3" />
+              <Mapping SourceColumn="TIEN_THUC_THU_LUY_KE_THANG_3" DataSetColumn="TIEN_THUC_THU_LUY_KE_THANG_3" />
+              <Mapping SourceColumn="NGAY_KET_THUC_THANG_4" DataSetColumn="NGAY_KET_THUC_THANG_4" />
+              <Mapping SourceColumn="TIEN_THUC_THU_LUY_KE_THANG_4" DataSetColumn="TIEN_THUC_THU_LUY_KE_THANG_4" />
+              <Mapping SourceColumn="NGAY_KET_THUC_THANG_5" DataSetColumn="NGAY_KET_THUC_THANG_5" />
+              <Mapping SourceColumn="TIEN_THUC_THU_LUY_KE_THANG_5" DataSetColumn="TIEN_THUC_THU_LUY_KE_THANG_5" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" msprop:Generator_UserDSName="DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" msprop:Generator_TableClassName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGDataTable" msprop:Generator_TableVarName="tableV_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" msprop:Generator_TablePropName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" msprop:Generator_RowDeletingName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGRowDeleting" msprop:Generator_RowChangingName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGRowChanging" msprop:Generator_RowEvHandlerName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGRowChangeEventHandler" msprop:Generator_RowDeletedName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGRowDeleted" msprop:Generator_UserTableName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" msprop:Generator_RowChangedName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGRowChanged" msprop:Generator_RowEvArgName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGRowChangeEvent" msprop:Generator_RowClassName="V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANGRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnID_LOP_MON" msprop:Generator_ColumnPropNameInRow="ID_LOP_MON" msprop:Generator_ColumnPropNameInTable="ID_LOP_MONColumn" msprop:Generator_UserColumnName="ID_LOP_MON" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MA_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnMA_LOP_MON" msprop:Generator_ColumnPropNameInRow="MA_LOP_MON" msprop:Generator_ColumnPropNameInTable="MA_LOP_MONColumn" msprop:Generator_UserColumnName="MA_LOP_MON" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEN_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnTEN_LOP_MON" msprop:Generator_ColumnPropNameInRow="TEN_LOP_MON" msprop:Generator_ColumnPropNameInTable="TEN_LOP_MONColumn" msprop:Generator_UserColumnName="TEN_LOP_MON" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIEN_PHAI_THU" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIEN_PHAI_THU" msprop:Generator_ColumnPropNameInRow="TIEN_PHAI_THU" msprop:Generator_ColumnPropNameInTable="TIEN_PHAI_THUColumn" msprop:Generator_UserColumnName="TIEN_PHAI_THU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TIEN_GIAM_TRU" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIEN_GIAM_TRU" msprop:Generator_ColumnPropNameInRow="TIEN_GIAM_TRU" msprop:Generator_ColumnPropNameInTable="TIEN_GIAM_TRUColumn" msprop:Generator_UserColumnName="TIEN_GIAM_TRU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CAN_PHAI_THU" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAN_PHAI_THU" msprop:Generator_ColumnPropNameInRow="CAN_PHAI_THU" msprop:Generator_ColumnPropNameInTable="CAN_PHAI_THUColumn" msprop:Generator_UserColumnName="CAN_PHAI_THU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TIEN_THUC_THU" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIEN_THUC_THU" msprop:Generator_ColumnPropNameInRow="TIEN_THUC_THU" msprop:Generator_ColumnPropNameInTable="TIEN_THUC_THUColumn" msprop:Generator_UserColumnName="TIEN_THUC_THU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CON_PHAI_THU" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCON_PHAI_THU" msprop:Generator_ColumnPropNameInRow="CON_PHAI_THU" msprop:Generator_ColumnPropNameInTable="CON_PHAI_THUColumn" msprop:Generator_UserColumnName="CON_PHAI_THU" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PHAN_TRAM_HOAN_THANH" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPHAN_TRAM_HOAN_THANH" msprop:Generator_ColumnPropNameInRow="PHAN_TRAM_HOAN_THANH" msprop:Generator_ColumnPropNameInTable="PHAN_TRAM_HOAN_THANHColumn" msprop:Generator_UserColumnName="PHAN_TRAM_HOAN_THANH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="THOI_GIAN_HOC_FROM_DATE" msprop:Generator_ColumnVarNameInTable="columnTHOI_GIAN_HOC_FROM_DATE" msprop:Generator_ColumnPropNameInRow="THOI_GIAN_HOC_FROM_DATE" msprop:Generator_ColumnPropNameInTable="THOI_GIAN_HOC_FROM_DATEColumn" msprop:Generator_UserColumnName="THOI_GIAN_HOC_FROM_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NGAY_KET_THUC_THANG_1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNGAY_KET_THUC_THANG_1" msprop:Generator_ColumnPropNameInRow="NGAY_KET_THUC_THANG_1" msprop:Generator_ColumnPropNameInTable="NGAY_KET_THUC_THANG_1Column" msprop:Generator_UserColumnName="NGAY_KET_THUC_THANG_1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIEN_THUC_THU_LUY_KE_THANG_1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIEN_THUC_THU_LUY_KE_THANG_1" msprop:Generator_ColumnPropNameInRow="TIEN_THUC_THU_LUY_KE_THANG_1" msprop:Generator_ColumnPropNameInTable="TIEN_THUC_THU_LUY_KE_THANG_1Column" msprop:Generator_UserColumnName="TIEN_THUC_THU_LUY_KE_THANG_1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NGAY_KET_THUC_THANG_2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNGAY_KET_THUC_THANG_2" msprop:Generator_ColumnPropNameInRow="NGAY_KET_THUC_THANG_2" msprop:Generator_ColumnPropNameInTable="NGAY_KET_THUC_THANG_2Column" msprop:Generator_UserColumnName="NGAY_KET_THUC_THANG_2" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIEN_THUC_THU_LUY_KE_THANG_2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIEN_THUC_THU_LUY_KE_THANG_2" msprop:Generator_ColumnPropNameInRow="TIEN_THUC_THU_LUY_KE_THANG_2" msprop:Generator_ColumnPropNameInTable="TIEN_THUC_THU_LUY_KE_THANG_2Column" msprop:Generator_UserColumnName="TIEN_THUC_THU_LUY_KE_THANG_2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NGAY_KET_THUC_THANG_3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNGAY_KET_THUC_THANG_3" msprop:Generator_ColumnPropNameInRow="NGAY_KET_THUC_THANG_3" msprop:Generator_ColumnPropNameInTable="NGAY_KET_THUC_THANG_3Column" msprop:Generator_UserColumnName="NGAY_KET_THUC_THANG_3" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIEN_THUC_THU_LUY_KE_THANG_3" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIEN_THUC_THU_LUY_KE_THANG_3" msprop:Generator_ColumnPropNameInRow="TIEN_THUC_THU_LUY_KE_THANG_3" msprop:Generator_ColumnPropNameInTable="TIEN_THUC_THU_LUY_KE_THANG_3Column" msprop:Generator_UserColumnName="TIEN_THUC_THU_LUY_KE_THANG_3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NGAY_KET_THUC_THANG_4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNGAY_KET_THUC_THANG_4" msprop:Generator_ColumnPropNameInRow="NGAY_KET_THUC_THANG_4" msprop:Generator_ColumnPropNameInTable="NGAY_KET_THUC_THANG_4Column" msprop:Generator_UserColumnName="NGAY_KET_THUC_THANG_4" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIEN_THUC_THU_LUY_KE_THANG_4" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIEN_THUC_THU_LUY_KE_THANG_4" msprop:Generator_ColumnPropNameInRow="TIEN_THUC_THU_LUY_KE_THANG_4" msprop:Generator_ColumnPropNameInTable="TIEN_THUC_THU_LUY_KE_THANG_4Column" msprop:Generator_UserColumnName="TIEN_THUC_THU_LUY_KE_THANG_4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NGAY_KET_THUC_THANG_5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNGAY_KET_THUC_THANG_5" msprop:Generator_ColumnPropNameInRow="NGAY_KET_THUC_THANG_5" msprop:Generator_ColumnPropNameInTable="NGAY_KET_THUC_THANG_5Column" msprop:Generator_UserColumnName="NGAY_KET_THUC_THANG_5" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TIEN_THUC_THU_LUY_KE_THANG_5" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTIEN_THUC_THU_LUY_KE_THANG_5" msprop:Generator_ColumnPropNameInRow="TIEN_THUC_THU_LUY_KE_THANG_5" msprop:Generator_ColumnPropNameInTable="TIEN_THUC_THU_LUY_KE_THANG_5Column" msprop:Generator_UserColumnName="TIEN_THUC_THU_LUY_KE_THANG_5" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG" />
+      <xs:field xpath="mstns:ID_LOP_MON" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

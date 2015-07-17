@@ -756,4 +756,29 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TEN_NGUOI_THU = "TEN_NGUOI_THU";
         public const string SO_TIEN = "SO_TIEN";
     }
+
+    public class V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG
+    {
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string TEN_LOP_MON = "TEN_LOP_MON";
+        public const string TIEN_PHAI_THU = "TIEN_PHAI_THU";
+        public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
+        public const string CAN_PHAI_THU = "CAN_PHAI_THU";
+        public const string TIEN_THUC_THU = "TIEN_THUC_THU";
+        public const string CON_PHAI_THU = "CON_PHAI_THU";
+        public const string PHAN_TRAM_HOAN_THANH = "PHAN_TRAM_HOAN_THANH";
+        public const string THOI_GIAN_HOC_FROM_DATE = "THOI_GIAN_HOC_FROM_DATE";
+        public const string NGAY_KET_THUC_THANG_1 = "NGAY_KET_THUC_THANG_1";
+        public const string TIEN_THUC_THU_LUY_KE_THANG_1 = "TIEN_THUC_THU_LUY_KE_THANG_1";
+        public const string NGAY_KET_THUC_THANG_2 = "NGAY_KET_THUC_THANG_2";
+        public const string TIEN_THUC_THU_LUY_KE_THANG_2 = "TIEN_THUC_THU_LUY_KE_THANG_2";
+        public const string NGAY_KET_THUC_THANG_3 = "NGAY_KET_THUC_THANG_3";
+        public const string TIEN_THUC_THU_LUY_KE_THANG_3 = "TIEN_THUC_THU_LUY_KE_THANG_3";
+        public const string NGAY_KET_THUC_THANG_4 = "NGAY_KET_THUC_THANG_4";
+        public const string TIEN_THUC_THU_LUY_KE_THANG_4 = "TIEN_THUC_THU_LUY_KE_THANG_4";
+        public const string NGAY_KET_THUC_THANG_5 = "NGAY_KET_THUC_THANG_5";
+        public const string TIEN_THUC_THU_LUY_KE_THANG_5 = "TIEN_THUC_THU_LUY_KE_THANG_5";
+    }
+
 }

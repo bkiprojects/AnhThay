@@ -157,6 +157,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_F340_LOP_MON_CUA_HS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_GD_HOC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -514,6 +519,17 @@
     </None>
     <None Include="DS_V_F340_LOP_MON_CUA_HS.xss">
       <DependentUpon>DS_V_F340_LOP_MON_CUA_HS.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.xsc">
+      <DependentUpon>DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.xss">
+      <DependentUpon>DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.xsd</DependentUpon>
     </None>
     <None Include="DS_V_GD_HOC.xsc">
       <DependentUpon>DS_V_GD_HOC.xsd</DependentUpon>

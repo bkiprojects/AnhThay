@@ -677,5 +677,22 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void m_cmd_bao_cao_luy_ke_theo_thang_theo_lop_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f500_bao_cao_luy_ke_theo_lop_theo_thang v_frm = new f500_bao_cao_luy_ke_theo_lop_theo_thang();
+
+                if (IsExistFormName(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }
