@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f211_dm_lop_mon_de));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_txt_hoc_phi = new DevExpress.XtraEditors.TextEdit();
             this.m_dat_thoi_gian_end = new System.Windows.Forms.DateTimePicker();
             this.m_dat_thoi_gian_start = new System.Windows.Forms.DateTimePicker();
             this.m_lbl_thoi_gian_end = new System.Windows.Forms.Label();
@@ -44,10 +45,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_luu = new SIS.Controls.Button.SiSButton();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_txt_hoc_phi = new DevExpress.XtraEditors.TextEdit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_hoc_phi.Properties)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,6 +69,19 @@
             this.panel1.Size = new System.Drawing.Size(343, 250);
             this.panel1.TabIndex = 0;
             // 
+            // m_txt_hoc_phi
+            // 
+            this.m_txt_hoc_phi.EditValue = "";
+            this.m_txt_hoc_phi.Location = new System.Drawing.Point(106, 94);
+            this.m_txt_hoc_phi.Name = "m_txt_hoc_phi";
+            this.m_txt_hoc_phi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.m_txt_hoc_phi.Properties.Appearance.Options.UseFont = true;
+            this.m_txt_hoc_phi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_hoc_phi.Properties.Mask.EditMask = "n0";
+            this.m_txt_hoc_phi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.m_txt_hoc_phi.Size = new System.Drawing.Size(197, 26);
+            this.m_txt_hoc_phi.TabIndex = 6;
+            // 
             // m_dat_thoi_gian_end
             // 
             this.m_dat_thoi_gian_end.CustomFormat = "dd/MM/yyyy";
@@ -85,7 +98,7 @@
             this.m_dat_thoi_gian_start.Location = new System.Drawing.Point(106, 129);
             this.m_dat_thoi_gian_start.Name = "m_dat_thoi_gian_start";
             this.m_dat_thoi_gian_start.Size = new System.Drawing.Size(196, 20);
-            this.m_dat_thoi_gian_start.TabIndex = 9;
+            this.m_dat_thoi_gian_start.TabIndex = 8;
             // 
             // m_lbl_thoi_gian_end
             // 
@@ -93,7 +106,7 @@
             this.m_lbl_thoi_gian_end.Location = new System.Drawing.Point(12, 168);
             this.m_lbl_thoi_gian_end.Name = "m_lbl_thoi_gian_end";
             this.m_lbl_thoi_gian_end.Size = new System.Drawing.Size(72, 13);
-            this.m_lbl_thoi_gian_end.TabIndex = 8;
+            this.m_lbl_thoi_gian_end.TabIndex = 9;
             this.m_lbl_thoi_gian_end.Text = "Thời gian end";
             // 
             // m_lbl_thoi_gian_start
@@ -208,19 +221,6 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
-            // m_txt_hoc_phi
-            // 
-            this.m_txt_hoc_phi.EditValue = "";
-            this.m_txt_hoc_phi.Location = new System.Drawing.Point(106, 94);
-            this.m_txt_hoc_phi.Name = "m_txt_hoc_phi";
-            this.m_txt_hoc_phi.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.m_txt_hoc_phi.Properties.Appearance.Options.UseFont = true;
-            this.m_txt_hoc_phi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_txt_hoc_phi.Properties.Mask.EditMask = "n0";
-            this.m_txt_hoc_phi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.m_txt_hoc_phi.Size = new System.Drawing.Size(197, 26);
-            this.m_txt_hoc_phi.TabIndex = 17;
-            // 
             // f211_dm_lop_mon_de
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,8 +232,8 @@
             this.Text = "F211 - Danh mục lớp môn";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_hoc_phi.Properties)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

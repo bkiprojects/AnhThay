@@ -990,12 +990,6 @@ namespace BKI_QLTTQuocAnh
         }
 
 
-
-
-
-
-
-
         public WinControlContainer CopyGridControl(GridControl grid) {
             WinControlContainer winContainer = new WinControlContainer();
 
