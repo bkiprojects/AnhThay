@@ -807,4 +807,14 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TIEN_THUC_THU_LUY_KE_THANG_5 = "TIEN_THUC_THU_LUY_KE_THANG_5";
     }
 
+    public class V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY
+    {
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string TEN_LOP_MON = "TEN_LOP_MON";
+        public const string TIEN_PHAI_THU = "TIEN_PHAI_THU";
+        public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
+        public const string TIEN_THUC_THU = "TIEN_THUC_THU";
+    }
+
 }

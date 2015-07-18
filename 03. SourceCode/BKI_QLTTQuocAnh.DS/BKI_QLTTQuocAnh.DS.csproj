@@ -167,6 +167,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_V_F510_BAO_CAO_LUY_KE_THEO_LOP_THEO_HOC_SINH_THEO_THANG.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_V_GD_HOC.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -546,6 +551,17 @@
     </None>
     <None Include="DS_V_F510_BAO_CAO_LUY_KE_THEO_LOP_THEO_HOC_SINH_THEO_THANG.xss">
       <DependentUpon>DS_V_F510_BAO_CAO_LUY_KE_THEO_LOP_THEO_HOC_SINH_THEO_THANG.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY.xsc">
+      <DependentUpon>DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY.xsd</DependentUpon>
+    </None>
+    <None Include="DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY.xss">
+      <DependentUpon>DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY.xsd</DependentUpon>
     </None>
     <None Include="DS_V_GD_HOC.xsc">
       <DependentUpon>DS_V_GD_HOC.xsd</DependentUpon>

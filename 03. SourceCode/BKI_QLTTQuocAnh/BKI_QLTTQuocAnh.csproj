@@ -334,6 +334,9 @@
     <Compile Include="DanhMuc\frm_so_phieu_thu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f520_bao_cao_thuc_thu_giam_tru_theo_ngay.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HeThong\collection.cs" />
     <Compile Include="HeThong\f306_HT_USER_GROUP.cs">
       <SubType>Form</SubType>
@@ -566,6 +569,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\frm_so_phieu_thu.resx">
       <DependentUpon>frm_so_phieu_thu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f520_bao_cao_thuc_thu_giam_tru_theo_ngay.resx">
+      <DependentUpon>f520_bao_cao_thuc_thu_giam_tru_theo_ngay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\f306_HT_USER_GROUP.resx">
       <DependentUpon>f306_HT_USER_GROUP.cs</DependentUpon>

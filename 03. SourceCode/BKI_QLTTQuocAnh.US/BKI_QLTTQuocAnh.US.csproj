@@ -73,6 +73,7 @@
     <Compile Include="US_V_F340_LOP_MON_CUA_HS.cs" />
     <Compile Include="US_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG.cs" />
     <Compile Include="US_V_F510_BAO_CAO_LUY_KE_THEO_LOP_THEO_HOC_SINH_THEO_THANG.cs" />
+    <Compile Include="US_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY.cs" />
     <Compile Include="US_V_GD_HOC.cs" />
     <Compile Include="US_V_GD_PHIEU_THU.cs" />
     <Compile Include="US_V_HOC_SINH.cs" />

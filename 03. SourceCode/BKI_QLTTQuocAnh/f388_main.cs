@@ -711,5 +711,22 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
+        private void m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                f520_bao_cao_thuc_thu_giam_tru_theo_ngay v_frm = new f520_bao_cao_thuc_thu_giam_tru_theo_ngay();
+
+                if (IsExistFormName(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
     }
 }

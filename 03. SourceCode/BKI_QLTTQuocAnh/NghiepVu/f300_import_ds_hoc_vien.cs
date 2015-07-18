@@ -962,7 +962,7 @@ namespace BKI_QLTTQuocAnh {
                 if (BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắn muốn xóa hàng này không?") == DialogResult.Yes)
                 {
                     m_fg.Rows.Remove(m_fg.Row);
-                    BaseMessages.MsgBox_Infor("Đã xóa thành công hàng vừa chọn!!!")
+                    BaseMessages.MsgBox_Infor("Đã xóa thành công hàng vừa chọn!!!");
                 }
             }
             catch(Exception v_e) {

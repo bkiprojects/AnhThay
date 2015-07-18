@@ -355,5 +355,16 @@ namespace BKI_QLTTQuocAnh.US
             v_csp.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
             v_csp.fillDataSetByCommand(this, v_ds);
         }
+
+        public void FillPhieuTheoLopThoiGian(DataSet v_ds, decimal ip_dc_id_lop_mon, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay)
+        {
+            CStoredProc v_csp = new CStoredProc("Pr_danh_sach_phieu_theo_lop_theo_thoi_gian");
+
+            v_csp.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+            v_csp.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
+            v_csp.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
+
+            v_csp.fillDataSetByCommand(this, v_ds);
+        }
     }
 }
