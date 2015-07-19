@@ -60,12 +60,12 @@
             // 
             this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 134);
+            this.gridControl.Location = new System.Drawing.Point(0, 98);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit});
-            this.gridControl.Size = new System.Drawing.Size(931, 265);
+            this.gridControl.Size = new System.Drawing.Size(968, 374);
             this.gridControl.TabIndex = 5;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -245,7 +245,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 134);
+            this.panel1.Size = new System.Drawing.Size(968, 98);
             this.panel1.TabIndex = 11;
             // 
             // panelControl2
@@ -253,9 +253,9 @@
             this.panelControl2.Controls.Add(this.m_cmd_exit);
             this.panelControl2.Controls.Add(this.m_cmd_insert);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl2.Location = new System.Drawing.Point(0, 366);
+            this.panelControl2.Location = new System.Drawing.Point(0, 423);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(931, 33);
+            this.panelControl2.Size = new System.Drawing.Size(968, 49);
             this.panelControl2.TabIndex = 27;
             // 
             // m_cmd_exit
@@ -267,9 +267,9 @@
             this.m_cmd_exit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_exit.ImageIndex = 12;
             this.m_cmd_exit.ImageList = this.ImageList;
-            this.m_cmd_exit.Location = new System.Drawing.Point(245, 2);
+            this.m_cmd_exit.Location = new System.Drawing.Point(2, 2);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(117, 29);
+            this.m_cmd_exit.Size = new System.Drawing.Size(117, 45);
             this.m_cmd_exit.TabIndex = 1;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Visible = false;
@@ -280,15 +280,14 @@
             this.m_cmd_insert.BackColor = System.Drawing.Color.White;
             this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
             this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Left;
             this.m_cmd_insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_cmd_insert.ForeColor = System.Drawing.Color.Maroon;
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 13;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(2, 2);
+            this.m_cmd_insert.Location = new System.Drawing.Point(12, 5);
             this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(243, 29);
+            this.m_cmd_insert.Size = new System.Drawing.Size(248, 40);
             this.m_cmd_insert.TabIndex = 0;
             this.m_cmd_insert.Text = "&Chuyển học viên đã chọn";
             this.m_cmd_insert.UseVisualStyleBackColor = false;
@@ -298,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 399);
+            this.ClientSize = new System.Drawing.Size(968, 472);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.gridControl);
             this.Controls.Add(this.panel1);
