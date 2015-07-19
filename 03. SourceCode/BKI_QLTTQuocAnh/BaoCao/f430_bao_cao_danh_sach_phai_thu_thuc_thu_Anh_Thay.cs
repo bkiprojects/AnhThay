@@ -317,9 +317,9 @@ namespace BKI_QLTTQuocAnh
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 105);
+            this.m_fg.Location = new System.Drawing.Point(0, 103);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1257, 377);
+            this.m_fg.Size = new System.Drawing.Size(1257, 379);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             this.m_fg.Visible = false;
@@ -346,7 +346,7 @@ namespace BKI_QLTTQuocAnh
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1257, 105);
+            this.panel2.Size = new System.Drawing.Size(1257, 103);
             this.panel2.TabIndex = 0;
             // 
             // m_cmd_xuat_excel
@@ -565,12 +565,12 @@ namespace BKI_QLTTQuocAnh
             // 
             this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 105);
+            this.gridControl.Location = new System.Drawing.Point(0, 103);
             this.gridControl.MainView = this.gridView2;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl.Size = new System.Drawing.Size(1257, 377);
+            this.gridControl.Size = new System.Drawing.Size(1257, 379);
             this.gridControl.TabIndex = 16;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -664,8 +664,6 @@ namespace BKI_QLTTQuocAnh
             this.SO_TIEN.FieldName = "SO_TIEN";
             this.SO_TIEN.Name = "SO_TIEN";
             this.SO_TIEN.OptionsColumn.AllowEdit = false;
-            this.SO_TIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", "{0:n0}")});
             this.SO_TIEN.Visible = true;
             this.SO_TIEN.VisibleIndex = 5;
             this.SO_TIEN.Width = 83;

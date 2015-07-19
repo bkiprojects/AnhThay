@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f370_chuyen_lop_cho_hoc_vien));
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,7 +42,7 @@
             this.m_lbl_ma_hoc_sinh = new System.Windows.Forms.Label();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
-            this.ImageList = new System.Windows.Forms.ImageList();
+            this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.m_txt_tong_tien = new System.Windows.Forms.TextBox();
             this.m_lbl_tong_tien = new System.Windows.Forms.Label();
@@ -61,12 +62,14 @@
             this.NGUOI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_sle_lop_2 = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label2 = new System.Windows.Forms.Label();
             this.m_lbl_buoc_2 = new System.Windows.Forms.Label();
+            this.TIEN_GIAM_TRU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TIEN_PHAI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -394,10 +397,13 @@
             this.TEN_HOC_VIEN,
             this.NGUOI_THU,
             this.TEN_LOP_MON,
+            this.TIEN_PHAI_THU,
+            this.TIEN_GIAM_TRU,
             this.TIEN_THUC_THU,
             this.ID});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
+            this.gridView.OptionsView.ShowFooter = true;
             this.gridView.OptionsView.ShowGroupPanel = false;
             // 
             // NGAY_THU
@@ -474,17 +480,14 @@
             // 
             this.TIEN_THUC_THU.Caption = "Tiền thực thu";
             this.TIEN_THUC_THU.FieldName = "TIEN_THUC_THU";
+            this.TIEN_THUC_THU.MaxWidth = 100;
             this.TIEN_THUC_THU.Name = "TIEN_THUC_THU";
             this.TIEN_THUC_THU.OptionsColumn.AllowEdit = false;
+            this.TIEN_THUC_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TIEN_THUC_THU", "{0:n0}")});
             this.TIEN_THUC_THU.Visible = true;
-            this.TIEN_THUC_THU.VisibleIndex = 7;
-            this.TIEN_THUC_THU.Width = 215;
-            // 
-            // ID
-            // 
-            this.ID.Caption = "ID";
-            this.ID.FieldName = "ID";
-            this.ID.Name = "ID";
+            this.TIEN_THUC_THU.VisibleIndex = 9;
+            this.TIEN_THUC_THU.Width = 100;
             // 
             // repositoryItemCheckEdit
             // 
@@ -492,6 +495,12 @@
             this.repositoryItemCheckEdit.Caption = "Check";
             this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
             this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
+            // ID
+            // 
+            this.ID.Caption = "ID";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
             // 
             // m_sle_lop_2
             // 
@@ -532,6 +541,31 @@
             this.m_lbl_buoc_2.TabIndex = 6;
             this.m_lbl_buoc_2.Text = "Bước 2";
             this.m_lbl_buoc_2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // TIEN_GIAM_TRU
+            // 
+            this.TIEN_GIAM_TRU.Caption = "Tiền giảm trừ";
+            this.TIEN_GIAM_TRU.FieldName = "TIEN_GIAM_TRU";
+            this.TIEN_GIAM_TRU.MaxWidth = 100;
+            this.TIEN_GIAM_TRU.Name = "TIEN_GIAM_TRU";
+            this.TIEN_GIAM_TRU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TIEN_GIAM_TRU", "{0:n0}")});
+            this.TIEN_GIAM_TRU.Visible = true;
+            this.TIEN_GIAM_TRU.VisibleIndex = 8;
+            this.TIEN_GIAM_TRU.Width = 100;
+            // 
+            // TIEN_PHAI_THU
+            // 
+            this.TIEN_PHAI_THU.Caption = "Học phí";
+            this.TIEN_PHAI_THU.FieldName = "TIEN_PHAI_THU";
+            this.TIEN_PHAI_THU.MaxWidth = 100;
+            this.TIEN_PHAI_THU.Name = "TIEN_PHAI_THU";
+            this.TIEN_PHAI_THU.OptionsColumn.AllowEdit = false;
+            this.TIEN_PHAI_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TIEN_PHAI_THU", "{0:n0}")});
+            this.TIEN_PHAI_THU.Visible = true;
+            this.TIEN_PHAI_THU.VisibleIndex = 7;
+            this.TIEN_PHAI_THU.Width = 100;
             // 
             // f370_chuyen_lop_cho_hoc_vien
             // 
@@ -605,5 +639,7 @@
         public System.Windows.Forms.Label m_lbl_ten_hs;
         private System.Windows.Forms.Label m_lbl_buoc_1;
         private System.Windows.Forms.Label m_lbl_buoc_2;
+        private DevExpress.XtraGrid.Columns.GridColumn TIEN_PHAI_THU;
+        private DevExpress.XtraGrid.Columns.GridColumn TIEN_GIAM_TRU;
     }
 }
