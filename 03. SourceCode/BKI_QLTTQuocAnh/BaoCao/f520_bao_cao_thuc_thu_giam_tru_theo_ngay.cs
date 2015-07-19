@@ -523,7 +523,7 @@ namespace BKI_QLTTQuocAnh
         {
             m_obj_trans = get_trans_object(m_fg);
             load_data_to_sle_lop();
-            m_dat_tu_ngay.Value = DateTime.Now.AddDays(-1);
+            //m_dat_tu_ngay.Value = DateTime.Now.AddDays(-1);
             load_data_2_grid();
         }
 
@@ -732,6 +732,7 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
+
         private void f520_bao_cao_thuc_thu_giam_tru_theo_ngay_Load(object sender, System.EventArgs e)
         {
             try
