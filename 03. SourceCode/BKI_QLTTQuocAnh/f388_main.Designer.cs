@@ -68,6 +68,7 @@
             this.m_cmd_ban_giao_hp_gt_theo_lop = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop = new DevExpress.XtraBars.BarButtonItem();
             this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang = new DevExpress.XtraBars.BarButtonItem();
+            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -87,7 +88,6 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
@@ -504,6 +504,16 @@
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang_ItemClick);
             // 
+            // m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay
+            // 
+            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Caption = "Tình hình thực thu, giảm trừ theo ngày";
+            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Glyph")));
+            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Id = 45;
+            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Name = "m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay";
+            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -656,16 +666,6 @@
             // MdiManager
             // 
             this.MdiManager.MdiParent = this;
-            // 
-            // m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay
-            // 
-            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Caption = "Tình hình thực thu, giảm trù theo ngày";
-            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Glyph")));
-            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Id = 45;
-            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Name = "m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay";
-            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay_ItemClick);
             // 
             // f388_main
             // 
