@@ -57,6 +57,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_GIAM_TRU;
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_THUC_THU;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
         private System.ComponentModel.IContainer components;
 
         public f520_bao_cao_thuc_thu_giam_tru_theo_ngay()
@@ -122,6 +123,7 @@ namespace BKI_QLTTQuocAnh
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.TIEN_GIAM_TRU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -384,6 +386,7 @@ namespace BKI_QLTTQuocAnh
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ID_LOP_MON,
+            this.STT,
             this.TEN_LOP_MON,
             this.TIEN_PHAI_THU,
             this.TIEN_GIAM_TRU,
@@ -413,7 +416,8 @@ namespace BKI_QLTTQuocAnh
             this.TEN_LOP_MON.FieldName = "TEN_LOP_MON";
             this.TEN_LOP_MON.Name = "TEN_LOP_MON";
             this.TEN_LOP_MON.Visible = true;
-            this.TEN_LOP_MON.VisibleIndex = 0;
+            this.TEN_LOP_MON.VisibleIndex = 1;
+            this.TEN_LOP_MON.Width = 252;
             // 
             // TIEN_PHAI_THU
             // 
@@ -424,7 +428,8 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_PHAI_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TIEN_PHAI_THU", "{0:n0}")});
             this.TIEN_PHAI_THU.Visible = true;
-            this.TIEN_PHAI_THU.VisibleIndex = 1;
+            this.TIEN_PHAI_THU.VisibleIndex = 2;
+            this.TIEN_PHAI_THU.Width = 252;
             // 
             // repositoryItemTextEdit1
             // 
@@ -443,7 +448,8 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_GIAM_TRU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TIEN_GIAM_TRU", "{0:n0}")});
             this.TIEN_GIAM_TRU.Visible = true;
-            this.TIEN_GIAM_TRU.VisibleIndex = 2;
+            this.TIEN_GIAM_TRU.VisibleIndex = 3;
+            this.TIEN_GIAM_TRU.Width = 252;
             // 
             // TIEN_THUC_THU
             // 
@@ -454,7 +460,17 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TIEN_THUC_THU", "{0:n0}")});
             this.TIEN_THUC_THU.Visible = true;
-            this.TIEN_THUC_THU.VisibleIndex = 3;
+            this.TIEN_THUC_THU.VisibleIndex = 4;
+            this.TIEN_THUC_THU.Width = 258;
+            // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 38;
             // 
             // f520_bao_cao_thuc_thu_giam_tru_theo_ngay
             // 
@@ -588,6 +604,8 @@ namespace BKI_QLTTQuocAnh
             //m_fg.Redraw = false;
             //CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             //m_fg.Redraw = true;
+            make_stt();
+
             DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY v_ds = new DS_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY();
             US_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY v_us = new US_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY();
 
@@ -618,6 +636,20 @@ namespace BKI_QLTTQuocAnh
             //CGridUtils.MakeSoTT(0, m_fg);
             //m_fg.Redraw = true;
             gridControl1.DataSource = v_ds.Tables[0];
+        }
+
+        private void make_stt()
+        {
+            var col = gridView2.Columns.Add();
+            col.FieldName = "STT";
+            col.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            gridView2.CustomUnboundColumnData += gridView2_CustomUnboundColumnData;
+        }
+
+        private void gridView2_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.IsGetData)
+                e.Value = e.ListSourceRowIndex + 1;
         }
 
         private void grid2us_object(US_V_F520_BAO_CAO_THUC_THU_GIAM_TRU_THEO_NGAY i_us

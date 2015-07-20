@@ -1,5 +1,5 @@
 ﻿namespace BKI_QLTTQuocAnh.BaoCao {
-    partial class frm_bao_cao_so_giao_dich_theo_lop {
+    partial class f411_bao_cao_so_giao_dich_theo_lop {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_bao_cao_so_giao_dich_theo_lop));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f411_bao_cao_so_giao_dich_theo_lop));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -48,6 +48,7 @@
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -103,6 +104,7 @@
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ID,
             this.ID_HOC_SINH,
+            this.STT,
             this.HO,
             this.TEN,
             this.HO_TEN,
@@ -142,7 +144,8 @@
             this.HO.FieldName = "HO";
             this.HO.Name = "HO";
             this.HO.Visible = true;
-            this.HO.VisibleIndex = 0;
+            this.HO.VisibleIndex = 1;
+            this.HO.Width = 100;
             // 
             // TEN
             // 
@@ -150,7 +153,8 @@
             this.TEN.FieldName = "TEN";
             this.TEN.Name = "TEN";
             this.TEN.Visible = true;
-            this.TEN.VisibleIndex = 1;
+            this.TEN.VisibleIndex = 2;
+            this.TEN.Width = 80;
             // 
             // HO_TEN
             // 
@@ -167,8 +171,8 @@
             this.HOC_PHI.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "HOC_PHI", "{0:n0}")});
             this.HOC_PHI.Visible = true;
-            this.HOC_PHI.VisibleIndex = 2;
-            this.HOC_PHI.Width = 138;
+            this.HOC_PHI.VisibleIndex = 3;
+            this.HOC_PHI.Width = 140;
             // 
             // repositoryItemTextEdit1
             // 
@@ -187,8 +191,8 @@
             this.GIAM_TRU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GIAM_TRU", "{0:n0}")});
             this.GIAM_TRU.Visible = true;
-            this.GIAM_TRU.VisibleIndex = 3;
-            this.GIAM_TRU.Width = 138;
+            this.GIAM_TRU.VisibleIndex = 4;
+            this.GIAM_TRU.Width = 140;
             // 
             // CON_PHAI_THU
             // 
@@ -199,8 +203,8 @@
             this.CON_PHAI_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CON_PHAI_THU", "{0:n0}")});
             this.CON_PHAI_THU.Visible = true;
-            this.CON_PHAI_THU.VisibleIndex = 4;
-            this.CON_PHAI_THU.Width = 138;
+            this.CON_PHAI_THU.VisibleIndex = 5;
+            this.CON_PHAI_THU.Width = 140;
             // 
             // THUC_THU
             // 
@@ -211,8 +215,8 @@
             this.THUC_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "THUC_THU", "{0:n0}")});
             this.THUC_THU.Visible = true;
-            this.THUC_THU.VisibleIndex = 5;
-            this.THUC_THU.Width = 138;
+            this.THUC_THU.VisibleIndex = 6;
+            this.THUC_THU.Width = 140;
             // 
             // CHENH_LECH
             // 
@@ -223,8 +227,8 @@
             this.CHENH_LECH.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CHENH_LECH", "{0:n0}")});
             this.CHENH_LECH.Visible = true;
-            this.CHENH_LECH.VisibleIndex = 6;
-            this.CHENH_LECH.Width = 144;
+            this.CHENH_LECH.VisibleIndex = 7;
+            this.CHENH_LECH.Width = 140;
             // 
             // imageList1
             // 
@@ -340,7 +344,16 @@
             this.panel2.Size = new System.Drawing.Size(953, 38);
             this.panel2.TabIndex = 6;
             // 
-            // frm_bao_cao_so_giao_dich_theo_lop
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 38;
+            // 
+            // f411_bao_cao_so_giao_dich_theo_lop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -348,8 +361,8 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frm_bao_cao_so_giao_dich_theo_lop";
-            this.Text = "F444 - Báo cáo sổ giao dịch theo lớp";
+            this.Name = "f411_bao_cao_so_giao_dich_theo_lop";
+            this.Text = "F411 - Báo cáo sổ giao dịch theo lớp";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
@@ -387,6 +400,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn CHENH_LECH;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
 
     }
 }

@@ -80,6 +80,7 @@ namespace BKI_QLTTQuocAnh
         internal SIS.Controls.Button.SiSButton m_cmd_xuat_excel;
         private SimpleButton simpleButton1;
         private DevExpress.XtraGrid.Columns.GridColumn NGAY_NHAP;
+        private DevExpress.XtraGrid.Columns.GridColumn STT;
         private System.ComponentModel.IContainer components;
         #endregion
 
@@ -175,6 +176,7 @@ namespace BKI_QLTTQuocAnh
             this.LAN_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TRANG_THAI_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NGAY_NHAP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -579,6 +581,7 @@ namespace BKI_QLTTQuocAnh
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.ID,
+            this.STT,
             this.TEN_LOAI_PHIEU_THU,
             this.MA_SO_QUYEN,
             this.SO_PHIEU,
@@ -615,8 +618,8 @@ namespace BKI_QLTTQuocAnh
             this.TEN_LOAI_PHIEU_THU.Name = "TEN_LOAI_PHIEU_THU";
             this.TEN_LOAI_PHIEU_THU.OptionsColumn.AllowEdit = false;
             this.TEN_LOAI_PHIEU_THU.Visible = true;
-            this.TEN_LOAI_PHIEU_THU.VisibleIndex = 0;
-            this.TEN_LOAI_PHIEU_THU.Width = 116;
+            this.TEN_LOAI_PHIEU_THU.VisibleIndex = 1;
+            this.TEN_LOAI_PHIEU_THU.Width = 111;
             // 
             // MA_SO_QUYEN
             // 
@@ -625,8 +628,8 @@ namespace BKI_QLTTQuocAnh
             this.MA_SO_QUYEN.Name = "MA_SO_QUYEN";
             this.MA_SO_QUYEN.OptionsColumn.AllowEdit = false;
             this.MA_SO_QUYEN.Visible = true;
-            this.MA_SO_QUYEN.VisibleIndex = 1;
-            this.MA_SO_QUYEN.Width = 59;
+            this.MA_SO_QUYEN.VisibleIndex = 2;
+            this.MA_SO_QUYEN.Width = 56;
             // 
             // SO_PHIEU
             // 
@@ -635,8 +638,8 @@ namespace BKI_QLTTQuocAnh
             this.SO_PHIEU.Name = "SO_PHIEU";
             this.SO_PHIEU.OptionsColumn.AllowEdit = false;
             this.SO_PHIEU.Visible = true;
-            this.SO_PHIEU.VisibleIndex = 2;
-            this.SO_PHIEU.Width = 70;
+            this.SO_PHIEU.VisibleIndex = 3;
+            this.SO_PHIEU.Width = 67;
             // 
             // NGAY_THU
             // 
@@ -645,8 +648,8 @@ namespace BKI_QLTTQuocAnh
             this.NGAY_THU.Name = "NGAY_THU";
             this.NGAY_THU.OptionsColumn.AllowEdit = false;
             this.NGAY_THU.Visible = true;
-            this.NGAY_THU.VisibleIndex = 3;
-            this.NGAY_THU.Width = 102;
+            this.NGAY_THU.VisibleIndex = 4;
+            this.NGAY_THU.Width = 98;
             // 
             // HO_TEN
             // 
@@ -654,8 +657,8 @@ namespace BKI_QLTTQuocAnh
             this.HO_TEN.FieldName = "HO_TEN";
             this.HO_TEN.Name = "HO_TEN";
             this.HO_TEN.Visible = true;
-            this.HO_TEN.VisibleIndex = 4;
-            this.HO_TEN.Width = 157;
+            this.HO_TEN.VisibleIndex = 5;
+            this.HO_TEN.Width = 152;
             // 
             // SO_TIEN
             // 
@@ -665,8 +668,8 @@ namespace BKI_QLTTQuocAnh
             this.SO_TIEN.Name = "SO_TIEN";
             this.SO_TIEN.OptionsColumn.AllowEdit = false;
             this.SO_TIEN.Visible = true;
-            this.SO_TIEN.VisibleIndex = 5;
-            this.SO_TIEN.Width = 83;
+            this.SO_TIEN.VisibleIndex = 6;
+            this.SO_TIEN.Width = 80;
             // 
             // repositoryItemTextEdit1
             // 
@@ -683,8 +686,8 @@ namespace BKI_QLTTQuocAnh
             this.NOI_DUNG.Name = "NOI_DUNG";
             this.NOI_DUNG.OptionsColumn.AllowEdit = false;
             this.NOI_DUNG.Visible = true;
-            this.NOI_DUNG.VisibleIndex = 6;
-            this.NOI_DUNG.Width = 138;
+            this.NOI_DUNG.VisibleIndex = 7;
+            this.NOI_DUNG.Width = 133;
             // 
             // MA_DOI_TUONG
             // 
@@ -693,8 +696,8 @@ namespace BKI_QLTTQuocAnh
             this.MA_DOI_TUONG.Name = "MA_DOI_TUONG";
             this.MA_DOI_TUONG.OptionsColumn.AllowEdit = false;
             this.MA_DOI_TUONG.Visible = true;
-            this.MA_DOI_TUONG.VisibleIndex = 7;
-            this.MA_DOI_TUONG.Width = 52;
+            this.MA_DOI_TUONG.VisibleIndex = 8;
+            this.MA_DOI_TUONG.Width = 50;
             // 
             // TEN_NSD
             // 
@@ -703,8 +706,8 @@ namespace BKI_QLTTQuocAnh
             this.TEN_NSD.Name = "TEN_NSD";
             this.TEN_NSD.OptionsColumn.AllowEdit = false;
             this.TEN_NSD.Visible = true;
-            this.TEN_NSD.VisibleIndex = 8;
-            this.TEN_NSD.Width = 124;
+            this.TEN_NSD.VisibleIndex = 9;
+            this.TEN_NSD.Width = 119;
             // 
             // TEN_LOP
             // 
@@ -712,8 +715,8 @@ namespace BKI_QLTTQuocAnh
             this.TEN_LOP.FieldName = "TEN_LOP";
             this.TEN_LOP.Name = "TEN_LOP";
             this.TEN_LOP.Visible = true;
-            this.TEN_LOP.VisibleIndex = 9;
-            this.TEN_LOP.Width = 67;
+            this.TEN_LOP.VisibleIndex = 10;
+            this.TEN_LOP.Width = 64;
             // 
             // LAN_THU
             // 
@@ -721,8 +724,8 @@ namespace BKI_QLTTQuocAnh
             this.LAN_THU.FieldName = "LAN_THU";
             this.LAN_THU.Name = "LAN_THU";
             this.LAN_THU.Visible = true;
-            this.LAN_THU.VisibleIndex = 10;
-            this.LAN_THU.Width = 44;
+            this.LAN_THU.VisibleIndex = 11;
+            this.LAN_THU.Width = 42;
             // 
             // TRANG_THAI_PHIEU
             // 
@@ -730,8 +733,8 @@ namespace BKI_QLTTQuocAnh
             this.TRANG_THAI_PHIEU.FieldName = "TRANG_THAI_PHIEU";
             this.TRANG_THAI_PHIEU.Name = "TRANG_THAI_PHIEU";
             this.TRANG_THAI_PHIEU.Visible = true;
-            this.TRANG_THAI_PHIEU.VisibleIndex = 11;
-            this.TRANG_THAI_PHIEU.Width = 126;
+            this.TRANG_THAI_PHIEU.VisibleIndex = 12;
+            this.TRANG_THAI_PHIEU.Width = 121;
             // 
             // NGAY_NHAP
             // 
@@ -739,8 +742,17 @@ namespace BKI_QLTTQuocAnh
             this.NGAY_NHAP.FieldName = "NGAY_NHAP";
             this.NGAY_NHAP.Name = "NGAY_NHAP";
             this.NGAY_NHAP.Visible = true;
-            this.NGAY_NHAP.VisibleIndex = 12;
-            this.NGAY_NHAP.Width = 101;
+            this.NGAY_NHAP.VisibleIndex = 13;
+            this.NGAY_NHAP.Width = 108;
+            // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 38;
             // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay
             // 
@@ -1008,6 +1020,8 @@ namespace BKI_QLTTQuocAnh
         {
             //DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2 v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2();
             //US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2 v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2();
+            make_stt();
+
             DataSet v_ds = new DataSet();
             v_ds.Tables.Add();
             US_GD_PHIEU_THU v_us = new US_GD_PHIEU_THU();
@@ -1030,6 +1044,20 @@ namespace BKI_QLTTQuocAnh
             }
 
             gridControl.DataSource = gridControl.DataSource = v_ds.Tables[0];
+        }
+
+        private void make_stt()
+        {
+            var col = gridView2.Columns.Add();
+            col.FieldName = "STT";
+            col.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            gridView2.CustomUnboundColumnData += gridView2_CustomUnboundColumnData;
+        }
+
+        private void gridView2_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            if (e.IsGetData)
+                e.Value = e.ListSourceRowIndex + 1;
         }
 
         private void grid2us_object(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
@@ -1402,7 +1430,6 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
-
         public WinControlContainer CopyGridControl(GridControl grid)
         {
             WinControlContainer winContainer = new WinControlContainer();
@@ -1413,6 +1440,7 @@ namespace BKI_QLTTQuocAnh
             winContainer.WinControl = grid;
             return winContainer;
         }
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             try

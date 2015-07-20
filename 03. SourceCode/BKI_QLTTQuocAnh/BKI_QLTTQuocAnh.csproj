@@ -31,7 +31,7 @@
     <SuiteName>Dummy</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>58</ApplicationRevision>
+    <ApplicationRevision>60</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -288,11 +288,11 @@
     <Compile Include="BaoCao\f510_bao_cao_luy_ke_theo_lop_theo_hoc_sinh_theo_thang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao\frm_bao_cao_so_giao_dich_theo_lop.cs">
+    <Compile Include="BaoCao\f411_bao_cao_so_giao_dich_theo_lop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao\frm_bao_cao_so_giao_dich_theo_lop.Designer.cs">
-      <DependentUpon>frm_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
+    <Compile Include="BaoCao\f411_bao_cao_so_giao_dich_theo_lop.Designer.cs">
+      <DependentUpon>f411_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
     </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f210_dm_lop_mon.cs">
@@ -540,8 +540,8 @@
     <EmbeddedResource Include="BaoCao\f510_bao_cao_luy_ke_theo_lop_theo_hoc_sinh_theo_thang.resx">
       <DependentUpon>f510_bao_cao_luy_ke_theo_lop_theo_hoc_sinh_theo_thang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\frm_bao_cao_so_giao_dich_theo_lop.resx">
-      <DependentUpon>frm_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
+    <EmbeddedResource Include="BaoCao\f411_bao_cao_so_giao_dich_theo_lop.resx">
+      <DependentUpon>f411_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f210_dm_lop_mon.resx">
       <DependentUpon>f210_dm_lop_mon.cs</DependentUpon>
