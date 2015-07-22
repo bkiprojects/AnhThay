@@ -23,6 +23,9 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 
 using C1.Win.C1FlexGrid;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraGrid;
+using BKI_QLTTQuocAnh.RPT;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -58,6 +61,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_GIAM_TRU;
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_THUC_THU;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.ComponentModel.IContainer components;
 
         public f520_bao_cao_thuc_thu_giam_tru_theo_ngay()
@@ -118,12 +122,13 @@ namespace BKI_QLTTQuocAnh
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_PHAI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.TIEN_GIAM_TRU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -163,6 +168,7 @@ namespace BKI_QLTTQuocAnh
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.simpleButton1);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
@@ -410,6 +416,15 @@ namespace BKI_QLTTQuocAnh
             this.ID_LOP_MON.FieldName = "ID_LOP_MON";
             this.ID_LOP_MON.Name = "ID_LOP_MON";
             // 
+            // STT
+            // 
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 38;
+            // 
             // TEN_LOP_MON
             // 
             this.TEN_LOP_MON.Caption = "Tên lớp";
@@ -463,14 +478,16 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU.VisibleIndex = 4;
             this.TIEN_THUC_THU.Width = 258;
             // 
-            // STT
+            // simpleButton1
             // 
-            this.STT.Caption = "STT";
-            this.STT.FieldName = "STT";
-            this.STT.Name = "STT";
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 0;
-            this.STT.Width = 38;
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(92, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 28);
+            this.simpleButton1.TabIndex = 6;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // f520_bao_cao_thuc_thu_giam_tru_theo_ngay
             // 
@@ -853,6 +870,37 @@ namespace BKI_QLTTQuocAnh
             }
         }
 
+        public WinControlContainer CopyGridControl(GridControl grid)
+        {
+            WinControlContainer winContainer = new WinControlContainer();
+
+            winContainer.Location = new Point(0, 0);
+            winContainer.Size = new Size(200, 100);
+
+            winContainer.WinControl = grid;
+            return winContainer;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var r = new rpt_f520_bc_tt_gt_theo_ngay();
+
+                r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
+                r.xrLabel_TuNgay.Text = m_dat_tu_ngay.Value.Date.ToShortDateString();
+                r.xrLabel_DenNgay.Text = m_dat_den_ngay.Value.Date.ToShortDateString();
+                gridView2.BestFitColumns();
+                r.PaperKind = System.Drawing.Printing.PaperKind.A4;
+                r.Landscape = true;
+                r.ShowPreview();
+            }
+            catch (Exception v_e)
+            {
+
+                throw v_e;
+            }
+        }
     }
 }
 

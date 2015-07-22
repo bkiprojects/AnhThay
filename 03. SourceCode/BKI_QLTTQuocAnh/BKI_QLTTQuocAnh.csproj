@@ -31,7 +31,7 @@
     <SuiteName>Dummy</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>60</ApplicationRevision>
+    <ApplicationRevision>61</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -461,6 +461,12 @@
     <Compile Include="f388_main.Designer.cs">
       <DependentUpon>f388_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPT\rpt_f520_bc_tt_gt_theo_ngay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_f520_bc_tt_gt_theo_ngay.Designer.cs">
+      <DependentUpon>rpt_f520_bc_tt_gt_theo_ngay.cs</DependentUpon>
+    </Compile>
     <Compile Include="RPT\dsphieu.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -648,6 +654,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="f388_main.resx">
       <DependentUpon>f388_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_f520_bc_tt_gt_theo_ngay.resx">
+      <DependentUpon>rpt_f520_bc_tt_gt_theo_ngay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RPT\dsphieu.resx">
       <DependentUpon>dsphieu.cs</DependentUpon>

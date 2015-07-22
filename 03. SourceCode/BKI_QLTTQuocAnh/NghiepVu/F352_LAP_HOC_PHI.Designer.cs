@@ -36,6 +36,7 @@
             this.m_lbl_nv_nhap = new DevExpress.XtraEditors.LabelControl();
             this.m_lbl_nv_thu = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_cmd_them_hv_moi = new DevExpress.XtraEditors.SimpleButton();
             this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
             this.m_dat_ngay_nhap = new DevExpress.XtraEditors.DateEdit();
             this.m_lbl_header_left = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_cmd_them_hv_moi = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -110,7 +110,7 @@
             this.m_txt_noi_dung.Name = "m_txt_noi_dung";
             this.m_txt_noi_dung.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_txt_noi_dung.Size = new System.Drawing.Size(232, 55);
-            this.m_txt_noi_dung.TabIndex = 19;
+            this.m_txt_noi_dung.TabIndex = 11;
             // 
             // m_sle_lop
             // 
@@ -123,7 +123,7 @@
             this.m_sle_lop.Properties.NullText = "";
             this.m_sle_lop.Properties.View = this.gridView1;
             this.m_sle_lop.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_lop.TabIndex = 8;
+            this.m_sle_lop.TabIndex = 2;
             // 
             // gridView1
             // 
@@ -143,7 +143,7 @@
             this.m_sle_ma_hv.Properties.NullText = "";
             this.m_sle_ma_hv.Properties.View = this.searchLookUpEdit1View;
             this.m_sle_ma_hv.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_ma_hv.TabIndex = 10;
+            this.m_sle_ma_hv.TabIndex = 4;
             // 
             // searchLookUpEdit1View
             // 
@@ -164,14 +164,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_dat_ngay_thu.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.m_dat_ngay_thu.Size = new System.Drawing.Size(138, 20);
-            this.m_dat_ngay_thu.TabIndex = 6;
+            this.m_dat_ngay_thu.TabIndex = 19;
             // 
             // m_lbl_nv_nhap
             // 
             this.m_lbl_nv_nhap.Location = new System.Drawing.Point(134, 277);
             this.m_lbl_nv_nhap.Name = "m_lbl_nv_nhap";
             this.m_lbl_nv_nhap.Size = new System.Drawing.Size(12, 13);
-            this.m_lbl_nv_nhap.TabIndex = 23;
+            this.m_lbl_nv_nhap.TabIndex = 15;
             this.m_lbl_nv_nhap.Text = "...";
             // 
             // m_lbl_nv_thu
@@ -179,7 +179,7 @@
             this.m_lbl_nv_thu.Location = new System.Drawing.Point(135, 248);
             this.m_lbl_nv_thu.Name = "m_lbl_nv_thu";
             this.m_lbl_nv_thu.Size = new System.Drawing.Size(12, 13);
-            this.m_lbl_nv_thu.TabIndex = 21;
+            this.m_lbl_nv_thu.TabIndex = 13;
             this.m_lbl_nv_thu.Text = "...";
             // 
             // panel1
@@ -213,6 +213,16 @@
             this.panel1.Size = new System.Drawing.Size(497, 504);
             this.panel1.TabIndex = 0;
             // 
+            // m_cmd_them_hv_moi
+            // 
+            this.m_cmd_them_hv_moi.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_them_hv_moi.Image")));
+            this.m_cmd_them_hv_moi.Location = new System.Drawing.Point(292, 85);
+            this.m_cmd_them_hv_moi.Name = "m_cmd_them_hv_moi";
+            this.m_cmd_them_hv_moi.Size = new System.Drawing.Size(100, 23);
+            this.m_cmd_them_hv_moi.TabIndex = 5;
+            this.m_cmd_them_hv_moi.Text = "Thêm HV mới";
+            this.m_cmd_them_hv_moi.Click += new System.EventHandler(this.m_cmd_them_hv_moi_Click);
+            // 
             // m_txt_so_tien
             // 
             this.m_txt_so_tien.EditValue = "";
@@ -225,7 +235,7 @@
             this.m_txt_so_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.m_txt_so_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.m_txt_so_tien.Size = new System.Drawing.Size(183, 26);
-            this.m_txt_so_tien.TabIndex = 16;
+            this.m_txt_so_tien.TabIndex = 8;
             // 
             // m_dat_ngay_nhap
             // 
@@ -239,7 +249,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_dat_ngay_nhap.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.m_dat_ngay_nhap.Size = new System.Drawing.Size(137, 20);
-            this.m_dat_ngay_nhap.TabIndex = 25;
+            this.m_dat_ngay_nhap.TabIndex = 17;
             // 
             // m_lbl_header_left
             // 
@@ -249,7 +259,7 @@
             this.m_lbl_header_left.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header_left.Name = "m_lbl_header_left";
             this.m_lbl_header_left.Size = new System.Drawing.Size(495, 46);
-            this.m_lbl_header_left.TabIndex = 35;
+            this.m_lbl_header_left.TabIndex = 0;
             this.m_lbl_header_left.Text = "LẬP HỌC PHÍ";
             this.m_lbl_header_left.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -305,7 +315,7 @@
             this.label3.Location = new System.Drawing.Point(324, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 20);
-            this.label3.TabIndex = 17;
+            this.label3.TabIndex = 9;
             this.label3.Text = "VNĐ";
             // 
             // m_lbl_ten_hs
@@ -316,7 +326,7 @@
             this.m_lbl_ten_hs.Location = new System.Drawing.Point(131, 117);
             this.m_lbl_ten_hs.Name = "m_lbl_ten_hs";
             this.m_lbl_ten_hs.Size = new System.Drawing.Size(23, 17);
-            this.m_lbl_ten_hs.TabIndex = 14;
+            this.m_lbl_ten_hs.TabIndex = 6;
             this.m_lbl_ten_hs.Text = "...";
             // 
             // m_lbl_ngay_thu
@@ -325,7 +335,7 @@
             this.m_lbl_ngay_thu.Location = new System.Drawing.Point(14, 335);
             this.m_lbl_ngay_thu.Name = "m_lbl_ngay_thu";
             this.m_lbl_ngay_thu.Size = new System.Drawing.Size(49, 13);
-            this.m_lbl_ngay_thu.TabIndex = 5;
+            this.m_lbl_ngay_thu.TabIndex = 18;
             this.m_lbl_ngay_thu.Text = "Ngày lập";
             // 
             // label1
@@ -334,7 +344,7 @@
             this.label1.Location = new System.Drawing.Point(13, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 1;
             this.label1.Text = "Lớp";
             // 
             // m_lbl_so_tien
@@ -343,7 +353,7 @@
             this.m_lbl_so_tien.Location = new System.Drawing.Point(13, 157);
             this.m_lbl_so_tien.Name = "m_lbl_so_tien";
             this.m_lbl_so_tien.Size = new System.Drawing.Size(64, 13);
-            this.m_lbl_so_tien.TabIndex = 15;
+            this.m_lbl_so_tien.TabIndex = 7;
             this.m_lbl_so_tien.Text = "HỌC PHÍ (*)";
             // 
             // m_lbl_4
@@ -352,7 +362,7 @@
             this.m_lbl_4.Location = new System.Drawing.Point(13, 248);
             this.m_lbl_4.Name = "m_lbl_4";
             this.m_lbl_4.Size = new System.Drawing.Size(77, 13);
-            this.m_lbl_4.TabIndex = 20;
+            this.m_lbl_4.TabIndex = 12;
             this.m_lbl_4.Text = "Nhân viên thu ";
             // 
             // m_lbl_6
@@ -361,7 +371,7 @@
             this.m_lbl_6.Location = new System.Drawing.Point(13, 277);
             this.m_lbl_6.Name = "m_lbl_6";
             this.m_lbl_6.Size = new System.Drawing.Size(83, 13);
-            this.m_lbl_6.TabIndex = 22;
+            this.m_lbl_6.TabIndex = 14;
             this.m_lbl_6.Text = "Nhân viên nhập";
             // 
             // m_lbl_ma_hoc_sinh
@@ -370,7 +380,7 @@
             this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(13, 90);
             this.m_lbl_ma_hoc_sinh.Name = "m_lbl_ma_hoc_sinh";
             this.m_lbl_ma_hoc_sinh.Size = new System.Drawing.Size(50, 13);
-            this.m_lbl_ma_hoc_sinh.TabIndex = 9;
+            this.m_lbl_ma_hoc_sinh.TabIndex = 3;
             this.m_lbl_ma_hoc_sinh.Text = "Mã HV(*)";
             // 
             // m_lbl_noi_dung
@@ -379,7 +389,7 @@
             this.m_lbl_noi_dung.Location = new System.Drawing.Point(13, 190);
             this.m_lbl_noi_dung.Name = "m_lbl_noi_dung";
             this.m_lbl_noi_dung.Size = new System.Drawing.Size(63, 13);
-            this.m_lbl_noi_dung.TabIndex = 18;
+            this.m_lbl_noi_dung.TabIndex = 10;
             this.m_lbl_noi_dung.Text = "Nội dung (*)";
             // 
             // m_lbl_den_ngay
@@ -388,7 +398,7 @@
             this.m_lbl_den_ngay.Location = new System.Drawing.Point(13, 307);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(59, 13);
-            this.m_lbl_den_ngay.TabIndex = 24;
+            this.m_lbl_den_ngay.TabIndex = 16;
             this.m_lbl_den_ngay.Text = "Ngày nhập";
             // 
             // panel2
@@ -426,16 +436,6 @@
             this.imageList1.Images.SetKeyName(19, "");
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
-            // 
-            // m_cmd_them_hv_moi
-            // 
-            this.m_cmd_them_hv_moi.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_them_hv_moi.Image")));
-            this.m_cmd_them_hv_moi.Location = new System.Drawing.Point(292, 85);
-            this.m_cmd_them_hv_moi.Name = "m_cmd_them_hv_moi";
-            this.m_cmd_them_hv_moi.Size = new System.Drawing.Size(100, 23);
-            this.m_cmd_them_hv_moi.TabIndex = 36;
-            this.m_cmd_them_hv_moi.Text = "Thêm HV mới";
-            this.m_cmd_them_hv_moi.Click += new System.EventHandler(this.m_cmd_them_hv_moi_Click);
             // 
             // F352_LAP_HOC_PHI
             // 
