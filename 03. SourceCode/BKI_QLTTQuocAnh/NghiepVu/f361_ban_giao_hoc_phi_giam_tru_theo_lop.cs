@@ -70,6 +70,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_GIAM_TRU;
         private DevExpress.XtraGrid.Columns.GridColumn TEN_LOP_MON;
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_THUC_THU;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_LOP;
         private System.ComponentModel.IContainer components;
 
         #endregion
@@ -148,6 +149,7 @@ namespace BKI_QLTTQuocAnh
             this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_LOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -451,6 +453,7 @@ namespace BKI_QLTTQuocAnh
             // 
             this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.TEN_LOP,
             this.NGAY_THU,
             this.SO_PHIEU,
             this.NOI_DUNG,
@@ -475,7 +478,7 @@ namespace BKI_QLTTQuocAnh
             this.NGAY_THU.Name = "NGAY_THU";
             this.NGAY_THU.OptionsColumn.AllowEdit = false;
             this.NGAY_THU.Visible = true;
-            this.NGAY_THU.VisibleIndex = 1;
+            this.NGAY_THU.VisibleIndex = 2;
             this.NGAY_THU.Width = 166;
             // 
             // SO_PHIEU
@@ -485,7 +488,7 @@ namespace BKI_QLTTQuocAnh
             this.SO_PHIEU.Name = "SO_PHIEU";
             this.SO_PHIEU.OptionsColumn.AllowEdit = false;
             this.SO_PHIEU.Visible = true;
-            this.SO_PHIEU.VisibleIndex = 2;
+            this.SO_PHIEU.VisibleIndex = 3;
             this.SO_PHIEU.Width = 102;
             // 
             // NOI_DUNG
@@ -495,7 +498,7 @@ namespace BKI_QLTTQuocAnh
             this.NOI_DUNG.Name = "NOI_DUNG";
             this.NOI_DUNG.OptionsColumn.AllowEdit = false;
             this.NOI_DUNG.Visible = true;
-            this.NOI_DUNG.VisibleIndex = 3;
+            this.NOI_DUNG.VisibleIndex = 4;
             this.NOI_DUNG.Width = 217;
             // 
             // MA_HOC_SINH
@@ -505,7 +508,7 @@ namespace BKI_QLTTQuocAnh
             this.MA_HOC_SINH.Name = "MA_HOC_SINH";
             this.MA_HOC_SINH.OptionsColumn.AllowEdit = false;
             this.MA_HOC_SINH.Visible = true;
-            this.MA_HOC_SINH.VisibleIndex = 4;
+            this.MA_HOC_SINH.VisibleIndex = 5;
             this.MA_HOC_SINH.Width = 73;
             // 
             // TEN_HOC_VIEN
@@ -515,7 +518,7 @@ namespace BKI_QLTTQuocAnh
             this.TEN_HOC_VIEN.Name = "TEN_HOC_VIEN";
             this.TEN_HOC_VIEN.OptionsColumn.AllowEdit = false;
             this.TEN_HOC_VIEN.Visible = true;
-            this.TEN_HOC_VIEN.VisibleIndex = 5;
+            this.TEN_HOC_VIEN.VisibleIndex = 6;
             this.TEN_HOC_VIEN.Width = 178;
             // 
             // NGUOI_THU
@@ -525,7 +528,7 @@ namespace BKI_QLTTQuocAnh
             this.NGUOI_THU.Name = "NGUOI_THU";
             this.NGUOI_THU.OptionsColumn.AllowEdit = false;
             this.NGUOI_THU.Visible = true;
-            this.NGUOI_THU.VisibleIndex = 6;
+            this.NGUOI_THU.VisibleIndex = 7;
             this.NGUOI_THU.Width = 226;
             // 
             // TIEN_PHAI_THU
@@ -537,7 +540,7 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_PHAI_THU.Name = "TIEN_PHAI_THU";
             this.TIEN_PHAI_THU.OptionsColumn.AllowEdit = false;
             this.TIEN_PHAI_THU.Visible = true;
-            this.TIEN_PHAI_THU.VisibleIndex = 7;
+            this.TIEN_PHAI_THU.VisibleIndex = 8;
             this.TIEN_PHAI_THU.Width = 150;
             // 
             // repositoryItemTextEdit1
@@ -557,7 +560,7 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_GIAM_TRU.Name = "TIEN_GIAM_TRU";
             this.TIEN_GIAM_TRU.OptionsColumn.AllowEdit = false;
             this.TIEN_GIAM_TRU.Visible = true;
-            this.TIEN_GIAM_TRU.VisibleIndex = 8;
+            this.TIEN_GIAM_TRU.VisibleIndex = 9;
             this.TIEN_GIAM_TRU.Width = 150;
             // 
             // ID
@@ -591,6 +594,14 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU.Name = "TIEN_THUC_THU";
             this.TIEN_THUC_THU.OptionsColumn.AllowEdit = false;
             this.TIEN_THUC_THU.Width = 215;
+            // 
+            // TEN_LOP
+            // 
+            this.TEN_LOP.Caption = "Lớp";
+            this.TEN_LOP.FieldName = "TEN_LOP_MON";
+            this.TEN_LOP.Name = "TEN_LOP";
+            this.TEN_LOP.Visible = true;
+            this.TEN_LOP.VisibleIndex = 1;
             // 
             // f361_ban_giao_hoc_phi_giam_tru_theo_lop
             // 
@@ -680,15 +691,15 @@ namespace BKI_QLTTQuocAnh
             //load_data_2_grid();		
         }
 
-        private bool check_validate_data_is_ok()
-        {
-            if (m_sle_lop.EditValue == null || m_sle_lop.Text == "")
-            {
-                MessageBox.Show("Bạn phải chọn lớp trước nhé!!!");
-                return false;
-            }
-            return true;
-        }
+        //private bool check_validate_data_is_ok()
+        //{
+        //    if (m_sle_lop.EditValue == null || m_sle_lop.Text == "")
+        //    {
+        //        MessageBox.Show("Bạn phải chọn lớp trước nhé!!!");
+        //        return false;
+        //    }
+        //    return true;
+        //}
 
         private void load_data_2_cbo_loai_phieu()
         {
@@ -802,6 +813,7 @@ namespace BKI_QLTTQuocAnh
             ITransferDataRow v_obj_trans = new CC1TransferDataRow(i_fg, v_htb, m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.NewRow());
             return v_obj_trans;
         }
+
         private void load_data_2_grid()
         {
             //m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
@@ -809,10 +821,52 @@ namespace BKI_QLTTQuocAnh
             //m_fg.Redraw = false;
             //CGridUtils.Dataset2C1Grid(m_ds, m_fg, m_obj_trans);
             //m_fg.Redraw = true;
-
             m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
             m_ds.Clear();
             m_ds.EnforceConstraints = false;
+
+            if (m_sle_lop.EditValue == null || m_sle_lop.Text == "")
+            {
+                load_all_data_2_grid();
+            }
+            else
+            {
+                load_data_2_grid_by_id_lop();
+            }
+        }
+
+        private void load_all_data_2_grid()
+        {
+            if (m_cbo_loai_phieu.SelectedIndex == 0)
+            {
+                m_us.FillDataset_lay_ds_hoc_phi_theo_lop(
+                m_ds
+                , m_dat_tu_ngay.Value.Date
+                , m_dat_den_ngay.Value.Date
+                , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
+                ,-1);
+
+                gridControl.DataSource = m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU;
+                gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_PHAI_THU].Visible = true;
+                gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_GIAM_TRU].Visible = false;
+            }
+            else
+            {
+                m_us.FillDataset_lay_ds_giam_tru_theo_lop(
+                m_ds
+                , m_dat_tu_ngay.Value.Date
+                , m_dat_den_ngay.Value.Date
+                , CIPConvert.ToDecimal(m_cbo_nhan_vien_thu.SelectedValue)
+                ,-1);
+
+                gridControl.DataSource = m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU;
+                gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_GIAM_TRU].Visible = true;
+                gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_PHAI_THU].Visible = false;
+            }
+        }
+
+        private void load_data_2_grid_by_id_lop()
+        {
             if (m_cbo_loai_phieu.SelectedIndex == 0)
             {
                 m_us.FillDataset_lay_ds_hoc_phi_theo_lop(
@@ -839,8 +893,8 @@ namespace BKI_QLTTQuocAnh
                 gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_GIAM_TRU].Visible = true;
                 gridView.Columns[V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU.TIEN_PHAI_THU].Visible = false;
             }
-            
         }
+
         private void grid2us_object(US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU i_us
             , int i_grid_row)
         {
@@ -1040,10 +1094,10 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                if (check_validate_data_is_ok())
-                {
-                    load_data_2_grid();
-                }
+                //if (check_validate_data_is_ok())
+                //{
+                load_data_2_grid();
+                //}
             }
             catch (Exception v_e)
             {
@@ -1057,10 +1111,10 @@ namespace BKI_QLTTQuocAnh
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    if (check_validate_data_is_ok())
-                    {
+                    //if (check_validate_data_is_ok())
+                    //{
                         load_data_2_grid();
-                    }
+                    //}
                 }
 
             }
