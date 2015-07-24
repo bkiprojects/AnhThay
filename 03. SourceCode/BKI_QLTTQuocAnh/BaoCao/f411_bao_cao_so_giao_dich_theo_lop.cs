@@ -230,7 +230,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             try
             {
                 var r = new rpt_lop();
-                gridView2.BestFitColumns();
+                //gridView2.BestFitColumns();
                 r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
                 r.xrLabel2.Text = m_sle_lop.Text;
                 r.PaperKind = System.Drawing.Printing.PaperKind.A4;

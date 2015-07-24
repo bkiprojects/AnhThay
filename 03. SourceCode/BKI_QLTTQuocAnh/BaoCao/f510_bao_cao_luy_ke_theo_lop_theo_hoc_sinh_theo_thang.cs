@@ -115,6 +115,7 @@ namespace BKI_QLTTQuocAnh
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.HO_TEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_PHAI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -125,7 +126,6 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU_LUY_KE_THANG_1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU_LUY_KE_THANG_2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU_LUY_KE_THANG_3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -378,6 +378,17 @@ namespace BKI_QLTTQuocAnh
             this.ID.FieldName = "ID";
             this.ID.Name = "ID";
             // 
+            // STT
+            // 
+            this.STT.AppearanceCell.Options.UseTextOptions = true;
+            this.STT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 38;
+            // 
             // TEN_LOP_MON
             // 
             this.TEN_LOP_MON.Caption = "Tên lớp";
@@ -481,15 +492,6 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU_LUY_KE_THANG_3.Visible = true;
             this.TIEN_THUC_THU_LUY_KE_THANG_3.VisibleIndex = 9;
             this.TIEN_THUC_THU_LUY_KE_THANG_3.Width = 151;
-            // 
-            // STT
-            // 
-            this.STT.Caption = "STT";
-            this.STT.FieldName = "STT";
-            this.STT.Name = "STT";
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 0;
-            this.STT.Width = 38;
             // 
             // f510_bao_cao_luy_ke_theo_lop_HS_theo_thang
             // 

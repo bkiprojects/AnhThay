@@ -26,7 +26,7 @@
         private void InitializeComponent() {
             DevExpress.DataAccess.ConnectionParameters.CustomStringConnectionParameters customStringConnectionParameters1 = new DevExpress.DataAccess.ConnectionParameters.CustomStringConnectionParameters();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rpt_ds_phieu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rpt_f520_bc_tt_gt_theo_ngay));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -35,19 +35,19 @@
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.reportHeaderBand1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabel_DenNgay = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel_TuNgay = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLine3 = new DevExpress.XtraReports.UI.XRLine();
             this.Title = new DevExpress.XtraReports.UI.XRControlStyle();
             this.FieldCaption = new DevExpress.XtraReports.UI.XRControlStyle();
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.xrLabel_TuNgay = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel_DenNgay = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLine3 = new DevExpress.XtraReports.UI.XRLine();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
             // 
-            this.Detail.HeightF = 23F;
+            this.Detail.HeightF = 28.20835F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.StyleName = "DataField";
@@ -62,7 +62,7 @@
             // 
             // BottomMargin
             // 
-            this.BottomMargin.HeightF = 100F;
+            this.BottomMargin.HeightF = 62F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -98,7 +98,7 @@
             // xrPageInfo2
             // 
             this.xrPageInfo2.Format = "Trang {0}/{1}";
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(447F, 6.00001F);
+            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(400.125F, 6.00001F);
             this.xrPageInfo2.Name = "xrPageInfo2";
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo2.SizeF = new System.Drawing.SizeF(313F, 23F);
@@ -112,19 +112,43 @@
             this.xrLabel_TuNgay,
             this.xrLabel3,
             this.xrLine3});
-            this.reportHeaderBand1.HeightF = 79.12499F;
+            this.reportHeaderBand1.HeightF = 80.16666F;
             this.reportHeaderBand1.Name = "reportHeaderBand1";
+            // 
+            // xrLabel_DenNgay
+            // 
+            this.xrLabel_DenNgay.LocationFloat = new DevExpress.Utils.PointFloat(417.7083F, 46.125F);
+            this.xrLabel_DenNgay.Name = "xrLabel_DenNgay";
+            this.xrLabel_DenNgay.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel_DenNgay.SizeF = new System.Drawing.SizeF(128.125F, 23F);
+            this.xrLabel_DenNgay.Text = "xrLabel1";
+            // 
+            // xrLabel_TuNgay
+            // 
+            this.xrLabel_TuNgay.LocationFloat = new DevExpress.Utils.PointFloat(204.1667F, 46.125F);
+            this.xrLabel_TuNgay.Name = "xrLabel_TuNgay";
+            this.xrLabel_TuNgay.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel_TuNgay.SizeF = new System.Drawing.SizeF(133.3333F, 23F);
+            this.xrLabel_TuNgay.Text = "xrLabel_TuNgay";
             // 
             // xrLabel3
             // 
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(6.000002F, 1.999998F);
+            this.xrLabel3.AutoWidth = true;
+            this.xrLabel3.CanShrink = true;
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(49.75001F, 2.083333F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(754F, 33F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(648.2917F, 33F);
             this.xrLabel3.StyleName = "Title";
             this.xrLabel3.StylePriority.UseTextAlignment = false;
-            this.xrLabel3.Text = "DANH SÁCH PHIẾU THU";
+            this.xrLabel3.Text = " BÁO CÁO THỰC THU, GIẢM TRỪ THEO NGÀY";
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrLine3
+            // 
+            this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(18.875F, 0F);
+            this.xrLine3.Name = "xrLine3";
+            this.xrLine3.SizeF = new System.Drawing.SizeF(707.125F, 2.083332F);
             // 
             // Title
             // 
@@ -167,29 +191,7 @@
             this.DataField.Name = "DataField";
             this.DataField.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             // 
-            // xrLabel_TuNgay
-            // 
-            this.xrLabel_TuNgay.LocationFloat = new DevExpress.Utils.PointFloat(225F, 46.125F);
-            this.xrLabel_TuNgay.Name = "xrLabel_TuNgay";
-            this.xrLabel_TuNgay.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel_TuNgay.SizeF = new System.Drawing.SizeF(133.3333F, 23F);
-            this.xrLabel_TuNgay.Text = "xrLabel_TuNgay";
-            // 
-            // xrLabel_DenNgay
-            // 
-            this.xrLabel_DenNgay.LocationFloat = new DevExpress.Utils.PointFloat(417.7083F, 46.125F);
-            this.xrLabel_DenNgay.Name = "xrLabel_DenNgay";
-            this.xrLabel_DenNgay.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel_DenNgay.SizeF = new System.Drawing.SizeF(128.125F, 23F);
-            this.xrLabel_DenNgay.Text = "xrLabel1";
-            // 
-            // xrLine3
-            // 
-            this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(6.000002F, 0F);
-            this.xrLine3.Name = "xrLine3";
-            this.xrLine3.SizeF = new System.Drawing.SizeF(744F, 2F);
-            // 
-            // rpt_ds_phieu
+            // rpt_f520_bc_tt_gt_theo_ngay
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -197,7 +199,7 @@
             this.BottomMargin,
             this.pageFooterBand1,
             this.reportHeaderBand1});
-            this.Margins = new System.Drawing.Printing.Margins(48, 42, 57, 100);
+            this.Margins = new System.Drawing.Printing.Margins(48, 55, 57, 62);
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
             this.FieldCaption,
@@ -210,7 +212,6 @@
 
         #endregion
 
-        private DevExpress.XtraReports.UI.DetailBand Detail;
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
@@ -218,7 +219,6 @@
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo2;
         private DevExpress.XtraReports.UI.ReportHeaderBand reportHeaderBand1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRControlStyle Title;
         private DevExpress.XtraReports.UI.XRControlStyle FieldCaption;
         private DevExpress.XtraReports.UI.XRControlStyle PageInfo;
@@ -226,5 +226,7 @@
         public DevExpress.XtraReports.UI.XRLabel xrLabel_TuNgay;
         public DevExpress.XtraReports.UI.XRLabel xrLabel_DenNgay;
         private DevExpress.XtraReports.UI.XRLine xrLine3;
+        private DevExpress.XtraReports.UI.DetailBand Detail;
+        public DevExpress.XtraReports.UI.XRLabel xrLabel3;
     }
 }

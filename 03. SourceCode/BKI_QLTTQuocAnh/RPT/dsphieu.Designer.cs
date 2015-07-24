@@ -116,10 +116,10 @@ namespace BKI_QLTTQuocAnh.RPT {
             // 
             // xrLabel13
             // 
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(110.4167F, 0F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(290.625F, 0F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(646.3333F, 35.08333F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(283.8333F, 35.08333F);
             this.xrLabel13.StyleName = "Title";
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.Text = "DANH SÁCH PHIẾU";

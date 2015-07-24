@@ -44,7 +44,6 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private Label m_lbl_header;
-        private Label m_lbl_lop_mon;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn ID_LOP_MON;
@@ -58,6 +57,11 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_THUC_THU_LUY_KE_THANG_3;
         private DevExpress.XtraGrid.Columns.GridColumn PHAN_TRAM_HOAN_THANH;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private Label label2;
+        private TextBox m_txt_so_luong_thang;
+        private Label label1;
+        private Label m_lbl_lop_mon;
+        private DevExpress.XtraGrid.Columns.GridColumn THOI_GIAN_HOC_FROM_DATE;
         private System.ComponentModel.IContainer components;
 
         public f500_bao_cao_luy_ke_theo_lop_theo_thang()
@@ -110,10 +114,10 @@ namespace BKI_QLTTQuocAnh
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_lbl_lop_mon = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_PHAI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -123,7 +127,11 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU_LUY_KE_THANG_1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU_LUY_KE_THANG_2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU_LUY_KE_THANG_3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.m_lbl_lop_mon = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.m_txt_so_luong_thang = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.THOI_GIAN_HOC_FROM_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -262,6 +270,9 @@ namespace BKI_QLTTQuocAnh
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.m_txt_so_luong_thang);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.m_sle_lop);
             this.panel1.Controls.Add(this.m_fg);
             this.panel1.Controls.Add(this.m_cmd_search);
@@ -270,8 +281,9 @@ namespace BKI_QLTTQuocAnh
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1134, 96);
+            this.panel1.Size = new System.Drawing.Size(1134, 92);
             this.panel1.TabIndex = 0;
+            this.panel1.Visible = false;
             // 
             // m_sle_lop
             // 
@@ -321,25 +333,16 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_header.Text = "BÁO CÁO TÀI CHÍNH LỚP HỌC THEO THÁNG";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // m_lbl_lop_mon
-            // 
-            this.m_lbl_lop_mon.AutoSize = true;
-            this.m_lbl_lop_mon.Location = new System.Drawing.Point(9, 50);
-            this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
-            this.m_lbl_lop_mon.Size = new System.Drawing.Size(28, 13);
-            this.m_lbl_lop_mon.TabIndex = 1;
-            this.m_lbl_lop_mon.Text = "Lớp:";
-            // 
             // gridControl1
             // 
             this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 96);
+            this.gridControl1.Location = new System.Drawing.Point(0, 92);
             this.gridControl1.MainView = this.gridView2;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1134, 277);
+            this.gridControl1.Size = new System.Drawing.Size(1134, 281);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -354,6 +357,7 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_GIAM_TRU,
             this.TIEN_THUC_THU,
             this.PHAN_TRAM_HOAN_THANH,
+            this.THOI_GIAN_HOC_FROM_DATE,
             this.TIEN_THUC_THU_LUY_KE_THANG_1,
             this.TIEN_THUC_THU_LUY_KE_THANG_2,
             this.TIEN_THUC_THU_LUY_KE_THANG_3});
@@ -376,6 +380,17 @@ namespace BKI_QLTTQuocAnh
             this.ID_LOP_MON.FieldName = "ID_LOP_MON";
             this.ID_LOP_MON.Name = "ID_LOP_MON";
             // 
+            // STT
+            // 
+            this.STT.AppearanceCell.Options.UseTextOptions = true;
+            this.STT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.STT.Caption = "STT";
+            this.STT.FieldName = "STT";
+            this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
+            this.STT.Width = 35;
+            // 
             // TEN_LOP_MON
             // 
             this.TEN_LOP_MON.Caption = "Tên lớp";
@@ -383,7 +398,7 @@ namespace BKI_QLTTQuocAnh
             this.TEN_LOP_MON.Name = "TEN_LOP_MON";
             this.TEN_LOP_MON.Visible = true;
             this.TEN_LOP_MON.VisibleIndex = 1;
-            this.TEN_LOP_MON.Width = 124;
+            this.TEN_LOP_MON.Width = 116;
             // 
             // TIEN_PHAI_THU
             // 
@@ -395,7 +410,7 @@ namespace BKI_QLTTQuocAnh
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TIEN_PHAI_THU", "{0:n0}")});
             this.TIEN_PHAI_THU.Visible = true;
             this.TIEN_PHAI_THU.VisibleIndex = 2;
-            this.TIEN_PHAI_THU.Width = 136;
+            this.TIEN_PHAI_THU.Width = 127;
             // 
             // repositoryItemTextEdit1
             // 
@@ -415,7 +430,7 @@ namespace BKI_QLTTQuocAnh
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TIEN_GIAM_TRU", "{0:n0}")});
             this.TIEN_GIAM_TRU.Visible = true;
             this.TIEN_GIAM_TRU.VisibleIndex = 3;
-            this.TIEN_GIAM_TRU.Width = 136;
+            this.TIEN_GIAM_TRU.Width = 127;
             // 
             // TIEN_THUC_THU
             // 
@@ -427,7 +442,7 @@ namespace BKI_QLTTQuocAnh
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "TIEN_THUC_THU", "{0:n0}")});
             this.TIEN_THUC_THU.Visible = true;
             this.TIEN_THUC_THU.VisibleIndex = 4;
-            this.TIEN_THUC_THU.Width = 136;
+            this.TIEN_THUC_THU.Width = 127;
             // 
             // PHAN_TRAM_HOAN_THANH
             // 
@@ -438,7 +453,7 @@ namespace BKI_QLTTQuocAnh
             this.PHAN_TRAM_HOAN_THANH.Name = "PHAN_TRAM_HOAN_THANH";
             this.PHAN_TRAM_HOAN_THANH.Visible = true;
             this.PHAN_TRAM_HOAN_THANH.VisibleIndex = 5;
-            this.PHAN_TRAM_HOAN_THANH.Width = 136;
+            this.PHAN_TRAM_HOAN_THANH.Width = 127;
             // 
             // TIEN_THUC_THU_LUY_KE_THANG_1
             // 
@@ -447,8 +462,8 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU_LUY_KE_THANG_1.FieldName = "TIEN_THUC_THU_LUY_KE_THANG_1";
             this.TIEN_THUC_THU_LUY_KE_THANG_1.Name = "TIEN_THUC_THU_LUY_KE_THANG_1";
             this.TIEN_THUC_THU_LUY_KE_THANG_1.Visible = true;
-            this.TIEN_THUC_THU_LUY_KE_THANG_1.VisibleIndex = 6;
-            this.TIEN_THUC_THU_LUY_KE_THANG_1.Width = 136;
+            this.TIEN_THUC_THU_LUY_KE_THANG_1.VisibleIndex = 7;
+            this.TIEN_THUC_THU_LUY_KE_THANG_1.Width = 120;
             // 
             // TIEN_THUC_THU_LUY_KE_THANG_2
             // 
@@ -457,8 +472,8 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU_LUY_KE_THANG_2.FieldName = "TIEN_THUC_THU_LUY_KE_THANG_2";
             this.TIEN_THUC_THU_LUY_KE_THANG_2.Name = "TIEN_THUC_THU_LUY_KE_THANG_2";
             this.TIEN_THUC_THU_LUY_KE_THANG_2.Visible = true;
-            this.TIEN_THUC_THU_LUY_KE_THANG_2.VisibleIndex = 7;
-            this.TIEN_THUC_THU_LUY_KE_THANG_2.Width = 136;
+            this.TIEN_THUC_THU_LUY_KE_THANG_2.VisibleIndex = 8;
+            this.TIEN_THUC_THU_LUY_KE_THANG_2.Width = 120;
             // 
             // TIEN_THUC_THU_LUY_KE_THANG_3
             // 
@@ -467,17 +482,56 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU_LUY_KE_THANG_3.FieldName = "TIEN_THUC_THU_LUY_KE_THANG_3";
             this.TIEN_THUC_THU_LUY_KE_THANG_3.Name = "TIEN_THUC_THU_LUY_KE_THANG_3";
             this.TIEN_THUC_THU_LUY_KE_THANG_3.Visible = true;
-            this.TIEN_THUC_THU_LUY_KE_THANG_3.VisibleIndex = 8;
-            this.TIEN_THUC_THU_LUY_KE_THANG_3.Width = 138;
+            this.TIEN_THUC_THU_LUY_KE_THANG_3.VisibleIndex = 9;
+            this.TIEN_THUC_THU_LUY_KE_THANG_3.Width = 127;
             // 
-            // STT
+            // m_lbl_lop_mon
             // 
-            this.STT.Caption = "STT";
-            this.STT.FieldName = "STT";
-            this.STT.Name = "STT";
-            this.STT.Visible = true;
-            this.STT.VisibleIndex = 0;
-            this.STT.Width = 38;
+            this.m_lbl_lop_mon.AutoSize = true;
+            this.m_lbl_lop_mon.Location = new System.Drawing.Point(9, 50);
+            this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
+            this.m_lbl_lop_mon.Size = new System.Drawing.Size(28, 13);
+            this.m_lbl_lop_mon.TabIndex = 1;
+            this.m_lbl_lop_mon.Text = "Lớp:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Số tháng muốn thống kê:";
+            this.label1.Visible = false;
+            // 
+            // m_txt_so_luong_thang
+            // 
+            this.m_txt_so_luong_thang.Location = new System.Drawing.Point(160, 75);
+            this.m_txt_so_luong_thang.Name = "m_txt_so_luong_thang";
+            this.m_txt_so_luong_thang.Size = new System.Drawing.Size(115, 20);
+            this.m_txt_so_luong_thang.TabIndex = 22;
+            this.m_txt_so_luong_thang.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(297, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(219, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "(*) Chú ý: Số tháng không vượt quá 18 tháng";
+            this.label2.Visible = false;
+            // 
+            // THOI_GIAN_HOC_FROM_DATE
+            // 
+            this.THOI_GIAN_HOC_FROM_DATE.Caption = "Ngày bắt đầu ";
+            this.THOI_GIAN_HOC_FROM_DATE.DisplayFormat.FormatString = "d";
+            this.THOI_GIAN_HOC_FROM_DATE.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.THOI_GIAN_HOC_FROM_DATE.FieldName = "THOI_GIAN_HOC_FROM_DATE";
+            this.THOI_GIAN_HOC_FROM_DATE.Name = "THOI_GIAN_HOC_FROM_DATE";
+            this.THOI_GIAN_HOC_FROM_DATE.Visible = true;
+            this.THOI_GIAN_HOC_FROM_DATE.VisibleIndex = 6;
+            this.THOI_GIAN_HOC_FROM_DATE.Width = 90;
             // 
             // f500_bao_cao_luy_ke_theo_lop_theo_thang
             // 
@@ -541,6 +595,7 @@ namespace BKI_QLTTQuocAnh
         ITransferDataRow m_obj_trans;
         DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG m_ds = new DS_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG();
         US_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG m_us = new US_V_F500_BAO_CAO_LUY_KE_THEO_LOP_THEO_THANG();
+        decimal m_so_cot_hien_thi = 3;// mac dinh bang 3
         #endregion
 
         #region Private Methods
@@ -631,6 +686,71 @@ namespace BKI_QLTTQuocAnh
             m_fg.AutoSizeRows();
         }
 
+
+        private bool check_validate_data()
+        {
+            switch (m_txt_so_luong_thang.Text)
+            {
+                case "1":
+                    return true;
+                    break;
+                case "2":
+                    return true;
+                    break;
+                case "3":
+                    return true;
+                    break;
+                case "4":
+                    return true;
+                    break;
+                case "5":
+                    return true;
+                    break;
+                case "6":
+                    return true;
+                    break;
+                case "7":
+                    return true;
+                    break;
+                case "8":
+                    return true;
+                    break;
+                case "9":
+                    return true;
+                    break;
+                case "10":
+                    return true;
+                    break;
+                case "11":
+                    return true;
+                    break;
+                case "12":
+                    return true;
+                    break;
+                case "13":
+                    return true;
+                    break;
+                case "14":
+                    return true;
+                    break;
+                case "15":
+                    return true;
+                    break;
+                case "16":
+                    return true;
+                    break;
+                case "17":
+                    return true;
+                    break;
+                case "18":
+                    return true;
+                    break;
+                default:
+                    return false;
+                    break;
+            }
+            
+        }
         private void load_data_2_grid()
         {
             //if (m_sle_lop.EditValue == null || m_sle_lop.EditValue == "")
@@ -682,6 +802,10 @@ namespace BKI_QLTTQuocAnh
                 v_ds.Clear();
                 v_ds.EnforceConstraints = false;
                 v_us.FillDataset(v_ds);
+                //for (int i = 0; i < ; i++)
+                //{
+                    
+                //}
                 //, m_dat_tu_ngay.Value.Date
                 //, m_dat_den_ngay.Value.Date);
             }
@@ -824,7 +948,14 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                load_data_2_grid();
+                if (check_validate_data())
+                {
+                    load_data_2_grid();
+                }
+                else
+                {
+                    BaseMessages.MsgBox_Error("Bạn đã nhập sai rồi!!!");
+                }
             }
             catch (Exception v_e)
             {

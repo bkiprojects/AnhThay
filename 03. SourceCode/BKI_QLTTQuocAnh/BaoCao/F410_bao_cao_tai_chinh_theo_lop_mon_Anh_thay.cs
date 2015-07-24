@@ -489,6 +489,8 @@ namespace BKI_QLTTQuocAnh
             // 
             // STT
             // 
+            this.STT.AppearanceCell.Options.UseTextOptions = true;
+            this.STT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.STT.Caption = "STT";
             this.STT.FieldName = "STT";
             this.STT.Name = "STT";
@@ -1055,7 +1057,7 @@ namespace BKI_QLTTQuocAnh
                 var r = new rpt_cac_lop();
 
                 r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
-                gridView2.BestFitColumns();
+                //gridView2.BestFitColumns();
                 r.PaperKind = System.Drawing.Printing.PaperKind.A4;
                 r.Landscape = true;
                 r.ShowPreview();

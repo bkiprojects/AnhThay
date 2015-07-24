@@ -103,6 +103,7 @@ namespace BKI_QLTTQuocAnh
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f520_bao_cao_thuc_thu_giam_tru_theo_ngay));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_view = new SIS.Controls.Button.SiSButton();
@@ -128,7 +129,6 @@ namespace BKI_QLTTQuocAnh
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.TIEN_GIAM_TRU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -180,6 +180,17 @@ namespace BKI_QLTTQuocAnh
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1070, 36);
             this.m_pnl_out_place_dm.TabIndex = 2;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(92, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 28);
+            this.simpleButton1.TabIndex = 6;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // m_cmd_insert
             // 
@@ -418,8 +429,11 @@ namespace BKI_QLTTQuocAnh
             // 
             // STT
             // 
+            this.STT.AppearanceCell.Options.UseTextOptions = true;
+            this.STT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.STT.Caption = "STT";
             this.STT.FieldName = "STT";
+            this.STT.ImageAlignment = System.Drawing.StringAlignment.Center;
             this.STT.Name = "STT";
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
@@ -477,17 +491,6 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU.Visible = true;
             this.TIEN_THUC_THU.VisibleIndex = 4;
             this.TIEN_THUC_THU.Width = 258;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(92, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 28);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // f520_bao_cao_thuc_thu_giam_tru_theo_ngay
             // 
@@ -660,6 +663,8 @@ namespace BKI_QLTTQuocAnh
             var col = gridView2.Columns.Add();
             col.FieldName = "STT";
             col.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
+            col.AppearanceCell.Options.UseTextOptions = true;
+            col.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             gridView2.CustomUnboundColumnData += gridView2_CustomUnboundColumnData;
         }
 
@@ -890,9 +895,11 @@ namespace BKI_QLTTQuocAnh
                 r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
                 r.xrLabel_TuNgay.Text = m_dat_tu_ngay.Value.Date.ToShortDateString();
                 r.xrLabel_DenNgay.Text = m_dat_den_ngay.Value.Date.ToShortDateString();
-                gridView2.BestFitColumns();
+                //gridView2.BestFitColumns();
                 r.PaperKind = System.Drawing.Printing.PaperKind.A4;
-                r.Landscape = true;
+                r.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+
+                r.Landscape = false;
                 r.ShowPreview();
             }
             catch (Exception v_e)
