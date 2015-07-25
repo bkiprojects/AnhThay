@@ -486,7 +486,7 @@
             // 
             // m_cmd_bao_cao_luy_ke_theo_thang_theo_lop
             // 
-            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Caption = "Tình hình đóng tiền theo lớp, theo tháng";
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Caption = "Báo cáo tình hình tài chính";
             this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Glyph")));
             this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Id = 43;
             this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Name = "m_cmd_bao_cao_luy_ke_theo_thang_theo_lop";
@@ -502,6 +502,7 @@
             this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang.Name = "m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang";
             this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang_ItemClick);
             // 
             // m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay
@@ -626,6 +627,7 @@
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Theo học sinh";
+            this.ribbonPageGroup7.Visible = false;
             // 
             // ribbonPageGroup8
             // 

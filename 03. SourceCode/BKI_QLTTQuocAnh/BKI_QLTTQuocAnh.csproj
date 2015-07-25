@@ -31,7 +31,7 @@
     <SuiteName>Dummy</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>62</ApplicationRevision>
+    <ApplicationRevision>63</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -294,6 +294,18 @@
     <Compile Include="BaoCao\f411_bao_cao_so_giao_dich_theo_lop.Designer.cs">
       <DependentUpon>f411_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\f530_bao_cao_tinh_hinh_tai_chinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f530_bao_cao_tinh_hinh_tai_chinh.Designer.cs">
+      <DependentUpon>f530_bao_cao_tinh_hinh_tai_chinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\f531_bao_cao_tinh_hinh_tai_chinh_de.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f531_bao_cao_tinh_hinh_tai_chinh_de.Designer.cs">
+      <DependentUpon>f531_bao_cao_tinh_hinh_tai_chinh_de.cs</DependentUpon>
+    </Compile>
     <Compile Include="CCommon.cs" />
     <Compile Include="DanhMuc\f210_dm_lop_mon.cs">
       <SubType>Form</SubType>
@@ -461,6 +473,12 @@
     <Compile Include="f388_main.Designer.cs">
       <DependentUpon>f388_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPT\rpt_f530_bao_cao_tinh_hinh_tai_chinh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\rpt_f530_bao_cao_tinh_hinh_tai_chinh.Designer.cs">
+      <DependentUpon>rpt_f530_bao_cao_tinh_hinh_tai_chinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="RPT\rpt_f520_bc_tt_gt_theo_ngay.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -548,6 +566,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f411_bao_cao_so_giao_dich_theo_lop.resx">
       <DependentUpon>f411_bao_cao_so_giao_dich_theo_lop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f530_bao_cao_tinh_hinh_tai_chinh.resx">
+      <DependentUpon>f530_bao_cao_tinh_hinh_tai_chinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f531_bao_cao_tinh_hinh_tai_chinh_de.resx">
+      <DependentUpon>f531_bao_cao_tinh_hinh_tai_chinh_de.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\f210_dm_lop_mon.resx">
       <DependentUpon>f210_dm_lop_mon.cs</DependentUpon>
@@ -654,6 +678,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="f388_main.resx">
       <DependentUpon>f388_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\rpt_f530_bao_cao_tinh_hinh_tai_chinh.resx">
+      <DependentUpon>rpt_f530_bao_cao_tinh_hinh_tai_chinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RPT\rpt_f520_bc_tt_gt_theo_ngay.resx">
       <DependentUpon>rpt_f520_bc_tt_gt_theo_ngay.cs</DependentUpon>

@@ -494,5 +494,26 @@ namespace BKI_QLTTQuocAnh.US
             pm_objDR = getRowClone(pm_objDS.Tables[pm_strTableName].Rows[0]);
         }
         #endregion
+
+        public void FillDataset_by_date(DS_V_GD_PHIEU_THU op_ds, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay)
+        {
+            CStoredProc v_obj_spr = new CStoredProc("Pr_f530_bao_cao_tinh_hinh_tai_chinh");
+           
+            v_obj_spr.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
+            v_obj_spr.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
+
+            v_obj_spr.fillDataSetByCommand(this, op_ds);
+        }
+
+        public void FillDataset_by_date_and_id_lop(DS_V_GD_PHIEU_THU op_ds, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay, decimal ip_dc_id_lop_mon)
+        {
+            CStoredProc v_obj_spr = new CStoredProc("Pr_f530_bao_cao_tinh_hinh_tai_chinh_theo_lop");
+
+            v_obj_spr.addDatetimeInputParam("@ip_dat_tu_ngay", ip_dat_tu_ngay);
+            v_obj_spr.addDatetimeInputParam("@ip_dat_den_ngay", ip_dat_den_ngay);
+            v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
+
+            v_obj_spr.fillDataSetByCommand(this, op_ds);
+        }
     }
 }

@@ -682,8 +682,9 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f500_bao_cao_luy_ke_theo_lop_theo_thang v_frm = new f500_bao_cao_luy_ke_theo_lop_theo_thang();
+                //f500_bao_cao_luy_ke_theo_lop_theo_thang v_frm = new f500_bao_cao_luy_ke_theo_lop_theo_thang();
 
+                f530_bao_cao_tinh_hinh_tai_chinh v_frm = new f530_bao_cao_tinh_hinh_tai_chinh();
                 if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;
