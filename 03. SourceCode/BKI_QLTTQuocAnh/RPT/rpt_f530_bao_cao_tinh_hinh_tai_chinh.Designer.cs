@@ -51,7 +51,8 @@
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.StyleName = "DataField";
-            this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.Detail.StylePriority.UseTextAlignment = false;
+            this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleJustify;
             // 
             // TopMargin
             // 
@@ -98,7 +99,7 @@
             // xrPageInfo2
             // 
             this.xrPageInfo2.Format = "Trang {0}/{1}";
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(400.125F, 6.00001F);
+            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(386.5833F, 6.00001F);
             this.xrPageInfo2.Name = "xrPageInfo2";
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo2.SizeF = new System.Drawing.SizeF(313F, 23F);
@@ -135,10 +136,10 @@
             // 
             this.xrLabel3.AutoWidth = true;
             this.xrLabel3.CanShrink = true;
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(49.75001F, 2.083333F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(157.0417F, 2.083333F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(648.2917F, 33F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(462.7499F, 33F);
             this.xrLabel3.StyleName = "Title";
             this.xrLabel3.StylePriority.UseTextAlignment = false;
             this.xrLabel3.Text = "BÁO CÁO TÌNH HÌNH TÀI CHÍNH";
@@ -199,7 +200,7 @@
             this.BottomMargin,
             this.pageFooterBand1,
             this.reportHeaderBand1});
-            this.Margins = new System.Drawing.Printing.Margins(48, 55, 57, 62);
+            this.Margins = new System.Drawing.Printing.Margins(48, 33, 57, 62);
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.Title,
             this.FieldCaption,
