@@ -60,16 +60,17 @@
             this.NGUOI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.MA_SO_QUYEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // m_lbl_header
@@ -350,6 +351,7 @@
             // 
             this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.MA_SO_QUYEN,
             this.NGAY_THU,
             this.SO_PHIEU,
             this.NOI_DUNG,
@@ -374,7 +376,7 @@
             this.NGAY_THU.Name = "NGAY_THU";
             this.NGAY_THU.OptionsColumn.AllowEdit = false;
             this.NGAY_THU.Visible = true;
-            this.NGAY_THU.VisibleIndex = 1;
+            this.NGAY_THU.VisibleIndex = 2;
             this.NGAY_THU.Width = 123;
             // 
             // SO_PHIEU
@@ -384,7 +386,7 @@
             this.SO_PHIEU.Name = "SO_PHIEU";
             this.SO_PHIEU.OptionsColumn.AllowEdit = false;
             this.SO_PHIEU.Visible = true;
-            this.SO_PHIEU.VisibleIndex = 2;
+            this.SO_PHIEU.VisibleIndex = 3;
             this.SO_PHIEU.Width = 76;
             // 
             // NOI_DUNG
@@ -394,7 +396,7 @@
             this.NOI_DUNG.Name = "NOI_DUNG";
             this.NOI_DUNG.OptionsColumn.AllowEdit = false;
             this.NOI_DUNG.Visible = true;
-            this.NOI_DUNG.VisibleIndex = 3;
+            this.NOI_DUNG.VisibleIndex = 4;
             this.NOI_DUNG.Width = 160;
             // 
             // MA_HOC_SINH
@@ -404,7 +406,7 @@
             this.MA_HOC_SINH.Name = "MA_HOC_SINH";
             this.MA_HOC_SINH.OptionsColumn.AllowEdit = false;
             this.MA_HOC_SINH.Visible = true;
-            this.MA_HOC_SINH.VisibleIndex = 4;
+            this.MA_HOC_SINH.VisibleIndex = 5;
             this.MA_HOC_SINH.Width = 55;
             // 
             // TEN_HOC_VIEN
@@ -414,7 +416,7 @@
             this.TEN_HOC_VIEN.Name = "TEN_HOC_VIEN";
             this.TEN_HOC_VIEN.OptionsColumn.AllowEdit = false;
             this.TEN_HOC_VIEN.Visible = true;
-            this.TEN_HOC_VIEN.VisibleIndex = 5;
+            this.TEN_HOC_VIEN.VisibleIndex = 6;
             this.TEN_HOC_VIEN.Width = 132;
             // 
             // NGUOI_THU
@@ -424,7 +426,7 @@
             this.NGUOI_THU.Name = "NGUOI_THU";
             this.NGUOI_THU.OptionsColumn.AllowEdit = false;
             this.NGUOI_THU.Visible = true;
-            this.NGUOI_THU.VisibleIndex = 6;
+            this.NGUOI_THU.VisibleIndex = 7;
             this.NGUOI_THU.Width = 178;
             // 
             // TEN_LOP_MON
@@ -436,7 +438,7 @@
             this.TEN_LOP_MON.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.True;
             this.TEN_LOP_MON.UnboundType = DevExpress.Data.UnboundColumnType.String;
             this.TEN_LOP_MON.Visible = true;
-            this.TEN_LOP_MON.VisibleIndex = 7;
+            this.TEN_LOP_MON.VisibleIndex = 8;
             this.TEN_LOP_MON.Width = 178;
             // 
             // TIEN_THUC_THU
@@ -448,8 +450,16 @@
             this.TIEN_THUC_THU.Name = "TIEN_THUC_THU";
             this.TIEN_THUC_THU.OptionsColumn.AllowEdit = false;
             this.TIEN_THUC_THU.Visible = true;
-            this.TIEN_THUC_THU.VisibleIndex = 8;
+            this.TIEN_THUC_THU.VisibleIndex = 9;
             this.TIEN_THUC_THU.Width = 215;
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Mask.EditMask = "n0";
+            this.repositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat = true;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // ID
             // 
@@ -464,13 +474,13 @@
             this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
             this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             // 
-            // repositoryItemTextEdit1
+            // MA_SO_QUYEN
             // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.Mask.EditMask = "n0";
-            this.repositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat = true;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            this.MA_SO_QUYEN.Caption = "Quyển số";
+            this.MA_SO_QUYEN.FieldName = "MA_SO_QUYEN";
+            this.MA_SO_QUYEN.Name = "MA_SO_QUYEN";
+            this.MA_SO_QUYEN.Visible = true;
+            this.MA_SO_QUYEN.VisibleIndex = 1;
             // 
             // f360_ban_giao_tien
             // 
@@ -489,8 +499,8 @@
             this.m_pnl_out_place_dm.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,5 +540,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn TIEN_THUC_THU;
         private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn MA_SO_QUYEN;
     }
 }

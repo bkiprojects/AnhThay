@@ -678,6 +678,8 @@ namespace BKI_QLTTQuocAnh
             this.SO_TIEN.FieldName = "SO_TIEN";
             this.SO_TIEN.Name = "SO_TIEN";
             this.SO_TIEN.OptionsColumn.AllowEdit = false;
+            this.SO_TIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", "{0:n0}")});
             this.SO_TIEN.Visible = true;
             this.SO_TIEN.VisibleIndex = 6;
             this.SO_TIEN.Width = 80;

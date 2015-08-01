@@ -636,7 +636,7 @@
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_chua_nop_tien);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bc_diem_danh);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "Theo lớp môn";
+            this.ribbonPageGroup8.Text = "Theo lớp";
             // 
             // ribbonPage5
             // 

@@ -10,6 +10,7 @@ using DevExpress.XtraPivotGrid;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraGrid;
 using IP.Core.IPCommon;
+using BKI_QLTTQuocAnh.RPT;
 
 
 namespace BKI_QLTTQuocAnh.BaoCao
@@ -47,39 +48,36 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 e.Value = e.ListSourceRowIndex + 1;
         }
 
-        //public WinControlContainer CopyGridControl(GridControl grid)
-        //{
-        //    WinControlContainer winContainer = new WinControlContainer();
+        public WinControlContainer CopyGridControl(GridControl grid)
+        {
+            WinControlContainer winContainer = new WinControlContainer();
 
-        //    winContainer.Location = new Point(0, 0);
-        //    winContainer.Size = new Size(200, 100);
+            winContainer.Location = new Point(0, 0);
+            winContainer.Size = new Size(200, 100);
 
-        //    winContainer.WinControl = grid;
-        //    return winContainer;
-        //}
+            winContainer.WinControl = grid;
+            return winContainer;
+        }
 
-        //private void simpleButton1_Click(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        //var r = new rpt_f520_bc_tt_gt_theo_ngay();
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var r = new rpt_ds_phieu();
 
-        //        //r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
-        //        //r.xrLabel_TuNgay.Text = m_dat_tu_ngay.Value.Date.ToShortDateString();
-        //        //r.xrLabel_DenNgay.Text = m_dat_den_ngay.Value.Date.ToShortDateString();
-        //        ////gridView2.BestFitColumns();
-        //        //r.PaperKind = System.Drawing.Printing.PaperKind.A4;
-        //        //r.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+                r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
+                r.xrLabel_TuNgay.Text = m_dat_tu_ngay.Value.Date.ToShortDateString();
+                r.xrLabel_DenNgay.Text = m_dat_den_ngay.Value.Date.ToShortDateString();
+                //gridView1.BestFitColumns();
+                r.PaperKind = System.Drawing.Printing.PaperKind.A4;
+                r.Landscape = false;
+                r.ShowPreview();
+            }
+            catch (Exception v_e)
+            {
 
-        //        //r.Landscape = false;
-        //        //r.ShowPreview();
-        //    }
-        //    catch (Exception v_e)
-        //    {
-
-        //        throw v_e;
-        //    }
-        //}
-
+                throw v_e;
+            }
+        }
     }
 }

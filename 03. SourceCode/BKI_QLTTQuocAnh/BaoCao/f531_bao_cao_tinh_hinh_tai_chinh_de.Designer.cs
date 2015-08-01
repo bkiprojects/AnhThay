@@ -149,6 +149,8 @@
             this.STT.Caption = "STT";
             this.STT.FieldName = "STT";
             this.STT.Name = "STT";
+            this.STT.Visible = true;
+            this.STT.VisibleIndex = 0;
             this.STT.Width = 38;
             // 
             // TEN_LOP_MON
@@ -157,7 +159,7 @@
             this.TEN_LOP_MON.FieldName = "TEN_LOP_MON";
             this.TEN_LOP_MON.Name = "TEN_LOP_MON";
             this.TEN_LOP_MON.Visible = true;
-            this.TEN_LOP_MON.VisibleIndex = 0;
+            this.TEN_LOP_MON.VisibleIndex = 1;
             this.TEN_LOP_MON.Width = 210;
             // 
             // SO_PHIEU
@@ -166,7 +168,7 @@
             this.SO_PHIEU.FieldName = "SO_PHIEU";
             this.SO_PHIEU.Name = "SO_PHIEU";
             this.SO_PHIEU.Visible = true;
-            this.SO_PHIEU.VisibleIndex = 1;
+            this.SO_PHIEU.VisibleIndex = 2;
             this.SO_PHIEU.Width = 210;
             // 
             // HO_TEN
@@ -175,7 +177,7 @@
             this.HO_TEN.FieldName = "HO_TEN";
             this.HO_TEN.Name = "HO_TEN";
             this.HO_TEN.Visible = true;
-            this.HO_TEN.VisibleIndex = 2;
+            this.HO_TEN.VisibleIndex = 3;
             this.HO_TEN.Width = 210;
             // 
             // SO_TIEN
@@ -188,7 +190,7 @@
             this.SO_TIEN.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", "{0:n0}")});
             this.SO_TIEN.Visible = true;
-            this.SO_TIEN.VisibleIndex = 3;
+            this.SO_TIEN.VisibleIndex = 4;
             this.SO_TIEN.Width = 214;
             // 
             // TEN_NGUOI_THU
@@ -197,7 +199,7 @@
             this.TEN_NGUOI_THU.FieldName = "TEN_NGUOI_THU";
             this.TEN_NGUOI_THU.Name = "TEN_NGUOI_THU";
             this.TEN_NGUOI_THU.Visible = true;
-            this.TEN_NGUOI_THU.VisibleIndex = 4;
+            this.TEN_NGUOI_THU.VisibleIndex = 5;
             // 
             // NGAY_THU
             // 
@@ -205,7 +207,7 @@
             this.NGAY_THU.FieldName = "NGAY_THU";
             this.NGAY_THU.Name = "NGAY_THU";
             this.NGAY_THU.Visible = true;
-            this.NGAY_THU.VisibleIndex = 5;
+            this.NGAY_THU.VisibleIndex = 6;
             // 
             // panel2
             // 
@@ -238,6 +240,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(75, 38);
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.UseWaitCursor = true;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // f531_bao_cao_tinh_hinh_tai_chinh_de
             // 
