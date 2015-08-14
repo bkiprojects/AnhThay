@@ -152,7 +152,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 }
                 if (e.ValueType == PivotGridValueType.Total)
                 {
-                    e.DisplayText = e.Field.Caption + " " + e.Value;
+                    //e.DisplayText = e.Field.Caption + " " + e.Value;
+                    e.DisplayText = "Tổng";
                 }
                 if ((e.DisplayText == "1" || e.DisplayText == "2" || e.DisplayText == "3" || e.DisplayText == "4") && e.ValueType == PivotGridValueType.Value)
                 {

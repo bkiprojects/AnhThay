@@ -39,7 +39,9 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
         public const string FACEBOOK = "FACEBOOK";
     }
-    public class V_DM_HOC_SINH_GD_HOC_DM_LOP_MON {
+
+    public class V_DM_HOC_SINH_GD_HOC_DM_LOP_MON
+    {
         public const string ID = "ID";
         public const string MA_DOI_TUONG = "MA_DOI_TUONG";
         public const string ID_LOAI_DOI_TUONG = "ID_LOAI_DOI_TUONG";
@@ -67,6 +69,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TONG_SO_BUOI_HOC = "TONG_SO_BUOI_HOC";
         public const string THOI_GIAN_HOC_FROM_DATE = "THOI_GIAN_HOC_FROM_DATE";
         public const string THOI_GIAN_HOC_TO_DATE = "THOI_GIAN_HOC_TO_DATE";
+        public const string MOT_NAM_SAU_NGAY_KET_THUC = "MOT_NAM_SAU_NGAY_KET_THUC";
         public const string ID_TRO_GIANG = "ID_TRO_GIANG";
         public const string GHI_CHU = "GHI_CHU";
         public const string TONG_TIEN_KHOA_HOC = "TONG_TIEN_KHOA_HOC";
@@ -815,6 +818,54 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TIEN_PHAI_THU = "TIEN_PHAI_THU";
         public const string TIEN_GIAM_TRU = "TIEN_GIAM_TRU";
         public const string TIEN_THUC_THU = "TIEN_THUC_THU";
+    }
+
+    public class V_DM_LOP_MON
+    {
+        public const string ID = "ID";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string MO_TA = "MO_TA";
+        public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
+        public const string ID_LOP = "ID_LOP";
+        public const string ID_MON = "ID_MON";
+        public const string TRANG_THAI_LOP_MON = "TRANG_THAI_LOP_MON";
+        public const string TONG_SO_BUOI_HOC = "TONG_SO_BUOI_HOC";
+        public const string THOI_GIAN_HOC_FROM_DATE = "THOI_GIAN_HOC_FROM_DATE";
+        public const string THOI_GIAN_HOC_TO_DATE = "THOI_GIAN_HOC_TO_DATE";
+        public const string ID_TRO_GIANG = "ID_TRO_GIANG";
+        public const string GHI_CHU = "GHI_CHU";
+        public const string TONG_TIEN_KHOA_HOC = "TONG_TIEN_KHOA_HOC";
+        public const string MOT_NAM_SAU_NGAY_KET_THUC = "MOT_NAM_SAU_NGAY_KET_THUC";
+    }
+
+    public class V_DM_HOC_SINH2
+    {
+        public const string ID = "ID";
+        public const string MA_DOI_TUONG = "MA_DOI_TUONG";
+        public const string HO = "HO";
+        public const string TEN = "TEN";
+        public const string HO_TEN = "HO_TEN";
+        public const string TRUONG_DANG_HOC = "TRUONG_DANG_HOC";
+        public const string EMAIL_HS = "EMAIL_HS";
+        public const string EMAIL_PH = "EMAIL_PH";
+        public const string DIA_CHI = "DIA_CHI";
+        public const string SDT_HS = "SDT_HS";
+        public const string SDT_PH = "SDT_PH";
+        public const string HO_TEN_PH = "HO_TEN_PH";
+        public const string SDT_CO_DINH = "SDT_CO_DINH";
+        public const string FACEBOOK = "FACEBOOK";
+        public const string SKYPE = "SKYPE";
+        public const string DELETE_HS_YN = "DELETE_HS_YN";
+        public const string NGAY_SINH = "NGAY_SINH";
+        public const string TRANG_THAI_GD_HOC = "TRANG_THAI_GD_HOC";
+        public const string ID_LOP_MON = "ID_LOP_MON";
+        public const string MA_LOP_MON = "MA_LOP_MON";
+        public const string TEN_LOP_MON = "TEN_LOP_MON";
+        public const string DON_GIA_BUOI_HOC = "DON_GIA_BUOI_HOC";
+        public const string TRANG_THAI_LOP_MON = "TRANG_THAI_LOP_MON";
+        public const string THOI_GIAN_HOC_FROM_DATE = "THOI_GIAN_HOC_FROM_DATE";
+        public const string THOI_GIAN_HOC_TO_DATE = "THOI_GIAN_HOC_TO_DATE";
+        public const string MOT_NAM_SAU_NGAY_KET_THUC = "MOT_NAM_SAU_NGAY_KET_THUC";
     }
 
 }

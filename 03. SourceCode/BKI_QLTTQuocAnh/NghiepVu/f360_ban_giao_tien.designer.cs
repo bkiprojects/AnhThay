@@ -52,6 +52,7 @@
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MA_SO_QUYEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NGAY_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SO_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -63,7 +64,6 @@
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.MA_SO_QUYEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.m_pnl_out_place_dm.SuspendLayout();
@@ -343,7 +343,7 @@
             this.repositoryItemCheckEdit,
             this.repositoryItemTextEdit1});
             this.gridControl.Size = new System.Drawing.Size(1175, 208);
-            this.gridControl.TabIndex = 4;
+            this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
             // 
@@ -368,6 +368,14 @@
             this.gridView.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
             this.gridView.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.True;
             this.gridView.OptionsView.ShowGroupPanel = false;
+            // 
+            // MA_SO_QUYEN
+            // 
+            this.MA_SO_QUYEN.Caption = "Quyển số";
+            this.MA_SO_QUYEN.FieldName = "MA_SO_QUYEN";
+            this.MA_SO_QUYEN.Name = "MA_SO_QUYEN";
+            this.MA_SO_QUYEN.Visible = true;
+            this.MA_SO_QUYEN.VisibleIndex = 1;
             // 
             // NGAY_THU
             // 
@@ -473,14 +481,6 @@
             this.repositoryItemCheckEdit.Caption = "Check";
             this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
             this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
-            // 
-            // MA_SO_QUYEN
-            // 
-            this.MA_SO_QUYEN.Caption = "Quyển số";
-            this.MA_SO_QUYEN.FieldName = "MA_SO_QUYEN";
-            this.MA_SO_QUYEN.Name = "MA_SO_QUYEN";
-            this.MA_SO_QUYEN.Visible = true;
-            this.MA_SO_QUYEN.VisibleIndex = 1;
             // 
             // f360_ban_giao_tien
             // 

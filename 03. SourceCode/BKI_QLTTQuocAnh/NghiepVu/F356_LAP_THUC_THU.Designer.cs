@@ -340,7 +340,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 474);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(604, 49);
-            this.panelControl2.TabIndex = 26;
+            this.panelControl2.TabIndex = 27;
             // 
             // m_cmd_exit
             // 

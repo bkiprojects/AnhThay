@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_V_DM_LOP_MON" targetNamespace="http://tempuri.org/DS_V_DM_LOP_MON.xsd" xmlns:mstns="http://tempuri.org/DS_V_DM_LOP_MON.xsd" xmlns="http://tempuri.org/DS_V_DM_LOP_MON.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AnhThayConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AnhThayConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BKI_QLTTQuocAnh.DS.Properties.Settings.GlobalReference.Default.AnhThayConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_DM_LOP_MONTableAdapter" GeneratorDataComponentClassName="V_DM_LOP_MONTableAdapter" Name="V_DM_LOP_MON" UserDataComponentName="V_DM_LOP_MONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="AnhThayConnectionString (Settings)" DbObjectName="AnhThay.dbo.V_DM_LOP_MON" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, MA_LOP_MON, MO_TA, DON_GIA_BUOI_HOC, ID_LOP, ID_MON, TRANG_THAI_LOP_MON, TONG_SO_BUOI_HOC, THOI_GIAN_HOC_FROM_DATE, THOI_GIAN_HOC_TO_DATE, ID_TRO_GIANG, GHI_CHU, TONG_TIEN_KHOA_HOC, MOT_NAM_SAU_NGAY_KET_THUC FROM dbo.V_DM_LOP_MON</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="MA_LOP_MON" DataSetColumn="MA_LOP_MON" />
+              <Mapping SourceColumn="MO_TA" DataSetColumn="MO_TA" />
+              <Mapping SourceColumn="DON_GIA_BUOI_HOC" DataSetColumn="DON_GIA_BUOI_HOC" />
+              <Mapping SourceColumn="ID_LOP" DataSetColumn="ID_LOP" />
+              <Mapping SourceColumn="ID_MON" DataSetColumn="ID_MON" />
+              <Mapping SourceColumn="TRANG_THAI_LOP_MON" DataSetColumn="TRANG_THAI_LOP_MON" />
+              <Mapping SourceColumn="TONG_SO_BUOI_HOC" DataSetColumn="TONG_SO_BUOI_HOC" />
+              <Mapping SourceColumn="THOI_GIAN_HOC_FROM_DATE" DataSetColumn="THOI_GIAN_HOC_FROM_DATE" />
+              <Mapping SourceColumn="THOI_GIAN_HOC_TO_DATE" DataSetColumn="THOI_GIAN_HOC_TO_DATE" />
+              <Mapping SourceColumn="ID_TRO_GIANG" DataSetColumn="ID_TRO_GIANG" />
+              <Mapping SourceColumn="GHI_CHU" DataSetColumn="GHI_CHU" />
+              <Mapping SourceColumn="TONG_TIEN_KHOA_HOC" DataSetColumn="TONG_TIEN_KHOA_HOC" />
+              <Mapping SourceColumn="MOT_NAM_SAU_NGAY_KET_THUC" DataSetColumn="MOT_NAM_SAU_NGAY_KET_THUC" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_V_DM_LOP_MON" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_V_DM_LOP_MON" msprop:Generator_UserDSName="DS_V_DM_LOP_MON">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_DM_LOP_MON" msprop:Generator_TableClassName="V_DM_LOP_MONDataTable" msprop:Generator_TableVarName="tableV_DM_LOP_MON" msprop:Generator_RowChangedName="V_DM_LOP_MONRowChanged" msprop:Generator_TablePropName="V_DM_LOP_MON" msprop:Generator_RowDeletingName="V_DM_LOP_MONRowDeleting" msprop:Generator_RowChangingName="V_DM_LOP_MONRowChanging" msprop:Generator_RowEvHandlerName="V_DM_LOP_MONRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DM_LOP_MONRowDeleted" msprop:Generator_RowClassName="V_DM_LOP_MONRow" msprop:Generator_UserTableName="V_DM_LOP_MON" msprop:Generator_RowEvArgName="V_DM_LOP_MONRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:decimal" />
+              <xs:element name="MA_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnMA_LOP_MON" msprop:Generator_ColumnPropNameInRow="MA_LOP_MON" msprop:Generator_ColumnPropNameInTable="MA_LOP_MONColumn" msprop:Generator_UserColumnName="MA_LOP_MON">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MO_TA" msprop:Generator_ColumnVarNameInTable="columnMO_TA" msprop:Generator_ColumnPropNameInRow="MO_TA" msprop:Generator_ColumnPropNameInTable="MO_TAColumn" msprop:Generator_UserColumnName="MO_TA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DON_GIA_BUOI_HOC" msprop:Generator_ColumnVarNameInTable="columnDON_GIA_BUOI_HOC" msprop:Generator_ColumnPropNameInRow="DON_GIA_BUOI_HOC" msprop:Generator_ColumnPropNameInTable="DON_GIA_BUOI_HOCColumn" msprop:Generator_UserColumnName="DON_GIA_BUOI_HOC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ID_LOP" msprop:Generator_ColumnVarNameInTable="columnID_LOP" msprop:Generator_ColumnPropNameInRow="ID_LOP" msprop:Generator_ColumnPropNameInTable="ID_LOPColumn" msprop:Generator_UserColumnName="ID_LOP" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ID_MON" msprop:Generator_ColumnVarNameInTable="columnID_MON" msprop:Generator_ColumnPropNameInRow="ID_MON" msprop:Generator_ColumnPropNameInTable="ID_MONColumn" msprop:Generator_UserColumnName="ID_MON" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TRANG_THAI_LOP_MON" msprop:Generator_ColumnVarNameInTable="columnTRANG_THAI_LOP_MON" msprop:Generator_ColumnPropNameInRow="TRANG_THAI_LOP_MON" msprop:Generator_ColumnPropNameInTable="TRANG_THAI_LOP_MONColumn" msprop:Generator_UserColumnName="TRANG_THAI_LOP_MON" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TONG_SO_BUOI_HOC" msprop:Generator_ColumnVarNameInTable="columnTONG_SO_BUOI_HOC" msprop:Generator_ColumnPropNameInRow="TONG_SO_BUOI_HOC" msprop:Generator_ColumnPropNameInTable="TONG_SO_BUOI_HOCColumn" msprop:Generator_UserColumnName="TONG_SO_BUOI_HOC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="THOI_GIAN_HOC_FROM_DATE" msprop:Generator_ColumnVarNameInTable="columnTHOI_GIAN_HOC_FROM_DATE" msprop:Generator_ColumnPropNameInRow="THOI_GIAN_HOC_FROM_DATE" msprop:Generator_ColumnPropNameInTable="THOI_GIAN_HOC_FROM_DATEColumn" msprop:Generator_UserColumnName="THOI_GIAN_HOC_FROM_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="THOI_GIAN_HOC_TO_DATE" msprop:Generator_ColumnVarNameInTable="columnTHOI_GIAN_HOC_TO_DATE" msprop:Generator_ColumnPropNameInRow="THOI_GIAN_HOC_TO_DATE" msprop:Generator_ColumnPropNameInTable="THOI_GIAN_HOC_TO_DATEColumn" msprop:Generator_UserColumnName="THOI_GIAN_HOC_TO_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ID_TRO_GIANG" msprop:Generator_ColumnVarNameInTable="columnID_TRO_GIANG" msprop:Generator_ColumnPropNameInRow="ID_TRO_GIANG" msprop:Generator_ColumnPropNameInTable="ID_TRO_GIANGColumn" msprop:Generator_UserColumnName="ID_TRO_GIANG" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GHI_CHU" msprop:Generator_ColumnVarNameInTable="columnGHI_CHU" msprop:Generator_ColumnPropNameInRow="GHI_CHU" msprop:Generator_ColumnPropNameInTable="GHI_CHUColumn" msprop:Generator_UserColumnName="GHI_CHU" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TONG_TIEN_KHOA_HOC" msprop:Generator_ColumnVarNameInTable="columnTONG_TIEN_KHOA_HOC" msprop:Generator_ColumnPropNameInRow="TONG_TIEN_KHOA_HOC" msprop:Generator_ColumnPropNameInTable="TONG_TIEN_KHOA_HOCColumn" msprop:Generator_UserColumnName="TONG_TIEN_KHOA_HOC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MOT_NAM_SAU_NGAY_KET_THUC" msprop:Generator_ColumnVarNameInTable="columnMOT_NAM_SAU_NGAY_KET_THUC" msprop:Generator_ColumnPropNameInRow="MOT_NAM_SAU_NGAY_KET_THUC" msprop:Generator_ColumnPropNameInTable="MOT_NAM_SAU_NGAY_KET_THUCColumn" msprop:Generator_UserColumnName="MOT_NAM_SAU_NGAY_KET_THUC" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_DM_LOP_MON" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

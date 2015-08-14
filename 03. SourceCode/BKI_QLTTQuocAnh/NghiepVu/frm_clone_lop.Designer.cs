@@ -66,7 +66,7 @@
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit});
             this.gridControl.Size = new System.Drawing.Size(968, 374);
-            this.gridControl.TabIndex = 5;
+            this.gridControl.TabIndex = 1;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
             // 
@@ -155,7 +155,7 @@
             this.label1.Location = new System.Drawing.Point(30, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 13);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Chọn lớp giai đoạn I";
             // 
             // label2
@@ -164,7 +164,7 @@
             this.label2.Location = new System.Drawing.Point(30, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 13);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 2;
             this.label2.Text = "Chuyển sang giai đoạn II";
             // 
             // m_sle_lop_gd1
@@ -178,7 +178,7 @@
             this.m_sle_lop_gd1.Properties.NullText = "";
             this.m_sle_lop_gd1.Properties.View = this.gridView1;
             this.m_sle_lop_gd1.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_lop_gd1.TabIndex = 9;
+            this.m_sle_lop_gd1.TabIndex = 1;
             this.m_sle_lop_gd1.EditValueChanged += new System.EventHandler(this.m_sle_lop_gd1_EditValueChanged);
             // 
             // gridView1
@@ -199,7 +199,7 @@
             this.m_sle_lop_gd2.Properties.NullText = "";
             this.m_sle_lop_gd2.Properties.View = this.gridView2;
             this.m_sle_lop_gd2.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_lop_gd2.TabIndex = 10;
+            this.m_sle_lop_gd2.TabIndex = 3;
             // 
             // gridView2
             // 
@@ -246,7 +246,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(968, 98);
-            this.panel1.TabIndex = 11;
+            this.panel1.TabIndex = 0;
             // 
             // panelControl2
             // 
@@ -256,7 +256,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 423);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(968, 49);
-            this.panelControl2.TabIndex = 27;
+            this.panelControl2.TabIndex = 2;
             // 
             // m_cmd_exit
             // 
@@ -270,7 +270,7 @@
             this.m_cmd_exit.Location = new System.Drawing.Point(2, 2);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(117, 45);
-            this.m_cmd_exit.TabIndex = 1;
+            this.m_cmd_exit.TabIndex = 0;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             this.m_cmd_exit.Visible = false;
             // 
@@ -288,7 +288,7 @@
             this.m_cmd_insert.Location = new System.Drawing.Point(12, 5);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(248, 40);
-            this.m_cmd_insert.TabIndex = 0;
+            this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Chuyển học viên đã chọn";
             this.m_cmd_insert.UseVisualStyleBackColor = false;
             this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);

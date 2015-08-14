@@ -38,8 +38,8 @@ namespace BKI_QLTTQuocAnh
         internal System.Windows.Forms.Panel m_pnl_out_place_dm;
         private C1.Win.C1FlexGrid.C1FlexGrid m_fg;
         internal SIS.Controls.Button.SiSButton m_cmd_delete;
-        internal SIS.Controls.Button.SiSButton m_cmd_update;
-        internal SIS.Controls.Button.SiSButton m_cmd_insert;
+        internal SIS.Controls.Button.SiSButton m_cmd_danh_sach_phieu_thuc_thu;
+        internal SIS.Controls.Button.SiSButton m_cmd_danh_sach_phieu_giam_tru;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal SIS.Controls.Button.SiSButton m_cmd_view;
         private Panel panel2;
@@ -104,8 +104,8 @@ namespace BKI_QLTTQuocAnh
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_update = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_danh_sach_phieu_giam_tru = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_danh_sach_phieu_thuc_thu = new SIS.Controls.Button.SiSButton();
             this.m_cmd_view = new SIS.Controls.Button.SiSButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
@@ -169,16 +169,16 @@ namespace BKI_QLTTQuocAnh
             // m_pnl_out_place_dm
             // 
             this.m_pnl_out_place_dm.Controls.Add(this.simpleButton1);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
-            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_danh_sach_phieu_giam_tru);
+            this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_danh_sach_phieu_thuc_thu);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_view);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_exit);
             this.m_pnl_out_place_dm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 373);
+            this.m_pnl_out_place_dm.Location = new System.Drawing.Point(0, 361);
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
-            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1070, 36);
+            this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1070, 48);
             this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // simpleButton1
@@ -188,39 +188,41 @@ namespace BKI_QLTTQuocAnh
             this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.simpleButton1.Location = new System.Drawing.Point(92, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 28);
+            this.simpleButton1.Size = new System.Drawing.Size(75, 40);
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
-            // m_cmd_insert
+            // m_cmd_danh_sach_phieu_giam_tru
             // 
-            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_insert.ImageIndex = 2;
-            this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(714, 4);
-            this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_insert.TabIndex = 1;
-            this.m_cmd_insert.Text = "&Thêm";
+            this.m_cmd_danh_sach_phieu_giam_tru.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_danh_sach_phieu_giam_tru.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_danh_sach_phieu_giam_tru.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_danh_sach_phieu_giam_tru.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_danh_sach_phieu_giam_tru.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_danh_sach_phieu_giam_tru.ImageIndex = 2;
+            this.m_cmd_danh_sach_phieu_giam_tru.ImageList = this.ImageList;
+            this.m_cmd_danh_sach_phieu_giam_tru.Location = new System.Drawing.Point(538, 4);
+            this.m_cmd_danh_sach_phieu_giam_tru.Name = "m_cmd_danh_sach_phieu_giam_tru";
+            this.m_cmd_danh_sach_phieu_giam_tru.Size = new System.Drawing.Size(176, 40);
+            this.m_cmd_danh_sach_phieu_giam_tru.TabIndex = 1;
+            this.m_cmd_danh_sach_phieu_giam_tru.Text = "&Danh sách phiếu giảm trừ";
+            this.m_cmd_danh_sach_phieu_giam_tru.Visible = false;
             // 
-            // m_cmd_update
+            // m_cmd_danh_sach_phieu_thuc_thu
             // 
-            this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_update.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_update.ImageIndex = 3;
-            this.m_cmd_update.ImageList = this.ImageList;
-            this.m_cmd_update.Location = new System.Drawing.Point(802, 4);
-            this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_update.TabIndex = 2;
-            this.m_cmd_update.Text = "&Sửa";
+            this.m_cmd_danh_sach_phieu_thuc_thu.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_danh_sach_phieu_thuc_thu.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_danh_sach_phieu_thuc_thu.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_danh_sach_phieu_thuc_thu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_danh_sach_phieu_thuc_thu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_danh_sach_phieu_thuc_thu.ImageIndex = 3;
+            this.m_cmd_danh_sach_phieu_thuc_thu.ImageList = this.ImageList;
+            this.m_cmd_danh_sach_phieu_thuc_thu.Location = new System.Drawing.Point(714, 4);
+            this.m_cmd_danh_sach_phieu_thuc_thu.Name = "m_cmd_danh_sach_phieu_thuc_thu";
+            this.m_cmd_danh_sach_phieu_thuc_thu.Size = new System.Drawing.Size(176, 40);
+            this.m_cmd_danh_sach_phieu_thuc_thu.TabIndex = 2;
+            this.m_cmd_danh_sach_phieu_thuc_thu.Text = "&Danh sách phiếu thực thu";
+            this.m_cmd_danh_sach_phieu_thuc_thu.Visible = false;
             // 
             // m_cmd_view
             // 
@@ -233,7 +235,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_view.ImageList = this.ImageList;
             this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_view.Name = "m_cmd_view";
-            this.m_cmd_view.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_view.Size = new System.Drawing.Size(88, 40);
             this.m_cmd_view.TabIndex = 0;
             this.m_cmd_view.Text = "Xem";
             // 
@@ -248,7 +250,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.ImageList = this.ImageList;
             this.m_cmd_delete.Location = new System.Drawing.Point(890, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_delete.Size = new System.Drawing.Size(88, 40);
             this.m_cmd_delete.TabIndex = 3;
             this.m_cmd_delete.Text = "&Xoá";
             // 
@@ -263,7 +265,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.ImageList = this.ImageList;
             this.m_cmd_exit.Location = new System.Drawing.Point(978, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(88, 28);
+            this.m_cmd_exit.Size = new System.Drawing.Size(88, 40);
             this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
@@ -394,7 +396,7 @@ namespace BKI_QLTTQuocAnh
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1070, 264);
+            this.gridControl1.Size = new System.Drawing.Size(1070, 252);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -419,7 +421,6 @@ namespace BKI_QLTTQuocAnh
             this.gridView2.OptionsFind.ShowCloseButton = false;
             this.gridView2.OptionsView.ShowFooter = true;
             this.gridView2.OptionsView.ShowGroupPanel = false;
-            this.gridView2.DoubleClick += new System.EventHandler(this.gridView2_DoubleClick);
             // 
             // ID_LOP_MON
             // 
@@ -752,13 +753,49 @@ namespace BKI_QLTTQuocAnh
         private void set_define_events()
         {
             m_cmd_exit.Click += new EventHandler(m_cmd_exit_Click);
-            m_cmd_insert.Click += new EventHandler(m_cmd_insert_Click);
-            m_cmd_update.Click += new EventHandler(m_cmd_update_Click);
+            m_cmd_danh_sach_phieu_giam_tru.Click += new EventHandler(m_cmd_insert_Click);
+            m_cmd_danh_sach_phieu_thuc_thu.Click += new EventHandler(m_cmd_update_Click);
             m_cmd_delete.Click += new EventHandler(m_cmd_delete_Click);
             m_cmd_view.Click += new EventHandler(m_cmd_view_Click);
             m_cmd_search.Click += m_cmd_search_Click;
             this.KeyDown += f520_bao_cao_thuc_thu_giam_tru_theo_ngay_KeyDown;
+            gridView2.DoubleClick += gridView2_DoubleClick;
+            //    m_cmd_danh_sach_phieu_giam_tru.Click += m_cmd_danh_sach_phieu_giam_tru_Click;
+            //    m_cmd_danh_sach_phieu_thuc_thu.Click += m_cmd_danh_sach_phieu_thuc_thu_Click;
         }
+
+
+
+
+        //void m_cmd_danh_sach_phieu_giam_tru_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        decimal v_id_lop = CIPConvert.ToDecimal(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "ID_LOP_MON"));
+
+        //        f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay();
+        //        v_frm.display_from_f520(v_id_lop, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date, CONST_ID_LOAI_PHIEU_THU.PHIEU_GIAM_TRU);
+        //    }
+        //    catch (Exception v_e)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
+
+        //void m_cmd_danh_sach_phieu_thuc_thu_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        decimal v_id_lop = CIPConvert.ToDecimal(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "ID_LOP_MON"));
+
+        //        f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay v_frm = new f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay();
+        //        v_frm.display_from_f520(v_id_lop, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date, CONST_ID_LOAI_PHIEU_THU.PHIEU_THUC_THU);
+        //    }
+        //    catch (Exception v_e)
+        //    {
+        //        CSystemLog_301.ExceptionHandle(v_e);
+        //    }
+        //}
 
         void f520_bao_cao_thuc_thu_giam_tru_theo_ngay_KeyDown(object sender, KeyEventArgs e)
         {

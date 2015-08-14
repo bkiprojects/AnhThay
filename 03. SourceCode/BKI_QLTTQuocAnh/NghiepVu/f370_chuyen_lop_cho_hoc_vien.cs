@@ -90,9 +90,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             this.m_lbl_ten_hs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_lbl_buoc_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_lbl_buoc_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_lbl_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.m_txt_tong_tien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_tb_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.m_lbl_tb_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             set_define_events();
             this.KeyPreview = true;
         }
@@ -239,7 +238,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_sle_lop_2.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
         }
 
-
         private void load_data_2_ds_dm_hoc_sinh()
         {
             //Đẩy dữ liệu vào DS_DM_HS
@@ -284,8 +282,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         //    m_sle_lop.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
         //    m_sle_lop.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
         //}
-
-
 
         private void load_data_2_ds_v_gd_hoc()
         {
@@ -385,6 +381,21 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             //gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
         }
 
+        private void load_data_2_gridcontrol1()
+        {
+            m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+            m_ds.Clear();
+            m_ds.EnforceConstraints = false;
+            m_us.FillDataset_by_hs_lm(m_ds, CIPConvert.ToDecimal(m_sle_lop_2.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue));
+
+            m_fg.Redraw = true;
+            //create_tree_2grid();
+            //CGridUtils.MakeSoTT(0, m_fg);
+            wrap_text_cell();
+
+            gridControl.DataSource = m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU;
+        }
+
         private void load_data_to_ds_obj()
         {
             load_data_2_ds_dm_hoc_sinh();
@@ -423,10 +434,18 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void chuyen_lop_cho_hoc_vien()
         {
             US_GD_HOC v_us_gd_hoc = new US_GD_HOC();
+            decimal op_dc_id_gd_hoc_moi = 0;
+            //nghi hoc lop cu va cho hoc lop moi
+            v_us_gd_hoc.Update_gd_hoc_by_Proc(CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue), CIPConvert.ToDecimal(m_sle_lop_2.EditValue), ref op_dc_id_gd_hoc_moi);
 
-            v_us_gd_hoc.Update_gd_hoc_by_Proc(CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue), CIPConvert.ToDecimal(m_sle_lop_2.EditValue));
-
+            //lap hoc phi cho lop moi
+            US_GD_PHIEU_THU v_us_gd_phieu_thu = new US_GD_PHIEU_THU();
+            v_us_gd_phieu_thu.insert_gd_phieu_thu_f370(op_dc_id_gd_hoc_moi, CAppContext_201.getCurrentUserID(), CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue), CIPConvert.ToDecimal(m_sle_lop_2.EditValue));
+            
             MessageBox.Show("Bạn đã cho học viên chuyển lớp thành công!");
+
+            m_lbl_tb_2.Visible = true;
+            gridControl1.Visible = true;
         }
 
 
@@ -564,7 +583,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 }
                 else
                 {
-                    chuyen_lop_cho_hoc_vien();
+                    if (BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắn muốn chuyển học viên này?") == DialogResult.Yes)
+                    {
+                        chuyen_lop_cho_hoc_vien();
+                        load_data_2_gridcontrol1();
+                    }
                 }
                 m_lbl_ten_hs.Visible = false;
                 load_data_to_sle_lop();
@@ -582,15 +605,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             try
             {
-                if (check_validate_data_is_OK())
-                {
-                    load_data_2_grid();
-                    if (m_fg.Rows.Count > 1)
-                    {
-                        m_txt_tong_tien.Text = String.Format("{0:#,###0}", m_fg.Rows[m_fg.Rows.Fixed][(int)e_col_Number.TIEN_THUC_THU]);
-                    }
-                }
-                else return;
+                //if (check_validate_data_is_OK())
+                //{
+                //    load_data_2_grid();
+                //    if (m_fg.Rows.Count > 1)
+                //    {
+                //        m_txt_tong_tien.Text = String.Format("{0:#,###0}", m_fg.Rows[m_fg.Rows.Fixed][(int)e_col_Number.TIEN_THUC_THU]);
+                //    }
+                //}
+                //else return;
 
             }
             catch (Exception v_e)

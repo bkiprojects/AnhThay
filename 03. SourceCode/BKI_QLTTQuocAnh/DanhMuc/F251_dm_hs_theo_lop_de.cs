@@ -39,6 +39,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             return this.ShowDialog();
         }
+
         public DialogResult display_4_insert(ref decimal op_dc_id_hoc_vien) {
             m_e_form_mode = DataEntryFormMode.InsertDataState;
             op_dc_id_hoc_vien = m_us.dcID;
@@ -84,13 +85,14 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             m_ds_dm_hs.EnforceConstraints = false;
             v_us.FillDataset(m_ds_dm_hs);
         }
+
         private void goi_y_ma_hv() {
             if(m_e_form_mode == DataEntryFormMode.InsertDataState) {
                 US_DM_HOC_SINH v_us = new US_DM_HOC_SINH();
                 m_txt_ma_doi_tuong.Text = v_us.get_ma_hs_moi_nhat();
             }
-            
         }
+
         private void set_initial_form_load()
         {
             

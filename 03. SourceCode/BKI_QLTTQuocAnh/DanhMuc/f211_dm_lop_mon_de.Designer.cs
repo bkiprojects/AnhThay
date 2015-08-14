@@ -105,18 +105,18 @@
             this.m_lbl_thoi_gian_end.AutoSize = true;
             this.m_lbl_thoi_gian_end.Location = new System.Drawing.Point(12, 168);
             this.m_lbl_thoi_gian_end.Name = "m_lbl_thoi_gian_end";
-            this.m_lbl_thoi_gian_end.Size = new System.Drawing.Size(72, 13);
+            this.m_lbl_thoi_gian_end.Size = new System.Drawing.Size(93, 13);
             this.m_lbl_thoi_gian_end.TabIndex = 9;
-            this.m_lbl_thoi_gian_end.Text = "Thời gian end";
+            this.m_lbl_thoi_gian_end.Text = "Thời gian kết thúc";
             // 
             // m_lbl_thoi_gian_start
             // 
             this.m_lbl_thoi_gian_start.AutoSize = true;
             this.m_lbl_thoi_gian_start.Location = new System.Drawing.Point(12, 131);
             this.m_lbl_thoi_gian_start.Name = "m_lbl_thoi_gian_start";
-            this.m_lbl_thoi_gian_start.Size = new System.Drawing.Size(74, 13);
+            this.m_lbl_thoi_gian_start.Size = new System.Drawing.Size(91, 13);
             this.m_lbl_thoi_gian_start.TabIndex = 7;
-            this.m_lbl_thoi_gian_start.Text = "Thời gian start";
+            this.m_lbl_thoi_gian_start.Text = "Thời gian bắt đầu";
             // 
             // m_lbl_hoc_phi
             // 

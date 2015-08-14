@@ -43,6 +43,7 @@
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_txt_thanh_tien = new DevExpress.XtraEditors.TextEdit();
             this.m_lbl_goi_y = new System.Windows.Forms.Label();
             this.m_cmd_xoa_hang = new SIS.Controls.Button.SiSButton();
             this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
@@ -61,11 +62,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
-            this.m_txt_thanh_tien = new DevExpress.XtraEditors.TextEdit();
             this.m_pnl_out_place_dm.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_thanh_tien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.SuspendLayout();
             // 
             // m_dat_tu_ngay
@@ -143,7 +143,7 @@
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(912, 55);
-            this.m_pnl_out_place_dm.TabIndex = 2;
+            this.m_pnl_out_place_dm.TabIndex = 3;
             // 
             // m_cmd_ds_phieu_phai_thu
             // 
@@ -159,6 +159,7 @@
             this.m_cmd_ds_phieu_phai_thu.Size = new System.Drawing.Size(169, 47);
             this.m_cmd_ds_phieu_phai_thu.TabIndex = 1;
             this.m_cmd_ds_phieu_phai_thu.Text = "Danh sách phiếu phải thu";
+            this.m_cmd_ds_phieu_phai_thu.Visible = false;
             // 
             // m_cmd_insert
             // 
@@ -258,6 +259,20 @@
             this.panel1.Size = new System.Drawing.Size(912, 191);
             this.panel1.TabIndex = 1;
             // 
+            // m_txt_thanh_tien
+            // 
+            this.m_txt_thanh_tien.EditValue = "";
+            this.m_txt_thanh_tien.Location = new System.Drawing.Point(118, 121);
+            this.m_txt_thanh_tien.Name = "m_txt_thanh_tien";
+            this.m_txt_thanh_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.m_txt_thanh_tien.Properties.Appearance.Options.UseFont = true;
+            this.m_txt_thanh_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_thanh_tien.Properties.Mask.EditMask = "n0";
+            this.m_txt_thanh_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.m_txt_thanh_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.m_txt_thanh_tien.Size = new System.Drawing.Size(153, 26);
+            this.m_txt_thanh_tien.TabIndex = 13;
+            // 
             // m_lbl_goi_y
             // 
             this.m_lbl_goi_y.AutoSize = true;
@@ -289,7 +304,7 @@
             this.m_cbo_lop_mon.Location = new System.Drawing.Point(118, 85);
             this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
             this.m_cbo_lop_mon.Size = new System.Drawing.Size(153, 21);
-            this.m_cbo_lop_mon.TabIndex = 5;
+            this.m_cbo_lop_mon.TabIndex = 9;
             // 
             // label5
             // 
@@ -297,7 +312,7 @@
             this.label5.Location = new System.Drawing.Point(8, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 8;
             this.label5.Text = "Chọn lớp môn";
             // 
             // m_cbo_nhan_vien_thu
@@ -307,7 +322,7 @@
             this.m_cbo_nhan_vien_thu.Location = new System.Drawing.Point(597, 12);
             this.m_cbo_nhan_vien_thu.Name = "m_cbo_nhan_vien_thu";
             this.m_cbo_nhan_vien_thu.Size = new System.Drawing.Size(190, 21);
-            this.m_cbo_nhan_vien_thu.TabIndex = 7;
+            this.m_cbo_nhan_vien_thu.TabIndex = 3;
             // 
             // m_cbo_nhan_vien_nhap
             // 
@@ -316,7 +331,7 @@
             this.m_cbo_nhan_vien_nhap.Location = new System.Drawing.Point(597, 48);
             this.m_cbo_nhan_vien_nhap.Name = "m_cbo_nhan_vien_nhap";
             this.m_cbo_nhan_vien_nhap.Size = new System.Drawing.Size(190, 21);
-            this.m_cbo_nhan_vien_nhap.TabIndex = 9;
+            this.m_cbo_nhan_vien_nhap.TabIndex = 7;
             // 
             // m_lbl_ngay_thu
             // 
@@ -351,7 +366,7 @@
             this.m_txt_noi_dung.Multiline = true;
             this.m_txt_noi_dung.Name = "m_txt_noi_dung";
             this.m_txt_noi_dung.Size = new System.Drawing.Size(219, 46);
-            this.m_txt_noi_dung.TabIndex = 3;
+            this.m_txt_noi_dung.TabIndex = 5;
             this.m_txt_noi_dung.Text = "Lập học phí";
             // 
             // m_lbl_den_ngay
@@ -369,7 +384,7 @@
             this.m_lbl_noi_dung.Location = new System.Drawing.Point(8, 34);
             this.m_lbl_noi_dung.Name = "m_lbl_noi_dung";
             this.m_lbl_noi_dung.Size = new System.Drawing.Size(50, 13);
-            this.m_lbl_noi_dung.TabIndex = 2;
+            this.m_lbl_noi_dung.TabIndex = 4;
             this.m_lbl_noi_dung.Text = "Nội dung";
             // 
             // m_lbl_nhan_vien_nhap
@@ -378,7 +393,7 @@
             this.m_lbl_nhan_vien_nhap.Location = new System.Drawing.Point(487, 51);
             this.m_lbl_nhan_vien_nhap.Name = "m_lbl_nhan_vien_nhap";
             this.m_lbl_nhan_vien_nhap.Size = new System.Drawing.Size(93, 13);
-            this.m_lbl_nhan_vien_nhap.TabIndex = 8;
+            this.m_lbl_nhan_vien_nhap.TabIndex = 6;
             this.m_lbl_nhan_vien_nhap.Text = "Nhân viên nhập(*)";
             // 
             // m_lbl_nhan_vien_thu
@@ -387,7 +402,7 @@
             this.m_lbl_nhan_vien_thu.Location = new System.Drawing.Point(487, 15);
             this.m_lbl_nhan_vien_thu.Name = "m_lbl_nhan_vien_thu";
             this.m_lbl_nhan_vien_thu.Size = new System.Drawing.Size(84, 13);
-            this.m_lbl_nhan_vien_thu.TabIndex = 6;
+            this.m_lbl_nhan_vien_thu.TabIndex = 2;
             this.m_lbl_nhan_vien_thu.Text = "Nhân viên thu(*)";
             // 
             // m_cmd_tu_dong
@@ -432,20 +447,6 @@
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 2;
             // 
-            // m_txt_thanh_tien
-            // 
-            this.m_txt_thanh_tien.EditValue = "";
-            this.m_txt_thanh_tien.Location = new System.Drawing.Point(118, 121);
-            this.m_txt_thanh_tien.Name = "m_txt_thanh_tien";
-            this.m_txt_thanh_tien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.m_txt_thanh_tien.Properties.Appearance.Options.UseFont = true;
-            this.m_txt_thanh_tien.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_txt_thanh_tien.Properties.Mask.EditMask = "n0";
-            this.m_txt_thanh_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.m_txt_thanh_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.m_txt_thanh_tien.Size = new System.Drawing.Size(153, 26);
-            this.m_txt_thanh_tien.TabIndex = 39;
-            // 
             // f330_lap_phai_thu_hoc_vien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,8 +465,8 @@
             this.m_pnl_out_place_dm.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_thanh_tien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

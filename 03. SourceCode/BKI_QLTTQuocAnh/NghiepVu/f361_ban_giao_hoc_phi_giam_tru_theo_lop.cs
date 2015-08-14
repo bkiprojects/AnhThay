@@ -136,6 +136,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.gridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.TEN_LOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NGAY_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SO_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -149,7 +150,6 @@ namespace BKI_QLTTQuocAnh
             this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.TEN_LOP_MON = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TIEN_THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TEN_LOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -200,7 +200,7 @@ namespace BKI_QLTTQuocAnh
             this.m_pnl_out_place_dm.Name = "m_pnl_out_place_dm";
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(1247, 84);
-            this.m_pnl_out_place_dm.TabIndex = 19;
+            this.m_pnl_out_place_dm.TabIndex = 2;
             // 
             // m_cmd_insert
             // 
@@ -214,7 +214,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_insert.Location = new System.Drawing.Point(92, 4);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(138, 76);
-            this.m_cmd_insert.TabIndex = 12;
+            this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Bàn giao";
             // 
             // m_cmd_update
@@ -229,7 +229,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_update.Location = new System.Drawing.Point(979, 4);
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(88, 76);
-            this.m_cmd_update.TabIndex = 13;
+            this.m_cmd_update.TabIndex = 2;
             this.m_cmd_update.Text = "&Sửa";
             // 
             // m_cmd_view
@@ -244,7 +244,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_view.Location = new System.Drawing.Point(4, 4);
             this.m_cmd_view.Name = "m_cmd_view";
             this.m_cmd_view.Size = new System.Drawing.Size(88, 76);
-            this.m_cmd_view.TabIndex = 21;
+            this.m_cmd_view.TabIndex = 0;
             this.m_cmd_view.Text = "Xem";
             // 
             // m_cmd_delete
@@ -259,7 +259,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_delete.Location = new System.Drawing.Point(1067, 4);
             this.m_cmd_delete.Name = "m_cmd_delete";
             this.m_cmd_delete.Size = new System.Drawing.Size(88, 76);
-            this.m_cmd_delete.TabIndex = 14;
+            this.m_cmd_delete.TabIndex = 3;
             this.m_cmd_delete.Text = "&Xoá";
             // 
             // m_cmd_exit
@@ -274,7 +274,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_exit.Location = new System.Drawing.Point(1155, 4);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(88, 76);
-            this.m_cmd_exit.TabIndex = 11;
+            this.m_cmd_exit.TabIndex = 4;
             this.m_cmd_exit.Text = "Thoát (Esc)";
             // 
             // m_fg
@@ -305,7 +305,7 @@ namespace BKI_QLTTQuocAnh
             this.panel1.Location = new System.Drawing.Point(0, 44);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1247, 107);
-            this.panel1.TabIndex = 22;
+            this.panel1.TabIndex = 0;
             // 
             // m_cbo_loai_phieu
             // 
@@ -313,7 +313,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cbo_loai_phieu.Location = new System.Drawing.Point(87, 69);
             this.m_cbo_loai_phieu.Name = "m_cbo_loai_phieu";
             this.m_cbo_loai_phieu.Size = new System.Drawing.Size(223, 21);
-            this.m_cbo_loai_phieu.TabIndex = 24;
+            this.m_cbo_loai_phieu.TabIndex = 9;
             // 
             // label3
             // 
@@ -321,7 +321,7 @@ namespace BKI_QLTTQuocAnh
             this.label3.Location = new System.Drawing.Point(8, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 23;
+            this.label3.TabIndex = 8;
             this.label3.Text = "Loại phiếu ";
             // 
             // m_sle_lop
@@ -335,7 +335,7 @@ namespace BKI_QLTTQuocAnh
             this.m_sle_lop.Properties.NullText = "Chọn lớp";
             this.m_sle_lop.Properties.View = this.gridView1;
             this.m_sle_lop.Size = new System.Drawing.Size(228, 20);
-            this.m_sle_lop.TabIndex = 22;
+            this.m_sle_lop.TabIndex = 7;
             // 
             // gridView1
             // 
@@ -351,7 +351,7 @@ namespace BKI_QLTTQuocAnh
             this.label2.Location = new System.Drawing.Point(260, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 13);
-            this.label2.TabIndex = 21;
+            this.label2.TabIndex = 6;
             this.label2.Text = "Lớp";
             // 
             // m_cmd_search
@@ -365,7 +365,7 @@ namespace BKI_QLTTQuocAnh
             this.m_cmd_search.Location = new System.Drawing.Point(444, 65);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
-            this.m_cmd_search.TabIndex = 6;
+            this.m_cmd_search.TabIndex = 10;
             this.m_cmd_search.Text = "&Lọc phiếu";
             // 
             // m_cbo_nhan_vien_thu
@@ -430,7 +430,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(1247, 44);
-            this.m_lbl_header.TabIndex = 21;
+            this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÀN GIAO TIỀN";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -445,7 +445,7 @@ namespace BKI_QLTTQuocAnh
             this.repositoryItemCheckEdit,
             this.repositoryItemTextEdit1});
             this.gridControl.Size = new System.Drawing.Size(1247, 238);
-            this.gridControl.TabIndex = 23;
+            this.gridControl.TabIndex = 1;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
             // 
@@ -470,6 +470,14 @@ namespace BKI_QLTTQuocAnh
             this.gridView.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
             this.gridView.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.True;
             this.gridView.OptionsView.ShowGroupPanel = false;
+            // 
+            // TEN_LOP
+            // 
+            this.TEN_LOP.Caption = "Lớp";
+            this.TEN_LOP.FieldName = "TEN_LOP_MON";
+            this.TEN_LOP.Name = "TEN_LOP";
+            this.TEN_LOP.Visible = true;
+            this.TEN_LOP.VisibleIndex = 1;
             // 
             // NGAY_THU
             // 
@@ -594,14 +602,6 @@ namespace BKI_QLTTQuocAnh
             this.TIEN_THUC_THU.Name = "TIEN_THUC_THU";
             this.TIEN_THUC_THU.OptionsColumn.AllowEdit = false;
             this.TIEN_THUC_THU.Width = 215;
-            // 
-            // TEN_LOP
-            // 
-            this.TEN_LOP.Caption = "Lớp";
-            this.TEN_LOP.FieldName = "TEN_LOP_MON";
-            this.TEN_LOP.Name = "TEN_LOP";
-            this.TEN_LOP.Visible = true;
-            this.TEN_LOP.VisibleIndex = 1;
             // 
             // f361_ban_giao_hoc_phi_giam_tru_theo_lop
             // 

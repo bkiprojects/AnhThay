@@ -43,8 +43,7 @@ namespace BKI_QLTTQuocAnh
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal SIS.Controls.Button.SiSButton m_cmd_view;
         private Panel panel2;
-        private System.Windows.Forms.ComboBox m_cbo_loai_phieu;
-        private Label label1;
+        private Label m_lbl_loai_phieu;
         private Label m_lbl_goi_y;
         internal SIS.Controls.Button.SiSButton m_cmd_search;
         private Label m_lbl_search;
@@ -56,7 +55,7 @@ namespace BKI_QLTTQuocAnh
         private Label m_lbl_tu_ngay;
         private Label m_lbl_den_ngay;
         private DateTimePicker m_dat_den_ngay;
-        private System.Windows.Forms.ComboBox m_cbo_lop_mon;
+        private System.Windows.Forms.ComboBox m_cbo_loai_phieu;
         private Label m_lbl_lop_mon;
         private SearchLookUpEdit m_sle_lop;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -101,7 +100,7 @@ namespace BKI_QLTTQuocAnh
             CCommon.load_data_2_cbo_loai_phieu_thu(
                 CONST_LOAI_TU_DIEN.LOAI_PHIEU_THU,
                 m_cbo_loai_phieu);
-            CCommon.load_data_2_cbo_lop_mon(-1, m_cbo_lop_mon);
+            CCommon.load_data_2_cbo_lop_mon(-1, m_cbo_loai_phieu);
             m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
             m_dat_den_ngay.Value = DateTime.Now.Date;
         }
@@ -144,10 +143,9 @@ namespace BKI_QLTTQuocAnh
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.m_cbo_lop_mon = new System.Windows.Forms.ComboBox();
-            this.m_lbl_lop_mon = new System.Windows.Forms.Label();
             this.m_cbo_loai_phieu = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.m_lbl_lop_mon = new System.Windows.Forms.Label();
+            this.m_lbl_loai_phieu = new System.Windows.Forms.Label();
             this.m_lbl_goi_y = new System.Windows.Forms.Label();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_lbl_search = new System.Windows.Forms.Label();
@@ -319,9 +317,9 @@ namespace BKI_QLTTQuocAnh
             // 
             this.m_fg.ColumnInfo = resources.GetString("m_fg.ColumnInfo");
             this.m_fg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_fg.Location = new System.Drawing.Point(0, 103);
+            this.m_fg.Location = new System.Drawing.Point(0, 133);
             this.m_fg.Name = "m_fg";
-            this.m_fg.Size = new System.Drawing.Size(1257, 379);
+            this.m_fg.Size = new System.Drawing.Size(1257, 349);
             this.m_fg.Styles = new C1.Win.C1FlexGrid.CellStyleCollection(resources.GetString("m_fg.Styles"));
             this.m_fg.TabIndex = 1;
             this.m_fg.Visible = false;
@@ -330,10 +328,9 @@ namespace BKI_QLTTQuocAnh
             // 
             this.panel2.Controls.Add(this.m_cmd_xuat_excel);
             this.panel2.Controls.Add(this.m_sle_lop);
-            this.panel2.Controls.Add(this.m_cbo_lop_mon);
-            this.panel2.Controls.Add(this.m_lbl_lop_mon);
             this.panel2.Controls.Add(this.m_cbo_loai_phieu);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.m_lbl_lop_mon);
+            this.panel2.Controls.Add(this.m_lbl_loai_phieu);
             this.panel2.Controls.Add(this.m_lbl_goi_y);
             this.panel2.Controls.Add(this.m_cmd_search);
             this.panel2.Controls.Add(this.m_lbl_search);
@@ -348,7 +345,7 @@ namespace BKI_QLTTQuocAnh
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1257, 103);
+            this.panel2.Size = new System.Drawing.Size(1257, 133);
             this.panel2.TabIndex = 0;
             // 
             // m_cmd_xuat_excel
@@ -396,7 +393,7 @@ namespace BKI_QLTTQuocAnh
             // m_sle_lop
             // 
             this.m_sle_lop.EditValue = "";
-            this.m_sle_lop.Location = new System.Drawing.Point(69, 72);
+            this.m_sle_lop.Location = new System.Drawing.Point(95, 72);
             this.m_sle_lop.Name = "m_sle_lop";
             this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_sle_lop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -414,44 +411,34 @@ namespace BKI_QLTTQuocAnh
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // m_cbo_lop_mon
+            // m_cbo_loai_phieu
             // 
-            this.m_cbo_lop_mon.FormattingEnabled = true;
-            this.m_cbo_lop_mon.Location = new System.Drawing.Point(619, 63);
-            this.m_cbo_lop_mon.Name = "m_cbo_lop_mon";
-            this.m_cbo_lop_mon.Size = new System.Drawing.Size(222, 21);
-            this.m_cbo_lop_mon.TabIndex = 10;
-            this.m_cbo_lop_mon.Visible = false;
+            this.m_cbo_loai_phieu.FormattingEnabled = true;
+            this.m_cbo_loai_phieu.Location = new System.Drawing.Point(95, 98);
+            this.m_cbo_loai_phieu.Name = "m_cbo_loai_phieu";
+            this.m_cbo_loai_phieu.Size = new System.Drawing.Size(247, 21);
+            this.m_cbo_loai_phieu.TabIndex = 10;
+            this.m_cbo_loai_phieu.Visible = false;
             // 
             // m_lbl_lop_mon
             // 
             this.m_lbl_lop_mon.AutoSize = true;
-            this.m_lbl_lop_mon.Location = new System.Drawing.Point(14, 75);
+            this.m_lbl_lop_mon.Location = new System.Drawing.Point(10, 75);
             this.m_lbl_lop_mon.Name = "m_lbl_lop_mon";
             this.m_lbl_lop_mon.Size = new System.Drawing.Size(25, 13);
             this.m_lbl_lop_mon.TabIndex = 9;
             this.m_lbl_lop_mon.Text = "Lớp";
             this.m_lbl_lop_mon.Visible = false;
             // 
-            // m_cbo_loai_phieu
+            // m_lbl_loai_phieu
             // 
-            this.m_cbo_loai_phieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.m_cbo_loai_phieu.FormattingEnabled = true;
-            this.m_cbo_loai_phieu.Location = new System.Drawing.Point(619, 119);
-            this.m_cbo_loai_phieu.Name = "m_cbo_loai_phieu";
-            this.m_cbo_loai_phieu.Size = new System.Drawing.Size(222, 21);
-            this.m_cbo_loai_phieu.TabIndex = 8;
-            this.m_cbo_loai_phieu.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(535, 122);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Loại phiếu thu";
-            this.label1.Visible = false;
+            this.m_lbl_loai_phieu.AutoSize = true;
+            this.m_lbl_loai_phieu.Location = new System.Drawing.Point(10, 101);
+            this.m_lbl_loai_phieu.Name = "m_lbl_loai_phieu";
+            this.m_lbl_loai_phieu.Size = new System.Drawing.Size(74, 13);
+            this.m_lbl_loai_phieu.TabIndex = 7;
+            this.m_lbl_loai_phieu.Text = "Loại phiếu thu";
+            this.m_lbl_loai_phieu.Visible = false;
             // 
             // m_lbl_goi_y
             // 
@@ -531,7 +518,7 @@ namespace BKI_QLTTQuocAnh
             // 
             this.m_dat_tu_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_tu_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_tu_ngay.Location = new System.Drawing.Point(69, 46);
+            this.m_dat_tu_ngay.Location = new System.Drawing.Point(95, 46);
             this.m_dat_tu_ngay.Name = "m_dat_tu_ngay";
             this.m_dat_tu_ngay.Size = new System.Drawing.Size(82, 20);
             this.m_dat_tu_ngay.TabIndex = 2;
@@ -539,7 +526,7 @@ namespace BKI_QLTTQuocAnh
             // m_lbl_tu_ngay
             // 
             this.m_lbl_tu_ngay.AutoSize = true;
-            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(14, 50);
+            this.m_lbl_tu_ngay.Location = new System.Drawing.Point(10, 50);
             this.m_lbl_tu_ngay.Name = "m_lbl_tu_ngay";
             this.m_lbl_tu_ngay.Size = new System.Drawing.Size(46, 13);
             this.m_lbl_tu_ngay.TabIndex = 1;
@@ -548,7 +535,7 @@ namespace BKI_QLTTQuocAnh
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(170, 50);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(196, 50);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(53, 13);
             this.m_lbl_den_ngay.TabIndex = 3;
@@ -558,7 +545,7 @@ namespace BKI_QLTTQuocAnh
             // 
             this.m_dat_den_ngay.CustomFormat = "dd/MM/yyyy";
             this.m_dat_den_ngay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.m_dat_den_ngay.Location = new System.Drawing.Point(232, 46);
+            this.m_dat_den_ngay.Location = new System.Drawing.Point(258, 46);
             this.m_dat_den_ngay.Name = "m_dat_den_ngay";
             this.m_dat_den_ngay.Size = new System.Drawing.Size(84, 20);
             this.m_dat_den_ngay.TabIndex = 4;
@@ -567,12 +554,12 @@ namespace BKI_QLTTQuocAnh
             // 
             this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 103);
+            this.gridControl.Location = new System.Drawing.Point(0, 133);
             this.gridControl.MainView = this.gridView2;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl.Size = new System.Drawing.Size(1257, 379);
+            this.gridControl.Size = new System.Drawing.Size(1257, 349);
             this.gridControl.TabIndex = 16;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -794,6 +781,19 @@ namespace BKI_QLTTQuocAnh
             m_dat_tu_ngay.Value = ip_dat_tu_ngay.Date;
             m_dat_den_ngay.Value = ip_dat_den_ngay.Date;
             m_sle_lop.EditValue = ip_dc_id_lop;
+            m_lbl_loai_phieu.Visible = true;
+            m_cbo_loai_phieu.Visible = true;
+            load_data_2_cbo_loai_phieu();
+            m_trang_thai_hien_thi = 1;
+            this.ShowDialog();
+        }
+
+        public void display_from_f520(decimal ip_dc_id_lop, DateTime ip_dat_tu_ngay, DateTime ip_dat_den_ngay, decimal ip_dc_id_loai_phieu_thu)
+        {
+            m_dat_tu_ngay.Value = ip_dat_tu_ngay.Date;
+            m_dat_den_ngay.Value = ip_dat_den_ngay.Date;
+            m_sle_lop.EditValue = ip_dc_id_lop;
+            m_id_loai_phieu = ip_dc_id_loai_phieu_thu;
             m_trang_thai_hien_thi = 1;
             this.ShowDialog();
         }
@@ -807,7 +807,7 @@ namespace BKI_QLTTQuocAnh
             //m_fg.Cols[(int)e_col_Number.TIEN_THUC_THU].Visible = false;
             //m_fg.Cols[(int)e_col_Number.TIEN_GIAM_TRU].Visible = false;
             //m_fg.Cols[(int)e_col_Number.TIEN_CON_PHAI_THU].Visible = false;
-            m_cbo_lop_mon.SelectedValue = ip_dc_id_lop;
+            m_cbo_loai_phieu.SelectedValue = ip_dc_id_lop;
 
             m_cbo_loai_phieu.SelectedValue = CONST_ID_LOAI_PHIEU_THU.PHIEU_PHAI_THU;
             m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
@@ -894,6 +894,7 @@ namespace BKI_QLTTQuocAnh
         US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH m_us_bc_tinh_hinh_tc = new US_V_RPT_BAO_CAO_TINH_HINH_TAI_CHINH();
         DS_DM_LOP_MON m_ds_dm_lop_mon = new DS_DM_LOP_MON();
         decimal m_trang_thai_hien_thi = 0; //0 neu bam tren menu va 1 neu la form detail
+        decimal m_id_loai_phieu = 0;//26 tt - 54 gt
         #endregion
 
         #region Private Methods
@@ -1020,6 +1021,19 @@ namespace BKI_QLTTQuocAnh
             m_sle_lop.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
         }
 
+        private void load_data_2_cbo_loai_phieu()
+        {
+            BKI_QLTTQuocAnh.DS.DS_CM_DM_TU_DIEN v_ds = new BKI_QLTTQuocAnh.DS.DS_CM_DM_TU_DIEN();
+            BKI_QLTTQuocAnh.US.US_CM_DM_TU_DIEN v_us = new BKI_QLTTQuocAnh.US.US_CM_DM_TU_DIEN();
+            v_us.FillDataset(v_ds, "where id_loai_tu_dien = 5 and id in (26,54)");
+
+            m_cbo_loai_phieu.DataSource = v_ds.CM_DM_TU_DIEN;
+            m_cbo_loai_phieu.DisplayMember = CM_DM_TU_DIEN.TEN_NGAN;
+            m_cbo_loai_phieu.ValueMember = CM_DM_TU_DIEN.ID;
+
+            m_cbo_loai_phieu.SelectedIndex = 0;
+        }
+
         private void load_data_2_grid()
         {
             //DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2 v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU2();
@@ -1034,11 +1048,11 @@ namespace BKI_QLTTQuocAnh
             {
                 if (m_sle_lop.EditValue == null || m_sle_lop.EditValue == "")
                 {
-                    v_us.FillPhieuTheoThoiGian(v_ds, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
+                    v_us.FillPhieuTheoThoiGianLoaiPhieu(v_ds, m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date, CIPConvert.ToDecimal(m_cbo_loai_phieu.SelectedValue));
                 }
                 else
                 {
-                    v_us.FillPhieuTheoLopThoiGian(v_ds,CIPConvert.ToDecimal(m_sle_lop.EditValue), m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date);
+                    v_us.FillPhieuTheoLopThoiGianLoaiphieu(v_ds, CIPConvert.ToDecimal(m_sle_lop.EditValue), m_dat_tu_ngay.Value.Date, m_dat_den_ngay.Value.Date, CIPConvert.ToDecimal(m_cbo_loai_phieu.SelectedValue));
                 }
             }
             else
@@ -1210,7 +1224,7 @@ namespace BKI_QLTTQuocAnh
             m_dat_den_ngay.ValueChanged += m_dat_den_ngay_ValueChanged;
             m_cbo_nhan_vien_thu.SelectedIndexChanged += m_cbo_nhan_vien_thu_SelectedIndexChanged;
             m_cbo_loai_phieu.SelectedIndexChanged += m_cbo_loai_phieu_SelectedIndexChanged;
-            m_cbo_lop_mon.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
+            m_cbo_loai_phieu.SelectedIndexChanged += m_cbo_lop_mon_SelectedIndexChanged;
         }
 
         private void F430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay_Load(object sender, System.EventArgs e)
@@ -1266,7 +1280,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                m_cbo_lop_mon.Focus();
+                m_cbo_loai_phieu.Focus();
             }
             catch (Exception v_e)
             {

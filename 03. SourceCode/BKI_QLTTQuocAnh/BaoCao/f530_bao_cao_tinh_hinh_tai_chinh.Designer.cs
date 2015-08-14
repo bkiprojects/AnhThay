@@ -181,7 +181,7 @@
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(913, 44);
             this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "BÁO CÁO TÌNH HÌNH THỰC THU";
+            this.m_lbl_header.Text = "TỔNG BÁO CÁO THỰC THU";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // m_lbl_lop_mon
@@ -307,7 +307,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "f530_bao_cao_tinh_hinh_tai_chinh";
-            this.Text = "F530 - Báo cáo tình hình thực thu của trung tâm";
+            this.Text = "F530 - TỔNG báo cáo thực thu";
             this.Load += new System.EventHandler(this.f530_bao_cao_tinh_hinh_tai_chinh_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

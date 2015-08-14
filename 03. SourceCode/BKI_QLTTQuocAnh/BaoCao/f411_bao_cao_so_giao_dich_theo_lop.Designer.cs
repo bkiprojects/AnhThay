@@ -333,7 +333,7 @@
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(953, 45);
             this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "BÁO CÁO SỔ GIAO DỊCH THEO LỚP";
+            this.m_lbl_header.Text = "TIỀN TỪNG LỚP VÀ TỪNG HỌC VIÊN ĐẾN THỜI ĐIỂM HIỆN TẠI";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // simpleButton2
@@ -365,7 +365,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "f411_bao_cao_so_giao_dich_theo_lop";
-            this.Text = "F411 - Báo cáo sổ giao dịch theo lớp";
+            this.Text = "F411 - Tiền từng lớp và từng học viên đến thời điểm hiện tại";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();

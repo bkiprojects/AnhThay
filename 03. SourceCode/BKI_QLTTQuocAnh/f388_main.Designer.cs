@@ -315,7 +315,7 @@
             // 
             // m_cmd_tai_chinh_lm
             // 
-            this.m_cmd_tai_chinh_lm.Caption = "Tài chính theo lớp môn";
+            this.m_cmd_tai_chinh_lm.Caption = "Tiền từng lớp đến thời điểm hiện tại";
             this.m_cmd_tai_chinh_lm.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904832_45433;
             this.m_cmd_tai_chinh_lm.Id = 19;
             this.m_cmd_tai_chinh_lm.Name = "m_cmd_tai_chinh_lm";
@@ -324,7 +324,7 @@
             // 
             // m_cmd_tai_chinh_lm_hs
             // 
-            this.m_cmd_tai_chinh_lm_hs.Caption = "Tài chính theo lớp môn, HS";
+            this.m_cmd_tai_chinh_lm_hs.Caption = "Tiền từng lớp và từng học viên đến thời điểm hiện tại";
             this.m_cmd_tai_chinh_lm_hs.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904874_448241;
             this.m_cmd_tai_chinh_lm_hs.Id = 20;
             this.m_cmd_tai_chinh_lm_hs.Name = "m_cmd_tai_chinh_lm_hs";
@@ -486,7 +486,7 @@
             // 
             // m_cmd_bao_cao_luy_ke_theo_thang_theo_lop
             // 
-            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Caption = "Báo cáo tình hình tài chính";
+            this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Caption = "TỔNG báo cáo thực thu";
             this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Glyph")));
             this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Id = 43;
             this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop.Name = "m_cmd_bao_cao_luy_ke_theo_thang_theo_lop";
@@ -507,7 +507,7 @@
             // 
             // m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay
             // 
-            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Caption = "Tình hình thực thu, giảm trừ theo ngày";
+            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Caption = "Thực thu, giảm trừ theo ngày";
             this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Glyph")));
             this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Id = 45;
             this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay.Name = "m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay";

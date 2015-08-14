@@ -16,9 +16,11 @@ using System.Data;
 
 
 
-namespace BKI_QLTTQuocAnh.US {
+namespace BKI_QLTTQuocAnh.US
+{
 
-    public class US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON : US_Object {
+    public class US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON : US_Object
+    {
         private const string c_TableName = "V_DM_HOC_SINH_GD_HOC_DM_LOP_MON";
         #region "Public Properties"
         public decimal dcID
@@ -613,6 +615,28 @@ namespace BKI_QLTTQuocAnh.US {
         public void SetTHOI_GIAN_HOC_TO_DATENull()
         {
             pm_objDR["THOI_GIAN_HOC_TO_DATE"] = System.Convert.DBNull;
+        }
+
+        public DateTime datMOT_NAM_SAU_NGAY_KET_THUC
+        {
+            get
+            {
+                return CNull.RowNVLDate(pm_objDR, "MOT_NAM_SAU_NGAY_KET_THUC", IPConstants.c_DefaultDate);
+            }
+            set
+            {
+                pm_objDR["MOT_NAM_SAU_NGAY_KET_THUC"] = value;
+            }
+        }
+
+        public bool IsMOT_NAM_SAU_NGAY_KET_THUCNull()
+        {
+            return pm_objDR.IsNull("MOT_NAM_SAU_NGAY_KET_THUC");
+        }
+
+        public void SetMOT_NAM_SAU_NGAY_KET_THUCNull()
+        {
+            pm_objDR["MOT_NAM_SAU_NGAY_KET_THUC"] = System.Convert.DBNull;
         }
 
         public decimal dcID_TRO_GIANG

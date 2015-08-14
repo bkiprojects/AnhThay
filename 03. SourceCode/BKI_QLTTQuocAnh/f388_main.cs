@@ -480,7 +480,8 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f210_dm_lop_mon v_frm = new f210_dm_lop_mon();
+                //f210_DM_LOP_MON v_frm = new f210_DM_LOP_MON();
+                f210_dm_lop_mon2 v_frm = new f210_dm_lop_mon2();
 
                 if (IsExistFormName(v_frm)) return;
 

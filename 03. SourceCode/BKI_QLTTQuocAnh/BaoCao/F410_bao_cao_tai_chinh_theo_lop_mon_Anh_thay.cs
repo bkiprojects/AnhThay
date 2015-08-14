@@ -5,6 +5,7 @@
 ///************************************************
 
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraReports.UserDesigner;
 using System;
 using System.Data;
 using System.Drawing;
@@ -364,7 +365,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(1195, 44);
             this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "BÁO CÁO TÀI CHÍNH THEO LỚP";
+            this.m_lbl_header.Text = "TIỀN TỪNG LỚP ĐẾN THỜI ĐIỂM HIỆN TẠI";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // m_cmd_search
@@ -595,7 +596,7 @@ namespace BKI_QLTTQuocAnh
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay";
-            this.Text = "F410 - Báo cáo tài chính theo lớp";
+            this.Text = "F410 - Tiền từng lớp đến thời điểm hiện tại";
             this.Load += new System.EventHandler(this.F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xrDesignBarManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.recentlyUsedItemsComboBox1)).EndInit();
@@ -695,6 +696,7 @@ namespace BKI_QLTTQuocAnh
 
             return v_ds;
         }
+
         private void load_data_to_sle_lop()
         {
 
@@ -1050,6 +1052,7 @@ namespace BKI_QLTTQuocAnh
             winContainer.WinControl = grid;
             return winContainer;
         }
+
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             try
