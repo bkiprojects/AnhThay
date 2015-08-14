@@ -471,6 +471,12 @@
     <Compile Include="f388_main.Designer.cs">
       <DependentUpon>f388_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPT\ds_hoc_vien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT\ds_hoc_vien.Designer.cs">
+      <DependentUpon>ds_hoc_vien.cs</DependentUpon>
+    </Compile>
     <Compile Include="RPT\rpt_f530_bao_cao_tinh_hinh_tai_chinh.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -676,6 +682,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="f388_main.resx">
       <DependentUpon>f388_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\ds_hoc_vien.resx">
+      <DependentUpon>ds_hoc_vien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RPT\rpt_f530_bao_cao_tinh_hinh_tai_chinh.resx">
       <DependentUpon>rpt_f530_bao_cao_tinh_hinh_tai_chinh.cs</DependentUpon>

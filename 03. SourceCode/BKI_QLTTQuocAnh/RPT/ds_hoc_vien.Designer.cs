@@ -1,6 +1,7 @@
 ﻿using System;
 namespace BKI_QLTTQuocAnh.RPT {
-    partial class rpt_cac_lop {
+    partial class ds_hoc_vien
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -26,13 +27,12 @@ namespace BKI_QLTTQuocAnh.RPT {
         private void InitializeComponent() {
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rpt_cac_lop));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ds_hoc_vien));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.reportHeaderBand1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
@@ -43,6 +43,7 @@ namespace BKI_QLTTQuocAnh.RPT {
             this.dateTimeChartRangeControlClient1 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
             this.dateTimeChartRangeControlClient2 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
             this.dateTimeChartRangeControlClient3 = new DevExpress.XtraEditors.DateTimeChartRangeControlClient();
+            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeChartRangeControlClient3)).BeginInit();
@@ -85,20 +86,10 @@ namespace BKI_QLTTQuocAnh.RPT {
             // pageFooterBand1
             // 
             this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageInfo1,
-            this.xrPageInfo2});
-            this.pageFooterBand1.HeightF = 33.00001F;
+            this.xrPageInfo2,
+            this.xrPageInfo1});
+            this.pageFooterBand1.HeightF = 29.00001F;
             this.pageFooterBand1.Name = "pageFooterBand1";
-            // 
-            // xrPageInfo1
-            // 
-            this.xrPageInfo1.Format = "{0:dd/MM/yyyy}";
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 6F);
-            this.xrPageInfo1.Name = "xrPageInfo1";
-            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(313F, 23F);
-            this.xrPageInfo1.StyleName = "PageInfo";
             // 
             // xrPageInfo2
             // 
@@ -119,13 +110,13 @@ namespace BKI_QLTTQuocAnh.RPT {
             // 
             // xrLabel13
             // 
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(228.125F, 0F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(290.625F, 0F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(480.7083F, 35.08333F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(329.6666F, 35.08333F);
             this.xrLabel13.StyleName = "Title";
             this.xrLabel13.StylePriority.UseTextAlignment = false;
-            this.xrLabel13.Text = "BÁO CÁO TÀI CHÍNH THEO LỚP";
+            this.xrLabel13.Text = "DANH SÁCH HỌC VIÊN";
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Title
@@ -169,7 +160,17 @@ namespace BKI_QLTTQuocAnh.RPT {
             this.DataField.Name = "DataField";
             this.DataField.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             // 
-            // rpt_cac_lop
+            // xrPageInfo1
+            // 
+            this.xrPageInfo1.Format = "{0:dd/MM/yyyy}";
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(5F, 6F);
+            this.xrPageInfo1.Name = "xrPageInfo1";
+            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(313F, 23F);
+            this.xrPageInfo1.StyleName = "PageInfo";
+            // 
+            // ds_hoc_vien
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,

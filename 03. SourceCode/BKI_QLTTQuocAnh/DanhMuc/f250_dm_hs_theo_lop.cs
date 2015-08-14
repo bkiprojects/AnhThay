@@ -24,6 +24,9 @@ using BKI_QLTTQuocAnh.DS.CDBNames;
 using BKI_QLTTQuocAnh.DanhMuc;
 
 using C1.Win.C1FlexGrid;
+using BKI_QLTTQuocAnh.RPT;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraGrid;
 
 namespace BKI_QLTTQuocAnh
 {
@@ -62,6 +65,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraGrid.Columns.GridColumn MOT_NAM_SAU_NGAY_KET_THUC;
         private DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.ComponentModel.IContainer components;
 
         public f250_dm_hs_theo_lop()
@@ -111,13 +115,14 @@ namespace BKI_QLTTQuocAnh
             this.m_fg = new C1.Win.C1FlexGrid.C1FlexGrid();
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_lbl_lop_mon = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.MA_DOI_TUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.HO_TEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TRUONG_DANG_HOC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -129,16 +134,16 @@ namespace BKI_QLTTQuocAnh
             this.THOI_GIAN_HOC_FROM_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.THOI_GIAN_HOC_TO_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MOT_NAM_SAU_NGAY_KET_THUC = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -170,6 +175,7 @@ namespace BKI_QLTTQuocAnh
             // 
             // m_pnl_out_place_dm
             // 
+            this.m_pnl_out_place_dm.Controls.Add(this.simpleButton1);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_delete);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_update);
             this.m_pnl_out_place_dm.Controls.Add(this.m_cmd_insert);
@@ -292,6 +298,26 @@ namespace BKI_QLTTQuocAnh
             this.panel1.Size = new System.Drawing.Size(988, 55);
             this.panel1.TabIndex = 0;
             // 
+            // m_sle_lop
+            // 
+            this.m_sle_lop.EditValue = "";
+            this.m_sle_lop.Location = new System.Drawing.Point(72, 13);
+            this.m_sle_lop.Name = "m_sle_lop";
+            this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_sle_lop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.m_sle_lop.Properties.NullText = "Chọn lớp";
+            this.m_sle_lop.Properties.View = this.gridView1;
+            this.m_sle_lop.Size = new System.Drawing.Size(247, 20);
+            this.m_sle_lop.TabIndex = 21;
+            // 
+            // gridView1
+            // 
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
             // m_cmd_search
             // 
             this.m_cmd_search.AdjustImageLocation = new System.Drawing.Point(0, 0);
@@ -373,14 +399,6 @@ namespace BKI_QLTTQuocAnh
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
             this.STT.Width = 38;
-            // 
-            // repositoryItemTextEdit1
-            // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.Mask.EditMask = "n0";
-            this.repositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat = true;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // MA_DOI_TUONG
             // 
@@ -470,25 +488,24 @@ namespace BKI_QLTTQuocAnh
             this.MOT_NAM_SAU_NGAY_KET_THUC.Visible = true;
             this.MOT_NAM_SAU_NGAY_KET_THUC.VisibleIndex = 11;
             // 
-            // m_sle_lop
+            // repositoryItemTextEdit1
             // 
-            this.m_sle_lop.EditValue = "";
-            this.m_sle_lop.Location = new System.Drawing.Point(72, 13);
-            this.m_sle_lop.Name = "m_sle_lop";
-            this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_sle_lop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_sle_lop.Properties.NullText = "Chọn lớp";
-            this.m_sle_lop.Properties.View = this.gridView1;
-            this.m_sle_lop.Size = new System.Drawing.Size(247, 20);
-            this.m_sle_lop.TabIndex = 21;
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Mask.EditMask = "n0";
+            this.repositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat = true;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
-            // gridView1
+            // simpleButton1
             // 
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(444, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 28);
+            this.simpleButton1.TabIndex = 22;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // f250_dm_hs_theo_lop
             // 
@@ -505,11 +522,11 @@ namespace BKI_QLTTQuocAnh
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -898,6 +915,36 @@ namespace BKI_QLTTQuocAnh
             catch (Exception v_e)
             {
                 CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        public WinControlContainer CopyGridControl(GridControl grid)
+        {
+            WinControlContainer winContainer = new WinControlContainer();
+
+            winContainer.Location = new Point(0, 0);
+            winContainer.Size = new Size(200, 100);
+
+            winContainer.WinControl = grid;
+            return winContainer;
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var r = new ds_hoc_vien();
+
+                r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
+                gridView2.BestFitColumns();
+                r.PaperKind = System.Drawing.Printing.PaperKind.A4;
+                r.Landscape = true;
+                r.ShowPreview();
+            }
+            catch (Exception v_e)
+            {
+
+                throw v_e;
             }
         }
 
