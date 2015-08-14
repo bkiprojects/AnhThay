@@ -139,7 +139,7 @@
             this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang,
             this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 46;
+            this.ribbon.MaxItemId = 50;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,

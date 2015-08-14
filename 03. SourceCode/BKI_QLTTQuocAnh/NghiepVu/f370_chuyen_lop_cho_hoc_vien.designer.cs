@@ -129,14 +129,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 44);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1175, 141);
+            this.panel1.Size = new System.Drawing.Size(1175, 129);
             this.panel1.TabIndex = 1;
             // 
             // m_lbl_tb_1
             // 
             this.m_lbl_tb_1.AutoSize = true;
             this.m_lbl_tb_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_tb_1.Location = new System.Drawing.Point(15, 115);
+            this.m_lbl_tb_1.Location = new System.Drawing.Point(15, 95);
             this.m_lbl_tb_1.Name = "m_lbl_tb_1";
             this.m_lbl_tb_1.Size = new System.Drawing.Size(270, 24);
             this.m_lbl_tb_1.TabIndex = 7;
@@ -158,7 +158,7 @@
             this.m_lbl_ten_hs.AutoSize = true;
             this.m_lbl_ten_hs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.m_lbl_ten_hs.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_ten_hs.Location = new System.Drawing.Point(312, 71);
+            this.m_lbl_ten_hs.Location = new System.Drawing.Point(312, 64);
             this.m_lbl_ten_hs.Name = "m_lbl_ten_hs";
             this.m_lbl_ten_hs.Size = new System.Drawing.Size(28, 24);
             this.m_lbl_ten_hs.TabIndex = 5;
@@ -167,7 +167,7 @@
             // m_sle_lop
             // 
             this.m_sle_lop.EditValue = "";
-            this.m_sle_lop.Location = new System.Drawing.Point(136, 41);
+            this.m_sle_lop.Location = new System.Drawing.Point(136, 34);
             this.m_sle_lop.Name = "m_sle_lop";
             this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_sle_lop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -187,7 +187,7 @@
             // m_sle_ma_hv
             // 
             this.m_sle_ma_hv.EditValue = "";
-            this.m_sle_ma_hv.Location = new System.Drawing.Point(136, 71);
+            this.m_sle_ma_hv.Location = new System.Drawing.Point(136, 64);
             this.m_sle_ma_hv.Name = "m_sle_ma_hv";
             this.m_sle_ma_hv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_sle_ma_hv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -207,7 +207,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 44);
+            this.label1.Location = new System.Drawing.Point(15, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 1;
@@ -216,7 +216,7 @@
             // m_lbl_ma_hoc_sinh
             // 
             this.m_lbl_ma_hoc_sinh.AutoSize = true;
-            this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(15, 74);
+            this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(15, 67);
             this.m_lbl_ma_hoc_sinh.Name = "m_lbl_ma_hoc_sinh";
             this.m_lbl_ma_hoc_sinh.Size = new System.Drawing.Size(50, 13);
             this.m_lbl_ma_hoc_sinh.TabIndex = 3;
@@ -240,7 +240,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.ImageList;
-            this.m_cmd_search.Location = new System.Drawing.Point(523, 67);
+            this.m_cmd_search.Location = new System.Drawing.Point(521, 59);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 6;
@@ -350,7 +350,7 @@
             this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_insert.ImageIndex = 13;
             this.m_cmd_insert.ImageList = this.ImageList;
-            this.m_cmd_insert.Location = new System.Drawing.Point(315, 43);
+            this.m_cmd_insert.Location = new System.Drawing.Point(315, 31);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(135, 37);
             this.m_cmd_insert.TabIndex = 3;
@@ -360,12 +360,12 @@
             // 
             this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl.Location = new System.Drawing.Point(0, 185);
+            this.gridControl.Location = new System.Drawing.Point(0, 173);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit});
-            this.gridControl.Size = new System.Drawing.Size(1175, 161);
+            this.gridControl.Size = new System.Drawing.Size(1175, 133);
             this.gridControl.TabIndex = 2;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -514,7 +514,7 @@
             // m_sle_lop_2
             // 
             this.m_sle_lop_2.EditValue = "";
-            this.m_sle_lop_2.Location = new System.Drawing.Point(139, 51);
+            this.m_sle_lop_2.Location = new System.Drawing.Point(139, 39);
             this.m_sle_lop_2.Name = "m_sle_lop_2";
             this.m_sle_lop_2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_sle_lop_2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -534,7 +534,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 55);
+            this.label2.Location = new System.Drawing.Point(18, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 1;
@@ -544,7 +544,7 @@
             // 
             this.m_lbl_buoc_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.m_lbl_buoc_2.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_buoc_2.Location = new System.Drawing.Point(3, 12);
+            this.m_lbl_buoc_2.Location = new System.Drawing.Point(3, 0);
             this.m_lbl_buoc_2.Name = "m_lbl_buoc_2";
             this.m_lbl_buoc_2.Size = new System.Drawing.Size(86, 30);
             this.m_lbl_buoc_2.TabIndex = 0;
@@ -560,16 +560,16 @@
             this.panel2.Controls.Add(this.m_sle_lop_2);
             this.panel2.Controls.Add(this.m_cmd_insert);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 346);
+            this.panel2.Location = new System.Drawing.Point(0, 306);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1175, 124);
+            this.panel2.Size = new System.Drawing.Size(1175, 99);
             this.panel2.TabIndex = 3;
             // 
             // m_lbl_tb_2
             // 
             this.m_lbl_tb_2.AutoSize = true;
             this.m_lbl_tb_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_tb_2.Location = new System.Drawing.Point(14, 97);
+            this.m_lbl_tb_2.Location = new System.Drawing.Point(14, 72);
             this.m_lbl_tb_2.Name = "m_lbl_tb_2";
             this.m_lbl_tb_2.Size = new System.Drawing.Size(280, 24);
             this.m_lbl_tb_2.TabIndex = 4;
@@ -588,12 +588,12 @@
             // 
             this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl1.Location = new System.Drawing.Point(0, 470);
+            this.gridControl1.Location = new System.Drawing.Point(0, 405);
             this.gridControl1.MainView = this.gridView3;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1175, 161);
+            this.gridControl1.Size = new System.Drawing.Size(1175, 147);
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});

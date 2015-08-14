@@ -42,7 +42,70 @@ namespace BKI_QLTTQuocAnh
         #region Private Methods
         private void format_control()
         {
-            US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG();
+            US_V_HT_NGUOI_SU_DUNG v_us = new US_V_HT_NGUOI_SU_DUNG(CAppContext_201.getCurrentUserID());
+
+            int v_id_nhom_nguoi_sd = 0;
+            v_id_nhom_nguoi_sd = (int)v_us.dcID_USER_GROUP;
+
+            switch (v_id_nhom_nguoi_sd)
+            {
+                case CONST_NHOM_NGUOI_SU_DUNG.ID_ADMIN:
+                    break;
+                case CONST_NHOM_NGUOI_SU_DUNG.ID_CEO:
+                    //page
+                    ribbonPage2.Visible = false;
+                    ribbonPage5.Visible = false;
+                    ribbonPageGroup4.Visible = false;
+                    ribbonPageGroup5.Visible = false;
+                    ribbonPageGroup9.Visible = false;
+                    //button
+                    m_cmd_lap_phai_thu_le.Visibility = BarItemVisibility.Never;
+                    m_cmd_lap_phai_thu_tu_dong.Visibility = BarItemVisibility.Never;
+                    m_cmd_lap_giam_tru.Visibility = BarItemVisibility.Never;
+                    m_cmd_lap_thuc_thu.Visibility = BarItemVisibility.Never;
+                    m_cmd_ds_phieu.Visibility = BarItemVisibility.Never;
+                    break;
+                case CONST_NHOM_NGUOI_SU_DUNG.ID_NHAN_VIEN:
+                    //page
+                    ribbonPage1.Visible = false;
+                    ribbonPage2.Visible = false;
+                    ribbonPage4.Visible = false;
+                    ribbonPage5.Visible = false;
+                    ribbonPageGroup4.Visible = false;
+                    ribbonPageGroup5.Visible = false;
+                    ribbonPageGroup9.Visible = false;
+                    //button
+                    m_cmd_ban_giao_hp_gt_theo_lop.Visibility = BarItemVisibility.Never;
+                    m_cmd_ban_giao_tien.Visibility = BarItemVisibility.Never;
+                    break;
+                case CONST_NHOM_NGUOI_SU_DUNG.ID_THU_QUY:
+                    //page
+                    ribbonPage1.Visible = false;
+                    ribbonPage2.Visible = false;
+                    ribbonPage5.Visible = false;
+                    ribbonPageGroup4.Visible = false;
+                    ribbonPageGroup5.Visible = false;
+                    ribbonPageGroup9.Visible = false;
+                    //button
+                    m_cmd_lap_phai_thu_le.Visibility = BarItemVisibility.Never;
+                    m_cmd_lap_phai_thu_tu_dong.Visibility = BarItemVisibility.Never;
+                    m_cmd_lap_giam_tru.Visibility = BarItemVisibility.Never;
+                    m_cmd_lap_thuc_thu.Visibility = BarItemVisibility.Never;
+                    m_cmd_ds_phieu.Visibility = BarItemVisibility.Never;
+                    break;
+                case CONST_NHOM_NGUOI_SU_DUNG.ID_TRO_GIANG:
+                    //page
+                    ribbonPage1.Visible = false;
+                    ribbonPage2.Visible = false;
+                    ribbonPage4.Visible = false;
+                    ribbonPageGroup6.Visible = false;
+                    //button
+                    
+
+                    break;
+                default:
+                    break;
+            }
             if (US_V_HT_NGUOI_SU_DUNG.isInAdminGroup(CAppContext_201.getCurrentUserID()))
             {
                 //ribbonPageGroup4.Visible = false;
@@ -136,15 +199,18 @@ namespace BKI_QLTTQuocAnh
             m_cmd_ds_hs_theo_lm.ItemClick += m_cmd_ds_hs_theo_lm_ItemClick;
         }
 
-        void m_cmd_import_excel_ItemClick(object sender, ItemClickEventArgs e) {
-            try {
+        void m_cmd_import_excel_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
                 f300_import_ds_hoc_vien v_frm = new f300_import_ds_hoc_vien();
-                if(IsExistFormName(v_frm)) return;
+                if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;
                 v_frm.Show();
             }
-            catch(Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
@@ -225,7 +291,8 @@ namespace BKI_QLTTQuocAnh
                 //v_frm.MdiParent = this;
                 //v_frm.Show();
                 F354_LAP_GIAM_TRU v_frm = new F354_LAP_GIAM_TRU();
-                if(IsExistFormName(v_frm)) {
+                if (IsExistFormName(v_frm))
+                {
                     return;
                 }
                 v_frm.MdiParent = this;
@@ -248,7 +315,8 @@ namespace BKI_QLTTQuocAnh
                 //v_frm.MdiParent = this;
                 //v_frm.Show();
                 F356_LAP_THUC_THU v_frm = new F356_LAP_THUC_THU();
-                if(IsExistFormName(v_frm)) {
+                if (IsExistFormName(v_frm))
+                {
                     return;
                 }
                 v_frm.MdiParent = this;
@@ -287,7 +355,8 @@ namespace BKI_QLTTQuocAnh
                 //v_frm.MdiParent = this;
                 //v_frm.Show();
                 F352_LAP_HOC_PHI v_frm = new F352_LAP_HOC_PHI();
-                if(IsExistFormName(v_frm)) {
+                if (IsExistFormName(v_frm))
+                {
                     return;
                 }
                 v_frm.MdiParent = this;
@@ -606,10 +675,11 @@ namespace BKI_QLTTQuocAnh
 
         void m_cmd_nhap_hoc_ItemClick(object sender, ItemClickEventArgs e)
         {
-            try {
+            try
+            {
                 frm_clone_lop v_frm = new frm_clone_lop();
 
-                if(IsExistFormName(v_frm)) return;
+                if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;
                 v_frm.Show();
@@ -619,7 +689,7 @@ namespace BKI_QLTTQuocAnh
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-            
+
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
             f370_chuyen_lop_cho_hoc_vien v_frm = new f370_chuyen_lop_cho_hoc_vien();
@@ -638,26 +708,32 @@ namespace BKI_QLTTQuocAnh
             v_frm.Show();
         }
 
-        private void m_cmd_so_phieu_thu_ItemClick(object sender, ItemClickEventArgs e) {
-            try {
+        private void m_cmd_so_phieu_thu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
                 frm_so_phieu_thu v_frm = new frm_so_phieu_thu();
 
-                if(IsExistFormName(v_frm)) return;
+                if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;
                 v_frm.Show();
             }
-            catch(Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
-        private void m_cmd_tim_ma_lon_nhat_ItemClick(object sender, ItemClickEventArgs e) {
-            try {
+        private void m_cmd_tim_ma_lon_nhat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
                 US_DM_HOC_SINH v_us = new US_DM_HOC_SINH();
-                XtraMessageBox.Show("Mã học viên tiếp theo cần nhập là:  " + v_us.get_ma_hs_moi_nhat(), "THÔNG BÁO",MessageBoxButtons.OK) ;
+                XtraMessageBox.Show("Mã học viên tiếp theo cần nhập là:  " + v_us.get_ma_hs_moi_nhat(), "THÔNG BÁO", MessageBoxButtons.OK);
             }
-            catch(Exception v_e) {
+            catch (Exception v_e)
+            {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }

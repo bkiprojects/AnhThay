@@ -349,6 +349,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
             m_ds.Clear();
             m_ds.EnforceConstraints = false;
+            if (m_sle_lop.EditValue == null || m_sle_lop.EditValue == "")
+            {
+                gridControl.DataSource = m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU;
+                //gridView.ClearDocument();
+            }
+
             m_us.FillDataset_by_hs_lm(m_ds, CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue));
 
             m_fg.Redraw = true;
@@ -383,17 +389,18 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void load_data_2_gridcontrol1()
         {
-            m_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
-            m_ds.Clear();
-            m_ds.EnforceConstraints = false;
-            m_us.FillDataset_by_hs_lm(m_ds, CIPConvert.ToDecimal(m_sle_lop_2.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue));
+            DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_ds = new DS_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+            US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU v_us = new US_V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU();
+
+            v_ds.EnforceConstraints = false;
+            v_us.FillDataset_by_hs_lm(v_ds, CIPConvert.ToDecimal(m_sle_lop_2.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue));
 
             m_fg.Redraw = true;
             //create_tree_2grid();
             //CGridUtils.MakeSoTT(0, m_fg);
             wrap_text_cell();
 
-            gridControl.DataSource = m_ds.V_RPT_BAO_CAO_DANH_SACH_PHIEU_THU;
+            gridControl1.DataSource = v_ds.Tables[0];
         }
 
         private void load_data_to_ds_obj()
@@ -441,7 +448,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             //lap hoc phi cho lop moi
             US_GD_PHIEU_THU v_us_gd_phieu_thu = new US_GD_PHIEU_THU();
             v_us_gd_phieu_thu.insert_gd_phieu_thu_f370(op_dc_id_gd_hoc_moi, CAppContext_201.getCurrentUserID(), CIPConvert.ToDecimal(m_sle_lop.EditValue), CIPConvert.ToDecimal(m_sle_ma_hv.EditValue), CIPConvert.ToDecimal(m_sle_lop_2.EditValue));
-            
+
             MessageBox.Show("Bạn đã cho học viên chuyển lớp thành công!");
 
             m_lbl_tb_2.Visible = true;
@@ -580,15 +587,16 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 if (CIPConvert.ToDecimal(m_sle_lop_2.EditValue) == CIPConvert.ToDecimal(m_sle_lop.EditValue))
                 {
                     MessageBox.Show("Lớp để chuyển đến không được giống lớp chuyển đi");
+                    return;
                 }
                 else
                 {
                     if (BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắn muốn chuyển học viên này?") == DialogResult.Yes)
                     {
                         chuyen_lop_cho_hoc_vien();
-                        load_data_2_gridcontrol1();
                     }
                 }
+                load_data_2_gridcontrol1();
                 m_lbl_ten_hs.Visible = false;
                 load_data_to_sle_lop();
                 load_data_to_sle_ma_hv();
@@ -605,16 +613,17 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             try
             {
-                //if (check_validate_data_is_OK())
-                //{
-                //    load_data_2_grid();
-                //    if (m_fg.Rows.Count > 1)
-                //    {
-                //        m_txt_tong_tien.Text = String.Format("{0:#,###0}", m_fg.Rows[m_fg.Rows.Fixed][(int)e_col_Number.TIEN_THUC_THU]);
-                //    }
-                //}
-                //else return;
-
+                if (m_sle_lop.EditValue == null || m_sle_lop.EditValue == "")
+                {
+                    MessageBox.Show("Bạn phải chọn lớp muốn chuyển đi!!!");
+                    return;
+                }
+                else if (m_sle_ma_hv.EditValue == null || m_sle_ma_hv.EditValue == "")
+                {
+                    MessageBox.Show("Bạn phải chọn học viên để chuyển đi!!!");
+                    return;
+                }
+                load_data_2_grid();
             }
             catch (Exception v_e)
             {

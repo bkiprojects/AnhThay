@@ -687,7 +687,7 @@ namespace BKI_QLTTQuocAnh
             }
             else
             {
-                m_us.FillDataset(m_ds, "where ID_LOP_MON = " + m_sle_lop.EditValue);
+                m_us.FillDataset(m_ds, "where ID_LOP_MON = " + m_sle_lop.EditValue + " AND TRANG_THAI_YN = 'Y'" );
             }
             gridControl1.DataSource = m_ds.Tables[0];
         }

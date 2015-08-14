@@ -100,6 +100,15 @@ namespace BKI_QLTTQuocAnh.US {
         public const string LOI_NGUOI_DUNG = "LỖI NGƯỜI DÙNG";
         public const string THONG_BAO = "THÔNG BÁO";
     }
+
+    public static class CONST_NHOM_NGUOI_SU_DUNG
+    {
+        public const int ID_ADMIN = 1;
+        public const int ID_NHAN_VIEN = 2;
+        public const int ID_CEO = 4;
+        public const int ID_THU_QUY = 6;
+        public const int ID_TRO_GIANG = 8;
+    }
     //public class TU_DIEN {
     //    public const string Q1 = "1";
     //    public const string Q2 = "2";
