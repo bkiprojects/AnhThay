@@ -107,6 +107,7 @@ namespace BKI_QLTTQuocAnh
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f250_dm_hs_theo_lop));
             this.ImageList = new System.Windows.Forms.ImageList(this.components);
             this.m_pnl_out_place_dm = new System.Windows.Forms.Panel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
             this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
@@ -135,7 +136,6 @@ namespace BKI_QLTTQuocAnh
             this.THOI_GIAN_HOC_TO_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MOT_NAM_SAU_NGAY_KET_THUC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel1.SuspendLayout();
@@ -187,6 +187,17 @@ namespace BKI_QLTTQuocAnh
             this.m_pnl_out_place_dm.Padding = new System.Windows.Forms.Padding(4);
             this.m_pnl_out_place_dm.Size = new System.Drawing.Size(988, 36);
             this.m_pnl_out_place_dm.TabIndex = 19;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(444, 4);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 28);
+            this.simpleButton1.TabIndex = 22;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // m_cmd_delete
             // 
@@ -283,7 +294,7 @@ namespace BKI_QLTTQuocAnh
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(988, 45);
             this.m_lbl_header.TabIndex = 21;
-            this.m_lbl_header.Text = "DANH SÁCH HỌC SINH THEO LỚP";
+            this.m_lbl_header.Text = "DANH SÁCH HỌC VIÊN THEO LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel1
@@ -495,17 +506,6 @@ namespace BKI_QLTTQuocAnh
             this.repositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat = true;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(444, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 28);
-            this.simpleButton1.TabIndex = 22;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // f250_dm_hs_theo_lop
             // 
