@@ -15,6 +15,7 @@ using IP.Core.IPData;
 using IP.Core.IPUserService;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 using System.Collections;
+using DevExpress.XtraEditors;
 
 namespace BKI_QLTTQuocAnh.NghiepVu
 {
@@ -533,7 +534,6 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             m_sle_lop_2.EditValueChanged += m_sle_lop_2_EditValueChanged;
         }
 
-
         void m_fg_DoubleClick(object sender, EventArgs e)
         {
             try
@@ -591,7 +591,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
                 }
                 else
                 {
-                    if (BaseMessages.MsgBox_YES_NO_CANCEL("Bạn có chắc chắn muốn chuyển học viên này?") == DialogResult.Yes)
+                    if (XtraMessageBox.Show("Bạn có chắc chắn muốn chuyển học viên này?", "XÁC NHẬN LẠI", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         chuyen_lop_cho_hoc_vien();
                     }
