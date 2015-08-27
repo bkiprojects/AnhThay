@@ -522,6 +522,7 @@ namespace BKI_QLTTQuocAnh.DS.CDBNames
         public const string TEN = "TEN";
         public const string LAN_THU = "LAN_THU";
         public const string ID_SO_PHIEU_THU = "ID_SO_PHIEU_THU";
+        public const string GHI_CHU = "GHI_CHU";
     }
 
 

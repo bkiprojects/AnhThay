@@ -367,7 +367,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
 
                 ip_us.strNOI_DUNG = m_txt_noi_dung.Text.Trim();
                 ip_us.strSO_PHIEU = m_txt_so_phieu.Text.Trim();
-                ip_us.dcID_SO_PHIEU_THU = CIPConvert.ToDecimal(m_sle_so_phieu_thu.EditValue);
+                if (m_sle_so_phieu_thu.EditValue == null || m_sle_so_phieu_thu.EditValue == "")
+                {
+                    return;
+                }
+                else
+                {
+                    ip_us.dcID_SO_PHIEU_THU = CIPConvert.ToDecimal(m_sle_so_phieu_thu.EditValue);
+                }
+                
             }
             catch(Exception v_e) {
                 throw v_e;

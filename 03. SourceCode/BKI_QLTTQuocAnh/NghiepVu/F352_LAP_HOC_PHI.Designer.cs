@@ -55,6 +55,8 @@
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.m_txt_ghi_chu = new DevExpress.XtraEditors.MemoEdit();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -69,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // directorySearcher1
@@ -186,6 +189,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.m_txt_ghi_chu);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.m_cmd_them_hv_moi);
             this.panel1.Controls.Add(this.m_txt_noi_dung);
             this.panel1.Controls.Add(this.m_txt_so_tien);
@@ -437,6 +442,23 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
+            // m_txt_ghi_chu
+            // 
+            this.m_txt_ghi_chu.Location = new System.Drawing.Point(134, 361);
+            this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
+            this.m_txt_ghi_chu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_ghi_chu.Size = new System.Drawing.Size(232, 55);
+            this.m_txt_ghi_chu.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 364);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Ghi chú";
+            // 
             // F352_LAP_HOC_PHI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +482,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -496,5 +519,7 @@
         internal System.Windows.Forms.ImageList imageList1;
         public DevExpress.XtraEditors.TextEdit m_txt_so_tien;
         private DevExpress.XtraEditors.SimpleButton m_cmd_them_hv_moi;
+        public DevExpress.XtraEditors.MemoEdit m_txt_ghi_chu;
+        private System.Windows.Forms.Label label2;
     }
 }

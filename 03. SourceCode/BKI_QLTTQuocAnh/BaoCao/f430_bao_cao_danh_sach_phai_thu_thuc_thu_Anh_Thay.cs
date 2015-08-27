@@ -80,6 +80,7 @@ namespace BKI_QLTTQuocAnh
         private SimpleButton simpleButton1;
         private DevExpress.XtraGrid.Columns.GridColumn NGAY_NHAP;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
+        private DevExpress.XtraGrid.Columns.GridColumn GHI_CHU;
         private System.ComponentModel.IContainer components;
         #endregion
 
@@ -175,6 +176,7 @@ namespace BKI_QLTTQuocAnh
             this.LAN_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TRANG_THAI_PHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NGAY_NHAP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GHI_CHU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
             this.panel2.SuspendLayout();
@@ -581,7 +583,8 @@ namespace BKI_QLTTQuocAnh
             this.TEN_LOP,
             this.LAN_THU,
             this.TRANG_THAI_PHIEU,
-            this.NGAY_NHAP});
+            this.NGAY_NHAP,
+            this.GHI_CHU});
             this.gridView2.GridControl = this.gridControl;
             this.gridView2.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", this.SO_TIEN, "")});
@@ -744,6 +747,14 @@ namespace BKI_QLTTQuocAnh
             this.NGAY_NHAP.Visible = true;
             this.NGAY_NHAP.VisibleIndex = 13;
             this.NGAY_NHAP.Width = 108;
+            // 
+            // GHI_CHU
+            // 
+            this.GHI_CHU.Caption = "Ghi chú";
+            this.GHI_CHU.FieldName = "GHI_CHU";
+            this.GHI_CHU.Name = "GHI_CHU";
+            this.GHI_CHU.Visible = true;
+            this.GHI_CHU.VisibleIndex = 14;
             // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay
             // 
