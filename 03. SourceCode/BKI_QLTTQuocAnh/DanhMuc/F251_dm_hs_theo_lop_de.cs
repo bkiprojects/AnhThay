@@ -45,6 +45,14 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             op_dc_id_hoc_vien = m_us.dcID;
             return this.ShowDialog();
         }
+
+        public DialogResult display_4_insert(decimal ip_dc_id_lop_mon)
+        {
+            m_e_form_mode = DataEntryFormMode.InsertDataState;
+            m_cbo_lop.SelectedValue = ip_dc_id_lop_mon;
+            return this.ShowDialog(); 
+        }
+
         public void display_4_update(US_V_DM_HOC_SINH_GD_HOC_DM_LOP_MON v_us)
         {
             m_e_form_mode = DataEntryFormMode.UpdateDataState;
@@ -79,6 +87,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
             set_define_events();
             this.KeyPreview = true;
         }
+
         private void load_data_2_ds_hs() {
             US_DM_HOC_SINH v_us = new US_DM_HOC_SINH();
             m_ds_dm_hs.Clear();
@@ -391,9 +400,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
                 CSystemLog_301.ExceptionHandle(v_e);
             }
         }
-
-
-
+        
         void F251_dm_hs_theo_lop_de_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -423,5 +430,6 @@ namespace BKI_QLTTQuocAnh.DanhMuc {
         }
 
         #endregion
+
     }
 }

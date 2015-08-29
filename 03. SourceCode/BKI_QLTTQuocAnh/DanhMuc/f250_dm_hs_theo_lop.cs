@@ -700,11 +700,11 @@ namespace BKI_QLTTQuocAnh
             m_ds.EnforceConstraints = false;
             if (m_sle_lop.EditValue == null || m_sle_lop.EditValue == "")
             {
-                m_us.FillDataset(m_ds);
+                m_us.FillDataset(m_ds, "ORDER BY TEN");
             }
             else
             {
-                m_us.FillDataset(m_ds, "where ID_LOP_MON = " + m_sle_lop.EditValue + " AND TRANG_THAI_YN = 'Y'" );
+                m_us.FillDataset(m_ds, "where ID_LOP_MON = " + m_sle_lop.EditValue + " AND TRANG_THAI_YN = 'Y' ORDER BY TEN");
             }
             gridControl1.DataSource = m_ds.Tables[0];
         }
@@ -747,9 +747,18 @@ namespace BKI_QLTTQuocAnh
             //load_data_2_grid();
             try
             {
-                F251_dm_hs_theo_lop_de v_fde = new F251_dm_hs_theo_lop_de();
-                v_fde.display_4_insert();
-                load_data_2_grid();
+                if (m_sle_lop.EditValue == null || m_sle_lop.EditValue == "")
+                {
+                    F251_dm_hs_theo_lop_de v_fde = new F251_dm_hs_theo_lop_de();
+                    v_fde.display_4_insert();
+                    load_data_2_grid();
+                }
+                else
+                {
+                    F251_dm_hs_theo_lop_de v_fde = new F251_dm_hs_theo_lop_de();
+                    v_fde.display_4_insert(CIPConvert.ToDecimal(m_sle_lop.EditValue));
+                    load_data_2_grid();
+                }
             }
             catch (Exception v_e)
             {
