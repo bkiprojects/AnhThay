@@ -31,9 +31,11 @@
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ID_HOC_SINH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.STT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MA_DOI_TUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.HO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.HO_TEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TRANG_THAI_HOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.HOC_PHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.GIAM_TRU = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,7 +51,6 @@
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.MA_DOI_TUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -110,6 +111,7 @@
             this.HO,
             this.TEN,
             this.HO_TEN,
+            this.TRANG_THAI_HOC,
             this.HOC_PHI,
             this.GIAM_TRU,
             this.CON_PHAI_THU,
@@ -151,13 +153,21 @@
             this.STT.VisibleIndex = 0;
             this.STT.Width = 38;
             // 
+            // MA_DOI_TUONG
+            // 
+            this.MA_DOI_TUONG.Caption = "Mã học viên";
+            this.MA_DOI_TUONG.FieldName = "MA_DOI_TUONG";
+            this.MA_DOI_TUONG.Name = "MA_DOI_TUONG";
+            this.MA_DOI_TUONG.Visible = true;
+            this.MA_DOI_TUONG.VisibleIndex = 1;
+            // 
             // HO
             // 
             this.HO.Caption = "Họ";
             this.HO.FieldName = "HO";
             this.HO.Name = "HO";
             this.HO.Visible = true;
-            this.HO.VisibleIndex = 1;
+            this.HO.VisibleIndex = 2;
             this.HO.Width = 100;
             // 
             // TEN
@@ -166,7 +176,7 @@
             this.TEN.FieldName = "TEN";
             this.TEN.Name = "TEN";
             this.TEN.Visible = true;
-            this.TEN.VisibleIndex = 2;
+            this.TEN.VisibleIndex = 3;
             this.TEN.Width = 80;
             // 
             // HO_TEN
@@ -174,6 +184,14 @@
             this.HO_TEN.Caption = "Họ tên";
             this.HO_TEN.FieldName = "HO_TEN";
             this.HO_TEN.Name = "HO_TEN";
+            // 
+            // TRANG_THAI_HOC
+            // 
+            this.TRANG_THAI_HOC.Caption = "Trạng thái";
+            this.TRANG_THAI_HOC.FieldName = "TRANG_THAI_HOC";
+            this.TRANG_THAI_HOC.Name = "TRANG_THAI_HOC";
+            this.TRANG_THAI_HOC.Visible = true;
+            this.TRANG_THAI_HOC.VisibleIndex = 4;
             // 
             // HOC_PHI
             // 
@@ -184,7 +202,7 @@
             this.HOC_PHI.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "HOC_PHI", "{0:n0}")});
             this.HOC_PHI.Visible = true;
-            this.HOC_PHI.VisibleIndex = 4;
+            this.HOC_PHI.VisibleIndex = 5;
             this.HOC_PHI.Width = 140;
             // 
             // repositoryItemTextEdit1
@@ -204,7 +222,7 @@
             this.GIAM_TRU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GIAM_TRU", "{0:n0}")});
             this.GIAM_TRU.Visible = true;
-            this.GIAM_TRU.VisibleIndex = 5;
+            this.GIAM_TRU.VisibleIndex = 6;
             this.GIAM_TRU.Width = 140;
             // 
             // CON_PHAI_THU
@@ -216,7 +234,7 @@
             this.CON_PHAI_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CON_PHAI_THU", "{0:n0}")});
             this.CON_PHAI_THU.Visible = true;
-            this.CON_PHAI_THU.VisibleIndex = 6;
+            this.CON_PHAI_THU.VisibleIndex = 7;
             this.CON_PHAI_THU.Width = 140;
             // 
             // THUC_THU
@@ -228,7 +246,7 @@
             this.THUC_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "THUC_THU", "{0:n0}")});
             this.THUC_THU.Visible = true;
-            this.THUC_THU.VisibleIndex = 7;
+            this.THUC_THU.VisibleIndex = 8;
             this.THUC_THU.Width = 140;
             // 
             // CHENH_LECH
@@ -240,7 +258,7 @@
             this.CHENH_LECH.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CHENH_LECH", "{0:n0}")});
             this.CHENH_LECH.Visible = true;
-            this.CHENH_LECH.VisibleIndex = 8;
+            this.CHENH_LECH.VisibleIndex = 9;
             this.CHENH_LECH.Width = 140;
             // 
             // imageList1
@@ -358,14 +376,6 @@
             this.panel2.Size = new System.Drawing.Size(953, 38);
             this.panel2.TabIndex = 6;
             // 
-            // MA_DOI_TUONG
-            // 
-            this.MA_DOI_TUONG.Caption = "Mã học viên";
-            this.MA_DOI_TUONG.FieldName = "MA_DOI_TUONG";
-            this.MA_DOI_TUONG.Name = "MA_DOI_TUONG";
-            this.MA_DOI_TUONG.Visible = true;
-            this.MA_DOI_TUONG.VisibleIndex = 1;
-            // 
             // f411_bao_cao_so_giao_dich_theo_lop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +425,7 @@
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn MA_DOI_TUONG;
+        private DevExpress.XtraGrid.Columns.GridColumn TRANG_THAI_HOC;
 
     }
 }

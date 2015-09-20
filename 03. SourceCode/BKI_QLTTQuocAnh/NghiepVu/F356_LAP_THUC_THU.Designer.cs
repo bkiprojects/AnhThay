@@ -63,6 +63,8 @@
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.m_txt_ghi_chu = new DevExpress.XtraEditors.MemoEdit();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_so_phieu_thu.Properties)).BeginInit();
@@ -81,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // directorySearcher1
@@ -118,7 +121,7 @@
             // 
             // m_txt_noi_dung
             // 
-            this.m_txt_noi_dung.Location = new System.Drawing.Point(135, 272);
+            this.m_txt_noi_dung.Location = new System.Drawing.Point(135, 267);
             this.m_txt_noi_dung.Name = "m_txt_noi_dung";
             this.m_txt_noi_dung.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_txt_noi_dung.Size = new System.Drawing.Size(232, 55);
@@ -254,7 +257,7 @@
             // 
             // m_lbl_nv_nhap
             // 
-            this.m_lbl_nv_nhap.Location = new System.Drawing.Point(134, 362);
+            this.m_lbl_nv_nhap.Location = new System.Drawing.Point(134, 360);
             this.m_lbl_nv_nhap.Name = "m_lbl_nv_nhap";
             this.m_lbl_nv_nhap.Size = new System.Drawing.Size(12, 13);
             this.m_lbl_nv_nhap.TabIndex = 24;
@@ -262,7 +265,7 @@
             // 
             // m_lbl_nv_thu
             // 
-            this.m_lbl_nv_thu.Location = new System.Drawing.Point(135, 333);
+            this.m_lbl_nv_thu.Location = new System.Drawing.Point(135, 331);
             this.m_lbl_nv_thu.Name = "m_lbl_nv_thu";
             this.m_lbl_nv_thu.Size = new System.Drawing.Size(12, 13);
             this.m_lbl_nv_thu.TabIndex = 22;
@@ -272,6 +275,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.m_txt_ghi_chu);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.m_txt_noi_dung);
             this.panel1.Controls.Add(this.m_txt_so_tien);
             this.panel1.Controls.Add(this.m_sle_so_phieu_thu);
@@ -309,7 +314,7 @@
             // m_dat_ngay_nhap
             // 
             this.m_dat_ngay_nhap.EditValue = null;
-            this.m_dat_ngay_nhap.Location = new System.Drawing.Point(135, 389);
+            this.m_dat_ngay_nhap.Location = new System.Drawing.Point(135, 384);
             this.m_dat_ngay_nhap.Name = "m_dat_ngay_nhap";
             this.m_dat_ngay_nhap.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_dat_ngay_nhap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -340,7 +345,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 474);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(604, 49);
-            this.panelControl2.TabIndex = 27;
+            this.panelControl2.TabIndex = 29;
             // 
             // m_cmd_exit
             // 
@@ -436,7 +441,7 @@
             // m_lbl_4
             // 
             this.m_lbl_4.AutoSize = true;
-            this.m_lbl_4.Location = new System.Drawing.Point(13, 333);
+            this.m_lbl_4.Location = new System.Drawing.Point(13, 331);
             this.m_lbl_4.Name = "m_lbl_4";
             this.m_lbl_4.Size = new System.Drawing.Size(77, 13);
             this.m_lbl_4.TabIndex = 21;
@@ -445,7 +450,7 @@
             // m_lbl_6
             // 
             this.m_lbl_6.AutoSize = true;
-            this.m_lbl_6.Location = new System.Drawing.Point(13, 362);
+            this.m_lbl_6.Location = new System.Drawing.Point(13, 360);
             this.m_lbl_6.Name = "m_lbl_6";
             this.m_lbl_6.Size = new System.Drawing.Size(83, 13);
             this.m_lbl_6.TabIndex = 23;
@@ -472,7 +477,7 @@
             // m_lbl_noi_dung
             // 
             this.m_lbl_noi_dung.AutoSize = true;
-            this.m_lbl_noi_dung.Location = new System.Drawing.Point(13, 275);
+            this.m_lbl_noi_dung.Location = new System.Drawing.Point(13, 270);
             this.m_lbl_noi_dung.Name = "m_lbl_noi_dung";
             this.m_lbl_noi_dung.Size = new System.Drawing.Size(63, 13);
             this.m_lbl_noi_dung.TabIndex = 19;
@@ -491,7 +496,7 @@
             // m_lbl_den_ngay
             // 
             this.m_lbl_den_ngay.AutoSize = true;
-            this.m_lbl_den_ngay.Location = new System.Drawing.Point(13, 392);
+            this.m_lbl_den_ngay.Location = new System.Drawing.Point(13, 387);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(59, 13);
             this.m_lbl_den_ngay.TabIndex = 25;
@@ -533,6 +538,23 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
+            // m_txt_ghi_chu
+            // 
+            this.m_txt_ghi_chu.Location = new System.Drawing.Point(135, 410);
+            this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
+            this.m_txt_ghi_chu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_ghi_chu.Size = new System.Drawing.Size(232, 55);
+            this.m_txt_ghi_chu.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 412);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Ghi chú";
+            // 
             // F356_LAP_THUC_THU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,6 +582,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -604,5 +627,7 @@
         private System.Windows.Forms.Label m_lbl_den_ngay;
         private System.Windows.Forms.Panel panel2;
         internal System.Windows.Forms.ImageList imageList1;
+        public DevExpress.XtraEditors.MemoEdit m_txt_ghi_chu;
+        private System.Windows.Forms.Label label2;
     }
 }

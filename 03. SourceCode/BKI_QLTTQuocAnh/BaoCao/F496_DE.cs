@@ -48,6 +48,7 @@ namespace BKI_QLTTQuocAnh.BaoCao {
             winContainer.WinControl = grid;
             return winContainer;
         }
+
         private void simpleButton2_Click(object sender, EventArgs e) {
             try {
                 var r = new dsphieu();

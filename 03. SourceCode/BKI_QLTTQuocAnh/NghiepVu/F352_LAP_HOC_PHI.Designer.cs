@@ -36,6 +36,8 @@
             this.m_lbl_nv_nhap = new DevExpress.XtraEditors.LabelControl();
             this.m_lbl_nv_thu = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_txt_ghi_chu = new DevExpress.XtraEditors.MemoEdit();
+            this.label2 = new System.Windows.Forms.Label();
             this.m_cmd_them_hv_moi = new DevExpress.XtraEditors.SimpleButton();
             this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
             this.m_dat_ngay_nhap = new DevExpress.XtraEditors.DateEdit();
@@ -55,8 +57,6 @@
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.m_txt_ghi_chu = new DevExpress.XtraEditors.MemoEdit();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -65,13 +65,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_thu.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_thu.Properties)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // directorySearcher1
@@ -218,6 +218,23 @@
             this.panel1.Size = new System.Drawing.Size(497, 504);
             this.panel1.TabIndex = 0;
             // 
+            // m_txt_ghi_chu
+            // 
+            this.m_txt_ghi_chu.Location = new System.Drawing.Point(134, 361);
+            this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
+            this.m_txt_ghi_chu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_ghi_chu.Size = new System.Drawing.Size(232, 55);
+            this.m_txt_ghi_chu.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 364);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Ghi chú";
+            // 
             // m_cmd_them_hv_moi
             // 
             this.m_cmd_them_hv_moi.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_them_hv_moi.Image")));
@@ -276,7 +293,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 453);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(495, 49);
-            this.panelControl2.TabIndex = 26;
+            this.panelControl2.TabIndex = 22;
             // 
             // m_cmd_exit
             // 
@@ -309,7 +326,7 @@
             this.m_cmd_insert.Location = new System.Drawing.Point(2, 2);
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(115, 45);
-            this.m_cmd_insert.TabIndex = 0;
+            this.m_cmd_insert.TabIndex = 1;
             this.m_cmd_insert.Text = "&Lập học phí";
             this.m_cmd_insert.UseVisualStyleBackColor = false;
             // 
@@ -442,23 +459,6 @@
             this.imageList1.Images.SetKeyName(20, "");
             this.imageList1.Images.SetKeyName(21, "");
             // 
-            // m_txt_ghi_chu
-            // 
-            this.m_txt_ghi_chu.Location = new System.Drawing.Point(134, 361);
-            this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
-            this.m_txt_ghi_chu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_txt_ghi_chu.Size = new System.Drawing.Size(232, 55);
-            this.m_txt_ghi_chu.TabIndex = 28;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 364);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Ghi chú";
-            // 
             // F352_LAP_HOC_PHI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,13 +476,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_thu.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

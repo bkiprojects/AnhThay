@@ -42,6 +42,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_us_gd_phieu_thu.dcID_NGUOI_THU = ip_us_v_gd_phieu_thu.dcID_NGUOI_THU;
             m_lbl_nv_thu.Text = ip_us_v_gd_phieu_thu.strTEN_NGUOI_THU;
             m_lbl_nv_nhap.Text = ip_us_v_gd_phieu_thu.strTEN_NGUOI_THU;
+            m_txt_ghi_chu.Text = ip_us_v_gd_phieu_thu.strGHI_CHU;
             load_ten_hs();
             this.ShowDialog();
         }
@@ -372,6 +373,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
                 ip_us.strNOI_DUNG = m_txt_noi_dung.Text.Trim();
                 ip_us.strSO_PHIEU = m_txt_so_phieu.Text.Trim();
                 ip_us.dcID_SO_PHIEU_THU = CIPConvert.ToDecimal(m_sle_so_phieu_thu.EditValue);
+                ip_us.strGHI_CHU = m_txt_ghi_chu.Text.Trim();
             }
             catch(Exception v_e) {
                 throw v_e;

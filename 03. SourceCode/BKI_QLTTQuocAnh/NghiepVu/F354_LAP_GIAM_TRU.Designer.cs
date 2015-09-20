@@ -29,6 +29,12 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_lbl_check_so_phieu = new System.Windows.Forms.Label();
+            this.m_sle_so_phieu_thu = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.m_lbl_so_phieu_thu = new System.Windows.Forms.Label();
+            this.m_txt_so_phieu = new DevExpress.XtraEditors.TextEdit();
+            this.m_lbl_so_phieu = new System.Windows.Forms.Label();
             this.m_txt_so_tien = new DevExpress.XtraEditors.TextEdit();
             this.m_txt_lan_thu = new DevExpress.XtraEditors.TextEdit();
             this.m_lbl_lan_thu = new System.Windows.Forms.Label();
@@ -56,14 +62,13 @@
             this.m_lbl_noi_dung = new System.Windows.Forms.Label();
             this.m_lbl_den_ngay = new System.Windows.Forms.Label();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.m_sle_so_phieu_thu = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.m_lbl_so_phieu_thu = new System.Windows.Forms.Label();
-            this.m_txt_so_phieu = new DevExpress.XtraEditors.TextEdit();
-            this.m_lbl_so_phieu = new System.Windows.Forms.Label();
-            this.m_lbl_check_so_phieu = new System.Windows.Forms.Label();
+            this.m_txt_ghi_chu = new DevExpress.XtraEditors.MemoEdit();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_sle_so_phieu_thu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_phieu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_lan_thu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).BeginInit();
@@ -77,9 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_sle_so_phieu_thu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_phieu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ImageList
@@ -149,6 +152,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.m_txt_ghi_chu);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.m_lbl_check_so_phieu);
             this.panel1.Controls.Add(this.m_sle_so_phieu_thu);
             this.panel1.Controls.Add(this.m_lbl_so_phieu_thu);
@@ -182,6 +187,63 @@
             this.panel1.Size = new System.Drawing.Size(538, 532);
             this.panel1.TabIndex = 0;
             // 
+            // m_lbl_check_so_phieu
+            // 
+            this.m_lbl_check_so_phieu.AutoSize = true;
+            this.m_lbl_check_so_phieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_lbl_check_so_phieu.ForeColor = System.Drawing.Color.Maroon;
+            this.m_lbl_check_so_phieu.Location = new System.Drawing.Point(278, 76);
+            this.m_lbl_check_so_phieu.Name = "m_lbl_check_so_phieu";
+            this.m_lbl_check_so_phieu.Size = new System.Drawing.Size(0, 17);
+            this.m_lbl_check_so_phieu.TabIndex = 6;
+            // 
+            // m_sle_so_phieu_thu
+            // 
+            this.m_sle_so_phieu_thu.EditValue = "";
+            this.m_sle_so_phieu_thu.Location = new System.Drawing.Point(134, 45);
+            this.m_sle_so_phieu_thu.Name = "m_sle_so_phieu_thu";
+            this.m_sle_so_phieu_thu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_sle_so_phieu_thu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.m_sle_so_phieu_thu.Properties.NullText = "";
+            this.m_sle_so_phieu_thu.Properties.View = this.gridView2;
+            this.m_sle_so_phieu_thu.Size = new System.Drawing.Size(138, 20);
+            this.m_sle_so_phieu_thu.TabIndex = 3;
+            // 
+            // gridView2
+            // 
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // m_lbl_so_phieu_thu
+            // 
+            this.m_lbl_so_phieu_thu.AutoSize = true;
+            this.m_lbl_so_phieu_thu.Location = new System.Drawing.Point(13, 48);
+            this.m_lbl_so_phieu_thu.Name = "m_lbl_so_phieu_thu";
+            this.m_lbl_so_phieu_thu.Size = new System.Drawing.Size(23, 13);
+            this.m_lbl_so_phieu_thu.TabIndex = 2;
+            this.m_lbl_so_phieu_thu.Text = "Sổ ";
+            // 
+            // m_txt_so_phieu
+            // 
+            this.m_txt_so_phieu.EditValue = "";
+            this.m_txt_so_phieu.Location = new System.Drawing.Point(134, 75);
+            this.m_txt_so_phieu.Name = "m_txt_so_phieu";
+            this.m_txt_so_phieu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_so_phieu.Size = new System.Drawing.Size(138, 20);
+            this.m_txt_so_phieu.TabIndex = 5;
+            // 
+            // m_lbl_so_phieu
+            // 
+            this.m_lbl_so_phieu.AutoSize = true;
+            this.m_lbl_so_phieu.Location = new System.Drawing.Point(13, 78);
+            this.m_lbl_so_phieu.Name = "m_lbl_so_phieu";
+            this.m_lbl_so_phieu.Size = new System.Drawing.Size(59, 13);
+            this.m_lbl_so_phieu.TabIndex = 4;
+            this.m_lbl_so_phieu.Text = "Số phiếu(*)";
+            // 
             // m_txt_so_tien
             // 
             this.m_txt_so_tien.EditValue = "";
@@ -194,7 +256,7 @@
             this.m_txt_so_tien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.m_txt_so_tien.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.m_txt_so_tien.Size = new System.Drawing.Size(183, 26);
-            this.m_txt_so_tien.TabIndex = 9;
+            this.m_txt_so_tien.TabIndex = 15;
             // 
             // m_txt_lan_thu
             // 
@@ -206,7 +268,7 @@
             this.m_txt_lan_thu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_txt_lan_thu.Properties.ReadOnly = true;
             this.m_txt_lan_thu.Size = new System.Drawing.Size(31, 20);
-            this.m_txt_lan_thu.TabIndex = 6;
+            this.m_txt_lan_thu.TabIndex = 12;
             // 
             // m_lbl_lan_thu
             // 
@@ -214,7 +276,7 @@
             this.m_lbl_lan_thu.Location = new System.Drawing.Point(298, 141);
             this.m_lbl_lan_thu.Name = "m_lbl_lan_thu";
             this.m_lbl_lan_thu.Size = new System.Drawing.Size(53, 13);
-            this.m_lbl_lan_thu.TabIndex = 5;
+            this.m_lbl_lan_thu.TabIndex = 11;
             this.m_lbl_lan_thu.Text = "Lần thứ(*)";
             // 
             // m_txt_noi_dung
@@ -223,7 +285,7 @@
             this.m_txt_noi_dung.Name = "m_txt_noi_dung";
             this.m_txt_noi_dung.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_txt_noi_dung.Size = new System.Drawing.Size(232, 55);
-            this.m_txt_noi_dung.TabIndex = 12;
+            this.m_txt_noi_dung.TabIndex = 18;
             // 
             // m_sle_lop
             // 
@@ -236,7 +298,7 @@
             this.m_sle_lop.Properties.NullText = "";
             this.m_sle_lop.Properties.View = this.gridView1;
             this.m_sle_lop.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_lop.TabIndex = 2;
+            this.m_sle_lop.TabIndex = 8;
             // 
             // gridView1
             // 
@@ -256,7 +318,7 @@
             this.m_sle_ma_hv.Properties.NullText = "";
             this.m_sle_ma_hv.Properties.View = this.searchLookUpEdit1View;
             this.m_sle_ma_hv.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_ma_hv.TabIndex = 4;
+            this.m_sle_ma_hv.TabIndex = 10;
             // 
             // searchLookUpEdit1View
             // 
@@ -277,14 +339,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_dat_ngay_thu.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.m_dat_ngay_thu.Size = new System.Drawing.Size(138, 20);
-            this.m_dat_ngay_thu.TabIndex = 20;
+            this.m_dat_ngay_thu.TabIndex = 26;
             // 
             // m_lbl_nv_nhap
             // 
             this.m_lbl_nv_nhap.Location = new System.Drawing.Point(133, 327);
             this.m_lbl_nv_nhap.Name = "m_lbl_nv_nhap";
             this.m_lbl_nv_nhap.Size = new System.Drawing.Size(12, 13);
-            this.m_lbl_nv_nhap.TabIndex = 16;
+            this.m_lbl_nv_nhap.TabIndex = 22;
             this.m_lbl_nv_nhap.Text = "...";
             // 
             // m_lbl_nv_thu
@@ -292,7 +354,7 @@
             this.m_lbl_nv_thu.Location = new System.Drawing.Point(134, 298);
             this.m_lbl_nv_thu.Name = "m_lbl_nv_thu";
             this.m_lbl_nv_thu.Size = new System.Drawing.Size(12, 13);
-            this.m_lbl_nv_thu.TabIndex = 14;
+            this.m_lbl_nv_thu.TabIndex = 20;
             this.m_lbl_nv_thu.Text = "...";
             // 
             // m_dat_ngay_nhap
@@ -307,7 +369,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_dat_ngay_nhap.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.m_dat_ngay_nhap.Size = new System.Drawing.Size(137, 20);
-            this.m_dat_ngay_nhap.TabIndex = 18;
+            this.m_dat_ngay_nhap.TabIndex = 24;
             // 
             // m_lbl_header_left
             // 
@@ -317,7 +379,7 @@
             this.m_lbl_header_left.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header_left.Name = "m_lbl_header_left";
             this.m_lbl_header_left.Size = new System.Drawing.Size(536, 46);
-            this.m_lbl_header_left.TabIndex = 0;
+            this.m_lbl_header_left.TabIndex = 1;
             this.m_lbl_header_left.Text = "LẬP GIẢM TRỪ";
             this.m_lbl_header_left.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -329,7 +391,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 481);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(536, 49);
-            this.panelControl2.TabIndex = 21;
+            this.panelControl2.TabIndex = 28;
             // 
             // m_cmd_exit
             // 
@@ -373,7 +435,7 @@
             this.label3.Location = new System.Drawing.Point(323, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 20);
-            this.label3.TabIndex = 10;
+            this.label3.TabIndex = 16;
             this.label3.Text = "VNĐ";
             // 
             // m_lbl_ten_hs
@@ -384,7 +446,7 @@
             this.m_lbl_ten_hs.Location = new System.Drawing.Point(130, 167);
             this.m_lbl_ten_hs.Name = "m_lbl_ten_hs";
             this.m_lbl_ten_hs.Size = new System.Drawing.Size(23, 17);
-            this.m_lbl_ten_hs.TabIndex = 7;
+            this.m_lbl_ten_hs.TabIndex = 13;
             this.m_lbl_ten_hs.Text = "...";
             // 
             // m_lbl_ngay_thu
@@ -393,7 +455,7 @@
             this.m_lbl_ngay_thu.Location = new System.Drawing.Point(13, 383);
             this.m_lbl_ngay_thu.Name = "m_lbl_ngay_thu";
             this.m_lbl_ngay_thu.Size = new System.Drawing.Size(50, 13);
-            this.m_lbl_ngay_thu.TabIndex = 19;
+            this.m_lbl_ngay_thu.TabIndex = 25;
             this.m_lbl_ngay_thu.Text = "Ngày thu";
             // 
             // label1
@@ -402,7 +464,7 @@
             this.label1.Location = new System.Drawing.Point(12, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 7;
             this.label1.Text = "Lớp";
             // 
             // m_lbl_so_tien
@@ -411,7 +473,7 @@
             this.m_lbl_so_tien.Location = new System.Drawing.Point(12, 207);
             this.m_lbl_so_tien.Name = "m_lbl_so_tien";
             this.m_lbl_so_tien.Size = new System.Drawing.Size(101, 13);
-            this.m_lbl_so_tien.TabIndex = 8;
+            this.m_lbl_so_tien.TabIndex = 14;
             this.m_lbl_so_tien.Text = "TIỀN GIẢM TRỪ (*)";
             // 
             // m_lbl_4
@@ -420,7 +482,7 @@
             this.m_lbl_4.Location = new System.Drawing.Point(12, 298);
             this.m_lbl_4.Name = "m_lbl_4";
             this.m_lbl_4.Size = new System.Drawing.Size(77, 13);
-            this.m_lbl_4.TabIndex = 13;
+            this.m_lbl_4.TabIndex = 19;
             this.m_lbl_4.Text = "Nhân viên thu ";
             // 
             // m_lbl_6
@@ -429,7 +491,7 @@
             this.m_lbl_6.Location = new System.Drawing.Point(12, 327);
             this.m_lbl_6.Name = "m_lbl_6";
             this.m_lbl_6.Size = new System.Drawing.Size(83, 13);
-            this.m_lbl_6.TabIndex = 15;
+            this.m_lbl_6.TabIndex = 21;
             this.m_lbl_6.Text = "Nhân viên nhập";
             // 
             // m_lbl_ma_hoc_sinh
@@ -438,7 +500,7 @@
             this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(12, 141);
             this.m_lbl_ma_hoc_sinh.Name = "m_lbl_ma_hoc_sinh";
             this.m_lbl_ma_hoc_sinh.Size = new System.Drawing.Size(50, 13);
-            this.m_lbl_ma_hoc_sinh.TabIndex = 3;
+            this.m_lbl_ma_hoc_sinh.TabIndex = 9;
             this.m_lbl_ma_hoc_sinh.Text = "Mã HV(*)";
             // 
             // m_lbl_noi_dung
@@ -447,7 +509,7 @@
             this.m_lbl_noi_dung.Location = new System.Drawing.Point(12, 240);
             this.m_lbl_noi_dung.Name = "m_lbl_noi_dung";
             this.m_lbl_noi_dung.Size = new System.Drawing.Size(63, 13);
-            this.m_lbl_noi_dung.TabIndex = 11;
+            this.m_lbl_noi_dung.TabIndex = 17;
             this.m_lbl_noi_dung.Text = "Nội dung (*)";
             // 
             // m_lbl_den_ngay
@@ -456,7 +518,7 @@
             this.m_lbl_den_ngay.Location = new System.Drawing.Point(12, 357);
             this.m_lbl_den_ngay.Name = "m_lbl_den_ngay";
             this.m_lbl_den_ngay.Size = new System.Drawing.Size(59, 13);
-            this.m_lbl_den_ngay.TabIndex = 17;
+            this.m_lbl_den_ngay.TabIndex = 23;
             this.m_lbl_den_ngay.Text = "Ngày nhập";
             // 
             // directorySearcher1
@@ -465,62 +527,22 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // m_sle_so_phieu_thu
+            // m_txt_ghi_chu
             // 
-            this.m_sle_so_phieu_thu.EditValue = "";
-            this.m_sle_so_phieu_thu.Location = new System.Drawing.Point(134, 45);
-            this.m_sle_so_phieu_thu.Name = "m_sle_so_phieu_thu";
-            this.m_sle_so_phieu_thu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_sle_so_phieu_thu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_sle_so_phieu_thu.Properties.NullText = "";
-            this.m_sle_so_phieu_thu.Properties.View = this.gridView2;
-            this.m_sle_so_phieu_thu.Size = new System.Drawing.Size(138, 20);
-            this.m_sle_so_phieu_thu.TabIndex = 23;
+            this.m_txt_ghi_chu.Location = new System.Drawing.Point(133, 406);
+            this.m_txt_ghi_chu.Name = "m_txt_ghi_chu";
+            this.m_txt_ghi_chu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.m_txt_ghi_chu.Size = new System.Drawing.Size(232, 55);
+            this.m_txt_ghi_chu.TabIndex = 28;
             // 
-            // gridView2
+            // label2
             // 
-            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView2.OptionsView.ShowGroupPanel = false;
-            // 
-            // m_lbl_so_phieu_thu
-            // 
-            this.m_lbl_so_phieu_thu.AutoSize = true;
-            this.m_lbl_so_phieu_thu.Location = new System.Drawing.Point(13, 48);
-            this.m_lbl_so_phieu_thu.Name = "m_lbl_so_phieu_thu";
-            this.m_lbl_so_phieu_thu.Size = new System.Drawing.Size(23, 13);
-            this.m_lbl_so_phieu_thu.TabIndex = 22;
-            this.m_lbl_so_phieu_thu.Text = "Sổ ";
-            // 
-            // m_txt_so_phieu
-            // 
-            this.m_txt_so_phieu.EditValue = "";
-            this.m_txt_so_phieu.Location = new System.Drawing.Point(134, 75);
-            this.m_txt_so_phieu.Name = "m_txt_so_phieu";
-            this.m_txt_so_phieu.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.m_txt_so_phieu.Size = new System.Drawing.Size(138, 20);
-            this.m_txt_so_phieu.TabIndex = 25;
-            // 
-            // m_lbl_so_phieu
-            // 
-            this.m_lbl_so_phieu.AutoSize = true;
-            this.m_lbl_so_phieu.Location = new System.Drawing.Point(13, 78);
-            this.m_lbl_so_phieu.Name = "m_lbl_so_phieu";
-            this.m_lbl_so_phieu.Size = new System.Drawing.Size(59, 13);
-            this.m_lbl_so_phieu.TabIndex = 24;
-            this.m_lbl_so_phieu.Text = "Số phiếu(*)";
-            // 
-            // m_lbl_check_so_phieu
-            // 
-            this.m_lbl_check_so_phieu.AutoSize = true;
-            this.m_lbl_check_so_phieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_lbl_check_so_phieu.ForeColor = System.Drawing.Color.Maroon;
-            this.m_lbl_check_so_phieu.Location = new System.Drawing.Point(278, 76);
-            this.m_lbl_check_so_phieu.Name = "m_lbl_check_so_phieu";
-            this.m_lbl_check_so_phieu.Size = new System.Drawing.Size(0, 17);
-            this.m_lbl_check_so_phieu.TabIndex = 6;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 408);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Ghi chú";
             // 
             // F354_LAP_GIAM_TRU
             // 
@@ -533,6 +555,9 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_sle_so_phieu_thu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_phieu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_tien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_lan_thu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_noi_dung.Properties)).EndInit();
@@ -546,9 +571,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_dat_ngay_nhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_sle_so_phieu_thu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_so_phieu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_ghi_chu.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -592,5 +615,7 @@
         public DevExpress.XtraEditors.TextEdit m_txt_so_phieu;
         public System.Windows.Forms.Label m_lbl_so_phieu;
         public System.Windows.Forms.Label m_lbl_check_so_phieu;
+        public DevExpress.XtraEditors.MemoEdit m_txt_ghi_chu;
+        private System.Windows.Forms.Label label2;
     }
 }

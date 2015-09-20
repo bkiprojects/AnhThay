@@ -109,6 +109,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             v_us.FillDuLieuBaoCao(CIPConvert.ToDecimal(m_sle_lop.EditValue), v_ds);
 
             gridControl1.DataSource = v_ds.Tables[0];
+            
         }
 
         private void make_stt()
