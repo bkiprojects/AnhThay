@@ -25,6 +25,7 @@ using BKI_QLTTQuocAnh.DS.CDBNames;
 using C1.Win.C1FlexGrid;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraGrid;
+using DevExpress.XtraEditors;
 using BKI_QLTTQuocAnh.RPT;
 
 namespace BKI_QLTTQuocAnh
@@ -743,6 +744,15 @@ namespace BKI_QLTTQuocAnh
             //	v_fDE.display(m_us);
         }
 
+        private bool check_data_is_ok()
+        {
+            if (m_dat_den_ngay.Value.Date < m_dat_tu_ngay.Value.Date)
+            {
+                XtraMessageBox.Show("Ngày kết thúc phải lớn hơn hoặc bằng ngày bắt đầu!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
         #endregion
 
         //
@@ -816,6 +826,10 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
+                if (check_data_is_ok() ==  false)
+                {
+                    return;
+                }
                 load_data_2_grid();
             }
             catch (Exception v_e)

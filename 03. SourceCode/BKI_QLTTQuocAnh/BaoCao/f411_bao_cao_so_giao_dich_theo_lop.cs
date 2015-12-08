@@ -143,6 +143,19 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             this.Load += frm_bao_cao_so_giao_dich_theo_lop_Load;
             m_cmd_search.Click += m_cmd_search_Click;
+            //m_sle_lop.EditValueChanged += m_sle_lop_EditValueChanged;
+        }
+
+        void m_sle_lop_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                load_data_2_grid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_search_Click(object sender, EventArgs e)
