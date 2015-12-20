@@ -460,9 +460,13 @@ namespace BKI_QLTTQuocAnh.US
             v_csp.fillDataSetByCommand(this, v_ds);
         }
 
-        public void insert_gd_phieu_thu_f370(decimal ip_dc_id_gd_hoc_moi, decimal ip_dc_id_nguoi_nhap, decimal ip_dc_id_lop_mon, decimal ip_dc_id_hs, decimal ip_dc_id_lop_mon_moi)
+        public void insert_gd_phieu_thu_f370(
+                        decimal ip_dc_id_gd_hoc_moi, 
+                        decimal ip_dc_id_nguoi_nhap, 
+                        decimal ip_dc_id_lop_mon, 
+                        decimal ip_dc_id_hs, 
+                        decimal ip_dc_id_lop_mon_moi)
         {
-            BeginTransaction();
             CStoredProc v_obj_spr = new CStoredProc("f370_insert_phieu_phai_thu_moi");
 
             v_obj_spr.addDecimalInputParam("@ip_dc_id_gd_hoc_moi", ip_dc_id_gd_hoc_moi);
@@ -472,8 +476,6 @@ namespace BKI_QLTTQuocAnh.US
             v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon_moi", ip_dc_id_lop_mon_moi);
 
             v_obj_spr.ExecuteCommand(this);
-
-            CommitTransaction();
         }
     }
 }

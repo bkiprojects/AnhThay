@@ -66,6 +66,7 @@ namespace BKI_QLTTQuocAnh
         private DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraGrid.Columns.GridColumn TRANG_THAI_YN;
         private System.ComponentModel.IContainer components;
 
         public f250_dm_hs_theo_lop()
@@ -135,6 +136,7 @@ namespace BKI_QLTTQuocAnh
             this.THOI_GIAN_HOC_FROM_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.THOI_GIAN_HOC_TO_DATE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MOT_NAM_SAU_NGAY_KET_THUC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TRANG_THAI_YN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.m_pnl_out_place_dm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).BeginInit();
@@ -381,7 +383,8 @@ namespace BKI_QLTTQuocAnh
             this.SKYPE,
             this.THOI_GIAN_HOC_FROM_DATE,
             this.THOI_GIAN_HOC_TO_DATE,
-            this.MOT_NAM_SAU_NGAY_KET_THUC});
+            this.MOT_NAM_SAU_NGAY_KET_THUC,
+            this.TRANG_THAI_YN});
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
@@ -404,100 +407,159 @@ namespace BKI_QLTTQuocAnh
             // 
             this.STT.AppearanceCell.Options.UseTextOptions = true;
             this.STT.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.STT.AppearanceHeader.Options.UseTextOptions = true;
+            this.STT.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.STT.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.STT.Caption = "STT";
             this.STT.FieldName = "STT";
             this.STT.Name = "STT";
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
-            this.STT.Width = 38;
+            this.STT.Width = 39;
             // 
             // MA_DOI_TUONG
             // 
-            this.MA_DOI_TUONG.Caption = "Mã học viên";
+            this.MA_DOI_TUONG.AppearanceHeader.Options.UseTextOptions = true;
+            this.MA_DOI_TUONG.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MA_DOI_TUONG.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.MA_DOI_TUONG.Caption = "Mã HV";
             this.MA_DOI_TUONG.FieldName = "MA_DOI_TUONG";
             this.MA_DOI_TUONG.Name = "MA_DOI_TUONG";
             this.MA_DOI_TUONG.Visible = true;
             this.MA_DOI_TUONG.VisibleIndex = 1;
+            this.MA_DOI_TUONG.Width = 50;
             // 
             // HO_TEN
             // 
+            this.HO_TEN.AppearanceHeader.Options.UseTextOptions = true;
+            this.HO_TEN.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.HO_TEN.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.HO_TEN.Caption = "Học tên";
             this.HO_TEN.FieldName = "HO_TEN";
             this.HO_TEN.Name = "HO_TEN";
             this.HO_TEN.Visible = true;
             this.HO_TEN.VisibleIndex = 2;
+            this.HO_TEN.Width = 100;
             // 
             // TRUONG_DANG_HOC
             // 
+            this.TRUONG_DANG_HOC.AppearanceHeader.Options.UseTextOptions = true;
+            this.TRUONG_DANG_HOC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.TRUONG_DANG_HOC.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.TRUONG_DANG_HOC.Caption = "Trường đang học";
             this.TRUONG_DANG_HOC.FieldName = "TRUONG_DANG_HOC";
             this.TRUONG_DANG_HOC.Name = "TRUONG_DANG_HOC";
             this.TRUONG_DANG_HOC.Visible = true;
             this.TRUONG_DANG_HOC.VisibleIndex = 3;
+            this.TRUONG_DANG_HOC.Width = 76;
             // 
             // EMAIL_HS
             // 
+            this.EMAIL_HS.AppearanceHeader.Options.UseTextOptions = true;
+            this.EMAIL_HS.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.EMAIL_HS.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.EMAIL_HS.Caption = "Email";
             this.EMAIL_HS.FieldName = "EMAIL_HS";
             this.EMAIL_HS.Name = "EMAIL_HS";
             this.EMAIL_HS.Visible = true;
             this.EMAIL_HS.VisibleIndex = 4;
+            this.EMAIL_HS.Width = 76;
             // 
             // DIA_CHI
             // 
+            this.DIA_CHI.AppearanceHeader.Options.UseTextOptions = true;
+            this.DIA_CHI.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.DIA_CHI.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.DIA_CHI.Caption = "Địa chỉ";
             this.DIA_CHI.FieldName = "DIA_CHI";
             this.DIA_CHI.Name = "DIA_CHI";
             this.DIA_CHI.Visible = true;
             this.DIA_CHI.VisibleIndex = 5;
+            this.DIA_CHI.Width = 76;
             // 
             // SDT_HS
             // 
+            this.SDT_HS.AppearanceHeader.Options.UseTextOptions = true;
+            this.SDT_HS.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.SDT_HS.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.SDT_HS.Caption = "Số điện thoại";
             this.SDT_HS.FieldName = "SDT_HS";
             this.SDT_HS.Name = "SDT_HS";
             this.SDT_HS.Visible = true;
             this.SDT_HS.VisibleIndex = 6;
+            this.SDT_HS.Width = 76;
             // 
             // FACEBOOK
             // 
+            this.FACEBOOK.AppearanceHeader.Options.UseTextOptions = true;
+            this.FACEBOOK.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.FACEBOOK.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.FACEBOOK.Caption = "Facebook";
             this.FACEBOOK.FieldName = "FACEBOOK";
             this.FACEBOOK.Name = "FACEBOOK";
             this.FACEBOOK.Visible = true;
             this.FACEBOOK.VisibleIndex = 7;
+            this.FACEBOOK.Width = 76;
             // 
             // SKYPE
             // 
+            this.SKYPE.AppearanceHeader.Options.UseTextOptions = true;
+            this.SKYPE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.SKYPE.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.SKYPE.Caption = "Skype";
             this.SKYPE.FieldName = "SKYPE";
             this.SKYPE.Name = "SKYPE";
             this.SKYPE.Visible = true;
             this.SKYPE.VisibleIndex = 8;
+            this.SKYPE.Width = 76;
             // 
             // THOI_GIAN_HOC_FROM_DATE
             // 
+            this.THOI_GIAN_HOC_FROM_DATE.AppearanceHeader.Options.UseTextOptions = true;
+            this.THOI_GIAN_HOC_FROM_DATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.THOI_GIAN_HOC_FROM_DATE.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.THOI_GIAN_HOC_FROM_DATE.Caption = "Thời gian bắt đầu";
             this.THOI_GIAN_HOC_FROM_DATE.FieldName = "THOI_GIAN_HOC_FROM_DATE";
             this.THOI_GIAN_HOC_FROM_DATE.Name = "THOI_GIAN_HOC_FROM_DATE";
             this.THOI_GIAN_HOC_FROM_DATE.Visible = true;
             this.THOI_GIAN_HOC_FROM_DATE.VisibleIndex = 9;
+            this.THOI_GIAN_HOC_FROM_DATE.Width = 76;
             // 
             // THOI_GIAN_HOC_TO_DATE
             // 
+            this.THOI_GIAN_HOC_TO_DATE.AppearanceHeader.Options.UseTextOptions = true;
+            this.THOI_GIAN_HOC_TO_DATE.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.THOI_GIAN_HOC_TO_DATE.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.THOI_GIAN_HOC_TO_DATE.Caption = "Thời gian kết thúc";
             this.THOI_GIAN_HOC_TO_DATE.FieldName = "THOI_GIAN_HOC_TO_DATE";
             this.THOI_GIAN_HOC_TO_DATE.Name = "THOI_GIAN_HOC_TO_DATE";
             this.THOI_GIAN_HOC_TO_DATE.Visible = true;
             this.THOI_GIAN_HOC_TO_DATE.VisibleIndex = 10;
+            this.THOI_GIAN_HOC_TO_DATE.Width = 76;
             // 
             // MOT_NAM_SAU_NGAY_KET_THUC
             // 
+            this.MOT_NAM_SAU_NGAY_KET_THUC.AppearanceHeader.Options.UseTextOptions = true;
+            this.MOT_NAM_SAU_NGAY_KET_THUC.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.MOT_NAM_SAU_NGAY_KET_THUC.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.MOT_NAM_SAU_NGAY_KET_THUC.Caption = "Sau ngày kết thúc 01 năm";
             this.MOT_NAM_SAU_NGAY_KET_THUC.FieldName = "MOT_NAM_SAU_NGAY_KET_THUC";
             this.MOT_NAM_SAU_NGAY_KET_THUC.Name = "MOT_NAM_SAU_NGAY_KET_THUC";
             this.MOT_NAM_SAU_NGAY_KET_THUC.Visible = true;
             this.MOT_NAM_SAU_NGAY_KET_THUC.VisibleIndex = 11;
+            this.MOT_NAM_SAU_NGAY_KET_THUC.Width = 76;
+            // 
+            // TRANG_THAI_YN
+            // 
+            this.TRANG_THAI_YN.AppearanceHeader.Options.UseTextOptions = true;
+            this.TRANG_THAI_YN.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.TRANG_THAI_YN.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.TRANG_THAI_YN.Caption = "Trạng thái học";
+            this.TRANG_THAI_YN.FieldName = "TRANG_THAI_YN";
+            this.TRANG_THAI_YN.Name = "TRANG_THAI_YN";
+            this.TRANG_THAI_YN.Visible = true;
+            this.TRANG_THAI_YN.VisibleIndex = 12;
+            this.TRANG_THAI_YN.Width = 97;
             // 
             // repositoryItemTextEdit1
             // 
@@ -704,7 +766,7 @@ namespace BKI_QLTTQuocAnh
             }
             else
             {
-                m_us.FillDataset(m_ds, "where ID_LOP_MON = " + m_sle_lop.EditValue + " AND TRANG_THAI_YN = 'Y' ORDER BY TEN");
+                m_us.FillDataset(m_ds, "where ID_LOP_MON = " + m_sle_lop.EditValue + " ORDER BY TEN"); //AND TRANG_THAI_YN = N'Đang học' xem lai
             }
             gridControl1.DataSource = m_ds.Tables[0];
         }

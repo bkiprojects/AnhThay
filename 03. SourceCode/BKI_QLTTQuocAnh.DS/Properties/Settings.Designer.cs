@@ -218,5 +218,16 @@ namespace BKI_QLTTQuocAnh.DS.Properties {
                 return ((string)(this["AnhThayConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=27.118.16.203;Initial Catalog=anhthay;Persist Security Info=True;User" +
+            " ID=anhthay;Password=52F8TdQ3KYPEtdm7")]
+        public string anhthayConnectionString2 {
+            get {
+                return ((string)(this["anhthayConnectionString2"]));
+            }
+        }
     }
 }

@@ -102,7 +102,8 @@ namespace BKI_QLTTQuocAnh
                 CONST_LOAI_TU_DIEN.LOAI_PHIEU_THU,
                 m_cbo_loai_phieu);
             CCommon.load_data_2_cbo_lop_mon(-1, m_cbo_loai_phieu);
-            m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
+            m_dat_tu_ngay.Value = new DateTime(2015, 05, 01);
+            //m_dat_tu_ngay.Value = DateTime.Now.Date.AddDays(-DateTime.Now.Date.Day + 1);
             m_dat_den_ngay.Value = DateTime.Now.Date;
         }
 

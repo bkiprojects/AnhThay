@@ -279,6 +279,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_txt_noi_dung.Text = "";
             m_txt_so_tien.Text = "";
             m_txt_lan_thu.Text = "";
+            m_txt_ghi_chu.Text = "";
         }
 
         private decimal find_id_gd_hoc(decimal ip_dc_id_lop, decimal ip_dc_id_hv) {

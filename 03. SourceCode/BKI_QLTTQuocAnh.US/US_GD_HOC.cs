@@ -221,7 +221,6 @@ namespace BKI_QLTTQuocAnh.US
 
         public void Update_gd_hoc_by_Proc(decimal ip_dc_id_lop_mon, decimal ip_dc_id_hs, decimal ip_dc_id_lop_mon_moi, ref decimal op_dc_id_gd_hoc_moi)
         {
-            BeginTransaction();
             CStoredProc v_obj_spr = new CStoredProc("f370_nghi_hoc_lop_cu_cho_hoc_lop_moi");
 
             v_obj_spr.addDecimalInputParam("@ip_dc_id_lop_mon", ip_dc_id_lop_mon);
@@ -233,7 +232,6 @@ namespace BKI_QLTTQuocAnh.US
 
             op_dc_id_gd_hoc_moi = CIPConvert.ToDecimal(v_op_dc_id_gd_hoc.Value);
 
-            CommitTransaction();
         }
     }
 }

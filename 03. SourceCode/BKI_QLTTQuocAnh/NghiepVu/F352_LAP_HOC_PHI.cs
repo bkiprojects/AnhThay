@@ -87,6 +87,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu {
             m_sle_ma_hv.EditValue = null;
             m_txt_noi_dung.Text = "";
             m_txt_so_tien.Text = "";
+            m_txt_ghi_chu.Text = "";
         }
 
         private void load_data_2_ds_obj() {

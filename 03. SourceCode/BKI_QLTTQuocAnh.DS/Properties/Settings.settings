@@ -146,5 +146,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=HAIHD\SQLEXPRESS2;Initial Catalog=AnhThay;Persist Security Info=True;User ID=sa;Password=sa</Value>
     </Setting>
+    <Setting Name="anhthayConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=27.118.16.203;Initial Catalog=anhthay;Persist Security Info=True;User ID=anhthay;Password=52F8TdQ3KYPEtdm7&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=27.118.16.203;Initial Catalog=anhthay;Persist Security Info=True;User ID=anhthay;Password=52F8TdQ3KYPEtdm7</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
