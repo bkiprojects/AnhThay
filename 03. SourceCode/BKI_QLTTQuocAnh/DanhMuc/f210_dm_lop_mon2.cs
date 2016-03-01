@@ -197,7 +197,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(934, 39);
             this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "DANH MỤC LỚP MÔN";
+            this.m_lbl_header.Text = "DANH SÁCH LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // m_pnl_out_place_dm
@@ -229,7 +229,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_xoa_lop_mon.Name = "m_cmd_xoa_lop_mon";
             this.m_cmd_xoa_lop_mon.Size = new System.Drawing.Size(117, 44);
             this.m_cmd_xoa_lop_mon.TabIndex = 5;
-            this.m_cmd_xoa_lop_mon.Text = "Xóa lớp môn";
+            this.m_cmd_xoa_lop_mon.Text = "Xóa lớp";
             this.m_cmd_xoa_lop_mon.Visible = false;
             // 
             // m_cmd_cho_lop_mon_hoat_dong
@@ -245,7 +245,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_cho_lop_mon_hoat_dong.Name = "m_cmd_cho_lop_mon_hoat_dong";
             this.m_cmd_cho_lop_mon_hoat_dong.Size = new System.Drawing.Size(121, 44);
             this.m_cmd_cho_lop_mon_hoat_dong.TabIndex = 4;
-            this.m_cmd_cho_lop_mon_hoat_dong.Text = "&Cho lớp môn hoạt động";
+            this.m_cmd_cho_lop_mon_hoat_dong.Text = "&Cho lớp hoạt động";
             this.m_cmd_cho_lop_mon_hoat_dong.Visible = false;
             // 
             // m_cmd_nghi_hoat_dong
@@ -276,7 +276,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_update.Name = "m_cmd_update";
             this.m_cmd_update.Size = new System.Drawing.Size(111, 44);
             this.m_cmd_update.TabIndex = 2;
-            this.m_cmd_update.Text = "&Sửa lớp môn";
+            this.m_cmd_update.Text = "&Sửa lớp";
             // 
             // m_cmd_insert
             // 
@@ -291,7 +291,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.m_cmd_insert.Name = "m_cmd_insert";
             this.m_cmd_insert.Size = new System.Drawing.Size(110, 44);
             this.m_cmd_insert.TabIndex = 1;
-            this.m_cmd_insert.Text = "&Thêm lớp môn";
+            this.m_cmd_insert.Text = "&Thêm lớp";
             // 
             // m_cmd_xuat_excel
             // 
@@ -331,7 +331,7 @@ namespace BKI_QLTTQuocAnh.DanhMuc
             this.Controls.Add(this.m_pnl_out_place_dm);
             this.Controls.Add(this.panel1);
             this.Name = "f210_dm_lop_mon2";
-            this.Text = "F210 - Danh mục lớp";
+            this.Text = "F210 - Danh sách lớp";
             this.Load += new System.EventHandler(this.f210_dm_lop_mon2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.m_fg)).EndInit();
             this.panel1.ResumeLayout(false);

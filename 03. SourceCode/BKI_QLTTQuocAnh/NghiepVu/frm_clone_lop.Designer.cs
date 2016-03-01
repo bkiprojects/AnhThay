@@ -25,14 +25,6 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_clone_lop));
-            this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MA_DOI_TUONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HO = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TEN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SDT_HS = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.EMAIL = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.m_sle_lop_gd1 = new DevExpress.XtraEditors.SearchLookUpEdit();
@@ -44,9 +36,14 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.m_cmd_exit = new SIS.Controls.Button.SiSButton();
             this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).BeginInit();
+            this.gridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.MA_DOI_TUONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.HO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SDT_HS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.EMAIL = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop_gd1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop_gd2.Properties)).BeginInit();
@@ -54,100 +51,10 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gridControl
-            // 
-            this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 98);
-            this.gridControl.MainView = this.gridView;
-            this.gridControl.Name = "gridControl";
-            this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemCheckEdit});
-            this.gridControl.Size = new System.Drawing.Size(968, 374);
-            this.gridControl.TabIndex = 1;
-            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView});
-            // 
-            // gridView
-            // 
-            this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.MA_DOI_TUONG,
-            this.HO,
-            this.TEN,
-            this.SDT_HS,
-            this.EMAIL});
-            this.gridView.GridControl = this.gridControl;
-            this.gridView.Name = "gridView";
-            this.gridView.OptionsFind.AlwaysVisible = true;
-            this.gridView.OptionsFind.FindDelay = 100;
-            this.gridView.OptionsFind.FindNullPrompt = "Điền thông tin tìm kiếm tại đây...";
-            this.gridView.OptionsSelection.MultiSelect = true;
-            this.gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
-            this.gridView.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView.OptionsView.ShowGroupPanel = false;
-            // 
-            // MA_DOI_TUONG
-            // 
-            this.MA_DOI_TUONG.Caption = "Mã học viên";
-            this.MA_DOI_TUONG.FieldName = "MA_DOI_TUONG";
-            this.MA_DOI_TUONG.Name = "MA_DOI_TUONG";
-            this.MA_DOI_TUONG.OptionsColumn.AllowEdit = false;
-            this.MA_DOI_TUONG.Visible = true;
-            this.MA_DOI_TUONG.VisibleIndex = 1;
-            this.MA_DOI_TUONG.Width = 123;
-            // 
-            // HO
-            // 
-            this.HO.Caption = "Họ";
-            this.HO.FieldName = "HO";
-            this.HO.Name = "HO";
-            this.HO.OptionsColumn.AllowEdit = false;
-            this.HO.Visible = true;
-            this.HO.VisibleIndex = 2;
-            this.HO.Width = 76;
-            // 
-            // TEN
-            // 
-            this.TEN.Caption = "Tên";
-            this.TEN.FieldName = "TEN";
-            this.TEN.Name = "TEN";
-            this.TEN.OptionsColumn.AllowEdit = false;
-            this.TEN.Visible = true;
-            this.TEN.VisibleIndex = 3;
-            this.TEN.Width = 160;
-            // 
-            // SDT_HS
-            // 
-            this.SDT_HS.Caption = "SĐT";
-            this.SDT_HS.FieldName = "SDT_HS";
-            this.SDT_HS.Name = "SDT_HS";
-            this.SDT_HS.OptionsColumn.AllowEdit = false;
-            this.SDT_HS.Visible = true;
-            this.SDT_HS.VisibleIndex = 4;
-            this.SDT_HS.Width = 178;
-            // 
-            // EMAIL
-            // 
-            this.EMAIL.Caption = "Email";
-            this.EMAIL.FieldName = "EMAIL_HS";
-            this.EMAIL.Name = "EMAIL";
-            this.EMAIL.OptionsColumn.AllowEdit = false;
-            this.EMAIL.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.True;
-            this.EMAIL.UnboundType = DevExpress.Data.UnboundColumnType.String;
-            this.EMAIL.Visible = true;
-            this.EMAIL.VisibleIndex = 5;
-            this.EMAIL.Width = 178;
-            // 
-            // repositoryItemCheckEdit
-            // 
-            this.repositoryItemCheckEdit.AutoHeight = false;
-            this.repositoryItemCheckEdit.Caption = "Check";
-            this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
-            this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             // 
             // label1
             // 
@@ -293,20 +200,110 @@
             this.m_cmd_insert.UseVisualStyleBackColor = false;
             this.m_cmd_insert.Click += new System.EventHandler(this.m_cmd_insert_Click);
             // 
+            // gridControl
+            // 
+            this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.Location = new System.Drawing.Point(0, 98);
+            this.gridControl.MainView = this.gridView;
+            this.gridControl.Name = "gridControl";
+            this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit});
+            this.gridControl.Size = new System.Drawing.Size(968, 325);
+            this.gridControl.TabIndex = 3;
+            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView});
+            // 
+            // gridView
+            // 
+            this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.MA_DOI_TUONG,
+            this.HO,
+            this.TEN,
+            this.SDT_HS,
+            this.EMAIL});
+            this.gridView.GridControl = this.gridControl;
+            this.gridView.Name = "gridView";
+            this.gridView.OptionsFind.AlwaysVisible = true;
+            this.gridView.OptionsFind.FindDelay = 100;
+            this.gridView.OptionsFind.FindNullPrompt = "Điền thông tin tìm kiếm tại đây...";
+            this.gridView.OptionsSelection.MultiSelect = true;
+            this.gridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridView.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView.OptionsSelection.ShowCheckBoxSelectorInPrintExport = DevExpress.Utils.DefaultBoolean.True;
+            this.gridView.OptionsView.ShowGroupPanel = false;
+            // 
+            // MA_DOI_TUONG
+            // 
+            this.MA_DOI_TUONG.Caption = "Mã học viên";
+            this.MA_DOI_TUONG.FieldName = "MA_DOI_TUONG";
+            this.MA_DOI_TUONG.Name = "MA_DOI_TUONG";
+            this.MA_DOI_TUONG.OptionsColumn.AllowEdit = false;
+            this.MA_DOI_TUONG.Visible = true;
+            this.MA_DOI_TUONG.VisibleIndex = 1;
+            this.MA_DOI_TUONG.Width = 123;
+            // 
+            // HO
+            // 
+            this.HO.Caption = "Họ";
+            this.HO.FieldName = "HO";
+            this.HO.Name = "HO";
+            this.HO.OptionsColumn.AllowEdit = false;
+            this.HO.Visible = true;
+            this.HO.VisibleIndex = 2;
+            this.HO.Width = 76;
+            // 
+            // TEN
+            // 
+            this.TEN.Caption = "Tên";
+            this.TEN.FieldName = "TEN";
+            this.TEN.Name = "TEN";
+            this.TEN.OptionsColumn.AllowEdit = false;
+            this.TEN.Visible = true;
+            this.TEN.VisibleIndex = 3;
+            this.TEN.Width = 160;
+            // 
+            // SDT_HS
+            // 
+            this.SDT_HS.Caption = "SĐT";
+            this.SDT_HS.FieldName = "SDT_HS";
+            this.SDT_HS.Name = "SDT_HS";
+            this.SDT_HS.OptionsColumn.AllowEdit = false;
+            this.SDT_HS.Visible = true;
+            this.SDT_HS.VisibleIndex = 4;
+            this.SDT_HS.Width = 178;
+            // 
+            // EMAIL
+            // 
+            this.EMAIL.Caption = "Email";
+            this.EMAIL.FieldName = "EMAIL_HS";
+            this.EMAIL.Name = "EMAIL";
+            this.EMAIL.OptionsColumn.AllowEdit = false;
+            this.EMAIL.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.True;
+            this.EMAIL.UnboundType = DevExpress.Data.UnboundColumnType.String;
+            this.EMAIL.Visible = true;
+            this.EMAIL.VisibleIndex = 5;
+            this.EMAIL.Width = 178;
+            // 
+            // repositoryItemCheckEdit
+            // 
+            this.repositoryItemCheckEdit.AutoHeight = false;
+            this.repositoryItemCheckEdit.Caption = "Check";
+            this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
+            this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
+            // 
             // frm_clone_lop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 472);
-            this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.gridControl);
+            this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panel1);
             this.Name = "frm_clone_lop";
             this.Text = "Chuyển học viên giai đoạn I -> II";
             this.Load += new System.EventHandler(this.frm_clone_lop_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop_gd1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop_gd2.Properties)).EndInit();
@@ -315,20 +312,15 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private DevExpress.XtraGrid.Columns.GridColumn MA_DOI_TUONG;
-        private DevExpress.XtraGrid.Columns.GridColumn HO;
-        private DevExpress.XtraGrid.Columns.GridColumn TEN;
-        private DevExpress.XtraGrid.Columns.GridColumn SDT_HS;
-        private DevExpress.XtraGrid.Columns.GridColumn EMAIL;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         public DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop_gd1;
@@ -340,5 +332,13 @@
         private DevExpress.XtraEditors.PanelControl panelControl2;
         internal SIS.Controls.Button.SiSButton m_cmd_exit;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
+        private DevExpress.XtraGrid.GridControl gridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
+        private DevExpress.XtraGrid.Columns.GridColumn MA_DOI_TUONG;
+        private DevExpress.XtraGrid.Columns.GridColumn HO;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN;
+        private DevExpress.XtraGrid.Columns.GridColumn SDT_HS;
+        private DevExpress.XtraGrid.Columns.GridColumn EMAIL;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit;
     }
 }

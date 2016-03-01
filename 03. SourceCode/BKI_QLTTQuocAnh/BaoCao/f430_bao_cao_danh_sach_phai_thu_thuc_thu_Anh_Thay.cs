@@ -611,7 +611,7 @@ namespace BKI_QLTTQuocAnh
             this.STT.Name = "STT";
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
-            this.STT.Width = 38;
+            this.STT.Width = 35;
             // 
             // TEN_LOAI_PHIEU_THU
             // 
@@ -621,7 +621,7 @@ namespace BKI_QLTTQuocAnh
             this.TEN_LOAI_PHIEU_THU.OptionsColumn.AllowEdit = false;
             this.TEN_LOAI_PHIEU_THU.Visible = true;
             this.TEN_LOAI_PHIEU_THU.VisibleIndex = 1;
-            this.TEN_LOAI_PHIEU_THU.Width = 111;
+            this.TEN_LOAI_PHIEU_THU.Width = 104;
             // 
             // MA_SO_QUYEN
             // 
@@ -631,7 +631,7 @@ namespace BKI_QLTTQuocAnh
             this.MA_SO_QUYEN.OptionsColumn.AllowEdit = false;
             this.MA_SO_QUYEN.Visible = true;
             this.MA_SO_QUYEN.VisibleIndex = 2;
-            this.MA_SO_QUYEN.Width = 56;
+            this.MA_SO_QUYEN.Width = 52;
             // 
             // SO_PHIEU
             // 
@@ -641,7 +641,7 @@ namespace BKI_QLTTQuocAnh
             this.SO_PHIEU.OptionsColumn.AllowEdit = false;
             this.SO_PHIEU.Visible = true;
             this.SO_PHIEU.VisibleIndex = 3;
-            this.SO_PHIEU.Width = 67;
+            this.SO_PHIEU.Width = 63;
             // 
             // NGAY_THU
             // 
@@ -651,7 +651,7 @@ namespace BKI_QLTTQuocAnh
             this.NGAY_THU.OptionsColumn.AllowEdit = false;
             this.NGAY_THU.Visible = true;
             this.NGAY_THU.VisibleIndex = 4;
-            this.NGAY_THU.Width = 98;
+            this.NGAY_THU.Width = 92;
             // 
             // HO_TEN
             // 
@@ -660,7 +660,7 @@ namespace BKI_QLTTQuocAnh
             this.HO_TEN.Name = "HO_TEN";
             this.HO_TEN.Visible = true;
             this.HO_TEN.VisibleIndex = 5;
-            this.HO_TEN.Width = 152;
+            this.HO_TEN.Width = 185;
             // 
             // SO_TIEN
             // 
@@ -673,7 +673,7 @@ namespace BKI_QLTTQuocAnh
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SO_TIEN", "{0:n0}")});
             this.SO_TIEN.Visible = true;
             this.SO_TIEN.VisibleIndex = 6;
-            this.SO_TIEN.Width = 80;
+            this.SO_TIEN.Width = 70;
             // 
             // repositoryItemTextEdit1
             // 
@@ -691,7 +691,7 @@ namespace BKI_QLTTQuocAnh
             this.NOI_DUNG.OptionsColumn.AllowEdit = false;
             this.NOI_DUNG.Visible = true;
             this.NOI_DUNG.VisibleIndex = 7;
-            this.NOI_DUNG.Width = 133;
+            this.NOI_DUNG.Width = 117;
             // 
             // MA_DOI_TUONG
             // 
@@ -701,7 +701,7 @@ namespace BKI_QLTTQuocAnh
             this.MA_DOI_TUONG.OptionsColumn.AllowEdit = false;
             this.MA_DOI_TUONG.Visible = true;
             this.MA_DOI_TUONG.VisibleIndex = 8;
-            this.MA_DOI_TUONG.Width = 50;
+            this.MA_DOI_TUONG.Width = 44;
             // 
             // TEN_NSD
             // 
@@ -711,7 +711,7 @@ namespace BKI_QLTTQuocAnh
             this.TEN_NSD.OptionsColumn.AllowEdit = false;
             this.TEN_NSD.Visible = true;
             this.TEN_NSD.VisibleIndex = 9;
-            this.TEN_NSD.Width = 119;
+            this.TEN_NSD.Width = 105;
             // 
             // TEN_LOP
             // 
@@ -720,7 +720,7 @@ namespace BKI_QLTTQuocAnh
             this.TEN_LOP.Name = "TEN_LOP";
             this.TEN_LOP.Visible = true;
             this.TEN_LOP.VisibleIndex = 10;
-            this.TEN_LOP.Width = 64;
+            this.TEN_LOP.Width = 81;
             // 
             // LAN_THU
             // 
@@ -729,7 +729,7 @@ namespace BKI_QLTTQuocAnh
             this.LAN_THU.Name = "LAN_THU";
             this.LAN_THU.Visible = true;
             this.LAN_THU.VisibleIndex = 11;
-            this.LAN_THU.Width = 42;
+            this.LAN_THU.Width = 53;
             // 
             // TRANG_THAI_PHIEU
             // 
@@ -738,7 +738,7 @@ namespace BKI_QLTTQuocAnh
             this.TRANG_THAI_PHIEU.Name = "TRANG_THAI_PHIEU";
             this.TRANG_THAI_PHIEU.Visible = true;
             this.TRANG_THAI_PHIEU.VisibleIndex = 12;
-            this.TRANG_THAI_PHIEU.Width = 121;
+            this.TRANG_THAI_PHIEU.Width = 89;
             // 
             // NGAY_NHAP
             // 
@@ -747,7 +747,7 @@ namespace BKI_QLTTQuocAnh
             this.NGAY_NHAP.Name = "NGAY_NHAP";
             this.NGAY_NHAP.Visible = true;
             this.NGAY_NHAP.VisibleIndex = 13;
-            this.NGAY_NHAP.Width = 108;
+            this.NGAY_NHAP.Width = 79;
             // 
             // GHI_CHU
             // 
@@ -756,6 +756,7 @@ namespace BKI_QLTTQuocAnh
             this.GHI_CHU.Name = "GHI_CHU";
             this.GHI_CHU.Visible = true;
             this.GHI_CHU.VisibleIndex = 14;
+            this.GHI_CHU.Width = 70;
             // 
             // f430_bao_cao_danh_sach_phai_thu_thuc_thu_Anh_Thay
             // 

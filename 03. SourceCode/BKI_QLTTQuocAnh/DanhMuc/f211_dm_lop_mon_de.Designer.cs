@@ -168,7 +168,7 @@
             this.m_lbl_header.Name = "m_lbl_header";
             this.m_lbl_header.Size = new System.Drawing.Size(343, 45);
             this.m_lbl_header.TabIndex = 0;
-            this.m_lbl_header.Text = "LỚP MÔN";
+            this.m_lbl_header.Text = "LỚP";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
@@ -229,7 +229,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "f211_dm_lop_mon_de";
-            this.Text = "F211 - Danh mục lớp môn";
+            this.Text = "F211 - Danh mục lớp";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_hoc_phi.Properties)).EndInit();

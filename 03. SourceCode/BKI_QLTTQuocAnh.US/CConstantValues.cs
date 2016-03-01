@@ -104,10 +104,11 @@ namespace BKI_QLTTQuocAnh.US {
     public static class CONST_NHOM_NGUOI_SU_DUNG
     {
         public const int ID_ADMIN = 1;
-        public const int ID_NHAN_VIEN = 2;
-        public const int ID_CEO = 4;
-        public const int ID_THU_QUY = 6;
-        public const int ID_TRO_GIANG = 8;
+        public const int ID_NHAN_VIEN = 10;
+        public const int ID_KE_TOAN = 5;
+        public const int ID_CEO = 11;
+        public const int ID_THU_QUY = 9;
+        public const int ID_TRO_GIANG = 12;
     }
     //public class TU_DIEN {
     //    public const string Q1 = "1";

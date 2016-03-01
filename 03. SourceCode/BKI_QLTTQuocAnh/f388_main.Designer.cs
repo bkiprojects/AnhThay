@@ -202,7 +202,7 @@
             // 
             // m_cmd_dm_lop_mon
             // 
-            this.m_cmd_dm_lop_mon.Caption = "Danh sách lớp môn";
+            this.m_cmd_dm_lop_mon.Caption = "Danh sách lớp";
             this.m_cmd_dm_lop_mon.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources.Icons8_Ios7_Household_Room;
             this.m_cmd_dm_lop_mon.Id = 6;
             this.m_cmd_dm_lop_mon.Name = "m_cmd_dm_lop_mon";
