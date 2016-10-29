@@ -7,3 +7,12 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\DAL\obj\Debug\DAL.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\DAL\obj\Debug\DAL.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\PROJECTS\AnhThay\03. SourceCode\DAL\bin\Debug\DAL.dll
+D:\PROJECTS\AnhThay\03. SourceCode\DAL\bin\Debug\DAL.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\DAL\bin\Debug\Dapper.dll
+D:\PROJECTS\AnhThay\03. SourceCode\DAL\bin\Debug\Models.dll
+D:\PROJECTS\AnhThay\03. SourceCode\DAL\bin\Debug\Models.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\DAL\bin\Debug\Dapper.xml
+D:\PROJECTS\AnhThay\03. SourceCode\DAL\obj\Debug\DAL.dll
+D:\PROJECTS\AnhThay\03. SourceCode\DAL\obj\Debug\DAL.pdb

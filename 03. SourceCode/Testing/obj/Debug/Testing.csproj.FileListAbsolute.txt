@@ -86,3 +86,8 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\Testing\bin\Debug\ru\DevExpress.Office.v14.1.Core.resources.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\Testing\obj\Debug\Testing.exe
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\Testing\obj\Debug\Testing.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.csprojResolveAssemblyReference.cache
+D:\PROJECTS\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.Form1.resources
+D:\PROJECTS\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.Properties.Resources.resources
+D:\PROJECTS\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.csproj.GenerateResource.Cache
+D:\PROJECTS\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.exe.licenses

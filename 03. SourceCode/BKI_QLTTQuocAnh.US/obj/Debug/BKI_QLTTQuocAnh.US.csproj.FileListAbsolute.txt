@@ -31,3 +31,32 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPUserService.xml
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\BKI_QLTTQuocAnh.US.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\BKI_QLTTQuocAnh.US.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\BKI_QLTTQuocAnh.DS.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPBusinessService.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPCommon.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPData.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPException.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPSystemAdmin.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPUserService.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\C1.Win.C1FlexGrid.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\C1.Win.C1FlexGrid.Classic.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\CrystalDecisions.Shared.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\SiSButton.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\C1.Common.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\BKI_QLTTQuocAnh.DS.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPBusinessService.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPCommon.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPData.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPException.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPSystemAdmin.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPSystemAdmin.xml
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPUserService.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPUserService.xml
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.csprojResolveAssemblyReference.cache
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.dll
+D:\PROJECTS\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.pdb

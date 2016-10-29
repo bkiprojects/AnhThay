@@ -24,3 +24,24 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPUserService\obj\Debug\IPUserService.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPUserService\obj\Debug\IPUserService.xml
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPUserService\obj\Debug\IPUserService.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPUserService.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPUserService.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPUserService.xml
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\C1.Win.C1FlexGrid.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPBusinessService.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPCommon.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPData.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPException.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\C1.Win.C1FlexGrid.Classic.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\CrystalDecisions.Shared.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\CrystalDecisions.Windows.Forms.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\C1.Common.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\CrystalDecisions.ReportSource.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPBusinessService.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPCommon.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPData.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\bin\IPException.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\obj\Debug\IPUserService.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\obj\Debug\IPUserService.xml
+D:\PROJECTS\AnhThay\03. SourceCode\IPUserService\obj\Debug\IPUserService.pdb

@@ -3,3 +3,7 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\Models\obj\Debug\Models.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\Models\obj\Debug\Models.pdb
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\PROJECTS\AnhThay\03. SourceCode\Models\bin\Debug\Models.dll
+D:\PROJECTS\AnhThay\03. SourceCode\Models\bin\Debug\Models.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\Models\obj\Debug\Models.dll
+D:\PROJECTS\AnhThay\03. SourceCode\Models\obj\Debug\Models.pdb

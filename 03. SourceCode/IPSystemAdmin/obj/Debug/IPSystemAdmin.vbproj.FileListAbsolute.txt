@@ -35,3 +35,36 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPSystemAdmin\bin\IPException.xml
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPSystemAdmin\obj\Debug\IPSystemAdmin.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPSystemAdmin\obj\Debug\IPSystemAdmin.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPSystemAdmin.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPSystemAdmin.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPSystemAdmin.xml
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\C1.Common.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\C1.Win.C1FlexGrid.Classic.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\C1.Win.C1FlexGrid.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPBusinessService.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPCommon.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPData.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPException.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPUserService.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\SiSButton.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\SiSMenu.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\CrystalDecisions.Shared.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\CrystalDecisions.Windows.Forms.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\CrystalDecisions.ReportSource.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPCommon.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPUserService.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPUserService.xml
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPBusinessService.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPData.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\bin\IPException.pdb
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IPSystemAdmin.vbprojResolveAssemblyReference.cache
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IP.Core.IPSystemAdmin.f100_TuDien.resources
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IP.Core.IPSystemAdmin.f101_Dang_Nhap.resources
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IP.Core.IPSystemAdmin.f102_TuDien_DE.resources
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IP.Core.IPSystemAdmin.f996_license.resources
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IPSystemAdmin.vbproj.GenerateResource.Cache
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IPSystemAdmin.dll.licenses
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IPSystemAdmin.dll
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IPSystemAdmin.xml
+D:\PROJECTS\AnhThay\03. SourceCode\IPSystemAdmin\obj\Debug\IPSystemAdmin.pdb
