@@ -69,7 +69,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="C1.Common, Version=1.0.20031.116, Culture=neutral, PublicKeyToken=e272bb32d11b1948">
@@ -805,6 +805,10 @@
     <ProjectReference Include="..\BKI_QLTTQuocAnh.US\BKI_QLTTQuocAnh.US.csproj">
       <Project>{CAFDA83F-D091-49BF-816F-F7A7A72C68EC}</Project>
       <Name>BKI_QLTTQuocAnh.US</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{f2620367-3cde-4105-88cf-153fe895d85f}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\IPBusinessService\IPBusinessService.vbproj">
       <Project>{73CA732C-2CFB-4A14-B0B9-F43763B1C2F3}</Project>
