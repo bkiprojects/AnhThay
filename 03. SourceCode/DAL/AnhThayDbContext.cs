@@ -62,16 +62,16 @@ namespace DAL
             var initial_user = ConfigurationManager.AppSettings["INITIAL_USER"];
             var pass_word = ConfigurationManager.AppSettings["PASS_WORD"];
 
-            var connectionString = string.Format("Data Source={1};initial catalog={2};"
-                                        +"Integrated Security={3};"
-                                        +"User Id={4};Password={5};"
-                                        +"MultipleActiveResultSets={6}",
+            var connectionString = string.Format("Data Source={0};initial catalog={1};"
+                                        +"Integrated Security={2};"
+                                        +"User Id={3};Password={4};"
+                                        +"MultipleActiveResultSets={5}",
                                         server,
                                         initial_database,
-                                         false,
+                                         "false",
                                          initial_user,
                                          pass_word,
-                                         true);
+                                         "true");
 
             return connectionString;
         }

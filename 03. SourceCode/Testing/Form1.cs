@@ -1,9 +1,7 @@
-﻿using System.Windows.Forms;
-using DAL;
+﻿using DAL;
 using DevExpress.XtraGrid.Columns;
-using System.Data.Linq;
 using System.Linq;
-using DevExpress.Utils.Drawing.Helpers;
+using System.Windows.Forms;
 
 namespace Testing
 {

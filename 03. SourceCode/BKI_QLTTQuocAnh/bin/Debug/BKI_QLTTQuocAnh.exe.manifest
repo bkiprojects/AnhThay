@@ -2141,13 +2141,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="BKI_QLTTQuocAnh.exe.config" size="3419">
+  <file name="BKI_QLTTQuocAnh.exe.config" size="3426">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>sj1JcXhv94gNMuHyV5T+DCMO/jE=</dsig:DigestValue>
+      <dsig:DigestValue>RnRJ5M8Ro+wBSt2/plQ/EIW82P0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\1431468308_ok.ico" size="106609">
