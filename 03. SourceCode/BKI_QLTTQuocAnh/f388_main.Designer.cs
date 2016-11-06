@@ -391,13 +391,12 @@
             // 
             // m_cmd_bien_dong_hs
             // 
-            this.m_cmd_bien_dong_hs.Caption = "Biến động HS";
+            this.m_cmd_bien_dong_hs.Caption = "Báo cáo điểm danh";
             this.m_cmd_bien_dong_hs.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425905897_253501;
             this.m_cmd_bien_dong_hs.Id = 33;
             this.m_cmd_bien_dong_hs.Name = "m_cmd_bien_dong_hs";
             this.m_cmd_bien_dong_hs.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.m_cmd_bien_dong_hs.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // m_cmd_backup_restore
             // 
@@ -622,7 +621,6 @@
             // ribbonPageGroup7
             // 
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_tai_chinh_hs_lm);
-            this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_bien_dong_hs);
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_ds_hs_theo_lm);
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
@@ -631,6 +629,7 @@
             // 
             // ribbonPageGroup8
             // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bien_dong_hs);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_hien_nay);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_chua_nop_tien);

@@ -251,7 +251,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f460_bc_tinh_hinh_bo_hoc v_frm = new f460_bc_tinh_hinh_bo_hoc();
+                f416_bao_cao_kem_diem_danh v_frm = new f416_bao_cao_kem_diem_danh();
                 if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;
