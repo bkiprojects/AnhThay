@@ -51,5 +51,23 @@ namespace DAL
 
             return result.ToList();
         }
+
+        public int DiemDanh(long studentId, string shortcut, long classId, int session)
+        {
+            const string procedure = "att_diem_danh";
+
+            var parameters = new DynamicParameters();
+            parameters.Add("@StudentId", studentId);
+            parameters.Add("@ShortcutKey", shortcut);
+            parameters.Add("@ClassId", classId);
+
+            parameters.Add("@Session", session);
+            parameters.Add("@Status", ParameterDirection.Output, dbType: DbType.Int16);
+            AnhThayDbContext.Context.Connection.Execute(sql: procedure
+                , param: parameters
+                , commandType: CommandType.StoredProcedure);
+
+            return Convert.ToInt32(parameters.Get<int>("@Status"));
+        }
     }
 }

@@ -462,5 +462,13 @@ namespace BKI_QLTTQuocAnh.US
             v_cst.addDecimalInputParam("@Session", session);
             v_cst.fillDataSetByCommand(this, ip_ds);
         }
+
+        public void loadDanhSachHocVien(decimal ip_dc_id_lop_mon, DataSet ip_ds, int session)
+        {
+            CStoredProc v_cst = new CStoredProc("Pr_load_ds_hoc_vien");
+            v_cst.addDecimalInputParam("@ip_dc_id_lop", ip_dc_id_lop_mon);
+            v_cst.addDecimalInputParam("@session", session);
+            v_cst.fillDataSetByCommand(this, ip_ds);
+        }
     }
 }

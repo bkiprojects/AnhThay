@@ -305,13 +305,12 @@
             // 
             // m_cmd_tai_chinh_hs_lm
             // 
-            this.m_cmd_tai_chinh_hs_lm.Caption = "Tài chính HS theo lớp môn";
+            this.m_cmd_tai_chinh_hs_lm.Caption = "Điểm danh";
             this.m_cmd_tai_chinh_hs_lm.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources.Icons8_Ios7_Household_Room1;
             this.m_cmd_tai_chinh_hs_lm.Id = 18;
             this.m_cmd_tai_chinh_hs_lm.Name = "m_cmd_tai_chinh_hs_lm";
             this.m_cmd_tai_chinh_hs_lm.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.m_cmd_tai_chinh_hs_lm.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // m_cmd_tai_chinh_lm
             // 
@@ -620,7 +619,6 @@
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_tai_chinh_hs_lm);
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_ds_hs_theo_lm);
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
@@ -629,6 +627,7 @@
             // 
             // ribbonPageGroup8
             // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_tai_chinh_hs_lm);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bien_dong_hs);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_hien_nay);

@@ -287,6 +287,12 @@
     <Compile Include="BaoCao\F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f417_diem_danh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f417_diem_danh.Designer.cs">
+      <DependentUpon>f417_diem_danh.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao\f416_bao_cao_kem_diem_danh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -604,6 +610,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay.resx">
       <DependentUpon>F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f417_diem_danh.resx">
+      <DependentUpon>f417_diem_danh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f416_bao_cao_kem_diem_danh.resx">
       <DependentUpon>f416_bao_cao_kem_diem_danh.cs</DependentUpon>

@@ -917,3 +917,4 @@ E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.applicat
 E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.exe
 E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.pdb
 E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.BaoCao.f416_bao_cao_kem_diem_danh.resources
+E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.BaoCao.f417_diem_danh.resources
