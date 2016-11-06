@@ -7,3 +7,13 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.xml
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.pdb
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.dll
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.pdb
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.xml
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\bin\Debug\C1.Common.dll
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbprojResolveAssemblyReference.cache
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.Resources.resources
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbproj.GenerateResource.Cache
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.xml
+E:\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.pdb

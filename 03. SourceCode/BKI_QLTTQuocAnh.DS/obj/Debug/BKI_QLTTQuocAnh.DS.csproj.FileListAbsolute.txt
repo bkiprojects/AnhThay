@@ -3,3 +3,9 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.pdb
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.pdb
+E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.dll.config
+E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.dll
+E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.pdb
+E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.csprojResolveAssemblyReference.cache
+E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.dll
+E:\AnhThay\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.pdb

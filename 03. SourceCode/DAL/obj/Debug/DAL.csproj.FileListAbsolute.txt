@@ -16,3 +16,12 @@ D:\PROJECTS\AnhThay\03. SourceCode\DAL\bin\Debug\Models.pdb
 D:\PROJECTS\AnhThay\03. SourceCode\DAL\bin\Debug\Dapper.xml
 D:\PROJECTS\AnhThay\03. SourceCode\DAL\obj\Debug\DAL.dll
 D:\PROJECTS\AnhThay\03. SourceCode\DAL\obj\Debug\DAL.pdb
+E:\AnhThay\03. SourceCode\DAL\bin\Debug\DAL.dll
+E:\AnhThay\03. SourceCode\DAL\bin\Debug\DAL.pdb
+E:\AnhThay\03. SourceCode\DAL\bin\Debug\Dapper.dll
+E:\AnhThay\03. SourceCode\DAL\bin\Debug\Models.dll
+E:\AnhThay\03. SourceCode\DAL\bin\Debug\Models.pdb
+E:\AnhThay\03. SourceCode\DAL\bin\Debug\Dapper.xml
+E:\AnhThay\03. SourceCode\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\AnhThay\03. SourceCode\DAL\obj\Debug\DAL.dll
+E:\AnhThay\03. SourceCode\DAL\obj\Debug\DAL.pdb

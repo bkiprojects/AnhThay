@@ -4,3 +4,10 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPException\obj\Debug\IPException.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPException\obj\Debug\IPException.xml
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPException\obj\Debug\IPException.pdb
+E:\AnhThay\03. SourceCode\IPException\bin\IPException.dll
+E:\AnhThay\03. SourceCode\IPException\bin\IPException.pdb
+E:\AnhThay\03. SourceCode\IPException\bin\IPException.xml
+E:\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.vbprojResolveAssemblyReference.cache
+E:\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.dll
+E:\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.xml
+E:\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.pdb

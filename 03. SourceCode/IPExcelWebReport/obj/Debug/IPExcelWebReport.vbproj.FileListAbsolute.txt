@@ -10,3 +10,16 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.xml
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.pdb
+E:\AnhThay\03. SourceCode\IPExcelWebReport\bin\IPExcelWebReport.dll
+E:\AnhThay\03. SourceCode\IPExcelWebReport\bin\IPExcelWebReport.pdb
+E:\AnhThay\03. SourceCode\IPExcelWebReport\bin\IPExcelWebReport.xml
+E:\AnhThay\03. SourceCode\IPExcelWebReport\bin\C1.Win.C1FlexGrid.dll
+E:\AnhThay\03. SourceCode\IPExcelWebReport\bin\Interop.Excel.dll
+E:\AnhThay\03. SourceCode\IPExcelWebReport\bin\Interop.Microsoft.Office.Core.dll
+E:\AnhThay\03. SourceCode\IPExcelWebReport\bin\Interop.Office.dll
+E:\AnhThay\03. SourceCode\IPExcelWebReport\bin\stdole.dll
+E:\AnhThay\03. SourceCode\IPExcelWebReport\bin\C1.Common.dll
+E:\AnhThay\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.vbprojResolveAssemblyReference.cache
+E:\AnhThay\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.dll
+E:\AnhThay\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.xml
+E:\AnhThay\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.pdb

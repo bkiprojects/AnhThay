@@ -20,3 +20,25 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPExcelReport\obj\Debug\IPExcelReport.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPExcelReport\obj\Debug\IPExcelReport.xml
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPExcelReport\obj\Debug\IPExcelReport.pdb
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\IPExcelReport.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\IPExcelReport.pdb
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\IPExcelReport.xml
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\C1.Win.C1FlexGrid.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\Interop.Excel.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\Interop.Microsoft.Office.Core.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\Interop.Office.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\IPCommon.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\stdole.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\C1.Win.C1FlexGrid.Classic.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\CrystalDecisions.Shared.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\CrystalDecisions.Windows.Forms.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\CrystalDecisions.CrystalReports.Engine.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\C1.Common.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\CrystalDecisions.ReportSource.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\IPCommon.pdb
+E:\AnhThay\03. SourceCode\IPExcelReport\bin\IPCommon.xml
+E:\AnhThay\03. SourceCode\IPExcelReport\obj\Debug\IPExcelReport.vbprojResolveAssemblyReference.cache
+E:\AnhThay\03. SourceCode\IPExcelReport\obj\Debug\IPExcelReport.dll.licenses
+E:\AnhThay\03. SourceCode\IPExcelReport\obj\Debug\IPExcelReport.dll
+E:\AnhThay\03. SourceCode\IPExcelReport\obj\Debug\IPExcelReport.xml
+E:\AnhThay\03. SourceCode\IPExcelReport\obj\Debug\IPExcelReport.pdb

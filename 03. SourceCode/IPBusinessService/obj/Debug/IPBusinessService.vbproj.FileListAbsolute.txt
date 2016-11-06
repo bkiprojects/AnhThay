@@ -8,3 +8,13 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThaySrc\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb
+E:\AnhThay\03. SourceCode\IPBusinessService\bin\IPBusinessService.dll
+E:\AnhThay\03. SourceCode\IPBusinessService\bin\IPBusinessService.pdb
+E:\AnhThay\03. SourceCode\IPBusinessService\bin\IPBusinessService.xml
+E:\AnhThay\03. SourceCode\IPBusinessService\bin\IPException.dll
+E:\AnhThay\03. SourceCode\IPBusinessService\bin\IPException.pdb
+E:\AnhThay\03. SourceCode\IPBusinessService\bin\IPException.xml
+E:\AnhThay\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+E:\AnhThay\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
+E:\AnhThay\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
+E:\AnhThay\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb
