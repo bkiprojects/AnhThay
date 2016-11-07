@@ -43,10 +43,13 @@
   <ItemGroup>
     <Compile Include="DTO\DictionaryDTO.cs" />
     <Compile Include="DTO\SessionHistoryDTO.cs" />
+    <Compile Include="DTO\StudentDTO.cs" />
+    <Compile Include="DTO\StudentTagDTO.cs" />
     <Compile Include="Entity\Attendance.cs" />
     <Compile Include="Entity\AttendanceType.cs" />
     <Compile Include="Entity\Class.cs" />
     <Compile Include="Entity\Enrollment.cs" />
+    <Compile Include="Entity\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\Student.cs" />
     <Compile Include="DTO\AttendanceDTO.cs" />

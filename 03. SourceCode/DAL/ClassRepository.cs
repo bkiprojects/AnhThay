@@ -17,21 +17,14 @@ namespace DAL
         {
  
         }
-        public List<Class> getClasses()
-        {
-            const string procedure = "att_get_Classes";
-            var result = AnhThayDbContext.Context.Connection.Query<Class>(sql: procedure
-                , param: null
-                , commandType: CommandType.StoredProcedure);
 
-            return result.ToList();
-        }
-
-        public List<AttendanceType> getAttendanceTypes()
+        public List<StudentDTO> getDanhSachHocVienTheoLop(int classId)
         {
-            const string procedure = "att_get_AttendanceTypes";
-            var result = AnhThayDbContext.Context.Connection.Query<AttendanceType>(sql: procedure
-                , param: null
+            const string procedure = "pr_att_get_hoc_vien_theo_lop";
+            var parameters = new DynamicParameters();
+            parameters.Add("@ClassId", classId);
+            var result = AnhThayDbContext.Context.Connection.Query<StudentDTO>(sql: procedure
+                , param: parameters
                 , commandType: CommandType.StoredProcedure);
 
             return result.ToList();

@@ -287,6 +287,12 @@
     <Compile Include="BaoCao\F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BaoCao\f418_bao_cao_diem_danh_tong_hop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\f418_bao_cao_diem_danh_tong_hop.Designer.cs">
+      <DependentUpon>f418_bao_cao_diem_danh_tong_hop.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao\f417_diem_danh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -490,6 +496,18 @@
     <Compile Include="NghiepVu\Attendance\f380_att_session_history.Designer.cs">
       <DependentUpon>f380_att_session_history.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\Attendance\f381_studentTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\Attendance\f381_studentTag.Designer.cs">
+      <DependentUpon>f381_studentTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\Attendance\f382_update_tag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\Attendance\f382_update_tag.Designer.cs">
+      <DependentUpon>f382_update_tag.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\BackupDB.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -617,6 +635,9 @@
     <EmbeddedResource Include="BaoCao\F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay.resx">
       <DependentUpon>F410_bao_cao_tai_chinh_theo_lop_mon_Anh_thay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\f418_bao_cao_diem_danh_tong_hop.resx">
+      <DependentUpon>f418_bao_cao_diem_danh_tong_hop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\f417_diem_danh.resx">
       <DependentUpon>f417_diem_danh.cs</DependentUpon>
     </EmbeddedResource>
@@ -742,6 +763,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\Attendance\f380_att_session_history.resx">
       <DependentUpon>f380_att_session_history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\Attendance\f381_studentTag.resx">
+      <DependentUpon>f381_studentTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\Attendance\f382_update_tag.resx">
+      <DependentUpon>f382_update_tag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\BackupDB.resx">
       <DependentUpon>BackupDB.cs</DependentUpon>

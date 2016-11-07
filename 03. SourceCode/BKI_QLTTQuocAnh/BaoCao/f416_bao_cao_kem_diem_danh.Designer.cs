@@ -108,7 +108,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(953, 525);
+            this.gridControl1.Size = new System.Drawing.Size(925, 489);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -317,7 +317,7 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "OPTION 3";
+            this.gridColumn4.Caption = "Bảo lưu";
             this.gridColumn4.FieldName = "OP_3";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -325,7 +325,7 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "OPTION 4";
+            this.gridColumn5.Caption = "Nghỉ hẳn";
             this.gridColumn5.FieldName = "OP_4";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -385,7 +385,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(953, 85);
+            this.panel1.Size = new System.Drawing.Size(925, 85);
             this.panel1.TabIndex = 3;
             // 
             // m_txt_buoi
@@ -459,7 +459,7 @@
             this.m_lbl_header.ForeColor = System.Drawing.Color.Maroon;
             this.m_lbl_header.Location = new System.Drawing.Point(0, 0);
             this.m_lbl_header.Name = "m_lbl_header";
-            this.m_lbl_header.Size = new System.Drawing.Size(953, 45);
+            this.m_lbl_header.Size = new System.Drawing.Size(925, 45);
             this.m_lbl_header.TabIndex = 0;
             this.m_lbl_header.Text = "BÁO CÁO ĐIỂM DANH";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -479,16 +479,16 @@
             // 
             this.panel2.Controls.Add(this.simpleButton2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 610);
+            this.panel2.Location = new System.Drawing.Point(0, 574);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(953, 38);
+            this.panel2.Size = new System.Drawing.Size(925, 38);
             this.panel2.TabIndex = 6;
             // 
             // f416_bao_cao_kem_diem_danh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 648);
+            this.ClientSize = new System.Drawing.Size(925, 612);
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

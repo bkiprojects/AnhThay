@@ -1231,3 +1231,6 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. Sou
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\BKI_QLTTQuocAnh\bin\Debug\ru\DevExpress.XtraWizard.v14.1.resources.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.exe.manifest
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.application
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.BaoCao.f418_bao_cao_diem_danh_tong_hop.resources
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.BaoCao.f381_studentTag.resources
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.NghiepVu.Attendance.f382_update_tag.resources

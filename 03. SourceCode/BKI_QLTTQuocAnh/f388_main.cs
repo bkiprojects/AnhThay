@@ -188,7 +188,7 @@ namespace BKI_QLTTQuocAnh
             m_cmd_dm_lop_mon.ItemClick += m_cmd_dm_lop_mon_ItemClick;
             //Bao cao
             m_cmd_tai_chinh_hs.ItemClick += m_cmd_tai_chinh_hs_ItemClick;
-            m_cmd_tai_chinh_hs_lm.ItemClick += m_cmd_tai_chinh_hs_lm_ItemClick;
+            //m_cmd_tai_chinh_hs_lm.ItemClick += m_cmd_tai_chinh_hs_lm_ItemClick;
             m_cmd_tai_chinh_lm.ItemClick += m_cmd_tai_chinh_lm_ItemClick;
             m_cmd_tai_chinh_lm_hs.ItemClick += m_cmd_tai_chinh_lm_hs_ItemClick;
             m_cmd_hs_hien_nay.ItemClick += m_cmd_hs_hien_nay_ItemClick;
@@ -534,7 +534,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh v_frm = new f470_bao_cao_tinh_hinh_tai_chinh_theo_hoc_sinh();
+                f381_studentTag v_frm = new f381_studentTag();
                 if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;
@@ -778,7 +778,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f510_bao_cao_luy_ke_theo_lop_HS_theo_thang v_frm = new f510_bao_cao_luy_ke_theo_lop_HS_theo_thang();
+                f418_bao_cao_diem_danh_tong_hop v_frm = new f418_bao_cao_diem_danh_tong_hop();
 
                 if (IsExistFormName(v_frm)) return;
 
