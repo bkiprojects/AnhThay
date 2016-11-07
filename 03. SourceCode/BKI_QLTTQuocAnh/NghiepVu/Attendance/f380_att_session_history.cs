@@ -83,10 +83,23 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
         {
             var sessionHistory = (SessionHistoryDTO) gridViewDiemDanh.GetRow(gridViewDiemDanh.FocusedRowHandle);
             var classId = sessionHistory.ClassId;
-            var session = sessionHistory.CurrentSession;
+            var session = sessionHistory.CurrentSession + 1; //Next session
                 
             var frm = new f417_diem_danh();
-            frm.displayFromF380(classId, session);
+            frm.displayFromF380_DiemDanh(classId, session);
+
+            loadDataToGrid();
+        }
+        private void viewHistoryAttendance()
+        {
+            var sessionHistory = (SessionHistoryDTO)gridViewDiemDanh.GetRow(gridViewDiemDanh.FocusedRowHandle);
+            var classId = sessionHistory.ClassId;
+            var session = sessionHistory.CurrentSession + 1; //Next session
+
+            var frm = new f417_diem_danh();
+            frm.displayFromF380_ViewHistory(classId, session);
+
+            loadDataToGrid();
         }
         #region Events
         private void setDefineEvent()
@@ -94,7 +107,21 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
             Load += F380_att_session_history_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             repositoryItemButtonAttendance.ButtonClick += repositoryItemButtonAttendanceOnClick;
+            repositoryItemButtonViewHistory.ButtonClick += RepositoryItemButtonViewHistoryOnButtonClick;
         }
+
+        private void RepositoryItemButtonViewHistoryOnButtonClick(object sender, ButtonPressedEventArgs buttonPressedEventArgs)
+        {
+            try
+            {
+                viewHistoryAttendance();
+            }
+            catch (Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
+        }
+
         private void F380_att_session_history_Load(object sender, EventArgs e)
         {
             try

@@ -37,24 +37,11 @@ namespace DAL
             return result.ToList();
         }
 
-        public List<AttendanceDTO> getAttendances(int classId, int sessionNo)
-        {
-            const string procedure = "att_get_Attendances";
-
-            var parameters = new DynamicParameters();
-            parameters.Add("@ClassId", classId);
-            parameters.Add("@SessionNo", sessionNo);
-
-            var result = AnhThayDbContext.Context.Connection.Query<AttendanceDTO>(sql: procedure
-                , param: parameters
-                , commandType: CommandType.StoredProcedure);
-
-            return result.ToList();
-        }
+        
 
         public int DiemDanh(long studentId, string shortcut, long classId, int session)
         {
-            const string procedure = "att_diem_danh";
+            const string procedure = "pr_att_diem_danh";
 
             var parameters = new DynamicParameters();
             parameters.Add("@StudentId", studentId);

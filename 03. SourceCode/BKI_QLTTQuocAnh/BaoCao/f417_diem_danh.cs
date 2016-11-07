@@ -15,28 +15,42 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using Models.DTO;
 
 namespace BKI_QLTTQuocAnh.BaoCao
 {
     public partial class f417_diem_danh : Form
     {
-        private ClassRepository _classRepository;
+        private readonly ClassRepository _classRepository;
+        private readonly AttendanceRepository _attendanceRepository;
+
         public f417_diem_danh()
         {
+            _attendanceRepository = new AttendanceRepository();
             _classRepository = new ClassRepository();
+
             InitializeComponent();
+
             format_controls();
             load_data_to_sle_lop();
         }
 
-        public void displayFromF380(long classId, int session)
+        public void displayFromF380_DiemDanh(long classId, int session)
         {
             m_txt_buoi.EditValue = session;
             m_sle_lop.EditValue = classId;
 
             ShowDialog();
         }
+        public void displayFromF380_ViewHistory(long classId, int session)
+        {
+            m_txt_buoi.EditValue = session;
+            m_sle_lop.EditValue = classId;
+            m_cmd_diem_danh.Enabled = false;
 
+            ShowDialog();
+        }
         public void display_from_f410(decimal ip_id_lop_mon)
         {
             m_sle_lop.EditValue = ip_id_lop_mon;
@@ -114,22 +128,19 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
             make_stt();
 
-            DataSet v_ds = new DataSet();
-            v_ds.Tables.Add();
+            var data = _attendanceRepository.getAttendances(Convert.ToInt32(m_sle_lop.EditValue),
+                Convert.ToInt32(m_txt_buoi.EditValue));
 
-            US_DM_HOC_SINH v_us = new US_DM_HOC_SINH();
-            v_us.loadDanhSachHocVien(CIPConvert.ToDecimal(m_sle_lop.EditValue), v_ds, Convert.ToInt32(m_txt_buoi.EditValue));
-
-            gridControl1.DataSource = v_ds.Tables[0];
+            gridControlDiemDanh.DataSource = data;
             
         }
 
         private void make_stt()
         {
-            var col = gridView2.Columns.Add();
+            var col = gridViewDiemDanh.Columns.Add();
             col.FieldName = "STT";
             col.UnboundType = DevExpress.Data.UnboundColumnType.Integer;
-            gridView2.CustomUnboundColumnData += gridView2_CustomUnboundColumnData;
+            gridViewDiemDanh.CustomUnboundColumnData += gridView2_CustomUnboundColumnData;
         }
 
         private void gridView2_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
@@ -138,16 +149,40 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 e.Value = e.ListSourceRowIndex + 1;
         }
 
-        private void hien_thi_danh_sach_phieu(decimal ip_dc_id_lop_mon, decimal ip_dc_id_hoc_sinh)
+        private void diemDanh()
         {
-            US_GD_PHIEU_THU v_us = new US_GD_PHIEU_THU();
-            DataSet v_ds = new DataSet();
-            v_ds.Tables.Add();
-            v_us.FillDanhSachPhieu(v_ds, ip_dc_id_lop_mon, ip_dc_id_hoc_sinh);
+            var classId = Convert.ToInt32(m_sle_lop.EditValue);
+            var session = Convert.ToInt32(m_txt_buoi.EditValue);
 
-            F496_DE v_frm = new F496_DE();
-            v_frm.gridControl1.DataSource = v_ds.Tables[0];
-            v_frm.ShowDialog();
+            var isExistAttendance = _attendanceRepository.isExistAttendance(classId, session);
+
+            if (isExistAttendance)
+            {
+                var dlg = MessageBox.Show(
+                    "Đã tồn tại dữ liệu điểm danh buổi học này! Bạn có muốn xóa dữ liệu này đi để cập nhật dữ liệu mới thay thế không?",
+                    "THÔNG BÁO", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if(dlg == DialogResult.Cancel)
+                {
+                    return; 
+                }
+                _attendanceRepository.deleteExistAttendance(classId, session);
+            }
+            //Save session history
+            _attendanceRepository.saveSessionHistory(classId, session);
+
+
+            //Save attendances
+            for(var index = 0; index < gridViewDiemDanh.RowCount; index++)
+            {
+                var attendance = (AttendanceDTO)gridViewDiemDanh.GetRow(index);
+
+                var studentId = attendance.StudentId;
+                var shortcut = attendance.ShortcutKey;
+
+                _classRepository.DiemDanh(studentId, shortcut, classId, session);
+            }
+            XtraMessageBox.Show("Điểm danh thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
         }
         ///Events
         ///
@@ -157,25 +192,18 @@ namespace BKI_QLTTQuocAnh.BaoCao
             m_cmd_search.Click += m_cmd_search_Click;
             //m_sle_lop.EditValueChanged += m_sle_lop_EditValueChanged;
 
-            gridView2.RowUpdated += GridView2_RowUpdated;
+            m_cmd_diem_danh.Click += M_cmd_diem_danh_Click;
         }
 
-        private void GridView2_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        private void M_cmd_diem_danh_Click(object sender, EventArgs e)
         {
             try
             {
-                var row = gridView2.GetDataRow(e.RowHandle);
-                var studentId = Convert.ToInt64(row["ID_HOC_SINH"]);
-                var classId = Convert.ToInt32(m_sle_lop.EditValue);
-                var shortcut = row["ShortcutKey"].ToString();
-                var session = Convert.ToInt32(m_txt_buoi.EditValue);
-
-                var status = _classRepository.DiemDanh(studentId, shortcut, classId, session);
+               diemDanh();
             }
-            catch(Exception)
+            catch(Exception v_e)
             {
-
-                throw;
+                CSystemLog_301.ExceptionHandle(v_e);
             }
         }
 
@@ -253,7 +281,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 }
                 path = path + "giaodichtheolop" + DateTime.Now.Hour + DateTime.Now.Minute + ".xlsx";
 
-                gridView2.ExportToXlsx(path);
+                gridViewDiemDanh.ExportToXlsx(path);
             }
             catch (Exception v_e)
             {
@@ -278,7 +306,7 @@ namespace BKI_QLTTQuocAnh.BaoCao
             {
                 var r = new rpt_lop();
                 //gridView2.BestFitColumns();
-                r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControl1));
+                r.Bands[BandKind.Detail].Controls.Add(CopyGridControl(gridControlDiemDanh));
                 r.xrLabel2.Text = m_sle_lop.Text;
                 r.PaperKind = System.Drawing.Printing.PaperKind.A4;
                 r.Landscape = true;

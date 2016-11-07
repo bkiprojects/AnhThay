@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f380_att_session_history));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_le_trang_thai_lop = new DevExpress.XtraEditors.LookUpEdit();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +47,8 @@
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.panel2 = new System.Windows.Forms.Panel();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.ViewHistory = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonViewHistory = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_le_trang_thai_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDiemDanh)).BeginInit();
@@ -53,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonAttendance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonViewHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,7 +131,8 @@
             this.gridControlDiemDanh.Name = "gridControlDiemDanh";
             this.gridControlDiemDanh.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
-            this.repositoryItemButtonAttendance});
+            this.repositoryItemButtonAttendance,
+            this.repositoryItemButtonViewHistory});
             this.gridControlDiemDanh.Size = new System.Drawing.Size(821, 413);
             this.gridControlDiemDanh.TabIndex = 7;
             this.gridControlDiemDanh.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -140,7 +145,8 @@
             this.ClassCode,
             this.ClassDescription,
             this.CurrentSession,
-            this.Attendance});
+            this.Attendance,
+            this.ViewHistory});
             this.gridViewDiemDanh.GridControl = this.gridControlDiemDanh;
             this.gridViewDiemDanh.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "ID_HOC_SINH", null, "(SL = {0:n0})")});
@@ -229,6 +235,23 @@
             this.simpleButton2.Size = new System.Drawing.Size(75, 38);
             this.simpleButton2.TabIndex = 5;
             // 
+            // ViewHistory
+            // 
+            this.ViewHistory.Caption = "Xem lịch sử";
+            this.ViewHistory.ColumnEdit = this.repositoryItemButtonViewHistory;
+            this.ViewHistory.Name = "ViewHistory";
+            this.ViewHistory.Visible = true;
+            this.ViewHistory.VisibleIndex = 4;
+            // 
+            // repositoryItemButtonViewHistory
+            // 
+            this.repositoryItemButtonViewHistory.AutoHeight = false;
+            this.repositoryItemButtonViewHistory.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonViewHistory.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.repositoryItemButtonViewHistory.Name = "repositoryItemButtonViewHistory";
+            this.repositoryItemButtonViewHistory.ReadOnly = true;
+            this.repositoryItemButtonViewHistory.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // f380_att_session_history
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +270,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonAttendance)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonViewHistory)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +293,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn CurrentSession;
         private DevExpress.XtraGrid.Columns.GridColumn Attendance;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonAttendance;
+        private DevExpress.XtraGrid.Columns.GridColumn ViewHistory;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonViewHistory;
     }
 }
