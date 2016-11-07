@@ -37,23 +37,23 @@
             this.SuffixName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StudentName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Tag = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEditTag = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.Notes = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemLookUpEditTag = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
+            this.m_cmd_update = new SIS.Controls.Button.SiSButton();
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
             this.m_cmd_search = new SIS.Controls.Button.SiSButton();
             this.m_lbl_header = new System.Windows.Forms.Label();
-            this.m_cmd_insert = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_update = new SIS.Controls.Button.SiSButton();
-            this.m_cmd_delete = new SIS.Controls.Button.SiSButton();
-            this.Notes = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditTag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditTag)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -191,14 +191,13 @@
             this.Tag.VisibleIndex = 4;
             this.Tag.Width = 447;
             // 
-            // repositoryItemLookUpEditTag
+            // Notes
             // 
-            this.repositoryItemLookUpEditTag.AutoHeight = false;
-            this.repositoryItemLookUpEditTag.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEditTag.DropDownRows = 5;
-            this.repositoryItemLookUpEditTag.Name = "repositoryItemLookUpEditTag";
-            this.repositoryItemLookUpEditTag.NullText = "";
+            this.Notes.Caption = "Notes";
+            this.Notes.FieldName = "Notes";
+            this.Notes.Name = "Notes";
+            this.Notes.Visible = true;
+            this.Notes.VisibleIndex = 5;
             // 
             // repositoryItemTextEdit1
             // 
@@ -207,6 +206,15 @@
             this.repositoryItemTextEdit1.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.repositoryItemTextEdit1.Mask.UseMaskAsDisplayFormat = true;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // repositoryItemLookUpEditTag
+            // 
+            this.repositoryItemLookUpEditTag.AutoHeight = false;
+            this.repositoryItemLookUpEditTag.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEditTag.DropDownRows = 5;
+            this.repositoryItemLookUpEditTag.Name = "repositoryItemLookUpEditTag";
+            this.repositoryItemLookUpEditTag.NullText = "";
             // 
             // imageList1
             // 
@@ -250,10 +258,35 @@
             this.panel1.Size = new System.Drawing.Size(917, 117);
             this.panel1.TabIndex = 3;
             // 
+            // m_cmd_delete
+            // 
+            this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_delete.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_delete.ImageIndex = 5;
+            this.m_cmd_delete.Location = new System.Drawing.Point(128, 83);
+            this.m_cmd_delete.Name = "m_cmd_delete";
+            this.m_cmd_delete.Size = new System.Drawing.Size(52, 28);
+            this.m_cmd_delete.TabIndex = 5;
+            this.m_cmd_delete.Text = "Xóa";
+            // 
+            // m_cmd_update
+            // 
+            this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_update.ImageIndex = 5;
+            this.m_cmd_update.Location = new System.Drawing.Point(70, 83);
+            this.m_cmd_update.Name = "m_cmd_update";
+            this.m_cmd_update.Size = new System.Drawing.Size(52, 28);
+            this.m_cmd_update.TabIndex = 4;
+            this.m_cmd_update.Text = "Sửa";
+            // 
             // m_sle_lop
             // 
-            this.m_sle_lop.EditValue = "";
-            this.m_sle_lop.Location = new System.Drawing.Point(59, 53);
+            this.m_sle_lop.Location = new System.Drawing.Point(43, 53);
             this.m_sle_lop.Name = "m_sle_lop";
             this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.m_sle_lop.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -274,11 +307,24 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label1.Location = new System.Drawing.Point(28, 56);
+            this.label1.Location = new System.Drawing.Point(12, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Lớp";
+            // 
+            // m_cmd_insert
+            // 
+            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
+            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
+            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
+            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.m_cmd_insert.ImageIndex = 5;
+            this.m_cmd_insert.Location = new System.Drawing.Point(12, 83);
+            this.m_cmd_insert.Name = "m_cmd_insert";
+            this.m_cmd_insert.Size = new System.Drawing.Size(52, 28);
+            this.m_cmd_insert.TabIndex = 3;
+            this.m_cmd_insert.Text = "Thêm";
             // 
             // m_cmd_search
             // 
@@ -288,7 +334,7 @@
             this.m_cmd_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.m_cmd_search.ImageIndex = 5;
             this.m_cmd_search.ImageList = this.imageList1;
-            this.m_cmd_search.Location = new System.Drawing.Point(304, 48);
+            this.m_cmd_search.Location = new System.Drawing.Point(286, 48);
             this.m_cmd_search.Name = "m_cmd_search";
             this.m_cmd_search.Size = new System.Drawing.Size(88, 28);
             this.m_cmd_search.TabIndex = 3;
@@ -306,53 +352,6 @@
             this.m_lbl_header.Text = "Ghi chú học viên";
             this.m_lbl_header.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // m_cmd_insert
-            // 
-            this.m_cmd_insert.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_insert.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_insert.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_insert.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_insert.ImageIndex = 5;
-            this.m_cmd_insert.Location = new System.Drawing.Point(12, 83);
-            this.m_cmd_insert.Name = "m_cmd_insert";
-            this.m_cmd_insert.Size = new System.Drawing.Size(52, 28);
-            this.m_cmd_insert.TabIndex = 3;
-            this.m_cmd_insert.Text = "Thêm";
-            // 
-            // m_cmd_update
-            // 
-            this.m_cmd_update.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_update.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_update.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_update.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_update.ImageIndex = 5;
-            this.m_cmd_update.Location = new System.Drawing.Point(70, 83);
-            this.m_cmd_update.Name = "m_cmd_update";
-            this.m_cmd_update.Size = new System.Drawing.Size(52, 28);
-            this.m_cmd_update.TabIndex = 4;
-            this.m_cmd_update.Text = "Sửa";
-            // 
-            // m_cmd_delete
-            // 
-            this.m_cmd_delete.AdjustImageLocation = new System.Drawing.Point(0, 0);
-            this.m_cmd_delete.BtnShape = SIS.Controls.Button.emunType.BtnShape.Rectangle;
-            this.m_cmd_delete.BtnStyle = SIS.Controls.Button.emunType.XPStyle.Default;
-            this.m_cmd_delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.m_cmd_delete.ImageIndex = 5;
-            this.m_cmd_delete.Location = new System.Drawing.Point(128, 83);
-            this.m_cmd_delete.Name = "m_cmd_delete";
-            this.m_cmd_delete.Size = new System.Drawing.Size(52, 28);
-            this.m_cmd_delete.TabIndex = 5;
-            this.m_cmd_delete.Text = "Xóa";
-            // 
-            // Notes
-            // 
-            this.Notes.Caption = "Notes";
-            this.Notes.FieldName = "Notes";
-            this.Notes.Name = "Notes";
-            this.Notes.Visible = true;
-            this.Notes.VisibleIndex = 5;
-            // 
             // f381_studentTag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,8 +364,8 @@
             this.Text = "F381 - Ghi chú học viên";
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewTag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditTag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEditTag)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();

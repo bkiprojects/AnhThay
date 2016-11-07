@@ -17,9 +17,12 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
     public partial class f382_update_tag : Form
     {
         private readonly ClassRepository _classRepository;
+        private readonly TagRepository _tagRepository;
         public f382_update_tag()
         {
             _classRepository = new ClassRepository();
+            _tagRepository = new TagRepository();
+
             InitializeComponent();
             init();
         }
@@ -86,7 +89,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
 
         private void loadTags()
         {
-            
+            var data = _tagRepository.getTags();
+
+            m_le_tag.Properties.DataSource = data;
+
         }
         private void m_cmd_exit_Click(object sender, EventArgs e)
         {

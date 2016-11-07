@@ -35,7 +35,7 @@
             this.PrefixName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SuffixName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StudentName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TagName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ShortcutKey = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -110,7 +110,7 @@
             this.PrefixName,
             this.SuffixName,
             this.StudentName,
-            this.TagName});
+            this.ShortcutKey});
             this.gridViewDiemDanh.GridControl = this.gridControlDiemDanh;
             this.gridViewDiemDanh.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "ID_HOC_SINH", null, "(SL = {0:n0})")});
@@ -179,13 +179,13 @@
             this.StudentName.FieldName = "StudentName";
             this.StudentName.Name = "StudentName";
             // 
-            // TagName
+            // ShortcutKey
             // 
-            this.TagName.Caption = "TagName";
-            this.TagName.FieldName = "TagName";
-            this.TagName.Name = "TagName";
-            this.TagName.Visible = true;
-            this.TagName.VisibleIndex = 4;
+            this.ShortcutKey.Caption = "Tick";
+            this.ShortcutKey.FieldName = "ShortcutKey";
+            this.ShortcutKey.Name = "ShortcutKey";
+            this.ShortcutKey.Visible = true;
+            this.ShortcutKey.VisibleIndex = 4;
             // 
             // repositoryItemTextEdit1
             // 
@@ -397,6 +397,6 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.TextEdit m_txt_buoi;
         internal SIS.Controls.Button.SiSButton m_cmd_diem_danh;
-        private DevExpress.XtraGrid.Columns.GridColumn TagName;
+        private DevExpress.XtraGrid.Columns.GridColumn ShortcutKey;
     }
 }

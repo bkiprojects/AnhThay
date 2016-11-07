@@ -155,6 +155,11 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             try
             {
+                if(m_sle_lop.EditValue == null)
+                {
+                    XtraMessageBox.Show("Bạn cần chọn lớp trước!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 var frm = new f382_update_tag();
                 frm.displayForInsert(Convert.ToInt32(m_sle_lop.EditValue));
             }

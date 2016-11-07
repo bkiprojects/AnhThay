@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.m_cmd_exit = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_save = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_exit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.m_txt_note = new DevExpress.XtraEditors.MemoEdit();
+            this.m_le_tag = new DevExpress.XtraEditors.LookUpEdit();
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.m_sle_ma_hv = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.m_lbl_ma_hoc_sinh = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.m_le_tag = new DevExpress.XtraEditors.LookUpEdit();
-            this.m_txt_note = new DevExpress.XtraEditors.MemoEdit();
-            this.label3 = new System.Windows.Forms.Label();
             this.PrefixName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SuffixName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StudentCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BirthDay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.m_lbl_ma_hoc_sinh = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_note.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_le_tag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_le_tag.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_note.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -68,16 +68,6 @@
             this.panelControl1.Size = new System.Drawing.Size(428, 38);
             this.panelControl1.TabIndex = 0;
             // 
-            // m_cmd_exit
-            // 
-            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_exit.Location = new System.Drawing.Point(351, 2);
-            this.m_cmd_exit.Name = "m_cmd_exit";
-            this.m_cmd_exit.Size = new System.Drawing.Size(75, 34);
-            this.m_cmd_exit.TabIndex = 1;
-            this.m_cmd_exit.Text = "Thoát";
-            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
-            // 
             // m_cmd_save
             // 
             this.m_cmd_save.Dock = System.Windows.Forms.DockStyle.Right;
@@ -87,6 +77,16 @@
             this.m_cmd_save.TabIndex = 0;
             this.m_cmd_save.Text = "Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
+            // 
+            // m_cmd_exit
+            // 
+            this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_exit.Location = new System.Drawing.Point(351, 2);
+            this.m_cmd_exit.Name = "m_cmd_exit";
+            this.m_cmd_exit.Size = new System.Drawing.Size(75, 34);
+            this.m_cmd_exit.TabIndex = 1;
+            this.m_cmd_exit.Text = "Thoát";
+            this.m_cmd_exit.Click += new System.EventHandler(this.m_cmd_exit_Click);
             // 
             // panelControl2
             // 
@@ -103,6 +103,25 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(428, 249);
             this.panelControl2.TabIndex = 1;
+            // 
+            // m_txt_note
+            // 
+            this.m_txt_note.Location = new System.Drawing.Point(141, 129);
+            this.m_txt_note.Name = "m_txt_note";
+            this.m_txt_note.Size = new System.Drawing.Size(263, 96);
+            this.m_txt_note.TabIndex = 17;
+            // 
+            // m_le_tag
+            // 
+            this.m_le_tag.Location = new System.Drawing.Point(141, 89);
+            this.m_le_tag.Name = "m_le_tag";
+            this.m_le_tag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.m_le_tag.Properties.DisplayMember = "TagName";
+            this.m_le_tag.Properties.NullText = "--Chọn tag--";
+            this.m_le_tag.Properties.ValueMember = "TagId";
+            this.m_le_tag.Size = new System.Drawing.Size(263, 20);
+            this.m_le_tag.TabIndex = 16;
             // 
             // m_sle_lop
             // 
@@ -152,59 +171,6 @@
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Lớp";
-            // 
-            // m_lbl_ma_hoc_sinh
-            // 
-            this.m_lbl_ma_hoc_sinh.AutoSize = true;
-            this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(20, 57);
-            this.m_lbl_ma_hoc_sinh.Name = "m_lbl_ma_hoc_sinh";
-            this.m_lbl_ma_hoc_sinh.Size = new System.Drawing.Size(50, 13);
-            this.m_lbl_ma_hoc_sinh.TabIndex = 14;
-            this.m_lbl_ma_hoc_sinh.Text = "Mã HV(*)";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Tag(*)";
-            // 
-            // m_le_tag
-            // 
-            this.m_le_tag.Location = new System.Drawing.Point(141, 89);
-            this.m_le_tag.Name = "m_le_tag";
-            this.m_le_tag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_le_tag.Properties.NullText = "--Chọn tag--";
-            this.m_le_tag.Size = new System.Drawing.Size(263, 20);
-            this.m_le_tag.TabIndex = 16;
-            // 
-            // m_txt_note
-            // 
-            this.m_txt_note.Location = new System.Drawing.Point(141, 129);
-            this.m_txt_note.Name = "m_txt_note";
-            this.m_txt_note.Size = new System.Drawing.Size(263, 96);
-            this.m_txt_note.TabIndex = 17;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Note";
-            // 
             // PrefixName
             // 
             this.PrefixName.Caption = "Họ";
@@ -241,6 +207,42 @@
             this.BirthDay.VisibleIndex = 3;
             this.BirthDay.Width = 298;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Lớp";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Note";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Tag(*)";
+            // 
+            // m_lbl_ma_hoc_sinh
+            // 
+            this.m_lbl_ma_hoc_sinh.AutoSize = true;
+            this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(20, 57);
+            this.m_lbl_ma_hoc_sinh.Name = "m_lbl_ma_hoc_sinh";
+            this.m_lbl_ma_hoc_sinh.Size = new System.Drawing.Size(50, 13);
+            this.m_lbl_ma_hoc_sinh.TabIndex = 14;
+            this.m_lbl_ma_hoc_sinh.Text = "Mã HV(*)";
+            // 
             // f382_update_tag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,12 +258,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_note.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_le_tag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_le_tag.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_note.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
