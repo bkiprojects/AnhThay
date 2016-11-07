@@ -13,3 +13,11 @@ E:\AnhThay\03. SourceCode\IPData\obj\Debug\IPData.vbprojResolveAssemblyReference
 E:\AnhThay\03. SourceCode\IPData\obj\Debug\IPData.dll
 E:\AnhThay\03. SourceCode\IPData\obj\Debug\IPData.xml
 E:\AnhThay\03. SourceCode\IPData\obj\Debug\IPData.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPData\bin\IPData.dll.config
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPData\bin\IPData.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPData\bin\IPData.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPData\bin\IPData.xml
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPData\obj\Debug\IPData.vbprojResolveAssemblyReference.cache
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPData\obj\Debug\IPData.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPData\obj\Debug\IPData.xml
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPData\obj\Debug\IPData.pdb

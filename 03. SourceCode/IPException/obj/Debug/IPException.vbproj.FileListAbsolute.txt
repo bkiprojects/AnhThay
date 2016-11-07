@@ -11,3 +11,10 @@ E:\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.vbprojResolveAssembl
 E:\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.dll
 E:\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.xml
 E:\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\bin\IPException.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\bin\IPException.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\bin\IPException.xml
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.vbprojResolveAssemblyReference.cache
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.xml
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.pdb

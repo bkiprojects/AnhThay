@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/z6ETTMXWKTNOeYfGuzunDvm1cI=</dsig:DigestValue>
+        <dsig:DigestValue>Z1Sd1RWNCmQyU1KD3SzxOOZjpRw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>iv7JXzNoLxMACRXvUbuyMZOcyPY=</dsig:DigestValue>
+        <dsig:DigestValue>jYncjMWzsygs+vpIx9UldmMPUvM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>WM149pzz0RLm3mydgxX4K/sMjKc=</dsig:DigestValue>
+        <dsig:DigestValue>X4QmVeuXNJtJ6GO2tV/v2OrC2WU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -181,7 +181,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>M4fL7oa6icd9Rf8nFTz1zuqun0M=</dsig:DigestValue>
+        <dsig:DigestValue>2aQh+mnaxGZZBfkQKn4w4LyVXEk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1897,19 +1897,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>j8o05MsE9LlOTxHn1qFS05Jxno8=</dsig:DigestValue>
+        <dsig:DigestValue>ZrQh2GfNFXpCgW+LVuNMrOAkals=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IPCommon.dll" size="181760">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IPCommon.dll" size="182272">
       <assemblyIdentity name="IPCommon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LRh7sQdEkrMi7XhsCFXhZwQCE+A=</dsig:DigestValue>
+        <dsig:DigestValue>soN5Gilc9+qkTbq9qPYNqAEoytE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1921,7 +1921,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>sBhytaF82GLRPw6AOrEGY5ev2LE=</dsig:DigestValue>
+        <dsig:DigestValue>9boIT/o8KWhXPg4K+H4VEpFjNRc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1933,7 +1933,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/zjN1EsdgI+fw69Q2bINp3VTAww=</dsig:DigestValue>
+        <dsig:DigestValue>XlkJS2hZBPQWNGDZAj835+f8EPs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1945,7 +1945,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>4Wv2JoG0sOompHloBrxdqhEIAzc=</dsig:DigestValue>
+        <dsig:DigestValue>WX4oBR4pxmzqpCLKCDtlXxhQj/E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1957,7 +1957,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>RtVrjmdjC9xRvVUGFzvZUOnYcnA=</dsig:DigestValue>
+        <dsig:DigestValue>KMo81ucRlB2pnbw9uHrOsAD8UOE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1969,7 +1969,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2bq6WaXyC0HQXxF5OmvQuXVdAeI=</dsig:DigestValue>
+        <dsig:DigestValue>zTK7iPGeBbUrge3IvJIFsOLKERw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1981,7 +1981,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3ybjRXr4IMzdcMu6R6ZsbOKAfwU=</dsig:DigestValue>
+        <dsig:DigestValue>4CkRFQYLToeSgdVL6VbDg3Izubo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2141,13 +2141,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="BKI_QLTTQuocAnh.exe.config" size="3423">
+  <file name="BKI_QLTTQuocAnh.exe.config" size="3420">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>N5xEEfDL6Ad01ybffwxnmWGF28Q=</dsig:DigestValue>
+      <dsig:DigestValue>ZfopNLiyxbgxx7FwvkHcZ71wIqU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\1431468308_ok.ico" size="106609">

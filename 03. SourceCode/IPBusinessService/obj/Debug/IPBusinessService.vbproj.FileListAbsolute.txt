@@ -18,3 +18,13 @@ E:\AnhThay\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.vbprojRe
 E:\AnhThay\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
 E:\AnhThay\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
 E:\AnhThay\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPBusinessService.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPBusinessService.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPBusinessService.xml
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPException.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPException.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPException.xml
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb

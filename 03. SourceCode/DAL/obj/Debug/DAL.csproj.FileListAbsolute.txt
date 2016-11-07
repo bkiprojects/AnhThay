@@ -34,3 +34,12 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. Sou
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\DAL\obj\Debug\DAL.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\DAL\obj\Debug\DAL.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\DAL\bin\Debug\DAL.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\DAL\bin\Debug\DAL.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\DAL\bin\Debug\Dapper.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\DAL\bin\Debug\Models.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\DAL\bin\Debug\Models.pdb
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\DAL\bin\Debug\Dapper.xml
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\DAL\obj\Debug\DAL.dll
+C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\DAL\obj\Debug\DAL.pdb
