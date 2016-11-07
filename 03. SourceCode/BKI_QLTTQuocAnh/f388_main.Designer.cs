@@ -408,13 +408,12 @@
             // 
             // m_cmd_ds_hs_theo_lm
             // 
-            this.m_cmd_ds_hs_theo_lm.Caption = "Danh sách học sinh theo lớp môn";
+            this.m_cmd_ds_hs_theo_lm.Caption = "Quản lý điểm danh";
             this.m_cmd_ds_hs_theo_lm.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425904783_54524;
             this.m_cmd_ds_hs_theo_lm.Id = 35;
             this.m_cmd_ds_hs_theo_lm.Name = "m_cmd_ds_hs_theo_lm";
             this.m_cmd_ds_hs_theo_lm.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.m_cmd_ds_hs_theo_lm.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // m_cmd_import_excel
             // 
@@ -619,7 +618,6 @@
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_ds_hs_theo_lm);
             this.ribbonPageGroup7.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Theo học sinh";
@@ -627,6 +625,7 @@
             // 
             // ribbonPageGroup8
             // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_ds_hs_theo_lm);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_tai_chinh_hs_lm);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bien_dong_hs);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop);

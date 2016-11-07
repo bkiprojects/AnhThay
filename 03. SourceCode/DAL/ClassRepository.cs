@@ -15,7 +15,7 @@ namespace DAL
     {
         public ClassRepository()
         {
-            
+ 
         }
         public List<Class> getClasses()
         {

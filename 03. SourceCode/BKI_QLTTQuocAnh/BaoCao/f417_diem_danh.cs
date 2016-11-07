@@ -28,6 +28,15 @@ namespace BKI_QLTTQuocAnh.BaoCao
             format_controls();
             load_data_to_sle_lop();
         }
+
+        public void displayFromF380(long classId, int session)
+        {
+            m_txt_buoi.EditValue = session;
+            m_sle_lop.EditValue = classId;
+
+            ShowDialog();
+        }
+
         public void display_from_f410(decimal ip_id_lop_mon)
         {
             m_sle_lop.EditValue = ip_id_lop_mon;

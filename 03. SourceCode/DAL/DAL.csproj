@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnhThayDbContext.cs" />
+    <Compile Include="DictionaryRepository.cs" />
+    <Compile Include="SessionHistoryRepository.cs" />
     <Compile Include="ClassRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

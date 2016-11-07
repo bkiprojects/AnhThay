@@ -13,6 +13,7 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.US;
 using BKI_QLTTQuocAnh.HeThong;
 using BKI_QLTTQuocAnh.NghiepVu;
+using BKI_QLTTQuocAnh.NghiepVu.Attendance;
 using IP.Core.IPSystemAdmin;
 using DevExpress.XtraEditors;
 namespace BKI_QLTTQuocAnh
@@ -219,7 +220,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f230_danh_muc_hs_theo_lop v_frm = new f230_danh_muc_hs_theo_lop();
+                f380_att_session_history v_frm = new f380_att_session_history();
                 if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;
