@@ -15,7 +15,7 @@
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>ftp://27.118.16.60/</PublishUrl>
+    <PublishUrl>C:\Users\tuyennt\Desktop\AnhThayPublish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -25,13 +25,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://27.118.16.60:5678/</InstallUrl>
+    <InstallUrl>http://203.162.13.100:1212/</InstallUrl>
     <ProductName>QLTC</ProductName>
     <PublisherName>TuyenNT</PublisherName>
     <SuiteName>Dummy</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -70,6 +70,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1478773482_new-pointer.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="C1.Common, Version=1.0.20031.116, Culture=neutral, PublicKeyToken=e272bb32d11b1948">
@@ -1041,6 +1044,7 @@
     <None Include="Resources\Benjigarner-Softdimension-Excel.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1478773482_new-pointer.ico" />
     <Content Include="Resources\1431468308_ok.ico" />
     <Content Include="Resources\OK.ico" />
     <Content Include="Resources\OK.png" />
