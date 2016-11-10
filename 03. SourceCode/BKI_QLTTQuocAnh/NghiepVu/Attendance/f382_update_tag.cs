@@ -10,7 +10,9 @@ using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 using BKI_QLTTQuocAnh.US;
 using DAL;
+using DevExpress.XtraEditors;
 using IP.Core.IPCommon;
+using Models.Entity;
 
 namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
 {
@@ -18,6 +20,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
     {
         private readonly ClassRepository _classRepository;
         private readonly TagRepository _tagRepository;
+        private int _classId;
+        private int _formMode = 1; //Insert, 2=update
         public f382_update_tag()
         {
             _classRepository = new ClassRepository();
@@ -29,7 +33,23 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
 
         public void displayForInsert(int classId)
         {
+            _formMode = 1;
+            _classId = classId;
+            m_sle_lop.EditValue = classId;
+            m_sle_ma_hv.Focus();
+            ShowDialog();
+        }
 
+
+        public void displayForUpdate(StudentTag studentTag)
+        {
+            _formMode = 2;
+            m_sle_lop.EditValue = studentTag.ClassId;
+            m_sle_ma_hv.EditValue = studentTag.StudentId;
+            m_le_tag.EditValue = studentTag.TagId;
+            m_txt_note.Text = studentTag.Notes;
+            m_sle_lop.Enabled = false;
+            m_sle_ma_hv.Enabled = false;
             ShowDialog();
         }
 
@@ -126,7 +146,58 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
         {
             try
             {
+                if(m_sle_lop.EditValue == null)
+                {
+                    XtraMessageBox.Show("Chọn lớp trước.", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+                if(m_sle_ma_hv.EditValue == null)
+                {
+                    XtraMessageBox.Show("Chọn học viên trước.", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if(m_le_tag.EditValue == null)
+                {
+                    XtraMessageBox.Show("Chọn tag trước.", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (_formMode == 1)
+                {
+                    StudentTag obj = new StudentTag()
+                    {
+                        ClassId = Convert.ToInt32(m_sle_lop.EditValue),
+                        Notes = m_txt_note.Text,
+                        StudentId = Convert.ToInt64(m_sle_ma_hv.EditValue),
+
+                        TagDate = DateTime.Now.Date,
+                        TagId = Convert.ToInt32(m_le_tag.EditValue)
+                    };
+                    _tagRepository.addStudentTag(obj);
+
+                    XtraMessageBox.Show("Thêm tag cho học viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    Close();
+                }
+                else
+                {
+                    StudentTag obj = new StudentTag()
+                    {
+                        ClassId = Convert.ToInt32(m_sle_lop.EditValue),
+                        Notes = m_txt_note.Text,
+                        StudentId = Convert.ToInt64(m_sle_ma_hv.EditValue),
+
+                        TagDate = DateTime.Now.Date,
+                        TagId = Convert.ToInt32(m_le_tag.EditValue)
+                    };
+
+                    _tagRepository.updateStudentTag(obj);
+                    XtraMessageBox.Show("Cập nhật tag cho học viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    Close();
+                }
+                
             }
             catch(Exception ex)
             {

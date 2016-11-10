@@ -1550,3 +1550,5 @@ C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.application
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.exe
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.DanhMuc.f260_att_dm_diem_danh.resources
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.DanhMuc.f261_dm_tag.resources

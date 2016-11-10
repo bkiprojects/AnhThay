@@ -90,6 +90,8 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.MdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.m_cmd_tag = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdiManager)).BeginInit();
@@ -139,9 +141,10 @@
             this.m_cmd_ban_giao_hp_gt_theo_lop,
             this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop,
             this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang,
-            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay});
+            this.m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay,
+            this.m_cmd_tag});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 50;
+            this.ribbon.MaxItemId = 51;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -334,13 +337,12 @@
             // 
             // m_cmd_hs_hien_nay
             // 
-            this.m_cmd_hs_hien_nay.Caption = "Số lượng HS hiện nay";
+            this.m_cmd_hs_hien_nay.Caption = "Kí tự điểm danh";
             this.m_cmd_hs_hien_nay.Glyph = global::BKI_QLTTQuocAnh.Properties.Resources._1425905865_103845;
             this.m_cmd_hs_hien_nay.Id = 21;
             this.m_cmd_hs_hien_nay.Name = "m_cmd_hs_hien_nay";
             this.m_cmd_hs_hien_nay.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.m_cmd_hs_hien_nay.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // m_cmd_hs_chua_nop_tien
             // 
@@ -601,17 +603,18 @@
             // ribbonPage6
             // 
             this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup12});
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup13});
             this.ribbonPage6.Name = "ribbonPage6";
             this.ribbonPage6.Text = "ĐIỂM DANH";
             // 
             // ribbonPageGroup12
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_tai_chinh_hs);
             this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_ds_hs_theo_lm);
             this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_tai_chinh_hs_lm);
             this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_bien_dong_hs);
             this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang);
+            this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_tai_chinh_hs);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             // 
             // ribbonPage4
@@ -641,7 +644,6 @@
             // ribbonPageGroup8
             // 
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_thang_theo_lop);
-            this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_hien_nay);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_hs_chua_nop_tien);
             this.ribbonPageGroup8.ItemLinks.Add(this.m_cmd_bc_diem_danh);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
@@ -677,6 +679,22 @@
             // MdiManager
             // 
             this.MdiManager.MdiParent = this;
+            // 
+            // ribbonPageGroup13
+            // 
+            this.ribbonPageGroup13.ItemLinks.Add(this.m_cmd_hs_hien_nay);
+            this.ribbonPageGroup13.ItemLinks.Add(this.m_cmd_tag);
+            this.ribbonPageGroup13.Name = "ribbonPageGroup13";
+            this.ribbonPageGroup13.Text = "Danh mục";
+            // 
+            // m_cmd_tag
+            // 
+            this.m_cmd_tag.Caption = "Các loại tag";
+            this.m_cmd_tag.Glyph = ((System.Drawing.Image)(resources.GetObject("m_cmd_tag.Glyph")));
+            this.m_cmd_tag.Id = 50;
+            this.m_cmd_tag.Name = "m_cmd_tag";
+            this.m_cmd_tag.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // f388_main
             // 
@@ -763,5 +781,7 @@
         private DevExpress.XtraBars.BarButtonItem m_cmd_bao_cao_thuc_thu_giam_tru_theo_ngay;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
+        private DevExpress.XtraBars.BarButtonItem m_cmd_tag;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
     }
 }

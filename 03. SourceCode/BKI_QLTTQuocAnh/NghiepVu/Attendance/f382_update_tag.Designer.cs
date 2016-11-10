@@ -125,7 +125,6 @@
             // 
             // m_sle_lop
             // 
-            this.m_sle_lop.EditValue = "";
             this.m_sle_lop.Location = new System.Drawing.Point(141, 24);
             this.m_sle_lop.Name = "m_sle_lop";
             this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
@@ -146,7 +145,6 @@
             // 
             // m_sle_ma_hv
             // 
-            this.m_sle_ma_hv.EditValue = "";
             this.m_sle_ma_hv.Location = new System.Drawing.Point(141, 54);
             this.m_sle_ma_hv.Name = "m_sle_ma_hv";
             this.m_sle_ma_hv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;

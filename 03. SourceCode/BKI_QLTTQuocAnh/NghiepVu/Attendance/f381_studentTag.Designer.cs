@@ -114,6 +114,7 @@
             this.Tag,
             this.Notes});
             this.gridViewTag.GridControl = this.gridControlTag;
+            this.gridViewTag.GroupCount = 1;
             this.gridViewTag.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "ID_HOC_SINH", null, "(SL = {0:n0})")});
             this.gridViewTag.Name = "gridViewTag";
@@ -125,6 +126,8 @@
             this.gridViewTag.OptionsFind.ShowClearButton = false;
             this.gridViewTag.OptionsFind.ShowCloseButton = false;
             this.gridViewTag.OptionsView.ShowFooter = true;
+            this.gridViewTag.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.Tag, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gridViewTag.DoubleClick += new System.EventHandler(this.gridView2_DoubleClick);
             // 
             // ID
@@ -147,7 +150,7 @@
             this.STT.Name = "STT";
             this.STT.Visible = true;
             this.STT.VisibleIndex = 0;
-            this.STT.Width = 65;
+            this.STT.Width = 41;
             // 
             // StudentCode
             // 
@@ -156,7 +159,7 @@
             this.StudentCode.Name = "StudentCode";
             this.StudentCode.Visible = true;
             this.StudentCode.VisibleIndex = 1;
-            this.StudentCode.Width = 105;
+            this.StudentCode.Width = 98;
             // 
             // PrefixName
             // 
@@ -165,7 +168,7 @@
             this.PrefixName.Name = "PrefixName";
             this.PrefixName.Visible = true;
             this.PrefixName.VisibleIndex = 2;
-            this.PrefixName.Width = 142;
+            this.PrefixName.Width = 84;
             // 
             // SuffixName
             // 
@@ -174,7 +177,7 @@
             this.SuffixName.Name = "SuffixName";
             this.SuffixName.Visible = true;
             this.SuffixName.VisibleIndex = 3;
-            this.SuffixName.Width = 140;
+            this.SuffixName.Width = 142;
             // 
             // StudentName
             // 
@@ -189,7 +192,7 @@
             this.Tag.Name = "Tag";
             this.Tag.Visible = true;
             this.Tag.VisibleIndex = 4;
-            this.Tag.Width = 447;
+            this.Tag.Width = 141;
             // 
             // Notes
             // 
@@ -197,7 +200,8 @@
             this.Notes.FieldName = "Notes";
             this.Notes.Name = "Notes";
             this.Notes.Visible = true;
-            this.Notes.VisibleIndex = 5;
+            this.Notes.VisibleIndex = 4;
+            this.Notes.Width = 395;
             // 
             // repositoryItemTextEdit1
             // 

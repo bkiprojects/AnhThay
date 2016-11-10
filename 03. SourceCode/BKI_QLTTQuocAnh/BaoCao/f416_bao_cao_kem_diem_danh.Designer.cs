@@ -36,7 +36,7 @@
             this.HO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.HO_TEN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TRANG_THAI_HOC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TagName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.HOC_PHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.GIAM_TRU = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -123,7 +123,7 @@
             this.HO,
             this.TEN,
             this.HO_TEN,
-            this.TRANG_THAI_HOC,
+            this.TagName,
             this.HOC_PHI,
             this.GIAM_TRU,
             this.CON_PHAI_THU,
@@ -209,13 +209,13 @@
             this.HO_TEN.FieldName = "HO_TEN";
             this.HO_TEN.Name = "HO_TEN";
             // 
-            // TRANG_THAI_HOC
+            // TagName
             // 
-            this.TRANG_THAI_HOC.Caption = "Trạng thái";
-            this.TRANG_THAI_HOC.FieldName = "TRANG_THAI_HOC";
-            this.TRANG_THAI_HOC.Name = "TRANG_THAI_HOC";
-            this.TRANG_THAI_HOC.Visible = true;
-            this.TRANG_THAI_HOC.VisibleIndex = 4;
+            this.TagName.Caption = "Tag";
+            this.TagName.FieldName = "TagName";
+            this.TagName.Name = "TagName";
+            this.TagName.Visible = true;
+            this.TagName.VisibleIndex = 4;
             // 
             // HOC_PHI
             // 
@@ -325,7 +325,7 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "Nghỉ hẳn";
+            this.gridColumn5.Caption = "Bỏ học hẳn";
             this.gridColumn5.FieldName = "OP_4";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -333,7 +333,7 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "OPTION 5";
+            this.gridColumn6.Caption = "Chuyển đi";
             this.gridColumn6.FieldName = "OP_5";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
@@ -341,7 +341,7 @@
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "OPTION_6";
+            this.gridColumn7.Caption = "Chuyển đến";
             this.gridColumn7.FieldName = "OP_6";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
@@ -534,7 +534,7 @@
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.Columns.GridColumn STT;
         private DevExpress.XtraGrid.Columns.GridColumn MA_DOI_TUONG;
-        private DevExpress.XtraGrid.Columns.GridColumn TRANG_THAI_HOC;
+        private DevExpress.XtraGrid.Columns.GridColumn TagName;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn ShortcutKey;
         private System.Windows.Forms.Label label2;

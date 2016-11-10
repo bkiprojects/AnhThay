@@ -188,7 +188,7 @@ namespace BKI_QLTTQuocAnh
             m_cmd_dm_lop_mon.ItemClick += m_cmd_dm_lop_mon_ItemClick;
             //Bao cao
             m_cmd_tai_chinh_hs.ItemClick += m_cmd_tai_chinh_hs_ItemClick;
-            //m_cmd_tai_chinh_hs_lm.ItemClick += m_cmd_tai_chinh_hs_lm_ItemClick;
+            m_cmd_tai_chinh_hs_lm.ItemClick += m_cmd_tai_chinh_hs_lm_ItemClick;
             m_cmd_tai_chinh_lm.ItemClick += m_cmd_tai_chinh_lm_ItemClick;
             m_cmd_tai_chinh_lm_hs.ItemClick += m_cmd_tai_chinh_lm_hs_ItemClick;
             m_cmd_hs_hien_nay.ItemClick += m_cmd_hs_hien_nay_ItemClick;
@@ -198,6 +198,24 @@ namespace BKI_QLTTQuocAnh
             m_cmd_ds_phieu.ItemClick += m_cmd_ds_phieu_ItemClick;
             m_cmd_bien_dong_hs.ItemClick += m_cmd_bien_dong_hs_ItemClick;
             m_cmd_ds_hs_theo_lm.ItemClick += m_cmd_ds_hs_theo_lm_ItemClick;
+
+            m_cmd_tag.ItemClick += MCmdTagOnItemClick;
+        }
+
+        private void MCmdTagOnItemClick(object sender, ItemClickEventArgs itemClickEventArgs)
+        {
+            try
+            {
+                f261_dm_tag v_frm = new f261_dm_tag();
+                if(IsExistFormName(v_frm)) return;
+
+                v_frm.MdiParent = this;
+                v_frm.Show();
+            }
+            catch(Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_cmd_import_excel_ItemClick(object sender, ItemClickEventArgs e)
@@ -470,7 +488,7 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                f450_bc_so_luong_hs_hien_nay v_frm = new f450_bc_so_luong_hs_hien_nay();
+                f260_att_dm_diem_danh v_frm = new f260_att_dm_diem_danh();
                 if (IsExistFormName(v_frm)) return;
 
                 v_frm.MdiParent = this;

@@ -49,6 +49,7 @@
     <Compile Include="Entity\AttendanceType.cs" />
     <Compile Include="Entity\Class.cs" />
     <Compile Include="Entity\Enrollment.cs" />
+    <Compile Include="Entity\StudentTag.cs" />
     <Compile Include="Entity\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\Student.cs" />

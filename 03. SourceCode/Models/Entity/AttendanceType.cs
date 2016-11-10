@@ -8,7 +8,9 @@ namespace Models.Entity
     public class AttendanceType
     {
         public int AttendanceTypeId { get; set; }
-        public string AttendanceTypeName { get; set; }
-        public string ShortcutChar { get; set; }
+        public string AttendanceShortName { get; set; }
+        public string AttendanceLongName { get; set; }
+        public string ShortcutKey { get; set; }
+        public string Notes { get; set; }
     }
 }

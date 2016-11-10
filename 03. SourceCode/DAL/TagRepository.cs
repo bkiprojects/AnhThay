@@ -43,6 +43,52 @@ namespace DAL
                 , commandType: CommandType.StoredProcedure);
 
             return result.ToList();
-        } 
+        }
+
+        public void addStudentTag(StudentTag studentTag)
+        {
+            const string procedure = "pr_att_create_studentTag";
+
+            var parameters = new DynamicParameters();
+            parameters.Add("@ClassId", studentTag.ClassId);
+            parameters.Add("@StudentId", studentTag.StudentId);
+            parameters.Add("@TagId", studentTag.TagId);
+
+            parameters.Add("@Notes", studentTag.Notes);
+            parameters.Add("@TagDate", studentTag.TagDate);
+
+            AnhThayDbContext.Context.Connection.Execute(sql: procedure
+                , param: parameters
+                , commandType: CommandType.StoredProcedure);
+        }
+        public void updateStudentTag(StudentTag studentTag)
+        {
+            const string procedure = "pr_att_update_studentTag";
+
+            var parameters = new DynamicParameters();
+            parameters.Add("@ClassId", studentTag.ClassId);
+            parameters.Add("@StudentId", studentTag.StudentId);
+            parameters.Add("@TagId", studentTag.TagId);
+
+            parameters.Add("@Notes", studentTag.Notes);
+            parameters.Add("@TagDate", studentTag.TagDate);
+
+            AnhThayDbContext.Context.Connection.Execute(sql: procedure
+                , param: parameters
+                , commandType: CommandType.StoredProcedure);
+        }
+
+        public void deleteStudentTag(long studentId, int classId)
+        {
+            const string procedure = "pr_att_delete_studentTag";
+
+            var parameters = new DynamicParameters();
+            parameters.Add("@ClassId", classId);
+            parameters.Add("@StudentId", studentId);
+
+            AnhThayDbContext.Context.Connection.Execute(sql: procedure
+                , param: parameters
+                , commandType: CommandType.StoredProcedure);
+        }
     }
 }

@@ -17,7 +17,16 @@ namespace DAL
         {
             
         }
+        public List<AttendanceType> getAttendanceTypes()
+        {
+            const string procedure = "pr_att_get_attendanceTypes";
 
+            var result = AnhThayDbContext.Context.Connection.Query<AttendanceType>(sql: procedure
+                , param: null
+                , commandType: CommandType.StoredProcedure);
+
+            return result.ToList();
+        }
         public List<AttendanceDTO> getAttendances(int classId, int session)
         {
             const string procedure = "pr_att_get_attendances";

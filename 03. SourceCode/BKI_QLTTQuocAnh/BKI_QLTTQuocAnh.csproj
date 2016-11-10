@@ -432,6 +432,18 @@
     <Compile Include="DanhMuc\F251_dm_hs_theo_lop_de.Designer.cs">
       <DependentUpon>F251_dm_hs_theo_lop_de.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\f260_att_dm_diem_danh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f260_att_dm_diem_danh.Designer.cs">
+      <DependentUpon>f260_att_dm_diem_danh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\f261_dm_tag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\f261_dm_tag.Designer.cs">
+      <DependentUpon>f261_dm_tag.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\frm_dm_so_phieu_thu_de.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -721,6 +733,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\F251_dm_hs_theo_lop_de.resx">
       <DependentUpon>F251_dm_hs_theo_lop_de.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f260_att_dm_diem_danh.resx">
+      <DependentUpon>f260_att_dm_diem_danh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\f261_dm_tag.resx">
+      <DependentUpon>f261_dm_tag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\frm_dm_so_phieu_thu_de.resx">
       <DependentUpon>frm_dm_so_phieu_thu_de.cs</DependentUpon>

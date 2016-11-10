@@ -18,6 +18,7 @@ using System.Windows.Forms;
 using BKI_QLTTQuocAnh.NghiepVu.Attendance;
 using DevExpress.XtraEditors;
 using Models.DTO;
+using Models.Entity;
 
 namespace BKI_QLTTQuocAnh.BaoCao
 {
@@ -143,12 +144,59 @@ namespace BKI_QLTTQuocAnh.BaoCao
 
         private void M_cmd_delete_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var studentId = Convert.ToInt64(gridViewTag.GetRowCellValue(gridViewTag.FocusedRowHandle, "StudentId"));
+                var classId = Convert.ToInt32(m_sle_lop.EditValue);
+
+                var dlg = XtraMessageBox.Show("Bạn có chắc chắn muốn xóa?", "THÔNG BÁO", MessageBoxButtons.OK,
+                    MessageBoxIcon.Question);
+                if (dlg == DialogResult.OK)
+                {
+                    _tagRepository.deleteStudentTag(studentId, classId);
+                    XtraMessageBox.Show("Xóa thành công.", "THÔNG BÁO", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+                load_data_2_grid();
+            }
+            catch(Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void M_cmd_update_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var studentId = Convert.ToInt64(gridViewTag.GetRowCellValue(gridViewTag.FocusedRowHandle, "StudentId"));
+                var classId = Convert.ToInt32(m_sle_lop.EditValue);
+                var notes = gridViewTag.GetRowCellValue(gridViewTag.FocusedRowHandle, "Notes")?.ToString();
+
+                var date = Convert.ToDateTime(gridViewTag.GetRowCellValue(gridViewTag.FocusedRowHandle, "TagDate"));
+                var tagId = Convert.ToInt32(gridViewTag.GetRowCellValue(gridViewTag.FocusedRowHandle, "TagId"));
+
+                var obj = new StudentTag()
+                {
+                    ClassId = classId,
+                    Notes = notes,
+                    StudentId = studentId,
+                    TagDate = date,
+                    TagId = tagId
+                };
+
+
+                var frm = new f382_update_tag();
+                frm.displayForUpdate(obj);
+
+                load_data_2_grid();
+            }
+            catch(Exception v_e)
+            {
+
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         private void M_cmd_insert_Click(object sender, EventArgs e)
@@ -162,6 +210,8 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 }
                 var frm = new f382_update_tag();
                 frm.displayForInsert(Convert.ToInt32(m_sle_lop.EditValue));
+
+                load_data_2_grid();
             }
             catch(Exception v_e)
             {
