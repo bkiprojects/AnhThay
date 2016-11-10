@@ -57,7 +57,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
         {
             if (!isSelectedClassStatusType())
             {
-                XtraMessageBox.Show("Chọn trạng lớp trước", "THÔNG BÁO");
+                XtraMessageBox.Show("Chọn trạng thái trước", "THÔNG BÁO");
                 return;
             }
             var data = _sessionHistoryRepository.getSessionHistory(getClassStatusType());
