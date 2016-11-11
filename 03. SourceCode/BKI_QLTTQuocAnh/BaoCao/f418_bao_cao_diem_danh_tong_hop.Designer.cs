@@ -123,6 +123,9 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
+            this.SDT_HS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.EMAIL_HS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FACEBOOK = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -257,7 +260,10 @@
             this.B57,
             this.B58,
             this.B59,
-            this.B60});
+            this.B60,
+            this.SDT_HS,
+            this.EMAIL_HS,
+            this.FACEBOOK});
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.GroupCount = 1;
             this.gridView2.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -338,7 +344,7 @@
             this.TagName.FieldName = "TagName";
             this.TagName.Name = "TagName";
             this.TagName.Visible = true;
-            this.TagName.VisibleIndex = 4;
+            this.TagName.VisibleIndex = 7;
             this.TagName.Width = 89;
             // 
             // HOC_PHI
@@ -350,7 +356,7 @@
             this.HOC_PHI.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "HOC_PHI", "{0:n0}")});
             this.HOC_PHI.Visible = true;
-            this.HOC_PHI.VisibleIndex = 5;
+            this.HOC_PHI.VisibleIndex = 8;
             this.HOC_PHI.Width = 76;
             // 
             // repositoryItemTextEdit1
@@ -370,7 +376,7 @@
             this.GIAM_TRU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GIAM_TRU", "{0:n0}")});
             this.GIAM_TRU.Visible = true;
-            this.GIAM_TRU.VisibleIndex = 6;
+            this.GIAM_TRU.VisibleIndex = 9;
             this.GIAM_TRU.Width = 78;
             // 
             // CON_PHAI_THU
@@ -382,7 +388,7 @@
             this.CON_PHAI_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CON_PHAI_THU", "{0:n0}")});
             this.CON_PHAI_THU.Visible = true;
-            this.CON_PHAI_THU.VisibleIndex = 7;
+            this.CON_PHAI_THU.VisibleIndex = 10;
             this.CON_PHAI_THU.Width = 81;
             // 
             // THUC_THU
@@ -394,7 +400,7 @@
             this.THUC_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "THUC_THU", "{0:n0}")});
             this.THUC_THU.Visible = true;
-            this.THUC_THU.VisibleIndex = 8;
+            this.THUC_THU.VisibleIndex = 11;
             this.THUC_THU.Width = 80;
             // 
             // CHENH_LECH
@@ -406,7 +412,7 @@
             this.CHENH_LECH.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CHENH_LECH", "{0:n0}")});
             this.CHENH_LECH.Visible = true;
-            this.CHENH_LECH.VisibleIndex = 9;
+            this.CHENH_LECH.VisibleIndex = 12;
             this.CHENH_LECH.Width = 74;
             // 
             // gridColumn1
@@ -429,7 +435,7 @@
             this.gridColumn2.FieldName = "DI_HOC";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 10;
+            this.gridColumn2.VisibleIndex = 13;
             this.gridColumn2.Width = 54;
             // 
             // gridColumn3
@@ -438,7 +444,7 @@
             this.gridColumn3.FieldName = "NGHI_HOC";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 11;
+            this.gridColumn3.VisibleIndex = 14;
             this.gridColumn3.Width = 53;
             // 
             // gridColumn4
@@ -447,7 +453,7 @@
             this.gridColumn4.FieldName = "OP_3";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 12;
+            this.gridColumn4.VisibleIndex = 15;
             this.gridColumn4.Width = 57;
             // 
             // gridColumn5
@@ -456,7 +462,7 @@
             this.gridColumn5.FieldName = "OP_4";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 13;
+            this.gridColumn5.VisibleIndex = 16;
             this.gridColumn5.Width = 61;
             // 
             // gridColumn6
@@ -465,7 +471,7 @@
             this.gridColumn6.FieldName = "OP_5";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 14;
+            this.gridColumn6.VisibleIndex = 17;
             this.gridColumn6.Width = 68;
             // 
             // gridColumn7
@@ -474,7 +480,7 @@
             this.gridColumn7.FieldName = "OP_6";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 15;
+            this.gridColumn7.VisibleIndex = 18;
             this.gridColumn7.Width = 66;
             // 
             // B1
@@ -484,7 +490,7 @@
             this.B1.MinWidth = 35;
             this.B1.Name = "B1";
             this.B1.Visible = true;
-            this.B1.VisibleIndex = 16;
+            this.B1.VisibleIndex = 19;
             this.B1.Width = 35;
             // 
             // B2
@@ -494,7 +500,7 @@
             this.B2.MinWidth = 35;
             this.B2.Name = "B2";
             this.B2.Visible = true;
-            this.B2.VisibleIndex = 17;
+            this.B2.VisibleIndex = 20;
             this.B2.Width = 35;
             // 
             // B3
@@ -504,7 +510,7 @@
             this.B3.MinWidth = 35;
             this.B3.Name = "B3";
             this.B3.Visible = true;
-            this.B3.VisibleIndex = 18;
+            this.B3.VisibleIndex = 21;
             this.B3.Width = 35;
             // 
             // B4
@@ -514,7 +520,7 @@
             this.B4.MinWidth = 35;
             this.B4.Name = "B4";
             this.B4.Visible = true;
-            this.B4.VisibleIndex = 19;
+            this.B4.VisibleIndex = 22;
             this.B4.Width = 35;
             // 
             // B5
@@ -524,7 +530,7 @@
             this.B5.MinWidth = 35;
             this.B5.Name = "B5";
             this.B5.Visible = true;
-            this.B5.VisibleIndex = 20;
+            this.B5.VisibleIndex = 23;
             this.B5.Width = 35;
             // 
             // B6
@@ -534,7 +540,7 @@
             this.B6.MinWidth = 35;
             this.B6.Name = "B6";
             this.B6.Visible = true;
-            this.B6.VisibleIndex = 21;
+            this.B6.VisibleIndex = 24;
             this.B6.Width = 35;
             // 
             // B7
@@ -544,7 +550,7 @@
             this.B7.MinWidth = 35;
             this.B7.Name = "B7";
             this.B7.Visible = true;
-            this.B7.VisibleIndex = 22;
+            this.B7.VisibleIndex = 25;
             this.B7.Width = 35;
             // 
             // B8
@@ -554,7 +560,7 @@
             this.B8.MinWidth = 35;
             this.B8.Name = "B8";
             this.B8.Visible = true;
-            this.B8.VisibleIndex = 23;
+            this.B8.VisibleIndex = 26;
             this.B8.Width = 35;
             // 
             // B9
@@ -564,7 +570,7 @@
             this.B9.MinWidth = 35;
             this.B9.Name = "B9";
             this.B9.Visible = true;
-            this.B9.VisibleIndex = 24;
+            this.B9.VisibleIndex = 27;
             this.B9.Width = 35;
             // 
             // B10
@@ -574,7 +580,7 @@
             this.B10.MinWidth = 35;
             this.B10.Name = "B10";
             this.B10.Visible = true;
-            this.B10.VisibleIndex = 25;
+            this.B10.VisibleIndex = 28;
             this.B10.Width = 35;
             // 
             // B11
@@ -584,7 +590,7 @@
             this.B11.MinWidth = 35;
             this.B11.Name = "B11";
             this.B11.Visible = true;
-            this.B11.VisibleIndex = 26;
+            this.B11.VisibleIndex = 29;
             this.B11.Width = 35;
             // 
             // B12
@@ -594,7 +600,7 @@
             this.B12.MinWidth = 35;
             this.B12.Name = "B12";
             this.B12.Visible = true;
-            this.B12.VisibleIndex = 27;
+            this.B12.VisibleIndex = 30;
             this.B12.Width = 35;
             // 
             // B13
@@ -604,7 +610,7 @@
             this.B13.MinWidth = 35;
             this.B13.Name = "B13";
             this.B13.Visible = true;
-            this.B13.VisibleIndex = 28;
+            this.B13.VisibleIndex = 31;
             this.B13.Width = 35;
             // 
             // B14
@@ -614,7 +620,7 @@
             this.B14.MinWidth = 35;
             this.B14.Name = "B14";
             this.B14.Visible = true;
-            this.B14.VisibleIndex = 29;
+            this.B14.VisibleIndex = 32;
             this.B14.Width = 35;
             // 
             // B15
@@ -624,7 +630,7 @@
             this.B15.MinWidth = 35;
             this.B15.Name = "B15";
             this.B15.Visible = true;
-            this.B15.VisibleIndex = 30;
+            this.B15.VisibleIndex = 33;
             this.B15.Width = 35;
             // 
             // B16
@@ -634,7 +640,7 @@
             this.B16.MinWidth = 35;
             this.B16.Name = "B16";
             this.B16.Visible = true;
-            this.B16.VisibleIndex = 31;
+            this.B16.VisibleIndex = 34;
             this.B16.Width = 35;
             // 
             // B17
@@ -644,7 +650,7 @@
             this.B17.MinWidth = 35;
             this.B17.Name = "B17";
             this.B17.Visible = true;
-            this.B17.VisibleIndex = 32;
+            this.B17.VisibleIndex = 35;
             this.B17.Width = 35;
             // 
             // B18
@@ -654,7 +660,7 @@
             this.B18.MinWidth = 35;
             this.B18.Name = "B18";
             this.B18.Visible = true;
-            this.B18.VisibleIndex = 33;
+            this.B18.VisibleIndex = 36;
             this.B18.Width = 35;
             // 
             // B19
@@ -664,7 +670,7 @@
             this.B19.MinWidth = 35;
             this.B19.Name = "B19";
             this.B19.Visible = true;
-            this.B19.VisibleIndex = 34;
+            this.B19.VisibleIndex = 37;
             this.B19.Width = 35;
             // 
             // B20
@@ -674,7 +680,7 @@
             this.B20.MinWidth = 35;
             this.B20.Name = "B20";
             this.B20.Visible = true;
-            this.B20.VisibleIndex = 35;
+            this.B20.VisibleIndex = 38;
             this.B20.Width = 35;
             // 
             // B21
@@ -684,7 +690,7 @@
             this.B21.MinWidth = 35;
             this.B21.Name = "B21";
             this.B21.Visible = true;
-            this.B21.VisibleIndex = 36;
+            this.B21.VisibleIndex = 39;
             this.B21.Width = 35;
             // 
             // B22
@@ -694,7 +700,7 @@
             this.B22.MinWidth = 35;
             this.B22.Name = "B22";
             this.B22.Visible = true;
-            this.B22.VisibleIndex = 37;
+            this.B22.VisibleIndex = 40;
             this.B22.Width = 35;
             // 
             // B23
@@ -704,7 +710,7 @@
             this.B23.MinWidth = 35;
             this.B23.Name = "B23";
             this.B23.Visible = true;
-            this.B23.VisibleIndex = 38;
+            this.B23.VisibleIndex = 41;
             this.B23.Width = 35;
             // 
             // B24
@@ -714,7 +720,7 @@
             this.B24.MinWidth = 35;
             this.B24.Name = "B24";
             this.B24.Visible = true;
-            this.B24.VisibleIndex = 39;
+            this.B24.VisibleIndex = 42;
             this.B24.Width = 35;
             // 
             // B25
@@ -724,7 +730,7 @@
             this.B25.MinWidth = 35;
             this.B25.Name = "B25";
             this.B25.Visible = true;
-            this.B25.VisibleIndex = 40;
+            this.B25.VisibleIndex = 43;
             this.B25.Width = 35;
             // 
             // B26
@@ -734,7 +740,7 @@
             this.B26.MinWidth = 35;
             this.B26.Name = "B26";
             this.B26.Visible = true;
-            this.B26.VisibleIndex = 41;
+            this.B26.VisibleIndex = 44;
             this.B26.Width = 35;
             // 
             // B27
@@ -744,7 +750,7 @@
             this.B27.MinWidth = 35;
             this.B27.Name = "B27";
             this.B27.Visible = true;
-            this.B27.VisibleIndex = 42;
+            this.B27.VisibleIndex = 45;
             this.B27.Width = 35;
             // 
             // B28
@@ -754,7 +760,7 @@
             this.B28.MinWidth = 35;
             this.B28.Name = "B28";
             this.B28.Visible = true;
-            this.B28.VisibleIndex = 43;
+            this.B28.VisibleIndex = 46;
             this.B28.Width = 35;
             // 
             // B29
@@ -764,7 +770,7 @@
             this.B29.MinWidth = 35;
             this.B29.Name = "B29";
             this.B29.Visible = true;
-            this.B29.VisibleIndex = 44;
+            this.B29.VisibleIndex = 47;
             this.B29.Width = 35;
             // 
             // B30
@@ -774,7 +780,7 @@
             this.B30.MinWidth = 35;
             this.B30.Name = "B30";
             this.B30.Visible = true;
-            this.B30.VisibleIndex = 45;
+            this.B30.VisibleIndex = 48;
             this.B30.Width = 35;
             // 
             // B31
@@ -784,7 +790,7 @@
             this.B31.MinWidth = 35;
             this.B31.Name = "B31";
             this.B31.Visible = true;
-            this.B31.VisibleIndex = 46;
+            this.B31.VisibleIndex = 49;
             this.B31.Width = 35;
             // 
             // B32
@@ -794,7 +800,7 @@
             this.B32.MinWidth = 35;
             this.B32.Name = "B32";
             this.B32.Visible = true;
-            this.B32.VisibleIndex = 47;
+            this.B32.VisibleIndex = 50;
             this.B32.Width = 35;
             // 
             // B33
@@ -804,7 +810,7 @@
             this.B33.MinWidth = 35;
             this.B33.Name = "B33";
             this.B33.Visible = true;
-            this.B33.VisibleIndex = 48;
+            this.B33.VisibleIndex = 51;
             this.B33.Width = 35;
             // 
             // B34
@@ -814,7 +820,7 @@
             this.B34.MinWidth = 35;
             this.B34.Name = "B34";
             this.B34.Visible = true;
-            this.B34.VisibleIndex = 49;
+            this.B34.VisibleIndex = 52;
             this.B34.Width = 35;
             // 
             // B35
@@ -824,7 +830,7 @@
             this.B35.MinWidth = 35;
             this.B35.Name = "B35";
             this.B35.Visible = true;
-            this.B35.VisibleIndex = 50;
+            this.B35.VisibleIndex = 53;
             this.B35.Width = 35;
             // 
             // B36
@@ -834,7 +840,7 @@
             this.B36.MinWidth = 35;
             this.B36.Name = "B36";
             this.B36.Visible = true;
-            this.B36.VisibleIndex = 51;
+            this.B36.VisibleIndex = 54;
             this.B36.Width = 35;
             // 
             // B37
@@ -844,7 +850,7 @@
             this.B37.MinWidth = 35;
             this.B37.Name = "B37";
             this.B37.Visible = true;
-            this.B37.VisibleIndex = 52;
+            this.B37.VisibleIndex = 55;
             this.B37.Width = 35;
             // 
             // B38
@@ -854,7 +860,7 @@
             this.B38.MinWidth = 35;
             this.B38.Name = "B38";
             this.B38.Visible = true;
-            this.B38.VisibleIndex = 53;
+            this.B38.VisibleIndex = 56;
             this.B38.Width = 35;
             // 
             // B39
@@ -864,7 +870,7 @@
             this.B39.MinWidth = 35;
             this.B39.Name = "B39";
             this.B39.Visible = true;
-            this.B39.VisibleIndex = 54;
+            this.B39.VisibleIndex = 57;
             this.B39.Width = 35;
             // 
             // B40
@@ -874,7 +880,7 @@
             this.B40.MinWidth = 35;
             this.B40.Name = "B40";
             this.B40.Visible = true;
-            this.B40.VisibleIndex = 55;
+            this.B40.VisibleIndex = 58;
             this.B40.Width = 35;
             // 
             // B41
@@ -884,7 +890,7 @@
             this.B41.MinWidth = 35;
             this.B41.Name = "B41";
             this.B41.Visible = true;
-            this.B41.VisibleIndex = 56;
+            this.B41.VisibleIndex = 59;
             this.B41.Width = 35;
             // 
             // B42
@@ -894,7 +900,7 @@
             this.B42.MinWidth = 35;
             this.B42.Name = "B42";
             this.B42.Visible = true;
-            this.B42.VisibleIndex = 57;
+            this.B42.VisibleIndex = 60;
             this.B42.Width = 35;
             // 
             // B43
@@ -904,7 +910,7 @@
             this.B43.MinWidth = 35;
             this.B43.Name = "B43";
             this.B43.Visible = true;
-            this.B43.VisibleIndex = 58;
+            this.B43.VisibleIndex = 61;
             this.B43.Width = 35;
             // 
             // B44
@@ -914,7 +920,7 @@
             this.B44.MinWidth = 35;
             this.B44.Name = "B44";
             this.B44.Visible = true;
-            this.B44.VisibleIndex = 59;
+            this.B44.VisibleIndex = 62;
             this.B44.Width = 35;
             // 
             // B45
@@ -924,7 +930,7 @@
             this.B45.MinWidth = 35;
             this.B45.Name = "B45";
             this.B45.Visible = true;
-            this.B45.VisibleIndex = 60;
+            this.B45.VisibleIndex = 63;
             this.B45.Width = 35;
             // 
             // B46
@@ -934,7 +940,7 @@
             this.B46.MinWidth = 35;
             this.B46.Name = "B46";
             this.B46.Visible = true;
-            this.B46.VisibleIndex = 61;
+            this.B46.VisibleIndex = 64;
             this.B46.Width = 35;
             // 
             // B47
@@ -944,7 +950,7 @@
             this.B47.MinWidth = 35;
             this.B47.Name = "B47";
             this.B47.Visible = true;
-            this.B47.VisibleIndex = 62;
+            this.B47.VisibleIndex = 65;
             this.B47.Width = 35;
             // 
             // B48
@@ -954,7 +960,7 @@
             this.B48.MinWidth = 35;
             this.B48.Name = "B48";
             this.B48.Visible = true;
-            this.B48.VisibleIndex = 63;
+            this.B48.VisibleIndex = 66;
             this.B48.Width = 35;
             // 
             // B49
@@ -964,7 +970,7 @@
             this.B49.MinWidth = 35;
             this.B49.Name = "B49";
             this.B49.Visible = true;
-            this.B49.VisibleIndex = 64;
+            this.B49.VisibleIndex = 67;
             this.B49.Width = 35;
             // 
             // B50
@@ -974,7 +980,7 @@
             this.B50.MinWidth = 35;
             this.B50.Name = "B50";
             this.B50.Visible = true;
-            this.B50.VisibleIndex = 65;
+            this.B50.VisibleIndex = 68;
             this.B50.Width = 35;
             // 
             // B51
@@ -984,7 +990,7 @@
             this.B51.MinWidth = 35;
             this.B51.Name = "B51";
             this.B51.Visible = true;
-            this.B51.VisibleIndex = 66;
+            this.B51.VisibleIndex = 69;
             this.B51.Width = 35;
             // 
             // B52
@@ -994,7 +1000,7 @@
             this.B52.MinWidth = 35;
             this.B52.Name = "B52";
             this.B52.Visible = true;
-            this.B52.VisibleIndex = 67;
+            this.B52.VisibleIndex = 70;
             this.B52.Width = 35;
             // 
             // B53
@@ -1004,7 +1010,7 @@
             this.B53.MinWidth = 35;
             this.B53.Name = "B53";
             this.B53.Visible = true;
-            this.B53.VisibleIndex = 68;
+            this.B53.VisibleIndex = 71;
             this.B53.Width = 35;
             // 
             // B54
@@ -1014,7 +1020,7 @@
             this.B54.MinWidth = 35;
             this.B54.Name = "B54";
             this.B54.Visible = true;
-            this.B54.VisibleIndex = 69;
+            this.B54.VisibleIndex = 72;
             this.B54.Width = 35;
             // 
             // B55
@@ -1024,7 +1030,7 @@
             this.B55.MinWidth = 35;
             this.B55.Name = "B55";
             this.B55.Visible = true;
-            this.B55.VisibleIndex = 70;
+            this.B55.VisibleIndex = 73;
             this.B55.Width = 35;
             // 
             // B56
@@ -1034,7 +1040,7 @@
             this.B56.MinWidth = 35;
             this.B56.Name = "B56";
             this.B56.Visible = true;
-            this.B56.VisibleIndex = 71;
+            this.B56.VisibleIndex = 74;
             this.B56.Width = 35;
             // 
             // B57
@@ -1044,7 +1050,7 @@
             this.B57.MinWidth = 35;
             this.B57.Name = "B57";
             this.B57.Visible = true;
-            this.B57.VisibleIndex = 72;
+            this.B57.VisibleIndex = 75;
             this.B57.Width = 35;
             // 
             // B58
@@ -1054,7 +1060,7 @@
             this.B58.MinWidth = 35;
             this.B58.Name = "B58";
             this.B58.Visible = true;
-            this.B58.VisibleIndex = 73;
+            this.B58.VisibleIndex = 76;
             this.B58.Width = 35;
             // 
             // B59
@@ -1064,7 +1070,7 @@
             this.B59.MinWidth = 35;
             this.B59.Name = "B59";
             this.B59.Visible = true;
-            this.B59.VisibleIndex = 74;
+            this.B59.VisibleIndex = 77;
             this.B59.Width = 35;
             // 
             // B60
@@ -1074,7 +1080,7 @@
             this.B60.MinWidth = 35;
             this.B60.Name = "B60";
             this.B60.Visible = true;
-            this.B60.VisibleIndex = 75;
+            this.B60.VisibleIndex = 78;
             this.B60.Width = 35;
             // 
             // imageList1
@@ -1225,6 +1231,33 @@
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(75, 38);
             this.m_cmd_xuat_excel.TabIndex = 7;
             // 
+            // SDT_HS
+            // 
+            this.SDT_HS.Caption = "SDT";
+            this.SDT_HS.FieldName = "SDT_HS";
+            this.SDT_HS.Name = "SDT_HS";
+            this.SDT_HS.Visible = true;
+            this.SDT_HS.VisibleIndex = 4;
+            this.SDT_HS.Width = 78;
+            // 
+            // EMAIL_HS
+            // 
+            this.EMAIL_HS.Caption = "Email";
+            this.EMAIL_HS.FieldName = "EMAIL_HS";
+            this.EMAIL_HS.Name = "EMAIL_HS";
+            this.EMAIL_HS.Visible = true;
+            this.EMAIL_HS.VisibleIndex = 6;
+            this.EMAIL_HS.Width = 109;
+            // 
+            // FACEBOOK
+            // 
+            this.FACEBOOK.Caption = "FB";
+            this.FACEBOOK.FieldName = "FACEBOOK";
+            this.FACEBOOK.Name = "FACEBOOK";
+            this.FACEBOOK.Visible = true;
+            this.FACEBOOK.VisibleIndex = 5;
+            this.FACEBOOK.Width = 78;
+            // 
             // f418_bao_cao_diem_danh_tong_hop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1347,5 +1380,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn B59;
         private DevExpress.XtraGrid.Columns.GridColumn B60;
         private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_excel;
+        private DevExpress.XtraGrid.Columns.GridColumn SDT_HS;
+        private DevExpress.XtraGrid.Columns.GridColumn EMAIL_HS;
+        private DevExpress.XtraGrid.Columns.GridColumn FACEBOOK;
     }
 }

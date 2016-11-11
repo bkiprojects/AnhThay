@@ -63,6 +63,9 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
+            this.SDT_HS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.EMAIL_HS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FACEBOOK = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -137,7 +140,10 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn7});
+            this.gridColumn7,
+            this.SDT_HS,
+            this.EMAIL_HS,
+            this.FACEBOOK});
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.GroupCount = 1;
             this.gridView2.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -151,6 +157,8 @@
             this.gridView2.OptionsFind.FindNullPrompt = "Tìm kiếm...";
             this.gridView2.OptionsFind.ShowClearButton = false;
             this.gridView2.OptionsFind.ShowCloseButton = false;
+            this.gridView2.OptionsView.ColumnAutoWidth = false;
+            this.gridView2.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.gridView2.OptionsView.ShowFooter = true;
             this.gridView2.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.ShortcutKey, DevExpress.Data.ColumnSortOrder.Ascending)});
@@ -193,7 +201,7 @@
             this.HO.Name = "HO";
             this.HO.Visible = true;
             this.HO.VisibleIndex = 2;
-            this.HO.Width = 100;
+            this.HO.Width = 92;
             // 
             // TEN
             // 
@@ -202,7 +210,7 @@
             this.TEN.Name = "TEN";
             this.TEN.Visible = true;
             this.TEN.VisibleIndex = 3;
-            this.TEN.Width = 80;
+            this.TEN.Width = 64;
             // 
             // HO_TEN
             // 
@@ -216,7 +224,7 @@
             this.TagName.FieldName = "TagName";
             this.TagName.Name = "TagName";
             this.TagName.Visible = true;
-            this.TagName.VisibleIndex = 4;
+            this.TagName.VisibleIndex = 7;
             // 
             // HOC_PHI
             // 
@@ -227,7 +235,7 @@
             this.HOC_PHI.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "HOC_PHI", "{0:n0}")});
             this.HOC_PHI.Visible = true;
-            this.HOC_PHI.VisibleIndex = 5;
+            this.HOC_PHI.VisibleIndex = 8;
             this.HOC_PHI.Width = 140;
             // 
             // repositoryItemTextEdit1
@@ -247,7 +255,7 @@
             this.GIAM_TRU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "GIAM_TRU", "{0:n0}")});
             this.GIAM_TRU.Visible = true;
-            this.GIAM_TRU.VisibleIndex = 6;
+            this.GIAM_TRU.VisibleIndex = 9;
             this.GIAM_TRU.Width = 140;
             // 
             // CON_PHAI_THU
@@ -259,7 +267,7 @@
             this.CON_PHAI_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CON_PHAI_THU", "{0:n0}")});
             this.CON_PHAI_THU.Visible = true;
-            this.CON_PHAI_THU.VisibleIndex = 7;
+            this.CON_PHAI_THU.VisibleIndex = 10;
             this.CON_PHAI_THU.Width = 140;
             // 
             // THUC_THU
@@ -271,7 +279,7 @@
             this.THUC_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "THUC_THU", "{0:n0}")});
             this.THUC_THU.Visible = true;
-            this.THUC_THU.VisibleIndex = 8;
+            this.THUC_THU.VisibleIndex = 11;
             this.THUC_THU.Width = 140;
             // 
             // CHENH_LECH
@@ -283,7 +291,7 @@
             this.CHENH_LECH.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CHENH_LECH", "{0:n0}")});
             this.CHENH_LECH.Visible = true;
-            this.CHENH_LECH.VisibleIndex = 9;
+            this.CHENH_LECH.VisibleIndex = 12;
             this.CHENH_LECH.Width = 140;
             // 
             // gridColumn1
@@ -306,7 +314,7 @@
             this.gridColumn2.FieldName = "DI_HOC";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 10;
+            this.gridColumn2.VisibleIndex = 13;
             // 
             // gridColumn3
             // 
@@ -314,7 +322,7 @@
             this.gridColumn3.FieldName = "NGHI_HOC";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 11;
+            this.gridColumn3.VisibleIndex = 14;
             // 
             // gridColumn4
             // 
@@ -322,7 +330,7 @@
             this.gridColumn4.FieldName = "OP_3";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 12;
+            this.gridColumn4.VisibleIndex = 15;
             // 
             // gridColumn5
             // 
@@ -330,7 +338,7 @@
             this.gridColumn5.FieldName = "OP_4";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 13;
+            this.gridColumn5.VisibleIndex = 16;
             // 
             // gridColumn6
             // 
@@ -338,7 +346,7 @@
             this.gridColumn6.FieldName = "OP_5";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 14;
+            this.gridColumn6.VisibleIndex = 17;
             // 
             // gridColumn7
             // 
@@ -346,7 +354,7 @@
             this.gridColumn7.FieldName = "OP_6";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 15;
+            this.gridColumn7.VisibleIndex = 18;
             // 
             // imageList1
             // 
@@ -496,6 +504,33 @@
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(75, 38);
             this.m_cmd_xuat_excel.TabIndex = 6;
             // 
+            // SDT_HS
+            // 
+            this.SDT_HS.Caption = "SĐT";
+            this.SDT_HS.FieldName = "SDT_HS";
+            this.SDT_HS.Name = "SDT_HS";
+            this.SDT_HS.Visible = true;
+            this.SDT_HS.VisibleIndex = 4;
+            this.SDT_HS.Width = 83;
+            // 
+            // EMAIL_HS
+            // 
+            this.EMAIL_HS.Caption = "Email";
+            this.EMAIL_HS.FieldName = "EMAIL_HS";
+            this.EMAIL_HS.Name = "EMAIL_HS";
+            this.EMAIL_HS.Visible = true;
+            this.EMAIL_HS.VisibleIndex = 6;
+            this.EMAIL_HS.Width = 87;
+            // 
+            // FACEBOOK
+            // 
+            this.FACEBOOK.Caption = "FB";
+            this.FACEBOOK.FieldName = "FACEBOOK";
+            this.FACEBOOK.Name = "FACEBOOK";
+            this.FACEBOOK.Visible = true;
+            this.FACEBOOK.VisibleIndex = 5;
+            this.FACEBOOK.Width = 98;
+            // 
             // f416_bao_cao_kem_diem_danh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -558,5 +593,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_excel;
+        private DevExpress.XtraGrid.Columns.GridColumn SDT_HS;
+        private DevExpress.XtraGrid.Columns.GridColumn EMAIL_HS;
+        private DevExpress.XtraGrid.Columns.GridColumn FACEBOOK;
     }
 }
