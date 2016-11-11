@@ -16,6 +16,9 @@ using BKI_QLTTQuocAnh.NghiepVu;
 using BKI_QLTTQuocAnh.NghiepVu.Attendance;
 using IP.Core.IPSystemAdmin;
 using DevExpress.XtraEditors;
+using System.Deployment;
+using System.Deployment.Application;
+
 namespace BKI_QLTTQuocAnh
 {
     public partial class f388_main : DevExpress.XtraBars.Ribbon.RibbonForm
@@ -26,6 +29,13 @@ namespace BKI_QLTTQuocAnh
             format_control();
             MdiManager.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             ribbon.SelectedPage = ribbonPage3;
+
+            Version myVersion = new Version();
+
+            if(ApplicationDeployment.IsNetworkDeployed)
+                myVersion = ApplicationDeployment.CurrentDeployment.CurrentVersion;
+
+            Text = "PHẦN MỀM QUẢN LÝ TÀI CHÍNH TRUNG TÂM ANH THẦY v_" + myVersion.ToString();
         }
         public void display(ref IP.Core.IPCommon.IPConstants.HowUserWantTo_Exit_MainForm v_exitmode)
         {
