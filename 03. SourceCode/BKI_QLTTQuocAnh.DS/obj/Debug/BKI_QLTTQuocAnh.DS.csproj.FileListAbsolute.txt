@@ -15,3 +15,9 @@ C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\B
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.csprojResolveAssemblyReference.cache
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.dll
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.dll.config
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\bin\Debug\BKI_QLTTQuocAnh.DS.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.csprojResolveAssemblyReference.cache
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.DS\obj\Debug\BKI_QLTTQuocAnh.DS.pdb

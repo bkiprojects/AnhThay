@@ -144,6 +144,27 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.Load += frm_bao_cao_so_giao_dich_theo_lop_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             //m_sle_lop.EditValueChanged += m_sle_lop_EditValueChanged;
+            m_cmd_xuat_excel.Click += M_cmd_xuat_excel_Click;
+        }
+
+        private void M_cmd_xuat_excel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FolderBrowserDialog dlg = new FolderBrowserDialog();
+                string path = "";
+                if(dlg.ShowDialog() == DialogResult.OK)
+                {
+                    path = dlg.SelectedPath;
+                }
+                path = path + "/Bao cao diem danh_" + DateTime.Now.ToString("dd-mm-yyyy") + ".xlsx";
+
+                gridView2.ExportToXlsx(path);
+            }
+            catch(Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
         }
 
         void m_sle_lop_EditValueChanged(object sender, EventArgs e)

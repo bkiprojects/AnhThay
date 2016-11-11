@@ -28,3 +28,13 @@ C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IP
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPBusinessService.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPBusinessService.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPBusinessService.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPException.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPException.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\bin\IPException.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.vbprojResolveAssemblyReference.cache
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPBusinessService\obj\Debug\IPBusinessService.pdb

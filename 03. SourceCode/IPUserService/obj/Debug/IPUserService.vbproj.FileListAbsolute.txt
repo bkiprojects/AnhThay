@@ -97,3 +97,29 @@ C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPUserService\obj\Debug\IPUser
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPUserService\obj\Debug\IPUserService.dll
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPUserService\obj\Debug\IPUserService.xml
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPUserService\obj\Debug\IPUserService.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPUserService.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPUserService.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPUserService.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\C1.Win.C1FlexGrid.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPBusinessService.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPCommon.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPData.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPException.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\C1.Win.C1FlexGrid.Classic.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\CrystalDecisions.Shared.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\CrystalDecisions.Windows.Forms.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\C1.Common.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\CrystalDecisions.ReportSource.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPBusinessService.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPBusinessService.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPCommon.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPCommon.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPData.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPData.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPException.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\bin\IPException.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\obj\Debug\IPUserService.vbprojResolveAssemblyReference.cache
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\obj\Debug\IPUserService.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\obj\Debug\IPUserService.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPUserService\obj\Debug\IPUserService.pdb

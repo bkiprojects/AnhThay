@@ -18,3 +18,10 @@ C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPExcept
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.dll
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.xml
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\bin\IPException.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\bin\IPException.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\bin\IPException.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.vbprojResolveAssemblyReference.cache
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.pdb

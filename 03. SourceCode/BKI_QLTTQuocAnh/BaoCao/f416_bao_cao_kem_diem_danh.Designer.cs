@@ -62,6 +62,7 @@
             this.m_lbl_header = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -477,12 +478,23 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_cmd_xuat_excel);
             this.panel2.Controls.Add(this.simpleButton2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 574);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(925, 38);
             this.panel2.TabIndex = 6;
+            // 
+            // m_cmd_xuat_excel
+            // 
+            this.m_cmd_xuat_excel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.m_cmd_xuat_excel.Image = ((System.Drawing.Image)(resources.GetObject("m_cmd_xuat_excel.Image")));
+            this.m_cmd_xuat_excel.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.m_cmd_xuat_excel.Location = new System.Drawing.Point(75, 0);
+            this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
+            this.m_cmd_xuat_excel.Size = new System.Drawing.Size(75, 38);
+            this.m_cmd_xuat_excel.TabIndex = 6;
             // 
             // f416_bao_cao_kem_diem_danh
             // 
@@ -545,5 +557,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_xuat_excel;
     }
 }

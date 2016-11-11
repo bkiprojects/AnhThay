@@ -159,3 +159,36 @@ C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\I
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.csprojResolveAssemblyReference.cache
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.dll
 C:\Users\tuyen\Desktop\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\BKI_QLTTQuocAnh.US.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\BKI_QLTTQuocAnh.US.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\BKI_QLTTQuocAnh.DS.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPBusinessService.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPCommon.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPData.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPException.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPSystemAdmin.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPUserService.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\C1.Win.C1FlexGrid.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\C1.Win.C1FlexGrid.Classic.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\SiSButton.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\C1.Common.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\BKI_QLTTQuocAnh.DS.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPBusinessService.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPBusinessService.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPCommon.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPCommon.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPData.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPData.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPException.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPException.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPSystemAdmin.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPSystemAdmin.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPUserService.pdb
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\bin\Debug\IPUserService.xml
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.csprojResolveAssemblyReference.cache
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.dll
+C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh.US\obj\Debug\BKI_QLTTQuocAnh.US.pdb
