@@ -55,6 +55,7 @@ namespace BKI_QLTTQuocAnh
                     //page
                     ribbonPage2.Visible = false;
                     ribbonPage5.Visible = false;
+                    ribbonPageGroup2.Visible = false;
                     ribbonPageGroup4.Visible = false;
                     ribbonPageGroup5.Visible = false;
                     ribbonPageGroup9.Visible = false;
@@ -67,10 +68,10 @@ namespace BKI_QLTTQuocAnh
                     break;
                 case CONST_NHOM_NGUOI_SU_DUNG.ID_NHAN_VIEN:
                     //page
-                    ribbonPage1.Visible = false;
                     ribbonPage2.Visible = false;
                     ribbonPage4.Visible = false;
                     ribbonPage5.Visible = false;
+                    ribbonPageGroup2.Visible = false;
                     ribbonPageGroup4.Visible = false;
                     ribbonPageGroup5.Visible = false;
                     ribbonPageGroup9.Visible = false;
@@ -80,9 +81,9 @@ namespace BKI_QLTTQuocAnh
                     break;
                 case CONST_NHOM_NGUOI_SU_DUNG.ID_THU_QUY:
                     //page
-                    ribbonPage1.Visible = false;
                     ribbonPage2.Visible = false;
                     ribbonPage5.Visible = false;
+                    ribbonPageGroup2.Visible = false;
                     ribbonPageGroup4.Visible = false;
                     ribbonPageGroup5.Visible = false;
                     ribbonPageGroup9.Visible = false;
@@ -95,9 +96,9 @@ namespace BKI_QLTTQuocAnh
                     break;
                 case CONST_NHOM_NGUOI_SU_DUNG.ID_TRO_GIANG:
                     //page
-                    ribbonPage1.Visible = false;
                     ribbonPage2.Visible = false;
                     ribbonPage4.Visible = false;
+                    ribbonPageGroup2.Visible = false;
                     ribbonPageGroup6.Visible = false;
                     //button
                     
