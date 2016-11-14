@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>9e69Cp04U7+HauB03bHOE/qhQvk=</dsig:DigestValue>
+        <dsig:DigestValue>rv73i1eVH+zRjN8SLKKZbtjPHOc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2151,13 +2151,13 @@
       <dsig:DigestValue>folPqtEFkA3SbkNzjpQslOupor0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="BKI_QLTTQuocAnh.exe.config" size="4242">
+  <file name="BKI_QLTTQuocAnh.exe.config" size="4256">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>sKENJ0jsul1DuR21kiXVtto8QSE=</dsig:DigestValue>
+      <dsig:DigestValue>kucaAgoMljo0d3BH6N2XSE0Ypf4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\1431468308_ok.ico" size="106609">
