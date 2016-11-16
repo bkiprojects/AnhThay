@@ -57,6 +57,9 @@ namespace DAL
             parameters.Add("@Notes", studentTag.Notes);
             parameters.Add("@TagDate", studentTag.TagDate);
 
+            parameters.Add("@FeeNotes", studentTag.FeeNotes);
+            parameters.Add("@StudyNotes", studentTag.StudyNotes);
+
             AnhThayDbContext.Context.Connection.Execute(sql: procedure
                 , param: parameters
                 , commandType: CommandType.StoredProcedure);
@@ -72,6 +75,9 @@ namespace DAL
 
             parameters.Add("@Notes", studentTag.Notes);
             parameters.Add("@TagDate", studentTag.TagDate);
+
+            parameters.Add("@FeeNotes", studentTag.FeeNotes);
+            parameters.Add("@StudyNotes", studentTag.StudyNotes);
 
             AnhThayDbContext.Context.Connection.Execute(sql: procedure
                 , param: parameters

@@ -46,6 +46,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.m_lbl_ma_hoc_sinh = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.m_txt_feeNotes = new DevExpress.XtraEditors.MemoEdit();
+            this.m_txt_studyNotes = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
@@ -56,6 +60,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_feeNotes.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_studyNotes.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -63,15 +69,15 @@
             this.panelControl1.Controls.Add(this.m_cmd_save);
             this.panelControl1.Controls.Add(this.m_cmd_exit);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(0, 249);
+            this.panelControl1.Location = new System.Drawing.Point(0, 415);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(428, 38);
+            this.panelControl1.Size = new System.Drawing.Size(570, 38);
             this.panelControl1.TabIndex = 0;
             // 
             // m_cmd_save
             // 
             this.m_cmd_save.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_save.Location = new System.Drawing.Point(276, 2);
+            this.m_cmd_save.Location = new System.Drawing.Point(418, 2);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(75, 34);
             this.m_cmd_save.TabIndex = 0;
@@ -81,7 +87,7 @@
             // m_cmd_exit
             // 
             this.m_cmd_exit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_exit.Location = new System.Drawing.Point(351, 2);
+            this.m_cmd_exit.Location = new System.Drawing.Point(493, 2);
             this.m_cmd_exit.Name = "m_cmd_exit";
             this.m_cmd_exit.Size = new System.Drawing.Size(75, 34);
             this.m_cmd_exit.TabIndex = 1;
@@ -90,25 +96,29 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.m_txt_studyNotes);
+            this.panelControl2.Controls.Add(this.m_txt_feeNotes);
             this.panelControl2.Controls.Add(this.m_txt_note);
             this.panelControl2.Controls.Add(this.m_le_tag);
             this.panelControl2.Controls.Add(this.m_sle_lop);
             this.panelControl2.Controls.Add(this.m_sle_ma_hv);
             this.panelControl2.Controls.Add(this.label1);
+            this.panelControl2.Controls.Add(this.label5);
+            this.panelControl2.Controls.Add(this.label4);
             this.panelControl2.Controls.Add(this.label3);
             this.panelControl2.Controls.Add(this.label2);
             this.panelControl2.Controls.Add(this.m_lbl_ma_hoc_sinh);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(428, 249);
+            this.panelControl2.Size = new System.Drawing.Size(570, 415);
             this.panelControl2.TabIndex = 1;
             // 
             // m_txt_note
             // 
-            this.m_txt_note.Location = new System.Drawing.Point(141, 129);
+            this.m_txt_note.Location = new System.Drawing.Point(141, 331);
             this.m_txt_note.Name = "m_txt_note";
-            this.m_txt_note.Size = new System.Drawing.Size(263, 96);
+            this.m_txt_note.Size = new System.Drawing.Size(403, 75);
             this.m_txt_note.TabIndex = 17;
             // 
             // m_le_tag
@@ -120,7 +130,7 @@
             this.m_le_tag.Properties.DisplayMember = "TagName";
             this.m_le_tag.Properties.NullText = "--Chọn tag--";
             this.m_le_tag.Properties.ValueMember = "TagId";
-            this.m_le_tag.Size = new System.Drawing.Size(263, 20);
+            this.m_le_tag.Size = new System.Drawing.Size(403, 20);
             this.m_le_tag.TabIndex = 16;
             // 
             // m_sle_lop
@@ -132,7 +142,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_sle_lop.Properties.NullText = "Chọn lớp";
             this.m_sle_lop.Properties.View = this.gridView1;
-            this.m_sle_lop.Size = new System.Drawing.Size(263, 20);
+            this.m_sle_lop.Size = new System.Drawing.Size(403, 20);
             this.m_sle_lop.TabIndex = 13;
             this.m_sle_lop.EditValueChanged += new System.EventHandler(this.m_sle_lop_EditValueChanged);
             // 
@@ -154,7 +164,7 @@
             this.m_sle_ma_hv.Properties.NullText = "Chọn HV";
             this.m_sle_ma_hv.Properties.ValueMember = "StudentId";
             this.m_sle_ma_hv.Properties.View = this.searchLookUpEdit1View;
-            this.m_sle_ma_hv.Size = new System.Drawing.Size(263, 20);
+            this.m_sle_ma_hv.Size = new System.Drawing.Size(403, 20);
             this.m_sle_ma_hv.TabIndex = 15;
             // 
             // searchLookUpEdit1View
@@ -210,27 +220,27 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Lớp";
+            this.label1.Text = "Lớp *)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 132);
+            this.label3.Location = new System.Drawing.Point(20, 334);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Note";
+            this.label3.Text = "Ghi chú khác";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(20, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
+            this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Tag(*)";
+            this.label2.Text = "Tag";
             // 
             // m_lbl_ma_hoc_sinh
             // 
@@ -241,11 +251,43 @@
             this.m_lbl_ma_hoc_sinh.TabIndex = 14;
             this.m_lbl_ma_hoc_sinh.Text = "Mã HV(*)";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Ghi chú học phí";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 238);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Ghi chú QLHT";
+            // 
+            // m_txt_feeNotes
+            // 
+            this.m_txt_feeNotes.Location = new System.Drawing.Point(141, 132);
+            this.m_txt_feeNotes.Name = "m_txt_feeNotes";
+            this.m_txt_feeNotes.Size = new System.Drawing.Size(403, 89);
+            this.m_txt_feeNotes.TabIndex = 17;
+            // 
+            // m_txt_studyNotes
+            // 
+            this.m_txt_studyNotes.Location = new System.Drawing.Point(141, 235);
+            this.m_txt_studyNotes.Name = "m_txt_studyNotes";
+            this.m_txt_studyNotes.Size = new System.Drawing.Size(403, 90);
+            this.m_txt_studyNotes.TabIndex = 17;
+            // 
             // f382_update_tag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 287);
+            this.ClientSize = new System.Drawing.Size(570, 453);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.Name = "f382_update_tag";
@@ -262,6 +304,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_feeNotes.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_studyNotes.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,5 +330,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn SuffixName;
         private DevExpress.XtraGrid.Columns.GridColumn StudentCode;
         private DevExpress.XtraGrid.Columns.GridColumn BirthDay;
+        private DevExpress.XtraEditors.MemoEdit m_txt_studyNotes;
+        private DevExpress.XtraEditors.MemoEdit m_txt_feeNotes;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

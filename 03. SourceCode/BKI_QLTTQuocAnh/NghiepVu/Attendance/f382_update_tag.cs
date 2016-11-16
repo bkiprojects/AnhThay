@@ -48,6 +48,10 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
             m_sle_ma_hv.EditValue = studentTag.StudentId;
             m_le_tag.EditValue = studentTag.TagId;
             m_txt_note.Text = studentTag.Notes;
+
+            m_txt_feeNotes.Text = studentTag.FeeNotes;
+            m_txt_studyNotes.Text = studentTag.StudyNotes;
+
             m_sle_lop.Enabled = false;
             m_sle_ma_hv.Enabled = false;
             ShowDialog();
@@ -158,11 +162,11 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
                     return;
                 }
 
-                if(m_le_tag.EditValue == null)
-                {
-                    XtraMessageBox.Show("Chọn tag trước.", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
+                //if(m_le_tag.EditValue == null)
+                //{
+                //    XtraMessageBox.Show("Chọn tag trước.", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    return;
+                //}
                 if (_formMode == 1)
                 {
                     StudentTag obj = new StudentTag()
@@ -172,8 +176,14 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
                         StudentId = Convert.ToInt64(m_sle_ma_hv.EditValue),
 
                         TagDate = DateTime.Now.Date,
-                        TagId = Convert.ToInt32(m_le_tag.EditValue)
+
+                        FeeNotes = m_txt_feeNotes.Text,
+                        StudyNotes = m_txt_studyNotes.Text
                     };
+                    if(m_le_tag.EditValue != null)
+                    {
+                        obj.TagId = Convert.ToInt32(m_le_tag.EditValue);
+                    }
                     _tagRepository.addStudentTag(obj);
 
                     XtraMessageBox.Show("Thêm tag cho học viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK,
@@ -189,8 +199,15 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
                         StudentId = Convert.ToInt64(m_sle_ma_hv.EditValue),
 
                         TagDate = DateTime.Now.Date,
-                        TagId = Convert.ToInt32(m_le_tag.EditValue)
+                        //TagId = Convert.ToInt32(m_le_tag.EditValue),
+
+                        FeeNotes = m_txt_feeNotes.Text,
+                        StudyNotes = m_txt_studyNotes.Text
                     };
+                    if(m_le_tag.EditValue != null)
+                    {
+                        obj.TagId = Convert.ToInt32(m_le_tag.EditValue);
+                    }
 
                     _tagRepository.updateStudentTag(obj);
                     XtraMessageBox.Show("Cập nhật tag cho học viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK,

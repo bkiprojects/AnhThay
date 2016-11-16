@@ -68,6 +68,8 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
+            this.StudyNotes = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FeeNotes = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -134,6 +136,8 @@
             this.GIAM_TRU,
             this.CON_PHAI_THU,
             this.THUC_THU,
+            this.FeeNotes,
+            this.StudyNotes,
             this.CHENH_LECH,
             this.gridColumn1,
             this.ShortcutKey,
@@ -271,7 +275,7 @@
             this.CON_PHAI_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CON_PHAI_THU", "{0:n0}")});
             this.CON_PHAI_THU.Visible = true;
-            this.CON_PHAI_THU.VisibleIndex = 12;
+            this.CON_PHAI_THU.VisibleIndex = 14;
             this.CON_PHAI_THU.Width = 140;
             // 
             // THUC_THU
@@ -283,7 +287,7 @@
             this.THUC_THU.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "THUC_THU", "{0:n0}")});
             this.THUC_THU.Visible = true;
-            this.THUC_THU.VisibleIndex = 13;
+            this.THUC_THU.VisibleIndex = 15;
             this.THUC_THU.Width = 140;
             // 
             // CHENH_LECH
@@ -295,7 +299,7 @@
             this.CHENH_LECH.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CHENH_LECH", "{0:n0}")});
             this.CHENH_LECH.Visible = true;
-            this.CHENH_LECH.VisibleIndex = 14;
+            this.CHENH_LECH.VisibleIndex = 16;
             this.CHENH_LECH.Width = 140;
             // 
             // gridColumn1
@@ -318,7 +322,7 @@
             this.gridColumn2.FieldName = "DI_HOC";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 15;
+            this.gridColumn2.VisibleIndex = 17;
             // 
             // gridColumn3
             // 
@@ -326,7 +330,7 @@
             this.gridColumn3.FieldName = "NGHI_HOC";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 16;
+            this.gridColumn3.VisibleIndex = 18;
             // 
             // gridColumn4
             // 
@@ -334,7 +338,7 @@
             this.gridColumn4.FieldName = "OP_3";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 17;
+            this.gridColumn4.VisibleIndex = 19;
             // 
             // gridColumn5
             // 
@@ -342,7 +346,7 @@
             this.gridColumn5.FieldName = "OP_4";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 18;
+            this.gridColumn5.VisibleIndex = 20;
             // 
             // gridColumn6
             // 
@@ -350,7 +354,7 @@
             this.gridColumn6.FieldName = "OP_5";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 19;
+            this.gridColumn6.VisibleIndex = 21;
             // 
             // gridColumn7
             // 
@@ -358,7 +362,7 @@
             this.gridColumn7.FieldName = "OP_6";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 20;
+            this.gridColumn7.VisibleIndex = 22;
             // 
             // SDT_HS
             // 
@@ -552,6 +556,22 @@
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(75, 38);
             this.m_cmd_xuat_excel.TabIndex = 6;
             // 
+            // StudyNotes
+            // 
+            this.StudyNotes.Caption = "Ghi chú QLHT";
+            this.StudyNotes.FieldName = "StudyNotes";
+            this.StudyNotes.Name = "StudyNotes";
+            this.StudyNotes.Visible = true;
+            this.StudyNotes.VisibleIndex = 13;
+            // 
+            // FeeNotes
+            // 
+            this.FeeNotes.Caption = "Ghi chú học phí";
+            this.FeeNotes.FieldName = "FeeNotes";
+            this.FeeNotes.Name = "FeeNotes";
+            this.FeeNotes.Visible = true;
+            this.FeeNotes.VisibleIndex = 12;
+            // 
             // f416_bao_cao_kem_diem_danh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -619,5 +639,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn FACEBOOK;
         private DevExpress.XtraGrid.Columns.GridColumn NGAY_SINH;
         private DevExpress.XtraGrid.Columns.GridColumn TRUONG_DANG_HOC;
+        private DevExpress.XtraGrid.Columns.GridColumn FeeNotes;
+        private DevExpress.XtraGrid.Columns.GridColumn StudyNotes;
     }
 }

@@ -20,5 +20,8 @@ namespace Models.DTO
 
         public DateTime TagDate { get; set; }
         public string Notes { get; set; }
+
+        public string FeeNotes { get; set; }
+        public string StudyNotes { get; set; }
     }
 }

@@ -38,6 +38,8 @@
             this.StudentName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Tag = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Notes = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FeeNotes = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.StudyNotes = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemLookUpEditTag = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -112,7 +114,9 @@
             this.SuffixName,
             this.StudentName,
             this.Tag,
-            this.Notes});
+            this.Notes,
+            this.FeeNotes,
+            this.StudyNotes});
             this.gridViewTag.GridControl = this.gridControlTag;
             this.gridViewTag.GroupCount = 1;
             this.gridViewTag.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -125,6 +129,8 @@
             this.gridViewTag.OptionsFind.FindNullPrompt = "Tìm kiếm...";
             this.gridViewTag.OptionsFind.ShowClearButton = false;
             this.gridViewTag.OptionsFind.ShowCloseButton = false;
+            this.gridViewTag.OptionsView.ColumnAutoWidth = false;
+            this.gridViewTag.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             this.gridViewTag.OptionsView.ShowFooter = true;
             this.gridViewTag.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.Tag, DevExpress.Data.ColumnSortOrder.Ascending)});
@@ -196,12 +202,30 @@
             // 
             // Notes
             // 
-            this.Notes.Caption = "Notes";
+            this.Notes.Caption = "Ghi chú khác";
             this.Notes.FieldName = "Notes";
             this.Notes.Name = "Notes";
             this.Notes.Visible = true;
-            this.Notes.VisibleIndex = 4;
+            this.Notes.VisibleIndex = 6;
             this.Notes.Width = 395;
+            // 
+            // FeeNotes
+            // 
+            this.FeeNotes.Caption = "Ghi chú học phí";
+            this.FeeNotes.FieldName = "FeeNotes";
+            this.FeeNotes.Name = "FeeNotes";
+            this.FeeNotes.Visible = true;
+            this.FeeNotes.VisibleIndex = 4;
+            this.FeeNotes.Width = 178;
+            // 
+            // StudyNotes
+            // 
+            this.StudyNotes.Caption = "Ghi chú quản lý học tập";
+            this.StudyNotes.FieldName = "StudyNotes";
+            this.StudyNotes.Name = "StudyNotes";
+            this.StudyNotes.Visible = true;
+            this.StudyNotes.VisibleIndex = 5;
+            this.StudyNotes.Width = 210;
             // 
             // repositoryItemTextEdit1
             // 
@@ -404,5 +428,7 @@
         internal SIS.Controls.Button.SiSButton m_cmd_update;
         internal SIS.Controls.Button.SiSButton m_cmd_insert;
         private DevExpress.XtraGrid.Columns.GridColumn Notes;
+        private DevExpress.XtraGrid.Columns.GridColumn FeeNotes;
+        private DevExpress.XtraGrid.Columns.GridColumn StudyNotes;
     }
 }

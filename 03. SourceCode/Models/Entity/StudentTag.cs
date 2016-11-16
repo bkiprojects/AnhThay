@@ -9,10 +9,14 @@ namespace Models.Entity
     {
 
         public long StudentId { get; set; }
-        public int TagId { get; set; }
+        public int? TagId { get; set; }
         public int ClassId { get; set; }
 
-        public DateTime TagDate { get; set; }
+        public DateTime? TagDate { get; set; }
         public string Notes { get; set; }
+
+        public string FeeNotes { get; set; }
+
+        public string StudyNotes { get; set; }
     }
 }

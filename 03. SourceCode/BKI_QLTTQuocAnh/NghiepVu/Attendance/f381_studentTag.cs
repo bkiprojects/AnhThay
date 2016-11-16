@@ -177,13 +177,18 @@ namespace BKI_QLTTQuocAnh.BaoCao
                 var date = Convert.ToDateTime(gridViewTag.GetRowCellValue(gridViewTag.FocusedRowHandle, "TagDate"));
                 var tagId = Convert.ToInt32(gridViewTag.GetRowCellValue(gridViewTag.FocusedRowHandle, "TagId"));
 
+                var feeNotes = gridViewTag.GetRowCellValue(gridViewTag.FocusedRowHandle, "FeeNotes")?.ToString();
+                var studyNotes = gridViewTag.GetRowCellValue(gridViewTag.FocusedRowHandle, "StudyNotes")?.ToString();
                 var obj = new StudentTag()
                 {
                     ClassId = classId,
                     Notes = notes,
                     StudentId = studentId,
                     TagDate = date,
-                    TagId = tagId
+                    TagId = tagId,
+
+                    FeeNotes = feeNotes,
+                    StudyNotes = studyNotes
                 };
 
 
