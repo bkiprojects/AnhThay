@@ -46,7 +46,8 @@ namespace BKI_QLTTQuocAnh.NghiepVu.Attendance
             _formMode = 2;
             m_sle_lop.EditValue = studentTag.ClassId;
             m_sle_ma_hv.EditValue = studentTag.StudentId;
-            m_le_tag.EditValue = studentTag.TagId;
+            if(m_le_tag.EditValue != null && m_le_tag.EditValue.ToString() != "0")
+                m_le_tag.EditValue = studentTag.TagId;
             m_txt_note.Text = studentTag.Notes;
 
             m_txt_feeNotes.Text = studentTag.FeeNotes;

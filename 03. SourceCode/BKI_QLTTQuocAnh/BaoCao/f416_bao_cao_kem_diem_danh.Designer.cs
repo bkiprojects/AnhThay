@@ -401,7 +401,7 @@
             // 
             // TRUONG_DANG_HOC
             // 
-            this.TRUONG_DANG_HOC.Caption = "Trường đang học";
+            this.TRUONG_DANG_HOC.Caption = "Nơi làm việc, công tác";
             this.TRUONG_DANG_HOC.FieldName = "TRUONG_DANG_HOC";
             this.TRUONG_DANG_HOC.Name = "TRUONG_DANG_HOC";
             this.TRUONG_DANG_HOC.Visible = true;
