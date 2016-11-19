@@ -2157,7 +2157,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>ud6xFOpPacOfzfWSbrYPxyuqShs=</dsig:DigestValue>
+      <dsig:DigestValue>dXbNTNj5fvY/mtMOg/ML3rrAvPg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\1431468308_ok.ico" size="106609">
