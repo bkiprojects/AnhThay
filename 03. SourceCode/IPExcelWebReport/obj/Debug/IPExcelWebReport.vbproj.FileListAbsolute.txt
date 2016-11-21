@@ -49,3 +49,16 @@ C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. So
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.dll
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.xml
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\IPExcelWebReport.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\IPExcelWebReport.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\IPExcelWebReport.xml
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\C1.Win.C1FlexGrid.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\Interop.Excel.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\Interop.Microsoft.Office.Core.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\Interop.Office.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\stdole.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\C1.Common.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.vbprojResolveAssemblyReference.cache
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.xml
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.pdb

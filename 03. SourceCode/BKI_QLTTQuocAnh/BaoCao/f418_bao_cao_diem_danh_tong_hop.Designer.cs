@@ -1107,7 +1107,7 @@
             this.EMAIL_HS.FieldName = "EMAIL_HS";
             this.EMAIL_HS.Name = "EMAIL_HS";
             this.EMAIL_HS.Visible = true;
-            this.EMAIL_HS.VisibleIndex = 6;
+            this.EMAIL_HS.VisibleIndex = 5;
             this.EMAIL_HS.Width = 109;
             // 
             // FACEBOOK
@@ -1116,7 +1116,7 @@
             this.FACEBOOK.FieldName = "FACEBOOK";
             this.FACEBOOK.Name = "FACEBOOK";
             this.FACEBOOK.Visible = true;
-            this.FACEBOOK.VisibleIndex = 5;
+            this.FACEBOOK.VisibleIndex = 6;
             this.FACEBOOK.Width = 78;
             // 
             // NGAY_SINH

@@ -42,6 +42,8 @@
             this.GIAM_TRU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CON_PHAI_THU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.THUC_THU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FeeNotes = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.StudyNotes = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CHENH_LECH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ShortcutKey = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -68,8 +70,6 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_cmd_xuat_excel = new DevExpress.XtraEditors.SimpleButton();
-            this.StudyNotes = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.FeeNotes = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
@@ -290,6 +290,22 @@
             this.THUC_THU.VisibleIndex = 15;
             this.THUC_THU.Width = 140;
             // 
+            // FeeNotes
+            // 
+            this.FeeNotes.Caption = "Ghi chú học phí";
+            this.FeeNotes.FieldName = "FeeNotes";
+            this.FeeNotes.Name = "FeeNotes";
+            this.FeeNotes.Visible = true;
+            this.FeeNotes.VisibleIndex = 12;
+            // 
+            // StudyNotes
+            // 
+            this.StudyNotes.Caption = "Ghi chú QLHT";
+            this.StudyNotes.FieldName = "StudyNotes";
+            this.StudyNotes.Name = "StudyNotes";
+            this.StudyNotes.Visible = true;
+            this.StudyNotes.VisibleIndex = 13;
+            // 
             // CHENH_LECH
             // 
             this.CHENH_LECH.Caption = "Còn phải thu";
@@ -379,7 +395,7 @@
             this.EMAIL_HS.FieldName = "EMAIL_HS";
             this.EMAIL_HS.Name = "EMAIL_HS";
             this.EMAIL_HS.Visible = true;
-            this.EMAIL_HS.VisibleIndex = 6;
+            this.EMAIL_HS.VisibleIndex = 5;
             this.EMAIL_HS.Width = 87;
             // 
             // FACEBOOK
@@ -388,7 +404,7 @@
             this.FACEBOOK.FieldName = "FACEBOOK";
             this.FACEBOOK.Name = "FACEBOOK";
             this.FACEBOOK.Visible = true;
-            this.FACEBOOK.VisibleIndex = 5;
+            this.FACEBOOK.VisibleIndex = 6;
             this.FACEBOOK.Width = 98;
             // 
             // NGAY_SINH
@@ -555,22 +571,6 @@
             this.m_cmd_xuat_excel.Name = "m_cmd_xuat_excel";
             this.m_cmd_xuat_excel.Size = new System.Drawing.Size(75, 38);
             this.m_cmd_xuat_excel.TabIndex = 6;
-            // 
-            // StudyNotes
-            // 
-            this.StudyNotes.Caption = "Ghi chú QLHT";
-            this.StudyNotes.FieldName = "StudyNotes";
-            this.StudyNotes.Name = "StudyNotes";
-            this.StudyNotes.Visible = true;
-            this.StudyNotes.VisibleIndex = 13;
-            // 
-            // FeeNotes
-            // 
-            this.FeeNotes.Caption = "Ghi chú học phí";
-            this.FeeNotes.FieldName = "FeeNotes";
-            this.FeeNotes.Name = "FeeNotes";
-            this.FeeNotes.Visible = true;
-            this.FeeNotes.VisibleIndex = 12;
             // 
             // f416_bao_cao_kem_diem_danh
             // 

@@ -27,3 +27,13 @@ C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. So
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.xml
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.xml
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\bin\Debug\C1.Common.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbprojResolveAssemblyReference.cache
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.Resources.resources
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbproj.GenerateResource.Cache
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.xml
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.pdb
