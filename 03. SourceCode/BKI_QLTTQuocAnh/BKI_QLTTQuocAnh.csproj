@@ -577,6 +577,12 @@
     <Compile Include="NghiepVu\f370_chuyen_lop_cho_hoc_vien.designer.cs">
       <DependentUpon>f370_chuyen_lop_cho_hoc_vien.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\f380_update_student_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\f380_update_student_info.Designer.cs">
+      <DependentUpon>f380_update_student_info.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\FactoryPhieu.cs" />
     <Compile Include="NghiepVu\frm_clone_lop.cs">
       <SubType>Form</SubType>
@@ -820,6 +826,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\f370_chuyen_lop_cho_hoc_vien.resx">
       <DependentUpon>f370_chuyen_lop_cho_hoc_vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\f380_update_student_info.resx">
+      <DependentUpon>f380_update_student_info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\frm_clone_lop.resx">
       <DependentUpon>frm_clone_lop.cs</DependentUpon>

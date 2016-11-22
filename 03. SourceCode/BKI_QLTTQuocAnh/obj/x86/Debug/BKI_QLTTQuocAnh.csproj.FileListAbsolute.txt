@@ -1870,3 +1870,4 @@ C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. So
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.application
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.exe
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\BKI_QLTTQuocAnh\obj\x86\Debug\BKI_QLTTQuocAnh.NghiepVu.f380_update_student_info.resources

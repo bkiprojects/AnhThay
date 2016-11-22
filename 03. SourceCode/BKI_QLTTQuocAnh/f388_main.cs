@@ -689,12 +689,12 @@ namespace BKI_QLTTQuocAnh
         {
             try
             {
-                //f316_nghi_hoc v_frm = new f316_nghi_hoc();
+                f380_update_student_info v_frm = new f380_update_student_info();
 
-                //if (IsExistFormName(v_frm)) return;
+                if (IsExistFormName(v_frm)) return;
 
-                //v_frm.MdiParent = this;
-                //v_frm.Show();
+                v_frm.MdiParent = this;
+                v_frm.Show();
             }
             catch (Exception v_e)
             {
