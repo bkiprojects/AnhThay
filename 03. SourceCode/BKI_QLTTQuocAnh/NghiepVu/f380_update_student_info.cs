@@ -101,7 +101,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                gridView.ExportToXls(saveFileDialog1.FileName);
+                gridView.ExportToXlsx(saveFileDialog1.FileName);
                 XtraMessageBox.Show("Trích xuất dữ liệu thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
