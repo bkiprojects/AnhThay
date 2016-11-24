@@ -356,6 +356,7 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. Sou
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPCommon\bin\es\DevExpress.Sparkline.v14.1.Core.resources.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPCommon\bin\ja\DevExpress.Sparkline.v14.1.Core.resources.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPCommon\bin\ru\DevExpress.Sparkline.v14.1.Core.resources.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPCommon\obj\Debug\IPCommon.vbprojResolveAssemblyReference.cache
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.ctlButton2.resources
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.ctlButton3.resources
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPCommon\obj\Debug\IP.Core.IPCommon.ctlClock.resources

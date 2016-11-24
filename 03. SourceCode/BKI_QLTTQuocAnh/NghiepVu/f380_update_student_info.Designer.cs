@@ -164,8 +164,6 @@
             this.CurrentWorkplace});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
-            this.gridView.OptionsBehavior.Editable = false;
-            this.gridView.OptionsBehavior.ReadOnly = true;
             this.gridView.OptionsView.ShowFooter = true;
             this.gridView.OptionsView.ShowGroupPanel = false;
             // 

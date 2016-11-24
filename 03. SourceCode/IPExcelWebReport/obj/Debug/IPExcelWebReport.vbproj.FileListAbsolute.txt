@@ -71,6 +71,7 @@ C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. Sou
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\Interop.Office.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\stdole.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\bin\C1.Common.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.vbprojResolveAssemblyReference.cache
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.dll
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.xml
 C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPExcelWebReport\obj\Debug\IPExcelWebReport.pdb
