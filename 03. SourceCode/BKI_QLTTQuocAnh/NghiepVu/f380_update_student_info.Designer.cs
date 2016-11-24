@@ -60,9 +60,9 @@
             // 
             this.m_cmd_load_hoc_vien.Location = new System.Drawing.Point(18, 42);
             this.m_cmd_load_hoc_vien.Name = "m_cmd_load_hoc_vien";
-            this.m_cmd_load_hoc_vien.Size = new System.Drawing.Size(80, 23);
+            this.m_cmd_load_hoc_vien.Size = new System.Drawing.Size(101, 23);
             this.m_cmd_load_hoc_vien.TabIndex = 6;
-            this.m_cmd_load_hoc_vien.Text = "Lấy danh sách";
+            this.m_cmd_load_hoc_vien.Text = "B1. Lấy danh sách";
             this.m_cmd_load_hoc_vien.Click += new System.EventHandler(this.m_cmd_load_hoc_vien_Click);
             // 
             // m_sle_lop
@@ -110,29 +110,29 @@
             // 
             // m_cmd_save
             // 
-            this.m_cmd_save.Location = new System.Drawing.Point(297, 42);
+            this.m_cmd_save.Location = new System.Drawing.Point(371, 42);
             this.m_cmd_save.Name = "m_cmd_save";
             this.m_cmd_save.Size = new System.Drawing.Size(94, 23);
             this.m_cmd_save.TabIndex = 6;
-            this.m_cmd_save.Text = "Lưu";
+            this.m_cmd_save.Text = "B4. Lưu";
             this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
             // 
             // m_cmd_import
             // 
-            this.m_cmd_import.Location = new System.Drawing.Point(197, 42);
+            this.m_cmd_import.Location = new System.Drawing.Point(242, 42);
             this.m_cmd_import.Name = "m_cmd_import";
-            this.m_cmd_import.Size = new System.Drawing.Size(94, 23);
+            this.m_cmd_import.Size = new System.Drawing.Size(123, 23);
             this.m_cmd_import.TabIndex = 6;
-            this.m_cmd_import.Text = "Import danh sách";
+            this.m_cmd_import.Text = "B3. Import danh sách";
             this.m_cmd_import.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // m_cmd_export_excel
             // 
-            this.m_cmd_export_excel.Location = new System.Drawing.Point(104, 42);
+            this.m_cmd_export_excel.Location = new System.Drawing.Point(125, 42);
             this.m_cmd_export_excel.Name = "m_cmd_export_excel";
-            this.m_cmd_export_excel.Size = new System.Drawing.Size(87, 23);
+            this.m_cmd_export_excel.Size = new System.Drawing.Size(111, 23);
             this.m_cmd_export_excel.TabIndex = 6;
-            this.m_cmd_export_excel.Text = "Xuất danh sách";
+            this.m_cmd_export_excel.Text = "B2. Xuất danh sách";
             this.m_cmd_export_excel.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // gridControl
