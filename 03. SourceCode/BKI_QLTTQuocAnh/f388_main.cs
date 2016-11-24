@@ -106,12 +106,20 @@ namespace BKI_QLTTQuocAnh
                     break;
                 case CONST_NHOM_NGUOI_SU_DUNG.ID_TRO_GIANG:
                     //page
+
                     ribbonPage1.Visible = false;
-                    ribbonPage2.Visible = false;
-                    ribbonPage4.Visible = false;
-                    ribbonPageGroup6.Visible = false;
+                    m_cmd_lap_phai_thu_le.Visibility = BarItemVisibility.Never;
+                    m_cmd_lap_phai_thu_tu_dong.Visibility = BarItemVisibility.Never;
+                    m_cmd_lap_giam_tru.Visibility = BarItemVisibility.Never;
+                    m_cmd_lap_thuc_thu.Visibility = BarItemVisibility.Never;
+                    ribbonPage2.Visible = true;
+                    ribbonPage3.Visible = true;
+                    ribbonPage4.Visible = true;
+                    ribbonPage5.Visible = true;
+                    m_cmd_clone_lop.Visibility = BarItemVisibility.Never;
+
                     //button
-                    
+
 
                     break;
                 default:

@@ -1,21 +1,31 @@
 ﻿using BKI_QLTTQuocAnh.DS;
 using BKI_QLTTQuocAnh.DS.CDBNames;
 using BKI_QLTTQuocAnh.US;
+using DAL;
+using DevExpress.XtraEditors;
+using DevExpress.XtraPrinting;
+using IP.Core.IPCommon;
+using Models.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace BKI_QLTTQuocAnh.NghiepVu
 {
     public partial class f380_update_student_info : Form
     {
+        private StudentRepository _studentRepository;
         public f380_update_student_info()
         {
+            _studentRepository = new StudentRepository();
             InitializeComponent();
             load_data_to_sle_lop();
         }
@@ -62,6 +72,134 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             v_us.FillDataset(v_ds, v_str_filter);
 
             return v_ds;
+        }
+        private void loadDataToGrid()
+        {
+            gridControl.DataSource = _studentRepository.getStudentInfo(Convert.ToInt32(m_sle_lop.EditValue));
+        }
+        private void m_cmd_load_hoc_vien_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (m_sle_lop.EditValue == null)
+                {
+                    XtraMessageBox.Show("Chon lop truoc!", "THONG BAO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                loadDataToGrid();
+            }
+            catch (Exception v_e)
+            {
+                CSystemLog_301.ExceptionHandle(v_e);
+            }
+        }
+
+        private void exportExcel()
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                gridView.ExportToXls(saveFileDialog1.FileName);
+                XtraMessageBox.Show("Trích xuất dữ liệu thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                exportExcel();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void loadExcelToGrid(string ip_str_path, DevExpress.XtraGrid.GridControl ip_grc)
+        {
+            string conStr = "";
+            //string SheetName = ip_name_sheet_import + "$";
+            conStr = ConfigurationManager.ConnectionStrings["Excel07ConString"].ConnectionString;
+            conStr = String.Format(conStr, ip_str_path, "Yes");
+            OleDbConnection con = new OleDbConnection(conStr);
+            OleDbCommand ExcelCommand = new OleDbCommand();
+            ExcelCommand.Connection = con;
+            con.Open();
+            DataTable ExcelDataSet = new DataTable();
+            ExcelDataSet = con.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+            DataTable dt = new DataTable();
+            if (ExcelDataSet != null && ExcelDataSet.Rows.Count > 0)
+            {
+                string SheetName = ExcelDataSet.Rows[0]["TABLE_NAME"].ToString(); // get sheetname
+                ExcelCommand.CommandText = "SELECT * From [" + SheetName + "]";
+                OleDbDataAdapter ExcelAdapter = new OleDbDataAdapter(ExcelCommand);
+                ExcelAdapter.SelectCommand = ExcelCommand;
+                ExcelAdapter.Fill(dt);
+            }
+            con.Close();
+            //format_data_header(dt);
+            DataTable v_dt_result = dt.Rows.Cast<DataRow>().Where(row => !row.ItemArray.All(field => field is System.DBNull || string.IsNullOrEmpty(field.ToString()) == true)).CopyToDataTable();
+            ip_grc.DataSource = v_dt_result;
+        }
+        private string openFileDialog()
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            // Set filter options and filter index.
+            openFileDialog1.Filter = "xls Files|*.xls|xlsx Files|*.xlsx|All Files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.Multiselect = false;
+            var userClickedOK = openFileDialog1.ShowDialog();
+            if (userClickedOK == System.Windows.Forms.DialogResult.OK)
+            {
+                return openFileDialog1.FileName;
+            }
+            return "";
+        }
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                loadExcelToGrid(openFileDialog(), gridControl);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void saveData()
+        {
+            using (var scope = new TransactionScope())
+            {
+                for (int i = 0; i < gridView.RowCount; i++)
+                {
+                    var info = gridView.GetRow(i) as StudentDTO;
+
+                    if (info != null)
+                    {
+                        _studentRepository.updateStudentInfo(info);
+                    }
+                }
+
+                scope.Complete();
+            }
+            
+        }
+
+        private void m_cmd_save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                saveData();
+            }
+            catch (Exception ex)
+            {
+                CSystemLog_301.ExceptionHandle(ex);
+            }
         }
     }
 }

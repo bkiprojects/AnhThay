@@ -8,6 +8,7 @@ namespace DAL
     public class AnhThayDbContext
     {
         private IDbConnection _connection;
+        private IDbTransaction _transaction;
         private static AnhThayDbContext _context;
 
         public AnhThayDbContext()
@@ -75,5 +76,7 @@ namespace DAL
 
             return connectionString;
         }
+
+        
     }
 }

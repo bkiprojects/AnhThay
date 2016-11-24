@@ -28,53 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.m_cmd_load_hoc_vien = new DevExpress.XtraEditors.SimpleButton();
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).BeginInit();
+            this.m_cmd_save = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_import = new DevExpress.XtraEditors.SimpleButton();
+            this.m_cmd_export_excel = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.StudentId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.StudentCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FirstName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LastName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.PhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Email = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Facebook = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Birthday = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CurrentWorkplace = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gridControl
-            // 
-            this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl.Location = new System.Drawing.Point(0, 77);
-            this.gridControl.MainView = this.gridView;
-            this.gridControl.Name = "gridControl";
-            this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemCheckEdit});
-            this.gridControl.Size = new System.Drawing.Size(825, 464);
-            this.gridControl.TabIndex = 3;
-            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView});
-            // 
-            // gridView
-            // 
-            this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            this.gridView.GridControl = this.gridControl;
-            this.gridView.Name = "gridView";
-            this.gridView.OptionsView.ShowFooter = true;
-            this.gridView.OptionsView.ShowGroupPanel = false;
-            // 
-            // repositoryItemCheckEdit
-            // 
-            this.repositoryItemCheckEdit.AutoHeight = false;
-            this.repositoryItemCheckEdit.Caption = "Check";
-            this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
-            this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             // 
             // m_cmd_load_hoc_vien
             // 
@@ -83,6 +63,7 @@
             this.m_cmd_load_hoc_vien.Size = new System.Drawing.Size(80, 23);
             this.m_cmd_load_hoc_vien.TabIndex = 6;
             this.m_cmd_load_hoc_vien.Text = "Lấy danh sách";
+            this.m_cmd_load_hoc_vien.Click += new System.EventHandler(this.m_cmd_load_hoc_vien_Click);
             // 
             // m_sle_lop
             // 
@@ -117,9 +98,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.m_sle_lop);
-            this.panel1.Controls.Add(this.simpleButton3);
-            this.panel1.Controls.Add(this.simpleButton2);
-            this.panel1.Controls.Add(this.simpleButton1);
+            this.panel1.Controls.Add(this.m_cmd_save);
+            this.panel1.Controls.Add(this.m_cmd_import);
+            this.panel1.Controls.Add(this.m_cmd_export_excel);
             this.panel1.Controls.Add(this.m_cmd_load_hoc_vien);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -128,29 +109,140 @@
             this.panel1.Size = new System.Drawing.Size(825, 77);
             this.panel1.TabIndex = 9;
             // 
-            // simpleButton1
+            // m_cmd_save
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(104, 42);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(87, 23);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "Xuất danh sách";
+            this.m_cmd_save.Location = new System.Drawing.Point(297, 42);
+            this.m_cmd_save.Name = "m_cmd_save";
+            this.m_cmd_save.Size = new System.Drawing.Size(94, 23);
+            this.m_cmd_save.TabIndex = 6;
+            this.m_cmd_save.Text = "Lưu";
+            this.m_cmd_save.Click += new System.EventHandler(this.m_cmd_save_Click);
             // 
-            // simpleButton2
+            // m_cmd_import
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(197, 42);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(94, 23);
-            this.simpleButton2.TabIndex = 6;
-            this.simpleButton2.Text = "Import danh sách";
+            this.m_cmd_import.Location = new System.Drawing.Point(197, 42);
+            this.m_cmd_import.Name = "m_cmd_import";
+            this.m_cmd_import.Size = new System.Drawing.Size(94, 23);
+            this.m_cmd_import.TabIndex = 6;
+            this.m_cmd_import.Text = "Import danh sách";
+            this.m_cmd_import.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
-            // simpleButton3
+            // m_cmd_export_excel
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(297, 42);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(94, 23);
-            this.simpleButton3.TabIndex = 6;
-            this.simpleButton3.Text = "Lưu";
+            this.m_cmd_export_excel.Location = new System.Drawing.Point(104, 42);
+            this.m_cmd_export_excel.Name = "m_cmd_export_excel";
+            this.m_cmd_export_excel.Size = new System.Drawing.Size(87, 23);
+            this.m_cmd_export_excel.TabIndex = 6;
+            this.m_cmd_export_excel.Text = "Xuất danh sách";
+            this.m_cmd_export_excel.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // gridControl
+            // 
+            this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gridControl.Location = new System.Drawing.Point(0, 64);
+            this.gridControl.MainView = this.gridView;
+            this.gridControl.Name = "gridControl";
+            this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit});
+            this.gridControl.Size = new System.Drawing.Size(825, 413);
+            this.gridControl.TabIndex = 10;
+            this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView});
+            // 
+            // gridView
+            // 
+            this.gridView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.StudentId,
+            this.StudentCode,
+            this.FirstName,
+            this.LastName,
+            this.PhoneNumber,
+            this.Email,
+            this.Facebook,
+            this.Birthday,
+            this.CurrentWorkplace});
+            this.gridView.GridControl = this.gridControl;
+            this.gridView.Name = "gridView";
+            this.gridView.OptionsView.ShowFooter = true;
+            this.gridView.OptionsView.ShowGroupPanel = false;
+            // 
+            // StudentId
+            // 
+            this.StudentId.Caption = "StudentId";
+            this.StudentId.FieldName = "StudentId";
+            this.StudentId.Name = "StudentId";
+            // 
+            // StudentCode
+            // 
+            this.StudentCode.Caption = "StudentCode";
+            this.StudentCode.FieldName = "StudentCode";
+            this.StudentCode.Name = "StudentCode";
+            this.StudentCode.Visible = true;
+            this.StudentCode.VisibleIndex = 0;
+            // 
+            // FirstName
+            // 
+            this.FirstName.Caption = "FirstName";
+            this.FirstName.FieldName = "FirstName";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Visible = true;
+            this.FirstName.VisibleIndex = 1;
+            // 
+            // LastName
+            // 
+            this.LastName.Caption = "LastName";
+            this.LastName.FieldName = "LastName";
+            this.LastName.Name = "LastName";
+            this.LastName.Visible = true;
+            this.LastName.VisibleIndex = 2;
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.Caption = "PhoneNumber";
+            this.PhoneNumber.FieldName = "PhoneNumber";
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Visible = true;
+            this.PhoneNumber.VisibleIndex = 3;
+            // 
+            // Email
+            // 
+            this.Email.Caption = "Email";
+            this.Email.FieldName = "Email";
+            this.Email.Name = "Email";
+            this.Email.Visible = true;
+            this.Email.VisibleIndex = 4;
+            // 
+            // Facebook
+            // 
+            this.Facebook.Caption = "Facebook";
+            this.Facebook.FieldName = "Facebook";
+            this.Facebook.Name = "Facebook";
+            this.Facebook.Visible = true;
+            this.Facebook.VisibleIndex = 5;
+            // 
+            // Birthday
+            // 
+            this.Birthday.Caption = "Birthday";
+            this.Birthday.FieldName = "Birthday";
+            this.Birthday.Name = "Birthday";
+            this.Birthday.Visible = true;
+            this.Birthday.VisibleIndex = 6;
+            // 
+            // CurrentWorkplace
+            // 
+            this.CurrentWorkplace.Caption = "CurrentWorkplace";
+            this.CurrentWorkplace.FieldName = "CurrentWorkplace";
+            this.CurrentWorkplace.Name = "CurrentWorkplace";
+            this.CurrentWorkplace.Visible = true;
+            this.CurrentWorkplace.VisibleIndex = 7;
+            // 
+            // repositoryItemCheckEdit
+            // 
+            this.repositoryItemCheckEdit.AutoHeight = false;
+            this.repositoryItemCheckEdit.Caption = "Check";
+            this.repositoryItemCheckEdit.Name = "repositoryItemCheckEdit";
+            this.repositoryItemCheckEdit.NullStyle = DevExpress.XtraEditors.Controls.StyleIndeterminate.Unchecked;
             // 
             // f380_update_student_info
             // 
@@ -161,29 +253,37 @@
             this.Controls.Add(this.panel1);
             this.Name = "f380_update_student_info";
             this.Text = "F380 - Cập nhật thông tin học viên";
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.GridControl gridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit;
         private DevExpress.XtraEditors.SimpleButton m_cmd_load_hoc_vien;
         private DevExpress.XtraEditors.SearchLookUpEdit m_sle_lop;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_save;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_import;
+        private DevExpress.XtraEditors.SimpleButton m_cmd_export_excel;
+        private DevExpress.XtraGrid.GridControl gridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView;
+        private DevExpress.XtraGrid.Columns.GridColumn StudentId;
+        private DevExpress.XtraGrid.Columns.GridColumn StudentCode;
+        private DevExpress.XtraGrid.Columns.GridColumn FirstName;
+        private DevExpress.XtraGrid.Columns.GridColumn LastName;
+        private DevExpress.XtraGrid.Columns.GridColumn PhoneNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn Email;
+        private DevExpress.XtraGrid.Columns.GridColumn Facebook;
+        private DevExpress.XtraGrid.Columns.GridColumn Birthday;
+        private DevExpress.XtraGrid.Columns.GridColumn CurrentWorkplace;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit;
     }
 }

@@ -357,3 +357,10 @@ C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. So
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\Testing\obj\Debug\Testing.exe.licenses
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\Testing\obj\Debug\Testing.exe
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\Testing\obj\Debug\Testing.pdb
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.csprojResolveAssemblyReference.cache
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.Form1.resources
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.Properties.Resources.resources
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.csproj.GenerateResource.Cache
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.exe.licenses
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.exe
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Testing\obj\Debug\Testing.pdb
