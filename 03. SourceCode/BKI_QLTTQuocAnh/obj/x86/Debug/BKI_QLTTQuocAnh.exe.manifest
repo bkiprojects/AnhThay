@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BKI_QLTTQuocAnh.exe" size="3236352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BKI_QLTTQuocAnh.exe" size="3237888">
       <assemblyIdentity name="BKI_QLTTQuocAnh" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BIs4PZ0HF1uDbScSB9AOU66ESqA=</dsig:DigestValue>
+        <dsig:DigestValue>2v1B4O6gnJ3MTQbnntG2BytSKC4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>6UCuzJ6PtWXn3sGaZQHmGjG/oGY=</dsig:DigestValue>
+        <dsig:DigestValue>jQ02pifxcxDMu6Ns4MpiXSpPTgM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>lSnKrU7cXvA+DHnURFWXzyMGIA8=</dsig:DigestValue>
+        <dsig:DigestValue>KYbb8QzoijzumLzHTIHoTOpos8U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -182,7 +182,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>WkLxaxbzt2EuZ4Mthke2Jwtax2Y=</dsig:DigestValue>
+        <dsig:DigestValue>BuvuBQ9sixIVgdl0tDwwz18mFgA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1838,19 +1838,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>WZb00FcbKgOLXe8SJ2EiyfYMuXg=</dsig:DigestValue>
+        <dsig:DigestValue>sRldRBpGWZw/xwsW2RCRGLs94NE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IPCommon.dll" size="182272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IPCommon.dll" size="181760">
       <assemblyIdentity name="IPCommon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>tp3mN8hXkMF7SreaU1NEZY9/64k=</dsig:DigestValue>
+        <dsig:DigestValue>k9EDATO03QUQLVjMe2Hzcb7ZtVs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1862,7 +1862,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2brXOk3EC1qO6cHE5o8oNeMcCag=</dsig:DigestValue>
+        <dsig:DigestValue>CGur9LuOaymuG1ckWPRcNGPApU0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1874,7 +1874,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>2Aq7SxNg6GtQsvJ+fkofkdh268Q=</dsig:DigestValue>
+        <dsig:DigestValue>69vDVt2SEe9z/7PoyGuNLw8ffOc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1886,7 +1886,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>kcXN3AKOgk8mGxU5VwE+FNZsx2s=</dsig:DigestValue>
+        <dsig:DigestValue>LqsO4ySOstMkUIq9H3E4NrqNSqk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1898,7 +1898,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>rBfZWwQZa9tAjRgXVs9IFcjkYpI=</dsig:DigestValue>
+        <dsig:DigestValue>P3UU3p7Aa9TRD5Q3F/9vqAK4lGY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1910,7 +1910,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>fCvBZtzUiy88HtFm+ZCeaKJjP1k=</dsig:DigestValue>
+        <dsig:DigestValue>ll3SoLOlls4e07xB3ebNJYzK6oM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1922,19 +1922,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ZlWQVhjO6WuH8gA0exn8/fof6LM=</dsig:DigestValue>
+        <dsig:DigestValue>mShziWxw9coJtMg1q7oUJ0Okqaw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.ConnectionInfo.dll" size="161472">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.ConnectionInfo.dll" size="161984">
       <assemblyIdentity name="Microsoft.SqlServer.ConnectionInfo" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>nRMchA0TK1HTOS8EVugYiZQvc0E=</dsig:DigestValue>
+        <dsig:DigestValue>Ze03Eu9lqsB/ocZc3kjPjuGlLHE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1946,7 +1946,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8ho7kxnCAwalcXM/uO/GI3HbC54=</dsig:DigestValue>
+        <dsig:DigestValue>3OW1nzASfdSwcSF6Nobh5QC6DY0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1970,19 +1970,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LUBzvjwN93SoyGAtt4VH6b9Sa/w=</dsig:DigestValue>
+        <dsig:DigestValue>WsqjBP/dF/nRtJlJiDcIc+Ozbbs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Management.SmoMetadataProvider.dll" size="138944">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Management.SmoMetadataProvider.dll" size="151232">
       <assemblyIdentity name="Microsoft.SqlServer.Management.SmoMetadataProvider" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>tlbyolGEpkRBLTZ6KTCTWVxW5Is=</dsig:DigestValue>
+        <dsig:DigestValue>ZjI/YET7LZUm6MgQntbGf5QzrbE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2006,19 +2006,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>UwnjdAK3QXmnkR6oKejxkoJPtk0=</dsig:DigestValue>
+        <dsig:DigestValue>4Ha7TcpA2ibKm4f4EGYHHTN7ScQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Smo.dll" size="3720896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.Smo.dll" size="3740352">
       <assemblyIdentity name="Microsoft.SqlServer.Smo" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>j/DpH3moK4x2pmtHrsmkbzUdfkM=</dsig:DigestValue>
+        <dsig:DigestValue>pm86J5m7t0sdw2ErS7qjeRY2ShE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2030,31 +2030,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>dlrptT7fRD4B+ZYw5ZTL7Lh1pNc=</dsig:DigestValue>
+        <dsig:DigestValue>rLIrP9nnZnQ1LS3n7cD5u6jQzig=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.SqlEnum.dll" size="1355456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.SqlServer.SqlEnum.dll" size="1359552">
       <assemblyIdentity name="Microsoft.SqlServer.SqlEnum" version="12.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>RvLS/Xcrppdk/JDal5LAz3WYqcY=</dsig:DigestValue>
+        <dsig:DigestValue>8sKW68vaLWH155VOB5xZQ+oYw3M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Models.dll" size="13824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Models.dll" size="14336">
       <assemblyIdentity name="Models" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ivewrr/Dk5zSioemuwpGBLcQZsA=</dsig:DigestValue>
+        <dsig:DigestValue>GDthhJrGzhBXZAYA2DUFP1xUxM4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -2091,13 +2091,13 @@
       <dsig:DigestValue>folPqtEFkA3SbkNzjpQslOupor0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="BKI_QLTTQuocAnh.exe.config" size="4486">
+  <file name="BKI_QLTTQuocAnh.exe.config" size="4490">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Vu0VBiDj+0tw9HIw6TCJN64mdgk=</dsig:DigestValue>
+      <dsig:DigestValue>mMFOeBvO2xNMx87hDqk3wDOgOAs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\1431468308_ok.ico" size="106609">

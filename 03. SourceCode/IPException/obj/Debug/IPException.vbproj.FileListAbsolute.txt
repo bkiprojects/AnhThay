@@ -25,13 +25,6 @@ C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. So
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.dll
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.xml
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\IPException\obj\Debug\IPException.pdb
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\bin\IPException.dll
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\bin\IPException.pdb
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\bin\IPException.xml
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\obj\Debug\IPException.vbprojResolveAssemblyReference.cache
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\obj\Debug\IPException.dll
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\obj\Debug\IPException.xml
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\obj\Debug\IPException.pdb
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPException\bin\IPException.dll
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPException\bin\IPException.pdb
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPException\bin\IPException.xml
@@ -39,3 +32,9 @@ C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPEx
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.dll
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.xml
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPException\obj\Debug\IPException.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\bin\IPException.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\bin\IPException.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\bin\IPException.xml
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\obj\Debug\IPException.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\obj\Debug\IPException.xml
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\IPException\obj\Debug\IPException.pdb

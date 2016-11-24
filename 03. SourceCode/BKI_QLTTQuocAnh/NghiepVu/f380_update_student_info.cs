@@ -83,7 +83,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
             {
                 if (m_sle_lop.EditValue == null)
                 {
-                    XtraMessageBox.Show("Chon lop truoc!", "THONG BAO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    XtraMessageBox.Show("Chọn lớp trước!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 loadDataToGrid();
@@ -97,7 +97,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         private void exportExcel()
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
+            saveFileDialog1.Filter = "xlsx files (*.xlsx)|*.xls|All files (*.*)|*.*";
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -148,7 +148,7 @@ namespace BKI_QLTTQuocAnh.NghiepVu
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             // Set filter options and filter index.
-            openFileDialog1.Filter = "xls Files|*.xls|xlsx Files|*.xlsx|All Files (*.*)|*.*";
+            openFileDialog1.Filter = "xlsx Files|*.xlsx|xls Files|*.xls|All Files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.Multiselect = false;
             var userClickedOK = openFileDialog1.ShowDialog();
@@ -173,21 +173,45 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void saveData()
         {
+            List<StudentDTO> studentDtos = new List<StudentDTO>();
+
+            //Get list object
+            for(var i = 0; i < gridView.RowCount; i++)
+            {
+
+                var dr = gridView.GetDataRow(i);
+                var info = new StudentDTO();
+                if(dr["Birthday"] != null && dr["Birthday"].ToString() != "")
+                {
+                    info.Birthday = Convert.ToDateTime(dr["Birthday"]);
+                }
+
+                info.CurrentWorkplace = dr["CurrentWorkplace"].ToString();
+                info.Email = dr["Email"].ToString();
+                info.Facebook = dr["Facebook"].ToString();
+                info.FirstName = dr["FirstName"].ToString();
+
+                info.LastName = dr["LastName"].ToString();
+                info.PhoneNumber = dr["PhoneNumber"].ToString();
+                info.StudentCode = dr["StudentCode"].ToString();
+
+                studentDtos.Add(info);
+            }
             using (var scope = new TransactionScope())
             {
-                for (int i = 0; i < gridView.RowCount; i++)
+                foreach (var item in studentDtos)
                 {
-                    var info = gridView.GetRow(i) as StudentDTO;
-
-                    if (info != null)
+                    if (!string.IsNullOrEmpty(item.StudentCode))
                     {
-                        _studentRepository.updateStudentInfo(info);
+                        _studentRepository.updateStudentInfo(item);
                     }
                 }
 
                 scope.Complete();
             }
-            
+
+            XtraMessageBox.Show("Cập nhật thông tin học viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
 
         private void m_cmd_save_Click(object sender, EventArgs e)

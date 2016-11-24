@@ -7,11 +7,6 @@ D:\PROJECTS\AnhThay\03. SourceCode\Models\bin\Debug\Models.dll
 D:\PROJECTS\AnhThay\03. SourceCode\Models\bin\Debug\Models.pdb
 D:\PROJECTS\AnhThay\03. SourceCode\Models\obj\Debug\Models.dll
 D:\PROJECTS\AnhThay\03. SourceCode\Models\obj\Debug\Models.pdb
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\Models\bin\Debug\Models.dll
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\Models\bin\Debug\Models.pdb
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\Models\obj\Debug\Models.dll
-C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\Models\obj\Debug\Models.pdb
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\Models\bin\Debug\Models.dll
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\Models\bin\Debug\Models.pdb
 C:\Users\tuyen\OneDrive\Documents\Visual Studio 2015\Projects\AnhThay.git\03. SourceCode\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
@@ -22,3 +17,7 @@ C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Mode
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Models\obj\Debug\Models.dll
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\Models\obj\Debug\Models.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\Models\bin\Debug\Models.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\Models\bin\Debug\Models.pdb
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\Models\obj\Debug\Models.dll
+C:\Users\tuyennt\Documents\Visual Studio 2015\Projects\AnhThayManagement\03. SourceCode\Models\obj\Debug\Models.pdb

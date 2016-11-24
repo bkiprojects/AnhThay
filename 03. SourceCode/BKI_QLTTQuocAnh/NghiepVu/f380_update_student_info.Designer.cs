@@ -67,7 +67,6 @@
             // 
             // m_sle_lop
             // 
-            this.m_sle_lop.EditValue = "";
             this.m_sle_lop.Location = new System.Drawing.Point(45, 16);
             this.m_sle_lop.Name = "m_sle_lop";
             this.m_sle_lop.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
@@ -139,12 +138,13 @@
             // gridControl
             // 
             this.gridControl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl.Location = new System.Drawing.Point(0, 64);
+            this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl.Location = new System.Drawing.Point(0, 77);
             this.gridControl.MainView = this.gridView;
             this.gridControl.Name = "gridControl";
             this.gridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit});
-            this.gridControl.Size = new System.Drawing.Size(825, 413);
+            this.gridControl.Size = new System.Drawing.Size(825, 464);
             this.gridControl.TabIndex = 10;
             this.gridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView});
@@ -164,6 +164,8 @@
             this.CurrentWorkplace});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
+            this.gridView.OptionsBehavior.Editable = false;
+            this.gridView.OptionsBehavior.ReadOnly = true;
             this.gridView.OptionsView.ShowFooter = true;
             this.gridView.OptionsView.ShowGroupPanel = false;
             // 
