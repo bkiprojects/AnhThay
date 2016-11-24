@@ -51,5 +51,5 @@ namespace DAL
                 , param: parameters
                 , commandType: CommandType.StoredProcedure);
         }
-        }
+    }
 }

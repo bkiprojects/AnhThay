@@ -173,41 +173,37 @@ namespace BKI_QLTTQuocAnh.NghiepVu
 
         private void saveData()
         {
+            gridControl.Refresh();
+            gridView.RefreshData();
             List<StudentDTO> studentDtos = new List<StudentDTO>();
 
             //Get list object
             for(var i = 0; i < gridView.RowCount; i++)
             {
-
-                var dr = gridView.GetDataRow(i);
                 var info = new StudentDTO();
-                if(dr["Birthday"] != null && dr["Birthday"].ToString() != "")
+                if(gridView.GetRowCellValue(i, "Birthday")!= null && gridView.GetRowCellValue(i, "Birthday").ToString() != "")
                 {
-                    info.Birthday = Convert.ToDateTime(dr["Birthday"]);
+                    info.Birthday = Convert.ToDateTime(gridView.GetRowCellValue(i, "Birthday"));
                 }
 
-                info.CurrentWorkplace = dr["CurrentWorkplace"].ToString();
-                info.Email = dr["Email"].ToString();
-                info.Facebook = dr["Facebook"].ToString();
-                info.FirstName = dr["FirstName"].ToString();
+                info.CurrentWorkplace = gridView.GetRowCellValue(i, "CurrentWorkplace").ToString();
+                info.Email = gridView.GetRowCellValue(i, "Email").ToString();
+                info.Facebook = gridView.GetRowCellValue(i, "Facebook").ToString();
+                info.FirstName = gridView.GetRowCellValue(i, "FirstName").ToString();
 
-                info.LastName = dr["LastName"].ToString();
-                info.PhoneNumber = dr["PhoneNumber"].ToString();
-                info.StudentCode = dr["StudentCode"].ToString();
+                info.LastName = gridView.GetRowCellValue(i, "LastName").ToString();
+                info.PhoneNumber = gridView.GetRowCellValue(i, "PhoneNumber").ToString();
+                info.StudentCode = gridView.GetRowCellValue(i, "StudentCode").ToString();
 
                 studentDtos.Add(info);
             }
-            using (var scope = new TransactionScope())
-            {
-                foreach (var item in studentDtos)
-                {
-                    if (!string.IsNullOrEmpty(item.StudentCode))
-                    {
-                        _studentRepository.updateStudentInfo(item);
-                    }
-                }
 
-                scope.Complete();
+            foreach (var item in studentDtos)
+            {
+                if (!string.IsNullOrEmpty(item.StudentCode))
+                {
+                    _studentRepository.updateStudentInfo(item);
+                }
             }
 
             XtraMessageBox.Show("Cập nhật thông tin học viên thành công!", "THÔNG BÁO", MessageBoxButtons.OK,
