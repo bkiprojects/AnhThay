@@ -14,14 +14,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Application Files\BKI_QLTTQuocAnh_1_0_0_8\BKI_QLTTQuocAnh.exe.manifest" size="122933">
+    <dependentAssembly dependencyType="install" codebase="BKI_QLTTQuocAnh.exe.manifest" size="122933">
       <assemblyIdentity name="BKI_QLTTQuocAnh.exe" version="1.0.0.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>m0tFvW3AFFkahp9j/xMeF1v8ooI=</dsig:DigestValue>
+        <dsig:DigestValue>cKIzC41bDzANxkIIYxL3NBT+Y3I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -32,36 +32,36 @@
             this.m_cmd_save = new DevExpress.XtraEditors.SimpleButton();
             this.m_cmd_exit = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.m_txt_studyNotes = new DevExpress.XtraEditors.MemoEdit();
+            this.m_txt_feeNotes = new DevExpress.XtraEditors.MemoEdit();
             this.m_txt_note = new DevExpress.XtraEditors.MemoEdit();
             this.m_le_tag = new DevExpress.XtraEditors.LookUpEdit();
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.m_sle_ma_hv = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.PrefixName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SuffixName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FirstName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LastName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StudentCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BirthDay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.m_lbl_ma_hoc_sinh = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.m_txt_feeNotes = new DevExpress.XtraEditors.MemoEdit();
-            this.m_txt_studyNotes = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_studyNotes.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_feeNotes.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_note.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_le_tag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_feeNotes.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_studyNotes.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -113,6 +113,20 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(570, 415);
             this.panelControl2.TabIndex = 1;
+            // 
+            // m_txt_studyNotes
+            // 
+            this.m_txt_studyNotes.Location = new System.Drawing.Point(141, 235);
+            this.m_txt_studyNotes.Name = "m_txt_studyNotes";
+            this.m_txt_studyNotes.Size = new System.Drawing.Size(403, 90);
+            this.m_txt_studyNotes.TabIndex = 17;
+            // 
+            // m_txt_feeNotes
+            // 
+            this.m_txt_feeNotes.Location = new System.Drawing.Point(141, 132);
+            this.m_txt_feeNotes.Name = "m_txt_feeNotes";
+            this.m_txt_feeNotes.Size = new System.Drawing.Size(403, 89);
+            this.m_txt_feeNotes.TabIndex = 17;
             // 
             // m_txt_note
             // 
@@ -170,8 +184,8 @@
             // searchLookUpEdit1View
             // 
             this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.PrefixName,
-            this.SuffixName,
+            this.FirstName,
+            this.LastName,
             this.StudentCode,
             this.BirthDay});
             this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
@@ -179,23 +193,23 @@
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // PrefixName
+            // FirstName
             // 
-            this.PrefixName.Caption = "Họ";
-            this.PrefixName.FieldName = "PrefixName";
-            this.PrefixName.Name = "PrefixName";
-            this.PrefixName.Visible = true;
-            this.PrefixName.VisibleIndex = 1;
-            this.PrefixName.Width = 124;
+            this.FirstName.Caption = "Họ";
+            this.FirstName.FieldName = "FirstName";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Visible = true;
+            this.FirstName.VisibleIndex = 1;
+            this.FirstName.Width = 124;
             // 
-            // SuffixName
+            // LastName
             // 
-            this.SuffixName.Caption = "Tên";
-            this.SuffixName.FieldName = "SuffixName";
-            this.SuffixName.Name = "SuffixName";
-            this.SuffixName.Visible = true;
-            this.SuffixName.VisibleIndex = 2;
-            this.SuffixName.Width = 177;
+            this.LastName.Caption = "Tên";
+            this.LastName.FieldName = "LastName";
+            this.LastName.Name = "LastName";
+            this.LastName.Visible = true;
+            this.LastName.VisibleIndex = 2;
+            this.LastName.Width = 177;
             // 
             // StudentCode
             // 
@@ -220,16 +234,34 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Lớp *)";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 238);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Ghi chú QLHT";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(20, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Ghi chú học phí";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(20, 334);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 14;
             this.label3.Text = "Ghi chú khác";
             // 
@@ -238,7 +270,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(20, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.Size = new System.Drawing.Size(25, 13);
             this.label2.TabIndex = 14;
             this.label2.Text = "Tag";
             // 
@@ -247,41 +279,9 @@
             this.m_lbl_ma_hoc_sinh.AutoSize = true;
             this.m_lbl_ma_hoc_sinh.Location = new System.Drawing.Point(20, 57);
             this.m_lbl_ma_hoc_sinh.Name = "m_lbl_ma_hoc_sinh";
-            this.m_lbl_ma_hoc_sinh.Size = new System.Drawing.Size(50, 13);
+            this.m_lbl_ma_hoc_sinh.Size = new System.Drawing.Size(51, 13);
             this.m_lbl_ma_hoc_sinh.TabIndex = 14;
             this.m_lbl_ma_hoc_sinh.Text = "Mã HV(*)";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 135);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Ghi chú học phí";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 238);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Ghi chú QLHT";
-            // 
-            // m_txt_feeNotes
-            // 
-            this.m_txt_feeNotes.Location = new System.Drawing.Point(141, 132);
-            this.m_txt_feeNotes.Name = "m_txt_feeNotes";
-            this.m_txt_feeNotes.Size = new System.Drawing.Size(403, 89);
-            this.m_txt_feeNotes.TabIndex = 17;
-            // 
-            // m_txt_studyNotes
-            // 
-            this.m_txt_studyNotes.Location = new System.Drawing.Point(141, 235);
-            this.m_txt_studyNotes.Name = "m_txt_studyNotes";
-            this.m_txt_studyNotes.Size = new System.Drawing.Size(403, 90);
-            this.m_txt_studyNotes.TabIndex = 17;
             // 
             // f382_update_tag
             // 
@@ -298,14 +298,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_studyNotes.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_txt_feeNotes.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_txt_note.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_le_tag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_lop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_sle_ma_hv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_feeNotes.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_txt_studyNotes.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,8 +326,8 @@
         private System.Windows.Forms.Label m_lbl_ma_hoc_sinh;
         private DevExpress.XtraEditors.MemoEdit m_txt_note;
         private System.Windows.Forms.Label label3;
-        private DevExpress.XtraGrid.Columns.GridColumn PrefixName;
-        private DevExpress.XtraGrid.Columns.GridColumn SuffixName;
+        private DevExpress.XtraGrid.Columns.GridColumn FirstName;
+        private DevExpress.XtraGrid.Columns.GridColumn LastName;
         private DevExpress.XtraGrid.Columns.GridColumn StudentCode;
         private DevExpress.XtraGrid.Columns.GridColumn BirthDay;
         private DevExpress.XtraEditors.MemoEdit m_txt_studyNotes;

@@ -157,7 +157,7 @@
             this.ribbon.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.ShowToolbarCustomizeItem = false;
-            this.ribbon.Size = new System.Drawing.Size(845, 144);
+            this.ribbon.Size = new System.Drawing.Size(845, 143);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.Toolbar.ShowCustomizeItem = false;
             // 
@@ -573,7 +573,6 @@
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_clone_lop);
-            this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_nghi_hoc);
             this.ribbonPageGroup4.ItemLinks.Add(this.m_cmd_cap_nhat_hs);
             this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
@@ -623,6 +622,7 @@
             this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_bien_dong_hs);
             this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_bao_cao_luy_ke_theo_hoc_sinh_theo_lop_theo_thang);
             this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_tai_chinh_hs);
+            this.ribbonPageGroup12.ItemLinks.Add(this.m_cmd_nghi_hoc);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             // 
             // ribbonPageGroup13
@@ -686,9 +686,9 @@
             // panelControl1
             // 
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl1.Location = new System.Drawing.Point(0, 144);
+            this.panelControl1.Location = new System.Drawing.Point(0, 143);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(22, 274);
+            this.panelControl1.Size = new System.Drawing.Size(22, 275);
             this.panelControl1.TabIndex = 3;
             // 
             // MdiManager

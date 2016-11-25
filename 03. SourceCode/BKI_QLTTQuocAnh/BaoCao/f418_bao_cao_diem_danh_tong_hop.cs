@@ -215,12 +215,12 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             try
             {
-                if (m_sle_lop.EditValue == null || m_sle_lop.Text == "")
-                {
-                    return;
-                }
-                Decimal v_id_hoc_sinh = CIPConvert.ToDecimal(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "ID_HOC_SINH"));
-                hien_thi_danh_sach_phieu(CIPConvert.ToDecimal(m_sle_lop.EditValue), v_id_hoc_sinh);
+                //if (m_sle_lop.EditValue == null || m_sle_lop.Text == "")
+                //{
+                //    return;
+                //}
+                //Decimal v_id_hoc_sinh = CIPConvert.ToDecimal(gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "ID_HOC_SINH"));
+                //hien_thi_danh_sach_phieu(CIPConvert.ToDecimal(m_sle_lop.EditValue), v_id_hoc_sinh);
             }
             catch (Exception v_e)
             {
