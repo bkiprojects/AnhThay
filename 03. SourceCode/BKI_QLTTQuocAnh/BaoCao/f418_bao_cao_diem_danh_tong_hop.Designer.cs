@@ -24,9 +24,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(f418_bao_cao_diem_danh_tong_hop));
-            this.ImageList = new System.Windows.Forms.ImageList(this.components);
+            this.ImageList = new System.Windows.Forms.ImageList();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -118,7 +117,7 @@
             this.TRUONG_DANG_HOC = new DevExpress.XtraGrid.Columns.GridColumn();
             this.FeeNotes = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StudyNotes = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_txt_buoi = new DevExpress.XtraEditors.TextEdit();
             this.m_sle_lop = new DevExpress.XtraEditors.SearchLookUpEdit();
@@ -496,601 +495,601 @@
             // 
             this.B1.Caption = "B1";
             this.B1.FieldName = "B1";
-            this.B1.MinWidth = 35;
+            this.B1.MinWidth = 40;
             this.B1.Name = "B1";
             this.B1.Visible = true;
             this.B1.VisibleIndex = 23;
-            this.B1.Width = 35;
+            this.B1.Width = 40;
             // 
             // B2
             // 
             this.B2.Caption = "B2";
             this.B2.FieldName = "B2";
-            this.B2.MinWidth = 35;
+            this.B2.MinWidth = 40;
             this.B2.Name = "B2";
             this.B2.Visible = true;
             this.B2.VisibleIndex = 24;
-            this.B2.Width = 35;
+            this.B2.Width = 40;
             // 
             // B3
             // 
             this.B3.Caption = "B3";
             this.B3.FieldName = "B3";
-            this.B3.MinWidth = 35;
+            this.B3.MinWidth = 40;
             this.B3.Name = "B3";
             this.B3.Visible = true;
             this.B3.VisibleIndex = 25;
-            this.B3.Width = 35;
+            this.B3.Width = 40;
             // 
             // B4
             // 
             this.B4.Caption = "B4";
             this.B4.FieldName = "B4";
-            this.B4.MinWidth = 35;
+            this.B4.MinWidth = 40;
             this.B4.Name = "B4";
             this.B4.Visible = true;
             this.B4.VisibleIndex = 26;
-            this.B4.Width = 35;
+            this.B4.Width = 40;
             // 
             // B5
             // 
             this.B5.Caption = "B5";
             this.B5.FieldName = "B5";
-            this.B5.MinWidth = 35;
+            this.B5.MinWidth = 40;
             this.B5.Name = "B5";
             this.B5.Visible = true;
             this.B5.VisibleIndex = 27;
-            this.B5.Width = 35;
+            this.B5.Width = 40;
             // 
             // B6
             // 
             this.B6.Caption = "B6";
             this.B6.FieldName = "B6";
-            this.B6.MinWidth = 35;
+            this.B6.MinWidth = 40;
             this.B6.Name = "B6";
             this.B6.Visible = true;
             this.B6.VisibleIndex = 28;
-            this.B6.Width = 35;
+            this.B6.Width = 40;
             // 
             // B7
             // 
             this.B7.Caption = "B7";
             this.B7.FieldName = "B7";
-            this.B7.MinWidth = 35;
+            this.B7.MinWidth = 40;
             this.B7.Name = "B7";
             this.B7.Visible = true;
             this.B7.VisibleIndex = 29;
-            this.B7.Width = 35;
+            this.B7.Width = 40;
             // 
             // B8
             // 
             this.B8.Caption = "B8";
             this.B8.FieldName = "B8";
-            this.B8.MinWidth = 35;
+            this.B8.MinWidth = 40;
             this.B8.Name = "B8";
             this.B8.Visible = true;
             this.B8.VisibleIndex = 30;
-            this.B8.Width = 35;
+            this.B8.Width = 40;
             // 
             // B9
             // 
             this.B9.Caption = "B9";
             this.B9.FieldName = "B9";
-            this.B9.MinWidth = 35;
+            this.B9.MinWidth = 40;
             this.B9.Name = "B9";
             this.B9.Visible = true;
             this.B9.VisibleIndex = 31;
-            this.B9.Width = 35;
+            this.B9.Width = 40;
             // 
             // B10
             // 
             this.B10.Caption = "B10";
             this.B10.FieldName = "B10";
-            this.B10.MinWidth = 35;
+            this.B10.MinWidth = 40;
             this.B10.Name = "B10";
             this.B10.Visible = true;
             this.B10.VisibleIndex = 32;
-            this.B10.Width = 35;
+            this.B10.Width = 40;
             // 
             // B11
             // 
             this.B11.Caption = "B11";
             this.B11.FieldName = "B11";
-            this.B11.MinWidth = 35;
+            this.B11.MinWidth = 40;
             this.B11.Name = "B11";
             this.B11.Visible = true;
             this.B11.VisibleIndex = 33;
-            this.B11.Width = 35;
+            this.B11.Width = 40;
             // 
             // B12
             // 
             this.B12.Caption = "B12";
             this.B12.FieldName = "B12";
-            this.B12.MinWidth = 35;
+            this.B12.MinWidth = 40;
             this.B12.Name = "B12";
             this.B12.Visible = true;
             this.B12.VisibleIndex = 34;
-            this.B12.Width = 35;
+            this.B12.Width = 40;
             // 
             // B13
             // 
             this.B13.Caption = "B13";
             this.B13.FieldName = "B13";
-            this.B13.MinWidth = 35;
+            this.B13.MinWidth = 40;
             this.B13.Name = "B13";
             this.B13.Visible = true;
             this.B13.VisibleIndex = 35;
-            this.B13.Width = 35;
+            this.B13.Width = 40;
             // 
             // B14
             // 
             this.B14.Caption = "B14";
             this.B14.FieldName = "B14";
-            this.B14.MinWidth = 35;
+            this.B14.MinWidth = 40;
             this.B14.Name = "B14";
             this.B14.Visible = true;
             this.B14.VisibleIndex = 36;
-            this.B14.Width = 35;
+            this.B14.Width = 40;
             // 
             // B15
             // 
             this.B15.Caption = "B15";
             this.B15.FieldName = "B15";
-            this.B15.MinWidth = 35;
+            this.B15.MinWidth = 40;
             this.B15.Name = "B15";
             this.B15.Visible = true;
             this.B15.VisibleIndex = 37;
-            this.B15.Width = 35;
+            this.B15.Width = 40;
             // 
             // B16
             // 
             this.B16.Caption = "B16";
             this.B16.FieldName = "B16";
-            this.B16.MinWidth = 35;
+            this.B16.MinWidth = 40;
             this.B16.Name = "B16";
             this.B16.Visible = true;
             this.B16.VisibleIndex = 38;
-            this.B16.Width = 35;
+            this.B16.Width = 40;
             // 
             // B17
             // 
             this.B17.Caption = "B17";
             this.B17.FieldName = "B17";
-            this.B17.MinWidth = 35;
+            this.B17.MinWidth = 40;
             this.B17.Name = "B17";
             this.B17.Visible = true;
             this.B17.VisibleIndex = 39;
-            this.B17.Width = 35;
+            this.B17.Width = 40;
             // 
             // B18
             // 
             this.B18.Caption = "B18";
             this.B18.FieldName = "B18";
-            this.B18.MinWidth = 35;
+            this.B18.MinWidth = 40;
             this.B18.Name = "B18";
             this.B18.Visible = true;
             this.B18.VisibleIndex = 40;
-            this.B18.Width = 35;
+            this.B18.Width = 40;
             // 
             // B19
             // 
             this.B19.Caption = "B19";
             this.B19.FieldName = "B19";
-            this.B19.MinWidth = 35;
+            this.B19.MinWidth = 40;
             this.B19.Name = "B19";
             this.B19.Visible = true;
             this.B19.VisibleIndex = 41;
-            this.B19.Width = 35;
+            this.B19.Width = 40;
             // 
             // B20
             // 
             this.B20.Caption = "B20";
             this.B20.FieldName = "B20";
-            this.B20.MinWidth = 35;
+            this.B20.MinWidth = 40;
             this.B20.Name = "B20";
             this.B20.Visible = true;
             this.B20.VisibleIndex = 42;
-            this.B20.Width = 35;
+            this.B20.Width = 40;
             // 
             // B21
             // 
             this.B21.Caption = "B21";
             this.B21.FieldName = "B21";
-            this.B21.MinWidth = 35;
+            this.B21.MinWidth = 40;
             this.B21.Name = "B21";
             this.B21.Visible = true;
             this.B21.VisibleIndex = 43;
-            this.B21.Width = 35;
+            this.B21.Width = 40;
             // 
             // B22
             // 
             this.B22.Caption = "B22";
             this.B22.FieldName = "B22";
-            this.B22.MinWidth = 35;
+            this.B22.MinWidth = 40;
             this.B22.Name = "B22";
             this.B22.Visible = true;
             this.B22.VisibleIndex = 44;
-            this.B22.Width = 35;
+            this.B22.Width = 40;
             // 
             // B23
             // 
             this.B23.Caption = "B23";
             this.B23.FieldName = "B23";
-            this.B23.MinWidth = 35;
+            this.B23.MinWidth = 40;
             this.B23.Name = "B23";
             this.B23.Visible = true;
             this.B23.VisibleIndex = 45;
-            this.B23.Width = 35;
+            this.B23.Width = 40;
             // 
             // B24
             // 
             this.B24.Caption = "B24";
             this.B24.FieldName = "B24";
-            this.B24.MinWidth = 35;
+            this.B24.MinWidth = 40;
             this.B24.Name = "B24";
             this.B24.Visible = true;
             this.B24.VisibleIndex = 46;
-            this.B24.Width = 35;
+            this.B24.Width = 40;
             // 
             // B25
             // 
             this.B25.Caption = "B25";
             this.B25.FieldName = "B25";
-            this.B25.MinWidth = 35;
+            this.B25.MinWidth = 40;
             this.B25.Name = "B25";
             this.B25.Visible = true;
             this.B25.VisibleIndex = 47;
-            this.B25.Width = 35;
+            this.B25.Width = 40;
             // 
             // B26
             // 
             this.B26.Caption = "B26";
             this.B26.FieldName = "B26";
-            this.B26.MinWidth = 35;
+            this.B26.MinWidth = 40;
             this.B26.Name = "B26";
             this.B26.Visible = true;
             this.B26.VisibleIndex = 48;
-            this.B26.Width = 35;
+            this.B26.Width = 40;
             // 
             // B27
             // 
             this.B27.Caption = "B27";
             this.B27.FieldName = "B27";
-            this.B27.MinWidth = 35;
+            this.B27.MinWidth = 40;
             this.B27.Name = "B27";
             this.B27.Visible = true;
             this.B27.VisibleIndex = 49;
-            this.B27.Width = 35;
+            this.B27.Width = 40;
             // 
             // B28
             // 
             this.B28.Caption = "B28";
             this.B28.FieldName = "B28";
-            this.B28.MinWidth = 35;
+            this.B28.MinWidth = 40;
             this.B28.Name = "B28";
             this.B28.Visible = true;
             this.B28.VisibleIndex = 50;
-            this.B28.Width = 35;
+            this.B28.Width = 40;
             // 
             // B29
             // 
             this.B29.Caption = "B29";
             this.B29.FieldName = "B29";
-            this.B29.MinWidth = 35;
+            this.B29.MinWidth = 40;
             this.B29.Name = "B29";
             this.B29.Visible = true;
             this.B29.VisibleIndex = 51;
-            this.B29.Width = 35;
+            this.B29.Width = 40;
             // 
             // B30
             // 
             this.B30.Caption = "B30";
             this.B30.FieldName = "B30";
-            this.B30.MinWidth = 35;
+            this.B30.MinWidth = 40;
             this.B30.Name = "B30";
             this.B30.Visible = true;
             this.B30.VisibleIndex = 52;
-            this.B30.Width = 35;
+            this.B30.Width = 40;
             // 
             // B31
             // 
             this.B31.Caption = "B31";
             this.B31.FieldName = "B31";
-            this.B31.MinWidth = 35;
+            this.B31.MinWidth = 40;
             this.B31.Name = "B31";
             this.B31.Visible = true;
             this.B31.VisibleIndex = 53;
-            this.B31.Width = 35;
+            this.B31.Width = 40;
             // 
             // B32
             // 
             this.B32.Caption = "B32";
             this.B32.FieldName = "B32";
-            this.B32.MinWidth = 35;
+            this.B32.MinWidth = 40;
             this.B32.Name = "B32";
             this.B32.Visible = true;
             this.B32.VisibleIndex = 54;
-            this.B32.Width = 35;
+            this.B32.Width = 40;
             // 
             // B33
             // 
             this.B33.Caption = "B33";
             this.B33.FieldName = "B33";
-            this.B33.MinWidth = 35;
+            this.B33.MinWidth = 40;
             this.B33.Name = "B33";
             this.B33.Visible = true;
             this.B33.VisibleIndex = 55;
-            this.B33.Width = 35;
+            this.B33.Width = 40;
             // 
             // B34
             // 
             this.B34.Caption = "B34";
             this.B34.FieldName = "B34";
-            this.B34.MinWidth = 35;
+            this.B34.MinWidth = 40;
             this.B34.Name = "B34";
             this.B34.Visible = true;
             this.B34.VisibleIndex = 56;
-            this.B34.Width = 35;
+            this.B34.Width = 40;
             // 
             // B35
             // 
             this.B35.Caption = "B35";
             this.B35.FieldName = "B35";
-            this.B35.MinWidth = 35;
+            this.B35.MinWidth = 40;
             this.B35.Name = "B35";
             this.B35.Visible = true;
             this.B35.VisibleIndex = 57;
-            this.B35.Width = 35;
+            this.B35.Width = 40;
             // 
             // B36
             // 
             this.B36.Caption = "B36";
             this.B36.FieldName = "B36";
-            this.B36.MinWidth = 35;
+            this.B36.MinWidth = 40;
             this.B36.Name = "B36";
             this.B36.Visible = true;
             this.B36.VisibleIndex = 58;
-            this.B36.Width = 35;
+            this.B36.Width = 40;
             // 
             // B37
             // 
             this.B37.Caption = "B37";
             this.B37.FieldName = "B37";
-            this.B37.MinWidth = 35;
+            this.B37.MinWidth = 40;
             this.B37.Name = "B37";
             this.B37.Visible = true;
             this.B37.VisibleIndex = 59;
-            this.B37.Width = 35;
+            this.B37.Width = 40;
             // 
             // B38
             // 
             this.B38.Caption = "B38";
             this.B38.FieldName = "B38";
-            this.B38.MinWidth = 35;
+            this.B38.MinWidth = 40;
             this.B38.Name = "B38";
             this.B38.Visible = true;
             this.B38.VisibleIndex = 60;
-            this.B38.Width = 35;
+            this.B38.Width = 40;
             // 
             // B39
             // 
             this.B39.Caption = "B39";
             this.B39.FieldName = "B39";
-            this.B39.MinWidth = 35;
+            this.B39.MinWidth = 40;
             this.B39.Name = "B39";
             this.B39.Visible = true;
             this.B39.VisibleIndex = 61;
-            this.B39.Width = 35;
+            this.B39.Width = 40;
             // 
             // B40
             // 
             this.B40.Caption = "B40";
             this.B40.FieldName = "B40";
-            this.B40.MinWidth = 35;
+            this.B40.MinWidth = 40;
             this.B40.Name = "B40";
             this.B40.Visible = true;
             this.B40.VisibleIndex = 62;
-            this.B40.Width = 35;
+            this.B40.Width = 40;
             // 
             // B41
             // 
             this.B41.Caption = "B41";
             this.B41.FieldName = "B41";
-            this.B41.MinWidth = 35;
+            this.B41.MinWidth = 40;
             this.B41.Name = "B41";
             this.B41.Visible = true;
             this.B41.VisibleIndex = 63;
-            this.B41.Width = 35;
+            this.B41.Width = 40;
             // 
             // B42
             // 
             this.B42.Caption = "B42";
             this.B42.FieldName = "B42";
-            this.B42.MinWidth = 35;
+            this.B42.MinWidth = 40;
             this.B42.Name = "B42";
             this.B42.Visible = true;
             this.B42.VisibleIndex = 64;
-            this.B42.Width = 35;
+            this.B42.Width = 40;
             // 
             // B43
             // 
             this.B43.Caption = "B43";
             this.B43.FieldName = "B43";
-            this.B43.MinWidth = 35;
+            this.B43.MinWidth = 40;
             this.B43.Name = "B43";
             this.B43.Visible = true;
             this.B43.VisibleIndex = 65;
-            this.B43.Width = 35;
+            this.B43.Width = 40;
             // 
             // B44
             // 
             this.B44.Caption = "B44";
             this.B44.FieldName = "B44";
-            this.B44.MinWidth = 35;
+            this.B44.MinWidth = 40;
             this.B44.Name = "B44";
             this.B44.Visible = true;
             this.B44.VisibleIndex = 66;
-            this.B44.Width = 35;
+            this.B44.Width = 40;
             // 
             // B45
             // 
             this.B45.Caption = "B45";
             this.B45.FieldName = "B45";
-            this.B45.MinWidth = 35;
+            this.B45.MinWidth = 40;
             this.B45.Name = "B45";
             this.B45.Visible = true;
             this.B45.VisibleIndex = 67;
-            this.B45.Width = 35;
+            this.B45.Width = 40;
             // 
             // B46
             // 
             this.B46.Caption = "B46";
             this.B46.FieldName = "B46";
-            this.B46.MinWidth = 35;
+            this.B46.MinWidth = 40;
             this.B46.Name = "B46";
             this.B46.Visible = true;
             this.B46.VisibleIndex = 68;
-            this.B46.Width = 35;
+            this.B46.Width = 40;
             // 
             // B47
             // 
             this.B47.Caption = "B47";
             this.B47.FieldName = "B47";
-            this.B47.MinWidth = 35;
+            this.B47.MinWidth = 40;
             this.B47.Name = "B47";
             this.B47.Visible = true;
             this.B47.VisibleIndex = 69;
-            this.B47.Width = 35;
+            this.B47.Width = 40;
             // 
             // B48
             // 
             this.B48.Caption = "B48";
             this.B48.FieldName = "B48";
-            this.B48.MinWidth = 35;
+            this.B48.MinWidth = 40;
             this.B48.Name = "B48";
             this.B48.Visible = true;
             this.B48.VisibleIndex = 70;
-            this.B48.Width = 35;
+            this.B48.Width = 40;
             // 
             // B49
             // 
             this.B49.Caption = "B49";
             this.B49.FieldName = "B49";
-            this.B49.MinWidth = 35;
+            this.B49.MinWidth = 40;
             this.B49.Name = "B49";
             this.B49.Visible = true;
             this.B49.VisibleIndex = 71;
-            this.B49.Width = 35;
+            this.B49.Width = 40;
             // 
             // B50
             // 
             this.B50.Caption = "B50";
             this.B50.FieldName = "B50";
-            this.B50.MinWidth = 35;
+            this.B50.MinWidth = 40;
             this.B50.Name = "B50";
             this.B50.Visible = true;
             this.B50.VisibleIndex = 72;
-            this.B50.Width = 35;
+            this.B50.Width = 40;
             // 
             // B51
             // 
             this.B51.Caption = "B51";
             this.B51.FieldName = "B51";
-            this.B51.MinWidth = 35;
+            this.B51.MinWidth = 40;
             this.B51.Name = "B51";
             this.B51.Visible = true;
             this.B51.VisibleIndex = 73;
-            this.B51.Width = 35;
+            this.B51.Width = 40;
             // 
             // B52
             // 
             this.B52.Caption = "B52";
             this.B52.FieldName = "B52";
-            this.B52.MinWidth = 35;
+            this.B52.MinWidth = 40;
             this.B52.Name = "B52";
             this.B52.Visible = true;
             this.B52.VisibleIndex = 74;
-            this.B52.Width = 35;
+            this.B52.Width = 40;
             // 
             // B53
             // 
             this.B53.Caption = "B53";
             this.B53.FieldName = "B53";
-            this.B53.MinWidth = 35;
+            this.B53.MinWidth = 40;
             this.B53.Name = "B53";
             this.B53.Visible = true;
             this.B53.VisibleIndex = 75;
-            this.B53.Width = 35;
+            this.B53.Width = 40;
             // 
             // B54
             // 
             this.B54.Caption = "B54";
             this.B54.FieldName = "B54";
-            this.B54.MinWidth = 35;
+            this.B54.MinWidth = 40;
             this.B54.Name = "B54";
             this.B54.Visible = true;
             this.B54.VisibleIndex = 76;
-            this.B54.Width = 35;
+            this.B54.Width = 40;
             // 
             // B55
             // 
             this.B55.Caption = "B55";
             this.B55.FieldName = "B55";
-            this.B55.MinWidth = 35;
+            this.B55.MinWidth = 40;
             this.B55.Name = "B55";
             this.B55.Visible = true;
             this.B55.VisibleIndex = 77;
-            this.B55.Width = 35;
+            this.B55.Width = 40;
             // 
             // B56
             // 
             this.B56.Caption = "B56";
             this.B56.FieldName = "B56";
-            this.B56.MinWidth = 35;
+            this.B56.MinWidth = 40;
             this.B56.Name = "B56";
             this.B56.Visible = true;
             this.B56.VisibleIndex = 78;
-            this.B56.Width = 35;
+            this.B56.Width = 40;
             // 
             // B57
             // 
             this.B57.Caption = "B57";
             this.B57.FieldName = "B57";
-            this.B57.MinWidth = 35;
+            this.B57.MinWidth = 40;
             this.B57.Name = "B57";
             this.B57.Visible = true;
             this.B57.VisibleIndex = 79;
-            this.B57.Width = 35;
+            this.B57.Width = 40;
             // 
             // B58
             // 
             this.B58.Caption = "B58";
             this.B58.FieldName = "B58";
-            this.B58.MinWidth = 35;
+            this.B58.MinWidth = 40;
             this.B58.Name = "B58";
             this.B58.Visible = true;
             this.B58.VisibleIndex = 80;
-            this.B58.Width = 35;
+            this.B58.Width = 40;
             // 
             // B59
             // 
             this.B59.Caption = "B59";
             this.B59.FieldName = "B59";
-            this.B59.MinWidth = 35;
+            this.B59.MinWidth = 40;
             this.B59.Name = "B59";
             this.B59.Visible = true;
             this.B59.VisibleIndex = 81;
-            this.B59.Width = 35;
+            this.B59.Width = 40;
             // 
             // B60
             // 
             this.B60.Caption = "B60";
             this.B60.FieldName = "B60";
-            this.B60.MinWidth = 35;
+            this.B60.MinWidth = 40;
             this.B60.Name = "B60";
             this.B60.Visible = true;
             this.B60.VisibleIndex = 82;
-            this.B60.Width = 35;
+            this.B60.Width = 40;
             // 
             // SDT_HS
             // 
