@@ -311,3 +311,9 @@ C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\obj\Debug\BKI_QLTTQuocAnh.application
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\obj\Debug\BKI_QLTTQuocAnh.exe
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\obj\Debug\BKI_QLTTQuocAnh.pdb
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\bin\Debug\DevExpress.XtraWizard.v15.1.dll
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\bin\Debug\DevExpress.XtraWizard.v15.1.xml
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\bin\Debug\de\DevExpress.XtraWizard.v15.1.resources.dll
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\bin\Debug\es\DevExpress.XtraWizard.v15.1.resources.dll
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\bin\Debug\ja\DevExpress.XtraWizard.v15.1.resources.dll
+C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\BKI_QLTTQuocAnh\bin\Debug\ru\DevExpress.XtraWizard.v15.1.resources.dll
