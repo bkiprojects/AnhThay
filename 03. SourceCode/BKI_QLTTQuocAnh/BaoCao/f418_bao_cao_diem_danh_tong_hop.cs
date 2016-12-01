@@ -2,6 +2,7 @@
 using BKI_QLTTQuocAnh.DS.CDBNames;
 using BKI_QLTTQuocAnh.RPT;
 using BKI_QLTTQuocAnh.US;
+using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 using DevExpress.XtraReports.UI;
 using IP.Core.IPCommon;
@@ -144,28 +145,10 @@ namespace BKI_QLTTQuocAnh.BaoCao
             this.Load += frm_bao_cao_so_giao_dich_theo_lop_Load;
             m_cmd_search.Click += m_cmd_search_Click;
             //m_sle_lop.EditValueChanged += m_sle_lop_EditValueChanged;
-            m_cmd_xuat_excel.Click += M_cmd_xuat_excel_Click;
+            m_cmd_xuat_excel.Click += m_cmd_xuat_excel_Click;
         }
 
-        private void M_cmd_xuat_excel_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                FolderBrowserDialog dlg = new FolderBrowserDialog();
-                string path = "";
-                if(dlg.ShowDialog() == DialogResult.OK)
-                {
-                    path = dlg.SelectedPath;
-                }
-                path = path + "/Bao cao diem danh tong hop_" + DateTime.Now.ToString("dd-mm-yyyy") + ".xlsx";
-
-                gridView2.ExportToXlsx(path);
-            }
-            catch(Exception v_e)
-            {
-                CSystemLog_301.ExceptionHandle(v_e);
-            }
-        }
+        
 
         void m_sle_lop_EditValueChanged(object sender, EventArgs e)
         {
@@ -233,15 +216,14 @@ namespace BKI_QLTTQuocAnh.BaoCao
         {
             try
             {
-                FolderBrowserDialog dlg = new FolderBrowserDialog();
-                string path = "";
-                if (dlg.ShowDialog() == DialogResult.OK)
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "xlsx files|*.xlsx|xls files|*.xls|All files (*.*)|*.*";
+                saveFileDialog1.RestoreDirectory = true;
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    path = dlg.SelectedPath;
+                    gridView2.ExportToXlsx(saveFileDialog1.FileName);
+                    XtraMessageBox.Show("Trích xuất dữ liệu thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                path = path + "giaodichtheolop" + DateTime.Now.Hour + DateTime.Now.Minute + ".xlsx";
-
-                gridView2.ExportToXlsx(path);
             }
             catch (Exception v_e)
             {

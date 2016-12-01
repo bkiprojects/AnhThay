@@ -41,7 +41,6 @@ C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPEx
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.pdb
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPExcelReportWeb\bin\Debug\IPExcelReportWeb.xml
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPExcelReportWeb\bin\Debug\C1.Common.dll
-C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbprojResolveAssemblyReference.cache
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.Resources.resources
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.vbproj.GenerateResource.Cache
 C:\Users\tuyen\Documents\Visual Studio 2017\Projects\AnhThay\03. SourceCode\IPExcelReportWeb\obj\Debug\IPExcelReportWeb.dll
